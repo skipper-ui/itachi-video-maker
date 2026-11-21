@@ -1,10 +1,10 @@
 """Turn a project script into a narrated, captioned video.
 
 Usage:
-    uv run make_video.py projects/<name>/script.json [--force]
+    uv run make_video.py projects/<name>/script.json [--images fal|magichour] [--force]
 
 For each scene the pipeline generates narration (ElevenLabs, with word
-timings), an image (fal.ai FLUX), and a Ken Burns clip (ffmpeg). It then
+timings), an image (fal.ai FLUX or Magic Hour), and a Ken Burns clip (ffmpeg). It then
 crossfades the clips, lays the narration underneath and burns in captions.
 Generated assets are cached in output/<name>/ so re-runs only redo what
 changed; pass --force to regenerate everything.
@@ -15,8 +15,10 @@ import base64
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -25,11 +27,16 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+load_dotenv(Path(__file__).parent / ".env")
+
 FPS = 30
 SCENE_PAD = 0.45  # seconds of silence after each scene's narration
 XFADE = 0.5  # crossfade length between scenes
 TTS_MODEL = "eleven_multilingual_v2"
 IMAGE_MODEL = "fal-ai/flux/dev"
+# Magic Hour free accounts are limited to 640px output; paid tiers can raise these.
+MH_MODEL = os.environ.get("MAGIC_HOUR_MODEL", "qwen-image-2.1")
+MH_RESOLUTION = os.environ.get("MAGIC_HOUR_RESOLUTION", "640px")
 TTS_SLOTS = threading.Semaphore(2)  # ElevenLabs plans cap concurrent requests
 
 
@@ -118,11 +125,37 @@ def words_from_alignment(alignment):
 
 # --- images ----------------------------------------------------------------
 
-def generate_image(scene_idx, prompt, width, height, out_dir, force):
+def generate_image(provider, scene_idx, prompt, width, height, out_dir, force):
     path = out_dir / f"scene{scene_idx:02d}.png"
-    key = fingerprint(prompt, width, height, IMAGE_MODEL)
+    model = IMAGE_MODEL if provider == "fal" else (MH_MODEL, MH_RESOLUTION)
+    key = fingerprint(prompt, width, height, provider, model)
     if not force and is_fresh(path, key):
         return
+    if provider == "magichour":
+        magic_hour_image(scene_idx, prompt, width, height, out_dir.name, path)
+    else:
+        fal_image(scene_idx, prompt, width, height, path)
+    mark(path, key)
+    print(f"  image {scene_idx + 1} done")
+
+
+def magic_hour_image(scene_idx, prompt, width, height, project, path):
+    from magic_hour import Client
+
+    client = Client(token=os.environ["MAGIC_HOUR_API_KEY"])
+    aspect = "9:16" if height > width else "16:9" if width > height else "1:1"
+    with tempfile.TemporaryDirectory() as tmp:
+        result = client.v1.ai_image_generator.generate(
+            image_count=1, aspect_ratio=aspect, model=MH_MODEL, resolution=MH_RESOLUTION,
+            style={"prompt": prompt}, name=f"{project}-scene{scene_idx:02d}",
+            download_directory=tmp,
+        )
+        if result.status != "complete" or not result.downloaded_paths:
+            raise RuntimeError(f"Magic Hour image {scene_idx + 1} failed: {result.status} {result.error}")
+        shutil.move(result.downloaded_paths[0], path)
+
+
+def fal_image(scene_idx, prompt, width, height, path):
     r = requests.post(
         f"https://fal.run/{IMAGE_MODEL}",
         headers={"Authorization": f"Key {os.environ['FAL_KEY']}"},
@@ -143,8 +176,6 @@ def generate_image(scene_idx, prompt, width, height, out_dir, force):
     img = requests.get(url, timeout=120)
     img.raise_for_status()
     path.write_bytes(img.content)
-    mark(path, key)
-    print(f"  image {scene_idx + 1} done")
 
 
 # --- video -----------------------------------------------------------------
@@ -155,6 +186,9 @@ def ken_burns_clip(scene_idx, image, seconds, width, height, out_dir, force):
     if not force and is_fresh(path, key):
         return path
     frames = round(seconds * FPS)
+    src_w = int(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=width", "-of", "csv=p=0",
+                                str(image)], check=True, capture_output=True, text=True).stdout.split()[0])
+    sharpen = ",unsharp=5:5:0.8" if src_w < width else ""
     zoom = 0.10
     # Alternate between zooming in and out, and drift in a different direction each scene.
     if scene_idx % 2 == 0:
@@ -166,7 +200,7 @@ def ken_burns_clip(scene_idx, image, seconds, width, height, out_dir, force):
     y = f"(ih-ih/zoom)/2+{drift[1]}*(ih-ih/zoom)/2*(on/{frames}-0.5)"
     # Upscale 2x before zoompan: it rounds the crop to whole pixels, which jitters at low res.
     vf = (
-        f"scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height},"
+        f"scale={width}:{height}:force_original_aspect_ratio=increase:flags=lanczos,crop={width}:{height}{sharpen},"
         f"scale={width * 2}:{height * 2}:flags=lanczos,"
         f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={width}x{height}:fps={FPS},"
         f"format=yuv420p"
@@ -239,10 +273,12 @@ def assemble(clips, audios, durations, captions, out_path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("script", type=Path)
+    parser.add_argument("--images", choices=["fal", "magichour"],
+                        default=os.environ.get("IMAGE_PROVIDER", "fal"),
+                        help="image generator (default: $IMAGE_PROVIDER or fal)")
     parser.add_argument("--force", action="store_true", help="regenerate all assets")
     args = parser.parse_args()
 
-    load_dotenv(Path(__file__).parent / ".env")
     spec = json.loads(args.script.read_text())
     name = args.script.parent.name
     out_dir = Path(__file__).parent / "output" / name
@@ -254,7 +290,7 @@ def main():
     print(f"Generating narration and images for {len(scenes)} scenes...")
     with ThreadPoolExecutor(max_workers=4) as pool:
         jobs = [pool.submit(synthesize, i, scenes, spec["voice_id"], out_dir, args.force) for i in range(len(scenes))]
-        jobs += [pool.submit(generate_image, i, p, width, height, out_dir, args.force) for i, p in enumerate(prompts)]
+        jobs += [pool.submit(generate_image, args.images, i, p, width, height, out_dir, args.force) for i, p in enumerate(prompts)]
         for j in jobs:
             j.result()
 

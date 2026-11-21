@@ -5,6 +5,7 @@ description = "Generate videos using ElevenLabs and fal.ai"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "magic-hour>=0.101.0",
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
 ]
