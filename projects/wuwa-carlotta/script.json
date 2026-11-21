@@ -1,0 +1,288 @@
+{
+  "title": "Who is Carlotta? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Carlotta",
+    "Montelli",
+    "Opal",
+    "art",
+    "investor",
+    "Ragunna",
+    "codename",
+    "opals",
+    "jewels",
+    "crystals",
+    "Forte",
+    "ammunition",
+    "perfume",
+    "grenade",
+    "gloves",
+    "teeth",
+    "curtsy",
+    "pistol",
+    "light",
+    "five-star",
+    "Glacio",
+    "pistols",
+    "coffee",
+    "citrus"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#FFD27A",
+    "keyword": "#FF9CC2",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 1846 'Profile Reveal | Crystal Remorph — Carlotta': second daughter of Montelli and an art investor; quietly handles the family's unspeakable 'troubles' in secret; Attribute Glacio, Weapon Pistols, 5 stars",
+    "Official news 1852 'Post-Lament Anthropocene: Stars Intertwined | Carlotta': 'I am Carlotta Montelli, the second lady of the Montelli family... might also be known as Opal'; Resonance Evaluation Report (Codename: Opal; generates crystals resembling opals, reconstructed into firearms and ammunition); Carlotta's Story ('my opals aren't real jewels. They're merely crystals reshaped by my Forte... as decorations or ammunition'); Beneath the Glamorous Surface (bag packed with ammunition; perfume bottle can be a hand grenade in disguise); Quickly and Swiftly (removes her gloves with her teeth, holds her dress as though about to curtsy, draws a pistol and fires a burst of light); Daily Caffeine Intake (coffee in hand about three out of ten times she appears; secret ingredient: citrus); art anecdote set in Ragunna",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "By day, she invests in art. By night, she quietly makes her family's problems disappear. This is Carlotta, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "art",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "rumble",
+          "word": "night",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "whoosh",
+          "word": "disappear",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "magic",
+          "word": "carlotta",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "She's the second daughter of the Montelli family. And when she handles their secret business, she goes by a codename: Opal.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "second",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "ding",
+          "word": "montelli",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "tick",
+          "word": "codename",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "magic",
+          "word": "opal",
+          "offset": -0.2,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "But her opals aren't real jewels. They're crystals reshaped by her Forte, worn as decoration, or fired as ammunition.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "opals",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "thud",
+          "word": "real",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "swell",
+          "word": "crystals",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "decoration",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "whoosh",
+          "word": "fired",
+          "offset": -0.1,
+          "volume": 0.5
+        },
+        {
+          "sound": "impact",
+          "word": "ammunition",
+          "offset": -0.1,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "Nothing about her is what it seems. Her little bag is packed with ammunition, and her perfume bottle can be a hand grenade.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "word": "nothing",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "tick",
+          "word": "bag",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "perfume",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "impact",
+          "word": "grenade",
+          "offset": -0.1,
+          "volume": 0.55
+        },
+        {
+          "sound": "rumble",
+          "word": "grenade",
+          "offset": -0.1,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Before she strikes, she slips off her gloves with her teeth, lifts her dress as if to curtsy, then draws a pistol and fires a burst of light.",
+      "sfx": [
+        {
+          "sound": "tap",
+          "word": "gloves",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "chime",
+          "word": "curtsy",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "tick",
+          "word": "pistol",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "impact",
+          "word": "burst",
+          "offset": -0.1,
+          "volume": 0.55
+        },
+        {
+          "sound": "magic",
+          "word": "light",
+          "offset": -0.2,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Glacio Resonator with pistols. And off duty? She's holding coffee about three times out of ten, with a secret splash of citrus.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "ding",
+          "word": "glacio",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "chime",
+          "word": "pistols",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "pop",
+          "word": "coffee",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "ding",
+          "word": "three",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "citrus",
+          "offset": -0.2,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "So, is Carlotta on your team? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "team",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
