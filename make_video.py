@@ -291,30 +291,94 @@ def ass_time(t):
     return f"{cs // 360000}:{cs // 6000 % 60:02d}:{cs // 100 % 60:02d}.{cs % 100:02d}"
 
 
-def write_captions(scene_words, scene_starts, width, height, path, words_per_line=3):
+def ass_color(hex_rgb, alpha=0):
+    """'#RRGGBB' -> ASS '&HAABBGGRR'."""
+    r, g, b = hex_rgb[1:3], hex_rgb[3:5], hex_rgb[5:7]
+    return f"&H{alpha:02X}{b}{g}{r}".upper()
+
+
+CAPTION = {
+    "font": "Inter Display Black",
+    "base": "#FFFFFF",      # words not yet spoken / already spoken
+    "active": "#FFC83D",    # the word being spoken right now
+    "keyword": "#8FE3FF",   # names and skills listed in the script's "keywords"
+    "max_chars": 16,        # keep chunks short so they read at a glance
+}
+
+
+def chunk_words(words, max_chars, max_words=3):
+    """Group words into short caption chunks, breaking early at sentence ends."""
+    chunks, cur = [], []
+    for w in words:
+        if cur and (len(" ".join(x[0] for x in cur + [w])) > max_chars or len(cur) >= max_words):
+            chunks.append(cur)
+            cur = []
+        cur.append(w)
+        if w[0][-1] in ".?!:":
+            chunks.append(cur)
+            cur = []
+    if cur:
+        chunks.append(cur)
+    return chunks
+
+
+def clean_word(word):
+    return word.strip(",.;:\"").upper()
+
+
+def write_captions(scene_words, scene_starts, width, height, path, keywords=(), title=None):
+    keys = {k.upper() for k in keywords}
+    size = round(height * 0.058)
     header = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {width}
 PlayResY: {height}
-WrapStyle: 0
+WrapStyle: 2
+ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,Inter ExtraBold,{round(height * 0.042)},&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,{round(height * 0.0045)},{round(height * 0.002)},2,60,60,{round(height * 0.24)},1
+Style: Cap,{CAPTION["font"]},{size},{ass_color(CAPTION["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,{round(size * 0.11)},{round(size * 0.07)},2,70,70,{round(height * 0.27)},1
+Style: Title,{CAPTION["font"]},{round(height * 0.085)},{ass_color(CAPTION["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,6,0,1,{round(height * 0.006)},{round(height * 0.004)},8,60,60,{round(height * 0.11)},1
+Style: Sub,{CAPTION["font"]},{round(height * 0.03)},{ass_color(CAPTION["active"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,8,0,1,{round(height * 0.0035)},{round(height * 0.003)},8,60,60,{round(height * 0.205)},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
     lines = []
+    if title:
+        main, _, sub = title.partition(":")
+        fade = r"{\fad(250,400)\blur0.6}"
+        pop = r"{\fad(250,400)\blur0.6\fscx130\fscy130\t(0,350,\fscx100\fscy100)}"
+        lines.append(f"Dialogue: 1,{ass_time(0.15)},{ass_time(3.4)},Title,,0,0,0,,{pop}{main.strip().upper()}")
+        if sub.strip():
+            lines.append(f"Dialogue: 1,{ass_time(0.45)},{ass_time(3.4)},Sub,,0,0,0,,{fade}{sub.strip().upper()}")
+
+    def colored(chunk, active_idx):
+        parts = []
+        for j, (w, _, _) in enumerate(chunk):
+            word = clean_word(w)
+            if j == active_idx:
+                color = CAPTION["active"]
+            elif word.strip("'!?") in keys:
+                color = CAPTION["keyword"]
+            else:
+                color = CAPTION["base"]
+            parts.append(f"{{\\1c{ass_color(color)}}}{word}")
+        return " ".join(parts)
+
     for words, offset in zip(scene_words, scene_starts):
-        for i in range(0, len(words), words_per_line):
-            chunk = words[i:i + words_per_line]
-            start = offset + chunk[0][1]
-            # Hold each chunk until the next one starts so captions don't flicker.
-            nxt = words[i + words_per_line][1] if i + words_per_line < len(words) else chunk[-1][2] + 0.3
-            end = offset + nxt
-            text = " ".join(w for w, _, _ in chunk).upper()
-            lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Cap,,0,0,0,,{text}")
+        chunks = chunk_words(words, CAPTION["max_chars"])
+        for c, chunk in enumerate(chunks):
+            # Hold the chunk until the next one starts so captions never blink off mid-sentence.
+            chunk_end = chunks[c + 1][0][1] if c + 1 < len(chunks) else chunk[-1][2] + 0.35
+            for j, (_, w_start, _) in enumerate(chunk):
+                start = offset + w_start
+                end = offset + (chunk[j + 1][1] if j + 1 < len(chunk) else chunk_end)
+                # The whole chunk pops in on its first word; later words only change colour.
+                fx = r"{\blur0.8\fscx82\fscy82\t(0,90,\fscx106\fscy106)\t(90,170,\fscx100\fscy100)}" if j == 0 \
+                    else r"{\blur0.8}"
+                lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Cap,,0,0,0,,{fx}{colored(chunk, j)}")
     path.write_text(header + "\n".join(lines) + "\n")
 
 
@@ -384,7 +448,8 @@ def main():
             range(len(scenes))))
 
     captions = out_dir / "captions.ass"
-    write_captions(scene_words, starts, width, height, captions)
+    write_captions(scene_words, starts, width, height, captions,
+                   keywords=spec.get("keywords", []), title=spec.get("title"))
     final = out_dir / f"{name}.mp4"
     print("Assembling final video...")
     assemble(clips, audios, durations, captions, final)
