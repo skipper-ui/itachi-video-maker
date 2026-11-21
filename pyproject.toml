@@ -1,0 +1,10 @@
+[project]
+name = "itachi-video-maker"
+version = "0.1.0"
+description = "Generate videos using ElevenLabs and fal.ai"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+]
