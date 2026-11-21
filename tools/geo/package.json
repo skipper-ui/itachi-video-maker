@@ -1,0 +1,9 @@
+{
+  "name": "geo",
+  "private": true,
+  "type": "module",
+  "description": "Builds projected SVG map regions for reel templates (see tools/CLAUDE.md)",
+  "dependencies": {
+    "d3-geo": "3.1.1"
+  }
+}
