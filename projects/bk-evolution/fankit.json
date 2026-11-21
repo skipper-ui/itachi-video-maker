@@ -1,0 +1,22 @@
+{
+  "library": 338,
+  "assets": {
+    "king_classic": {"id": 66197, "title": "Barbarian_King_2", "width": 1600},
+    "king_2013": {"id": 52374, "title": "Barbarian_King_5", "width": 1400},
+    "king_army": {"id": 66194, "title": "Barbarian_King_3", "width": 1600},
+    "king_pose": {"id": 66196, "title": "Barbarian_King_1", "width": 1400},
+    "skin_gladiator": {"id": 51515, "title": "Hero_Skin_BK_Gladiator_King", "width": 1200},
+    "skin_party": {"id": 51528, "title": "Hero_Skin_BK_Party_King_1", "width": 1000},
+    "skin_pekka": {"id": 51527, "title": "Hero_Skin_BK_P.E.K.K.A_King_1", "width": 1000},
+    "skin_ghost": {"id": 64094, "title": "Hero_Skin_BK_Ghost_King_1", "width": 1000},
+    "skin_pirate": {"id": 51532, "title": "Hero_Skin_BK_Pirate_King_1", "width": 1000},
+    "skin_clockwork": {"id": 51523, "title": "Hero_Skin_BK_Clockwork_King_1", "width": 1000},
+    "eq_puppet": {"id": 64150, "title": "Hero_Equipment_BK_Barbarian_Puppet", "width": 700},
+    "eq_rage": {"id": 64152, "title": "Hero_Equipment_BK_Rage_Vial", "width": 700},
+    "eq_boots": {"id": 64151, "title": "Hero_Equipment_BK_Earthquake_Boots", "width": 700},
+    "eq_vampstache": {"id": 64153, "title": "Hero_Equipment_BK_Vampstache", "width": 700},
+    "titan_king": {"id": 166914, "title": "titan_bk_pose01_noshadow", "width": 1600},
+    "th19": {"id": 168064, "title": "th19_default_2k", "width": 1200},
+    "barbarian": {"id": 168173, "title": "barbarian_lvl14", "width": 600}
+  }
+}
