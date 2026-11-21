@@ -1,0 +1,279 @@
+{
+  "title": "Who is Camellya? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Camellya",
+    "Bloom",
+    "Bearer",
+    "Black",
+    "Shores",
+    "Prey",
+    "predator",
+    "recruits",
+    "trials",
+    "boring",
+    "crime",
+    "Resonance",
+    "red",
+    "vines",
+    "flowers",
+    "secret",
+    "unknown",
+    "Artificial",
+    "Resonator",
+    "sealed",
+    "five-star",
+    "Havoc",
+    "sword",
+    "Starpath",
+    "Reverbs",
+    "December"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#FF8A9A",
+    "keyword": "#FFD1D8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com (official news, article 1605 'Profile Reveal | Crimson Blossom — Camellya': a Bloom Bearer of the Black Shores, free-spirited and dangerously charming, roams Solaris in search of talent; Attribute Havoc, Weapon Sword, 5 stars)",
+    "Official article 1596 'Post-Lament Anthropocene: Stars Intertwined | Camellya' lore images: Bloom Bearer's Trial (selects new recruits; approval rate shockingly low; those who fail her trials rarely dare return), Phototropism (hangs upside down in the vines; 'Perfect prey. Or perhaps the predator.'), Hard-to-Please ('Wasting time on boring people should be a crime.'), Transformation (hair turns vibrant red; vines and flowers burst into life in all directions), Resonance Evaluation Report (birthplace unknown; 'This subject is suspected to be an Artificial Resonator... this report is sealed for now.')",
+    "Kuro Games Version 3.8 press kit, Detailed Infographic P3: Starpath Reverbs II Reverb Resonator Convene (Camellya's art is on the banner), Version 3.8 update - 2026-12-21 11:59 server time",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "She hangs upside down in the vines, smiling at you. Prey, or predator? This is Camellya, a Bloom Bearer of the Black Shores.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.6
+        },
+        {
+          "sound": "chime",
+          "word": "prey",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "impact",
+          "word": "predator",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "sound": "magic",
+          "word": "camellya",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "chime",
+          "word": "bloom",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Her job is finding new recruits. But her approval rate is shockingly low, and those who fail her trials rarely dare to come back.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "recruits",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "tick",
+          "word": "approval",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "thud",
+          "word": "low",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "impact",
+          "word": "fail",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "sound": "swell",
+          "word": "rarely",
+          "offset": -0.3,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "She loses interest fast. In her own words: wasting time on boring people should be a crime.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "loses",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "wasting",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "ding",
+          "word": "crime",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "When she unleashes her Resonance, her hair turns a vivid red, and vines and flowers burst out in every direction.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "word": "unleashes",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "magic",
+          "word": "red",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "rumble",
+          "word": "vines",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "impact",
+          "word": "burst",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "whoosh",
+          "word": "burst",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "But her official file hides a secret. Birthplace: unknown. She's suspected to be an Artificial Resonator, and the report is sealed.",
+      "sfx": [
+        {
+          "sound": "rumble",
+          "word": "secret",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "tick",
+          "word": "birthplace",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "ding",
+          "word": "unknown",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swell",
+          "word": "suspected",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "stamp",
+          "word": "sealed",
+          "offset": -0.15,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Havoc sword user, and in Version 3.8, she's back on the Starpath Reverbs banner until December 21st.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "ding",
+          "word": "havoc",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "chime",
+          "word": "sword",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "whoosh",
+          "word": "version",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "chime",
+          "word": "starpath",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "ding",
+          "word": "december",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "So, would you pass Camellya's trial? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "trial",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
