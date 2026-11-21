@@ -55,16 +55,17 @@ window.scenes = [
     ctx.translate(sx, sy);
     ambient(ctx, t, { ...EMBER, cy: 760 }, FIRE);
     const k = ease.outCubic(prog(t, 0.0, 1.1));
-    const x = lerp(1400, W / 2, k), y = lerp(500, 780, k) + float(t, 0, 16, 2.2);
+    const x = lerp(1400, W / 2, k), y = lerp(560, 840, k) + float(t, 0, 16, 2.2);
     glow(ctx, x, y, 520, '255,140,70', 0.55 * k);
-    art(ctx, 'duke_a', x, y, 720, { shadow: false });
+    art(ctx, 'duke_a', x, y, 650, { shadow: false });
     withT(ctx, W / 2, 175, pop(t, 0.6, 0.4), 0, () => pill(ctx, 'A DRAGON IN ARMOR', 0, 0, 46, [C.gold, C.goldLo], C.ink));
-    withT(ctx, 250, 520, pop(t, tYear - 0.1, 0.4), -0.08, () => pill(ctx, 'NOT EVEN 1 YEAR OLD', 0, 0, 40, [C.red, '#A51515']));
+    // Above his head, clear of his face.
+    withT(ctx, W / 2, 430, pop(t, tYear - 0.1, 0.4), -0.03, () => pill(ctx, 'NOT EVEN 1 YEAR OLD', 0, 0, 44, [C.red, '#A51515']));
     withT(ctx, W / 2, 1215, pop(t, tNew - 0.1, 0.4), 0, () => pill(ctx, 'THE NEWEST HERO', 0, 0, 56, [C.gold, C.goldLo], C.ink));
     const kt = t < tDD ? 0 : lerp(2.4, 1, ease.outBack(prog(t, tDD, 0.35), 2));
     if (kt > 0) withT(ctx, W / 2, 300, kt, 0, () => title(ctx, 'DRAGON DUKE', 0, 0, 126, { fill: ['#FFE3C8', '#FF8A3D', '#C2281E'] }));
-    ring(ctx, t, tDD, W / 2, 780, { maxR: 700, color: '255,180,120' });
-    burst(ctx, t, tDD, W / 2, 780, { n: 60, speed: 1100, color: '255,150,70' });
+    ring(ctx, t, tDD, W / 2, 840, { maxR: 700, color: '255,180,120' });
+    burst(ctx, t, tDD, W / 2, 840, { n: 60, speed: 1100, color: '255,150,70' });
     flash(ctx, t, tDD, { peak: 0.5, color: '255,220,190' });
     finish(ctx);
   },
