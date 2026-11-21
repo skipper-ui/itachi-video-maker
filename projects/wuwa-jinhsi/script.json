@@ -1,0 +1,262 @@
+{
+  "title": "Who is Jinhsi? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Jinhsi",
+    "Magistrate",
+    "Jinzhou",
+    "wishes",
+    "luck",
+    "Loong",
+    "Maiden",
+    "Sentinel",
+    "Jué",
+    "Horns",
+    "Scales",
+    "shy",
+    "Rover",
+    "prophecy",
+    "visions",
+    "dreams",
+    "five-star",
+    "Spectro",
+    "Buns",
+    "custard",
+    "lotus",
+    "bean"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#8FF0E0",
+    "keyword": "#FFE6A8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 965 'Profile Reveal | Thawborn Renewal — Jinhsi': the Jinzhou Magistrate; holds the spark of light, illuminating people's wishes. Lore images: Blessings of Jinzhou Magistrate (the 'Loong Maiden'; after one of her visits, everyone on the street experiences a sudden stroke of luck; people make wishes at the pond outside City Hall for a share in her luck); Signs of Shyness (Resonance Connection with the Sentinel Jué; when she controls time or synchronizes with the Sentinel, a pair of Loong Horns protrude; under strain or severe injury her skin grows Loong Scales; shyness can also evoke them, as when she met the Rover); Visions in the Dream (Jué's gift of prophecy lets her receive visions in dreams; the figure from her dream turned out to be the Rover); Horns of Loong; Cherished Item: Loong Buns she makes herself, with custard, lotus seed paste or sweet bean paste fillings; Resonance Evaluation Report (birthplace Huanglong, Congenital Resonator)",
+    "Official news 965 banner: Jinzhou Magistrate, Attribute Spectro, Affiliation Jinzhou, 5 stars",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "People make wishes just to share her luck. This is Jinhsi, the Magistrate of Jinzhou, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "wishes",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "ding",
+          "word": "luck",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "magic",
+          "word": "jinhsi",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "chime",
+          "word": "magistrate",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Jinzhou calls her the Loong Maiden. They say after she visits a street, everyone there gets a sudden stroke of luck.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "loong",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "swell",
+          "word": "visits",
+          "offset": -0.3,
+          "volume": 0.3
+        },
+        {
+          "sound": "magic",
+          "word": "luck",
+          "offset": -0.2,
+          "volume": 0.55
+        },
+        {
+          "sound": "ding",
+          "word": "luck",
+          "offset": 0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "She shares a Resonance Connection with Jinzhou's Sentinel, Jué. When she uses her Forte, a pair of Loong Horns appear.",
+      "sfx": [
+        {
+          "sound": "rumble",
+          "word": "sentinel",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "chime",
+          "word": "jué",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swell",
+          "word": "forte",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "magic",
+          "word": "horns",
+          "offset": -0.2,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "Push her too hard, and Loong Scales grow on her skin. But they also appear when she's shy, like when she met the Rover.",
+      "sfx": [
+        {
+          "sound": "thud",
+          "word": "push",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "scales",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "pop",
+          "word": "shy",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "ding",
+          "word": "rover",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Jué's gift of prophecy even sends her visions in her dreams. One dream showed her a figure, who turned out to be the Rover.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "word": "prophecy",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "chime",
+          "word": "visions",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "magic",
+          "word": "figure",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "ding",
+          "word": "rover",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Spectro Resonator, and she makes her own Loong Buns, filled with custard, lotus seed, or sweet bean.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "ding",
+          "word": "spectro",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "buns",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "pop",
+          "word": "custard",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "lotus",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "bean",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "So, are you lucky enough to have Jinhsi? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "lucky",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
