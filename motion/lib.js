@@ -547,7 +547,8 @@ function setupStage() {
     window.scenes[sceneIdx](ctx, t, dur);
   };
   // Make sure the display font is loaded before the first frame.
-  Promise.all([document.fonts.load(`100px ${FONT}`), loadArt()])
+  // Pages can ask for extra fonts with window.FONTS = ['bold 100px Caladea', ...].
+  Promise.all([document.fonts.load(`100px ${FONT}`), ...(window.FONTS || []).map(f => document.fonts.load(f)), loadArt()])
     .then(() => { window.seek(0); window.ready = true; })
     .catch(e => { window.loadError = String(e); });
 }

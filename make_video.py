@@ -345,7 +345,9 @@ def clean_word(word):
     return word.strip(",.;:\"").upper()
 
 
-def write_captions(scene_words, scene_starts, width, height, path, keywords=(), title=None):
+def write_captions(scene_words, scene_starts, width, height, path, keywords=(), title=None, style=None):
+    # A script can restyle captions with "caption": {"font", "base", "active", "keyword", "max_chars"}.
+    cap = {**CAPTION, **(style or {})}
     keys = {k.upper() for k in keywords}
     size = round(height * 0.058)
     header = f"""[Script Info]
@@ -357,9 +359,9 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,{CAPTION["font"]},{size},{ass_color(CAPTION["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,{round(size * 0.11)},{round(size * 0.07)},2,70,70,{round(height * 0.27)},1
-Style: Title,{CAPTION["font"]},{round(height * 0.085)},{ass_color(CAPTION["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,6,0,1,{round(height * 0.006)},{round(height * 0.004)},8,60,60,{round(height * 0.11)},1
-Style: Sub,{CAPTION["font"]},{round(height * 0.03)},{ass_color(CAPTION["active"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,8,0,1,{round(height * 0.0035)},{round(height * 0.003)},8,60,60,{round(height * 0.205)},1
+Style: Cap,{cap["font"]},{size},{ass_color(cap["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,{round(size * 0.11)},{round(size * 0.07)},2,70,70,{round(height * 0.27)},1
+Style: Title,{cap["font"]},{round(height * 0.085)},{ass_color(cap["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,6,0,1,{round(height * 0.006)},{round(height * 0.004)},8,60,60,{round(height * 0.11)},1
+Style: Sub,{cap["font"]},{round(height * 0.03)},{ass_color(cap["active"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,8,0,1,{round(height * 0.0035)},{round(height * 0.003)},8,60,60,{round(height * 0.205)},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -378,16 +380,16 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         for j, (w, _, _) in enumerate(chunk):
             word = clean_word(w)
             if j == active_idx:
-                color = CAPTION["active"]
+                color = cap["active"]
             elif word.strip("'!?") in keys:
-                color = CAPTION["keyword"]
+                color = cap["keyword"]
             else:
-                color = CAPTION["base"]
+                color = cap["base"]
             parts.append(f"{{\\1c{ass_color(color)}}}{word}")
         return " ".join(parts)
 
     for words, offset in zip(scene_words, scene_starts):
-        chunks = chunk_words(words, CAPTION["max_chars"])
+        chunks = chunk_words(words, cap["max_chars"])
         for c, chunk in enumerate(chunks):
             # Hold the chunk until the next one starts so captions never blink off mid-sentence.
             chunk_end = chunks[c + 1][0][1] if c + 1 < len(chunks) else chunk[-1][2] + 0.35
@@ -570,7 +572,8 @@ def main():
     captions = out_dir / "captions.ass"
     write_captions(scene_words, starts, width, height, captions,
                    keywords=spec.get("keywords", []),
-                   title=spec.get("title") if spec.get("title_card", True) else None)
+                   title=spec.get("title") if spec.get("title_card", True) else None,
+                   style=spec.get("caption"))
     final = out_dir / f"{name}.mp4"
     print("Assembling final video...")
     cues = sound_cues(scenes, scene_words, starts)

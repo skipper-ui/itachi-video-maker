@@ -1,0 +1,228 @@
+{
+  "title": "Who is Lily? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Lily",
+    "Resonator",
+    "Wuthering",
+    "Waves",
+    "Lilies",
+    "Dying",
+    "Dream",
+    "perfumer",
+    "medic",
+    "Resonator",
+    "War",
+    "Train",
+    "Souls",
+    "Spectro",
+    "pistols",
+    "healer",
+    "3.8",
+    "five-star",
+    "November"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#E9C8FF",
+    "keyword": "#9FD8FF",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://www.gamespress.com/Wuthering-Waves-Version-38-Lilies-in-a-Dying-Dream-Introduces-Lily-a-N (Kuro Games press release: Version 3.8 'Lilies in a Dying Dream' introduces Lily, launches November 12th)",
+    "https://wutheringwaves.fandom.com/wiki/Lily (perfumer from the New Federation, drafted into the Resonator War as a combat medic; eased soldiers' trauma with her Resonance ability; after her death, aboard the Train of Souls helping souls find rest; preternatural sense of smell; perfumes that weave short-lived dreams)",
+    "https://game8.co/games/Wuthering-Waves/archives/629899 (5-star Spectro Pistols healer and buffer; Slumberland: she sleeps to heal the team)",
+    "Art: Kuro Games Version 3.8 press kit (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "She can smell your pain, and she turns it into dreams. This is Lily, the newest Resonator in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.6
+        },
+        {
+          "sound": "chime",
+          "word": "dreams",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "magic",
+          "word": "lily",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "chime",
+          "word": "newest",
+          "offset": -0.1,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Version 3.8, Lilies in a Dying Dream, brought her into the game on November 12th.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "lilies",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "ding",
+          "word": "november",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Before all this, Lily was a perfumer. When the Resonator War broke out, she was drafted as a combat medic.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "perfumer",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "rumble",
+          "word": "war",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "impact",
+          "word": "war",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "swell",
+          "word": "medic",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Her Resonance ability eased the trauma of broken soldiers, with perfumes that weave short, healing dreams.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.4
+        },
+        {
+          "sound": "chime",
+          "word": "trauma",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "magic",
+          "word": "dreams",
+          "offset": -0.3,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "But Lily didn't survive the war. Now she rides the Train of Souls, helping lost spirits find rest.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "word": "survive",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "magic",
+          "word": "train",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "chime",
+          "word": "rest",
+          "offset": -0.3,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "narration": "In battle, she's a five-star Spectro healer who fights with pistols, and she literally falls asleep to heal her team.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "chime",
+          "word": "spectro",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "healer",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "pistols",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "magic",
+          "word": "asleep",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "So, are you pulling for Lily? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "lily",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
