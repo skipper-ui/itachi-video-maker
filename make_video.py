@@ -180,9 +180,44 @@ def fal_image(scene_idx, prompt, width, height, path):
 
 # --- video -----------------------------------------------------------------
 
-def ken_burns_clip(scene_idx, image, seconds, width, height, out_dir, force):
+# Motion effects layered over each Ken Burns clip. A scene picks them with "fx" in its script.
+FX_DEFAULT = ["snow"]
+
+
+def particles(label, w, h, seconds, cell, density, blur, fall, drift, tint=(1, 1, 1), strength=1.0):
+    """A layer of soft dots that scrolls across the frame (snow falling, embers rising).
+
+    A random still texture is drawn once at low resolution, thresholded into sparse dots,
+    scaled up and blurred into soft flakes, then scrolled with wrap-around every frame.
+    """
+    lw, lh = w // cell, h // cell
+    # ffmpeg's uniform noise on mid-gray spans roughly 76-175, about 1% of pixels per value.
+    cut = 175 - max(1, round(100 * density))
+    peak = round(255 * strength)
+    r, g, b = tint
+    return (
+        f"color=c=gray:s={lw}x{lh}:r={FPS}:d={seconds:.3f},format=gray,"
+        f"noise=c0s=100:c0f=u,lut=c0='if(gt(val,{cut}),{peak},0)',"
+        f"scale={w}:{h}:flags=bicubic,gblur=sigma={blur},"
+        f"scroll=v={fall}:h={drift},format=gbrp,"
+        f"lutrgb=r='val*{r}':g='val*{g}':b='val*{b}'[{label}]"
+    )
+
+
+def mist(label, w, h, seconds, strength=0.35):
+    """Big soft cloud shapes drifting sideways."""
+    return (
+        f"color=c=gray:s=18x32:r={FPS}:d={seconds:.3f},format=gray,"
+        f"noise=c0s=100:c0f=u,lut=c0='max(val-118,0)*{strength * 3.5}',"
+        f"scale={w}:{h}:flags=bicubic,gblur=sigma=60,"
+        f"scroll=h=0.0009:v=-0.0002,format=gbrp[{label}]"
+    )
+
+
+def ken_burns_clip(scene_idx, image, seconds, width, height, out_dir, force, fx=None):
+    fx = FX_DEFAULT if fx is None else fx
     path = out_dir / f"scene{scene_idx:02d}.mp4"
-    key = fingerprint(hashlib.sha256(image.read_bytes()).hexdigest(), seconds, width, height, FPS)
+    key = fingerprint(hashlib.sha256(image.read_bytes()).hexdigest(), seconds, width, height, FPS, fx, "fx-v1")
     if not force and is_fresh(path, key):
         return path
     frames = round(seconds * FPS)
@@ -199,16 +234,55 @@ def ken_burns_clip(scene_idx, image, seconds, width, height, out_dir, force):
     x = f"(iw-iw/zoom)/2+{drift[0]}*(iw-iw/zoom)/2*(on/{frames}-0.5)"
     y = f"(ih-ih/zoom)/2+{drift[1]}*(ih-ih/zoom)/2*(on/{frames}-0.5)"
     # Upscale 2x before zoompan: it rounds the crop to whole pixels, which jitters at low res.
-    vf = (
-        f"scale={width}:{height}:force_original_aspect_ratio=increase:flags=lanczos,crop={width}:{height}{sharpen},"
-        f"scale={width * 2}:{height * 2}:flags=lanczos,"
-        f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={width}x{height}:fps={FPS},"
-        f"format=yuv420p"
-    )
-    run(["ffmpeg", "-y", "-i", str(image), "-vf", vf, "-frames:v", str(frames),
-         "-c:v", "libx264", "-preset", "medium", "-crf", "18", str(path)])
+    graph = [
+        f"[0:v]scale={width}:{height}:force_original_aspect_ratio=increase:flags=lanczos,"
+        f"crop={width}:{height}{sharpen},scale={width * 2}:{height * 2}:flags=lanczos,"
+        f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={width}x{height}:fps={FPS},format=gbrp[base]"
+    ]
+    layers = []
+    w, h = width, height
+    if "snow" in fx or "blizzard" in fx:
+        fast = 2 if "blizzard" in fx else 1
+        graph.append(particles("far", w, h, seconds, 6, 0.01, 1.2, -0.0022 * fast, 0.0006 * fast, strength=0.75))
+        graph.append(particles("near", w, h, seconds, 12, 0.01, 3, -0.0045 * fast, 0.0012 * fast))
+        layers += ["far", "near"]
+    if "embers" in fx:
+        graph.append(particles("embers", w, h, seconds, 8, 0.01, 1.6, 0.0035, -0.0006,
+                               tint=(1, 0.55, 0.15)))
+        layers.append("embers")
+    if "mist" in fx:
+        graph.append(mist("mist", w, h, seconds))
+        layers.append("mist")
+    prev = "[base]"
+    for i, layer in enumerate(layers):
+        graph.append(f"{prev}[{layer}]blend=all_mode=screen[l{i}]")
+        prev = f"[l{i}]"
+    post = ["format=yuv420p"]
+    brightness = []
+    if "pulse" in fx:  # slow breathing glow
+        brightness.append("0.045*sin(2*PI*t/1.8)")
+    if "impact" in fx:  # white flash shortly after the scene starts, fading fast
+        brightness.append("0.4*exp(-5*(t-0.5))*gte(t,0.5)")
+    if brightness:
+        post.append(f"eq=brightness='{'+'.join(brightness)}':eval=frame")
+    shake = 0
+    if "shake" in fx:
+        shake = 7
+    if "impact" in fx:
+        shake = 18
+    if shake:
+        # Jitter a slightly smaller crop around the frame; impact shake dies down after the hit.
+        amp = f"{shake}*exp(-1.5*max(t-0.5,0))" if "impact" in fx else str(shake)
+        m = shake * 2
+        post.append(f"crop=w=iw-{m * 2}:h=ih-{m * 2}:x='{m}+{amp}*sin(t*37)':y='{m}+{amp}*sin(t*29+1)',"
+                    f"scale={width}:{height}")
+    post.append("vignette=angle=PI/6")
+    graph.append(f"{prev}{','.join(post)}[out]")
+    run(["ffmpeg", "-y", "-i", str(image), "-filter_complex", ";".join(graph), "-map", "[out]",
+         "-frames:v", str(frames), "-r", str(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+         "-pix_fmt", "yuv420p", str(path)])
     mark(path, key)
-    print(f"  clip {scene_idx + 1} done ({seconds:.1f}s)")
+    print(f"  clip {scene_idx + 1} done ({seconds:.1f}s, fx: {', '.join(fx) or 'none'})")
     return path
 
 
@@ -306,7 +380,7 @@ def main():
         clips = list(pool.map(
             lambda i: ken_burns_clip(i, out_dir / f"scene{i:02d}.png",
                                      durations[i] + (XFADE if i < len(scenes) - 1 else 0),
-                                     width, height, out_dir, args.force),
+                                     width, height, out_dir, args.force, scenes[i].get("fx")),
             range(len(scenes))))
 
     captions = out_dir / "captions.ass"

@@ -9,39 +9,77 @@
   "scenes": [
     {
       "narration": "In the frozen Northern Vale, one warrior fights with the strength of a bear. And this year, she was reborn. This is Masha.",
-      "image": "{character} standing on a snowy mountain ridge in a blizzard, a colossal ghostly bear spirit glowing behind her, aurora in the night sky"
+      "image": "{character} standing on a snowy mountain ridge in a blizzard, a colossal ghostly bear spirit glowing behind her, aurora in the night sky",
+      "fx": [
+        "snow",
+        "mist",
+        "pulse"
+      ]
     },
     {
       "narration": "Known as the Wild-Oats Fist, Masha grew up in the icy tundra, where the mighty Direbears roam.",
-      "image": "{character} walking through deep snow beside an enormous armored direbear, endless white tundra, soft dawn light"
+      "image": "{character} walking through deep snow beside an enormous armored direbear, endless white tundra, soft dawn light",
+      "fx": [
+        "snow",
+        "mist"
+      ]
     },
     {
       "narration": "When pirates from the Frozen Ocean came hunting the Direbears, Masha stood in their way, rescuing the hunted beasts and leading them to safety.",
-      "image": "{character} standing protectively in front of a family of giant bears on an icy shore, menacing pirate ships with tattered sails in the frozen sea behind, storm clouds"
+      "image": "{character} standing protectively in front of a family of giant bears on an icy shore, menacing pirate ships with tattered sails in the frozen sea behind, storm clouds",
+      "fx": [
+        "blizzard",
+        "mist"
+      ]
     },
     {
       "narration": "She became a lone mercenary. She takes work as she pleases, but never for coin.",
-      "image": "{character} sitting alone on a cliff edge above a snowy valley at sunset, wind blowing her cloak, melancholic and proud"
+      "image": "{character} sitting alone on a cliff edge above a snowy valley at sunset, wind blowing her cloak, melancholic and proud",
+      "fx": [
+        "snow",
+        "mist"
+      ]
     },
     {
       "narration": "Then, in September 2026, Season 42 brought her biggest change yet: a full revamp in patch 2.2.16.",
-      "image": "{character} mid-transformation, surrounded by swirling glowing blue and orange energy, cracked ice exploding around her, intense eyes"
+      "image": "{character} mid-transformation, surrounded by swirling glowing blue and orange energy, cracked ice exploding around her, intense eyes",
+      "fx": [
+        "embers",
+        "pulse",
+        "shake"
+      ]
     },
     {
       "narration": "Her new passive, Primal Pact, keeps her signature three health bars. Her skills now leave Wounds on enemies, and dealing damage builds her Feral power.",
-      "image": "{character} crouched in a feral battle stance with a fiery red aura, three glowing crystal hearts floating beside her, wild energy"
+      "image": "{character} crouched in a feral battle stance with a fiery red aura, three glowing crystal hearts floating beside her, wild energy",
+      "fx": [
+        "embers",
+        "pulse"
+      ]
     },
     {
       "narration": "Feral Swipe and Claw Strike, a dash that ends in a wide claw slash, let her dive straight into the fight.",
-      "image": "{character} dashing forward at incredible speed with motion blur, giant glowing claw slash marks tearing through the air, snow spraying"
+      "image": "{character} dashing forward at incredible speed with motion blur, giant glowing claw slash marks tearing through the air, snow spraying",
+      "fx": [
+        "blizzard",
+        "shake"
+      ]
     },
     {
       "narration": "And her ultimate, Savage Maul, charges at a target, stunning it and knocking back every enemy nearby.",
-      "image": "{character} slamming both bear-paw gauntlets into frozen ground, massive shockwave of ice and light blasting enemies backward, epic battle"
+      "image": "{character} slamming both bear-paw gauntlets into frozen ground, massive shockwave of ice and light blasting enemies backward, epic battle",
+      "fx": [
+        "snow",
+        "impact"
+      ]
     },
     {
       "narration": "Same fists. A brand new legend. Will you main the new Masha? Tell us in the comments.",
-      "image": "heroic close-up portrait of {character}, confident smirk, glowing gauntlets raised, aurora borealis and falling snow behind her"
+      "image": "heroic close-up portrait of {character}, confident smirk, glowing gauntlets raised, aurora borealis and falling snow behind her",
+      "fx": [
+        "snow",
+        "pulse"
+      ]
     }
   ]
 }
