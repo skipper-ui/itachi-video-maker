@@ -70,6 +70,48 @@ def mark(path, key):
 
 # --- narration -------------------------------------------------------------
 
+ELEVEN_KEY_VARS = ("ELEVENLABS_API_KEY", "ELEVENLABS_API_KEY_2")
+_spent_keys = set()          # key variables that have run out of credit this run
+_spent_lock = threading.Lock()
+
+
+def _out_of_credit(r):
+    if r.status_code not in (401, 402):
+        return False
+    try:
+        detail = r.json().get("detail", {})
+    except ValueError:
+        return False
+    return isinstance(detail, dict) and detail.get("code") in ("quota_exceeded", "insufficient_credits")
+
+
+def eleven_post(url, body, timeout):
+    """POST to ElevenLabs with the first key that still has credit, falling back to the next on quota errors."""
+    keys = [v for v in ELEVEN_KEY_VARS if os.environ.get(v)]
+    last = None
+    for var in keys:
+        with _spent_lock:
+            if var in _spent_keys:
+                continue
+        for attempt in range(5):
+            with TTS_SLOTS:
+                r = requests.post(url, headers={"xi-api-key": os.environ[var]}, json=body, timeout=timeout)
+            if r.status_code != 429:
+                break
+            time.sleep(2 ** attempt)
+        if _out_of_credit(r):
+            with _spent_lock:
+                if var not in _spent_keys:
+                    _spent_keys.add(var)
+                    print(f"  {var} is out of credit, switching to the next key")
+            last = r
+            continue
+        return r
+    if last is None:
+        raise RuntimeError("No ElevenLabs key with credit left (set ELEVENLABS_API_KEY / ELEVENLABS_API_KEY_2 in .env)")
+    return last
+
+
 def synthesize(scene_idx, scenes, voice_id, out_dir, force):
     text = scenes[scene_idx]["narration"]
     audio = out_dir / f"scene{scene_idx:02d}.mp3"
@@ -87,16 +129,7 @@ def synthesize(scene_idx, scenes, voice_id, out_dir, force):
         body["previous_text"] = scenes[scene_idx - 1]["narration"]
     if scene_idx + 1 < len(scenes):
         body["next_text"] = scenes[scene_idx + 1]["narration"]
-    for attempt in range(5):
-        with TTS_SLOTS:
-            r = requests.post(
-                f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/with-timestamps",
-                headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]},
-                json=body, timeout=120,
-            )
-        if r.status_code != 429:
-            break
-        time.sleep(2 ** attempt)
+    r = eleven_post(f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/with-timestamps", body, 120)
     r.raise_for_status()
     data = r.json()
     audio.write_bytes(base64.b64decode(data["audio_base64"]))
@@ -420,8 +453,7 @@ def ensure_sound(name):
     body = {"text": spec["prompt"], "duration_seconds": spec["duration"], "prompt_influence": 0.5}
     if spec.get("loop"):
         body["loop"] = True
-    r = requests.post("https://api.elevenlabs.io/v1/sound-generation",
-                      headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]}, json=body, timeout=180)
+    r = eleven_post("https://api.elevenlabs.io/v1/sound-generation", body, 180)
     r.raise_for_status()
     path.write_bytes(r.content)
     mark(path, key)
