@@ -1,0 +1,277 @@
+{
+  "title": "Who is Changli? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Changli",
+    "Counselor",
+    "Jinzhou",
+    "Magistrate",
+    "Secretary-General",
+    "Central",
+    "Secretariat",
+    "capital",
+    "strategist",
+    "Weiqi",
+    "prey",
+    "blow",
+    "flames",
+    "warmer",
+    "power",
+    "egg",
+    "chick",
+    "Forte",
+    "True",
+    "Sight",
+    "blaze",
+    "five-star",
+    "Fusion",
+    "spicy",
+    "sweat"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#FFB070",
+    "keyword": "#FFD9B8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 1061 'Profile Reveal | Eternal Blaze — Changli': Former Secretary-General of the Central Secretariat in the capital, now Counselor to the Jinzhou Magistrate; born amidst flames; a strategist. Lore images: Beneath the Smile (gentle eyes seem to pierce through facades; her approach to Weiqi, a web of strategy that lures the prey with disjointed moves, poised to deliver the final blow); Unexpected Uses (body temperature slightly higher due to her flames; in childhood could not control her power; cradled a lone, still-warm bird egg and it became a newly hatched chick: 'Well... this little one has got mettle.'); Taste of Warmth (finishes fiery dishes without breaking a sweat); Special Stance (channelling her Forte, a flame of 'True Sight' ignites between her eyebrows and her outer robe turns into a blaze); Resonance Evaluation Report (birthplace Huanglong; resonance source aligns with fluctuation patterns of flames)",
+    "Official news 1061 banner: Attribute Fusion, Affiliation Jinzhou, 5 stars",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "She smiles gently, and sees right through you. This is Changli, Counselor to the Jinzhou Magistrate, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "chime",
+          "word": "smiles",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "whoosh",
+          "word": "through",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "magic",
+          "word": "changli",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "chime",
+          "word": "counselor",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "She was once Secretary-General of the Central Secretariat in the capital. Now she's Jinzhou's strategist.",
+      "sfx": [
+        {
+          "sound": "ding",
+          "word": "secretarygeneral",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "central",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "whoosh",
+          "word": "now",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "strategist",
+          "offset": -0.2,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "She treats every crisis like a game of Weiqi: scattered moves that lure the prey in, then the final blow.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "weiqi",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "tap",
+          "word": "scattered",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "tap",
+          "word": "moves",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "tap",
+          "word": "lure",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "stamp",
+          "word": "blow",
+          "offset": -0.15,
+          "volume": 0.55
+        }
+      ]
+    },
+    {
+      "narration": "Born amid flames, she runs warmer than most people. As a child, she couldn't control her power.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "word": "born",
+          "offset": 0.0,
+          "volume": 0.45
+        },
+        {
+          "sound": "magic",
+          "word": "flames",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "rumble",
+          "word": "child",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "impact",
+          "word": "power",
+          "offset": -0.1,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Once, she found an abandoned bird egg and cradled it in her warm hands, until a chick hatched.",
+      "sfx": [
+        {
+          "sound": "chime",
+          "word": "egg",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swell",
+          "word": "warm",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "tick",
+          "word": "until",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "pop",
+          "word": "hatched",
+          "offset": -0.1,
+          "volume": 0.55
+        },
+        {
+          "sound": "ding",
+          "word": "hatched",
+          "offset": 0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "When she channels her Forte, a flame of True Sight ignites between her eyebrows, and her robe turns into a blaze. She's a five-star Fusion Resonator.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "word": "forte",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "magic",
+          "word": "true",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "rumble",
+          "word": "blaze",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "impact",
+          "word": "blaze",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "chime",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "ding",
+          "word": "fusion",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "So, would you play Weiqi against Changli? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "tap",
+          "word": "weiqi",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}

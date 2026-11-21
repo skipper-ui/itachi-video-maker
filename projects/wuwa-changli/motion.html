@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who is Changli? motion scenes</title>
+<script>
+// Official Kuro Games art (see presskit/SOURCE.txt), cropped only and credited.
+window.ART = Object.fromEntries(['vert', 'close', 'story', 'report', 'stance'].map(n => [n, `presskit/${n}.jpg`]));
+</script>
+<script src="../../motion/lib.js"></script>
+<script src="../../motion/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+// Changli's palette: vermilion flame and ember gold over ink-wash white.
+const FIRE = ['#FFFFFF', '#FFE2C4', '#FF8A3D'];
+const FGLOW = 'rgba(255,100,30,0.9)';
+const fplate = (ctx, str, x, y, t, t0, size = 44) =>
+  plate(ctx, str, x, y, t, t0, size, { border: 'rgba(255,170,110,0.95)', bg: 'rgba(50,14,6,0.72)', color: '#FFF1E6' });
+const fserif = (ctx, str, x, y, size, opts = {}) => serif(ctx, str, x, y, size, { fill: FIRE, glowColor: FGLOW, ...opts });
+const fadeIn = (t, t0, d = 0.5) => ease.outCubic(prog(t, t0, d));
+
+function ember(ctx, { wash = 0.1 } = {}) {
+  ctx.fillStyle = `rgba(80,20,0,${wash})`; ctx.fillRect(0, 0, W, H);
+  vignette(ctx, 0.7);
+  credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+}
+const embers = (ctx, t, n = 40, seed = 7, a = 1) => { ctx.save(); ctx.globalAlpha *= a; sparks(ctx, t, { n, seed, color: '255,150,60', rise: 90, size: 5 }); ctx.restore(); };
+
+// A licking flame centred at (x, y), height h.
+function flame(ctx, x, y, h, t, ph = 0) {
+  const f = 1 + 0.12 * Math.sin(t * 13 + ph) + 0.08 * Math.sin(t * 21 + ph * 2);
+  withT(ctx, x, y, 1, 0, () => {
+    glow(ctx, 0, -h * 0.4, h, '255,110,30', 0.5);
+    const g = ctx.createLinearGradient(0, 0, 0, -h * f);
+    g.addColorStop(0, '#FFE9A8'); g.addColorStop(0.45, '#FF8A2A'); g.addColorStop(1, 'rgba(220,40,10,0)');
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.moveTo(-h * 0.28, 0);
+    ctx.bezierCurveTo(-h * 0.35, -h * 0.5 * f, -h * 0.05, -h * 0.6 * f, Math.sin(t * 7 + ph) * h * 0.08, -h * f);
+    ctx.bezierCurveTo(h * 0.05, -h * 0.6 * f, h * 0.35, -h * 0.5 * f, h * 0.28, 0);
+    ctx.quadraticCurveTo(0, h * 0.18, -h * 0.28, 0); ctx.fill();
+  });
+}
+
+function band(ctx, y0 = 920, y1 = 1290, a = 0.7) {
+  ctx.fillStyle = vgrad(ctx, y0, y1, [[0, 'rgba(40,10,0,0)'], [0.3, `rgba(40,10,0,${a})`], [0.8, `rgba(40,10,0,${a})`], [1, 'rgba(40,10,0,0)']]);
+  ctx.fillRect(0, y0, W, y1 - y0);
+}
+
+function framed(ctx, name, x, y, w, h, { alpha = 1, r = 26, border = 'rgba(255,170,110,0.95)' } = {}) {
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.shadowColor = 'rgba(0,0,0,0.55)'; ctx.shadowBlur = 50;
+  ctx.fillStyle = '#000'; ctx.fill(rectPath(x, y, w, h, r));
+  ctx.shadowBlur = 0;
+  ctx.save(); ctx.clip(rectPath(x, y, w, h, r));
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, x, y, w, h);
+  ctx.restore();
+  ctx.lineWidth = 5; ctx.strokeStyle = border; ctx.stroke(rectPath(x, y, w, h, r));
+  ctx.restore();
+}
+
+function backdrop(ctx, name, t, dur, fx = 0.5, fy = 0.5, dark = 0.35) {
+  cover(ctx, name, t, dur, [fx, fy, 1.25], [fx, fy, 1.35], { filter: 'blur(18px) saturate(1.2)' });
+  ctx.fillStyle = `rgba(40,10,0,${dark})`; ctx.fillRect(0, 0, W, H);
+}
+
+function badge(ctx, t, t0, x, y, label, col, r = 80) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    glow(ctx, 0, 0, r * 1.8, col, 0.5 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = 'rgba(45,12,4,0.82)';
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 6; ctx.strokeStyle = `rgb(${col})`; ctx.stroke();
+    serif(ctx, label, 0, 4, r * 0.38, { fill: ['#FFFFFF', `rgb(${col})`], glowColor: `rgba(${col},0.9)` });
+  });
+  ring(ctx, t, t0, x, y, { maxR: r * 3, life: 0.6, color: col, width: 10 });
+}
+
+function mark(ctx, k, x, y, w, h) {
+  if (k <= 0) return;
+  ctx.lineWidth = 6; ctx.strokeStyle = `rgba(230,80,20,${k})`; ctx.stroke(rectPath(x, y, w, h, 12));
+}
+
+window.scenes = [
+  // 0 — A gentle smile that sees right through you. This is Changli.
+  (ctx, t, dur) => {
+    const tSmile = when('smiles', 0, 0.2), tThru = when('through', 0, 2.5), tCh = when('changli', 0, 4.1), tCoun = when('counselor', 0, 5.1);
+    cover(ctx, 'vert', t, dur, [0.48, 0.17, 2.2], [0.5, 0.4, 1.1]);
+    embers(ctx, t, 30, 3, 0.8);
+    ember(ctx, { wash: 0.05 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    const early = 1 - prog(t, tCh - 0.5, 0.4);
+    if (early > 0) {
+      ctx.save(); ctx.globalAlpha = early;
+      if (t > tSmile - 0.2) fserif(ctx, 'a gentle smile...', W / 2, 1000, 82, { italic: true, alpha: fadeIn(t, tSmile - 0.2) });
+      if (t > tThru - 0.3) fserif(ctx, 'that sees through you', W / 2, 1110, 70, { italic: true, alpha: fadeIn(t, tThru - 0.3) });
+      ctx.restore();
+    }
+    const kc = prog(t, tCh - 0.2, 0.6);
+    if (kc > 0) {
+      ctx.fillStyle = `rgba(255,180,120,${0.3 * (1 - kc)})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, W / 2, 1050, lerp(1.25, 1, ease.outCubic(kc)), 0, () => fserif(ctx, 'CHANGLI', 0, 0, 150, { alpha: ease.outCubic(kc) }));
+    }
+    if (t > tCoun - 0.3) fplate(ctx, 'COUNSELOR TO THE JINZHOU MAGISTRATE', W / 2, 1195, t, tCoun - 0.3, 34);
+  },
+
+  // 1 — Former Secretary-General in the capital; now Jinzhou's strategist.
+  (ctx, t, dur) => {
+    const tSec = when('secretarygeneral', 0, 0.7), tCen = when('central', 0, 1.8), tNow = when('now', 0, 4.5), tStr = when('strategist', 0, 5.5);
+    backdrop(ctx, 'close', t, dur, 0.5, 0.4);
+    embers(ctx, t, 20, 11, 0.6);
+    const kc = fadeIn(t, 0, 0.6);
+    framed(ctx, 'close', 40, 260 + (1 - kc) * 60, 1000, 680, { alpha: kc });
+    ember(ctx, { wash: 0.04 });
+    const old = 1 - prog(t, tNow - 0.3, 0.4);
+    if (old > 0) {
+      ctx.save(); ctx.globalAlpha = old;
+      if (t > tSec - 0.3) fplate(ctx, 'SECRETARY-GENERAL', W / 2, 1060, t, tSec - 0.3, 44);
+      if (t > tCen - 0.3) fserif(ctx, 'Central Secretariat · the capital', W / 2, 1175, 52, { italic: true, alpha: fadeIn(t, tCen - 0.3) });
+      ctx.restore();
+    }
+    if (t > tNow - 0.1) fserif(ctx, 'now', W / 2, 1060, 70, { italic: true, alpha: fadeIn(t, tNow - 0.1) });
+    if (t > tStr - 0.3) {
+      fplate(ctx, "JINZHOU'S STRATEGIST", W / 2, 1180, t, tStr - 0.3, 46);
+      ring(ctx, t, tStr - 0.2, W / 2, 1180, { maxR: 500, life: 0.6, color: '255,150,80', width: 10 });
+    }
+  },
+
+  // 2 — Every crisis is a game of Weiqi: scattered moves, the lure, the final blow.
+  (ctx, t, dur) => {
+    const tW = when('weiqi', 0, 2.4), tSc = when('scattered', 0, 3.3), tPrey = when('prey', 0, 4.6), tBlow = when('blow', 0, 6.4);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.3, 0.45);
+    embers(ctx, t, 16, 19, 0.5);
+    const kb = fadeIn(t, 0.1, 0.7);
+    const B = 780, bx = (W - B) / 2, by = 330 + (1 - kb) * 80, cell = B / 10;
+    const at = (c, r) => [bx + cell * (c + 1), by + cell * (r + 1)];
+    ctx.save(); ctx.globalAlpha = kb;
+    ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 50;
+    ctx.fillStyle = vgrad(ctx, by, by + B, [[0, '#E9C58A'], [1, '#C99A5B']]); ctx.fill(rectPath(bx, by, B, B, 18));
+    ctx.shadowBlur = 0;
+    ctx.strokeStyle = 'rgba(60,30,10,0.8)'; ctx.lineWidth = 3;
+    for (let i = 0; i < 9; i++) {
+      ctx.beginPath(); ctx.moveTo(...at(i, 0)); ctx.lineTo(...at(i, 8)); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(...at(0, i)); ctx.lineTo(...at(8, i)); ctx.stroke();
+    }
+    ctx.restore();
+    const stone = (c, r, black, k, a = 1) => {
+      if (k <= 0) return;
+      const [x, y] = at(c, r);
+      withT(ctx, x, y, k, 0, () => {
+        ctx.globalAlpha *= a;
+        const g = ctx.createRadialGradient(-10, -12, 4, 0, 0, cell * 0.45);
+        if (black) { g.addColorStop(0, '#6A6A6A'); g.addColorStop(1, '#0E0E0E'); } else { g.addColorStop(0, '#FFFFFF'); g.addColorStop(1, '#CFC8BE'); }
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, cell * 0.44, 0, Math.PI * 2); ctx.fill();
+      });
+    };
+    // The prey: two white stones in the middle.
+    const cap = prog(t, tBlow + 0.15, 0.5);
+    [[4, 4], [4, 5]].forEach(([c, r], i) => stone(c, r, false, pop(t, tW - 0.2 + i * 0.15, 0.4), 1 - cap));
+    if (cap > 0 && cap < 1) [[4, 4], [4, 5]].forEach(([c, r]) => burst(ctx, t, tBlow + 0.15, ...at(c, r), { n: 16, color: '255,170,90', speed: 400, life: 0.6, size: 6 }));
+    // Her scattered moves surround them...
+    const moves = [[3, 4], [5, 5], [4, 3], [3, 5], [5, 4]];
+    moves.forEach(([c, r], i) => stone(c, r, true, pop(t, tSc - 0.2 + i * ((tPrey - tSc + 0.2) / moves.length), 0.35)));
+    // ...and the final blow closes the last liberty.
+    stone(4, 6, true, pop(t, tBlow - 0.15, 0.35));
+    if (t > tBlow - 0.15) {
+      glow(ctx, ...at(4, 6), 200 * (1 - prog(t, tBlow, 0.6)), '255,120,40', 0.8);
+      ring(ctx, t, tBlow - 0.1, ...at(4, 6), { maxR: 520, life: 0.6, color: '255,140,60', width: 14 });
+    }
+    ember(ctx, { wash: 0.04 });
+    if (t > tW - 0.3) fplate(ctx, 'A GAME OF WEIQI', W / 2, 220, t, tW - 0.3, 44);
+    if (t > tPrey - 0.2 && t < tBlow - 0.2) fserif(ctx, 'lure the prey...', W / 2, 1200, 70, { italic: true, alpha: fadeIn(t, tPrey - 0.2) });
+    if (t > tBlow - 0.2) withT(ctx, W / 2, 1200, pop(t, tBlow - 0.2, 0.45), 0, () => fserif(ctx, 'THE FINAL BLOW', 0, 0, 84));
+  },
+
+  // 3 — Born amid flames; runs warm; as a child she couldn't control her power.
+  (ctx, t, dur) => {
+    const tBorn = when('born', 0, 0.0), tFl = when('flames', 0, 0.6), tWarm = when('warmer', 0, 1.6), tChild = when('child', 0, 3.7), tPow = when('power', 0, 5.7);
+    const wild = prog(t, tChild - 0.3, 0.5);
+    const [sx, sy] = [Math.sin(t * 37) * 6 * wild, Math.cos(t * 29) * 6 * wild];
+    ctx.save(); ctx.translate(sx, sy);
+    backdrop(ctx, 'vert', t, dur, 0.5, 0.3, 0.5);
+    // Her official report, focused on its "flames" line.
+    const kz = ease.inOutCubic(prog(t, tFl - 0.2, 0.9));
+    const kp = fadeIn(t, 0, 0.6), z = lerp(0.72, 1.6, kz), fx = lerp(495, 300, kz), fy = lerp(730, 820, kz);
+    ctx.save(); ctx.globalAlpha = kp * (1 - 0.5 * wild);
+    ctx.translate(W / 2, 660); ctx.rotate(-0.015); ctx.scale(z, z); ctx.translate(-fx, -fy);
+    ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 50; ctx.fillStyle = '#F4F1EC'; ctx.fillRect(0, 0, 990, 1460); ctx.shadowBlur = 0;
+    ctx.imageSmoothingQuality = 'high'; ctx.drawImage(ARTS.report.img, 0, 0);
+    mark(ctx, prog(t, tFl, 0.4), 62, 782, 368, 110);
+    ctx.restore();
+    // Flames: a steady glow first, then wild flare-ups for the child who couldn't control them.
+    const kw = prog(t, tWarm - 0.3, 0.6);
+    if (kw > 0) { ctx.fillStyle = `rgba(255,90,20,${0.12 * kw})`; ctx.fillRect(-20, -20, W + 40, H + 40); }
+    for (let i = 0; i < 6; i++) {
+      const x = 120 + i * 168;
+      flame(ctx, x, H + 30, (140 + 60 * Math.sin(i * 2.1)) * kw + wild * (200 + 160 * Math.abs(Math.sin(t * 3 + i * 1.7))), t, i);
+    }
+    if (wild > 0) {
+      const r = rng(Math.floor(t * 3));
+      for (let i = 0; i < 3; i++) burst(ctx, t, Math.floor(t * 3) / 3, 100 + r() * 880, 300 + r() * 900, { n: 14, color: '255,140,50', speed: 520, life: 0.33, size: 7 });
+    }
+    embers(ctx, t, 60, 5, 0.6 + wild * 0.4);
+    ctx.restore();
+    ember(ctx, { wash: 0.04 });
+    ctx.fillStyle = vgrad(ctx, 1080, 1320, [[0, 'rgba(40,10,0,0)'], [0.35, 'rgba(40,10,0,0.75)'], [0.8, 'rgba(40,10,0,0.75)'], [1, 'rgba(40,10,0,0)']]);
+    ctx.fillRect(0, 1080, W, 240);
+    if (t > tBorn - 0.2 && wild < 1) fplate(ctx, 'BORN AMID FLAMES', W / 2, 200, t, tBorn - 0.2, 44);
+    if (t > tWarm - 0.3 && wild < 1) fserif(ctx, 'runs warmer than most', W / 2, 1200, 64, { italic: true, alpha: fadeIn(t, tWarm - 0.3) * (1 - wild) });
+    if (t > tChild - 0.3) fplate(ctx, 'AS A CHILD', W / 2, 200, t, tChild - 0.3, 44);
+    if (t > tPow - 0.3) withT(ctx, W / 2, 1200, pop(t, tPow - 0.3, 0.45), -0.04, () => fserif(ctx, 'OUT OF CONTROL', 0, 0, 82));
+  },
+
+  // 4 — She cradled an abandoned egg in her warm hands until a chick hatched.
+  (ctx, t, dur) => {
+    const tEgg = when('egg', 0, 1.9), tWarm = when('warm', 0, 3.2), tUntil = when('until', 0, 4.4), tHatch = when('hatched', 0, 5.2);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.3, 0.3);
+    const kc = fadeIn(t, 0, 0.6);
+    framed(ctx, 'story', 40, 200 + (1 - kc) * 60, 1000, 704, { alpha: kc });
+    embers(ctx, t, 14, 23, 0.5);
+    const ex = W / 2, ey = 1060;
+    const ke = pop(t, tEgg - 0.3, 0.5), kw = prog(t, tWarm - 0.3, 0.8), split = prog(t, tHatch - 0.1, 0.4);
+    if (ke > 0) {
+      glow(ctx, ex, ey, 230 + 160 * kw, '255,150,60', 0.35 + 0.35 * kw + 0.08 * Math.sin(t * 5));
+      const wob = t > tUntil - 0.2 && split <= 0 ? Math.sin(t * 30) * 0.08 : 0;
+      withT(ctx, ex, ey, ke * 1.7, wob, () => {
+        const shell = (dy, clipTop) => {
+          ctx.save(); ctx.beginPath(); ctx.rect(-80, clipTop ? -120 : 0, 160, 120); ctx.clip();
+          ctx.translate(0, dy);
+          const g = ctx.createRadialGradient(-20, -30, 5, 0, 0, 90);
+          g.addColorStop(0, '#FFFDF4'); g.addColorStop(1, '#E8D8BC');
+          ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(0, 0, 58, 76, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.restore();
+        };
+        shell(-70 * split, true);
+        shell(10 * split, false);
+        // The chick pops up out of the open shell, in front of it.
+        if (split > 0) withT(ctx, 0, -10 - 50 * ease.outBack(split), 0.5 + 0.5 * ease.outBack(split), 0, () => {
+          ctx.fillStyle = '#FFD84A'; ctx.beginPath(); ctx.arc(0, 0, 46, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = '#FF9A2A'; ctx.beginPath(); ctx.moveTo(24, -2); ctx.lineTo(50, 6); ctx.lineTo(24, 14); ctx.fill();
+          ctx.fillStyle = '#2A1A0A'; ctx.beginPath(); ctx.arc(12, -12, 6, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = '#FFE98A'; ctx.beginPath(); ctx.ellipse(-16, 12, 18, 12, -0.4, 0, Math.PI * 2); ctx.fill();
+        });
+        // Cracks before hatching.
+        const kk = prog(t, tUntil - 0.1, 0.6);
+        if (kk > 0 && split <= 0) {
+          ctx.strokeStyle = 'rgba(120,80,40,0.9)'; ctx.lineWidth = 3;
+          ctx.beginPath(); ctx.moveTo(-56, 0);
+          const pts = [[-36, -10], [-20, 6], [-2, -8], [16, 8], [34, -6], [56, 2]];
+          pts.slice(0, Math.ceil(pts.length * kk)).forEach(p => ctx.lineTo(...p)); ctx.stroke();
+        }
+      });
+      if (split > 0) burst(ctx, t, tHatch - 0.1, ex, ey - 40, { n: 26, color: '255,220,140', speed: 420, life: 0.7, size: 7 });
+    }
+    ember(ctx, { wash: 0.03 });
+    if (t > tWarm - 0.3 && t < tHatch - 0.2) fplate(ctx, 'IN HER WARM HANDS', W / 2, 1250, t, tWarm - 0.3, 40);
+    if (t > tHatch) fserif(ctx, '"this little one has got mettle."', W / 2, 1255, 50, { italic: true, alpha: fadeIn(t, tHatch, 0.5) });
+  },
+
+  // 5 — True Sight flame, robe ablaze; five-star Fusion.
+  (ctx, t, dur) => {
+    const tForte = when('forte', 0, 1.0), tTrue = when('true', 0, 2.6), tBlaze = when('blaze', 0, 7.1), tShe = when('shes', 0, 8.2),
+          tStar = when('fivestar', 0, 8.6), tFus = when('fusion', 0, 9.3);
+    backdrop(ctx, 'vert', t, dur, 0.5, 0.2, 0.45);
+    const kc = fadeIn(t, 0, 0.6) * (1 - prog(t, tTrue - 0.4, 0.5));
+    if (kc > 0) framed(ctx, 'stance', 70, 330 + (1 - fadeIn(t, 0, 0.6)) * 60, 940, 470, { alpha: kc });
+    // Her True Sight portrait lifts out of the card and burns.
+    const kl = ease.outBack(prog(t, tTrue - 0.4, 0.7)), kup = ease.inOutCubic(prog(t, tShe - 0.4, 0.7));
+    if (kl > 0) {
+      const cx0 = 70 + 180, cy0 = 330 + 247;
+      const x = lerp(cx0, W / 2, kl), y = lerp(cy0, lerp(820, 600, kup), kl), s = lerp(1, lerp(1.75, 1.35, kup), kl), R = 146 * s;
+      const kz = prog(t, tBlaze - 0.4, 0.6);
+      for (let i = 0; i < 12; i++) {
+        const a = (i / 12) * Math.PI * 2 + t * 0.4;
+        withT(ctx, x + Math.cos(a) * (R + 10), y + Math.sin(a) * (R + 10), 1, a + Math.PI / 2, () => flame(ctx, 0, 0, (70 + 50 * kz) * kl, t, i));
+      }
+      glow(ctx, x, y, R * 1.6, '255,110,30', 0.45 + 0.3 * kz);
+      ctx.save(); ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.clip();
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(ARTS.stance.img, 180 - 146, 247 - 146, 292, 292, x - R, y - R, 2 * R, 2 * R);
+      ctx.restore();
+      ctx.lineWidth = 7; ctx.strokeStyle = 'rgba(255,190,120,0.95)'; ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.stroke();
+      if (t > tBlaze - 0.2) ring(ctx, t, tBlaze - 0.2, x, y, { maxR: 900, life: 0.7, color: '255,140,50', width: 24 });
+    }
+    embers(ctx, t, 50, 9, 0.5 + 0.5 * prog(t, tBlaze - 0.4, 0.6));
+    ember(ctx, { wash: 0.04 });
+    if (t > tForte - 0.3 && t < tShe - 0.3) fplate(ctx, 'HER FORTE', W / 2, 220, t, tForte - 0.3, 44);
+    const p2 = 1 - prog(t, tShe - 0.5, 0.3);
+    if (t > tTrue - 0.2 && p2 > 0) { ctx.save(); ctx.globalAlpha = p2; fserif(ctx, 'True Sight', W / 2, 1175, 90, { italic: true, alpha: fadeIn(t, tTrue - 0.2) }); ctx.restore(); }
+    if (t > tBlaze - 0.2 && p2 > 0) { ctx.save(); ctx.globalAlpha = p2; withT(ctx, W / 2, 1258, pop(t, tBlaze - 0.2, 0.45), 0, () => fplate(ctx, 'A ROBE OF FLAME', 0, 0, t, tBlaze - 0.2, 32)); ctx.restore(); }
+    for (let i = 0; i < 5; i++) {
+      const k = pop(t, tStar - 0.2 + i * 0.07, 0.4);
+      if (k > 0) withT(ctx, W / 2 + (i - 2) * 92, 1000, k, 0, () => {
+        glow(ctx, 0, 0, 60, '255,210,120', 0.6);
+        ctx.fillStyle = '#FFD27A'; ctx.fill(starPath(38, 16));
+        ctx.lineWidth = 3; ctx.strokeStyle = '#7A4A10'; ctx.stroke(starPath(38, 16));
+      });
+    }
+    badge(ctx, t, tFus - 0.2, W / 2, 1170, 'FUSION', '255,120,50', 82);
+  },
+
+  // 6 — Outro: would you play Weiqi against Changli?
+  (ctx, t, dur) => {
+    const tPlay = when('play', 0, 0.9), tAg = when('against', 0, 1.5), tComments = when('comments', 0, 3.3);
+    cover(ctx, 'vert', t, dur, [0.48, 0.2, 1.4], [0.48, 0.24, 1.55]);
+    embers(ctx, t, 36, 31, 0.8);
+    ember(ctx, { wash: 0.07 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    if (t > tPlay - 0.3) fserif(ctx, 'Would you play Weiqi', W / 2, 1000, 84, { italic: true, alpha: fadeIn(t, tPlay - 0.3, 0.6) });
+    if (t > tAg - 0.3) fserif(ctx, 'against Changli?', W / 2, 1105, 84, { italic: true, alpha: fadeIn(t, tAg - 0.3, 0.6) });
+    if (t > tComments - 0.3) fplate(ctx, 'TELL ME IN THE COMMENTS', W / 2, 1215, t, tComments - 0.3, 38);
+  },
+];
+</script>
+</body>
+</html>
