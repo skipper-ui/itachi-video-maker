@@ -12,3 +12,9 @@ dist/
 # Generated media
 output/
 .claude/settings.local.json
+
+# Node
+node_modules/
+
+# Model weights (large, never commit)
+models/

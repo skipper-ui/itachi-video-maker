@@ -1,0 +1,12 @@
+{
+  "name": "itachi-video-maker",
+  "private": true,
+  "description": "Node tooling for the video pipeline: motion renderer (Playwright, preinstalled), HyperFrames, map projection",
+  "scripts": {
+    "hyperframes": "hyperframes"
+  },
+  "devDependencies": {
+    "d3-geo": "3.1.1",
+    "hyperframes": "0.9.77"
+  }
+}
