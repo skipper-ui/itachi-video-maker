@@ -59,7 +59,7 @@
           "volume": 0.6
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "prey",
           "offset": -0.2,
           "volume": 0.4
@@ -71,13 +71,13 @@
           "volume": 0.3
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "camellya",
           "offset": -0.2,
           "volume": 0.7
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "bloom",
           "offset": -0.2,
           "volume": 0.4
@@ -88,7 +88,7 @@
       "narration": "Her job is finding new recruits. But her approval rate is shockingly low, and those who fail her trials rarely dare to come back.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "recruits",
           "offset": -0.2,
           "volume": 0.45
@@ -123,19 +123,19 @@
       "narration": "She loses interest fast. In her own words: wasting time on boring people should be a crime.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "loses",
           "offset": -0.2,
           "volume": 0.35
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "wasting",
           "offset": -0.2,
           "volume": 0.35
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "crime",
           "offset": -0.2,
           "volume": 0.4
@@ -152,7 +152,7 @@
           "volume": 0.5
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "red",
           "offset": -0.2,
           "volume": 0.6
@@ -193,7 +193,7 @@
           "volume": 0.35
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "unknown",
           "offset": -0.2,
           "volume": 0.35
@@ -216,19 +216,19 @@
       "narration": "She's a five-star Havoc sword user, and in Version 3.8, she's back on the Starpath Reverbs banner until December 21st.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "fivestar",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "havoc",
           "offset": -0.2,
           "volume": 0.3
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "sword",
           "offset": -0.2,
           "volume": 0.3
@@ -240,13 +240,13 @@
           "volume": 0.4
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "starpath",
           "offset": -0.2,
           "volume": 0.45
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "december",
           "offset": -0.2,
           "volume": 0.35
@@ -262,13 +262,13 @@
           "volume": 0.5
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "trial",
           "offset": -0.2,
           "volume": 0.45
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.4

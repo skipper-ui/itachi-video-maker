@@ -52,19 +52,19 @@
           "volume": 0.6
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "dreams",
           "offset": -0.2,
           "volume": 0.6
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "lily",
           "offset": -0.2,
           "volume": 0.7
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "newest",
           "offset": -0.1,
           "volume": 0.4
@@ -80,13 +80,13 @@
           "volume": 0.5
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "lilies",
           "offset": -0.2,
           "volume": 0.5
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "november",
           "offset": -0.2,
           "volume": 0.35
@@ -97,7 +97,7 @@
       "narration": "Before all this, Lily was a perfumer. When the Resonator War broke out, she was drafted as a combat medic.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "perfumer",
           "offset": -0.2,
           "volume": 0.5
@@ -131,13 +131,13 @@
           "volume": 0.4
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "trauma",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "dreams",
           "offset": -0.3,
           "volume": 0.6
@@ -154,13 +154,13 @@
           "volume": 0.4
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "train",
           "offset": -0.2,
           "volume": 0.6
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "rest",
           "offset": -0.3,
           "volume": 0.5
@@ -171,31 +171,31 @@
       "narration": "In battle, she's a five-star Spectro healer who fights with pistols, and she literally falls asleep to heal her team.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "fivestar",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "spectro",
           "offset": -0.2,
           "volume": 0.35
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "healer",
           "offset": -0.2,
           "volume": 0.35
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "pistols",
           "offset": -0.2,
           "volume": 0.35
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "asleep",
           "offset": -0.2,
           "volume": 0.7
@@ -211,13 +211,13 @@
           "volume": 0.5
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "lily",
           "offset": -0.3,
           "volume": 0.5
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.4

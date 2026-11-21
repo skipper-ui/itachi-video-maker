@@ -57,13 +57,13 @@
           "volume": 0.45
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "rover",
           "offset": -0.2,
           "volume": 0.7
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "wuthering",
           "offset": -0.1,
           "volume": 0.4
@@ -79,19 +79,19 @@
           "volume": 0.4
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "male",
           "offset": -0.2,
           "volume": 0.45
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "female",
           "offset": -0.2,
           "volume": 0.45
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "same",
           "offset": -0.2,
           "volume": 0.35
@@ -102,13 +102,13 @@
       "narration": "And the Rover is unique. They can absorb Echoes from defeated Tacet Discords, and purify them, something no other Resonator can do.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "unique",
           "offset": -0.2,
           "volume": 0.5
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "absorb",
           "offset": -0.2,
           "volume": 0.6
@@ -120,7 +120,7 @@
           "volume": 0.4
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "resonator",
           "offset": -0.2,
           "volume": 0.35
@@ -131,7 +131,7 @@
       "narration": "They also command more than one Resonance: Spectro and Havoc from the very start, and later, Aero.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "spectro",
           "offset": -0.2,
           "volume": 0.45
@@ -143,7 +143,7 @@
           "volume": 0.3
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "aero",
           "offset": -0.2,
           "volume": 0.6
@@ -177,19 +177,19 @@
       "narration": "And in Version 3.8, the Rover can finally equip a separate Echo set for each Resonance Attribute.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "version",
           "offset": -0.2,
           "volume": 0.5
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "echo",
           "offset": -0.2,
           "volume": 0.55
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "attribute",
           "offset": -0.2,
           "volume": 0.35
@@ -205,19 +205,19 @@
           "volume": 0.5
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "male",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "female",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.4

@@ -68,5 +68,17 @@
   "swell": {
     "prompt": "soft cinematic reverse swell whoosh, airy and gentle",
     "duration": 1.2
+  },
+  "soft_hit": {
+    "prompt": "soft muffled cinematic low thump, warm and deep, subtle accent, no bells, no chimes, no ringing, no sparkle",
+    "duration": 0.8
+  },
+  "swish": {
+    "prompt": "quick soft airy swish, like silk moving through air, subtle and clean, no bells, no chimes, no ringing",
+    "duration": 0.6
+  },
+  "deep_rise": {
+    "prompt": "short deep cinematic sub bass rise into a soft whoomp, dark and smooth, no bells, no chimes, no sparkle, no ringing",
+    "duration": 1.2
   }
 }

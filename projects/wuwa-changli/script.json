@@ -57,7 +57,7 @@
           "volume": 0.5
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "smiles",
           "offset": -0.2,
           "volume": 0.4
@@ -69,13 +69,13 @@
           "volume": 0.35
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "changli",
           "offset": -0.2,
           "volume": 0.7
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "counselor",
           "offset": -0.2,
           "volume": 0.35
@@ -86,13 +86,13 @@
       "narration": "She was once Secretary-General of the Central Secretariat in the capital. Now she's Jinzhou's strategist.",
       "sfx": [
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "secretarygeneral",
           "offset": -0.2,
           "volume": 0.35
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "central",
           "offset": -0.2,
           "volume": 0.3
@@ -104,7 +104,7 @@
           "volume": 0.35
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "strategist",
           "offset": -0.2,
           "volume": 0.45
@@ -115,7 +115,7 @@
       "narration": "She treats every crisis like a game of Weiqi: scattered moves that lure the prey in, then the final blow.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "weiqi",
           "offset": -0.2,
           "volume": 0.4
@@ -156,7 +156,7 @@
           "volume": 0.45
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "flames",
           "offset": -0.2,
           "volume": 0.5
@@ -179,7 +179,7 @@
       "narration": "Once, she found an abandoned bird egg and cradled it in her warm hands, until a chick hatched.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "egg",
           "offset": -0.2,
           "volume": 0.4
@@ -203,7 +203,7 @@
           "volume": 0.55
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "hatched",
           "offset": 0.2,
           "volume": 0.35
@@ -220,7 +220,7 @@
           "volume": 0.45
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "true",
           "offset": -0.2,
           "volume": 0.6
@@ -238,13 +238,13 @@
           "volume": 0.35
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "fivestar",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "fusion",
           "offset": -0.2,
           "volume": 0.35
@@ -266,7 +266,7 @@
           "volume": 0.45
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.4

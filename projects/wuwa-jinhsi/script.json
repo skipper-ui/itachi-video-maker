@@ -54,25 +54,25 @@
           "volume": 0.5
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "wishes",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "luck",
           "offset": -0.2,
           "volume": 0.35
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "jinhsi",
           "offset": -0.2,
           "volume": 0.7
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "magistrate",
           "offset": -0.2,
           "volume": 0.35
@@ -83,7 +83,7 @@
       "narration": "Jinzhou calls her the Loong Maiden. They say after she visits a street, everyone there gets a sudden stroke of luck.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "loong",
           "offset": -0.2,
           "volume": 0.45
@@ -95,13 +95,13 @@
           "volume": 0.3
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "luck",
           "offset": -0.2,
           "volume": 0.55
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "luck",
           "offset": 0.2,
           "volume": 0.3
@@ -118,7 +118,7 @@
           "volume": 0.4
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "jué",
           "offset": -0.2,
           "volume": 0.4
@@ -130,7 +130,7 @@
           "volume": 0.4
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "horns",
           "offset": -0.2,
           "volume": 0.6
@@ -147,7 +147,7 @@
           "volume": 0.35
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "scales",
           "offset": -0.2,
           "volume": 0.45
@@ -159,7 +159,7 @@
           "volume": 0.4
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "rover",
           "offset": -0.2,
           "volume": 0.35
@@ -176,19 +176,19 @@
           "volume": 0.45
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "visions",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "magic",
+          "sound": "deep_rise",
           "word": "figure",
           "offset": -0.2,
           "volume": 0.5
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "rover",
           "offset": -0.2,
           "volume": 0.4
@@ -199,13 +199,13 @@
       "narration": "She's a five-star Spectro Resonator, and she makes her own Loong Buns, filled with custard, lotus seed, or sweet bean.",
       "sfx": [
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "fivestar",
           "offset": -0.2,
           "volume": 0.4
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "spectro",
           "offset": -0.2,
           "volume": 0.35
@@ -245,13 +245,13 @@
           "volume": 0.5
         },
         {
-          "sound": "chime",
+          "sound": "soft_hit",
           "word": "lucky",
           "offset": -0.2,
           "volume": 0.45
         },
         {
-          "sound": "ding",
+          "sound": "swish",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.4
