@@ -11,3 +11,4 @@ dist/
 
 # Generated media
 output/
+.claude/settings.local.json
