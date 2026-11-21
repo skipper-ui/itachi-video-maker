@@ -1,0 +1,24 @@
+{
+  "library": 338,
+  "assets": {
+    "queen_a": {"id": 66172, "title": "Archer_Queen_3", "width": 1400},
+    "queen_b": {"id": 66173, "title": "Archer_Queen_4", "width": 1400},
+    "queen_c": {"id": 66174, "title": "Archer_Queen_5", "width": 1400},
+    "queen_d": {"id": 66175, "title": "Archer_Queen_6", "width": 1400},
+    "skin_gladiator": {"id": 51550, "title": "Hero_Skin_AQ_Gladiator_Queen_1", "width": 1200},
+    "skin_primal": {"id": 66178, "title": "Hero_Skin_AQ_Primal_Queen_1", "width": 1000},
+    "skin_ghost": {"id": 64065, "title": "Hero_Skin_AQ_Ghost_Queen_1", "width": 1000},
+    "skin_pirate": {"id": 51564, "title": "Hero_Skin_AQ_Pirate_Queen_1", "width": 1000},
+    "skin_dragon": {"id": 67294, "title": "Hero_Skin_AQ_Dragon_Queen_1", "width": 1000},
+    "skin_champion": {"id": 66183, "title": "Hero_Skin_AQ_Champion_Queen_1", "width": 1000},
+    "skin_valkyrie": {"id": 51572, "title": "Hero_Skin_AQ_Valkyrie_Queen", "width": 1000},
+    "eq_puppet": {"id": 64146, "title": "Hero_Equipment_AQ_Archer_Puppet", "width": 700},
+    "eq_vial": {"id": 64148, "title": "Hero_Equipment_AQ_Invisibility_Vial", "width": 700},
+    "eq_giant_arrow": {"id": 64149, "title": "Hero_Equipment_AQ_Giant_Arrow", "width": 700},
+    "eq_frozen_arrow": {"id": 67148, "title": "Hero_Equipment_AQ_Frozen_Arrow", "width": 700},
+    "titan_queen": {"id": 166909, "title": "titan_aq_pose02_noshadow", "width": 1600},
+    "titan_queen_b": {"id": 166910, "title": "titan_aq_pose03_noshadow", "width": 1600},
+    "archer": {"id": 168174, "title": "archer_lvl_15", "width": 600},
+    "king": {"id": 66197, "title": "Barbarian_King_2", "width": 1200}
+  }
+}

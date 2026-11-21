@@ -1,0 +1,324 @@
+{
+  "title": "Archer Queen: The Evolution",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Archer",
+    "Queen",
+    "Royal",
+    "Cloak",
+    "Gladiator",
+    "Valkyrie",
+    "Hero",
+    "Equipment",
+    "Puppet",
+    "Invisibility",
+    "Vial",
+    "Titan",
+    "King",
+    "30",
+    "100",
+    "110",
+    "115",
+    "2013",
+    "2014",
+    "2019",
+    "2023",
+    "17",
+    "18",
+    "19"
+  ],
+  "voice_id": "IKne3meq5aSn9XLyUdCD",
+  "voice_name": "Charlie - Deep, Confident, Energetic",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_strategy",
+    "volume": 0.22
+  },
+  "sources": [
+    "https://clashofclans.fandom.com/wiki/Archer_Queen (announced Jan 9 2013, added Jan 10 2013 with 30 levels)",
+    "https://toucharcade.com/2013/01/10/clash-of-clans-gets-two-new-units-and-more-in-latest-update (King and Queen in the same v3.3 update)",
+    "https://www.clash.ninja/guides/history-of-updates-what-has-changed (hero abilities added January 2014)",
+    "https://clashofclans.fandom.com/wiki/Invisibility_Vial (added Dec 12 2023, split from the Queen's cloak ability)",
+    "https://clashofclans.fandom.com/wiki/Hero_Skins (Primal Queen Mar 2019, Gladiator Queen May 2019)",
+    "https://www.clash.ninja/guides/max-levels-for-each-th (AQ max 110 at TH18)",
+    "https://cocwarbase.com/archer-queen/ (AQ max 115 at TH19)",
+    "VERIFY: AQ max 100 at TH17 (matches the King's TH17 cap; not separately confirmed)"
+  ],
+  "scenes": [
+    {
+      "narration": "She's been raining arrows on bases for almost fourteen years. This is how the Archer Queen went from level 30 to level 115.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.6
+        },
+        {
+          "sound": "whoosh",
+          "at": 0.4,
+          "repeat": 3,
+          "every": 0.35,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "fourteen",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "thud",
+          "word": "archer",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "30",
+          "offset": -0.15,
+          "volume": 0.7
+        },
+        {
+          "sound": "levelup",
+          "word": "115",
+          "offset": -0.4,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "115",
+          "offset": 0.3,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "January 2013. She arrived in the very same update as the Barbarian King, with 30 levels.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "whoosh",
+          "at": 0.8,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "same",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "thud",
+          "word": "barbarian",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "ding",
+          "word": "30",
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "A year later she got her signature ability, the Royal Cloak: she turned invisible and called in a pack of archers.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "impact",
+          "word": "royal",
+          "offset": 0.1,
+          "volume": 0.9
+        },
+        {
+          "sound": "magic",
+          "word": "invisible",
+          "offset": -0.1,
+          "volume": 0.8
+        },
+        {
+          "sound": "march",
+          "word": "archers",
+          "offset": -0.3,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "Her first skins arrived in 2019, like the Gladiator Queen. Since then she's worn dozens, from Valkyrie Queen to Pirate Queen.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "gladiator",
+          "offset": -0.3,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "dozens",
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "dozens",
+          "offset": 0.2,
+          "repeat": 3,
+          "every": 0.15,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "valkyrie",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "pirate",
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "In December 2023, the Royal Cloak was split into Hero Equipment: the Archer Puppet and the Invisibility Vial.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "pop",
+          "word": "royal",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "split",
+          "volume": 0.8
+        },
+        {
+          "sound": "thud",
+          "word": "hero",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "hero",
+          "offset": 0.5,
+          "repeat": 2,
+          "every": 0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "puppet",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "invisibility",
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "And her level cap kept climbing: 100 at Town Hall 17, 110 at Town Hall 18, and now 115 at Town Hall 19.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "tick",
+          "word": "100",
+          "volume": 0.7
+        },
+        {
+          "sound": "tick",
+          "word": "110",
+          "volume": 0.7
+        },
+        {
+          "sound": "levelup",
+          "word": "115",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "115",
+          "offset": 0.25,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "This season, she even got an armored Titan skin.",
+      "sfx": [
+        {
+          "sound": "magic",
+          "at": 0.3,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "titan",
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "titan",
+          "offset": 0.3,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "So, who's stronger: the King or the Queen? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "word": "king",
+          "offset": -0.3,
+          "volume": 0.6
+        },
+        {
+          "sound": "whoosh",
+          "word": "queen",
+          "offset": -0.3,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "queen",
+          "offset": 0.1,
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    }
+  ]
+}
