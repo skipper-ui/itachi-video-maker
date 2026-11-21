@@ -1,0 +1,23 @@
+{
+  "library": 338,
+  "assets": {
+    "prince_a": {"id": 85751, "title": "Hero_Minion_Prince_01_grass", "width": 1400},
+    "prince_b": {"id": 85749, "title": "Hero_Minion_Prince_02_grass", "width": 1400},
+    "prince_c": {"id": 85750, "title": "Hero_Minion_Prince_03_grass", "width": 1400},
+    "prince_d": {"id": 85752, "title": "Hero_Minion_Prince_04_grass", "width": 1400},
+    "th9": {"id": 66722, "title": "Building_HV_Town_Hall_level_9"},
+    "eq_henchman": {"id": 85723, "title": "Hero_Equipment_MP_Henchman", "width": 700},
+    "minion": {"id": 168189, "title": "minion_lvl_15", "width": 600},
+    "skin_wwe": {"id": 94059, "title": "MinionPrince_wwe_f73_3k", "width": 1000},
+    "skin_darkdays": {"id": 97744, "title": "MinionPrince_DarkDays_f20", "width": 1000},
+    "skin_frost": {"id": 124208, "title": "MinionPrince_FrostAge_f30_3k", "width": 1000},
+    "skin_desert": {"id": 126538, "title": "MinionPrince_DesertNights_f22_6k", "width": 1000},
+    "skin_lny": {"id": 131883, "title": "MinionPrince_LNY_f11_4k", "width": 1000},
+    "skin_league": {"id": 164941, "title": "league_prince_pose01", "width": 1000},
+    "titan_prince": {"id": 166904, "title": "titan_mp_pose01", "width": 1600},
+    "king": {"id": 66197, "title": "Barbarian_King_2", "width": 800},
+    "queen": {"id": 66172, "title": "Archer_Queen_3", "width": 800},
+    "warden": {"id": 52412, "title": "Grand_Warden_1", "width": 800},
+    "champion": {"id": 52478, "title": "Royal_Champion_1", "width": 800}
+  }
+}

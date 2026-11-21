@@ -1,0 +1,262 @@
+{
+  "title": "Minion Prince: The Evolution",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Minion",
+    "Prince",
+    "Dark",
+    "Orb",
+    "Henchmen",
+    "Puppet",
+    "Hero",
+    "Equipment",
+    "Titan",
+    "King",
+    "Queen",
+    "Warden",
+    "Champion",
+    "100",
+    "2024",
+    "9",
+    "19",
+    "fifth",
+    "flying"
+  ],
+  "voice_id": "IKne3meq5aSn9XLyUdCD",
+  "voice_name": "Charlie - Deep, Confident, Energetic",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_strategy",
+    "volume": 0.22
+  },
+  "sources": [
+    "https://primagames.com/tips/how-to-unlock-the-minion-prince-hero-in-clash-of-clans (fifth hero, November 2024; unlocks with Hero Hall 3 at Town Hall 9)",
+    "https://blueprintcoc.com/blogs/new-clash-of-clans-update/minion-prince (introduced with the Town Hall 17 / Hero Hall update)",
+    "https://www.sportstiger.com/news/clash-of-clans-minion-prince-stats-how-to-use-abilities-and-equipment (flying ranged hero; Dark Orb and Henchmen Puppet)",
+    "https://www.clashrecord.com/max-levels/th19 (TH19 caps: King 115, Queen 115, Minion Prince 100, Warden 90, Champion 60)",
+    "https://clashofclans.fandom.com/wiki/Barbarian_King (King reached level 100 in November 2024, almost 12 years after launch)"
+  ],
+  "scenes": [
+    {
+      "narration": "He flies over every wall, he joined Clash just two years ago, and he's already hit level 100. This is the Minion Prince.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "wall",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "two",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "levelup",
+          "word": "100",
+          "offset": -0.6,
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "100",
+          "offset": 0.2,
+          "volume": 0.9
+        },
+        {
+          "sound": "thud",
+          "word": "minion",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "November 2024. The Minion Prince became Clash's fifth hero, and he unlocks way back at Town Hall 9.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "whoosh",
+          "word": "minion",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "fifth",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "thud",
+          "word": "town",
+          "offset": -0.3,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "He's a flying, ranged hero who blasts from above, and he launched with his own Hero Equipment: the Dark Orb and the Henchmen Puppet.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "flying",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "firework",
+          "word": "blasts",
+          "repeat": 6,
+          "every": 0.4,
+          "volume": 0.35
+        },
+        {
+          "sound": "thud",
+          "word": "hero",
+          "nth": 1,
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "magic",
+          "word": "dark",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "henchmen",
+          "offset": -0.1,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "Since then, he's collected a whole wardrobe of skins.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "at": 0.3,
+          "repeat": 6,
+          "every": 0.28,
+          "volume": 0.5
+        },
+        {
+          "sound": "ding",
+          "word": "wardrobe",
+          "offset": -0.1,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "At Town Hall 19 he can reach level 100: higher than the Warden or the Champion, and behind only the King and Queen.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "levelup",
+          "word": "100",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "100",
+          "offset": 0.4,
+          "volume": 0.7
+        },
+        {
+          "sound": "tick",
+          "word": "warden",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "tick",
+          "word": "champion",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "tick",
+          "word": "king",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "tick",
+          "word": "queen",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "This season, he even got a Titan skin.",
+      "sfx": [
+        {
+          "sound": "magic",
+          "at": 0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "titan",
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "titan",
+          "offset": 0.3,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "So, can the youngest hero beat the King and Queen? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "word": "youngest",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "whoosh",
+          "word": "king",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "king",
+          "offset": 0.3,
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    }
+  ]
+}
