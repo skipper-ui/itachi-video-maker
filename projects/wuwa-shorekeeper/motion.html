@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who is the Shorekeeper? motion scenes</title>
+<script>
+// Official Kuro Games art (see presskit/SOURCE.txt), cropped only and credited.
+window.ART = Object.fromEntries(['vert', 'card_full', 'card_face', 'report', 'deathstar', 'close'].map(n => [n, `presskit/${n}.jpg`]));
+</script>
+<script src="../../motion/lib.js"></script>
+<script src="../../motion/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+// The Shorekeeper's palette: starlight blue and nebula violet.
+const STAR = ['#FFFFFF', '#E2EEFF', '#8FC7FF'];
+const SGLOW = 'rgba(120,180,255,0.9)';
+const splate = (ctx, str, x, y, t, t0, size = 44) =>
+  plate(ctx, str, x, y, t, t0, size, { border: 'rgba(160,200,255,0.9)', bg: 'rgba(8,14,40,0.74)', color: '#EEF5FF' });
+const sserif = (ctx, str, x, y, size, opts = {}) => serif(ctx, str, x, y, size, { fill: STAR, glowColor: SGLOW, ...opts });
+const fadeIn = (t, t0, d = 0.5) => ease.outCubic(prog(t, t0, d));
+
+function night(ctx, { wash = 0.1 } = {}) {
+  ctx.fillStyle = `rgba(10,15,60,${wash})`; ctx.fillRect(0, 0, W, H);
+  vignette(ctx, 0.7);
+  credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+}
+function band(ctx, y0 = 920, y1 = 1290, a = 0.65) {
+  ctx.fillStyle = vgrad(ctx, y0, y1, [[0, 'rgba(5,10,35,0)'], [0.3, `rgba(5,10,35,${a})`], [0.8, `rgba(5,10,35,${a})`], [1, 'rgba(5,10,35,0)']]);
+  ctx.fillRect(0, y0, W, y1 - y0);
+}
+// Twinkling starfield.
+function stars(ctx, t, { n = 60, seed = 3, a = 1 } = {}) {
+  const r = rng(seed);
+  for (let i = 0; i < n; i++) {
+    const x = r() * W, y = r() * H, s = 1.5 + r() * 3, tw = 0.4 + 0.6 * Math.sin(t * (1 + r() * 2) + i) ** 2;
+    ctx.fillStyle = `rgba(220,235,255,${a * tw})`; ctx.beginPath(); ctx.arc(x, y, s, 0, Math.PI * 2); ctx.fill();
+  }
+}
+// A crystal shard.
+function shard(ctx, x, y, s, rot, a = 1) {
+  withT(ctx, x, y, s, rot, () => {
+    ctx.globalAlpha *= a;
+    const g = ctx.createLinearGradient(-14, -30, 14, 30);
+    g.addColorStop(0, '#FFFFFF'); g.addColorStop(0.5, '#BFE0FF'); g.addColorStop(1, '#6FA8FF');
+    ctx.fillStyle = g; ctx.fill(polyPath([[0, -34], [14, -6], [8, 30], [-8, 30], [-14, -6]]));
+    ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 2; ctx.stroke(polyPath([[0, -34], [14, -6], [8, 30], [-8, 30], [-14, -6]]));
+  });
+}
+
+function framed(ctx, name, x, y, w, h, { alpha = 1, r = 26, border = 'rgba(160,200,255,0.95)' } = {}) {
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 50;
+  ctx.fillStyle = '#000'; ctx.fill(rectPath(x, y, w, h, r));
+  ctx.shadowBlur = 0;
+  ctx.save(); ctx.clip(rectPath(x, y, w, h, r));
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, x, y, w, h);
+  ctx.restore();
+  ctx.lineWidth = 5; ctx.strokeStyle = border; ctx.stroke(rectPath(x, y, w, h, r));
+  ctx.restore();
+}
+function backdrop(ctx, name, t, dur, fx = 0.5, fy = 0.5, dark = 0.45) {
+  cover(ctx, name, t, dur, [fx, fy, 1.25], [fx, fy, 1.35], { filter: 'blur(18px) saturate(1.2)' });
+  ctx.fillStyle = `rgba(5,10,35,${dark})`; ctx.fillRect(0, 0, W, H);
+}
+function roundInset(ctx, name, sx, sy, sr, x, y, R, col = '160,200,255') {
+  glow(ctx, x, y, R * 1.5, col, 0.45);
+  ctx.save(); ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.clip();
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, sx - sr, sy - sr, 2 * sr, 2 * sr, x - R, y - R, 2 * R, 2 * R);
+  ctx.restore();
+  ctx.lineWidth = 7; ctx.strokeStyle = `rgba(${col},0.95)`; ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.stroke();
+}
+function badge(ctx, t, t0, x, y, label, col, r = 80) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    glow(ctx, 0, 0, r * 1.8, col, 0.5 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = 'rgba(8,14,40,0.82)';
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 6; ctx.strokeStyle = `rgb(${col})`; ctx.stroke();
+    serif(ctx, label, 0, 4, r * 0.36, { fill: ['#FFFFFF', `rgb(${col})`], glowColor: `rgba(${col},0.9)` });
+  });
+  ring(ctx, t, t0, x, y, { maxR: r * 3, life: 0.6, color: col, width: 10 });
+}
+function mark(ctx, k, x, y, w, h) {
+  if (k <= 0) return;
+  ctx.lineWidth = 6; ctx.strokeStyle = `rgba(60,130,255,${k})`; ctx.stroke(rectPath(x, y, w, h, 12));
+}
+
+window.scenes = [
+  // 0 — Not human: made of crystals of pure energy. This is the Shorekeeper.
+  (ctx, t, dur) => {
+    const tHum = when('human', 0, 0.7), tCry = when('crystals', 0, 2.9), tSk = when('shorekeeper', 0, 5.7), tGuard = when('guardian', 0, 6.7);
+    cover(ctx, 'vert', t, dur, [0.38, 0.12, 2.4], [0.45, 0.4, 1.05]);
+    stars(ctx, t, { n: 40, a: 0.6 });
+    butterfly(ctx, t, 820, 420, 0.9, 0);
+    butterfly(ctx, t, 220, 760, 0.7, 2);
+    night(ctx, { wash: 0.05 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    const early = 1 - prog(t, tSk - 0.5, 0.4);
+    if (early > 0) {
+      ctx.save(); ctx.globalAlpha = early;
+      if (t > tHum - 0.3) splate(ctx, "SHE ISN'T HUMAN", W / 2, 1010, t, tHum - 0.3, 44);
+      if (t > tCry - 0.3) {
+        sserif(ctx, 'crystals of pure energy', W / 2, 1140, 68, { italic: true, alpha: fadeIn(t, tCry - 0.3) });
+        const r = rng(9);
+        for (let i = 0; i < 9; i++) shard(ctx, 140 + i * 100, 1225 + Math.sin(t * 2 + i) * 10, 0.7, Math.sin(t + i) * 0.4, ease.outBack(prog(t, tCry - 0.1 + i * 0.05, 0.4)));
+      }
+      ctx.restore();
+    }
+    const kc = prog(t, tSk - 0.2, 0.6);
+    if (kc > 0) {
+      ctx.fillStyle = `rgba(200,225,255,${0.3 * (1 - kc)})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, W / 2, 1050, lerp(1.25, 1, ease.outCubic(kc)), 0, () => sserif(ctx, 'SHOREKEEPER', 0, 0, 128, { alpha: ease.outCubic(kc) }));
+    }
+    if (t > tGuard - 0.3) splate(ctx, 'GUARDIAN OF THE BLACK SHORES', W / 2, 1195, t, tGuard - 0.3, 38);
+  },
+
+  // 1 — Her file: the Second Instance, built from high-purity Remnant Energy.
+  (ctx, t, dur) => {
+    const tFile = when('file', 0, 0.7), tSec = when('second', 0, 1.7), tBuilt = when('built', 0, 3.7), tRem = when('remnant', 0, 5.4);
+    backdrop(ctx, 'card_face', t, dur, 0.5, 0.45, 0.5);
+    stars(ctx, t, { n: 40, seed: 5, a: 0.5 });
+    const keys = [[0, 510, 640, 0.72], [tSec - 0.3, 510, 640, 0.72], [tSec + 0.4, 190, 410, 1.6], [tBuilt - 0.3, 190, 410, 1.6], [tBuilt + 0.4, 260, 570, 1.55]];
+    let fx = 510, fy = 640, z = 0.72;
+    for (let i = 1; i < keys.length; i++) {
+      const [ta, xa, ya, za] = keys[i - 1], [tb, xb, yb, zb] = keys[i];
+      if (t >= ta) { const k = ease.inOutCubic(prog(t, ta, Math.max(0.01, tb - ta))); fx = lerp(xa, xb, k); fy = lerp(ya, yb, k); z = lerp(za, zb, k); }
+    }
+    const kp = fadeIn(t, 0, 0.6);
+    ctx.save(); ctx.globalAlpha = kp;
+    ctx.translate(W / 2, 640 + (1 - kp) * 150); ctx.rotate(-0.015); ctx.scale(z, z); ctx.translate(-fx, -fy);
+    ctx.shadowColor = 'rgba(0,0,0,0.7)'; ctx.shadowBlur = 60; ctx.fillStyle = '#EEE'; ctx.fillRect(0, 0, 1020, 1370); ctx.shadowBlur = 0;
+    ctx.imageSmoothingQuality = 'high'; ctx.drawImage(ARTS.report.img, 0, 0);
+    mark(ctx, prog(t, tSec, 0.4) * (1 - prog(t, tBuilt, 0.3)), 50, 370, 270, 70);
+    mark(ctx, prog(t, tBuilt + 0.2, 0.4), 48, 452, 425, 245);
+    ctx.restore();
+    night(ctx, { wash: 0.03 });
+    band(ctx, 1080, 1300, 0.75);
+    if (t > tFile - 0.3 && t < tSec - 0.2) splate(ctx, 'HER OFFICIAL FILE', W / 2, 1190, t, tFile - 0.3, 42);
+    if (t > tSec - 0.2 && t < tRem - 0.3) sserif(ctx, 'the Second Instance', W / 2, 1180, 80, { italic: true, alpha: fadeIn(t, tSec - 0.2) });
+    if (t > tRem - 0.3) withT(ctx, W / 2, 1180, pop(t, tRem - 0.3, 0.45), 0, () => splate(ctx, 'PURE REMNANT ENERGY', 0, 0, t, tRem - 0.3, 42));
+  },
+
+  // 2 — She can control the stars (gift of the Astral Modulator), yet acts as a coordinator.
+  (ctx, t, dur) => {
+    const tStars = when('stars', 0, 1.2), tAst = when('astral', 0, 4.1), tCoord = when('coordinator', 0, 7.7);
+    backdrop(ctx, 'vert', t, dur, 0.5, 0.2, 0.35);
+    stars(ctx, t, { n: 70, seed: 11 });
+    framed(ctx, 'close', 160, 330 + (1 - fadeIn(t, 0, 0.6)) * 60, 760, 800, { alpha: fadeIn(t, 0, 0.6) });
+    // Constellations draw themselves around her.
+    const pts = [[90, 240], [230, 170], [380, 230], [540, 150], [700, 230], [850, 170], [990, 250], [1010, 600], [980, 950], [70, 950], [60, 600]];
+    const kl = prog(t, tStars - 0.2, 1.6);
+    if (kl > 0) {
+      ctx.save(); ctx.strokeStyle = 'rgba(170,210,255,0.8)'; ctx.lineWidth = 3; ctx.shadowColor = 'rgba(120,180,255,1)'; ctx.shadowBlur = 12;
+      ctx.beginPath(); ctx.moveTo(...pts[0]);
+      const n = (pts.length - 1) * kl;
+      for (let i = 1; i <= Math.floor(n); i++) ctx.lineTo(...pts[i]);
+      const f = n - Math.floor(n), a = pts[Math.floor(n)], b = pts[Math.min(pts.length - 1, Math.floor(n) + 1)];
+      ctx.lineTo(lerp(a[0], b[0], f), lerp(a[1], b[1], f)); ctx.stroke(); ctx.restore();
+      pts.forEach(([x, y], i) => { if (i <= n) { glow(ctx, x, y, 40, '170,210,255', 0.7); ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(x, y, 6, 0, Math.PI * 2); ctx.fill(); } });
+    }
+    butterfly(ctx, t, 900, 1060, 0.8, 1);
+    night(ctx, { wash: 0.04 });
+    band(ctx, 1100, 1300, 0.7);
+    if (t > tStars - 0.3) splate(ctx, 'SHE CONTROLS THE STARS', W / 2, 75 + 30, t, tStars - 0.3, 38);
+    if (t > tAst - 0.3 && t < tCoord - 0.4) sserif(ctx, 'a gift of the Astral Modulator', W / 2, 1200, 58, { italic: true, alpha: fadeIn(t, tAst - 0.3) });
+    if (t > tCoord - 0.3) withT(ctx, W / 2, 1200, pop(t, tCoord - 0.3, 0.45), 0, () => sserif(ctx, 'THE COORDINATOR', 0, 0, 80));
+  },
+
+  // 3 — The Lament cracks her crystals; she forges new ones. The Ship of Theseus.
+  (ctx, t, dur) => {
+    const tLam = when('lament', 0, 0.2), tCrack = when('cracking', 0, 0.9), tForge = when('forges', 0, 3.3), tShip = when('ship', 0, 5.6);
+    const [sx, sy] = shakeAt(t, tCrack, 14, 4);
+    ctx.save(); ctx.translate(sx, sy);
+    backdrop(ctx, 'card_full', t, dur, 0.5, 0.3, 0.5);
+    stars(ctx, t, { n: 40, seed: 17, a: 0.5 });
+    const cx = W / 2, cy = 700, R = 330;
+    roundInset(ctx, 'deathstar', 180, 180, 175, cx, cy, R * fadeIn(t, 0, 0.6));
+    // Cracks spread, then heal as new crystals form.
+    const kc = prog(t, tCrack - 0.1, 0.8) * (1 - prog(t, tForge, 0.8));
+    if (kc > 0) {
+      ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.clip();
+      ctx.strokeStyle = `rgba(255,255,255,${0.9 * kc})`; ctx.lineWidth = 4; ctx.shadowColor = 'rgba(120,160,255,1)'; ctx.shadowBlur = 10;
+      const r = rng(5);
+      for (let i = 0; i < 7; i++) {
+        let x = cx + (r() - 0.5) * 60, y = cy + (r() - 0.5) * 60, a = r() * Math.PI * 2;
+        ctx.beginPath(); ctx.moveTo(x, y);
+        for (let j = 0; j < 6 * kc; j++) { a += (r() - 0.5) * 1.2; x += Math.cos(a) * 50; y += Math.sin(a) * 50; ctx.lineTo(x, y); }
+        ctx.stroke();
+      }
+      ctx.restore();
+      const rr = rng(8);
+      for (let i = 0; i < 10; i++) {
+        const k = prog(t, tCrack + i * 0.08, 1.4);
+        if (k > 0 && k < 1) shard(ctx, cx + (rr() - 0.5) * 500, cy + 250 + k * 500, 0.6, k * 5 + i, (1 - k) * (1 - prog(t, tForge, 0.6)));
+      }
+    }
+    const kf = prog(t, tForge - 0.2, 0.9);
+    if (kf > 0) {
+      glow(ctx, cx, cy, R * 1.6, '150,200,255', 0.6 * Math.sin(kf * Math.PI) + 0.2 * kf);
+      for (let i = 0; i < 8; i++) {
+        const a = (i / 8) * Math.PI * 2 + t * 0.5, rad = lerp(R + 260, R + 60, ease.outCubic(kf));
+        shard(ctx, cx + Math.cos(a) * rad, cy + Math.sin(a) * rad, 0.8, a + Math.PI / 2, kf);
+      }
+    }
+    ctx.restore();
+    night(ctx, { wash: 0.03 });
+    band(ctx, 1080, 1300, 0.7);
+    if (t > tLam - 0.3) splate(ctx, 'THE LAMENT', W / 2, 220, t, tLam - 0.3, 42);
+    if (t > tForge - 0.3 && t < tShip - 0.4) sserif(ctx, 'she forges new ones', W / 2, 1180, 70, { italic: true, alpha: fadeIn(t, tForge - 0.3) });
+    if (t > tShip - 0.3) withT(ctx, W / 2, 1180, pop(t, tShip - 0.3, 0.45), 0, () => splate(ctx, 'THE SHIP OF THESEUS', 0, 0, t, tShip - 0.3, 42));
+  },
+
+  // 4 — Tools can't dream... until she dreamed of a beach and the one she waited for.
+  (ctx, t, dur) => {
+    const tDream = when('dream', 0, 1.8), tAsleep = when('asleep', 0, 3.5), tBeach = when('beach', 0, 5.1), tWait = when('waited', 0, 7.1);
+    const kd = prog(t, tAsleep - 0.3, 1.0), kb = prog(t, tBeach - 0.3, 1.0);
+    const blur = (10 * kd * (1 - kb)).toFixed(1);
+    cover(ctx, 'vert', t, dur, [0.4, 0.25, 1.6], [0.45, 0.3, 1.08], { filter: `blur(${blur}px) brightness(${(1 - 0.35 * kd + 0.25 * kb).toFixed(2)})` });
+    for (let i = 0; i < 3; i++) if (t > tAsleep - 0.2 + i * 0.5) ring(ctx, t, tAsleep - 0.2 + i * 0.5, W / 2, 800, { maxR: 900, life: 1.4, color: '180,210,255', width: 6 });
+    if (kb > 0) {
+      // Warm dawn light on the dream beach.
+      ctx.save(); ctx.globalCompositeOperation = 'soft-light';
+      ctx.fillStyle = vgrad(ctx, 0, H, [[0, `rgba(255,220,170,${0.5 * kb})`], [1, 'rgba(255,200,150,0)']]); ctx.fillRect(0, 0, W, H); ctx.restore();
+      glow(ctx, 300, 520, 500, '255,225,180', 0.35 * kb);
+    }
+    stars(ctx, t, { n: 50, seed: 23, a: 0.7 * (1 - kb) });
+    butterfly(ctx, t, 780, 600, 0.8, 3);
+    night(ctx, { wash: 0.04 });
+    band(ctx, 1040, 1300, 0.65);
+    if (t > tDream - 0.3 && t < tAsleep - 0.2) sserif(ctx, '"tools can\'t dream"', W / 2, 1170, 74, { italic: true, alpha: fadeIn(t, tDream - 0.3) });
+    if (t > tAsleep - 0.2) splate(ctx, 'HER FIRST DREAM', W / 2, 220, t, tAsleep - 0.2, 42);
+    if (t > tBeach - 0.3 && t < tWait - 0.3) sserif(ctx, 'a quiet beach...', W / 2, 1170, 74, { italic: true, alpha: fadeIn(t, tBeach - 0.3), fill: ['#FFFFFF', '#FFF1DE', '#FFCF96'], glowColor: 'rgba(255,190,120,0.9)' });
+    if (t > tWait - 0.3) sserif(ctx, 'and the one she waited for', W / 2, 1170, 66, { italic: true, alpha: fadeIn(t, tWait - 0.3), fill: ['#FFFFFF', '#FFF1DE', '#FFCF96'], glowColor: 'rgba(255,190,120,0.9)' });
+  },
+
+  // 5 — Five-star Spectro; her wish: her own piano melodies, with you as first listener.
+  (ctx, t, dur) => {
+    const tStar = when('fivestar', 0, 0.4), tSpec = when('spectro', 0, 1.0), tWish = when('wish', 0, 3.0), tMel = when('melodies', 0, 4.9),
+          tPiano = when('piano', 0, 5.7), tList = when('listener', 0, 7.8);
+    backdrop(ctx, 'card_full', t, dur, 0.5, 0.3, 0.5);
+    stars(ctx, t, { n: 40, seed: 29, a: 0.6 });
+    const kc = ease.outBack(prog(t, 0, 0.6));
+    const kpu = ease.inOutCubic(prog(t, tPiano - 0.6, 0.7));
+    if (kc > 0) roundInset(ctx, 'card_face', 490, 490, 465, W / 2, lerp(640, 560, kpu), lerp(400, 320, kpu) * kc);
+    const p1 = 1 - prog(t, tWish - 0.5, 0.4);
+    if (p1 > 0) {
+      ctx.save(); ctx.globalAlpha = p1;
+      for (let i = 0; i < 5; i++) {
+        const k = pop(t, tStar - 0.2 + i * 0.07, 0.4);
+        if (k > 0) withT(ctx, W / 2 + (i - 2) * 92, 1110, k, 0, () => {
+          glow(ctx, 0, 0, 60, '255,210,120', 0.6);
+          ctx.fillStyle = '#FFD27A'; ctx.fill(starPath(38, 16));
+          ctx.lineWidth = 3; ctx.strokeStyle = '#7A4A10'; ctx.stroke(starPath(38, 16));
+        });
+      }
+      badge(ctx, t, tSpec - 0.2, W / 2, 1220, 'SPECTRO', '255,225,130', 64);
+      ctx.restore();
+    }
+    // Piano keys and rising notes.
+    const kp = fadeIn(t, tPiano - 0.4, 0.6);
+    if (kp > 0) {
+      const kx = 140, ky = 960 + (1 - kp) * 40, kw = 800 / 14;
+      ctx.save(); ctx.globalAlpha = kp;
+      for (let i = 0; i < 14; i++) {
+        const press = Math.max(0, Math.sin(t * 6 - i * 0.7)) ** 8;
+        ctx.fillStyle = press > 0.3 ? '#CFE3FF' : '#F7FAFF';
+        ctx.fill(rectPath(kx + i * kw + 2, ky + press * 6, kw - 4, 140, 8));
+      }
+      ctx.fillStyle = '#10142E';
+      [0, 1, 3, 4, 5, 7, 8, 10, 11, 12].forEach(i => ctx.fill(rectPath(kx + (i + 1) * kw - kw * 0.3, ky, kw * 0.6, 92, 6)));
+      ctx.restore();
+      for (let i = 0; i < 6; i++) {
+        const k = ((t * 0.5 + i / 6) % 1);
+        ctx.save(); ctx.globalAlpha = kp * Math.sin(k * Math.PI);
+        sserif(ctx, i % 2 ? '♪' : '♫', i < 3 ? 90 + i * 30 : 930 + (i - 3) * 30, 1000 - k * 360, 56);
+        ctx.restore();
+      }
+    }
+    night(ctx, { wash: 0.03 });
+    if (t > tMel - 0.3) splate(ctx, 'HER OWN MELODIES', W / 2, 200, t, tMel - 0.3, 42);
+    if (t > tList - 0.3) withT(ctx, W / 2, 1200, pop(t, tList - 0.3, 0.45), 0, () => splate(ctx, 'YOU: HER FIRST LISTENER', 0, 0, t, tList - 0.3, 38));
+  },
+
+  // 6 — Outro: is she waiting for you at the Black Shores?
+  (ctx, t, dur) => {
+    const tWait = when('waiting', 0, 1.2), tBlack = when('black', 0, 2.1), tComments = when('comments', 0, 4.0);
+    cover(ctx, 'card_full', t, dur, [0.6, 0.25, 1.05], [0.6, 0.28, 1.15]);
+    stars(ctx, t, { n: 30, seed: 41, a: 0.6 });
+    butterfly(ctx, t, 860, 380, 0.9, 2);
+    night(ctx, { wash: 0.06 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    if (t > tWait - 0.3) sserif(ctx, 'Is she waiting for you', W / 2, 1000, 80, { italic: true, alpha: fadeIn(t, tWait - 0.3, 0.6) });
+    if (t > tBlack - 0.3) sserif(ctx, 'at the Black Shores?', W / 2, 1105, 80, { italic: true, alpha: fadeIn(t, tBlack - 0.3, 0.6) });
+    if (t > tComments - 0.3) splate(ctx, 'TELL ME IN THE COMMENTS', W / 2, 1215, t, tComments - 0.3, 38);
+  },
+];
+</script>
+</body>
+</html>

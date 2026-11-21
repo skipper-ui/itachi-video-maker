@@ -1,0 +1,244 @@
+{
+  "title": "Who is the Shorekeeper? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Shorekeeper",
+    "Black",
+    "Shores",
+    "human",
+    "crystals",
+    "energy",
+    "Second",
+    "Instance",
+    "Remnant",
+    "stars",
+    "Astral",
+    "Modulator",
+    "coordinator",
+    "Lament",
+    "Theseus",
+    "dream",
+    "beach",
+    "five-star",
+    "Spectro",
+    "piano",
+    "melodies",
+    "listener"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#9FD8FF",
+    "keyword": "#D6C2FF",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 1419 'Profile Reveal | Euphonic Chrysalis — The Shorekeeper': guardian of the Black Shores; Attribute Spectro, Weapon Rectifier, 5 stars",
+    "Official news 1398 'Post-Lament Anthropocene: Stars Intertwined | The Shorekeeper' lore images: Resonance Evaluation Report (Subject: Second Instance; 'The Second Instance (also known as the Shorekeeper) is composed entirely of high-purity Remnant Energy crystals'); Appropriate Estimate (holds the power to control the stars, gifted by the departed Astral Modulator; prefers to primarily act as a coordinator); Damaged Death Star (the relentless Lament threatened to tear her apart; crystals dimmed and cracked, replaced by new ones she forged; she endured like the Ship of Theseus); A Lingering Dream (believed tools had no luxury to dream; fell into slumber and dreamed of another beach with the person she had long awaited beside her); Shorekeeper's Hobby (piano: 'If I could create my own melodies, would you be my first listener?')",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "She isn't human. She's made entirely of crystals of pure energy. This is the Shorekeeper, guardian of the Black Shores.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "thud",
+          "word": "human",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "crystals",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "deep_rise",
+          "word": "shorekeeper",
+          "offset": -0.4,
+          "volume": 0.6
+        },
+        {
+          "sound": "swish",
+          "word": "guardian",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Her official file calls her the Second Instance: a being built from high-purity Remnant Energy.",
+      "sfx": [
+        {
+          "sound": "tick",
+          "word": "file",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "second",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "swish",
+          "word": "built",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "remnant",
+          "offset": -0.3,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "She can control the stars, a power gifted by the departed Astral Modulator. Yet she prefers to act as a coordinator.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "word": "stars",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "swish",
+          "word": "astral",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "coordinator",
+          "offset": -0.2,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "The Lament keeps cracking her crystals. Each time, she forges new ones to replace them, like the Ship of Theseus.",
+      "sfx": [
+        {
+          "sound": "rumble",
+          "word": "lament",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "impact",
+          "word": "cracking",
+          "offset": -0.1,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "forges",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "soft_hit",
+          "word": "ship",
+          "offset": -0.2,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "She once believed tools couldn't dream. Then she fell asleep, and dreamed of a beach, with the person she'd waited for beside her.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "dream",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swell",
+          "word": "asleep",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "swish",
+          "word": "beach",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "waited",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Spectro Resonator. And her wish? To write her own melodies on the piano, with you as her first listener.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "spectro",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "tap",
+          "word": "piano",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "listener",
+          "offset": -0.2,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "So, is the Shorekeeper waiting for you at the Black Shores? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "waiting",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
