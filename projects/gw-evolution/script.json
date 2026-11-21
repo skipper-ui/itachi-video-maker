@@ -1,0 +1,340 @@
+{
+  "title": "Grand Warden: The Evolution",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Grand",
+    "Warden",
+    "Life",
+    "Aura",
+    "Eternal",
+    "Tome",
+    "Elixir",
+    "Dark",
+    "Party",
+    "Gladiator",
+    "Pirate",
+    "Hero",
+    "Equipment",
+    "Gem",
+    "Titan",
+    "King",
+    "Queen",
+    "20",
+    "85",
+    "90",
+    "2015",
+    "2019",
+    "2023",
+    "11",
+    "18",
+    "19"
+  ],
+  "voice_id": "IKne3meq5aSn9XLyUdCD",
+  "voice_name": "Charlie - Deep, Confident, Energetic",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_strategy",
+    "volume": 0.22
+  },
+  "sources": [
+    "https://houseofclashers.com/home-village/heroes/grand-warden (added Dec 10 2015 in the Town Hall 11 update with 20 levels; third hero; ground and air)",
+    "https://www.ibtimes.co.in/clash-clans-town-hall-11-update-new-hero-grand-warden-achievements-detailed-658400 (Life Aura adds HP; Eternal Tome makes troops invincible briefly)",
+    "https://clash-of-clans.1337wiki.com/grand-warden/ (only Home Village hero upgraded with Elixir; abilities became equipment Dec 12 2023; 85 at TH18)",
+    "https://www.clashrecord.com/max-levels/th19 (Grand Warden 90 at TH19)",
+    "https://clashofclans.fandom.com/wiki/Hero_Skins (Party Warden, Gold Pass August 2019)",
+    "VERIFY: Party Warden was the Warden's first skin (earliest Warden skin found; not stated as 'first' by a source)"
+  ],
+  "scenes": [
+    {
+      "narration": "He switches between ground and air, and he's kept armies alive for almost eleven years. This is how the Grand Warden went from level 20 to level 90.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.6
+        },
+        {
+          "sound": "magic",
+          "word": "air",
+          "offset": -0.3,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "eleven",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "thud",
+          "word": "grand",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "20",
+          "offset": -0.15,
+          "volume": 0.7
+        },
+        {
+          "sound": "levelup",
+          "word": "90",
+          "offset": -0.4,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "90",
+          "offset": 0.3,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "December 2015. Town Hall 11 brought a third hero: the Grand Warden, with 20 levels.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "thud",
+          "word": "town",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "third",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "magic",
+          "word": "grand",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "ding",
+          "word": "20",
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "His Life Aura boosted the health of nearby troops, and his Eternal Tome made them immune to damage for a few seconds.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "magic",
+          "word": "life",
+          "volume": 0.6
+        },
+        {
+          "sound": "levelup",
+          "word": "health",
+          "volume": 0.5
+        },
+        {
+          "sound": "impact",
+          "word": "eternal",
+          "offset": 0.05,
+          "volume": 0.8
+        },
+        {
+          "sound": "pop",
+          "word": "immune",
+          "offset": -0.1,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "And he's still the only hero you upgrade with regular Elixir, not Dark Elixir.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "only",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "only",
+          "volume": 0.5
+        },
+        {
+          "sound": "ding",
+          "word": "elixir",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "thud",
+          "word": "dark",
+          "offset": -0.2,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "His first skin, Party Warden, arrived in 2019. Since then he's worn dozens, from Gladiator Warden to Pirate Warden.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "party",
+          "offset": -0.3,
+          "volume": 0.7
+        },
+        {
+          "sound": "stamp",
+          "word": "2019",
+          "offset": -0.2,
+          "volume": 0.9
+        },
+        {
+          "sound": "pop",
+          "word": "dozens",
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "dozens",
+          "offset": 0.2,
+          "repeat": 3,
+          "every": 0.15,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "gladiator",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "pirate",
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "In December 2023, his abilities became Hero Equipment, like the Eternal Tome and the Life Gem.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "impact",
+          "word": "hero",
+          "volume": 0.8
+        },
+        {
+          "sound": "pop",
+          "word": "hero",
+          "offset": 0.4,
+          "repeat": 2,
+          "every": 0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "eternal",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "gem",
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "His level cap kept climbing too: 85 at Town Hall 18, and now 90 at Town Hall 19.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "tick",
+          "word": "85",
+          "volume": 0.7
+        },
+        {
+          "sound": "levelup",
+          "word": "90",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "90",
+          "offset": 0.25,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "This season, he even got a Titan skin.",
+      "sfx": [
+        {
+          "sound": "magic",
+          "at": 0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "titan",
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "titan",
+          "offset": 0.3,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "So, which hero is the best: King, Queen, or Warden? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "word": "king",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "whoosh",
+          "word": "queen",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "thud",
+          "word": "warden",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    }
+  ]
+}

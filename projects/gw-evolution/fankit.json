@@ -1,0 +1,24 @@
+{
+  "library": 338,
+  "assets": {
+    "warden": {"id": 52412, "title": "Grand_Warden_1", "width": 1600},
+    "th11": {"id": 66724, "title": "Building_HV_Town_Hall_level_11", "width": 1052},
+    "skin_party": {"id": 51483, "title": "Hero_Skin_GW_Party_Warden_1_grass"},
+    "skin_gladiator": {"id": 51481, "title": "Hero_Skin_GW_Gladiator_Warden_1", "width": 1000},
+    "skin_primal": {"id": 51490, "title": "Hero_Skin_GW_Primal_Warden_1", "width": 1000},
+    "skin_ghost": {"id": 64108, "title": "Hero_Skin_GW_Ghost_Warden_1", "width": 1000},
+    "skin_pirate": {"id": 54194, "title": "Hero_Skin_GW_Pirate_Warden_1", "width": 1000},
+    "skin_dragon": {"id": 67125, "title": "Hero_Skin_GW_Dragon_Warden_1", "width": 1000},
+    "skin_clockwork": {"id": 51480, "title": "Hero_Skin_GW_Clockwork_Warden_1", "width": 1000},
+    "eq_tome": {"id": 64154, "title": "Hero_Equipment_GW_Eternal_Tome", "width": 700},
+    "eq_life_gem": {"id": 64155, "title": "Hero_Equipment_GW_Life_Gem", "width": 700},
+    "eq_healing_tome": {"id": 64156, "title": "Hero_Equipment_GW_Healing_Tome", "width": 700},
+    "eq_rage_gem": {"id": 64157, "title": "Hero_Equipment_GW_Rage_Gem", "width": 700},
+    "titan_warden": {"id": 166923, "title": "titan_gw_pose01", "width": 1600},
+    "titan_warden_b": {"id": 166924, "title": "titan_gw_pose02", "width": 1600},
+    "king": {"id": 66197, "title": "Barbarian_King_2", "width": 1200},
+    "queen": {"id": 66172, "title": "Archer_Queen_3", "width": 1200},
+    "barbarian": {"id": 168173, "title": "barbarian_lvl14", "width": 600},
+    "archer": {"id": 168174, "title": "archer_lvl_15", "width": 600}
+  }
+}
