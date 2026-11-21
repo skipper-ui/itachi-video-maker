@@ -1,0 +1,25 @@
+{
+  "library": 338,
+  "assets": {
+    "champion": {"id": 52478, "title": "Royal_Champion_1", "width": 1600},
+    "champion_b": {"id": 52481, "title": "Royal_Champion_2", "width": 1600},
+    "th13": {"id": 66728, "title": "Building_HV_Town_Hall_level_13_1", "width": 1100},
+    "skin_party": {"id": 54301, "title": "Hero_Skin_RC_Party_Champion_1", "width": 1000},
+    "skin_primal": {"id": 54309, "title": "Hero_Skin_RC_Primal_Champion_1", "width": 1000},
+    "skin_ghost": {"id": 64131, "title": "Hero_Skin_RC_Ghost_Champion_1", "width": 1000},
+    "skin_dragon": {"id": 67082, "title": "Hero_Skin_RC_Dragon_Champion_1", "width": 1000},
+    "skin_magic": {"id": 54327, "title": "Hero_Skin_RC_Magic_Champion_1", "width": 1000},
+    "skin_dark_ages": {"id": 54214, "title": "Hero_Skin_RC_Dark_Ages_Champion_1", "width": 1000},
+    "eq_shield": {"id": 64159, "title": "Hero_Equipment_RC_Seeking_Shield", "width": 700},
+    "eq_gem": {"id": 64158, "title": "Hero_Equipment_RC_Royal_Gem", "width": 700},
+    "eq_haste": {"id": 68279, "title": "Hero_Equipment_RC_Haste_Vial", "width": 700},
+    "eq_hog_doll": {"id": 68280, "title": "Hero_Equipment_RC_Hog_Rider_Doll", "width": 700},
+    "titan_champion": {"id": 166932, "title": "titan_rc_pose01", "width": 1600},
+    "titan_champion_b": {"id": 166929, "title": "titan_rc_pose02", "width": 1600},
+    "king": {"id": 66197, "title": "Barbarian_King_2", "width": 1000},
+    "queen": {"id": 66172, "title": "Archer_Queen_3", "width": 1000},
+    "warden": {"id": 52412, "title": "Grand_Warden_1", "width": 1000},
+    "cannon": {"id": 168206, "title": "Building_HV_Archer_Tower_level_22", "width": 600},
+    "air_defense": {"id": 168205, "title": "Building_HV_Air_Defense_level_17", "width": 600}
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "title": "Royal Champion: The Evolution",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Royal",
+    "Champion",
+    "Seeking",
+    "Shield",
+    "Gem",
+    "Hero",
+    "Equipment",
+    "Party",
+    "Dragon",
+    "Titan",
+    "King",
+    "Queen",
+    "Warden",
+    "spear",
+    "defenses",
+    "20",
+    "50",
+    "60",
+    "2019",
+    "2023",
+    "13",
+    "17",
+    "19",
+    "four",
+    "fourth"
+  ],
+  "voice_id": "IKne3meq5aSn9XLyUdCD",
+  "voice_name": "Charlie - Deep, Confident, Energetic",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_strategy",
+    "volume": 0.22
+  },
+  "sources": [
+    "https://supercell.com/en/games/clashofclans/blog/news/a-fourth-hero-comes-to-the-village/ (fourth Home Village hero, unlocks at TH13; her spear targets defenses)",
+    "https://www.clash.ninja/blog/december-2019-brings-th13 (December 2019 update: Town Hall 13 and the Royal Champion, max level 20)",
+    "https://www.gamerevolution.com/guides/622265-clash-of-clans-december-update-town-hall-13-patch-notes (Seeking Shield hits the 4 nearest defenses)",
+    "https://supercell.com/en/games/clashofclans/blog/news/introducing-hero-equipment (abilities became Hero Equipment; Seeking Shield and Royal Gem)",
+    "https://www.topuplive.com/no/news/clash-of-clans-royal-champion-guide-levels-equipment-skins-and-more.html (max 50 at TH17)",
+    "https://www.clashrecord.com/max-levels/th19 (max 60 at TH19)"
+  ],
+  "scenes": [
+    {
+      "narration": "She's the hero who hunts defenses, and she's been doing it for almost seven years. This is how the Royal Champion went from level 20 to level 60.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.6
+        },
+        {
+          "sound": "tick",
+          "word": "hunts",
+          "repeat": 2,
+          "every": 0.15,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "seven",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "thud",
+          "word": "royal",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "20",
+          "offset": -0.15,
+          "volume": 0.7
+        },
+        {
+          "sound": "levelup",
+          "word": "60",
+          "offset": -0.4,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "60",
+          "offset": 0.3,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "December 2019. Town Hall 13 brought a fourth hero to the Home Village: the Royal Champion, with 20 levels.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "thud",
+          "word": "town",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "fourth",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "whoosh",
+          "word": "royal",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "ding",
+          "word": "20",
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "Her spear goes straight for defenses, and her Seeking Shield bounces across the base, hitting the four nearest ones.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "spear",
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "seeking",
+          "offset": 0.05,
+          "volume": 0.7
+        },
+        {
+          "sound": "whoosh",
+          "word": "bounces",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "thud",
+          "word": "bounces",
+          "offset": 0.12,
+          "repeat": 4,
+          "every": 0.42,
+          "volume": 0.8
+        },
+        {
+          "sound": "ding",
+          "word": "four",
+          "offset": -0.1,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "Since then she's worn dozens of skins, from Party Champion to Dragon Champion.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "dozens",
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "dozens",
+          "offset": 0.15,
+          "repeat": 4,
+          "every": 0.15,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "party",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "dragon",
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "In December 2023, the Seeking Shield became Hero Equipment, alongside the Royal Gem.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "pop",
+          "word": "seeking",
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "hero",
+          "volume": 0.8
+        },
+        {
+          "sound": "pop",
+          "word": "hero",
+          "offset": 0.5,
+          "repeat": 2,
+          "every": 0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "gem",
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "And her level cap kept climbing: 50 at Town Hall 17, and now 60 at Town Hall 19.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "tick",
+          "word": "50",
+          "volume": 0.7
+        },
+        {
+          "sound": "levelup",
+          "word": "60",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "60",
+          "offset": 0.25,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "This season, she even got a Titan skin.",
+      "sfx": [
+        {
+          "sound": "magic",
+          "at": 0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "titan",
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "titan",
+          "offset": 0.3,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "So, who's the best hero: King, Queen, Warden, or Champion? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "king",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "queen",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "warden",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "thud",
+          "word": "champion",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    }
+  ]
+}
