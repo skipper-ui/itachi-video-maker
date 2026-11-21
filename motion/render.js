@@ -5,6 +5,22 @@
 const { chromium } = require('playwright');
 const { spawn } = require('child_process');
 const path = require('path');
+const http = require('http');
+const fs = require('fs');
+
+// Serve the repository over localhost so pages can read their images' pixels (file:// would taint the canvas).
+function serve(root) {
+  const types = { '.html': 'text/html', '.js': 'text/javascript', '.png': 'image/png', '.jpg': 'image/jpeg',
+                  '.json': 'application/json', '.webp': 'image/webp' };
+  const server = http.createServer((req, res) => {
+    const rel = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+    const file = path.join(root, rel);
+    if (!file.startsWith(root) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { res.writeHead(404); return res.end(); }
+    res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream' });
+    fs.createReadStream(file).pipe(res);
+  });
+  return new Promise(r => server.listen(0, '127.0.0.1', () => r(server)));
+}
 
 async function main() {
   const args = process.argv.slice(2);
@@ -16,11 +32,15 @@ async function main() {
   const browser = await chromium.launch();
   const tab = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   await tab.addInitScript(`window.WORDS = ${words};`);
-  const url = `file://${path.resolve(page)}?scene=${scene}&dur=${seconds}`;
+  const root = path.resolve(__dirname, '..');
+  const server = await serve(root);
+  const rel = path.relative(root, path.resolve(page)).split(path.sep).join('/');
+  const url = `http://127.0.0.1:${server.address().port}/${rel}?scene=${scene}&dur=${seconds}`;
   const errors = [];
   tab.on('pageerror', e => errors.push(e.message));
   await tab.goto(url);
-  await tab.waitForFunction(() => window.ready === true, null, { timeout: 30000 })
+  await tab.waitForFunction(() => window.ready === true || window.loadError, null, { timeout: 60000 })
+    .then(async () => { const e = await tab.evaluate(() => window.loadError); if (e) throw new Error(e); })
     .catch(e => { throw new Error(errors.join('\n') || e.message); });
   const canvas = await tab.$('canvas');
 
@@ -31,6 +51,7 @@ async function main() {
     }
     if (errors.length) throw new Error(errors.join('\n'));
     await browser.close();
+    server.close();
     return;
   }
 
@@ -48,6 +69,7 @@ async function main() {
   await done;
   if (errors.length) throw new Error(errors.join('\n'));
   await browser.close();
+  server.close();
 }
 
 main().catch(err => { console.error(err); process.exit(1); });

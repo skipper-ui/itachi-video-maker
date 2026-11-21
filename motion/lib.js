@@ -461,6 +461,64 @@ function token(ctx, kind, t = 0) {
   withT(ctx, 0, 0, 0.3, kind === 'bow' ? 0 : -0.6, () => icon[kind](ctx, t));
 }
 
+// ---- official art ---------------------------------------------------------------------------
+// A page lists the images it uses in window.ART = {name: 'relative/path.png'}; they load before frame 0.
+// art() draws an image scaled (never recoloured or cropped) and centred on its visible pixels, so
+// renders with lots of transparent padding still line up.
+const ARTS = {};
+
+function loadArt() {
+  const entries = Object.entries(window.ART || {});
+  return Promise.all(entries.map(([name, src]) => new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+      // Find the bounding box of non-transparent pixels on a small copy.
+      const s = 256 / Math.max(img.width, img.height);
+      const w = Math.max(1, Math.round(img.width * s)), h = Math.max(1, Math.round(img.height * s));
+      const c = document.createElement('canvas');
+      c.width = w; c.height = h;
+      const g = c.getContext('2d');
+      g.drawImage(img, 0, 0, w, h);
+      const px = g.getImageData(0, 0, w, h).data;
+      let x0 = w, y0 = h, x1 = 0, y1 = 0;
+      for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+        if (px[(y * w + x) * 4 + 3] > 12) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+      }
+      ARTS[name] = { img, box: [x0 / s, y0 / s, (x1 + 1) / s, (y1 + 1) / s] };
+      resolve();
+    };
+    img.onerror = () => reject(new Error(`art '${name}' failed to load: ${src}`));
+    img.src = src;
+  })));
+}
+
+// Draw art `name` so its visible part is `h` px tall, centred at (x, y). opts: {alpha, rot, flip, shadow}
+function art(ctx, name, x, y, h, opts = {}) {
+  const a = ARTS[name];
+  if (!a) throw new Error(`unknown art '${name}'`);
+  const [bx0, by0, bx1, by1] = a.box;
+  const s = h / (by1 - by0);
+  ctx.save();
+  ctx.translate(x, y);
+  if (opts.rot) ctx.rotate(opts.rot);
+  if (opts.flip) ctx.scale(-1, 1);
+  if (opts.alpha !== undefined) ctx.globalAlpha *= opts.alpha;
+  if (opts.shadow !== false) {
+    // soft contact shadow under the art
+    const sw = (bx1 - bx0) * s * 0.42;
+    const g = ctx.createRadialGradient(0, h / 2, 0, 0, h / 2, sw);
+    g.addColorStop(0, 'rgba(0,0,0,0.45)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.save(); ctx.scale(1, 0.22); ctx.fillStyle = g; ctx.fillRect(-sw, h / 2 / 0.22 - sw, sw * 2, sw * 2); ctx.restore();
+  }
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(a.img, -((bx0 + bx1) / 2) * s, -((by0 + by1) / 2) * s, a.img.width * s, a.img.height * s);
+  ctx.restore();
+}
+
+// Width the visible part of art `name` takes when drawn `h` tall.
+const artWidth = (name, h) => { const [x0, y0, x1, y1] = ARTS[name].box; return (x1 - x0) * h / (y1 - y0); };
+
 // ---- scene framework -------------------------------------------------------------------
 // A project page defines `scenes = [(ctx, t, dur) => {...}, ...]` and includes this file.
 // The renderer calls window.seek(t) for each frame and screenshots the canvas.
@@ -488,6 +546,8 @@ function setupStage() {
     window.scenes[sceneIdx](ctx, t, dur);
   };
   // Make sure the display font is loaded before the first frame.
-  document.fonts.load(`100px ${FONT}`).then(() => { window.seek(0); window.ready = true; });
+  Promise.all([document.fonts.load(`100px ${FONT}`), loadArt()])
+    .then(() => { window.seek(0); window.ready = true; })
+    .catch(e => { window.loadError = String(e); });
 }
 window.addEventListener('DOMContentLoaded', setupStage);
