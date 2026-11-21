@@ -4,7 +4,9 @@ Usage:
     uv run make_video.py projects/<name>/script.json [--images fal|magichour] [--force]
 
 For each scene the pipeline generates narration (ElevenLabs, with word
-timings), an image (fal.ai FLUX or Magic Hour), and a Ken Burns clip (ffmpeg). It then
+timings) and a clip: either an AI image (fal.ai FLUX or Magic Hour) turned
+into a Ken Burns clip, or, with "visuals": "motion" in the script, a canvas
+animation from the project's motion.html rendered by motion/render.js. It then
 crossfades the clips, lays the narration underneath and burns in captions.
 Generated assets are cached in output/<name>/ so re-runs only redo what
 changed; pass --force to regenerate everything.
@@ -291,6 +293,23 @@ def ass_time(t):
     return f"{cs // 360000}:{cs // 6000 % 60:02d}:{cs // 100 % 60:02d}.{cs % 100:02d}"
 
 
+def motion_clip(scene_idx, page, seconds, words, out_dir, force):
+    """Render scene `scene_idx` of a canvas page (see motion/lib.js) to an MP4."""
+    path = out_dir / f"scene{scene_idx:02d}.mp4"
+    words_path = out_dir / f"scene{scene_idx:02d}.words.json"
+    words_path.write_text(json.dumps(words))
+    root = Path(__file__).parent
+    sources = [page, root / "motion" / "lib.js", root / "motion" / "render.js"]
+    key = fingerprint([hashlib.sha256(p.read_bytes()).hexdigest() for p in sources], round(seconds, 3), words, FPS)
+    if not force and is_fresh(path, key):
+        return path
+    run(["node", str(root / "motion" / "render.js"), str(page), str(scene_idx), f"{seconds:.3f}", str(FPS),
+         str(path), str(words_path)])
+    mark(path, key)
+    print(f"  motion clip {scene_idx + 1} done ({seconds:.1f}s)")
+    return path
+
+
 def ass_color(hex_rgb, alpha=0):
     """'#RRGGBB' -> ASS '&HAABBGGRR'."""
     r, g, b = hex_rgb[1:3], hex_rgb[3:5], hex_rgb[5:7]
@@ -423,12 +442,15 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     width, height = spec["width"], spec["height"]
     scenes = spec["scenes"]
-    prompts = [f"{s['image'].format(character=spec['character'])}, {spec['style']}" for s in scenes]
+    motion = spec.get("visuals") == "motion"
+    prompts = [] if motion else [f"{s['image'].format(character=spec['character'])}, {spec['style']}" for s in scenes]
 
-    print(f"Generating narration and images for {len(scenes)} scenes...")
+    print(f"Generating narration{"" if motion else " and images"} for {len(scenes)} scenes...")
     with ThreadPoolExecutor(max_workers=4) as pool:
         jobs = [pool.submit(synthesize, i, scenes, spec["voice_id"], out_dir, args.force) for i in range(len(scenes))]
-        jobs += [pool.submit(generate_image, args.images, i, p, width, height, out_dir, args.force) for i, p in enumerate(prompts)]
+        if not motion:
+            jobs += [pool.submit(generate_image, args.images, i, p, width, height, out_dir, args.force)
+                     for i, p in enumerate(prompts)]
         for j in jobs:
             j.result()
 
@@ -439,17 +461,24 @@ def main():
     starts = [sum(durations[:i]) for i in range(len(scenes))]
 
     print("Rendering clips...")
-    with ThreadPoolExecutor(max_workers=2) as pool:
+    lengths = [durations[i] + (XFADE if i < len(scenes) - 1 else 0) for i in range(len(scenes))]
+    if motion:
+        page = args.script.parent / spec.get("motion_page", "motion.html")
+        with ThreadPoolExecutor(max_workers=3) as pool:
+            clips = list(pool.map(lambda i: motion_clip(i, page, lengths[i], scene_words[i], out_dir, args.force),
+                                  range(len(scenes))))
+    else:
         # Every clip but the last runs XFADE longer so it can overlap the next scene.
-        clips = list(pool.map(
-            lambda i: ken_burns_clip(i, out_dir / f"scene{i:02d}.png",
-                                     durations[i] + (XFADE if i < len(scenes) - 1 else 0),
-                                     width, height, out_dir, args.force, scenes[i].get("fx")),
-            range(len(scenes))))
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            clips = list(pool.map(
+                lambda i: ken_burns_clip(i, out_dir / f"scene{i:02d}.png", lengths[i],
+                                         width, height, out_dir, args.force, scenes[i].get("fx")),
+                range(len(scenes))))
 
     captions = out_dir / "captions.ass"
     write_captions(scene_words, starts, width, height, captions,
-                   keywords=spec.get("keywords", []), title=spec.get("title"))
+                   keywords=spec.get("keywords", []),
+                   title=spec.get("title") if spec.get("title_card", True) else None)
     final = out_dir / f"{name}.mp4"
     print("Assembling final video...")
     assemble(clips, audios, durations, captions, final)

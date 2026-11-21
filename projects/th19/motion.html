@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Town Hall 19 motion scenes</title>
+<script src="../../motion/lib.js"></script>
+</head>
+<body>
+<script>
+// Each scene: (ctx, t, dur). Captions are burned in later around y = 1300-1420, so keep that band calm.
+// when('word') returns the time that word is spoken, so reveals land on the narration.
+
+function ambient(ctx, t, opts = {}) {
+  background(ctx, t, opts.bg || {});
+  sparks(ctx, t, opts.sparks || {});
+}
+
+function finish(ctx) {
+  vignette(ctx, 0.6);
+}
+
+window.scenes = [
+  // 0 — "Town Hall 19 is finally here ... everything new in 60 seconds."
+  (ctx, t, dur) => {
+    const tHit = when('19', 0, 0.5);
+    const [sx, sy] = shakeAt(t, tHit, 26, 4);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { bg: { cy: 860 } });
+
+    // Town Hall rises from below and keeps a slow breathing float.
+    const rise = ease.outBack(prog(t, 0.05, 0.8), 1.2);
+    const thY = lerp(1500, 900, rise) + Math.sin(t * 1.6) * 10;
+    glow(ctx, W / 2, thY - 40, 520, '255,190,90', 0.45 * rise);
+    withT(ctx, W / 2, thY, 1.62, 0, () => icon.townHall(ctx, t));
+
+    // "TOWN HALL" drops in, then the 19 badge slams onto the corner.
+    const k = pop(t, 0.0, 0.5);
+    withT(ctx, W / 2, 250, k, 0, () => title(ctx, 'TOWN HALL', 0, 0, 150));
+    const s = t < tHit ? 0 : lerp(2.6, 1, ease.outBack(prog(t, tHit, 0.35), 2.2));
+    if (s > 0) {
+      withT(ctx, 815, 500, s, -0.12 + Math.sin(t * 2) * 0.03, () => {
+        glow(ctx, 0, 0, 260, '255,220,120', 0.6);
+        chunky(ctx, shieldPath(270, 310), C.goldHi, C.goldLo, { lw: 14, y0: -155, y1: 155 });
+        chunky(ctx, shieldPath(210, 250), C.purple, C.purpleLo, { lw: 8, y0: -125, y1: 125 });
+        title(ctx, '19', 0, -8, 150, { fill: [C.white, C.goldHi], lw: 20 });
+      });
+    }
+    ring(ctx, t, tHit, 815, 500, { maxR: 700 });
+    burst(ctx, t, tHit, 815, 500, { n: 60, speed: 1200 });
+    flash(ctx, t, tHit, { peak: 0.7 });
+
+    const tNew = when('everything', 0, 3.2);
+    const pk = pop(t, tNew, 0.45);
+    if (pk > 0) withT(ctx, W / 2, 1200, pk, 0, () => pill(ctx, 'EVERYTHING NEW IN 60s', 0, 0, 58, [C.red, '#A51515']));
+    finish(ctx);
+  },
+
+  // 1 — Squads: whole groups of troops with one tap, from the new Squad Barracks.
+  (ctx, t, dur) => {
+    const tSquads = when('squads', 0, 1.0);
+    const tGroups = when('groups', 0, 1.8);
+    const tTap = when('tap', 0, 3.6);
+    const tBarracks = when('barracks', 0, dur - 2.6);
+    const [sx, sy] = shakeAt(t, tTap, 14, 6);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { bg: { mid: '#5A2BB0' } });
+
+    withT(ctx, W / 2, 200, pop(t, 0, 0.4), 0, () => pill(ctx, 'BIGGEST CHANGE', 0, 0, 44, [C.gold, C.goldLo], C.ink));
+    const ks = t < tSquads ? 0 : lerp(2.2, 1, ease.outBack(prog(t, tSquads, 0.35), 2));
+    if (ks > 0) withT(ctx, W / 2, 360, ks, 0, () => title(ctx, 'SQUADS', 0, 0, 190));
+    flash(ctx, t, tSquads, { peak: 0.4 });
+
+    // Army of troop tokens marching in; they hop together on the tap, then march off for the barracks.
+    const leave = ease.inCubic(prog(t, tBarracks - 0.4, 0.6));
+    const kinds = ['sword', 'bow', 'sword', 'bow', 'sword'];
+    for (let row = 0; row < 3; row++) {
+      for (let col = 0; col < 5; col++) {
+        const i = row * 5 + col;
+        const arrive = ease.outBack(prog(t, tGroups + i * 0.06, 0.45));
+        if (arrive <= 0) continue;
+        const hop = t > tTap ? Math.max(0, Math.sin((t - tTap) * 9)) * 40 * Math.exp(-(t - tTap) * 1.5) : 0;
+        const x = 160 + col * 190, y = lerp(1700, 640 + row * 175, arrive) - hop - leave * 1200;
+        withT(ctx, x, y, 0.95, Math.sin(t * 5 + i) * 0.05, () => token(ctx, kinds[(col + row) % 5], t));
+      }
+    }
+
+    // The tap: hand presses, ripples spread.
+    const kt = pop(t, tTap - 0.35, 0.3) * (1 - leave);
+    if (kt > 0) {
+      const press = t > tTap && t < tTap + 0.18 ? 0.85 : 1;
+      for (let r = 0; r < 3; r++) ring(ctx, t, tTap + r * 0.12, 600, 1010, { maxR: 260, life: 0.7, color: '255,255,255', width: 14 });
+      withT(ctx, 640, 1080, 0.85 * kt * press, -0.3, () => icon.tap(ctx, t));
+      if (t > tTap) withT(ctx, W / 2, 1185, pop(t, tTap, 0.4) * (1 - leave), 0, () => pill(ctx, '1 TAP = 1 SQUAD', 0, 0, 60, [C.green, '#2E9A38']));
+    }
+
+    // Squad Barracks pops in.
+    const kb = pop(t, tBarracks, 0.5);
+    if (kb > 0) {
+      glow(ctx, W / 2, 820, 450, '255,170,90', 0.5 * kb);
+      withT(ctx, W / 2, 820 + Math.sin(t * 2) * 8, 1.55 * kb, 0, () => icon.barracks(ctx));
+      withT(ctx, W / 2, 1185, pop(t, tBarracks + 0.25, 0.4), 0, () => pill(ctx, 'NEW: SQUAD BARRACKS', 0, 0, 56, [C.red, '#A51515']));
+    }
+    burst(ctx, t, tBarracks, W / 2, 820, { n: 50, speed: 1000 });
+    finish(ctx);
+  },
+
+  // 2 — Unlock path TH8 -> TH19, upgrades only at TH19.
+  (ctx, t, dur) => {
+    const tStart = when('8', 0, 1.2);
+    const tTwelve = when('twelve', 0, 5.2);
+    const tOnly = when('only', 0, dur - 3.2);
+    const [sx, sy] = shakeAt(t, tOnly + 0.2, 22, 5);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { bg: { mid: '#3E2A9E', cy: 760 } });
+
+    withT(ctx, W / 2, 230, pop(t, 0, 0.45), 0, () => title(ctx, 'SQUAD UNLOCKS', 0, 0, 110));
+
+    // 12 nodes in a snake path, lighting up one by one.
+    const nodes = [];
+    for (let i = 0; i < 12; i++) {
+      const row = Math.floor(i / 4), col = row % 2 ? 3 - (i % 4) : i % 4;
+      nodes.push([200 + col * 227, 470 + row * 215]);
+    }
+    const lit = i => tStart + (i / 11) * (tTwelve - tStart + 0.3);
+    ctx.lineCap = 'round';
+    for (let i = 0; i < 11; i++) {
+      const [x0, y0] = nodes[i], [x1, y1] = nodes[i + 1];
+      ctx.strokeStyle = 'rgba(0,0,0,0.45)';
+      ctx.lineWidth = 30;
+      ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+      const k = prog(t, lit(i), lit(i + 1) - lit(i));
+      if (k > 0) {
+        ctx.strokeStyle = C.gold;
+        ctx.lineWidth = 16;
+        ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(lerp(x0, x1, k), lerp(y0, y1, k)); ctx.stroke();
+      }
+    }
+    const lockedOut = prog(t, tOnly, 0.4);
+    let count = 0;
+    nodes.forEach(([x, y], i) => {
+      const on = t >= lit(i);
+      if (on) count++;
+      const s = on ? ease.outBack(prog(t, lit(i), 0.35), 2.5) * 0.2 + 0.8 : 0.8;
+      const dim = i < 11 ? lockedOut * 0.55 : 0;
+      withT(ctx, x, y, s, 0, () => {
+        if (i === 11 && t > tOnly) glow(ctx, 0, 0, 200, '255,220,120', 0.7 + 0.2 * Math.sin(t * 6));
+        const c = new Path2D(); c.arc(0, 0, 78, 0, Math.PI * 2);
+        if (on) chunky(ctx, c, C.goldHi, C.goldLo, { lw: 10, y0: -78, y1: 78 });
+        else chunky(ctx, c, '#5B4C86', '#2C2148', { lw: 10, y0: -78, y1: 78 });
+        title(ctx, `${8 + i}`, 0, 4, 64, { fill: on ? C.ink : '#9C92C0', stroke: on ? C.goldHi : C.ink, lw: 6, shadow: false });
+        if (dim > 0) { ctx.fillStyle = `rgba(10,5,25,${dim})`; ctx.fill(c); }
+      });
+      if (on) burst(ctx, t, lit(i), x, y, { n: 14, speed: 380, life: 0.5, seed: i + 11, size: 7 });
+    });
+    withT(ctx, W / 2, 1185, pop(t, tStart, 0.4), 0, () => pill(ctx, `SQUADS UNLOCKED: ${count}/12`, 0, 0, 56, [C.purpleHi, C.purple]));
+
+    // "TH19 ONLY" stamp.
+    const ks = t < tOnly ? 0 : lerp(3, 1, ease.outCubic(prog(t, tOnly, 0.22)));
+    if (ks > 0) {
+      withT(ctx, W / 2, 790, ks, -0.18, () => {
+        ctx.globalAlpha = clamp((t - tOnly) / 0.12);
+        chunky(ctx, rectPath(-390, -95, 780, 190, 26), C.red, '#9E1414', { lw: 14, y0: -95, y1: 95 });
+        title(ctx, 'LEVEL UP: TH19 ONLY', 0, 4, 66, { fill: C.white, lw: 12 });
+      });
+    }
+    finish(ctx);
+  },
+
+  // 3 — Town Hall weapon: Barbarian, Archer or Wizard Hall, unleashing troops when attacked.
+  (ctx, t, dur) => {
+    const tBarb = when('barbarian', 0, 2.6), tArch = when('archer', 0, 3.2), tWiz = when('wizard', 0, 3.9);
+    const tUnleash = when('unleashes', 0, 5.4);
+    const tAttack = when('attacked', 0, tUnleash + 1.1);
+    const [sx, sy] = shakeAt(t, tAttack, 30, 4);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { bg: { mid: '#8A2E6E', top: '#3A0F3E' } });
+
+    withT(ctx, W / 2, 190, pop(t, 0, 0.4), 0, () => pill(ctx, 'YOUR CHOICE', 0, 0, 44, [C.gold, C.goldLo], C.ink));
+    withT(ctx, W / 2, 320, pop(t, 0.15, 0.45), 0, () => title(ctx, 'TOWN HALL WEAPON', 0, 0, 92));
+
+    const cards = [['sword', 'BARBARIAN', tBarb, [C.orange, '#B85A0B']], ['bow', 'ARCHER', tArch, ['#FF7EC0', '#C23C82']],
+                   ['staff', 'WIZARD', tWiz, [C.blue, '#2370B8']]];
+    const shrink = ease.inOutCubic(prog(t, tUnleash - 0.3, 0.5));
+    const highlight = Math.floor(t * 1.5) % 3;
+    cards.forEach(([kind, label, tc, col], i) => {
+      const k = pop(t, tc, 0.45);
+      if (k <= 0) return;
+      const x = 205 + i * 335, y = lerp(690, 520, shrink), s = k * lerp(1, 0.62, shrink);
+      const lift = t > tWiz + 0.5 && t < tUnleash && i === highlight ? -18 : 0;
+      withT(ctx, x, y + lift, s, (i - 1) * 0.05, () => {
+        chunky(ctx, rectPath(-145, -200, 290, 400, 30), col[0], col[1], { lw: 12, y0: -200, y1: 200 });
+        withT(ctx, 0, -35, 0.62, kind === 'bow' ? 0 : -0.5, () => icon[kind](ctx, t));
+        title(ctx, label, 0, 150, 44, { fill: C.white, lw: 9 });
+      });
+    });
+
+    // Town Hall shakes, then bursts with troops flying out.
+    const kt = pop(t, tUnleash - 0.1, 0.5);
+    if (kt > 0) {
+      const wob = t < tAttack ? Math.sin(t * 40) * 6 * prog(t, tUnleash, 0.6) : 0;
+      glow(ctx, W / 2, 940, 420, '255,150,90', 0.5 * kt);
+      withT(ctx, W / 2 + wob, 980, 1.05 * kt, 0, () => icon.townHall(ctx, t));
+      const fly = prog(t, tAttack, 1.2);
+      if (fly > 0) {
+        const r = rng(5);
+        for (let i = 0; i < 9; i++) {
+          const a = -Math.PI / 2 + (r() - 0.5) * 2.4, d = 650 * ease.outCubic(fly);
+          const x = W / 2 + Math.cos(a) * d, y = 930 + Math.sin(a) * d + 500 * fly * fly;
+          withT(ctx, x, y, 0.7, fly * 6 * (r() - 0.5), () => token(ctx, ['sword', 'bow', 'staff'][i % 3], t));
+        }
+      }
+    }
+    ring(ctx, t, tAttack, W / 2, 930, { maxR: 800 });
+    burst(ctx, t, tAttack, W / 2, 930, { n: 70, speed: 1300, color: '255,170,80' });
+    flash(ctx, t, tAttack, { peak: 0.8 });
+    finish(ctx);
+  },
+
+  // 4 — New defenses: Spiky Tower, Firecracker Tower, Guardian Shrine.
+  (ctx, t, dur) => {
+    const tSpiky = when('spiky', 0, 2.0), tFire = when('firecracker', 0, 3.4), tGuard = when('guardians', 0, dur - 3.5);
+    ambient(ctx, t, { bg: { mid: '#1E3A8A', top: '#0E1A44', bottom: '#050818', rayColor: 'rgba(140,190,255,0.08)' },
+                      sparks: { color: '170,210,255' } });
+
+    withT(ctx, W / 2, 230, pop(t, 0, 0.45), 0, () => title(ctx, 'NEW DEFENSES', 0, 0, 120));
+
+    const up = ease.inOutCubic(prog(t, tGuard - 0.2, 0.6));
+    const ty = lerp(720, 500, up), ts = lerp(1.35, 0.8, up);
+    // Spiky Tower
+    const k1 = pop(t, tSpiky, 0.5);
+    if (k1 > 0) {
+      withT(ctx, 265, ty, ts * k1, 0, () => icon.spikyTower(ctx));
+      withT(ctx, 265, ty + 290 * ts, k1, 0, () => pill(ctx, 'SPIKY TOWER', 0, 0, 40, ['#C8CFDD', C.stoneLo], C.ink));
+    }
+    // Firecracker Tower with rockets launching and exploding into fireworks.
+    const k2 = pop(t, tFire, 0.5);
+    if (k2 > 0) {
+      for (let n = 0; n < 6; n++) {
+        const t0 = tFire + 0.3 + n * 0.75;
+        const f = prog(t, t0, 0.9);
+        if (f <= 0) continue;
+        const x0 = 815 + (n % 3 - 1) * 50 * ts, y0 = ty - 200 * ts;
+        const tx = 790 + ((n * 137) % 360) - 180, tyy = 360 + ((n * 91) % 180);
+        if (f < 1) withT(ctx, lerp(x0, tx, f), lerp(y0, tyy, ease.outCubic(f)), 0.9, (tx - x0) * 0.001, () => icon.rocket(ctx, [C.red, C.gold, C.blue][n % 3]));
+        const col = ['255,90,90', '255,210,90', '120,200,255'][n % 3];
+        burst(ctx, t, t0 + 0.9, tx, tyy, { n: 36, speed: 520, life: 0.9, color: col, seed: 20 + n, size: 8 });
+        ring(ctx, t, t0 + 0.9, tx, tyy, { maxR: 160, life: 0.5, color: col, width: 10 });
+      }
+      withT(ctx, 815, ty, ts * k2, 0, () => icon.firecrackerTower(ctx));
+      withT(ctx, 815, ty + 290 * ts, k2, 0, () => pill(ctx, 'FIRECRACKER TOWER', 0, 0, 38, [C.red, '#9E1414']));
+    }
+    // Guardian Shrine rises in front.
+    const k3 = pop(t, tGuard + 0.2, 0.5);
+    if (k3 > 0) {
+      withT(ctx, W / 2, 1010 + Math.sin(t * 2) * 6, 0.9 * k3, 0, () => icon.shrine(ctx, t));
+      withT(ctx, W / 2, 1205, pop(t, tGuard + 0.45, 0.4), 0, () => pill(ctx, 'GUARDIAN SHRINE', 0, 0, 52, [C.purpleHi, C.purple]));
+    }
+    burst(ctx, t, tGuard + 0.2, W / 2, 1010, { n: 40, speed: 800, color: '190,150,255' });
+    finish(ctx);
+  },
+
+  // 5 — Barbarian King max level 115.
+  (ctx, t, dur) => {
+    const tKing = when('king', 0, 2.2), tMax = when('maxes', 0, 3.0), t115 = when('115', 0, 3.8);
+    const [sx, sy] = shakeAt(t, t115 + 0.35, 20, 5);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { bg: { mid: '#B5541A', top: '#4A1A08', bottom: '#140502', rayColor: 'rgba(255,220,140,0.12)', cy: 600 },
+                      sparks: { color: '255,190,90', rise: 90 } });
+
+    withT(ctx, W / 2, 190, pop(t, 0, 0.4), 0, () => pill(ctx, 'HEROES CLIMB HIGHER', 0, 0, 44, [C.gold, C.goldLo], C.ink));
+    const kc = pop(t, 0.2, 0.6);
+    glow(ctx, W / 2, 560, 420, '255,210,110', 0.55 * kc);
+    withT(ctx, W / 2, 560 + Math.sin(t * 2.2) * 12, 1.75 * kc, Math.sin(t * 1.5) * 0.04, () => icon.crown(ctx));
+    withT(ctx, W / 2, 830, pop(t, tKing - 0.3, 0.45), 0, () => title(ctx, 'BARBARIAN KING', 0, 0, 100));
+
+    // Level counter rolls up to 115 and the bar fills.
+    const kr = prog(t, tMax, Math.max(0.3, t115 + 0.35 - tMax));
+    if (t > tMax - 0.2) {
+      const lvl = Math.round(lerp(95, 115, ease.outCubic(kr)));
+      const s = t > t115 + 0.35 ? lerp(1.5, 1, ease.outBack(prog(t, t115 + 0.35, 0.35))) : 1;
+      withT(ctx, W / 2, 1010, s, 0, () => title(ctx, `LV ${lvl}`, 0, 0, 150, { fill: [C.white, C.goldHi, C.gold] }));
+      const bw = 760, bx = W / 2 - bw / 2;
+      chunky(ctx, rectPath(bx, 1120, bw, 56, 28), '#3A1A08', '#1E0C03', { lw: 10, gloss: false, y0: 1120, y1: 1176 });
+      if (kr > 0) chunky(ctx, rectPath(bx + 8, 1128, (bw - 16) * ease.outCubic(kr), 40, 20), C.goldHi, C.orange, { lw: 0, y0: 1128, y1: 1168 });
+      if (t > t115 + 0.35) withT(ctx, 900, 950, pop(t, t115 + 0.35, 0.4), 0.2, () => pill(ctx, 'NEW MAX', 0, 0, 40, [C.red, '#9E1414']));
+    }
+    burst(ctx, t, t115 + 0.35, W / 2, 1010, { n: 60, speed: 1100 });
+    flash(ctx, t, t115 + 0.35, { peak: 0.5, color: '255,230,170' });
+    finish(ctx);
+  },
+
+  // 6 — Magic Snacks + Star Bonus scaling with Town Hall level.
+  (ctx, t, dur) => {
+    const tMagic = when('magic', 0, 0.4), tStar = when('star', 0, 2.2), tScale = when('scales', 0, 3.2);
+    ambient(ctx, t, { bg: { mid: '#7B3FE4', top: '#331070' } });
+
+    withT(ctx, W / 2, 230, pop(t, tMagic - 0.2, 0.45), 0, () => title(ctx, 'MAGIC SNACKS', 0, 0, 115, { fill: ['#FFE3F3', '#FF8FC8', '#E0478F'] }));
+    const ks = pop(t, tMagic, 0.5);
+    if (ks > 0) {
+      withT(ctx, 330, 520 + Math.sin(t * 3) * 18, 1.25 * ks, Math.sin(t * 2) * 0.08, () => icon.cake(ctx));
+      withT(ctx, 750, 490 + Math.sin(t * 3 + 1.5) * 18, 1.15 * ks, Math.sin(t * 2 + 1) * 0.1, () => icon.lollipop(ctx, t));
+      burst(ctx, t, tMagic, 540, 520, { n: 40, speed: 700, color: '255,150,220' });
+    }
+
+    const kst = pop(t, tStar - 0.1, 0.5);
+    if (kst > 0) {
+      withT(ctx, 230, 940, 0.9 * kst, t * 0.6, () => icon.star(ctx));
+      withT(ctx, 230, 1110, kst, 0, () => title(ctx, 'STAR BONUS', 0, 0, 46, { fill: C.white, lw: 9 }));
+      // Bars for TH15..TH19 growing taller with Town Hall level.
+      for (let i = 0; i < 5; i++) {
+        const g = ease.outBack(prog(t, tScale + i * 0.12, 0.45));
+        const h = (110 + i * 60) * g, x = 430 + i * 125, base = 1110;
+        if (g <= 0) continue;
+        chunky(ctx, rectPath(x - 45, base - h, 90, h, 14), C.goldHi, C.goldLo, { lw: 8, y0: base - h, y1: base });
+        title(ctx, `${15 + i}`, x, base + 40, 40, { fill: C.white, lw: 8 });
+      }
+      if (t > tScale + 0.6) {
+        ctx.save();
+        ctx.globalAlpha = prog(t, tScale + 0.6, 0.3);
+        ctx.strokeStyle = C.green; ctx.lineWidth = 16; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(420, 930); ctx.lineTo(950, 700); ctx.stroke();
+        withT(ctx, 950, 700, 1, -0.41, () => { ctx.fillStyle = C.green; ctx.fill(polyPath([[10, 0], [-40, -32], [-40, 32]])); });
+        ctx.restore();
+      }
+    }
+    finish(ctx);
+  },
+
+  // 7 — Outro question: rush to TH19 or stay? Comment.
+  (ctx, t, dur) => {
+    const tRush = when('rushing', 0, 0.6), tStay = when('staying', 0, 1.8), tComments = when('comments', 0, dur - 1.6);
+    ambient(ctx, t, {});
+    const pulse = k => 1 + Math.sin(t * 6 + k) * 0.03;
+
+    const k1 = pop(t, tRush - 0.2, 0.45);
+    if (k1 > 0) withT(ctx, W / 2, 430, k1 * pulse(0), -0.03, () => {
+      chunky(ctx, rectPath(-400, -110, 800, 220, 50), '#7BEA84', '#2E9A38', { lw: 14, y0: -110, y1: 110 });
+      title(ctx, 'RUSH TO TH19', 0, 6, 92, { fill: C.white, lw: 14 });
+    });
+    const kv = pop(t, tStay - 0.4, 0.4);
+    if (kv > 0) withT(ctx, W / 2, 620, kv, 0, () => title(ctx, 'OR', 0, 0, 90, { fill: [C.white, C.goldHi] }));
+    const k2 = pop(t, tStay - 0.1, 0.45);
+    if (k2 > 0) withT(ctx, W / 2, 810, k2 * pulse(3), 0.03, () => {
+      chunky(ctx, rectPath(-400, -110, 800, 220, 50), C.purpleHi, C.purple, { lw: 14, y0: -110, y1: 110 });
+      title(ctx, 'STAY PUT', 0, 6, 92, { fill: C.white, lw: 14 });
+    });
+    const kc = pop(t, tComments - 0.2, 0.5);
+    if (kc > 0) {
+      withT(ctx, W / 2, 1060 + Math.sin(t * 4) * 8, 0.75 * kc, 0, () => icon.chat(ctx));
+      withT(ctx, W / 2, 1210, kc, 0, () => pill(ctx, 'TELL ME IN THE COMMENTS', 0, 0, 50, [C.red, '#A51515']));
+    }
+    burst(ctx, t, tComments, W / 2, 1060, { n: 40, speed: 700 });
+    finish(ctx);
+  },
+];
+</script>
+</body>
+</html>
