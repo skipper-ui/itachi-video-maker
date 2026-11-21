@@ -401,13 +401,82 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     path.write_text(header + "\n".join(lines) + "\n")
 
 
-def assemble(clips, audios, durations, captions, out_path):
+# --- sound effects & music ---------------------------------------------------
+
+SFX_LIBRARY = Path(__file__).parent / "sfx_library.json"
+SFX_DIR = Path(__file__).parent / "assets" / "sfx"
+
+
+def ensure_sound(name):
+    """Return the path of a library sound, generating it with ElevenLabs on first use."""
+    spec = json.loads(SFX_LIBRARY.read_text())[name]
+    path = SFX_DIR / f"{name}.mp3"
+    key = fingerprint(spec)
+    if is_fresh(path, key):
+        return path
+    SFX_DIR.mkdir(parents=True, exist_ok=True)
+    body = {"text": spec["prompt"], "duration_seconds": spec["duration"], "prompt_influence": 0.5}
+    if spec.get("loop"):
+        body["loop"] = True
+    r = requests.post("https://api.elevenlabs.io/v1/sound-generation",
+                      headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]}, json=body, timeout=180)
+    r.raise_for_status()
+    path.write_bytes(r.content)
+    mark(path, key)
+    print(f"  sound '{name}' generated")
+    return path
+
+
+def norm_word(w):
+    return "".join(ch for ch in w.lower() if ch.isalnum())
+
+
+def word_time(words, word, nth=0):
+    hits = [w for w in words if norm_word(w[0]) == norm_word(word)]
+    if len(hits) <= nth:
+        raise ValueError(f"cue word '{word}' not found in narration: {' '.join(w[0] for w in words)}")
+    return hits[nth][1]
+
+
+def sound_cues(scenes, scene_words, starts):
+    """Expand each scene's "sfx" list into absolute (time, sound, volume) cues.
+
+    A cue is {"sound": name, "word": w | "at": seconds, "offset": s, "volume": v}, optionally with
+    "repeat": n and either "every": s or "until_word": w (+ "until_offset") to spread n hits evenly.
+    """
+    cues = []
+    for scene, words, start in zip(scenes, scene_words, starts):
+        for cue in scene.get("sfx", []):
+            t0 = (word_time(words, cue["word"], cue.get("nth", 0)) if "word" in cue else cue.get("at", 0.0))
+            t0 += cue.get("offset", 0.0)
+            n = cue.get("repeat", 1)
+            if "until_word" in cue and n > 1:
+                t1 = word_time(words, cue["until_word"]) + cue.get("until_offset", 0.0)
+                every = (t1 - t0) / (n - 1)
+            else:
+                every = cue.get("every", 0.0)
+            for k in range(n):
+                cues.append((max(0.0, start + t0 + k * every), cue["sound"], cue.get("volume", 0.8)))
+    return cues
+
+
+def assemble(clips, audios, durations, captions, out_path, cues=(), music=None):
     n = len(clips)
+    total = sum(durations)
     cmd = ["ffmpeg", "-y"]
     for c in clips:
         cmd += ["-i", str(c)]
     for a in audios:
         cmd += ["-i", str(a)]
+    sounds = sorted({name for _, name, _ in cues})
+    sound_idx = {}
+    for name in sounds:
+        sound_idx[name] = 2 * n + len(sound_idx)
+        cmd += ["-i", str(ensure_sound(name))]
+    music_idx = None
+    if music:
+        music_idx = 2 * n + len(sounds)
+        cmd += ["-stream_loop", "-1", "-i", str(ensure_sound(music["sound"]))]
     filters = []
     # Video: chain crossfades; transition k starts when scene k's slot ends.
     prev, offset = "[0:v]", 0.0
@@ -417,13 +486,36 @@ def assemble(clips, audios, durations, captions, out_path):
         filters.append(f"{prev}[{k}:v]xfade=transition=fade:duration={XFADE}:offset={offset:.3f}{out}")
         prev = out
     filters.append(f"{prev}ass={captions}[vout]")
-    # Audio: pad each narration to its scene slot, then concatenate.
+    # Narration: pad each scene's voice to its slot, then concatenate.
     for k in range(n):
         filters.append(f"[{n + k}:a]aresample=44100,apad,atrim=0:{durations[k]:.3f}[a{k}]")
-    filters.append("".join(f"[a{k}]" for k in range(n)) + f"concat=n={n}:v=0:a=1[aout]")
+    filters.append("".join(f"[a{k}]" for k in range(n)) + f"concat=n={n}:v=0:a=1[narr]")
+    mix = ["[voice]"]
+    if music_idx is not None:
+        # Music ducks under the voice (sidechain) and fades in/out.
+        filters.append("[narr]asplit=2[voice][key]")
+        filters.append(f"[{music_idx}:a]aresample=44100,atrim=0:{total:.3f},volume={music.get('volume', 0.22)},"
+                       f"afade=t=in:d=1,afade=t=out:st={max(0, total - 2):.3f}:d=2[bed]")
+        filters.append("[bed][key]sidechaincompress=threshold=0.03:ratio=8:attack=15:release=350[music]")
+        mix.append("[music]")
+    else:
+        filters.append("[narr]anull[voice]")
+    # Sound effects: one delayed copy per cue.
+    uses = {name: [c for c in cues if c[1] == name] for name in sounds}
+    for name, hits in uses.items():
+        idx = sound_idx[name]
+        labels = [f"[{name}{j}]" for j in range(len(hits))]
+        filters.append(f"[{idx}:a]aresample=44100,asplit={len(hits)}" + "".join(labels) if len(hits) > 1
+                       else f"[{idx}:a]aresample=44100{labels[0]}")
+        for j, (t, _, vol) in enumerate(hits):
+            ms = round(t * 1000)
+            filters.append(f"{labels[j]}volume={vol},adelay={ms}|{ms}[fx_{name}{j}]")
+            mix.append(f"[fx_{name}{j}]")
+    filters.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first,"
+                   "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=44100[aout]")
     cmd += ["-filter_complex", ";".join(filters), "-map", "[vout]", "-map", "[aout]",
             "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
-            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out_path)]
+            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-t", f"{total:.3f}", str(out_path)]
     run(cmd)
 
 
@@ -481,7 +573,8 @@ def main():
                    title=spec.get("title") if spec.get("title_card", True) else None)
     final = out_dir / f"{name}.mp4"
     print("Assembling final video...")
-    assemble(clips, audios, durations, captions, final)
+    cues = sound_cues(scenes, scene_words, starts)
+    assemble(clips, audios, durations, captions, final, cues=cues, music=spec.get("music"))
     print(f"Done: {final} ({probe_duration(final):.1f}s)")
 
 

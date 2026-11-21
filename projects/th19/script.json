@@ -35,28 +35,221 @@
   "height": 1920,
   "scenes": [
     {
-      "narration": "Town Hall 19 is finally here, and it changes how everyone attacks. Here's everything new in 60 seconds."
+      "narration": "Town Hall 19 is finally here, and it changes how everyone attacks. Here's everything new in 60 seconds.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "19",
+          "volume": 0.9
+        },
+        {
+          "sound": "pop",
+          "word": "everything",
+          "volume": 0.7
+        }
+      ]
     },
     {
-      "narration": "The biggest change is Squads: whole groups of troops you drop with a single tap, trained in the brand new Squad Barracks."
+      "narration": "The biggest change is Squads: whole groups of troops you drop with a single tap, trained in the brand new Squad Barracks.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "thud",
+          "word": "squads",
+          "volume": 0.8
+        },
+        {
+          "sound": "march",
+          "word": "groups",
+          "volume": 0.6
+        },
+        {
+          "sound": "tap",
+          "word": "tap",
+          "volume": 0.9
+        },
+        {
+          "sound": "pop",
+          "word": "barracks",
+          "volume": 0.8
+        },
+        {
+          "sound": "ding",
+          "word": "barracks",
+          "offset": 0.25,
+          "volume": 0.5
+        }
+      ]
     },
     {
-      "narration": "Squads unlock at Town Hall 8, with a new one every Town Hall, up to twelve at Town Hall 19. But only Town Hall 19 can level them up."
+      "narration": "Squads unlock at Town Hall 8, with a new one every Town Hall, up to twelve at Town Hall 19. But only Town Hall 19 can level them up.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "tick",
+          "word": "8",
+          "repeat": 12,
+          "until_word": "twelve",
+          "until_offset": 0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "stamp",
+          "word": "only",
+          "volume": 0.9
+        }
+      ]
     },
     {
-      "narration": "Your Town Hall becomes a weapon of your choice: a Barbarian, Archer or Wizard Hall that unleashes troops when it's attacked."
+      "narration": "Your Town Hall becomes a weapon of your choice: a Barbarian, Archer or Wizard Hall that unleashes troops when it's attacked.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "barbarian",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "archer",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "wizard",
+          "volume": 0.7
+        },
+        {
+          "sound": "rumble",
+          "word": "unleashes",
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "attacked",
+          "volume": 0.9
+        }
+      ]
     },
     {
-      "narration": "Defenses get two new towers, the Spiky Tower and the Firecracker Tower, and Guardians move into their own Guardian Shrine."
+      "narration": "Defenses get two new towers, the Spiky Tower and the Firecracker Tower, and Guardians move into their own Guardian Shrine.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "thud",
+          "word": "spiky",
+          "volume": 0.8
+        },
+        {
+          "sound": "pop",
+          "word": "firecracker",
+          "volume": 0.7
+        },
+        {
+          "sound": "firework",
+          "word": "firecracker",
+          "offset": 0.3,
+          "repeat": 6,
+          "every": 0.75,
+          "volume": 0.45
+        },
+        {
+          "sound": "magic",
+          "word": "guardians",
+          "offset": 0.2,
+          "volume": 0.7
+        }
+      ]
     },
     {
-      "narration": "Heroes climb higher too. The Barbarian King now maxes out at level 115."
+      "narration": "Heroes climb higher too. The Barbarian King now maxes out at level 115.",
+      "sfx": [
+        {
+          "sound": "magic",
+          "at": 0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "levelup",
+          "word": "maxes",
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "115",
+          "offset": 0.35,
+          "volume": 0.8
+        }
+      ]
     },
     {
-      "narration": "Plus new Magic Snacks, and a Star Bonus that now scales with your Town Hall level."
+      "narration": "Plus new Magic Snacks, and a Star Bonus that now scales with your Town Hall level.",
+      "sfx": [
+        {
+          "sound": "magic",
+          "word": "magic",
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "star",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "ding",
+          "word": "scales",
+          "volume": 0.6
+        }
+      ]
     },
     {
-      "narration": "So, are you rushing to Town Hall 19, or staying where you are? Tell me in the comments."
+      "narration": "So, are you rushing to Town Hall 19, or staying where you are? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "rushing",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "staying",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
     }
-  ]
+  ],
+  "music": {
+    "sound": "music_strategy",
+    "volume": 0.22
+  }
 }

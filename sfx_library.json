@@ -1,0 +1,16 @@
+{
+  "whoosh": {"prompt": "fast cinematic whoosh swoosh transition, clean", "duration": 0.8},
+  "impact": {"prompt": "huge cinematic boom impact hit with deep bass and short reverb tail", "duration": 1.6},
+  "thud": {"prompt": "heavy stone block landing thud, game sound", "duration": 0.8},
+  "pop": {"prompt": "bright cartoon bubble pop UI sound for a mobile game", "duration": 0.5},
+  "ding": {"prompt": "bright sparkling game reward chime ding", "duration": 1.0},
+  "tick": {"prompt": "short bright coin blip tick, mobile game UI", "duration": 0.5},
+  "stamp": {"prompt": "loud heavy rubber stamp slam thud", "duration": 0.7},
+  "tap": {"prompt": "crisp mobile game button tap click", "duration": 0.5},
+  "march": {"prompt": "cartoon army war cry and marching footsteps with snare drum roll", "duration": 1.8},
+  "rumble": {"prompt": "castle shaking low rumble with creaking stone", "duration": 1.5},
+  "firework": {"prompt": "single firework rocket whistle launch then crackling pop explosion", "duration": 1.6},
+  "levelup": {"prompt": "rising game level up power up sound with sparkle", "duration": 1.4},
+  "magic": {"prompt": "magical sparkle shimmer twinkle with soft whoosh", "duration": 1.2},
+  "music_strategy": {"prompt": "upbeat adventurous orchestral mobile strategy game background music, brass fanfare, marching snare drums, energetic, seamless loop", "duration": 22, "loop": true}
+}
