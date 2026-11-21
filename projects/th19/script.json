@@ -1,0 +1,95 @@
+{
+  "title": "Town Hall 19: Everything New",
+  "keywords": [
+    "Town",
+    "Hall",
+    "19",
+    "Squads",
+    "Squad",
+    "Barracks",
+    "Barbarian",
+    "Archer",
+    "Wizard",
+    "Spiky",
+    "Firecracker",
+    "Tower",
+    "Towers",
+    "Guardian",
+    "Guardians",
+    "Shrine",
+    "King",
+    "115",
+    "Magic",
+    "Snacks",
+    "Star",
+    "Bonus",
+    "8",
+    "twelve",
+    "60"
+  ],
+  "voice_id": "IKne3meq5aSn9XLyUdCD",
+  "voice_name": "Charlie - Deep, Confident, Energetic",
+  "width": 1080,
+  "height": 1920,
+  "style": "stylized 3D cartoon mobile strategy game art, chunky playful proportions, vibrant saturated colors, warm sunlight, cinematic composition, highly detailed, sharp focus",
+  "character": "",
+  "scenes": [
+    {
+      "narration": "Town Hall 19 is finally here, and it changes how everyone attacks. Here's everything new in 60 seconds.",
+      "image": "a colossal new fortress town hall glowing with golden and purple energy at the center of a fortified cartoon village, fireworks in the sky, epic low angle",
+      "fx": [
+        "embers",
+        "pulse"
+      ]
+    },
+    {
+      "narration": "The biggest change is Squads: whole groups of troops you drop with a single tap, trained in the brand new Squad Barracks.",
+      "image": "a large army charging together out of a big wooden barracks: muscular cartoon barbarians with blond hair, blond mustaches and swords running beside slim female archers with pink hair, green hoods and bows, dust clouds, dynamic action",
+      "fx": [
+        "shake"
+      ]
+    },
+    {
+      "narration": "Squads unlock at Town Hall 8, with a new one every Town Hall, up to twelve at Town Hall 19. But only Town Hall 19 can level them up.",
+      "image": "twelve colorful battle banners in a row on a grassy hill, each with a different cartoon troop emblem, a glowing number 19 shield in the middle, bright sky",
+      "fx": [
+        "pulse"
+      ]
+    },
+    {
+      "narration": "Your Town Hall becomes a weapon of your choice: a Barbarian, Archer or Wizard Hall that unleashes troops when it's attacked.",
+      "image": "a cartoon fortress town hall bursting open with magical light as blue-robed wizards casting fireballs and barbarians leap out to defend it, explosive action",
+      "fx": [
+        "impact"
+      ]
+    },
+    {
+      "narration": "Defenses get two new towers, the Spiky Tower and the Firecracker Tower, and Guardians move into their own Guardian Shrine.",
+      "image": "a tall cartoon defense tower launching colorful firecracker rockets into the sky next to a spiked stone tower, sparks and fireworks everywhere, night sky",
+      "fx": [
+        "embers",
+        "shake"
+      ]
+    },
+    {
+      "narration": "Heroes climb higher too. The Barbarian King now maxes out at level 115.",
+      "image": "a huge muscular cartoon barbarian king with a golden crown, orange mustache and a giant sword roaring heroically on top of a rocky hill, golden glow around him",
+      "fx": [
+        "pulse",
+        "embers"
+      ]
+    },
+    {
+      "narration": "Plus new Magic Snacks, and a Star Bonus that now scales with your Town Hall level.",
+      "image": "glowing magical cartoon treats, cakes and lollipops floating above a wooden treasure chest overflowing with gold coins and purple elixir, sparkles",
+      "fx": [
+        "pulse"
+      ]
+    },
+    {
+      "narration": "So, are you rushing to Town Hall 19, or staying where you are? Tell me in the comments.",
+      "image": "a cheerful cartoon builder with a hammer and yellow hard hat standing in front of a giant upgraded town hall at golden sunset, confident pose",
+      "fx": []
+    }
+  ]
+}
