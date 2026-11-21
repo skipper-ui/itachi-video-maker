@@ -52,7 +52,7 @@
       "narration": "She smiles gently, and sees right through you. This is Changli, Counselor to the Jinzhou Magistrate, in Wuthering Waves.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },
@@ -150,7 +150,7 @@
       "narration": "Born amid flames, she runs warmer than most people. As a child, she couldn't control her power.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "born",
           "offset": 0.0,
           "volume": 0.45
@@ -185,7 +185,7 @@
           "volume": 0.4
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "warm",
           "offset": -0.3,
           "volume": 0.35
@@ -214,7 +214,7 @@
       "narration": "When she channels her Forte, a flame of True Sight ignites between her eyebrows, and her robe turns into a blaze. She's a five-star Fusion Resonator.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "forte",
           "offset": -0.3,
           "volume": 0.45
@@ -255,7 +255,7 @@
       "narration": "So, would you play Weiqi against Changli? Tell me in the comments.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },

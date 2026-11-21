@@ -51,7 +51,7 @@
       "narration": "By day, she invests in art. By night, she quietly makes her family's problems disappear. This is Carlotta, in Wuthering Waves.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },
@@ -126,7 +126,7 @@
           "volume": 0.35
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "crystals",
           "offset": -0.3,
           "volume": 0.35
@@ -155,7 +155,7 @@
       "narration": "Nothing about her is what it seems. Her little bag is packed with ammunition, and her perfume bottle can be a hand grenade.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "nothing",
           "offset": -0.2,
           "volume": 0.35
@@ -266,7 +266,7 @@
       "narration": "So, is Carlotta on your team? Tell me in the comments.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },

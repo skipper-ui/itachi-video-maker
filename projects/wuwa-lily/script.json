@@ -47,7 +47,7 @@
       "narration": "She can smell your pain, and she turns it into dreams. This is Lily, the newest Resonator in Wuthering Waves.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.6
         },
@@ -75,7 +75,7 @@
       "narration": "Version 3.8, Lilies in a Dying Dream, brought her into the game on November 12th.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },
@@ -115,7 +115,7 @@
           "volume": 0.35
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "medic",
           "offset": -0.3,
           "volume": 0.4
@@ -126,7 +126,7 @@
       "narration": "Her Resonance ability eased the trauma of broken soldiers, with perfumes that weave short, healing dreams.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.4
         },
@@ -148,7 +148,7 @@
       "narration": "But Lily didn't survive the war. Now she rides the Train of Souls, helping lost spirits find rest.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "survive",
           "offset": -0.3,
           "volume": 0.4
@@ -206,7 +206,7 @@
       "narration": "So, are you pulling for Lily? Tell me in the comments.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },

@@ -54,7 +54,7 @@
       "narration": "She hangs upside down in the vines, smiling at you. Prey, or predator? This is Camellya, a Bloom Bearer of the Black Shores.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.6
         },
@@ -112,7 +112,7 @@
           "volume": 0.3
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "rarely",
           "offset": -0.3,
           "volume": 0.3
@@ -146,7 +146,7 @@
       "narration": "When she unleashes her Resonance, her hair turns a vivid red, and vines and flowers burst out in every direction.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "unleashes",
           "offset": -0.3,
           "volume": 0.5
@@ -199,7 +199,7 @@
           "volume": 0.35
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "suspected",
           "offset": -0.3,
           "volume": 0.35
@@ -257,7 +257,7 @@
       "narration": "So, would you pass Camellya's trial? Tell me in the comments.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },

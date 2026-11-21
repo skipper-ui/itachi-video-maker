@@ -46,7 +46,7 @@
       "narration": "They woke up with no memories, in a world scarred by a catastrophe called the Lament. This is the Rover, the hero of Wuthering Waves.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.6
         },
@@ -74,7 +74,7 @@
       "narration": "You choose who they are: a male or a female Rover. The story is the same either way.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.4
         },
@@ -114,7 +114,7 @@
           "volume": 0.6
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "purify",
           "offset": -0.3,
           "volume": 0.4
@@ -166,7 +166,7 @@
           "volume": 0.35
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "forget",
           "offset": -0.3,
           "volume": 0.5
@@ -200,7 +200,7 @@
       "narration": "So, are you playing as the male or the female Rover? Tell me in the comments.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },

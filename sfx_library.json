@@ -80,5 +80,11 @@
   "deep_rise": {
     "prompt": "short deep cinematic sub bass rise into a soft whoomp, dark and smooth, no bells, no chimes, no sparkle, no ringing",
     "duration": 1.2
+  },
+  "swell_soft": {
+    "prompt": "derived from 'swell': muffled (low-passed at 1.8 kHz), slower fade-in, 6 dB quieter",
+    "duration": 1.2,
+    "derived_from": "swell",
+    "ffmpeg_filter": "highpass=f=60,lowpass=f=1800,lowpass=f=1800,afade=t=in:d=0.25,volume=-6dB"
   }
 }

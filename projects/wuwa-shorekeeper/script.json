@@ -49,7 +49,7 @@
       "narration": "She isn't human. She's made entirely of crystals of pure energy. This is the Shorekeeper, guardian of the Black Shores.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },
@@ -112,7 +112,7 @@
       "narration": "She can control the stars, a power gifted by the departed Astral Modulator. Yet she prefers to act as a coordinator.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "stars",
           "offset": -0.3,
           "volume": 0.45
@@ -170,7 +170,7 @@
           "volume": 0.35
         },
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "word": "asleep",
           "offset": -0.3,
           "volume": 0.45
@@ -222,7 +222,7 @@
       "narration": "So, is the Shorekeeper waiting for you at the Black Shores? Tell me in the comments.",
       "sfx": [
         {
-          "sound": "swell",
+          "sound": "swell_soft",
           "at": 0.0,
           "volume": 0.5
         },
