@@ -1,0 +1,30 @@
+{
+  "library": 338,
+  "assets": {
+    "duke_a": {"id": 135106, "title": "DragonDuke_f011_4k", "width": 1500},
+    "duke_b": {"id": 135103, "title": "DragonDuke_f012_4k", "width": 1500},
+    "duke_c": {"id": 135105, "title": "DragonDuke_f013_4k", "width": 1500},
+    "duke_d": {"id": 135104, "title": "DragonDuke_f014_4k", "width": 1500},
+    "duke_e": {"id": 135109, "title": "DragonDuke_f015_4k", "width": 1500},
+    "th15": {"id": 66735, "title": "Building_HV_Town_Hall_level_15_1", "width": 1100},
+    "eq_fire_heart": {"id": 135978, "title": "HG_DD_Fire Heart", "width": 700},
+    "eq_flame_blower": {"id": 135979, "title": "HG_DD_Flame Blower", "width": 700},
+    "eq_stun_blast": {"id": 135980, "title": "HG_DD_StunBlast", "width": 700},
+    "eq_rocket": {"id": 149447, "title": "HG_DD_Rocket_BackPack", "width": 700},
+    "skin_sound": {"id": 147439, "title": "DD_SoundOfClash_f01_4k", "width": 1000},
+    "skin_skeleton": {"id": 151597, "title": "DD_Skeleton_Kingdom_Pose_01", "width": 1000},
+    "skin_anime": {"id": 156038, "title": "DD_AnimeFury"},
+    "skin_myth": {"id": 158357, "title": "DD_Mythology_posing_A_03", "width": 1000},
+    "skin_drakan": {"id": 160039, "title": "Drakan_Duke_pose02_no_shadows", "width": 1000},
+    "skin_wwe": {"id": 162971, "title": "wwe_dd_pose04_no_shadow", "width": 1000},
+    "skin_cosmic": {"id": 164931, "title": "cosmiccurse_panicportal_dd_pose01_no_shadows", "width": 1000},
+    "titan_duke": {"id": 166900, "title": "titan_dd_pose01", "width": 1600},
+    "air_defense": {"id": 168205, "title": "Building_HV_Air_Defense_level_17", "width": 600},
+    "cannon": {"id": 168206, "title": "Building_HV_Archer_Tower_level_22", "width": 600},
+    "king": {"id": 66197, "title": "Barbarian_King_2", "width": 700},
+    "queen": {"id": 66172, "title": "Archer_Queen_3", "width": 700},
+    "warden": {"id": 52412, "title": "Grand_Warden_1", "width": 700},
+    "champion": {"id": 52478, "title": "Royal_Champion_1", "width": 700},
+    "prince": {"id": 85749, "title": "Hero_Minion_Prince_02_grass", "width": 700}
+  }
+}

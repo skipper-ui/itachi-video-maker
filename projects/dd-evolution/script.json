@@ -1,0 +1,283 @@
+{
+  "title": "Dragon Duke: The Evolution",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Dragon",
+    "Duke",
+    "Fire",
+    "Heart",
+    "Flame",
+    "Blower",
+    "Stun",
+    "Blast",
+    "Rocket",
+    "Backpack",
+    "Epic",
+    "Hero",
+    "Equipment",
+    "Titan",
+    "melee",
+    "tank",
+    "25",
+    "30",
+    "2026",
+    "15",
+    "19",
+    "sixth",
+    "six"
+  ],
+  "voice_id": "IKne3meq5aSn9XLyUdCD",
+  "voice_name": "Charlie - Deep, Confident, Energetic",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_strategy",
+    "volume": 0.22
+  },
+  "sources": [
+    "https://www.sportskeeda.com/mobile-games/clash-clans-new-hero-dragon-duke-everything-need-know (sixth hero; flying melee; Hero Hall 9 at Town Hall 15)",
+    "https://trophycoach.com/clash-of-clans/guides/dragon-duke-guide (arrived around March 1 2026; late-game tank; max 25 before TH19)",
+    "https://recapio.com/digest/new-hero-dragon-duke-with-3-common-equipments-update-sneak-peek-3-by-itzu-eng-clash-of-clans (launched with 3 common equipment)",
+    "Supercell Fan Kit asset titles: HG_DD_Fire Heart, HG_DD_Flame Blower, HG_DD_StunBlast (Feb 27 2026), HG_DD_Rocket_BackPack (Apr 9 2026)",
+    "https://blog.igv.com/en/we-broke-dragon-duke-out-of-jail/ (Rocket Backpack: his first Epic equipment, April 2026)",
+    "https://www.clashrecord.com/max-levels/th19 (Dragon Duke max 30 at TH19)"
+  ],
+  "scenes": [
+    {
+      "narration": "He's a dragon in armor, and he's not even a year old. This is the newest hero in Clash: the Dragon Duke.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "at": 0.6,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "year",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "newest",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "dragon",
+          "nth": 1,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "March 2026. The Dragon Duke arrived as Clash's sixth hero, unlocking at Town Hall 15.",
+      "sfx": [
+        {
+          "sound": "stamp",
+          "at": 0.05,
+          "volume": 0.9
+        },
+        {
+          "sound": "whoosh",
+          "word": "dragon",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "sixth",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "thud",
+          "word": "town",
+          "offset": -0.3,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "He's a flying melee tank who smashes every target within his reach.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "flying",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "melee",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "tank",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "smashes",
+          "offset": 0.1,
+          "volume": 0.8
+        },
+        {
+          "sound": "impact",
+          "word": "smashes",
+          "offset": 0.55,
+          "volume": 0.8
+        }
+      ]
+    },
+    {
+      "narration": "He launched with three Hero Equipment: the Fire Heart, the Flame Blower and the Stun Blast. In April, the Rocket Backpack became his first Epic.",
+      "sfx": [
+        {
+          "sound": "thud",
+          "word": "hero",
+          "offset": -0.1,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "fire",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "flame",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "pop",
+          "word": "stun",
+          "offset": -0.1,
+          "volume": 0.7
+        },
+        {
+          "sound": "stamp",
+          "word": "april",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "firework",
+          "word": "rocket",
+          "offset": -0.4,
+          "volume": 0.6
+        },
+        {
+          "sound": "ding",
+          "word": "epic",
+          "offset": -0.2,
+          "volume": 0.8
+        }
+      ]
+    },
+    {
+      "narration": "And he's already picked up a new skin nearly every month.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "at": 0.15,
+          "repeat": 6,
+          "every": 0.22,
+          "volume": 0.5
+        },
+        {
+          "sound": "ding",
+          "word": "month",
+          "offset": -0.2,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "Before Town Hall 19 he maxed out at 25. Now he can reach level 30.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "tick",
+          "word": "25",
+          "offset": -0.2,
+          "volume": 0.7
+        },
+        {
+          "sound": "levelup",
+          "word": "30",
+          "offset": -0.3,
+          "volume": 0.7
+        },
+        {
+          "sound": "impact",
+          "word": "30",
+          "offset": 0.25,
+          "volume": 0.9
+        }
+      ]
+    },
+    {
+      "narration": "This season, he even got a Titan skin.",
+      "sfx": [
+        {
+          "sound": "magic",
+          "at": 0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "impact",
+          "word": "titan",
+          "volume": 0.9
+        },
+        {
+          "sound": "ding",
+          "word": "titan",
+          "offset": 0.3,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "That's all six heroes. So, which one is your favorite? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "thud",
+          "word": "six",
+          "offset": -0.3,
+          "volume": 0.6
+        },
+        {
+          "sound": "pop",
+          "word": "six",
+          "offset": -0.2,
+          "repeat": 6,
+          "every": 0.16,
+          "volume": 0.5
+        },
+        {
+          "sound": "ding",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    }
+  ]
+}

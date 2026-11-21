@@ -12,7 +12,8 @@ const ease = {
   outCubic: k => 1 - Math.pow(1 - k, 3),
   inCubic: k => k * k * k,
   inOutCubic: k => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2),
-  outBack: (k, s = 1.9) => 1 + (s + 1) * Math.pow(k - 1, 3) + s * Math.pow(k - 1, 2),
+  // Clamp the ends: at k = 0 the formula leaves ~1e-16, which would draw 'hidden' elements.
+  outBack: (k, s = 1.9) => (k <= 0 ? 0 : k >= 1 ? 1 : 1 + (s + 1) * Math.pow(k - 1, 3) + s * Math.pow(k - 1, 2)),
   outElastic: k => (k === 0 || k === 1 ? k : Math.pow(2, -10 * k) * Math.sin((k * 10 - 0.75) * (2 * Math.PI / 3)) + 1),
   outExpo: k => (k === 1 ? 1 : 1 - Math.pow(2, -10 * k)),
 };
