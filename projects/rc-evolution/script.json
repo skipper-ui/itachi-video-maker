@@ -120,7 +120,7 @@
           "volume": 0.6
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "20",
           "volume": 0.6
         }
@@ -155,7 +155,7 @@
           "volume": 0.8
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "four",
           "offset": -0.1,
           "volume": 0.6
@@ -259,7 +259,7 @@
       "narration": "This season, she even got a Titan skin.",
       "sfx": [
         {
-          "sound": "deep_rise",
+          "sound": "magic",
           "at": 0.2,
           "volume": 0.6
         },
@@ -269,7 +269,7 @@
           "volume": 0.9
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "titan",
           "offset": 0.3,
           "volume": 0.6
@@ -304,7 +304,7 @@
           "volume": 0.7
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.7

@@ -156,7 +156,7 @@
           "sound": "pop",
           "word": "shy",
           "offset": -0.2,
-          "volume": 0.4
+          "volume": 0.16
         },
         {
           "sound": "swish",
@@ -214,25 +214,25 @@
           "sound": "pop",
           "word": "buns",
           "offset": -0.2,
-          "volume": 0.45
+          "volume": 0.18
         },
         {
           "sound": "pop",
           "word": "custard",
           "offset": -0.2,
-          "volume": 0.35
+          "volume": 0.14
         },
         {
           "sound": "pop",
           "word": "lotus",
           "offset": -0.2,
-          "volume": 0.35
+          "volume": 0.14
         },
         {
           "sound": "pop",
           "word": "bean",
           "offset": -0.2,
-          "volume": 0.35
+          "volume": 0.14
         }
       ]
     },

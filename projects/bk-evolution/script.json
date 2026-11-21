@@ -102,7 +102,7 @@
           "volume": 0.7
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "30",
           "volume": 0.6
         }
@@ -129,7 +129,7 @@
           "volume": 0.6
         },
         {
-          "sound": "deep_rise",
+          "sound": "magic",
           "word": "healed",
           "volume": 0.6
         },
@@ -149,7 +149,7 @@
           "volume": 0.9
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "gladiator",
           "offset": -0.3,
           "volume": 0.7
@@ -260,7 +260,7 @@
       "narration": "This season, he even got a shining golden Titan skin.",
       "sfx": [
         {
-          "sound": "deep_rise",
+          "sound": "magic",
           "at": 0.3,
           "volume": 0.6
         },
@@ -270,7 +270,7 @@
           "volume": 0.9
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "titan",
           "offset": 0.3,
           "volume": 0.6
@@ -288,7 +288,7 @@
           "volume": 0.4
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.7

@@ -83,7 +83,7 @@
           "volume": 0.8
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "barracks",
           "offset": 0.25,
           "volume": 0.5
@@ -175,7 +175,7 @@
           "volume": 0.45
         },
         {
-          "sound": "deep_rise",
+          "sound": "magic",
           "word": "guardians",
           "offset": 0.2,
           "volume": 0.7
@@ -186,7 +186,7 @@
       "narration": "Heroes climb higher too. The Barbarian King now maxes out at level 115.",
       "sfx": [
         {
-          "sound": "deep_rise",
+          "sound": "magic",
           "at": 0.2,
           "volume": 0.6
         },
@@ -207,7 +207,7 @@
       "narration": "Plus new Magic Snacks, and a Star Bonus that now scales with your Town Hall level.",
       "sfx": [
         {
-          "sound": "deep_rise",
+          "sound": "magic",
           "word": "magic",
           "volume": 0.7
         },
@@ -218,7 +218,7 @@
           "volume": 0.7
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "scales",
           "volume": 0.6
         }
@@ -240,7 +240,7 @@
           "volume": 0.7
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.7

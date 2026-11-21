@@ -97,7 +97,7 @@
           "sound": "tick",
           "word": "approval",
           "offset": -0.2,
-          "volume": 0.35
+          "volume": 0.14
         },
         {
           "sound": "thud",
@@ -190,7 +190,7 @@
           "sound": "tick",
           "word": "birthplace",
           "offset": -0.2,
-          "volume": 0.35
+          "volume": 0.14
         },
         {
           "sound": "swish",

@@ -194,13 +194,13 @@
           "sound": "tick",
           "word": "until",
           "offset": -0.2,
-          "volume": 0.4
+          "volume": 0.16
         },
         {
           "sound": "pop",
           "word": "hatched",
           "offset": -0.1,
-          "volume": 0.55
+          "volume": 0.22
         },
         {
           "sound": "swish",

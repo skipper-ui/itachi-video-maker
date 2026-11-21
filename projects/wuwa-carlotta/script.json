@@ -100,7 +100,7 @@
           "sound": "tick",
           "word": "codename",
           "offset": -0.2,
-          "volume": 0.35
+          "volume": 0.14
         },
         {
           "sound": "deep_rise",
@@ -164,7 +164,7 @@
           "sound": "tick",
           "word": "bag",
           "offset": -0.2,
-          "volume": 0.35
+          "volume": 0.14
         },
         {
           "sound": "soft_hit",
@@ -205,7 +205,7 @@
           "sound": "tick",
           "word": "pistol",
           "offset": -0.2,
-          "volume": 0.4
+          "volume": 0.16
         },
         {
           "sound": "impact",
@@ -246,7 +246,7 @@
           "sound": "pop",
           "word": "coffee",
           "offset": -0.2,
-          "volume": 0.45
+          "volume": 0.18
         },
         {
           "sound": "swish",
@@ -258,7 +258,7 @@
           "sound": "pop",
           "word": "citrus",
           "offset": -0.2,
-          "volume": 0.45
+          "volume": 0.18
         }
       ]
     },

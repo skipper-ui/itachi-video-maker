@@ -180,7 +180,7 @@
           "volume": 0.6
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "epic",
           "offset": -0.2,
           "volume": 0.8
@@ -198,7 +198,7 @@
           "volume": 0.5
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "month",
           "offset": -0.2,
           "volume": 0.6
@@ -237,7 +237,7 @@
       "narration": "This season, he even got a Titan skin.",
       "sfx": [
         {
-          "sound": "deep_rise",
+          "sound": "magic",
           "at": 0.2,
           "volume": 0.6
         },
@@ -247,7 +247,7 @@
           "volume": 0.9
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "titan",
           "offset": 0.3,
           "volume": 0.6
@@ -272,7 +272,7 @@
           "volume": 0.5
         },
         {
-          "sound": "swish",
+          "sound": "ding",
           "word": "comments",
           "offset": -0.2,
           "volume": 0.7
