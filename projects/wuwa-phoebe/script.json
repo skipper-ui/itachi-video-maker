@@ -1,0 +1,243 @@
+{
+  "title": "Who is Phoebe? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Phoebe",
+    "Acolyte",
+    "Order",
+    "Deep",
+    "staff",
+    "swing",
+    "shore",
+    "light",
+    "Acolytes",
+    "prisms",
+    "nights",
+    "glow",
+    "pizza",
+    "Margherita's",
+    "Echoes",
+    "puppies",
+    "five-star",
+    "Spectro",
+    "Pizza",
+    "Day",
+    "orphanage"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#FFE08A",
+    "keyword": "#A8D8FF",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 2106 'Profile Reveal | Graceful Luminescence — Phoebe': Acolyte of the Order of the Deep, a young woman of quiet devotion; her prayers, like the light she carries, offer comfort and peace. Attribute Spectro, Weapon Rectifier, 5 stars",
+    "Official news 2101 'Post-Lament Anthropocene: Stars Intertwined | Phoebe' lore images: Thoughts ('When I was a child, I awoke on a dark shore. I walked that shore for what felt like forever until I saw a light... a few kind Acolytes of the Order brought me to a brightly lit room... they became my adoptive family'); Resonance Evaluation Report (her Resonance Ability allowed her to manifest light, refracting it into various forms of prisms; even on the darkest nights she fills every room with a soft, radiant glow); A Special Staff (bird-like head; with a gentle swing she knocks humans and Echoes out of negative emotions); Please Calm Down! (a pizza argument outside Margherita's, resolved with one swing); Beloved Friends (she can distinguish common Echoes, 'a walking encyclopedia of Ragunnesi Echoes'; Echoes behave like eager puppies around her); Phoebe's Favorite Food (Pizza Day was the only day of the month they were allowed pizza at the orphanage)",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "She can knock the anger right out of you, with one gentle swing of her staff. This is Phoebe, Acolyte of the Order of the Deep.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "anger",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "swing",
+          "offset": -0.1,
+          "volume": 0.5
+        },
+        {
+          "sound": "deep_rise",
+          "word": "phoebe",
+          "offset": -0.4,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "As a child, she woke up alone on a dark shore. She walked until she saw a light: Acolytes of the Order, who took her in.",
+      "sfx": [
+        {
+          "sound": "rumble",
+          "word": "shore",
+          "offset": -0.3,
+          "volume": 0.3
+        },
+        {
+          "sound": "deep_rise",
+          "word": "light",
+          "offset": -0.4,
+          "volume": 0.45
+        },
+        {
+          "sound": "soft_hit",
+          "word": "acolytes",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Her Resonance lets her create light and split it into prisms. On the darkest nights, she can fill a whole room with a soft glow.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "light",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "prisms",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "swell_soft",
+          "word": "nights",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "soft_hit",
+          "word": "glow",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "When a fight breaks out, like a pizza argument outside Margherita's, she calls for calm, and one swing of her staff settles it.",
+      "sfx": [
+        {
+          "sound": "thud",
+          "word": "fight",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "sound": "pop",
+          "word": "pizza",
+          "offset": -0.2,
+          "volume": 0.18
+        },
+        {
+          "sound": "soft_hit",
+          "word": "calm",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "swing",
+          "offset": -0.1,
+          "volume": 0.5
+        },
+        {
+          "sound": "deep_rise",
+          "word": "settles",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Echoes adore her. She can tell even common Echoes apart, and they follow her around like eager puppies.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "adore",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "follow",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "puppies",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "pop",
+          "word": "puppies",
+          "offset": 0.15,
+          "volume": 0.14
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Spectro Resonator. And her favorite food? Pizza. At the orphanage, Pizza Day was the only day they could have it.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "spectro",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "pizza",
+          "offset": -0.2,
+          "volume": 0.18
+        },
+        {
+          "sound": "soft_hit",
+          "word": "day",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "So, has Phoebe's gentle swing ever calmed you down? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "swish",
+          "word": "swing",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    }
+  ]
+}
