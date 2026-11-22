@@ -1,0 +1,238 @@
+{
+  "title": "Who is Yinlin? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Yinlin",
+    "Patroller",
+    "identity",
+    "shadows",
+    "crime",
+    "lies",
+    "trust",
+    "criminals",
+    "Plan",
+    "key",
+    "bullet",
+    "chamber",
+    "Zapstring",
+    "puppet",
+    "weapon",
+    "dents",
+    "chores",
+    "lightning",
+    "net",
+    "cage",
+    "five-star",
+    "Electro"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#D79CFF",
+    "keyword": "#FF8A8A",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 862 'Profile Reveal | Evil-conquering Puppet — Yinlin': a Congenital Resonator who was once a remarkable Patroller; following the loss of her identity in a case, she resides in the shadows, delving into the depths of crime alone. Key art quote: 'Name's Yinlin. As for what I do... We don't talk about that in public.' Attribute Electro, 5 stars, affiliation Jinzhou",
+    "Official news 862 lore images: Master of Lies (never failed to earn someone's trust even when she spoke nothing but lies; perps screamed 'She can't be a Patroller!' when apprehended); Always Has a Plan B (always having a second key in the pocket and another bullet in the chamber); Zapstring the Puppet (once an ordinary puppet, now a fierce weapon thanks to her retooling); Unmasked Holidays (in private she relegates daily life to Zapstring; most nicks and dents on Zapstring came from household chores, not battles); Net of Lightning (weaves electricity into a net of purple-red sparks and a cage to entice the enemy)",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "Name's Yinlin. As for what she does? We don't talk about that in public. This is Yinlin, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "names",
+          "offset": 0.0,
+          "volume": 0.35
+        },
+        {
+          "sound": "thud",
+          "word": "public",
+          "offset": -0.5,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "yinlin",
+          "offset": -0.4,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "She was once a remarkable Patroller. But after she lost her identity in a case, she moved into the shadows, hunting crime alone.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "patroller",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "lost",
+          "offset": 0.0,
+          "volume": 0.45
+        },
+        {
+          "sound": "rumble",
+          "word": "shadows",
+          "offset": -0.4,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "She's a master of lies, and still earns everyone's trust. Caught criminals have screamed: she can't be a Patroller!",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "lies",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "trust",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "impact",
+          "word": "cant",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Her rule? Always have a Plan B: a second key in the pocket, and another bullet in the chamber.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "plan",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "tick",
+          "word": "key",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "thud",
+          "word": "bullet",
+          "offset": -0.1,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Her partner is Zapstring, a puppet she rebuilt into a weapon. Most of its dents? Not from battle. From doing her household chores.",
+      "sfx": [
+        {
+          "sound": "deep_rise",
+          "word": "zapstring",
+          "offset": -0.4,
+          "volume": 0.45
+        },
+        {
+          "sound": "whoosh",
+          "word": "weapon",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "dents",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "chores",
+          "offset": -0.8,
+          "volume": 0.4
+        },
+        {
+          "sound": "pop",
+          "word": "chores",
+          "offset": -0.2,
+          "volume": 0.16
+        }
+      ]
+    },
+    {
+      "narration": "In battle, she weaves lightning into a net, a cage to trap her enemies. She's a five-star Electro Resonator.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "word": "lightning",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "rumble",
+          "word": "net",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "impact",
+          "word": "cage",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "electro",
+          "offset": -0.3,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "So, would you trust Yinlin? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "trust",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
