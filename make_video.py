@@ -1,14 +1,17 @@
 """Turn a project script into a narrated, captioned video.
 
 Usage:
-    uv run make_video.py projects/<name>/script.json [--images fal|magichour] [--force]
+    uv run make_video.py projects/<game>/<name>/script.json [--images fal|magichour] [--force]
+
+Projects are grouped by game (projects/coc, projects/wuwa, projects/mlbb) so each game's
+videos, art and settings stay separate.
 
 For each scene the pipeline generates narration (ElevenLabs, with word
 timings) and a clip: either an AI image (fal.ai FLUX or Magic Hour) turned
 into a Ken Burns clip, or, with "visuals": "motion" in the script, a canvas
 animation from the project's motion.html rendered by motion/render.js. It then
 crossfades the clips, lays the narration underneath and burns in captions.
-Generated assets are cached in output/<name>/ so re-runs only redo what
+Generated assets are cached in output/<game>/<name>/ so re-runs only redo what
 changed; pass --force to regenerate everything.
 """
 
@@ -564,7 +567,13 @@ def main():
 
     spec = json.loads(args.script.read_text())
     name = args.script.parent.name
-    out_dir = Path(__file__).parent / "output" / name
+    # Mirror the project's place under projects/ (e.g. projects/coc/th19 -> output/coc/th19).
+    projects_dir = (Path(__file__).parent / "projects").resolve()
+    try:
+        rel = args.script.parent.resolve().relative_to(projects_dir)
+    except ValueError:
+        rel = Path(name)
+    out_dir = Path(__file__).parent / "output" / rel
     out_dir.mkdir(parents=True, exist_ok=True)
     width, height = spec["width"], spec["height"]
     scenes = spec["scenes"]

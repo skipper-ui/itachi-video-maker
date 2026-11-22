@@ -1,11 +1,11 @@
 """Search and download official art from Supercell's Fan Kit (fankit.supercell.com).
 
   uv run tools/fankit.py search "town hall 19" [--limit 40]      # list matching assets
-  uv run tools/fankit.py fetch projects/<name>/fankit.json       # download a project's art
+  uv run tools/fankit.py fetch projects/coc/<name>/fankit.json       # download a project's art
 
 A project's fankit.json maps names to assets:
   {"library": 338, "assets": {"th19": {"id": 168064, "title": "th19_default_2k", "width": 1600}}}
-Files land in projects/<name>/fankit/<name>.png (gitignored: Supercell's files are shown in our
+Files land in projects/coc/<name>/fankit/<name>.png (gitignored: Supercell's files are shown in our
 videos under the Fan Content Policy, but are not redistributed in this repository).
 
 Fan Content Policy: don't modify the art itself (moving, scaling and animating it is fine), credit

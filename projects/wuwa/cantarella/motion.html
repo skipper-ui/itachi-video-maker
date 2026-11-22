@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who is Cantarella? motion scenes</title>
+<script>
+// Official Kuro Games art (see presskit/SOURCE.txt), cropped only and credited.
+window.ART = Object.fromEntries(['vert', 'face', 'close', 'story', 'report', 'parasol'].map(n => [n, `presskit/${n}.jpg`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/wuwa/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+// Cantarella's palette: deep-sea violet and jellyfish cyan, with poison green accents.
+const SEA = ['#FFFFFF', '#E7E0FF', '#A894FF'];
+const SGLOW = 'rgba(140,120,255,0.9)';
+const CYAN = ['#FFFFFF', '#DFFBFF', '#6FE3FF'];
+const POISON = ['#FFFFFF', '#EAFFD9', '#8BE36A'];
+const kplate = (ctx, str, x, y, t, t0, size = 44) =>
+  plate(ctx, str, x, y, t, t0, size, { border: 'rgba(170,160,255,0.9)', bg: 'rgba(10,8,40,0.8)', color: '#F0EEFF' });
+const kserif = (ctx, str, x, y, size, opts = {}) => serif(ctx, str, x, y, size, { fill: SEA, glowColor: SGLOW, ...opts });
+const fadeIn = (t, t0, d = 0.5) => ease.outCubic(prog(t, t0, d));
+
+function deep(ctx, { wash = 0.08 } = {}) {
+  ctx.fillStyle = `rgba(10,5,50,${wash})`; ctx.fillRect(0, 0, W, H);
+  vignette(ctx, 0.72);
+  credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+}
+function band(ctx, y0 = 920, y1 = 1290, a = 0.65) {
+  ctx.fillStyle = vgrad(ctx, y0, y1, [[0, 'rgba(6,4,30,0)'], [0.3, `rgba(6,4,30,${a})`], [0.8, `rgba(6,4,30,${a})`], [1, 'rgba(6,4,30,0)']]);
+  ctx.fillRect(0, y0, W, y1 - y0);
+}
+// Rising bubbles.
+function bubbles(ctx, t, { n = 26, seed = 4, a = 1 } = {}) {
+  const r = rng(seed);
+  for (let i = 0; i < n; i++) {
+    const x = r() * W + Math.sin(t * 1.1 + i) * 20, sp = 40 + r() * 70, s = 4 + r() * 10;
+    const y = ((r() * H - t * sp) % (H + 60) + H + 60) % (H + 60) - 30;
+    ctx.strokeStyle = `rgba(200,230,255,${0.5 * a})`; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(x, y, s, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = `rgba(255,255,255,${0.4 * a})`; ctx.beginPath(); ctx.arc(x - s * 0.35, y - s * 0.35, s * 0.25, 0, Math.PI * 2); ctx.fill();
+  }
+}
+// A drifting jellyfish.
+function jelly(ctx, x, y, s, t, ph = 0, hue = 250, a = 1) {
+  withT(ctx, x, y, s, Math.sin(t * 0.8 + ph) * 0.15, () => {
+    ctx.globalAlpha *= a;
+    const pulse = 1 + 0.08 * Math.sin(t * 3 + ph);
+    glow(ctx, 0, 0, 120, `${hue === 250 ? '160,140,255' : '120,230,255'}`, 0.4);
+    const g = ctx.createRadialGradient(0, -20, 5, 0, 0, 80);
+    g.addColorStop(0, `hsla(${hue},90%,92%,0.95)`); g.addColorStop(1, `hsla(${hue},80%,70%,0.35)`);
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.ellipse(0, 0, 70 * pulse, 55 / pulse, 0, Math.PI, 0); ctx.quadraticCurveTo(0, 18, -70 * pulse, 0); ctx.fill();
+    ctx.strokeStyle = `hsla(${hue},90%,85%,0.7)`; ctx.lineWidth = 4; ctx.lineCap = 'round';
+    for (let i = -3; i <= 3; i++) {
+      ctx.beginPath(); ctx.moveTo(i * 18, 4);
+      for (let k = 1; k <= 6; k++) ctx.lineTo(i * 18 + Math.sin(t * 3 + k + i + ph) * 10, 4 + k * 26);
+      ctx.stroke();
+    }
+  });
+}
+// Poisonous flowers.
+function poisonFlower(ctx, x, y, s, t, ph = 0) {
+  withT(ctx, x, y, s, Math.sin(t * 1.5 + ph) * 0.08, () => {
+    glow(ctx, 0, 0, 80, '160,90,255', 0.4);
+    for (let i = 0; i < 5; i++) {
+      const a = i / 5 * Math.PI * 2 + ph;
+      ctx.fillStyle = i % 2 ? '#7A4BFF' : '#A57BFF';
+      ctx.beginPath(); ctx.ellipse(Math.cos(a) * 24, Math.sin(a) * 24, 28, 14, a, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = '#8BE36A'; ctx.beginPath(); ctx.arc(0, 0, 10, 0, Math.PI * 2); ctx.fill();
+  });
+}
+function scone(ctx, x, y, s, t) {
+  withT(ctx, x, y, s, 0, () => {
+    glow(ctx, 0, 0, 120, '90,200,255', 0.55 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = '#E3B56C'; ctx.beginPath(); ctx.ellipse(0, 10, 80, 46, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#8FE8FF'; for (let i = 0; i < 6; i++) { ctx.beginPath(); ctx.ellipse(-60 + i * 24, 50 + (i % 2) * 10, 8, 22, 0.2 * (i - 3), 0, Math.PI * 2); ctx.fill(); }
+    ctx.fillStyle = '#6FD8FF'; ctx.beginPath(); ctx.arc(-25, -6, 8, 0, Math.PI * 2); ctx.arc(25, -6, 8, 0, Math.PI * 2); ctx.fill();
+  });
+}
+function glass(ctx, x, y, s) {
+  withT(ctx, x, y, s, 0, () => {
+    ctx.fillStyle = 'rgba(220,240,255,0.25)'; ctx.fill(rectPath(-50, -90, 100, 170, 14));
+    const g = ctx.createLinearGradient(0, -40, 0, 80); g.addColorStop(0, '#E3315A'); g.addColorStop(1, '#4CC97A');
+    ctx.fillStyle = g; ctx.fill(rectPath(-44, -40, 88, 114, 10));
+    ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 4; ctx.stroke(rectPath(-50, -90, 100, 170, 14));
+  });
+}
+
+function framed(ctx, name, x, y, w, h, { alpha = 1, r = 26, border = 'rgba(170,160,255,0.95)' } = {}) {
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 50;
+  ctx.fillStyle = '#000'; ctx.fill(rectPath(x, y, w, h, r));
+  ctx.shadowBlur = 0;
+  ctx.save(); ctx.clip(rectPath(x, y, w, h, r));
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, x, y, w, h);
+  ctx.restore();
+  ctx.lineWidth = 5; ctx.strokeStyle = border; ctx.stroke(rectPath(x, y, w, h, r));
+  ctx.restore();
+}
+function backdrop(ctx, name, t, dur, fx = 0.5, fy = 0.5, dark = 0.45) {
+  cover(ctx, name, t, dur, [fx, fy, 1.25], [fx, fy, 1.35], { filter: 'blur(18px) saturate(1.2)' });
+  ctx.fillStyle = `rgba(6,4,30,${dark})`; ctx.fillRect(0, 0, W, H);
+}
+function roundInset(ctx, name, sx, sy, sr, x, y, R, col = '170,160,255') {
+  glow(ctx, x, y, R * 1.5, col, 0.45);
+  ctx.save(); ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.clip();
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, sx - sr, sy - sr, 2 * sr, 2 * sr, x - R, y - R, 2 * R, 2 * R);
+  ctx.restore();
+  ctx.lineWidth = 7; ctx.strokeStyle = `rgba(${col},0.95)`; ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.stroke();
+}
+function badge(ctx, t, t0, x, y, label, col, r = 80) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    glow(ctx, 0, 0, r * 1.8, col, 0.5 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = 'rgba(10,8,40,0.85)';
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 6; ctx.strokeStyle = `rgb(${col})`; ctx.stroke();
+    serif(ctx, label, 0, 4, r * 0.36, { fill: ['#FFFFFF', `rgb(${col})`], glowColor: `rgba(${col},0.9)` });
+  });
+  ring(ctx, t, t0, x, y, { maxR: r * 3, life: 0.6, color: col, width: 10 });
+}
+function fiveStars(ctx, t, t0, y) {
+  for (let i = 0; i < 5; i++) {
+    const k = pop(t, t0 - 0.2 + i * 0.07, 0.4);
+    if (k > 0) withT(ctx, W / 2 + (i - 2) * 92, y, k, 0, () => {
+      glow(ctx, 0, 0, 60, '255,210,120', 0.6);
+      ctx.fillStyle = '#FFD27A'; ctx.fill(starPath(38, 16));
+      ctx.lineWidth = 3; ctx.strokeStyle = '#7A4A10'; ctx.stroke(starPath(38, 16));
+    });
+  }
+}
+
+window.scenes = [
+  // 0 — "Bane of the wicked or the pure? Yours to decide." This is Cantarella, head of Fisalia.
+  (ctx, t, dur) => {
+    const tBane = when('bane', 0, 0.8), tWick = when('wicked', 0, 1.3), tPure = when('pure', 0, 2.3), tDec = when('decide', 0, 3.6), tCan = when('cantarella', 0, 5.6), tFis = when('fisalia', 0, 7.3);
+    cover(ctx, 'vert', t, dur, [0.45, 0.22, 2.0], [0.5, 0.42, 1.05]);
+    bubbles(ctx, t, { n: 22 });
+    jelly(ctx, 900, 380, 0.8, t, 0, 190, 0.8);
+    deep(ctx, { wash: 0.04 });
+    band(ctx, 900, 1290, 0.65 * fadeIn(t, 0, 0.6));
+    const early = 1 - prog(t, tCan - 0.5, 0.4);
+    if (early > 0) {
+      ctx.save(); ctx.globalAlpha = early;
+      if (t > tBane - 0.3) kserif(ctx, 'the Bane', W / 2, 990, 92, { italic: true, alpha: fadeIn(t, tBane - 0.3) });
+      if (t > tWick - 0.2) kplate(ctx, 'OF THE WICKED', W / 2 - 220, 1110, t, tWick - 0.2, 34);
+      if (t > tPure - 0.2) kplate(ctx, 'OF THE PURE', W / 2 + 230, 1110, t, tPure - 0.2, 34);
+      if (t > tDec - 0.3) kserif(ctx, 'yours to decide', W / 2, 1210, 58, { italic: true, alpha: fadeIn(t, tDec - 0.3), fill: CYAN, glowColor: 'rgba(90,210,255,0.9)' });
+      ctx.restore();
+    }
+    const kc = prog(t, tCan - 0.2, 0.6);
+    if (kc > 0) {
+      ctx.fillStyle = `rgba(220,215,255,${0.3 * (1 - kc)})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, W / 2, 1050, lerp(1.25, 1, ease.outCubic(kc)), 0, () => kserif(ctx, 'CANTARELLA', 0, 0, 128, { alpha: ease.outCubic(kc) }));
+    }
+    if (t > tFis - 0.3) kplate(ctx, 'HEAD OF THE FISALIA FAMILY', W / 2, 1195, t, tFis - 0.3, 36);
+  },
+
+  // 1 — Porto-Veno Castle on the cliffs; poisonous flowers; visitors lost in the garden.
+  (ctx, t, dur) => {
+    const tCas = when('portoveno', 0, 1.0), tFl = when('poisonous', 0, 4.1), tLost = when('lost', 0, 8.3);
+    // Night cliffs: gradient sky, castle silhouette, violet mist.
+    ctx.fillStyle = vgrad(ctx, 0, H, [[0, '#0B0730'], [0.5, '#2A1A66'], [1, '#120A3A']]); ctx.fillRect(-40, -40, W + 80, H + 80);
+    glow(ctx, 760, 260, 160, '230,225,255', 0.6); ctx.fillStyle = '#EDEAFF'; ctx.beginPath(); ctx.arc(760, 260, 70, 0, Math.PI * 2); ctx.fill();
+    const kc = fadeIn(t, tCas - 0.4, 0.8);
+    ctx.save(); ctx.globalAlpha = kc; ctx.fillStyle = '#07051C';
+    ctx.beginPath(); ctx.moveTo(0, 900); ctx.lineTo(180, 700); ctx.lineTo(300, 760); ctx.lineTo(420, 600); ctx.lineTo(660, 600); ctx.lineTo(760, 700); ctx.lineTo(1080, 720); ctx.lineTo(1080, 1300); ctx.lineTo(0, 1300); ctx.fill();
+    // Crown-shaped castle.
+    ctx.fill(rectPath(430, 420, 220, 190, 4));
+    [[430, 340], [495, 300], [560, 300], [625, 340]].forEach(([x, y]) => { ctx.fill(polyPath([[x, 430], [x, y], [x + 12, y - 40], [x + 24, y], [x + 24, 430]])); });
+    ctx.fillStyle = 'rgba(255,220,140,0.85)'; [[470, 470], [530, 470], [590, 470], [500, 530], [570, 530]].forEach(([x, y]) => ctx.fill(rectPath(x, y, 18, 28, 8)));
+    ctx.restore();
+    // Violet mist rolling.
+    for (let i = 0; i < 6; i++) { const x = ((t * 40 + i * 260) % (W + 400)) - 200; glow(ctx, x, 880 + Math.sin(i) * 60, 300, '170,120,255', 0.18); }
+    // Poisonous flowers grow at the bottom.
+    const r = rng(7);
+    for (let i = 0; i < 14; i++) { const k = ease.outBack(prog(t, tFl - 0.3 + i * 0.06, 0.5)); if (k > 0) poisonFlower(ctx, 50 + i * 76 + r() * 20, 1000 + r() * 120, 0.9 * k, t, i); }
+    // A lost visitor: wandering footprints.
+    const kl = prog(t, tLost - 0.8, 1.2);
+    if (kl > 0) { ctx.fillStyle = 'rgba(220,220,255,0.6)'; for (let i = 0; i < Math.floor(10 * kl); i++) { const a = i * 0.9; ctx.beginPath(); ctx.ellipse(540 + Math.cos(a) * (60 + i * 14), 800 + Math.sin(a) * (40 + i * 6), 10, 6, a, 0, Math.PI * 2); ctx.fill(); } }
+    bubbles(ctx, t, { n: 10, seed: 9, a: 0.3 });
+    deep(ctx, { wash: 0.02 });
+    band(ctx, 1150, 1300, 0.6);
+    if (t > tCas - 0.3) kplate(ctx, 'PORTO-VENO CASTLE', W / 2, 160, t, tCas - 0.3, 44);
+    if (t > tFl - 0.3 && t < tLost - 0.9) kserif(ctx, 'poisonous flowers thrive', W / 2, 1220, 60, { italic: true, alpha: fadeIn(t, tFl - 0.3), fill: POISON, glowColor: 'rgba(120,220,90,0.9)' });
+    if (t > tLost - 0.8) kserif(ctx, '...and visitors get lost', W / 2, 1220, 62, { italic: true, alpha: fadeIn(t, tLost - 0.8) });
+  },
+
+  // 2 — Glowing octopus scones and Jellyrose juice — safe only in the right order.
+  (ctx, t, dur) => {
+    const tDes = when('desserts', 0, 0.2), tSc = when('scones', 0, 1.9), tJuice = when('juice', 0, 3.1), tNeu = when('neutralize', 0, 4.7), tOrder = when('order', 0, 7.3);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.4, 0.5);
+    bubbles(ctx, t, { n: 14, seed: 13, a: 0.5 });
+    // Table cloth.
+    ctx.fillStyle = 'rgba(240,236,255,0.1)'; ctx.fill(rectPath(80, 780, 920, 40, 20));
+    const ks = ease.outBack(prog(t, tSc - 0.3, 0.5)), kj = ease.outBack(prog(t, tJuice - 0.3, 0.5));
+    if (ks > 0) scone(ctx, 360, 660, 1.6 * ks, t);
+    if (kj > 0) glass(ctx, 740, 640, 1.4 * kj);
+    // Order numbers appear on "order".
+    if (t > tOrder - 0.4) {
+      [[360, 470, '1'], [740, 450, '2']].forEach(([x, y, s], i) => withT(ctx, x, y, pop(t, tOrder - 0.4 + i * 0.15, 0.4), 0, () => {
+        ctx.fillStyle = 'rgba(10,8,40,0.9)'; ctx.beginPath(); ctx.arc(0, 0, 50, 0, Math.PI * 2); ctx.fill();
+        ctx.lineWidth = 5; ctx.strokeStyle = 'rgba(140,230,110,0.95)'; ctx.stroke();
+        kserif(ctx, s, 0, 4, 60, { fill: POISON, glowColor: 'rgba(120,220,90,0.9)' });
+      }));
+    }
+    // Toxin neutralizing: green ripples.
+    if (t > tNeu - 0.3) for (let i = 0; i < 2; i++) ring(ctx, t, tNeu - 0.3 + i * 0.4, 550, 650, { maxR: 520, life: 1.0, color: '140,230,110', width: 8 });
+    deep(ctx, { wash: 0.02 });
+    band(ctx, 1040, 1300, 0.72);
+    if (t > tDes - 0.3) kplate(ctx, 'UNCONVENTIONAL DESSERTS', W / 2, 200, t, tDes - 0.3, 40);
+    if (t > tNeu - 0.3 && t < tOrder - 0.4) kserif(ctx, 'her toxins cancel theirs', W / 2, 1180, 64, { italic: true, alpha: fadeIn(t, tNeu - 0.3), fill: POISON, glowColor: 'rgba(120,220,90,0.9)' });
+    if (t > tOrder - 0.4) withT(ctx, W / 2, 1180, pop(t, tOrder - 0.4, 0.45), -0.03, () => kserif(ctx, 'in the RIGHT order', 0, 0, 74, { italic: true }));
+  },
+
+  // 3 — She's tasted Medusa and blue-ringed octopus; a Tacet Mark from the tip of her tongue to her throat.
+  (ctx, t, dur) => {
+    const tTast = when('tasted', 0, 0.4), tMed = when('medusa', 0, 1.3), tOct = when('octopus', 0, 2.7), tMark = when('mark', 0, 5.0), tTongue = when('tongue', 0, 6.5), tThroat = when('throat', 0, 8.0);
+    backdrop(ctx, 'face', t, dur, 0.45, 0.45, 0.45);
+    const kc = fadeIn(t, 0, 0.6);
+    framed(ctx, 'face', 90, 230 + (1 - kc) * 60, 900, 840, { alpha: kc, border: 'rgba(170,160,255,0.95)' });
+    // Poison labels pop in.
+    if (t > tMed - 0.3) withT(ctx, 300, 300, pop(t, tMed - 0.3, 0.45), -0.08, () => kplate(ctx, 'MEDUSA', 0, 0, t, tMed - 0.3, 32));
+    if (t > tOct - 0.3) withT(ctx, 780, 330, pop(t, tOct - 0.3, 0.45), 0.08, () => kplate(ctx, 'BLUE-RINGED OCTOPUS', 0, 0, t, tOct - 0.3, 28));
+    // The mark glows near her lips (face card: lips around (395, 470) in the 900x840 source → screen).
+    const km = prog(t, tMark - 0.3, 0.6);
+    if (km > 0) {
+      const lx = 90 + 337, ly = 230 + 446;
+      glow(ctx, lx, ly, 55 * km, '180,120,255', 0.6);
+      ctx.save(); ctx.strokeStyle = `rgba(220,200,255,${km})`; ctx.lineWidth = 6; ctx.lineCap = 'round'; ctx.shadowColor = 'rgba(160,110,255,1)'; ctx.shadowBlur = 20;
+      const len = 260 * ease.outCubic(prog(t, tTongue - 0.2, 1.4));
+      ctx.beginPath(); ctx.moveTo(lx, ly); ctx.quadraticCurveTo(lx + 10, ly + len * 0.5, lx - 10, ly + len); ctx.stroke(); ctx.restore();
+    }
+    deep(ctx, { wash: 0.02 });
+    band(ctx, 1080, 1300, 0.72);
+    if (t > tTast - 0.3 && t < tMark - 0.4) kserif(ctx, 'every poison, tasted', W / 2, 1180, 66, { italic: true, alpha: fadeIn(t, tTast - 0.3) });
+    if (t > tMark - 0.3) kplate(ctx, 'A TACET MARK', W / 2, 1140, t, tMark - 0.3, 44);
+    if (t > tThroat - 0.5) kserif(ctx, 'tongue to throat', W / 2, 1240, 58, { italic: true, alpha: fadeIn(t, tThroat - 0.5) });
+  },
+
+  // 4 — A rare hallucinogen: jellyfish swarm from her parasol; a sea of illusions.
+  (ctx, t, dur) => {
+    const tHal = when('hallucinogen', 0, 1.4), tJel = when('jellyfish', 0, 3.1), tPar = when('parasol', 0, 4.4), tSea = when('sea', 0, 7.0), tIll = when('illusions', 0, 7.7);
+    const ki = prog(t, tSea - 0.6, 1.2);
+    backdrop(ctx, 'close', t, dur, 0.5, 0.4, 0.4);
+    const p1 = 1 - prog(t, tJel - 0.5, 0.4);
+    if (p1 > 0) {
+      ctx.save(); ctx.globalAlpha = p1;
+      framed(ctx, 'report', 190, 170, 700, 945, { r: 16 });
+      ctx.lineWidth = 6; ctx.strokeStyle = `rgba(150,80,255,${fadeIn(t, tHal - 0.2, 0.4)})`;
+      ctx.stroke(rectPath(190 + 25 * 0.7, 170 + 775 * 0.7, 510 * 0.7, 330 * 0.7, 12));
+      ctx.restore();
+    }
+    if (p1 < 1) {
+      roundInset(ctx, 'parasol', 165, 165, 160, W / 2, 560, 260 * ease.outBack(prog(t, tJel - 0.5, 0.6)), '120,230,255');
+      // Jellyfish swarm out from the parasol.
+      const r = rng(21);
+      for (let i = 0; i < 12; i++) {
+        const a = r() * Math.PI * 2, d = 200 + r() * 420, k = ease.outCubic(prog(t, tPar - 0.3 + i * 0.07, 1.4));
+        if (k > 0) jelly(ctx, W / 2 + Math.cos(a) * d * k, 560 + Math.sin(a) * d * k * 0.9, 0.55 + 0.3 * r(), t, i, r() > 0.5 ? 250 : 190, k);
+      }
+    }
+    if (ki > 0) {
+      ctx.save(); ctx.globalCompositeOperation = 'soft-light';
+      ctx.fillStyle = `rgba(150,90,255,${0.6 * ki})`; ctx.fillRect(0, 0, W, H); ctx.restore();
+      for (let i = 0; i < 3; i++) ring(ctx, t, tSea - 0.6 + i * 0.5, W / 2, 560, { maxR: 900, life: 1.4, color: '190,170,255', width: 6 });
+    }
+    bubbles(ctx, t, { n: 20, seed: 17, a: 0.6 });
+    deep(ctx, { wash: 0.02 });
+    band(ctx, 1080, 1300, 0.72);
+    if (t > tHal - 0.3 && t < tJel - 0.5) kplate(ctx, 'A RARE HALLUCINOGEN', W / 2, 1190, t, tHal - 0.3, 42);
+    if (t > tPar - 0.3 && t < tSea - 0.6) kserif(ctx, 'jellyfish from her parasol', W / 2, 1190, 60, { italic: true, alpha: fadeIn(t, tPar - 0.3), fill: CYAN, glowColor: 'rgba(90,210,255,0.9)' });
+    if (t > tSea - 0.6) withT(ctx, W / 2, 1190, pop(t, tSea - 0.6, 0.5), 0, () => kserif(ctx, 'a sea of illusions', 0, 0, 80, { italic: true }));
+  },
+
+  // 5 — Five-star Havoc; if you look tired, a jug of Violaca juice.
+  (ctx, t, dur) => {
+    const tStar = when('fivestar', 0, 0.4), tHav = when('havoc', 0, 1.1), tTired = when('tired', 0, 3.1), tJug = when('jug', 0, 5.0), tVio = when('violaca', 0, 5.6);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.35, 0.45);
+    bubbles(ctx, t, { n: 16, seed: 29, a: 0.5 });
+    roundInset(ctx, 'story', 520, 260, 250, W / 2, 520, 290 * ease.outBack(prog(t, 0, 0.6)));
+    const p1 = 1 - prog(t, tTired - 0.6, 0.4);
+    if (p1 > 0) {
+      ctx.save(); ctx.globalAlpha = p1;
+      fiveStars(ctx, t, tStar, 880);
+      badge(ctx, t, tHav - 0.2, W / 2, 1050, 'HAVOC', '170,120,255', 80);
+      ctx.restore();
+    }
+    if (t > tJug - 0.5) {
+      withT(ctx, W / 2, 960, ease.outBack(prog(t, tJug - 0.5, 0.5)), Math.sin(t * 2) * 0.05, () => {
+        glow(ctx, 0, 0, 160, '170,120,255', 0.5);
+        ctx.fillStyle = 'rgba(230,230,255,0.25)'; ctx.fill(rectPath(-80, -110, 160, 210, 30));
+        const g = ctx.createLinearGradient(0, -50, 0, 100); g.addColorStop(0, '#B69CFF'); g.addColorStop(1, '#6A3BE0');
+        ctx.fillStyle = g; ctx.fill(rectPath(-72, -50, 144, 144, 24));
+        ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 5; ctx.stroke(rectPath(-80, -110, 160, 210, 30));
+        ctx.beginPath(); ctx.arc(95, -10, 40, -1.2, 1.2); ctx.stroke();
+      });
+    }
+    deep(ctx, { wash: 0.02 });
+    band(ctx, 1120, 1300, 0.65 * (1 - p1));
+    if (t > tTired - 0.3) kserif(ctx, 'look tired?', W / 2, 1120 + 0 * p1, 66, { italic: true, alpha: fadeIn(t, tTired - 0.3) * (1 - p1 * 0.999) });
+    if (t > tVio - 0.4) withT(ctx, W / 2, 1220, pop(t, tVio - 0.4, 0.45), 0, () => kplate(ctx, 'VIOLACA JUICE', 0, 0, t, tVio - 0.4, 42));
+  },
+
+  // 6 — Outro: would you drink Cantarella's juice?
+  (ctx, t, dur) => {
+    const tDrink = when('drink', 0, 0.5), tJuice = when('juice', 0, 1.5), tComments = when('comments', 0, 2.9);
+    cover(ctx, 'face', t, dur, [0.45, 0.45, 1.05], [0.45, 0.45, 1.13]);
+    bubbles(ctx, t, { n: 22, seed: 31 });
+    jelly(ctx, 880, 300, 0.7, t, 2, 190, 0.8);
+    deep(ctx, { wash: 0.05 });
+    band(ctx, 900, 1290, 0.65 * fadeIn(t, 0, 0.6));
+    if (t > tDrink - 0.4) kserif(ctx, 'Would you drink', W / 2, 1000, 86, { italic: true, alpha: fadeIn(t, tDrink - 0.4, 0.6) });
+    if (t > tJuice - 0.5) kserif(ctx, "Cantarella's juice?", W / 2, 1105, 84, { italic: true, alpha: fadeIn(t, tJuice - 0.5, 0.6), fill: POISON, glowColor: 'rgba(120,220,90,0.9)' });
+    if (t > tComments - 0.3) kplate(ctx, 'TELL ME IN THE COMMENTS', W / 2, 1215, t, tComments - 0.3, 38);
+  },
+];
+</script>
+</body>
+</html>

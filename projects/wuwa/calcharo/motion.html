@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who is Calcharo? motion scenes</title>
+<script>
+// Official Kuro Games art (see presskit/SOURCE.txt), cropped only and credited.
+window.ART = Object.fromEntries(['key', 'story', 'report', 'nameplate', 'mirage'].map(n => [n, `presskit/${n}.jpg`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/wuwa/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+// Calcharo's palette: Electro indigo on moonlit night, with gold for money.
+const IND = ['#FFFFFF', '#E6DEFF', '#9F86FF'];
+const IGLOW = 'rgba(150,120,255,0.9)';
+const GOLD = ['#FFFFFF', '#FFF1C8', '#F0B94A'];
+const cplate = (ctx, str, x, y, t, t0, size = 44) =>
+  plate(ctx, str, x, y, t, t0, size, { border: 'rgba(180,160,255,0.9)', bg: 'rgba(12,8,30,0.8)', color: '#F2EEFF' });
+const cserif = (ctx, str, x, y, size, opts = {}) => serif(ctx, str, x, y, size, { fill: IND, glowColor: IGLOW, ...opts });
+const fadeIn = (t, t0, d = 0.5) => ease.outCubic(prog(t, t0, d));
+
+function dusk(ctx, { wash = 0.08 } = {}) {
+  ctx.fillStyle = `rgba(15,8,40,${wash})`; ctx.fillRect(0, 0, W, H);
+  vignette(ctx, 0.75);
+  credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+}
+function band(ctx, y0 = 920, y1 = 1290, a = 0.65) {
+  ctx.fillStyle = vgrad(ctx, y0, y1, [[0, 'rgba(8,5,22,0)'], [0.3, `rgba(8,5,22,${a})`], [0.8, `rgba(8,5,22,${a})`], [1, 'rgba(8,5,22,0)']]);
+  ctx.fillRect(0, y0, W, y1 - y0);
+}
+const motes = (ctx, t, n = 24, seed = 5, a = 1) => { ctx.save(); ctx.globalAlpha *= a; sparks(ctx, t, { n, seed, color: '170,150,255', rise: 50, size: 4 }); ctx.restore(); };
+
+function bolt(ctx, t, x0, y0, x1, y1, { a = 1, seed = 1, w = 6 } = {}) {
+  if (a <= 0) return;
+  const r = rng(seed * 97 + Math.floor(t * 12));
+  ctx.save(); ctx.globalAlpha *= a; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.shadowColor = 'rgba(150,120,255,1)'; ctx.shadowBlur = 24;
+  const pts = [[x0, y0]], n = 10;
+  for (let i = 1; i < n; i++) {
+    const k = i / n, nx = -(y1 - y0), ny = x1 - x0, len = Math.hypot(nx, ny) || 1, off = (r() - 0.5) * 70;
+    pts.push([lerp(x0, x1, k) + nx / len * off, lerp(y0, y1, k) + ny / len * off]);
+  }
+  pts.push([x1, y1]);
+  [[w * 2.2, 'rgba(120,90,255,0.6)'], [w, 'rgba(235,228,255,0.95)']].forEach(([lw, col]) => {
+    ctx.strokeStyle = col; ctx.lineWidth = lw;
+    ctx.beginPath(); pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.stroke();
+  });
+  ctx.restore();
+}
+function coin(ctx, x, y, s, rot = 0, label = '1') {
+  withT(ctx, x, y, s, 0, () => {
+    const sq = Math.abs(Math.cos(rot));
+    ctx.scale(Math.max(0.08, sq), 1);
+    glow(ctx, 0, 0, 120, '255,210,120', 0.4);
+    ctx.fillStyle = '#E9B44C'; ctx.beginPath(); ctx.arc(0, 0, 80, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#FFD883'; ctx.beginPath(); ctx.arc(0, 0, 64, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 5; ctx.strokeStyle = '#B07A22'; ctx.stroke();
+    ctx.font = `900 72px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#8A5A12'; ctx.fillText(label, 0, 4);
+  });
+}
+// A little cartoon puppy biscuit.
+function puppyBiscuit(ctx, x, y, s, rot) {
+  withT(ctx, x, y, s, rot, () => {
+    ctx.fillStyle = '#D9A866';
+    ctx.beginPath(); ctx.arc(0, 0, 50, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(-42, -36, 18, 30, -0.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(42, -36, 18, 30, 0.5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#6B4420';
+    ctx.beginPath(); ctx.arc(-17, -6, 6, 0, Math.PI * 2); ctx.arc(17, -6, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(0, 12, 10, 7, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = 'rgba(255,240,210,0.6)'; [[-25, 25], [25, 25], [0, -30]].forEach(([dx, dy]) => { ctx.beginPath(); ctx.arc(dx, dy, 3, 0, Math.PI * 2); ctx.fill(); });
+  });
+}
+
+function framed(ctx, name, x, y, w, h, { alpha = 1, r = 26, border = 'rgba(180,160,255,0.95)' } = {}) {
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 50;
+  ctx.fillStyle = '#000'; ctx.fill(rectPath(x, y, w, h, r));
+  ctx.shadowBlur = 0;
+  ctx.save(); ctx.clip(rectPath(x, y, w, h, r));
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, x, y, w, h);
+  ctx.restore();
+  ctx.lineWidth = 5; ctx.strokeStyle = border; ctx.stroke(rectPath(x, y, w, h, r));
+  ctx.restore();
+}
+function backdrop(ctx, name, t, dur, fx = 0.5, fy = 0.5, dark = 0.5) {
+  cover(ctx, name, t, dur, [fx, fy, 1.25], [fx, fy, 1.35], { filter: 'blur(18px) saturate(1.2)' });
+  ctx.fillStyle = `rgba(8,5,22,${dark})`; ctx.fillRect(0, 0, W, H);
+}
+function roundInset(ctx, name, sx, sy, sr, x, y, R, col = '180,160,255') {
+  glow(ctx, x, y, R * 1.5, col, 0.45);
+  ctx.save(); ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.clip();
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, sx - sr, sy - sr, 2 * sr, 2 * sr, x - R, y - R, 2 * R, 2 * R);
+  ctx.restore();
+  ctx.lineWidth = 7; ctx.strokeStyle = `rgba(${col},0.95)`; ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.stroke();
+}
+function badge(ctx, t, t0, x, y, label, col, r = 80) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    glow(ctx, 0, 0, r * 1.8, col, 0.5 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = 'rgba(12,8,30,0.85)';
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 6; ctx.strokeStyle = `rgb(${col})`; ctx.stroke();
+    serif(ctx, label, 0, 4, r * 0.34, { fill: ['#FFFFFF', `rgb(${col})`], glowColor: `rgba(${col},0.9)` });
+  });
+  ring(ctx, t, t0, x, y, { maxR: r * 3, life: 0.6, color: col, width: 10 });
+}
+function fiveStars(ctx, t, t0, y) {
+  for (let i = 0; i < 5; i++) {
+    const k = pop(t, t0 - 0.2 + i * 0.07, 0.4);
+    if (k > 0) withT(ctx, W / 2 + (i - 2) * 92, y, k, 0, () => {
+      glow(ctx, 0, 0, 60, '255,210,120', 0.6);
+      ctx.fillStyle = '#FFD27A'; ctx.fill(starPath(38, 16));
+      ctx.lineWidth = 3; ctx.strokeStyle = '#7A4A10'; ctx.stroke(starPath(38, 16));
+    });
+  }
+}
+function mark(ctx, k, x, y, w, h) {
+  if (k <= 0) return;
+  ctx.lineWidth = 6; ctx.strokeStyle = `rgba(220,40,70,${k})`; ctx.stroke(rectPath(x, y, w, h, 12));
+}
+
+window.scenes = [
+  // 0 — Leader of the Ghost Hounds. Ruthless. Vengeful. Unforgiving. This is Calcharo.
+  (ctx, t, dur) => {
+    const tGh = when('ghost', 0, 0.8), tR = when('ruthless', 0, 3.3), tV = when('vengeful', 0, 4.3), tU = when('unforgiving', 0, 5.3), tC = when('calcharo', 0, 7.5), tWW = when('wuthering', 0, 9.0);
+    cover(ctx, 'key', t, dur, [0.3, 0.32, 1.9], [0.5, 0.42, 1.0]);
+    bolt(ctx, t, -40, 380, 360, 820, { a: 0.6, seed: 1 });
+    [tR, tV, tU].forEach((t0, i) => { if (t > t0 - 0.1 && t < t0 + 0.4) { flash(ctx, t, t0 - 0.1, { color: '200,180,255', peak: 0.25, life: 0.35 }); } });
+    motes(ctx, t, 22, 3, 0.8);
+    dusk(ctx, { wash: 0.05 });
+    band(ctx, 900, 1290, 0.65 * fadeIn(t, 0, 0.6));
+    const early = 1 - prog(t, tC - 0.5, 0.4);
+    if (early > 0) {
+      ctx.save(); ctx.globalAlpha = early;
+      if (t > tGh - 0.3 && t < tR - 0.3) cplate(ctx, 'LEADER OF THE GHOST HOUNDS', W / 2, 1100, t, tGh - 0.3, 38);
+      [[tR, 'RUTHLESS.', 980], [tV, 'VENGEFUL.', 1090], [tU, 'UNFORGIVING.', 1200]].forEach(([t0, s, y]) => {
+        if (t > t0 - 0.15) withT(ctx, W / 2, y, lerp(1.3, 1, ease.outCubic(prog(t, t0 - 0.15, 0.3))), 0, () => cserif(ctx, s, 0, 0, 84, { alpha: fadeIn(t, t0 - 0.15, 0.25) }));
+      });
+      ctx.restore();
+    }
+    const kc = prog(t, tC - 0.2, 0.6);
+    if (kc > 0) {
+      ctx.fillStyle = `rgba(220,210,255,${0.3 * (1 - kc)})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, W / 2, 1050, lerp(1.25, 1, ease.outCubic(kc)), 0, () => cserif(ctx, 'CALCHARO', 0, 0, 140, { alpha: ease.outCubic(kc) }));
+    }
+    if (t > tWW - 0.3) cplate(ctx, 'WUTHERING WAVES', W / 2, 1195, t, tWW - 0.3, 38);
+  },
+
+  // 1 — Rumors: survived a crusade against an entire country's police; center of countless legends.
+  (ctx, t, dur) => {
+    const tRum = when('rumors', 0, 0.0), tCru = when('crusade', 0, 1.7), tPol = when('police', 0, 3.6), tLeg = when('legends', 0, 6.3);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.3, 0.5);
+    framed(ctx, 'story', 40, 220 + (1 - fadeIn(t, 0, 0.6)) * 60, 1000, 704, { alpha: fadeIn(t, 0, 0.6) });
+    // Whispered rumor bubbles drifting around.
+    const words = ['crusade', 'street brawls', 'vault thefts', 'wars abroad', 'legend', 'survivor'];
+    const r = rng(9);
+    words.forEach((w, i) => {
+      const t0 = tRum + 0.3 + i * 0.7, k = fadeIn(t, t0, 0.5);
+      if (k <= 0) return;
+      const [x, y0] = [[230, 990], [620, 990], [880, 1060], [300, 1080], [560, 1170], [860, 1160]][i], y = y0 + Math.sin(t * 1.3 + i) * 8;
+      ctx.save(); ctx.globalAlpha = k * 0.85 * (1 - prog(t, tPol - 0.5, 0.4));
+      ctx.font = `italic 40px ${SERIF}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = 'rgba(225,215,255,0.9)'; ctx.fillText(`"${w}"`, x, y);
+      ctx.restore();
+    });
+    dusk(ctx, { wash: 0.03 });
+    band(ctx, 940, 1300, 0.7);
+    if (t > tRum - 0.2) cplate(ctx, 'CRADLE OF RUMORS', W / 2, 160, t, tRum - 0.2, 44);
+    if (t > tPol - 0.3 && t < tLeg - 0.3) cserif(ctx, 'vs. an entire nation\'s police', W / 2, 1220, 56, { italic: true, alpha: fadeIn(t, tPol - 0.3) });
+    if (t > tLeg - 0.3) withT(ctx, W / 2, 1220, pop(t, tLeg - 0.3, 0.45), 0, () => cplate(ctx, 'A LIVING LEGEND', 0, 0, t, tLeg - 0.3, 42));
+  },
+
+  // 2 — Rule one: never an unprofitable job; information and contacts count as money.
+  (ctx, t, dur) => {
+    const tRule = when('rule', 0, 0.6), tNever = when('never', 0, 1.3), tInfo = when('information', 0, 4.6), tCon = when('contacts', 0, 5.5), tMoney = when('money', 0, 8.3);
+    backdrop(ctx, 'key', t, dur, 0.5, 0.4, 0.55);
+    motes(ctx, t, 16, 11, 0.5);
+    // A balance scale: info + contacts on one side, money on the other.
+    const ks = fadeIn(t, tInfo - 0.5, 0.6);
+    if (t < tInfo - 0.3) {
+      withT(ctx, W / 2, 620, pop(t, tRule - 0.3, 0.5), -0.04, () => {
+        ctx.fillStyle = 'rgba(12,8,30,0.9)'; ctx.fill(rectPath(-360, -170, 720, 340, 30));
+        ctx.lineWidth = 6; ctx.strokeStyle = 'rgba(180,160,255,0.95)'; ctx.stroke(rectPath(-360, -170, 720, 340, 30));
+        cserif(ctx, 'RULE #1', 0, -80, 70);
+        cserif(ctx, 'NO UNPROFITABLE', 0, 20, 56, { fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' });
+        cserif(ctx, 'JOBS', 0, 95, 56, { fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' });
+      });
+    }
+    if (ks > 0) {
+      ctx.save(); ctx.globalAlpha = ks;
+      const tilt = 0.12 * Math.sin(clamp((t - tInfo) / 2) * Math.PI) * (1 - prog(t, tMoney - 0.3, 0.5));
+      ctx.strokeStyle = 'rgba(230,220,255,0.95)'; ctx.lineWidth = 10; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(W / 2, 820); ctx.lineTo(W / 2, 420); ctx.stroke();
+      withT(ctx, W / 2, 440, 1, tilt, () => {
+        ctx.beginPath(); ctx.moveTo(-320, 0); ctx.lineTo(320, 0); ctx.stroke();
+        [-320, 320].forEach(x => { ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x - 90, 170); ctx.moveTo(x, 0); ctx.lineTo(x + 90, 170); ctx.stroke(); });
+      });
+      const ly = 440 + Math.sin(tilt) * -320 + 190, ry = 440 + Math.sin(tilt) * 320 + 190;
+      ctx.fillStyle = 'rgba(200,190,255,0.25)';
+      ctx.beginPath(); ctx.ellipse(W / 2 - 320, ly, 110, 22, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(W / 2 + 320, ry, 110, 22, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+      if (t > tInfo - 0.3) withT(ctx, W / 2 - 320, ly - 60, pop(t, tInfo - 0.3, 0.4), 0, () => cplate(ctx, 'INFO', 0, 0, t, tInfo - 0.3, 34));
+      if (t > tCon - 0.3) withT(ctx, W / 2 - 320, ly - 130, pop(t, tCon - 0.3, 0.4), 0, () => cplate(ctx, 'CONTACTS', 0, 0, t, tCon - 0.3, 30));
+      if (t > tMoney - 0.4) coin(ctx, W / 2 + 320, ry - 80, ease.outBack(prog(t, tMoney - 0.4, 0.5)), t * 2, '$');
+    }
+    dusk(ctx, { wash: 0.03 });
+    band(ctx, 1060, 1300, 0.7);
+    if (t > tMoney - 0.3) withT(ctx, W / 2, 1180, pop(t, tMoney - 0.3, 0.45), 0, () => cserif(ctx, 'worth as much as money', 0, 0, 62, { italic: true, fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' }));
+  },
+
+  // 3 — One Shell Credit, one condition: become his informers. The snack seller might work for him.
+  (ctx, t, dur) => {
+    const tOne = when('one', 0, 2.5), tShell = when('shell', 0, 2.8), tCond = when('condition', 0, 4.4), tInf = when('informers', 0, 5.8), tSnack = when('snack', 0, 7.6), tWork = when('work', 0, 9.0);
+    backdrop(ctx, 'key', t, dur, 0.5, 0.6, 0.55);
+    motes(ctx, t, 16, 13, 0.5);
+    const kc = ease.outBack(prog(t, tOne - 0.3, 0.5)) * (1 - prog(t, tSnack - 0.6, 0.4));
+    if (kc > 0) {
+      coin(ctx, W / 2, 560, 2.2 * kc, t * 1.6);
+      if (t > tShell - 0.2) { ctx.save(); ctx.globalAlpha = kc; cserif(ctx, '1 SHELL CREDIT', W / 2, 830, 70, { fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' }); ctx.restore(); }
+    }
+    // The alley: a snack stall silhouette and a pair of watching eyes.
+    const ks = fadeIn(t, tSnack - 0.5, 0.6);
+    if (ks > 0) {
+      ctx.save(); ctx.globalAlpha = ks;
+      ctx.fillStyle = 'rgba(30,20,60,0.95)'; ctx.fill(rectPath(260, 520, 560, 300, 14));
+      ctx.fillStyle = '#C0392B'; for (let i = 0; i < 8; i++) { ctx.fillStyle = i % 2 ? '#F2E6D8' : '#C0392B'; ctx.fill(rectPath(240 + i * 75, 470, 75, 70, 8)); }
+      glow(ctx, 540, 600, 200, '255,200,120', 0.35);
+      ctx.font = `900 54px ${FONT}`; ctx.textAlign = 'center'; ctx.fillStyle = '#FFD883'; ctx.fillText('SNACKS', 540, 690);
+      const blink = (Math.sin(t * 3) > 0.95) ? 0.1 : 1;
+      ctx.fillStyle = `rgba(200,180,255,${blink})`; [[480, 760], [600, 760]].forEach(([x, y]) => { ctx.beginPath(); ctx.ellipse(x, y, 16, 9 * blink, 0, 0, Math.PI * 2); ctx.fill(); });
+      ctx.restore();
+    }
+    dusk(ctx, { wash: 0.03 });
+    band(ctx, 1060, 1300, 0.7);
+    if (t > tCond - 0.3 && t < tSnack - 0.6) cplate(ctx, 'ONE CONDITION', W / 2, 1100, t, tCond - 0.3, 42);
+    if (t > tInf - 0.3 && t < tSnack - 0.6) cserif(ctx, 'become his informers', W / 2, 1210, 62, { italic: true, alpha: fadeIn(t, tInf - 0.3) });
+    if (t > tWork - 0.4) withT(ctx, W / 2, 1180, pop(t, tWork - 0.4, 0.45), -0.03, () => cserif(ctx, 'is she one of his?', 0, 0, 72, { italic: true }));
+  },
+
+  // 4 — Extremely high overclocking risk; electric mirage thorns in his Liberation.
+  (ctx, t, dur) => {
+    const tFile = when('file', 0, 0.3), tHigh = when('extremely', 0, 1.5), tOver = when('overclocking', 0, 3.0), tLib = when('liberation', 0, 4.7), tMir = when('mirages', 0, 6.5), tTh = when('thorns', 0, 8.4);
+    const p1 = 1 - prog(t, tLib - 0.4, 0.4);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.35, 0.55);
+    if (p1 > 0) {
+      ctx.save(); ctx.globalAlpha = p1;
+      framed(ctx, 'report', 90, 180 + (1 - fadeIn(t, 0, 0.6)) * 60, 900, 1009, { r: 16 });
+      // Red alarm stripe across the report.
+      const ka = prog(t, tOver - 0.2, 0.4);
+      if (ka > 0) {
+        withT(ctx, W / 2, 700, ka, -0.12, () => {
+          ctx.fillStyle = 'rgba(200,30,60,0.92)'; ctx.fill(rectPath(-470, -60, 940, 120, 12));
+          ctx.font = `900 54px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#FFF';
+          if ('letterSpacing' in ctx) ctx.letterSpacing = '6px';
+          ctx.fillText('OVERCLOCK RISK: EXTREME', 0, 4);
+        });
+      }
+      ctx.restore();
+    }
+    const kl = ease.outBack(prog(t, tLib - 0.4, 0.6));
+    if (kl > 0) {
+      const R = 300 * kl;
+      roundInset(ctx, 'mirage', 192, 226, 140, W / 2, 620, R);
+      const kt = prog(t, tMir - 0.3, 1.2);
+      if (kt > 0) for (let i = 0; i < 8; i++) {
+        const a = i / 8 * Math.PI * 2 + t * 0.4, r0 = R + 10, r1 = R + 60 + 160 * ease.outCubic(kt);
+        bolt(ctx, t, W / 2 + Math.cos(a) * r0, 620 + Math.sin(a) * r0, W / 2 + Math.cos(a + 0.4) * r1, 620 + Math.sin(a + 0.4) * r1, { a: kt, seed: 20 + i, w: 4 });
+      }
+    }
+    motes(ctx, t, 22, 17, 0.6);
+    dusk(ctx, { wash: 0.03 });
+    band(ctx, 1080, 1300, 0.72);
+    if (t > tFile - 0.3 && p1 > 0) { ctx.save(); ctx.globalAlpha = p1; cplate(ctx, 'HIS OFFICIAL FILE', W / 2, 1190, t, tFile - 0.3, 42); ctx.restore(); }
+    if (t > tLib - 0.3) cplate(ctx, 'RESONANCE LIBERATION', W / 2, 1100, t, tLib - 0.3, 40);
+    if (t > tMir - 0.3) cserif(ctx, 'thorns of electric mirage', W / 2, 1210, 58, { italic: true, alpha: fadeIn(t, tMir - 0.3) });
+  },
+
+  // 5 — A rusty childhood nameplate with a little dog; puppy-shaped hardtack; five-star Electro.
+  (ctx, t, dur) => {
+    const tRusty = when('rusty', 0, 1.2), tDog = when('dog', 0, 4.0), tPup = when('puppyshaped', 0, 6.0), tStar = when('fivestar', 0, 8.0), tEl = when('electro', 0, 8.7);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.3, 0.5);
+    motes(ctx, t, 16, 21, 0.5);
+    const p1 = 1 - prog(t, tStar - 0.6, 0.4);
+    if (p1 > 0) {
+      ctx.save(); ctx.globalAlpha = p1;
+      const kn = ease.outBack(prog(t, tRusty - 0.5, 0.6));
+      roundInset(ctx, 'nameplate', 180, 180, 170, W / 2, 600, 300 * kn, '230,180,120');
+      if (t > tDog - 0.2) { const k = Math.sin(clamp((t - tDog + 0.2) / 0.8) * Math.PI); glow(ctx, W / 2, 560, 200, '255,230,180', 0.6 * k); }
+      const kp = prog(t, tPup - 0.4, 0.6);
+      if (kp > 0) [[-340, 0], [340, 0.4], [-300, 0.8], [300, 1.2]].forEach(([dx, d], i) => {
+        const k = ease.outBack(prog(t, tPup - 0.4 + d * 0.25, 0.5));
+        puppyBiscuit(ctx, W / 2 + dx, 500 + (i > 1 ? 280 : 0), 1.1 * k, Math.sin(t * 2 + i) * 0.2);
+      });
+      ctx.restore();
+    }
+    if (t > tStar - 0.5) {
+      roundInset(ctx, 'story', 520, 250, 230, W / 2, 520, 280 * ease.outBack(prog(t, tStar - 0.5, 0.6)));
+      fiveStars(ctx, t, tStar, 880);
+      badge(ctx, t, tEl - 0.2, W / 2, 1050, 'ELECTRO', '170,150,255', 76);
+    }
+    dusk(ctx, { wash: 0.03 });
+    band(ctx, 1080, 1300, 0.7 * p1);
+    if (t > tRusty - 0.3 && p1 > 0) { ctx.save(); ctx.globalAlpha = p1; cplate(ctx, "THE UNDERDOG'S NAMEPLATE", W / 2, 1110, t, tRusty - 0.3, 36); ctx.restore(); }
+    if (t > tPup - 0.3 && p1 > 0) { ctx.save(); ctx.globalAlpha = p1; cserif(ctx, 'puppy-shaped hardtack', W / 2, 1215, 60, { italic: true, alpha: fadeIn(t, tPup - 0.3), fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' }); ctx.restore(); }
+  },
+
+  // 6 — Outro: what would you pay to hire Calcharo?
+  (ctx, t, dur) => {
+    const tPay = when('pay', 0, 0.8), tHire = when('hire', 0, 1.1), tComments = when('comments', 0, 2.9);
+    cover(ctx, 'story', t, dur, [0.5, 0.42, 1.0], [0.5, 0.42, 1.08]);
+    bolt(ctx, t, W + 40, 380, 700, 820, { a: 0.5, seed: 41 });
+    motes(ctx, t, 24, 31);
+    dusk(ctx, { wash: 0.05 });
+    band(ctx, 900, 1290, 0.65 * fadeIn(t, 0, 0.6));
+    if (t > tPay - 0.4) cserif(ctx, 'What would you pay', W / 2, 1000, 84, { italic: true, alpha: fadeIn(t, tPay - 0.4, 0.6) });
+    if (t > tHire - 0.2) cserif(ctx, 'to hire Calcharo?', W / 2, 1105, 84, { italic: true, alpha: fadeIn(t, tHire - 0.2, 0.6), fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' });
+    if (t > tComments - 0.3) cplate(ctx, 'TELL ME IN THE COMMENTS', W / 2, 1215, t, tComments - 0.3, 38);
+  },
+];
+</script>
+</body>
+</html>

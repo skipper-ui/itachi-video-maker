@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Minion Prince evolution motion scenes</title>
+<script>
+// Official Supercell Fan Kit art (tools/fankit.py fetch projects/mp-evolution/fankit.json).
+// Drawn scaled, moved and faded only, never altered, per the Fan Content Policy.
+// The Dark Orb is not in the Fan Kit, so it is drawn here instead.
+window.ART = Object.fromEntries([
+  'prince_a', 'prince_b', 'prince_c', 'prince_d', 'th9', 'eq_henchman', 'minion', 'skin_wwe', 'skin_darkdays', 'skin_frost',
+  'skin_desert', 'skin_lny', 'skin_league', 'titan_prince', 'king', 'queen', 'warden', 'champion',
+].map(n => [n, `fankit/${n}.png`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+const DUSK = { mid: '#3A3FB0', top: '#141650', bottom: '#05061A', rayColor: 'rgba(170,180,255,0.10)' };
+const float = (t, k = 0, amp = 10, speed = 1.6) => Math.sin(t * speed + k) * amp;
+const finish = ctx => vignette(ctx, 0.62);
+function ambient(ctx, t, bg = {}, sp = {}) { background(ctx, t, bg); sparks(ctx, t, sp); }
+
+function yearStamp(ctx, t, t0, label, year, y = 290) {
+  const k = t < t0 ? 0 : lerp(2.4, 1, ease.outBack(prog(t, t0, 0.35), 2));
+  if (k <= 0) return;
+  withT(ctx, W / 2, y, k, -0.03, () => {
+    if (label) pill(ctx, label, 0, -125, 44, [C.gold, C.goldLo], C.ink);
+    title(ctx, year, 0, 0, 190, { fill: [C.white, C.goldHi, C.gold] });
+  });
+}
+
+function levelBadge(ctx, x, y, s, lvl, rot = 0.06) {
+  withT(ctx, x, y, s, rot, () => {
+    chunky(ctx, rectPath(-190, -82, 380, 164, 40), C.purple, C.purpleLo, { lw: 12, y0: -82, y1: 82 });
+    title(ctx, `LV ${lvl}`, 0, 4, 98, { fill: [C.white, C.goldHi, C.gold] });
+  });
+}
+
+// A row of stone wall blocks along y.
+function wall(ctx, y, s = 1) {
+  for (let i = -1; i < 9; i++) {
+    withT(ctx, i * 140 + 70, y, s, 0, () => {
+      chunky(ctx, rectPath(-62, -70, 124, 120, 12), '#B7BFCF', C.stoneLo, { lw: 8, y0: -70, y1: 50 });
+      chunky(ctx, rectPath(-70, -92, 140, 34, 8), '#D5DBE6', '#8E97AB', { lw: 8, y0: -92, y1: -58 });
+    });
+  }
+}
+
+// The Dark Orb, drawn: a swirling purple-black sphere.
+function darkOrb(ctx, t, r = 80) {
+  glow(ctx, 0, 0, r * 2.2, '170,90,255', 0.6);
+  const g = ctx.createRadialGradient(-r * 0.3, -r * 0.35, r * 0.1, 0, 0, r);
+  g.addColorStop(0, '#E6CCFF'); g.addColorStop(0.35, '#8A3FE0'); g.addColorStop(1, '#1A0636');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+  ctx.save(); ctx.clip();
+  ctx.strokeStyle = 'rgba(255,220,255,0.35)'; ctx.lineWidth = r * 0.12;
+  for (let i = 0; i < 3; i++) {
+    ctx.beginPath(); ctx.ellipse(0, 0, r * 0.9, r * 0.35, t * 2 + i * 1.05, 0, Math.PI * 2); ctx.stroke();
+  }
+  ctx.restore();
+  ctx.lineWidth = 8; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.stroke();
+}
+
+window.scenes = [
+  // 0 — Hook: flies over every wall; joined two years ago; already level 100.
+  (ctx, t, dur) => {
+    const tWall = when('wall', 0, 1.0), tTwo = when('two', 0, 2.6), t100 = when('100', 0, 5.3), tMP = when('minion', 0, 6.5);
+    const [sx, sy] = shakeAt(t, t100 + 0.2, 26, 4);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { ...DUSK, cy: 760 }, { color: '190,170,255', rise: 90 });
+    wall(ctx, 1150, 1);
+    // He swoops in from the left, over the wall, and hovers.
+    const k = ease.outCubic(prog(t, 0.0, 1.2));
+    const x = lerp(-300, W / 2, k), y = lerp(1100, 760, k) - Math.sin(k * Math.PI) * 220 + float(t, 0, 14, 2.4);
+    glow(ctx, x, y, 480, '170,150,255', 0.5 * k);
+    art(ctx, 'prince_b', x, y, 640, { shadow: false });
+    withT(ctx, W / 2, 175, pop(t, tWall - 0.2, 0.4), 0, () => pill(ctx, 'FLIES OVER EVERY WALL', 0, 0, 44, [C.gold, C.goldLo], C.ink));
+    withT(ctx, 230, 470, pop(t, tTwo - 0.1, 0.4), -0.08, () => pill(ctx, 'ONLY 2 YEARS OLD', 0, 0, 44, [C.red, '#A51515']));
+    if (t > t100 - 0.6) {
+      const lvl = Math.round(lerp(1, 100, ease.outCubic(prog(t, t100 - 0.6, 0.7))));
+      const s = pop(t, t100 - 0.6, 0.35) * (t > t100 + 0.2 ? lerp(1.4, 1, ease.outBack(prog(t, t100 + 0.2, 0.35))) : 1);
+      levelBadge(ctx, 820, 470, s, lvl);
+    }
+    ring(ctx, t, t100 + 0.2, 820, 470, { maxR: 700 });
+    burst(ctx, t, t100 + 0.2, 820, 470, { n: 60, speed: 1100 });
+    flash(ctx, t, t100 + 0.2, { peak: 0.5, color: '230,220,255' });
+    withT(ctx, W / 2, 300, pop(t, tMP - 0.2, 0.45), 0, () => title(ctx, 'MINION PRINCE', 0, 0, 112));
+    finish(ctx);
+  },
+
+  // 1 — November 2024: the fifth hero, unlocking at Town Hall 9.
+  (ctx, t, dur) => {
+    const tMP = when('minion', 0, 2.1), tFifth = when('fifth', 0, 3.6), tTH = when('town', 0, 5.9);
+    const [sx, sy] = shakeAt(t, 0.15, 18, 5);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { mid: '#5A2BB0', top: '#22104A', bottom: '#0A0418', rayColor: 'rgba(210,170,255,0.09)', cy: 820 },
+            { color: '210,170,255' });
+    yearStamp(ctx, t, 0.0, 'NOVEMBER', '2024');
+    flash(ctx, t, 0.15, { peak: 0.45 });
+    const kp = ease.outBack(prog(t, tMP - 0.2, 0.55), 1.2), side = ease.inOutCubic(prog(t, tTH - 0.4, 0.5));
+    if (kp > 0) art(ctx, 'prince_a', lerp(W / 2, 760, side), lerp(1600, 820, kp) + float(t, 0, 12, 2.4), lerp(640, 560, side), { shadow: false });
+    withT(ctx, W / 2, 1215, pop(t, tFifth - 0.1, 0.45), 0, () => pill(ctx, 'THE FIFTH HERO', 0, 0, 58, [C.red, '#A51515']));
+    const kt = ease.outBack(prog(t, tTH - 0.3, 0.55), 1.2);
+    if (kt > 0) {
+      art(ctx, 'th9', lerp(-300, 290, kt), 860, 380);
+      withT(ctx, 290, 1090, pop(t, tTH, 0.4), 0, () => pill(ctx, 'UNLOCKS AT TH9', 0, 0, 40, [C.gold, C.goldLo], C.ink));
+    }
+    burst(ctx, t, tTH - 0.3, 290, 860, { n: 30, speed: 600 });
+    finish(ctx);
+  },
+
+  // 2 — Flying, ranged, blasts from above; Hero Equipment: Dark Orb and Henchmen Puppet.
+  (ctx, t, dur) => {
+    const tFly = when('flying', 0, 0.4), tBlast = when('blasts', 0, 2.1), tHero = when('hero', 1, 5.0);  // 2nd 'hero' = Hero Equipment
+    const tOrb = when('dark', 0, 6.5), tPuppet = when('henchmen', 0, 7.7);
+    ambient(ctx, t, { ...DUSK, cy: 820 }, { color: '190,170,255', rise: 110 });
+    const toEq = ease.inOutCubic(prog(t, tHero - 0.3, 0.5));
+    // Part 1: hovering prince firing bolts down at the ground.
+    if (toEq < 1) {
+      ctx.save(); ctx.globalAlpha = 1 - toEq;
+      withT(ctx, W / 2, 200, pop(t, tFly - 0.2, 0.4), 0, () => pill(ctx, 'FLYING  •  RANGED', 0, 0, 46, [C.gold, C.goldLo], C.ink));
+      wall(ctx, 1180, 0.9);
+      const px = W / 2 + Math.sin(t * 1.2) * 120, py = 620 + float(t, 0, 16, 2.4);
+      for (let n = 0; n < 6; n++) {
+        const t0 = tBlast + n * 0.4, k = prog(t, t0, 0.3);
+        if (k <= 0) continue;
+        const tx = 180 + ((n * 197) % 720), ty = 1090;
+        if (k < 1) {
+          ctx.strokeStyle = 'rgba(200,150,255,0.9)'; ctx.lineWidth = 16; ctx.lineCap = 'round';
+          ctx.beginPath(); ctx.moveTo(px, py + 120); ctx.lineTo(lerp(px, tx, k), lerp(py + 120, ty, k)); ctx.stroke();
+        }
+        burst(ctx, t, t0 + 0.3, tx, ty, { n: 26, speed: 500, life: 0.6, color: '200,150,255', seed: 60 + n });
+        ring(ctx, t, t0 + 0.3, tx, ty, { maxR: 150, life: 0.5, color: '200,150,255', width: 10 });
+      }
+      for (let i = 0; i < 2; i++) art(ctx, 'minion', px + (i ? 300 : -300), py + 80 + float(t, i * 2, 14, 3), 200, { shadow: false, flip: i === 1 });
+      art(ctx, 'prince_c', px, py, 560, { shadow: false });
+      ctx.restore();
+    }
+    // Part 2: equipment cards.
+    if (toEq > 0) {
+      withT(ctx, W / 2, 330, pop(t, tHero - 0.1, 0.45), 0, () => title(ctx, 'HERO EQUIPMENT', 0, 0, 104));
+      const cards = [['DARK ORB', 300, tOrb, [C.purpleHi, C.purple]], ['HENCHMEN PUPPET', 780, tPuppet, ['#7BD3FF', '#2370B8']]];
+      cards.forEach(([label, x, t0, col], i) => {
+        const k = pop(t, t0 - 0.1, 0.45);
+        if (k <= 0) return;
+        withT(ctx, x, 820 + float(t, i, 8, 2.2), k * (t > t0 && t < t0 + 0.9 ? 1.06 : 1), (i ? 1 : -1) * 0.03, () => {
+          chunky(ctx, rectPath(-220, -260, 440, 520, 40), col[0], col[1], { lw: 14, y0: -260, y1: 260 });
+          if (i === 0) withT(ctx, 0, -40, 1, 0, () => darkOrb(ctx, t, 120));
+          else art(ctx, 'eq_henchman', 0, -40, 300, { shadow: false });
+          title(ctx, label, 0, 200, 40, { fill: C.white, lw: 9 });
+        });
+        burst(ctx, t, t0 - 0.1, x, 820, { n: 30, speed: 600, color: i ? '150,210,255' : '200,150,255', seed: 70 + i });
+      });
+      withT(ctx, W / 2, 1215, pop(t, tHero + 0.2, 0.4) * toEq, 0, () => pill(ctx, 'HIS OWN FROM DAY ONE', 0, 0, 50, [C.red, '#A51515']));
+    }
+    finish(ctx);
+  },
+
+  // 3 — A whole wardrobe of skins.
+  (ctx, t, dur) => {
+    const tWard = when('wardrobe', 0, 1.8);
+    ambient(ctx, t, { mid: '#6A2FC0', top: '#26104E', bottom: '#0A0418', cy: 760 }, {});
+    withT(ctx, W / 2, 230, pop(t, 0, 0.45), 0, () => title(ctx, 'HIS SKINS', 0, 0, 140));
+    withT(ctx, W / 2, 380, pop(t, tWard - 0.1, 0.4), 0.03, () => pill(ctx, 'A WHOLE WARDROBE', 0, 0, 48, [C.red, '#A51515']));
+    const skins = [['skin_desert', 195, 680], ['skin_lny', 540, 660], ['skin_frost', 885, 680],
+                   ['skin_darkdays', 195, 1060], ['skin_league', 540, 1080], ['skin_wwe', 885, 1060]];
+    skins.forEach(([name, x, y], i) => {
+      const t0 = 0.3 + i * 0.28, k = pop(t, t0, 0.45);
+      if (k <= 0) return;
+      art(ctx, name, x, y + float(t, i, 8, 2), 330 * k, { shadow: false });
+      burst(ctx, t, t0, x, y, { n: 18, speed: 420, life: 0.5, seed: 30 + i, size: 7 });
+    });
+    finish(ctx);
+  },
+
+  // 4 — TH19 cap 100: above the Warden (90) and Champion (60), behind only the King and Queen (115).
+  (ctx, t, dur) => {
+    const t100 = when('100', 0, 2.1), tW = when('warden', 0, 3.7), tC = when('champion', 0, 4.4);
+    const tK = when('king', 0, 6.3), tQ = when('queen', 0, 6.6);
+    ambient(ctx, t, { ...DUSK, cy: 820 }, { color: '190,170,255', rise: 90 });
+    withT(ctx, W / 2, 210, pop(t, 0, 0.45), 0, () => title(ctx, 'TH19 MAX LEVELS', 0, 0, 110));
+    const rows = [['king', 'KING', 115, tK - 0.2, '#B9AFC9', '#6C6280'], ['queen', 'QUEEN', 115, tQ - 0.2, '#B9AFC9', '#6C6280'],
+                  ['prince_a', 'MINION PRINCE', 100, t100 - 0.2, C.goldHi, C.orange],
+                  ['warden', 'WARDEN', 90, tW - 0.2, '#B9AFC9', '#6C6280'], ['champion', 'CHAMPION', 60, tC - 0.2, '#B9AFC9', '#6C6280']];
+    const x0 = 250, maxW = 610;
+    rows.forEach(([name, label, lvl, t0, c0, c1], i) => {
+      const y = 400 + i * 165, g = ease.outCubic(prog(t, t0, 0.6)), a = pop(t, t0 - 0.1, 0.4);
+      if (a <= 0) return;
+      const prince = name === 'prince_a';
+      if (prince) glow(ctx, x0 + maxW * 0.45, y, 420, '255,210,110', 0.45);
+      art(ctx, name, 140, y, 150 * a, { shadow: false, flip: name === 'queen' });
+      const w = maxW * (lvl / 115) * g;
+      if (w > 4) chunky(ctx, rectPath(x0, y - 42, w, 84, 22), c0, c1, { lw: 9, y0: y - 42, y1: y + 42 });
+      title(ctx, label, x0 + 22, y, 36, { fill: C.white, lw: 7, align: 'left', alpha: g });
+      title(ctx, `${Math.round(lvl * g)}`, x0 + w + 70, y + 2, 64, { fill: prince ? [C.white, C.goldHi, C.gold] : C.white, lw: 9 });
+    });
+    burst(ctx, t, t100 + 0.4, x0 + maxW * (100 / 115), 730, { n: 50, speed: 900 });
+    flash(ctx, t, t100 + 0.4, { peak: 0.4, color: '255,240,200' });
+    finish(ctx);
+  },
+
+  // 5 — The Titan skin.
+  (ctx, t, dur) => {
+    const tTitan = when('titan', 0, 1.4);
+    const [sx, sy] = shakeAt(t, tTitan, 24, 4);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { mid: '#4A2E9E', top: '#1C0E48', bottom: '#080416', rayColor: 'rgba(200,170,255,0.15)', cy: 780 },
+            { color: '210,180,255', rise: 120, n: 110 });
+    withT(ctx, W / 2, 190, pop(t, 0, 0.4), 0, () => pill(ctx, 'THIS SEASON', 0, 0, 46, [C.white, '#D8D8D8'], C.ink));
+    const kk = ease.outBack(prog(t, 0.2, 0.7), 1.2);
+    glow(ctx, W / 2, 800, 600, '200,170,255', 0.6 * kk);
+    if (kk > 0) art(ctx, 'titan_prince', W / 2, lerp(1700, 820, kk) + float(t), 820);
+    const kt = t < tTitan ? 0 : lerp(2.4, 1, ease.outBack(prog(t, tTitan, 0.35), 2));
+    if (kt > 0) withT(ctx, W / 2, 330, kt, 0, () => title(ctx, 'TITAN PRINCE', 0, 0, 132, { fill: [C.white, C.goldHi, C.gold] }));
+    ring(ctx, t, tTitan, W / 2, 800, { maxR: 800 });
+    burst(ctx, t, tTitan, W / 2, 800, { n: 80, speed: 1300, color: '220,200,255' });
+    flash(ctx, t, tTitan, { peak: 0.7, color: '240,230,255' });
+    withT(ctx, W / 2, 1215, pop(t, tTitan + 0.3, 0.4), 0, () => pill(ctx, 'NEW SKIN', 0, 0, 58, [C.red, '#A51515']));
+    finish(ctx);
+  },
+
+  // 6 — Outro: can the youngest hero beat the King and Queen?
+  (ctx, t, dur) => {
+    const tYoung = when('youngest', 0, 0.9), tKing = when('king', 0, 2.0), tComments = when('comments', 0, 3.7);
+    const [sx, sy] = shakeAt(t, tKing + 0.3, 20, 5);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { mid: '#7A2340', top: '#2E0A18', bottom: '#0E0308', rayColor: 'rgba(255,190,140,0.10)' }, {});
+    withT(ctx, W / 2, 230, pop(t, tYoung - 0.3, 0.45), 0, () => title(ctx, 'YOUNGEST VS', 0, -60, 104));
+    withT(ctx, W / 2, 230, pop(t, tKing - 0.2, 0.45), 0, () => title(ctx, 'THE ORIGINALS', 0, 60, 104, { fill: [C.white, C.goldHi] }));
+    const kp = ease.outBack(prog(t, tYoung - 0.2, 0.5), 1.3);
+    if (kp > 0) { glow(ctx, 270, 800, 360, '170,150,255', 0.5 * kp); art(ctx, 'prince_d', lerp(-300, 270, kp), 800 + float(t, 0, 14, 2.4), 560, { shadow: false }); }
+    const kk = ease.outBack(prog(t, tKing - 0.2, 0.5), 1.3);
+    if (kk > 0) {
+      glow(ctx, 820, 800, 380, '255,190,110', 0.5 * kk);
+      art(ctx, 'queen', lerp(1400, 900, kk), 800 + float(t, 2), 470, { flip: true });
+      art(ctx, 'king', lerp(1400, 740, kk), 830 + float(t, 3), 480);
+    }
+    const kv = t < tKing + 0.3 ? 0 : lerp(2.6, 1, ease.outBack(prog(t, tKing + 0.3, 0.35), 2));
+    if (kv > 0) withT(ctx, W / 2 - 20, 820, kv, -0.08, () => { glow(ctx, 0, 0, 200, '255,220,120', 0.7); title(ctx, 'VS', 0, 0, 160, { fill: [C.white, C.goldHi, C.red] }); });
+    burst(ctx, t, tKing + 0.3, W / 2, 820, { n: 60, speed: 1000 });
+    flash(ctx, t, tKing + 0.3, { peak: 0.5 });
+    withT(ctx, W / 2, 1215, pop(t, tComments - 0.2, 0.45), 0, () => pill(ctx, 'TELL ME IN THE COMMENTS', 0, 0, 50, [C.red, '#A51515']));
+    finish(ctx);
+  },
+];
+</script>
+</body>
+</html>

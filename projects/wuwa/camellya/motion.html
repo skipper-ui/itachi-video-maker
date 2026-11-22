@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who is Camellya? motion scenes</title>
+<script>
+// Official Kuro Games art (see presskit/SOURCE.txt), cropped only and credited.
+window.ART = Object.fromEntries(['splash_v', 'card_full', 'card_face', 'battle', 'appearance', 'report_top', 'starpath']
+  .map(n => [n, `presskit/${n}.jpg`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/wuwa/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+// Camellya's palette: crimson and bone white instead of the series lavender.
+const RED = ['#FFFFFF', '#FFD9DE', '#FF6B7F'];
+const RGLOW = 'rgba(255,50,80,0.9)';
+const rplate = (ctx, str, x, y, t, t0, size = 44) =>
+  plate(ctx, str, x, y, t, t0, size, { border: 'rgba(255,140,160,0.9)', bg: 'rgba(40,4,12,0.68)', color: '#FFEFF1' });
+const rserif = (ctx, str, x, y, size, opts = {}) => serif(ctx, str, x, y, size, { fill: RED, glowColor: RGLOW, ...opts });
+
+function crimson(ctx, { wash = 0.14 } = {}) {
+  ctx.fillStyle = `rgba(90,0,20,${wash})`; ctx.fillRect(0, 0, W, H);
+  vignette(ctx, 0.75);
+  credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+}
+
+// Falling camellia petals.
+function redPetals(ctx, t, { n = 22, seed = 5, speed = 80, alpha = 1 } = {}) {
+  const r = rng(seed);
+  for (let i = 0; i < n; i++) {
+    const x0 = r() * W, y0 = r() * H, sz = 12 + r() * 18, sp = 0.5 + r(), ph = r() * 6.28;
+    const x = x0 + Math.sin(t * 0.8 + ph) * 70, y = ((y0 + t * speed * sp) % (H + 100)) - 50;
+    withT(ctx, x, y, 1, t * (0.7 + r()) + ph, () => {
+      ctx.fillStyle = `rgba(${200 + 40 * r() | 0},${20 + 30 * r() | 0},${40 + 20 * r() | 0},${alpha * (0.55 + 0.35 * Math.sin(t * 2 + ph) ** 2)})`;
+      ctx.beginPath(); ctx.ellipse(0, 0, sz, sz * 0.55, 0, 0, Math.PI * 2); ctx.fill();
+    });
+  }
+}
+
+// A camellia: five round petals around a gold centre.
+function camellia(ctx, x, y, s, rot = 0) {
+  withT(ctx, x, y, s, rot, () => {
+    glow(ctx, 0, 0, 90, '255,40,70', 0.45);
+    for (let i = 0; i < 5; i++) {
+      const a = (i / 5) * Math.PI * 2;
+      ctx.fillStyle = i % 2 ? '#C8102E' : '#E0243F';
+      ctx.beginPath(); ctx.ellipse(Math.cos(a) * 26, Math.sin(a) * 26, 30, 24, a, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = '#9A0A22'; ctx.beginPath(); ctx.arc(0, 0, 18, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#FFD27A'; ctx.beginPath(); ctx.arc(0, 0, 8, 0, Math.PI * 2); ctx.fill();
+  });
+}
+
+// A thorny vine growing along a curve from (x0,y0) toward (x1,y1); k = growth 0..1.
+function vine(ctx, k, x0, y0, cx, cy, x1, y1, w = 14) {
+  if (k <= 0) return;
+  const pt = u => [(1 - u) ** 2 * x0 + 2 * (1 - u) * u * cx + u * u * x1, (1 - u) ** 2 * y0 + 2 * (1 - u) * u * cy + u * u * y1];
+  ctx.save();
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = '#3A0710'; ctx.lineWidth = w + 6;
+  ctx.shadowColor = 'rgba(255,40,70,0.6)'; ctx.shadowBlur = 18;
+  ctx.beginPath(); ctx.moveTo(x0, y0);
+  const N = 40;
+  for (let i = 1; i <= N * k; i++) { const [x, y] = pt(i / N); ctx.lineTo(x, y); }
+  ctx.stroke();
+  ctx.shadowBlur = 0; ctx.strokeStyle = '#8E1028'; ctx.lineWidth = w * 0.5; ctx.stroke();
+  // thorns
+  ctx.fillStyle = '#2A050C';
+  for (let i = 3; i < N * k; i += 4) {
+    const [x, y] = pt(i / N), [xa, ya] = pt((i + 1) / N);
+    const a = Math.atan2(ya - y, xa - x) + (i % 8 ? 1 : -1) * Math.PI / 2;
+    ctx.beginPath(); ctx.moveTo(x + Math.cos(a + 1.3) * 7, y + Math.sin(a + 1.3) * 7);
+    ctx.lineTo(x + Math.cos(a) * 24, y + Math.sin(a) * 24); ctx.lineTo(x + Math.cos(a - 1.3) * 7, y + Math.sin(a - 1.3) * 7); ctx.fill();
+  }
+  ctx.restore();
+}
+
+// Art in a rounded frame with a crimson border.
+function framed(ctx, name, x, y, w, h, { alpha = 1, r = 34, border = 'rgba(255,150,170,0.9)' } = {}) {
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.shadowColor = 'rgba(0,0,0,0.7)'; ctx.shadowBlur = 50;
+  ctx.fillStyle = '#000'; ctx.fill(rectPath(x, y, w, h, r));
+  ctx.shadowBlur = 0;
+  ctx.save(); ctx.clip(rectPath(x, y, w, h, r));
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, x, y, w, h);
+  ctx.restore();
+  ctx.lineWidth = 5; ctx.strokeStyle = border; ctx.stroke(rectPath(x, y, w, h, r));
+  ctx.restore();
+}
+
+// Blurred, darkened full-frame backdrop of an image.
+function backdrop(ctx, name, t, dur, fx = 0.5, fy = 0.5, dark = 0.45) {
+  cover(ctx, name, t, dur, [fx, fy, 1.25], [fx, fy, 1.35], { filter: 'blur(18px) saturate(1.2)' });
+  ctx.fillStyle = `rgba(20,0,6,${dark})`; ctx.fillRect(0, 0, W, H);
+}
+
+function badge(ctx, t, t0, x, y, label, col, r = 80) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    glow(ctx, 0, 0, r * 1.8, col, 0.5 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = 'rgba(30,4,10,0.78)';
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 6; ctx.strokeStyle = `rgb(${col})`; ctx.stroke();
+    serif(ctx, label, 0, 4, r * 0.42, { fill: ['#FFFFFF', `rgb(${col})`], glowColor: `rgba(${col},0.9)` });
+  });
+  ring(ctx, t, t0, x, y, { maxR: r * 3, life: 0.6, color: col, width: 10 });
+}
+
+window.scenes = [
+  // 0 — Hanging upside down in the vines. Prey, or predator? This is Camellya.
+  (ctx, t, dur) => {
+    const tPrey = when('prey', 0, 3.3), tPred = when('predator', 0, 4.4), tCam = when('camellya', 0, 5.9), tBloom = when('bloom', 0, 7.0);
+    cover(ctx, 'splash_v', t, dur, [0.42, 0.86, 2.1], [0.5, 0.55, 1.12]);
+    redPetals(ctx, t, { n: 18 });
+    crimson(ctx, { wash: 0.06 });
+    const fadeQ = 1 - prog(t, tCam - 0.4, 0.4);
+    if (t > tPrey - 0.2) rserif(ctx, 'Prey,', W / 2, 330, 120, { italic: true, alpha: fadeQ * ease.outCubic(prog(t, tPrey - 0.2, 0.5)) });
+    if (t > tPred - 0.2) rserif(ctx, 'or predator?', W / 2, 470, 120, { italic: true, alpha: fadeQ * ease.outCubic(prog(t, tPred - 0.2, 0.5)) });
+    const kc = prog(t, tCam - 0.2, 0.6);
+    if (kc > 0) {
+      ctx.fillStyle = `rgba(255,60,90,${0.35 * (1 - kc)})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, W / 2, 330, lerp(1.25, 1, ease.outCubic(kc)), 0, () => rserif(ctx, 'CAMELLYA', 0, 0, 150, { alpha: ease.outCubic(kc) }));
+    }
+    if (t > tBloom - 0.3) rplate(ctx, 'BLOOM BEARER · BLACK SHORES', W / 2, 480, t, tBloom - 0.3, 40);
+  },
+
+  // 1 — The recruiter with a shockingly low approval rate.
+  (ctx, t, dur) => {
+    const tRec = when('recruits', 0, 1.3), tAppr = when('approval', 0, 2.8), tLow = when('low', 0, 4.3), tFail = when('fail', 0, 5.7), tRare = when('rarely', 0, 6.8);
+    cover(ctx, 'card_full', t, dur, [0.5, 0.36, 1.02], [0.5, 0.42, 1.1]);
+    redPetals(ctx, t, { n: 12, seed: 9, alpha: 0.8 });
+    crimson(ctx);
+    if (t > tRec - 0.3) rplate(ctx, 'THE RECRUITER', W / 2, 200, t, tRec - 0.3, 46);
+    // Approval meter that drains on "shockingly low".
+    const gone = 1 - prog(t, tFail - 0.4, 0.35);
+    const km = ease.outCubic(prog(t, tAppr - 0.3, 0.5)) * gone;
+    if (km > 0) {
+      ctx.save(); ctx.globalAlpha = km;
+      const x = 190, y = 960, w = 700, h = 44;
+      ctx.fillStyle = 'rgba(30,4,10,0.75)'; ctx.fill(rectPath(x - 20, y - 70, w + 40, h + 100, 26));
+      ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(255,150,170,0.8)'; ctx.stroke(rectPath(x - 20, y - 70, w + 40, h + 100, 26));
+      ctx.font = `bold 34px ${SERIF}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#FFE3E8';
+      if ('letterSpacing' in ctx) ctx.letterSpacing = '5px';
+      ctx.fillText('APPROVAL RATE', x, y - 34);
+      const fill = lerp(0.92, 0.04, ease.inOutCubic(prog(t, tLow - 0.6, 0.9)));
+      ctx.fillStyle = 'rgba(255,255,255,0.12)'; ctx.fill(rectPath(x, y, w, h, h / 2));
+      const g = ctx.createLinearGradient(x, 0, x + w, 0);
+      g.addColorStop(0, '#FF3355'); g.addColorStop(1, '#FF9AAA');
+      ctx.fillStyle = g; ctx.fill(rectPath(x, y, Math.max(h, w * fill), h, h / 2));
+      ctx.restore();
+    }
+    if (t > tLow - 0.1 && gone > 0) {
+      const k = pop(t, tLow - 0.1, 0.45);
+      withT(ctx, W / 2, 1140, k, -0.04, () => rserif(ctx, 'SHOCKINGLY LOW', 0, 0, 74, { alpha: gone }));
+      ring(ctx, t, tLow - 0.1, W / 2, 1140, { maxR: 420, life: 0.6, color: '255,70,100', width: 10 });
+    }
+    if (t > tFail - 0.2) rplate(ctx, 'FAIL HER TRIAL...', W / 2, 1060, t, tFail - 0.2, 40);
+    if (t > tRare - 0.2) rserif(ctx, '...and you rarely come back', W / 2, 1180, 56, { italic: true, alpha: ease.outCubic(prog(t, tRare - 0.2, 0.5)) });
+  },
+
+  // 2 — Hard to please: "Wasting time on boring people should be a crime."
+  (ctx, t, dur) => {
+    const tLose = when('loses', 0, 0.2), tWaste = when('wasting', 0, 3.7), tShould = when('should', 0, 5.4), tCrime = when('crime', 0, 5.8);
+    backdrop(ctx, 'card_full', t, dur, 0.5, 0.35, 0.5);
+    redPetals(ctx, t, { n: 14, seed: 21, alpha: 0.7 });
+    // Round portrait (the official card's circle; clipping also hides its corner logo).
+    const k = ease.outBack(prog(t, 0, 0.6)), cx = W / 2, cy = 740, R = 420;
+    withT(ctx, cx, cy, k, 0, () => {
+      glow(ctx, 0, 0, R * 1.35, '255,40,70', 0.35 + 0.1 * Math.sin(t * 3));
+      ctx.save(); ctx.beginPath(); ctx.arc(0, 0, R, 0, Math.PI * 2); ctx.clip();
+      const s = (2 * R / 940) * (1.06 + 0.04 * t / dur), img = ARTS.card_face.img;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(img, -490 * s, -540 * s, img.width * s, img.height * s);
+      ctx.restore();
+      ctx.lineWidth = 8; ctx.strokeStyle = 'rgba(255,170,185,0.95)';
+      ctx.beginPath(); ctx.arc(0, 0, R, 0, Math.PI * 2); ctx.stroke();
+    });
+    crimson(ctx, { wash: 0.05 });
+    if (t > tLose - 0.2) rplate(ctx, 'HARD TO PLEASE', W / 2, 1215, t, tLose - 0.2, 44);
+    if (t > tWaste - 0.3) rserif(ctx, '“Wasting time on boring people', W / 2, 160, 60, { italic: true, alpha: ease.outCubic(prog(t, tWaste - 0.3, 0.5)) });
+    if (t > tShould - 0.3) rserif(ctx, 'should be a crime.”', W / 2, 250, 60, { italic: true, alpha: ease.outCubic(prog(t, tShould - 0.3, 0.5)) });
+    flash(ctx, t, tCrime, { color: '255,60,90', peak: 0.25 });
+  },
+
+  // 3 — Resonance unleashed: red, vines, flowers bursting everywhere.
+  (ctx, t, dur) => {
+    const tUn = when('unleashes', 0, 0.4), tRed = when('red', 0, 3.4), tVines = when('vines', 0, 4.5), tBurst = when('burst', 0, 5.7);
+    const [sx, sy] = shakeAt(t, tBurst, 16, 4);
+    ctx.save(); ctx.translate(sx, sy);
+    backdrop(ctx, 'battle', t, dur, 0.5, 0.4, 0.4);
+    framed(ctx, 'battle', 40, 330, 1000, 770);
+    // Red surge over everything from "red".
+    const kr = ease.inOutCubic(prog(t, tRed - 0.4, 0.8));
+    if (kr > 0) {
+      ctx.save(); ctx.globalCompositeOperation = 'soft-light';
+      ctx.fillStyle = `rgba(255,0,40,${0.75 * kr})`; ctx.fillRect(-50, -50, W + 100, H + 100);
+      ctx.restore();
+      glow(ctx, 640, 520, 520, '255,30,60', 0.35 * kr);
+    }
+    // Vines crawl in from the edges.
+    const kv = t2 => ease.outCubic(prog(t, tVines - 0.3 + t2, 1.4));
+    vine(ctx, kv(0), -40, 1250, 260, 900, 470, 1080);
+    vine(ctx, kv(0.1), W + 40, 1240, 820, 950, 660, 1100);
+    vine(ctx, kv(0.2), -40, 180, 200, 420, 120, 640, 12);
+    vine(ctx, kv(0.25), W + 40, 200, 860, 380, 980, 620, 12);
+    // Camellias burst out in every direction.
+    const r = rng(42);
+    for (let i = 0; i < 16; i++) {
+      const a = (i / 16) * Math.PI * 2 + r() * 0.3, dist = 560 + r() * 200, d0 = r() * 0.25;
+      const kb = ease.outCubic(prog(t, tBurst - 0.15 + d0, 0.9));
+      if (kb <= 0) continue;
+      const rr = lerp(430, dist, kb);  // emerge at the frame's edge and fly outward, clear of her face
+      camellia(ctx, 540 + Math.cos(a) * rr, 715 + Math.sin(a) * rr * 0.95, 0.5 + 0.7 * kb * (0.6 + r() * 0.6), a + t);
+    }
+    ring(ctx, t, tBurst - 0.1, 540, 715, { maxR: 900, life: 0.7, color: '255,60,90', width: 20 });
+    redPetals(ctx, t, { n: 24, seed: 3, speed: 140, alpha: kr });
+    ctx.restore();
+    crimson(ctx, { wash: 0.04 });
+    if (t > tUn - 0.3) rplate(ctx, 'RESONANCE UNLEASHED', W / 2, 200, t, tUn - 0.3, 44);
+    if (t > tRed - 0.2) {
+      const k = pop(t, tRed - 0.2, 0.45);
+      withT(ctx, W / 2, 1200, k, 0, () => rserif(ctx, 'vivid red', 0, 0, 86, { italic: true }));
+    }
+  },
+
+  // 4 — Her official file: birthplace unknown, suspected Artificial Resonator, report sealed.
+  (ctx, t, dur) => {
+    const tSecret = when('secret', 0, 1.8), tBirth = when('birthplace', 0, 2.7), tSusp = when('suspected', 0, 5.1), tSeal = when('sealed', 0, 8.7);
+    ctx.fillStyle = vgrad(ctx, 0, H, [[0, '#2A0309'], [0.5, '#12020A'], [1, '#050003']]);
+    ctx.fillRect(-60, -60, W + 120, H + 120);
+    redPetals(ctx, t, { n: 10, seed: 13, alpha: 0.5 });
+    // Camera keyframes over the report (image coords): whole page -> Birthplace -> the red note -> whole page.
+    const keys = [[0, 495, 610, 0.98], [tBirth - 0.3, 495, 610, 0.98], [tBirth + 0.4, 250, 600, 1.85],
+                  [tSusp - 0.4, 250, 600, 1.85], [tSusp + 0.4, 705, 1125, 1.9], [tSeal - 0.6, 705, 1125, 1.9], [tSeal - 0.1, 495, 610, 0.98]];
+    let fx = 495, fy = 610, s = 0.98;
+    for (let i = 1; i < keys.length; i++) {
+      const [ta, xa, ya, sa] = keys[i - 1], [tb, xb, yb, sb] = keys[i];
+      if (t >= ta) { const k = ease.inOutCubic(prog(t, ta, Math.max(0.01, tb - ta))); fx = lerp(xa, xb, k); fy = lerp(ya, yb, k); s = lerp(sa, sb, k); }
+    }
+    const [sx, sy] = shakeAt(t, tSeal, 18, 5);
+    const kIn = ease.outCubic(prog(t, 0, 0.6));
+    ctx.save();
+    ctx.translate(W / 2 + sx, 680 + sy + (1 - kIn) * 200); ctx.rotate(-0.02); ctx.scale(s, s); ctx.translate(-fx, -fy);
+    ctx.globalAlpha = kIn;
+    ctx.shadowColor = 'rgba(0,0,0,0.8)'; ctx.shadowBlur = 60;
+    ctx.fillStyle = '#EEE'; ctx.fillRect(0, 0, 990, 1220);
+    ctx.shadowBlur = 0; ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(ARTS.report_top.img, 0, 0);
+    // Highlights.
+    const hb = prog(t, tBirth - 0.1, 0.4) * (1 - prog(t, tSusp - 0.3, 0.3));
+    if (hb > 0) { ctx.lineWidth = 6; ctx.strokeStyle = `rgba(220,20,50,${hb})`; ctx.stroke(rectPath(64, 540, 400, 110, 14)); }
+    const hs = prog(t, tSusp, 0.4) * (1 - prog(t, tSeal - 0.6, 0.3));
+    if (hs > 0) { ctx.lineWidth = 6; ctx.strokeStyle = `rgba(220,20,50,${hs})`; ctx.stroke(rectPath(478, 1068, 470, 125, 14)); }
+    ctx.restore();
+    vignette(ctx, 0.6);
+    credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+    if (t > tSecret - 0.3 && t < tBirth) rplate(ctx, 'HER OFFICIAL FILE', W / 2, 1220, t, tSecret - 0.3, 42);
+    // SEALED stamp.
+    const ks = prog(t, tSeal - 0.15, 0.25);
+    if (ks > 0) {
+      withT(ctx, W / 2, 700, lerp(2.2, 1, ease.outCubic(ks)), -0.18, () => {
+        ctx.globalAlpha = Math.min(1, ks * 1.5);
+        ctx.lineWidth = 14; ctx.strokeStyle = '#D0102E'; ctx.stroke(rectPath(-330, -95, 660, 190, 20));
+        ctx.font = `900 130px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#D0102E';
+        if ('letterSpacing' in ctx) ctx.letterSpacing = '14px';
+        ctx.fillText('SEALED', 0, 8);
+      });
+    }
+  },
+
+  // 5 — Five-star Havoc sword user; back in 3.8 on Starpath Reverbs until December 21st.
+  (ctx, t, dur) => {
+    const tStar = when('fivestar', 0, 0.5), tHavoc = when('havoc', 0, 1.2), tSword = when('sword', 0, 1.5), tVer = when('version', 0, 2.9),
+          tPath = when('starpath', 0, 5.6), tDec = when('december', 0, 7.9);
+    backdrop(ctx, 'appearance', t, dur, 0.5, 0.3, 0.35);
+    const out = prog(t, tVer - 0.3, 0.6);
+    // Part 1: her art with stat badges.
+    if (out < 1) {
+      ctx.save(); ctx.globalAlpha = 1 - out;
+      framed(ctx, 'appearance', 40, 230, 1000, 768);
+      ctx.restore();
+      ctx.save(); ctx.globalAlpha = 1 - out;
+      for (let i = 0; i < 5; i++) {
+        const k = pop(t, tStar - 0.2 + i * 0.07, 0.4);
+        if (k > 0) withT(ctx, W / 2 + (i - 2) * 92, 1070, k, 0, () => {
+          glow(ctx, 0, 0, 60, '255,210,120', 0.6);
+          ctx.fillStyle = '#FFD27A'; ctx.fill(starPath(38, 16));
+          ctx.lineWidth = 3; ctx.strokeStyle = '#7A4A10'; ctx.stroke(starPath(38, 16));
+        });
+      }
+      badge(ctx, t, tHavoc - 0.2, W / 2 - 170, 1200, 'HAVOC', '220,60,110', 74);
+      badge(ctx, t, tSword - 0.1, W / 2 + 170, 1200, 'SWORD', '255,200,200', 74);
+      ctx.restore();
+    }
+    // Part 2: the Version 3.8 banner she's on.
+    if (t > tVer - 0.3) {
+      const k = ease.outCubic(prog(t, tVer - 0.1, 0.7));
+      framed(ctx, 'starpath', 70 + (1 - k) * 900, 400, 940, 520, { alpha: k });
+      rplate(ctx, 'VERSION 3.8', W / 2, 250, t, tVer - 0.2, 46);
+      if (t > tPath - 0.3) rplate(ctx, 'STARPATH REVERBS II', W / 2, 1020, t, tPath - 0.3, 40);
+      if (t > tDec - 0.3) {
+        const kd = pop(t, tDec - 0.3, 0.45);
+        withT(ctx, W / 2, 1170, kd, -0.03, () => rserif(ctx, 'until Dec 21', 0, 0, 80, { italic: true }));
+      }
+    }
+    crimson(ctx, { wash: 0.05 });
+  },
+
+  // 6 — Outro: would you pass her trial?
+  (ctx, t, dur) => {
+    const tPass = when('pass', 0, 0.8), tTrial = when('trial', 0, 1.7), tComments = when('comments', 0, 3.1);
+    cover(ctx, 'splash_v', t, dur, [0.5, 0.6, 1.15], [0.48, 0.7, 1.3]);
+    redPetals(ctx, t, { n: 20, seed: 31 });
+    crimson(ctx, { wash: 0.1 });
+    if (t > tPass - 0.3) rserif(ctx, 'Would you pass', W / 2, 270, 100, { italic: true, alpha: ease.outCubic(prog(t, tPass - 0.3, 0.6)) });
+    if (t > tTrial - 0.3) rserif(ctx, 'her trial?', W / 2, 390, 100, { italic: true, alpha: ease.outCubic(prog(t, tTrial - 0.3, 0.6)) });
+    if (t > tComments - 0.3) rplate(ctx, 'TELL ME IN THE COMMENTS', W / 2, 1190, t, tComments - 0.3, 38);
+  },
+];
+</script>
+</body>
+</html>

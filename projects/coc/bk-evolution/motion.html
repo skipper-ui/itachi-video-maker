@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Barbarian King evolution motion scenes</title>
+<script>
+// Official Supercell Fan Kit art (tools/fankit.py fetch projects/bk-evolution/fankit.json).
+// Drawn scaled and moved only, never altered, per the Fan Content Policy.
+window.ART = Object.fromEntries([
+  'king_classic', 'king_2013', 'king_army', 'king_pose', 'skin_gladiator', 'skin_party', 'skin_pekka',
+  'skin_ghost', 'skin_pirate', 'skin_clockwork', 'eq_puppet', 'eq_rage', 'eq_boots', 'eq_vampstache',
+  'titan_king', 'th19', 'barbarian',
+].map(n => [n, `fankit/${n}.png`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+const WARM = { mid: '#B5541A', top: '#4A1A08', bottom: '#140502', rayColor: 'rgba(255,220,140,0.11)' };
+const float = (t, k = 0, amp = 10, speed = 1.6) => Math.sin(t * speed + k) * amp;
+const finish = ctx => vignette(ctx, 0.62);
+function ambient(ctx, t, bg = {}, sp = {}) { background(ctx, t, bg); sparks(ctx, t, sp); }
+
+// Big year stamp with a small label above it, e.g. "JANUARY" / "2013".
+function yearStamp(ctx, t, t0, label, year, y = 300) {
+  const k = t < t0 ? 0 : lerp(2.4, 1, ease.outBack(prog(t, t0, 0.35), 2));
+  if (k <= 0) return;
+  withT(ctx, W / 2, y, k, -0.03, () => {
+    if (label) pill(ctx, label, 0, -125, 44, [C.gold, C.goldLo], C.ink);
+    title(ctx, year, 0, 0, 190, { fill: [C.white, C.goldHi, C.gold] });
+  });
+}
+
+// Level badge: purple plate with "LV n".
+function levelBadge(ctx, x, y, s, lvl, rot = 0.06) {
+  withT(ctx, x, y, s, rot, () => {
+    chunky(ctx, rectPath(-175, -82, 350, 164, 40), C.purple, C.purpleLo, { lw: 12, y0: -82, y1: 82 });
+    title(ctx, `LV ${lvl}`, 0, 4, 98, { fill: [C.white, C.goldHi, C.gold] });
+  });
+}
+
+window.scenes = [
+  // 0 — Hook: "...smashing bases for almost fourteen years ... from level 30 to level 115."
+  (ctx, t, dur) => {
+    const t14 = when('fourteen', 0, 1.7), tBK = when('barbarian', 0, 4.0), t30 = when('30', 0, 5.7), t115 = when('115', 0, 6.6);
+    const [sx, sy] = shakeAt(t, t115 + 0.3, 26, 4);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { ...WARM, cy: 760 }, { color: '255,190,90', rise: 90 });
+
+    const kk = ease.outBack(prog(t, 0.0, 0.7), 1.2);
+    glow(ctx, W / 2, 780, 560, '255,200,110', 0.5 * kk);
+    if (kk > 0) art(ctx, 'king_classic', W / 2 + lerp(-500, 0, kk), 800 + float(t), 780);
+    burst(ctx, t, 0.2, W / 2, 800, { n: 30, speed: 700 });
+
+    withT(ctx, W / 2, 175, pop(t, t14 - 0.1, 0.4), 0, () => pill(ctx, '14 YEARS OF SMASHING', 0, 0, 46, [C.gold, C.goldLo], C.ink));
+    withT(ctx, W / 2, 300, pop(t, tBK - 0.2, 0.45), 0, () => title(ctx, 'BARBARIAN KING', 0, 0, 104));
+
+    if (t > t30 - 0.15) {
+      const roll = ease.outCubic(prog(t, t115 - 0.1, 0.4));
+      const lvl = Math.round(lerp(30, 115, roll));
+      const s = pop(t, t30 - 0.15, 0.4) * (t > t115 + 0.3 ? lerp(1.4, 1, ease.outBack(prog(t, t115 + 0.3, 0.35))) : 1);
+      levelBadge(ctx, 830, 560, s, lvl);
+    }
+    ring(ctx, t, t115 + 0.3, 830, 560, { maxR: 700 });
+    burst(ctx, t, t115 + 0.3, 830, 560, { n: 60, speed: 1100 });
+    flash(ctx, t, t115 + 0.3, { peak: 0.55, color: '255,230,170' });
+    finish(ctx);
+  },
+
+  // 1 — January 2013: one of the first two heroes, with just 30 levels.
+  (ctx, t, dur) => {
+    const tFirst = when('first', 0, 4.1), tBK = when('barbarian', 0, 5.4), t30 = when('30', 0, 7.3);
+    const [sx, sy] = shakeAt(t, 0.15, 18, 5);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { mid: '#3E6A2E', top: '#16300E', bottom: '#060E04', rayColor: 'rgba(220,255,160,0.08)', cy: 820 },
+            { color: '220,255,170' });
+    yearStamp(ctx, t, 0.0, 'JANUARY', '2013');
+    flash(ctx, t, 0.15, { peak: 0.45 });
+
+    const kk = ease.outBack(prog(t, 0.9, 0.7), 1.2);
+    glow(ctx, W / 2, 830, 520, '220,255,160', 0.4 * kk);
+    if (kk > 0) art(ctx, 'king_2013', W / 2, lerp(1700, 840, kk) + float(t), 700);
+    withT(ctx, W / 2, 1215, pop(t, tFirst - 0.1, 0.45), 0, () => pill(ctx, 'ONE OF THE FIRST 2 HEROES', 0, 0, 54, [C.red, '#A51515']));
+    if (t > tBK - 0.2) withT(ctx, 230, 610, pop(t, t30 - 0.1, 0.4), -0.1, () => {
+      chunky(ctx, rectPath(-150, -70, 300, 140, 34), C.purple, C.purpleLo, { lw: 10, y0: -70, y1: 70 });
+      title(ctx, 'MAX 30', 0, 4, 74, { fill: [C.white, C.goldHi] });
+    });
+    burst(ctx, t, t30, 230, 610, { n: 30, speed: 600 });
+    finish(ctx);
+  },
+
+  // 2 — Iron Fist: rage, heal, summon barbarians.
+  (ctx, t, dur) => {
+    const tIron = when('iron', 0, 1.5), tRage = when('rage', 0, 3.7), tHeal = when('healed', 0, 4.3), tSum = when('summoned', 0, 5.2);
+    const [sx, sy] = shakeAt(t, tIron + 0.1, 24, 5);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { mid: '#A01E3A', top: '#3E0818', bottom: '#120208', rayColor: 'rgba(255,120,160,0.10)', cy: 800 },
+            { color: '255,120,170', rise: 120 });
+    withT(ctx, W / 2, 180, pop(t, 0, 0.4), 0, () => pill(ctx, 'HIS SIGNATURE MOVE', 0, 0, 44, [C.gold, C.goldLo], C.ink));
+    const ki = t < tIron ? 0 : lerp(2.4, 1, ease.outBack(prog(t, tIron, 0.35), 2));
+    if (ki > 0) withT(ctx, W / 2, 320, ki, 0, () => title(ctx, 'IRON FIST', 0, 0, 170, { fill: ['#FFD6E8', '#FF5C9A', '#C2185B'] }));
+    flash(ctx, t, tIron + 0.1, { peak: 0.5, color: '255,150,200' });
+
+    // Rage aura pulses behind the King once the rage kicks in.
+    const rage = prog(t, tRage - 0.2, 0.4);
+    if (rage > 0) {
+      glow(ctx, W / 2, 820, 520 + Math.sin(t * 10) * 30, '255,60,140', 0.55 * rage);
+      ring(ctx, t, tRage, W / 2, 820, { maxR: 600, color: '255,90,170' });
+    }
+    art(ctx, 'king_army', W / 2 + Math.sin(t * 30) * 4 * rage, 830 + float(t), 720);
+    // Healing: green plus signs float up.
+    if (t > tHeal) {
+      const r = rng(9);
+      for (let i = 0; i < 8; i++) {
+        const t0 = tHeal + i * 0.12, k = prog(t, t0, 1.1);
+        if (k <= 0 || k >= 1) continue;
+        const x = W / 2 + (r() - 0.5) * 520, y = 900 - k * 380;
+        withT(ctx, x, y, 0.9 + r() * 0.5, 0, () => title(ctx, '+', 0, 0, 90, { fill: ['#C8FFC8', C.green], alpha: 1 - k }));
+      }
+    }
+    // Summoned barbarians leap in from both sides.
+    for (let i = 0; i < 4; i++) {
+      const k = ease.outBack(prog(t, tSum + i * 0.12, 0.45), 1.4);
+      if (k <= 0) continue;
+      const side = i % 2 ? 1 : -1, row = Math.floor(i / 2);
+      const x = W / 2 + side * lerp(700, 330 - row * 70, k), y = 1010 + row * 70 - Math.sin(k * Math.PI) * 120;
+      art(ctx, 'barbarian', x, y, 300, { flip: side > 0 });
+    }
+    finish(ctx);
+  },
+
+  // 3 — 2019: first skin, Gladiator King; dozens since, from Party King to P.E.K.K.A King.
+  (ctx, t, dur) => {
+    const tGlad = when('gladiator', 0, 2.7), tDozens = when('dozens', 0, 5.1), tParty = when('party', 0, 6.1), tPekka = when('pekka', 0, 7.1);
+    ambient(ctx, t, { mid: '#5A2BB0', top: '#22104A', bottom: '#0A0418', cy: 760 }, {});
+    yearStamp(ctx, t, 0.0, 'FIRST SKIN', '2019', 280);
+
+    const move = ease.inOutCubic(prog(t, tDozens - 0.2, 0.6));
+    const kg = ease.outBack(prog(t, tGlad - 0.3, 0.55), 1.3);
+    if (kg > 0) {
+      const x = lerp(W / 2, 540, move), y = lerp(800, 700, move), h = lerp(720, 400, move);
+      glow(ctx, x, y, h * 0.75, '255,210,120', 0.5 * kg * (1 - move * 0.5));
+      art(ctx, 'skin_gladiator', x, y + float(t), h * kg);
+      if (move < 1) withT(ctx, W / 2, 1215, kg * (1 - move), 0, () => pill(ctx, 'GLADIATOR KING', 0, 0, 58, [C.gold, C.goldLo], C.ink));
+    }
+    flash(ctx, t, tGlad - 0.3, { peak: 0.35 });
+    // The skin wall fills in around him.
+    const skins = [['skin_party', 195, 720, tParty], ['skin_pekka', 885, 720, tPekka], ['skin_ghost', 195, 1085, tDozens + 0.2],
+                   ['skin_pirate', 540, 1100, tDozens + 0.35], ['skin_clockwork', 885, 1085, tDozens + 0.5]];
+    skins.forEach(([name, x, y, t0], i) => {
+      const k = pop(t, t0, 0.45);
+      if (k <= 0) return;
+      const big = (name === 'skin_party' && t > tParty && t < tParty + 0.8) || (name === 'skin_pekka' && t > tPekka);
+      art(ctx, name, x, y + float(t, i, 8, 2), 330 * k * (big ? 1.12 : 1));
+      burst(ctx, t, t0, x, y, { n: 18, speed: 420, life: 0.5, seed: 30 + i, size: 7 });
+    });
+    if (t > tDozens) withT(ctx, W / 2, 470, pop(t, tDozens, 0.4), 0.03, () => pill(ctx, 'DOZENS OF SKINS', 0, 0, 48, [C.red, '#A51515']));
+    finish(ctx);
+  },
+
+  // 4 — Late 2023: Iron Fist split into Hero Equipment (Barbarian Puppet, Rage Vial).
+  (ctx, t, dur) => {
+    const tIron = when('iron', 0, 1.7), tSplit = when('split', 0, 2.5), tHero = when('hero', 0, 3.2);
+    const tPuppet = when('puppet', 0, 5.4), tRage = when('rage', 0, 6.0);
+    const [sx, sy] = shakeAt(t, tSplit, 22, 5);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { mid: '#1E4A8A', top: '#0E1A44', bottom: '#050818', rayColor: 'rgba(140,190,255,0.08)', cy: 800 },
+            { color: '170,210,255' });
+    yearStamp(ctx, t, 0.0, 'LATE', '2023', 280);
+
+    // "IRON FIST" cracks in half on "split".
+    if (t > tIron - 0.2 && t < tHero + 0.4) {
+      const k = pop(t, tIron - 0.2, 0.35), sp = ease.outCubic(prog(t, tSplit, 0.5)), fade = 1 - prog(t, tHero, 0.4);
+      ctx.save(); ctx.globalAlpha = fade;
+      const pink = { fill: ['#FFD6E8', '#FF5C9A', '#C2185B'] };
+      if (sp <= 0) withT(ctx, W / 2, 720, k, 0, () => title(ctx, 'IRON FIST', 0, 0, 150, pink));
+      else {
+        // The two words break apart and tumble outward.
+        withT(ctx, W / 2 - 190 - sp * 170, 720 + sp * 90, 1, -sp * 0.35, () => title(ctx, 'IRON', 0, 0, 150, pink));
+        withT(ctx, W / 2 + 190 + sp * 170, 720 + sp * 90, 1, sp * 0.35, () => title(ctx, 'FIST', 0, 0, 150, pink));
+      }
+      ctx.restore();
+    }
+    burst(ctx, t, tSplit, W / 2, 720, { n: 50, speed: 900, color: '255,150,200' });
+    withT(ctx, W / 2, 520, pop(t, tHero - 0.1, 0.45), 0, () => title(ctx, 'HERO EQUIPMENT', 0, 0, 104));
+
+    const items = [['eq_puppet', 'BARBARIAN PUPPET', 300, 800, tPuppet, [C.orange, '#B85A0B']],
+                   ['eq_rage', 'RAGE VIAL', 780, 800, tRage, ['#C77DFF', '#7B2CBF']],
+                   ['eq_boots', 'EARTHQUAKE BOOTS', 300, 1110, tHero + 0.5, ['#7BC6FF', '#2370B8']],
+                   ['eq_vampstache', 'VAMPSTACHE', 780, 1110, tHero + 0.7, ['#FF8A8A', '#B81E1E']]];
+    items.forEach(([name, label, x, y, t0, col], i) => {
+      const k = pop(t, t0, 0.45);
+      if (k <= 0) return;
+      const hl = (i < 2 && t > t0 && t < t0 + 0.9) ? 1.08 : 1;
+      withT(ctx, x, y + float(t, i, 6, 2.2), k * hl, (i % 2 ? 1 : -1) * 0.03, () => {
+        chunky(ctx, rectPath(-200, -150, 400, 300, 34), col[0], col[1], { lw: 12, y0: -150, y1: 150 });
+        art(ctx, name, 0, -22, 190, { shadow: false });
+        title(ctx, label, 0, 112, 34, { fill: C.white, lw: 8 });
+      });
+    });
+    finish(ctx);
+  },
+
+  // 5 — Level cap: 95 (2023), 100 (TH17), 115 (TH19).
+  (ctx, t, dur) => {
+    const t95 = when('95', 0, 2.5), t100 = when('100', 0, 4.7), t115 = when('115', 0, 7.5);
+    const [sx, sy] = shakeAt(t, t115 + 0.25, 26, 4);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { ...WARM, cy: 900 }, { color: '255,190,90', rise: 90 });
+    withT(ctx, W / 2, 210, pop(t, 0, 0.45), 0, () => title(ctx, 'LEVEL CAP', 0, 0, 140));
+
+    const bars = [['2013', 30, -1], ['2023', 95, t95], ['TH17', 100, t100], ['TH19', 115, t115]];
+    const base = 1180, maxH = 720, bw = 170;
+    bars.forEach(([label, lvl, t0], i) => {
+      const g = t0 < 0 ? ease.outCubic(prog(t, 0.2, 0.6)) : ease.outBack(prog(t, t0 - 0.1, 0.55), 1.2);
+      if (g <= 0) return;
+      const x = 195 + i * 230, h = maxH * (lvl / 115) * g;
+      const top = i === 3 ? [C.goldHi, C.orange] : i === 0 ? ['#B9AFC9', '#6C6280'] : [C.gold, C.goldLo];
+      if (i === 3 && t > t115) glow(ctx, x, base - h, 260, '255,220,120', 0.7);
+      chunky(ctx, rectPath(x - bw / 2, base - h, bw, h, 18), top[0], top[1], { lw: 10, y0: base - h, y1: base });
+      title(ctx, `${Math.round(lvl * Math.min(1, g))}`, x, base - h - 55, 70, { fill: [C.white, C.goldHi] });
+      title(ctx, label, x, base + 45, 40, { fill: C.white, lw: 8 });
+    });
+    // The King stands proudly next to the new max.
+    const kk = ease.outBack(prog(t, t115 + 0.1, 0.5), 1.3);
+    if (kk > 0) art(ctx, 'king_pose', 160, 770 + float(t), 330 * kk);
+    ring(ctx, t, t115 + 0.25, 885, 470, { maxR: 650 });
+    burst(ctx, t, t115 + 0.25, 885, 470, { n: 60, speed: 1100 });
+    flash(ctx, t, t115 + 0.25, { peak: 0.5, color: '255,230,170' });
+    finish(ctx);
+  },
+
+  // 6 — The golden Titan skin.
+  (ctx, t, dur) => {
+    const tTitan = when('titan', 0, 2.4);
+    const [sx, sy] = shakeAt(t, tTitan, 24, 4);
+    ctx.translate(sx, sy);
+    ambient(ctx, t, { mid: '#C88A10', top: '#5A3A04', bottom: '#1A0E00', rayColor: 'rgba(255,240,170,0.16)', cy: 780 },
+            { color: '255,225,130', rise: 120, n: 110 });
+    withT(ctx, W / 2, 190, pop(t, 0, 0.4), 0, () => pill(ctx, 'THIS SEASON', 0, 0, 46, [C.white, '#D8D8D8'], C.ink));
+    const kk = ease.outBack(prog(t, 0.3, 0.8), 1.2);
+    glow(ctx, W / 2, 800, 600, '255,230,140', 0.6 * kk);
+    if (kk > 0) art(ctx, 'titan_king', W / 2, lerp(1700, 820, kk) + float(t), 820);
+    const kt = t < tTitan ? 0 : lerp(2.4, 1, ease.outBack(prog(t, tTitan, 0.35), 2));
+    if (kt > 0) withT(ctx, W / 2, 330, kt, 0, () => title(ctx, 'TITAN KING', 0, 0, 160, { fill: [C.white, C.goldHi, C.gold] }));
+    ring(ctx, t, tTitan, W / 2, 800, { maxR: 800 });
+    burst(ctx, t, tTitan, W / 2, 800, { n: 80, speed: 1300 });
+    flash(ctx, t, tTitan, { peak: 0.75, color: '255,240,190' });
+    withT(ctx, W / 2, 1215, pop(t, tTitan + 0.3, 0.4), 0, () => pill(ctx, 'NEW SKIN', 0, 0, 58, [C.red, '#A51515']));
+    finish(ctx);
+  },
+
+  // 7 — Outro: which skin is your favorite?
+  (ctx, t, dur) => {
+    const tFav = when('favorite', 0, 1.5), tComments = when('comments', 0, 2.9);
+    ambient(ctx, t, { mid: '#5A2BB0', top: '#22104A', bottom: '#0A0418' }, {});
+    withT(ctx, W / 2, 260, pop(t, 0.0, 0.45), 0, () => title(ctx, 'YOUR FAVORITE', 0, -70, 110));
+    withT(ctx, W / 2, 260, pop(t, 0.15, 0.45), 0, () => title(ctx, 'KING SKIN?', 0, 60, 110, { fill: [C.white, C.goldHi] }));
+    const lineup = [['skin_gladiator', 170, 640], ['skin_party', 400, 600], ['titan_king', 650, 600], ['skin_pekka', 900, 640],
+                    ['skin_ghost', 260, 980], ['skin_pirate', 540, 1000], ['skin_clockwork', 820, 980]];
+    lineup.forEach(([name, x, y], i) => {
+      const k = pop(t, 0.2 + i * 0.1, 0.4);
+      if (k <= 0) return;
+      const hl = t > tFav && Math.floor((t - tFav) * 4) % lineup.length === i ? 1.12 : 1;
+      art(ctx, name, x, y + float(t, i, 8, 2.4), 330 * k * hl);
+    });
+    withT(ctx, W / 2, 1215, pop(t, tComments - 0.2, 0.45), 0, () => pill(ctx, 'TELL ME IN THE COMMENTS', 0, 0, 50, [C.red, '#A51515']));
+    burst(ctx, t, tComments, W / 2, 1215, { n: 40, speed: 700 });
+    finish(ctx);
+  },
+];
+</script>
+</body>
+</html>
