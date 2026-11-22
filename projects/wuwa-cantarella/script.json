@@ -1,0 +1,250 @@
+{
+  "title": "Who is Cantarella? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Cantarella",
+    "Bane",
+    "Fisalia",
+    "wicked",
+    "pure",
+    "Porto-Veno",
+    "Castle",
+    "poisonous",
+    "flowers",
+    "garden",
+    "octopus",
+    "scones",
+    "Jellyrose",
+    "juice",
+    "toxins",
+    "order",
+    "Medusa",
+    "Tacet",
+    "Mark",
+    "tongue",
+    "throat",
+    "hallucinogen",
+    "jellyfish",
+    "parasol",
+    "illusions",
+    "five-star",
+    "Havoc",
+    "Violaca"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#B9A6FF",
+    "keyword": "#7FE6FF",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 2310 'Profile Reveal | Sea of Dreams — Cantarella': the current head of Fisalia, Cantarella, the Bane; resides in a crown-like castle atop the mountain where illusory dreams flow like streams. Quote: 'Whether I am the Bane of the wicked or the pure is yours to decide.' Attribute Havoc, Weapon Rectifier, 5 stars",
+    "Official news 2311 'Post-Lament Anthropocene: Stars Intertwined | Cantarella' lore images: Laying the Groundwork (Porto-Veno Castle perched on cliffs; poisonous flowers thrive; unwelcome visitors always end up lost in the garden); Unconventional Desserts (octopus scones with an eerie blue glow, Jellyrose juice; the toxins secreted from the tip of her tongue neutralize the toxins, but only if consumed in a specific order: 'Eat them in the correct order, or... bad things could happen.'); A Brand on the Tongue (she has tasted poisonous Jellyrose Medusa and blue-ringed octopus; a Tacet Mark runs from the tip of her tongue down to her throat); Resonance Evaluation Report (a rare form of hallucinogenic toxin; when swarms of jellyfish emerge from her parasol, an exquisite sea of illusions forms around her); Coral Parasol (violence has never been her first choice); Thoughts ('Can I mix you a jug of Violaca juice? It soothes nerves and eases fatigue.')",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "Whether she's the Bane of the wicked or of the pure is yours to decide. This is Cantarella, head of the Fisalia family, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "bane",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "decide",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "deep_rise",
+          "word": "cantarella",
+          "offset": -0.4,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "She lives in Porto-Veno Castle, high on the cliffs. Poisonous flowers thrive there, and unwelcome visitors always get lost in the garden.",
+      "sfx": [
+        {
+          "sound": "rumble",
+          "word": "portoveno",
+          "offset": -0.3,
+          "volume": 0.3
+        },
+        {
+          "sound": "swish",
+          "word": "poisonous",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "lost",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Her desserts? Glowing octopus scones and Jellyrose juice. Her own toxins neutralize them, but only if you eat them in the right order.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "desserts",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "scones",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "pop",
+          "word": "juice",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "swell_soft",
+          "word": "neutralize",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "order",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "She's tasted poisonous Medusa and blue-ringed octopus. Now a Tacet Mark runs from the tip of her tongue, down to her throat.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "medusa",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "octopus",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "mark",
+          "offset": -0.4,
+          "volume": 0.45
+        },
+        {
+          "sound": "swish",
+          "word": "throat",
+          "offset": -0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "Her poison is a rare hallucinogen. Jellyfish swarm from her parasol, and her enemies drift into a sea of illusions.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "hallucinogen",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "jellyfish",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "swell_soft",
+          "word": "parasol",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "sea",
+          "offset": -0.5,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Havoc Resonator. And if you look tired, she'll gladly mix you a jug of Violaca juice.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "havoc",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "tired",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "pop",
+          "word": "violaca",
+          "offset": -0.2,
+          "volume": 0.16
+        }
+      ]
+    },
+    {
+      "narration": "So, would you drink Cantarella's juice? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "juice",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
