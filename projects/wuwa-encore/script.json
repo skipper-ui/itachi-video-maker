@@ -1,0 +1,253 @@
+{
+  "title": "Who is Encore? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Encore",
+    "Black",
+    "Shores",
+    "Woolies",
+    "Cosmos",
+    "Cloudy",
+    "knight",
+    "princess",
+    "courage",
+    "shooting",
+    "star",
+    "sausage",
+    "omelet",
+    "burnt",
+    "flowers",
+    "world",
+    "rides",
+    "Liberation",
+    "wool",
+    "horns",
+    "mom",
+    "hug",
+    "five-star",
+    "Fusion"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#FF8FB8",
+    "keyword": "#FFD27A",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 714 'Profile Reveal: Consultant from the Black Shores — Encore': a quirky girl always with a black and a white Wooly plushie named Cosmos and Cloudy. Key art quote: 'Hee-hee, Hi there! I'm Encore from the Black Shores! Wanna go on an adventure with me and my Woolies?' Affiliation Black Shores, Attribute Fusion, 5 stars",
+    "Official news 714 lore images: Wooly Pals (Cosmos is the knight in shining armor and can be short-tempered; Cloudy is the kind-hearted princess who often struggles to find its courage); Let's Make a Wish (she wished on a shooting star for sausage omelet rolls with two whole sausages; the next day breakfast really was that, though one was darker and a bit burnt); Watering Flowers or Saving the World? ('What's there to think about? Encore wants to ride all the rides!'); 'You're in for it now!' (during Resonance Liberation the ends of her hair take on the appearance of sheep's wool; sheep horns may appear near her emotional threshold); Wooly Dolls (gifted to Encore by her mother); Thoughts ('Mommy's not with me anymore, and they say Cosmos and Cloudy are just my imaginary friends... C-can you hug me a little?')",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "Hi there! I'm Encore from the Black Shores! Wanna go on an adventure with me and my Woolies? This is Encore, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.45
+        },
+        {
+          "sound": "pop",
+          "word": "hi",
+          "offset": 0.0,
+          "volume": 0.16
+        },
+        {
+          "sound": "swish",
+          "word": "adventure",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "encore",
+          "offset": -0.4,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "narration": "Her Woolies are Cosmos, a short-tempered knight in shining armor, and Cloudy, a kind-hearted princess still finding her courage.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "cosmos",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "thud",
+          "word": "shorttempered",
+          "offset": -0.1,
+          "volume": 0.25
+        },
+        {
+          "sound": "soft_hit",
+          "word": "cloudy",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "courage",
+          "offset": -0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "Once, she wished on a shooting star for sausage omelet rolls, with two whole sausages. The next morning, there they were. One was a little burnt.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "word": "shooting",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "pop",
+          "word": "two",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "swell_soft",
+          "word": "morning",
+          "offset": -0.5,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "burnt",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Watering flowers, or saving the world? Encore's answer: what's there to think about? She wants to ride all the rides!",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "watering",
+          "offset": 0.0,
+          "volume": 0.3
+        },
+        {
+          "sound": "soft_hit",
+          "word": "saving",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "swish",
+          "word": "think",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "pop",
+          "word": "rides",
+          "offset": -0.2,
+          "volume": 0.18
+        },
+        {
+          "sound": "deep_rise",
+          "word": "ride",
+          "offset": -0.4,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "In her Resonance Liberation, her hair turns fluffy like sheep's wool, and sheep horns can appear. You're in for it now!",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "word": "liberation",
+          "offset": -0.4,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "fluffy",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "horns",
+          "offset": -0.4,
+          "volume": 0.45
+        },
+        {
+          "sound": "impact",
+          "word": "now",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "But behind the smile: her Woolies were a gift from her mom. And in her dreams, she asks: can you hug me a little?",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "smile",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "swell_soft",
+          "word": "gift",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "hug",
+          "offset": -0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Fusion Resonator. So, would you give Encore a hug? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "fusion",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "swell_soft",
+          "word": "give",
+          "offset": -0.5,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    }
+  ]
+}
