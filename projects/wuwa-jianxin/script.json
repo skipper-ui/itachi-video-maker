@@ -1,0 +1,249 @@
+{
+  "title": "Who is Jianxin? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Jianxin",
+    "Fengyiquan",
+    "successor",
+    "sparring",
+    "secret",
+    "battle",
+    "escape",
+    "death",
+    "exorcise",
+    "demons",
+    "incantation",
+    "fists",
+    "whistle",
+    "leaf",
+    "hair",
+    "three",
+    "thousand",
+    "Chi",
+    "heat",
+    "flatbread",
+    "mountain",
+    "sect",
+    "five-star",
+    "Aero",
+    "spar"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#8FF0C8",
+    "keyword": "#FFE6A8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 666 'Profile Reveal: Cleansing Reflections — Jianxin': a Taoist monk and successor of Fengyiquan; harnesses environmental Chi. Key art quote: 'I am Jianxin, the successor of Fengyiquan. Thank you for your hospitality. Would you mind sparring with me?' Affiliation Jinzhou, Attribute Aero",
+    "Official news 666 lore images: Purity at Its Finest (her secret to conquering hardships and winning every battle: 'Just give it your all, and disregard the outcomes. Leave yourself no escape, and look death in the eye.'); Cleansing of Evil (asked to invoke an exorcism, she stammered and couldn't recall the incantation, then offered to help 'with martial arts'; after muffled groans, no more reports of demons); An Unique Performance (unable to find the perfect whistling leaf, she placed a strand of her hair between her lips and whistled a serene melody); A Different Approach (when cooking, she uses her Chi to adjust the heat); Protective Gear (practices every move three thousand times a day, regardless of the weather); Favorite Food (Guokui Flatbread; Master Shiling said she followed the scent of freshly made flatbread all the way up the mountain, and that's how she joined the sect)",
+    "Five-star rarity: per the game's character listing",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "I am Jianxin, successor of Fengyiquan. Would you mind sparring with me? This is Jianxin, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "successor",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "sparring",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "jianxin",
+          "offset": -0.4,
+          "volume": 0.55
+        }
+      ]
+    },
+    {
+      "narration": "Her secret to winning every battle? Give it your all, leave yourself no escape, and look death in the eye.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "secret",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "give",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "swish",
+          "word": "escape",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "deep_rise",
+          "word": "death",
+          "offset": -0.4,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "Once, someone begged her to exorcise demons. She forgot the incantation halfway, so she used her fists instead. No more demon reports since.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "exorcise",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "forgot",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "impact",
+          "word": "fists",
+          "offset": -0.15,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "no",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Her master taught her to whistle with a leaf. She couldn't find the right one, so she whistled with a strand of her own hair.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "whistle",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "couldnt",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "swell_soft",
+          "word": "hair",
+          "offset": -0.4,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "She practices every move three thousand times a day, in any weather. Even cooking is training: she uses her Chi to control the heat.",
+      "sfx": [
+        {
+          "sound": "tick",
+          "word": "three",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "soft_hit",
+          "word": "day",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "weather",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "soft_hit",
+          "word": "cooking",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "chi",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Her master jokes that as a child, she followed the scent of fresh flatbread all the way up the mountain, and that's how she joined the sect.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "jokes",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "swell_soft",
+          "word": "scent",
+          "offset": -0.4,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "flatbread",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "deep_rise",
+          "word": "sect",
+          "offset": -0.4,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "She's an Aero Resonator. So, would you spar with Jianxin? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "deep_rise",
+          "word": "aero",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "spar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    }
+  ]
+}
