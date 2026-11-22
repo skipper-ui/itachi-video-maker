@@ -138,3 +138,44 @@ function comicCredit(ctx) {
   ctx.fillText('Fan comic · Art: Supercell Fan Kit · Not endorsed by Supercell', W / 2, H - 40);
   ctx.restore();
 }
+
+// Jagged lightning bolt from (x0,y0) to (x1,y1); flickers by reseeding a few times a second.
+function bolt(ctx, t, x0, y0, x1, y1, { a = 1, seed = 1, w = 10, col = '150,210,255' } = {}) {
+  if (a <= 0) return;
+  const r = rng(seed * 97 + Math.floor(t * 14)), n = 9, pts = [[x0, y0]];
+  for (let i = 1; i < n; i++) {
+    const k = i / n, nx = -(y1 - y0), ny = x1 - x0, len = Math.hypot(nx, ny) || 1, off = (r() - 0.5) * Math.min(160, len * 0.25);
+    pts.push([lerp(x0, x1, k) + nx / len * off, lerp(y0, y1, k) + ny / len * off]);
+  }
+  pts.push([x1, y1]);
+  ctx.save(); ctx.globalAlpha *= a; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.shadowColor = `rgba(${col},1)`; ctx.shadowBlur = 30;
+  [[w * 2.6, `rgba(${col},0.55)`], [w * 1.2, INK], [w * 0.7, 'rgba(245,252,255,1)']].forEach(([lw, s]) => {
+    ctx.strokeStyle = s; ctx.lineWidth = lw; ctx.beginPath(); pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.stroke();
+  });
+  ctx.restore();
+}
+
+// Cartoon smoke puffs rising from (x, y), started at t0.
+function smoke(ctx, t, t0, x, y, { n = 6, size = 50, col = '90,90,90' } = {}) {
+  if (t < t0) return;
+  const r = rng(13);
+  for (let i = 0; i < n; i++) {
+    const k = ((t - t0) * 0.6 + i / n) % 1, dx = (r() - 0.5) * 120;
+    ctx.fillStyle = `rgba(${col},${0.75 * (1 - k)})`; ctx.strokeStyle = `rgba(20,16,12,${0.8 * (1 - k)})`; ctx.lineWidth = 5;
+    ctx.beginPath(); ctx.arc(x + dx + Math.sin(k * 6 + i) * 20, y - k * 260, size * (0.6 + k), 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  }
+}
+
+// A drawn arrow flying from (x0,y0) to (x1,y1) over [t0, t0+d].
+function arrowShot(ctx, t, t0, d, x0, y0, x1, y1) {
+  const k = prog(t, t0, d);
+  if (k <= 0) return;
+  const x = lerp(x0, x1, k), y = lerp(y0, y1, k), a = Math.atan2(y1 - y0, x1 - x0);
+  withT(ctx, x, y, 1, a, () => {
+    ctx.strokeStyle = INK; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(-110, 0); ctx.lineTo(30, 0); ctx.stroke();
+    ctx.strokeStyle = '#C8A06A'; ctx.lineWidth = 5; ctx.stroke();
+    ctx.fillStyle = '#B8C2CC'; ctx.strokeStyle = INK; ctx.lineWidth = 4; const head = polyPath([[30, -16], [62, 0], [30, 16]]); ctx.fill(head); ctx.stroke(head);
+    ctx.fillStyle = '#E04848'; const fl = polyPath([[-110, 0], [-130, -18], [-90, 0], [-130, 18]]); ctx.fill(fl); ctx.stroke(fl);
+  });
+}

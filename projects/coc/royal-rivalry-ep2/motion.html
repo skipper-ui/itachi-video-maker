@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Royal Rivalry, Episode 2</title>
+<script>
+// Official Supercell Fan Kit art (fankit.json), used under Supercell's Fan Content Policy.
+window.ART = Object.fromEntries(['king_point', 'king_charge', 'queen_aim', 'queen_leap', 'queen_stand', 'warden', 'bk_emote', 'aq_emote',
+  'barb_emote_set_3', 'barb_emote_set_4', 'goblin_07', 'bg_2026_hammerjam_backgroundonly', 'edrag_1', 'edrag_2', 'edrag_3',
+  'edrag_lvl10', 'edrag_emote', 'th19'].map(n => [n, `fankit/${n}.png`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/coc/comic.js"></script>
+</head>
+<body>
+<script>
+const BG = 'bg_2026_hammerjam_backgroundonly';
+const half = (tier, side, gap = 24) => { const [x, y, w, h] = tier, hw = (w - gap) / 2; return side ? [x + hw + gap, y, hw, h] : [x, y, hw, h]; };
+const storm = (c, x, y, w, h) => sky(c, x, y, w, h, '#0B1230', '#2C3A6E');
+
+window.scenes = [
+  // 0 — Previously: they fought over one goblin while something watched from the dark.
+  (ctx, t, dur) => {
+    const tWatch = when('watched', 0, 4.7);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#2A2E55', '#596494');
+      art(c, 'king_charge', x + 380, y + h - 330, 520, { shadow: false, rot: -0.35 });
+      art(c, 'queen_leap', x + 620, y + h - 330, 520, { shadow: false, rot: 0.4, flip: true });
+      for (let i = 0; i < 5; i++) { const a = t * 3 + i * 1.256; withT(c, x + 500 + Math.cos(a) * 160, y + h - 620 + Math.sin(a) * 40, 1, a, () => { c.fillStyle = '#FFE15A'; c.fill(starPath(28, 12)); c.lineWidth = 4; c.strokeStyle = INK; c.stroke(starPath(28, 12)); }); }
+      art(c, 'goblin_07', x + w - 170, y + h - 260, 380, { shadow: false });
+      withT(c, W / 2, y + 290, ease.outBack(prog(t, 0.1, 0.5)), -0.04, () => {
+        title(c, 'THE ROYAL RIVALRY', 0, -40, 70, { lw: 14 });
+        title(c, 'EPISODE 2', 0, 50, 54, { lw: 12, fill: ['#FFFFFF', '#BFE6FF', '#5EC8FF'] });
+      });
+    }, { from: 'none' });
+    capBox(ctx, t, 0.3, 60, 110, 'Previously...', { size: 40 });
+    panel(ctx, t, tWatch - 0.5, ...BOT, (c, x, y, w, h) => {
+      c.fillStyle = '#05030C'; c.fillRect(x, y, w, h);
+      const eo = ease.outCubic(prog(t, tWatch - 0.2, 0.5));
+      [[x + w / 2 - 130, y + h / 2], [x + w / 2 + 130, y + h / 2]].forEach(([ex, ey]) => { glow(c, ex, ey, 120, '120,200,255', 0.8 * eo); c.fillStyle = `rgba(190,235,255,${eo})`; c.beginPath(); c.ellipse(ex, ey, 70, 24 * eo + 1, 0, 0, Math.PI * 2); c.fill(); });
+    });
+    comicCredit(ctx);
+  },
+
+  // 1 — The eyes belonged to an Electro Dragon. Not in a good mood.
+  (ctx, t, dur) => {
+    const tED = when('electro', 0, 1.6), tMood = when('mood', 0, 4.3);
+    const [sx, sy] = shakeAt(t, tED, 22, 4);
+    paper(ctx, t);
+    ctx.save(); ctx.translate(sx, sy);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      storm(c, x, y, w, h);
+      if (t > tED - 0.2) speedLines(c, x, y, w, h, x + w / 2, y + h / 2, t, 'rgba(150,210,255,0.18)', 56);
+      const k = ease.outBack(prog(t, tED - 0.3, 0.6));
+      if (k > 0) art(c, 'edrag_1', x + w / 2 + 40, y + h / 2 + 60, 900 * k, { shadow: false });
+      bolt(c, t, x + 120, y, x + 260, y + 460, { a: prog(t, tED - 0.2, 0.2), seed: 1 });
+      bolt(c, t, x + w - 100, y, x + w - 240, y + 380, { a: prog(t, tED, 0.2), seed: 2 });
+      if (t > tED - 0.2) { flash(c, t, tED - 0.2, { color: '200,235,255', peak: 0.9, life: 0.4 }); sfxWord(c, t, tED - 0.1, 'KRA-KOOM!', x + w / 2, y + 170, 110, -0.1, ['#FFFFFF', '#BFE6FF', '#2E8BFF']); }
+    }, { from: 'none' });
+    ctx.restore();
+    if (t < tED - 0.3) capBox(ctx, t, 0, 60, 110, 'Those eyes belonged to...', { size: 40 });
+    panel(ctx, t, tMood - 0.5, ...BOT, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h / 2, t, '#BFE6FF', '#8FCBFF');
+      art(c, 'edrag_emote', x + 260, y + h / 2 + 20, 320, { shadow: false });
+      bubble(c, t, tMood - 0.2, x + 690, y + h / 2 - 20, 'GRRRZZZT!', x + 430, y + h / 2, { size: 54, shout: true });
+    });
+    comicCredit(ctx);
+  },
+
+  // 2 — Lightning leaps wall to wall, tower to tower.
+  (ctx, t, dur) => {
+    const hops = [when('wall', 0, 2.3), when('wall', 1, 2.8), when('tower', 0, 3.6), when('tower', 1, 4.1)];
+    paper(ctx, t);
+    const pts = [[540, 160], [300, 640], [700, 760], [430, 1010], [800, 1100]];
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      coverRect(c, BG, x, y, w, h, 0.5, 0.55, 1.4);
+      c.fillStyle = 'rgba(8,10,40,0.55)'; c.fillRect(x, y, w, h);
+      bolt(c, t, pts[0][0], y, pts[1][0], pts[1][1], { a: prog(t, 0.4, 0.2), seed: 3 });
+      hops.forEach((th, i) => {
+        if (t > th - 0.15) {
+          bolt(c, t, ...pts[i + 1], ...pts[Math.min(i + 2, pts.length - 1)], { a: 1 - 0.7 * prog(t, th + 0.6, 0.4), seed: 10 + i, w: 8 });
+          ring(c, t, th - 0.15, ...pts[i + 1], { maxR: 160, life: 0.5, color: '150,210,255', width: 10 });
+          sfxWord(c, t, th - 0.15, 'ZAP!', pts[i + 1][0] + 110, pts[i + 1][1] - 70, 64, -0.15 + i * 0.1, ['#FFFFFF', '#BFE6FF', '#2E8BFF']);
+        }
+      });
+    }, { from: 'none' });
+    panel(ctx, t, 0.3, ...BOT, (c, x, y, w, h) => {
+      storm(c, x, y, w, h);
+      art(c, 'edrag_2', x + lerp(w + 200, -200, prog(t, 0.3, dur)), y + h / 2 + 20, 330, { shadow: false });
+    });
+    comicCredit(ctx);
+  },
+
+  // 3 — The King charges: "This one is mine!" One step closer, a lot crispier.
+  (ctx, t, dur) => {
+    const tMine = when('mine', 0, 2.5), tCloser = when('closer', 0, 4.5), tCrisp = when('crispier', 0, 5.7);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      storm(c, x, y, w, h);
+      speedLines(c, x, y, w, h, x + w - 200, y + 300, t, 'rgba(255,220,140,0.15)');
+      art(c, 'edrag_1', x + w - 230, y + 290, 460, { shadow: false, flip: true });
+      art(c, 'king_charge', x + lerp(260, 380, ease.outCubic(prog(t, 0, tCloser))), y + h - 380, 700, { shadow: false });
+      bubble(c, t, tMine - 0.5, x + 330, y + 160, 'THIS ONE IS MINE!', x + 360, y + 380, { size: 52, shout: true, mw: 420 });
+      if (t > tCloser - 0.2) {
+        bolt(c, t, x + w - 330, y + 330, x + 400, y + h - 640, { a: 1 - 0.8 * prog(t, tCloser + 0.6, 0.4), seed: 5, w: 14 });
+        flash(c, t, tCloser - 0.2, { color: '200,235,255', peak: 0.9, life: 0.35 });
+        sfxWord(c, t, tCloser - 0.1, 'ZZZZT!', x + w / 2 + 120, y + h / 2 - 40, 110, 0.1, ['#FFFFFF', '#BFE6FF', '#2E8BFF']);
+      }
+    }, { from: 'none' });
+    panel(ctx, t, tCrisp - 0.5, ...BOT, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#FFD9A8', '#FFF1DE');
+      art(c, 'king_point', x + 250, y + h / 2 + 40, 340, { shadow: false });
+      smoke(c, t, tCrisp - 0.5, x + 260, y + 110, { n: 6, size: 30 });
+      bubble(c, t, tCrisp - 0.2, x + 680, y + h / 2, '*cough*', x + 420, y + h / 2 - 20, { size: 52 });
+    });
+    comicCredit(ctx);
+  },
+
+  // 4 — The Queen takes aim... misses the dragon, hits the King's helmet.
+  (ctx, t, dur) => {
+    const tAim = when('aim', 0, 0.8), tArrow = when('arrow', 0, 3.2), tMiss = when('missed', 0, 3.6), tHit = when('hit', 0, 5.0);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      storm(c, x, y, w, h);
+      const dodge = ease.outCubic(prog(t, tMiss - 0.2, 0.5));
+      art(c, 'edrag_2', x + w - 260 + dodge * 120, y + 290 - dodge * 160, 440, { shadow: false });
+      art(c, 'queen_aim', x + 360, y + h - 380, 720, { shadow: false });
+      bubble(c, t, tAim, x + 330, y + 150, "Let me show you how it's done.", x + 380, y + 360, { size: 44, mw: 420 });
+      arrowShot(c, t, tArrow - 0.1, 0.5, x + 560, y + h - 560, x + w + 120, y + 120);
+      if (t > tMiss) sfxWord(c, t, tMiss, 'WHOOSH!', x + w - 260, y + 520, 80, 0.1, ['#FFFFFF', '#E0E8FF', '#8C9BD9']);
+    }, { from: 'none' });
+    panel(ctx, t, tHit - 0.5, ...BOT, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#FFD9A8', '#FFF1DE');
+      art(c, 'king_point', x + 260, y + h / 2 + 40, 340, { shadow: false });
+      arrowShot(c, t, tHit - 0.3, 0.25, x + w + 80, y + 40, x + 330, y + 70);
+      if (t > tHit - 0.05) { sfxWord(c, t, tHit - 0.05, 'PLINK!', x + 470, y + 80, 70, -0.15, ['#FFFFFF', '#FFE15A', '#FF7A1E']); }
+      bubble(c, t, tHit + 0.3, x + 740, y + h / 2 + 20, 'HEY!!', x + 460, y + h / 2, { size: 64, shout: true });
+    });
+    comicCredit(ctx);
+  },
+
+  // 5 — While they argued, the dragon flew for the Town Hall, where the Warden stood alone.
+  (ctx, t, dur) => {
+    const tArg = when('argued', 0, 0.5), tFlew = when('flew', 0, 1.7), tTH = when('town', 0, 2.6), tWarden = when('warden', 0, 4.3), tAlone = when('alone', 0, 5.2);
+    paper(ctx, t);
+    const [lx, ly, lw, lh] = half(BOT, 0), [rx, ry, rw, rh] = half(BOT, 1);
+    panel(ctx, t, 0, lx, ly, lw, lh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h / 2, t, '#FFCF7A', '#FFB347');
+      art(c, 'bk_emote', x + w / 2, y + h / 2 + 40, 280, { shadow: false });
+      bubble(c, t, tArg - 0.2, x + w / 2, y + 70, 'YOUR fault!', x + w / 2, y + 140, { size: 34, shout: true });
+    }, { from: 'none' });
+    panel(ctx, t, 0, rx, ry, rw, rh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h / 2, t, '#D9B8FF', '#B894FF');
+      art(c, 'aq_emote', x + w / 2, y + h / 2 + 40, 300, { shadow: false });
+      bubble(c, t, tArg + 0.2, x + w / 2, y + 70, 'NO, YOURS!', x + w / 2, y + 140, { size: 34, shout: true });
+    }, { from: 'none' });
+    panel(ctx, t, tFlew - 0.5, ...TOP, (c, x, y, w, h) => {
+      storm(c, x, y, w, h);
+      art(c, 'th19', x + w / 2 - 120, y + h - 300, 520, { shadow: false });
+      const kw = ease.outBack(prog(t, tWarden - 0.3, 0.5));
+      if (kw > 0) { glow(c, x + w / 2 + 230, y + h - 300, 200, '255,220,120', 0.5); art(c, 'warden', x + w / 2 + 230, y + h - 290, 440 * kw, { shadow: false }); }
+      const kd = ease.inOutCubic(prog(t, tFlew - 0.3, 3.0));
+      art(c, 'edrag_1', x + lerp(w + 250, w - 280, kd), y + lerp(120, 330, kd), 520, { shadow: false, flip: true });
+      capBox(c, t, tAlone - 0.3, x + w / 2 + 120, y + h - 620, 'Alone.', { size: 38, bg: '#FF9A7A' });
+    });
+    if (t > tFlew - 0.5) capBox(ctx, t, tTH - 0.4, 60, 110, 'The Town Hall!', { size: 40 });
+    comicCredit(ctx);
+  },
+
+  // 6 — Lightning struck. The Warden fell. The King and Queen were silent. To be continued.
+  (ctx, t, dur) => {
+    const tFell = when('fell', 0, 2.0), tSilent = when('silent', 0, 6.2), tCont = when('continued', 0, 7.6), tTeam = when('team', 0, 9.7);
+    const [sx, sy] = shakeAt(t, 0.05, 26, 4);
+    paper(ctx, t);
+    ctx.save(); ctx.translate(sx, sy);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      storm(c, x, y, w, h);
+      art(c, 'th19', x + w / 2 - 120, y + h - 300, 520, { shadow: false });
+      bolt(c, t, x + w / 2 + 230, y, x + w / 2 + 230, y + h - 420, { a: 1 - prog(t, 1.0, 0.6), seed: 7, w: 18 });
+      flash(c, t, 0.0, { color: '220,240,255', peak: 1, life: 0.6 });
+      const kf = ease.inOutCubic(prog(t, tFell - 0.4, 0.6));
+      art(c, 'warden', x + w / 2 + lerp(230, 170, kf), y + h - lerp(290, 170, kf), 440, { shadow: false, rot: kf * 1.45, alpha: 1 - 0.35 * kf });
+      smoke(c, t, tFell, x + w / 2 + 260, y + h - 160, { n: 5, size: 40, col: '120,140,170' });
+      art(c, 'edrag_1', x + w - 280, y + 330, 520, { shadow: false, flip: true });
+      c.save(); c.globalAlpha *= 1 - prog(t, 2.2, 0.5); sfxWord(c, t, 0.05, 'KRA-KA-BOOM!', x + w / 2, y + 200, 100, -0.08, ['#FFFFFF', '#BFE6FF', '#2E8BFF']); c.restore();
+      const kd = prog(t, tSilent - 1.0, 1.0); if (kd > 0) { c.fillStyle = `rgba(4,4,14,${0.55 * kd})`; c.fillRect(x, y, w, h); }
+    }, { from: 'none' });
+    ctx.restore();
+    if (t > tCont - 0.3) withT(ctx, W / 2, 560, ease.outBack(prog(t, tCont - 0.3, 0.5)), -0.04, () => title(ctx, 'TO BE CONTINUED...', 0, 0, 74, { fill: ['#FFFFFF', '#FFD86B', '#FF7A1E'] }));
+    const [lx, ly, lw, lh] = half(BOT, 0), [rx, ry, rw, rh] = half(BOT, 1);
+    panel(ctx, t, tSilent - 1.6, lx, ly, lw, lh, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#3A3F66', '#6A73A0');
+      art(c, 'king_point', x + w / 2, y + h / 2 + 40, 330, { shadow: false });
+      bubble(c, t, tSilent - 0.2, x + w / 2 + 120, y + 70, '...', x + w / 2 + 40, y + 140, { size: 40 });
+    });
+    panel(ctx, t, tSilent - 1.4, rx, ry, rw, rh, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#3A3F66', '#6A73A0');
+      art(c, 'queen_stand', x + w / 2, y + h / 2 + 50, 340, { shadow: false });
+      bubble(c, t, tSilent, x + w / 2 - 120, y + 70, '...', x + w / 2 - 40, y + 140, { size: 40 });
+    });
+    if (t > tTeam - 0.4) capBox(ctx, t, tTeam - 0.4, 60, 110, 'Should they team up?', { size: 40 });
+    comicCredit(ctx);
+  },
+];
+</script>
+</body>
+</html>
