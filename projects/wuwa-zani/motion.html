@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who is Zani? motion scenes</title>
+<script>
+// Official Kuro Games art (see presskit/SOURCE.txt), cropped only and credited.
+window.ART = Object.fromEntries(['vert', 'card_full', 'card_face', 'story', 'blaze', 'close'].map(n => [n, `presskit/${n}.jpg`]));
+</script>
+<script src="../../motion/lib.js"></script>
+<script src="../../motion/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+// Zani's palette: Spectro gold-white on office black, with her crimson tie as the accent.
+const LUX = ['#FFFFFF', '#FFF3D6', '#FFD36B'];
+const LGLOW = 'rgba(255,200,90,0.9)';
+const RED = ['#FFFFFF', '#FFD6D6', '#FF5A5A'];
+const zplate = (ctx, str, x, y, t, t0, size = 44) =>
+  plate(ctx, str, x, y, t, t0, size, { border: 'rgba(255,215,140,0.9)', bg: 'rgba(18,12,14,0.78)', color: '#FFF6E6' });
+const zserif = (ctx, str, x, y, size, opts = {}) => serif(ctx, str, x, y, size, { fill: LUX, glowColor: LGLOW, ...opts });
+const fadeIn = (t, t0, d = 0.5) => ease.outCubic(prog(t, t0, d));
+
+function office(ctx, { wash = 0.08 } = {}) {
+  ctx.fillStyle = `rgba(20,10,10,${wash})`; ctx.fillRect(0, 0, W, H);
+  vignette(ctx, 0.72);
+  credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+}
+function band(ctx, y0 = 920, y1 = 1290, a = 0.65) {
+  ctx.fillStyle = vgrad(ctx, y0, y1, [[0, 'rgba(14,8,10,0)'], [0.3, `rgba(14,8,10,${a})`], [0.8, `rgba(14,8,10,${a})`], [1, 'rgba(14,8,10,0)']]);
+  ctx.fillRect(0, y0, W, y1 - y0);
+}
+const sparkle = (ctx, t, n = 30, seed = 7, a = 1) => { ctx.save(); ctx.globalAlpha *= a; sparks(ctx, t, { n, seed, color: '255,215,130', rise: 50, size: 4 }); ctx.restore(); };
+
+// A digital desk clock.
+function deskClock(ctx, x, y, s, str, glowOn = 0) {
+  withT(ctx, x, y, s, 0, () => {
+    ctx.fillStyle = '#16100F'; ctx.fill(rectPath(-170, -70, 340, 140, 22));
+    ctx.lineWidth = 5; ctx.strokeStyle = 'rgba(255,215,140,0.9)'; ctx.stroke(rectPath(-170, -70, 340, 140, 22));
+    ctx.font = `900 92px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.shadowColor = `rgba(255,90,90,${0.6 + 0.4 * glowOn})`; ctx.shadowBlur = 20 + 20 * glowOn;
+    ctx.fillStyle = glowOn > 0 ? '#9CFF9C' : '#FF6B6B'; ctx.fillText(str, 0, 6);
+  });
+}
+// The Devil's Tax energy drink can.
+function can(ctx, x, y, s, rot = 0) {
+  withT(ctx, x, y, s, rot, () => {
+    const g = ctx.createLinearGradient(-80, 0, 80, 0);
+    g.addColorStop(0, '#5A0A10'); g.addColorStop(0.45, '#E0222E'); g.addColorStop(0.6, '#FF6A6A'); g.addColorStop(1, '#4A060C');
+    ctx.fillStyle = g; ctx.fill(rectPath(-80, -150, 160, 300, 26));
+    ctx.fillStyle = '#C9C9CF'; ctx.fill(rectPath(-74, -164, 148, 26, 12)); ctx.fill(rectPath(-74, 140, 148, 22, 10));
+    ctx.fillStyle = '#111'; ctx.fill(rectPath(-80, -50, 160, 100, 4));
+    ctx.font = `900 34px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#FFD36B';
+    ctx.fillText("DEVIL'S", 0, -16); ctx.fillText('TAX', 0, 22);
+    // little horns on the label
+    ctx.fillStyle = '#FFD36B'; ctx.fill(polyPath([[-56, -96], [-40, -130], [-30, -96]])); ctx.fill(polyPath([[56, -96], [40, -130], [30, -96]]));
+  });
+}
+function steam(ctx, x, y, t, k, n = 4) {
+  if (k <= 0) return;
+  for (let i = 0; i < n; i++) {
+    const ph = ((t * 0.6 + i / n) % 1);
+    ctx.strokeStyle = `rgba(255,255,255,${0.55 * k * Math.sin(ph * Math.PI)})`; ctx.lineWidth = 10; ctx.lineCap = 'round';
+    const bx = x + (i - (n - 1) / 2) * 60, by = y - ph * 160;
+    ctx.beginPath(); ctx.moveTo(bx, by); ctx.bezierCurveTo(bx - 25, by - 30, bx + 25, by - 60, bx, by - 90); ctx.stroke();
+  }
+}
+function fluff(ctx, x, y, s, t) {
+  withT(ctx, x, y, s, Math.sin(t * 2) * 0.1, () => {
+    glow(ctx, 0, 0, 90, '255,240,220', 0.4);
+    ctx.fillStyle = '#FFF6EC';
+    for (let i = 0; i < 9; i++) { const a = i / 9 * Math.PI * 2; ctx.beginPath(); ctx.arc(Math.cos(a) * 30, Math.sin(a) * 30, 26, 0, Math.PI * 2); ctx.fill(); }
+    ctx.beginPath(); ctx.arc(0, 0, 34, 0, Math.PI * 2); ctx.fill();
+  });
+}
+function alarmClock(ctx, x, y, s, t, ringing) {
+  const sh = ringing ? Math.sin(t * 50) * 0.12 : 0;
+  withT(ctx, x, y, s, sh, () => {
+    ctx.fillStyle = '#D9A441'; [[-70, -95], [70, -95]].forEach(([bx, by]) => { ctx.beginPath(); ctx.arc(bx, by, 34, Math.PI, 0); ctx.fill(); });
+    ctx.fillStyle = '#F4E3B5'; ctx.beginPath(); ctx.arc(0, 0, 110, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 14; ctx.strokeStyle = '#B8862E'; ctx.stroke();
+    ctx.strokeStyle = '#2A1A10'; ctx.lineCap = 'round';
+    ctx.lineWidth = 9; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -62); ctx.stroke();
+    ctx.lineWidth = 7; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(48, 18); ctx.stroke();
+    ctx.fillStyle = '#C0392B'; ctx.beginPath(); ctx.arc(0, 0, 9, 0, Math.PI * 2); ctx.fill();
+    if (ringing) {
+      ctx.strokeStyle = 'rgba(255,220,140,0.9)'; ctx.lineWidth = 7;
+      [-1, 1].forEach(d => { for (let i = 1; i <= 2; i++) { ctx.beginPath(); ctx.arc(d * 120, -60, 26 * i, d > 0 ? -0.9 : Math.PI - 0.6, d > 0 ? 0.6 : Math.PI + 0.9); ctx.stroke(); } });
+    }
+  });
+}
+
+function framed(ctx, name, x, y, w, h, { alpha = 1, r = 26, border = 'rgba(255,215,140,0.95)' } = {}) {
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 50;
+  ctx.fillStyle = '#000'; ctx.fill(rectPath(x, y, w, h, r));
+  ctx.shadowBlur = 0;
+  ctx.save(); ctx.clip(rectPath(x, y, w, h, r));
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, x, y, w, h);
+  ctx.restore();
+  ctx.lineWidth = 5; ctx.strokeStyle = border; ctx.stroke(rectPath(x, y, w, h, r));
+  ctx.restore();
+}
+function backdrop(ctx, name, t, dur, fx = 0.5, fy = 0.5, dark = 0.45) {
+  cover(ctx, name, t, dur, [fx, fy, 1.25], [fx, fy, 1.35], { filter: 'blur(18px) saturate(1.2)' });
+  ctx.fillStyle = `rgba(14,8,10,${dark})`; ctx.fillRect(0, 0, W, H);
+}
+function roundInset(ctx, name, sx, sy, sr, x, y, R, col = '255,215,140') {
+  glow(ctx, x, y, R * 1.5, col, 0.45);
+  ctx.save(); ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.clip();
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, sx - sr, sy - sr, 2 * sr, 2 * sr, x - R, y - R, 2 * R, 2 * R);
+  ctx.restore();
+  ctx.lineWidth = 7; ctx.strokeStyle = `rgba(${col},0.95)`; ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.stroke();
+}
+function badge(ctx, t, t0, x, y, label, col, r = 80) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    glow(ctx, 0, 0, r * 1.8, col, 0.5 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = 'rgba(18,12,14,0.85)';
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 6; ctx.strokeStyle = `rgb(${col})`; ctx.stroke();
+    serif(ctx, label, 0, 4, r * 0.34, { fill: ['#FFFFFF', `rgb(${col})`], glowColor: `rgba(${col},0.9)` });
+  });
+  ring(ctx, t, t0, x, y, { maxR: r * 3, life: 0.6, color: col, width: 10 });
+}
+function fiveStars(ctx, t, t0, y) {
+  for (let i = 0; i < 5; i++) {
+    const k = pop(t, t0 - 0.2 + i * 0.07, 0.4);
+    if (k > 0) withT(ctx, W / 2 + (i - 2) * 92, y, k, 0, () => {
+      glow(ctx, 0, 0, 60, '255,210,120', 0.6);
+      ctx.fillStyle = '#FFD27A'; ctx.fill(starPath(38, 16));
+      ctx.lineWidth = 3; ctx.strokeStyle = '#7A4A10'; ctx.stroke(starPath(38, 16));
+    });
+  }
+}
+
+window.scenes = [
+  // 0 — Her biggest mission: clocking out on time. This is Zani.
+  (ctx, t, dur) => {
+    const tCom = when('combat', 0, 1.3), tClock = when('clocking', 0, 2.7), tTime = when('time', 0, 3.4), tZani = when('zani', 0, 4.9), tAv = when('averardo', 0, 5.9);
+    cover(ctx, 'vert', t, dur, [0.5, 0.27, 2.2], [0.5, 0.45, 1.08]);
+    sparkle(ctx, t, 24, 3, 0.7);
+    office(ctx, { wash: 0.04 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    const early = 1 - prog(t, tZani - 0.5, 0.4);
+    if (early > 0) {
+      ctx.save(); ctx.globalAlpha = early;
+      if (t > tCom - 0.3) zplate(ctx, 'NOT COMBAT...', W / 2, 980, t, tCom - 0.3, 40);
+      if (t > tClock - 0.3) {
+        const on = t > tTime - 0.1 ? 1 : 0;
+        deskClock(ctx, W / 2, 1140, ease.outBack(prog(t, tClock - 0.3, 0.45)), on ? '17:00' : '16:59', on);
+        if (on) ring(ctx, t, tTime - 0.1, W / 2, 1140, { maxR: 420, life: 0.6, color: '150,255,150', width: 10 });
+      }
+      ctx.restore();
+    }
+    const kc = prog(t, tZani - 0.2, 0.6);
+    if (kc > 0) {
+      ctx.fillStyle = `rgba(255,240,200,${0.3 * (1 - kc)})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, W / 2, 1050, lerp(1.25, 1, ease.outCubic(kc)), 0, () => zserif(ctx, 'ZANI', 0, 0, 170, { alpha: ease.outCubic(kc) }));
+    }
+    if (t > tAv - 0.3) zplate(ctx, 'AVERARDO VAULT SECURITY', W / 2, 1200, t, tAv - 0.3, 38);
+  },
+
+  // 1 — Best Employee forever; the dark circles are "proof of her hard work".
+  (ctx, t, dur) => {
+    const tBest = when('best', 0, 0.6), tCount = when('count', 0, 2.7), tDark = when('dark', 0, 3.9), tNot = when('not', 0, 5.4), tProof = when('proof', 0, 7.6);
+    cover(ctx, 'card_full', t, dur, [0.5, 0.22, 1.02], [0.5, 0.2, 1.1]);
+    sparkle(ctx, t, 18, 9, 0.6);
+    office(ctx);
+    band(ctx, 900, 1290, 0.7);
+    const p1 = 1 - prog(t, tDark - 0.5, 0.4);
+    if (p1 > 0 && t > tBest - 0.3) {
+      ctx.save(); ctx.globalAlpha = p1;
+      zplate(ctx, 'BEST EMPLOYEE', W / 2, 1010, t, tBest - 0.3, 46);
+      // A counter that runs away to infinity.
+      const k = prog(t, tBest, tCount - tBest + 0.4);
+      const n = k >= 1 ? '∞' : String(Math.floor(1 + 98 * ease.inCubic(k)));
+      withT(ctx, W / 2, 1150, pop(t, tBest, 0.4), 0, () => zserif(ctx, `× ${n}`, 0, 0, 96));
+      ctx.restore();
+    }
+    if (t > tDark - 0.3) zserif(ctx, 'those dark circles?', W / 2, 1010, 72, { italic: true, alpha: fadeIn(t, tDark - 0.3) });
+    if (t > tNot - 0.3 && t < tProof - 0.3) withT(ctx, W / 2, 1140, pop(t, tNot - 0.3, 0.45), -0.03, () => zplate(ctx, 'NOT EYESHADOW', 0, 0, t, tNot - 0.3, 42));
+    if (t > tProof - 0.3) zserif(ctx, '"proof of my hard work"', W / 2, 1150, 66, { italic: true, alpha: fadeIn(t, tProof - 0.3), fill: RED, glowColor: 'rgba(255,90,90,0.9)' });
+  },
+
+  // 2 — Devil's Tax: one swig feels like a hammer blow to the head.
+  (ctx, t, dur) => {
+    const tDrink = when('drink', 0, 1.4), tTax = when('tax', 0, 2.4), tSwig = when('swig', 0, 4.4), tHam = when('hammer', 0, 5.3);
+    const [sx, sy] = shakeAt(t, tHam, 26, 5);
+    ctx.save(); ctx.translate(sx, sy);
+    backdrop(ctx, 'close', t, dur, 0.5, 0.4, 0.5);
+    sparkle(ctx, t, 20, 11, 0.6);
+    const kc = ease.outBack(prog(t, tDrink - 0.4, 0.6));
+    if (kc > 0) {
+      const tilt = -0.9 * ease.inOutCubic(prog(t, tSwig - 0.3, 0.5)) * (1 - prog(t, tHam + 0.3, 0.5));
+      glow(ctx, W / 2, 700, 380, '255,80,80', 0.35);
+      can(ctx, W / 2, 700, 1.7 * kc, tilt);
+    }
+    if (t > tHam - 0.1) {
+      flash(ctx, t, tHam - 0.05, { color: '255,240,220', peak: 0.7, life: 0.4 });
+      ring(ctx, t, tHam - 0.05, W / 2, 700, { maxR: 900, life: 0.6, color: '255,210,130', width: 26 });
+      burst(ctx, t, tHam - 0.05, W / 2, 700, { n: 40, color: '255,215,130', speed: 900, life: 0.7, size: 9 });
+    }
+    ctx.restore();
+    office(ctx, { wash: 0.03 });
+    band(ctx, 1060, 1300, 0.7);
+    if (t > tTax - 0.3) zplate(ctx, "DEVIL'S TAX", W / 2, 220, t, tTax - 0.3, 50);
+    if (t > tSwig - 0.3 && t < tHam - 0.2) zserif(ctx, 'one swig...', W / 2, 1180, 80, { italic: true, alpha: fadeIn(t, tSwig - 0.3) });
+    if (t > tHam - 0.2) withT(ctx, W / 2, 1180, pop(t, tHam - 0.2, 0.4), -0.04, () => zserif(ctx, 'HAMMER BLOW', 0, 0, 100, { fill: RED, glowColor: 'rgba(255,90,90,0.9)' }));
+  },
+
+  // 3 — Steaming towels for horns and tail; fluffy covers at night to save the pillow.
+  (ctx, t, dur) => {
+    const tHorns = when('horns', 0, 0.3), tSteam = when('steaming', 0, 2.3), tNight = when('night', 0, 3.9), tFluffy = when('fluffy', 0, 4.7), tPillow = when('pillow', 0, 7.8);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.3, 0.45);
+    const kn = prog(t, tNight - 0.3, 0.8);
+    framed(ctx, 'story', 40, 220 + (1 - fadeIn(t, 0, 0.6)) * 60, 1000, 704, { alpha: fadeIn(t, 0, 0.6) });
+    steam(ctx, 300, 300, t, fadeIn(t, tSteam - 0.4, 0.5) * (1 - kn), 3);
+    steam(ctx, 760, 300, t, fadeIn(t, tSteam - 0.4, 0.5) * (1 - kn), 3);
+    if (kn > 0) {
+      ctx.fillStyle = `rgba(8,10,40,${0.5 * kn})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, 900, 160, kn, 0, () => { glow(ctx, 0, 0, 120, '255,245,210', 0.5); ctx.fillStyle = '#FFF6DA'; ctx.beginPath(); ctx.arc(0, 0, 46, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = 'rgba(8,10,40,1)'; ctx.beginPath(); ctx.arc(20, -12, 40, 0, Math.PI * 2); ctx.fill(); });
+    }
+    const kf = ease.outBack(prog(t, tFluffy - 0.3, 0.5));
+    if (kf > 0) { fluff(ctx, 300, 1040, 1.1 * kf, t); fluff(ctx, 780, 1040, 1.1 * kf, t + 1); }
+    if (t > tPillow - 0.3) {
+      withT(ctx, W / 2, 1060, pop(t, tPillow - 0.3, 0.45), 0, () => {
+        ctx.fillStyle = '#F4F1EA'; ctx.fill(rectPath(-150, -60, 300, 120, 50));
+        ctx.lineWidth = 4; ctx.strokeStyle = 'rgba(255,215,140,0.9)'; ctx.stroke(rectPath(-150, -60, 300, 120, 50));
+        ctx.font = `900 60px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#2E9E4F'; ctx.fillText('✓', 0, 4);
+      });
+    }
+    office(ctx, { wash: 0.03 });
+    band(ctx, 1130, 1300, 0.7);
+    if (t > tHorns - 0.3 && t < tNight - 0.4) zplate(ctx, 'HORN & TAIL CARE', W / 2, 1210, t, tHorns - 0.3, 42);
+    if (t > tNight - 0.3 && t < tPillow - 0.4) zserif(ctx, 'fluffy covers at night', W / 2, 1210, 64, { italic: true, alpha: fadeIn(t, tNight - 0.3) });
+    if (t > tPillow - 0.3) zplate(ctx, 'PILLOW SAVED', W / 2, 1210, t, tPillow - 0.3, 42);
+  },
+
+  // 4 — Light bursts through her horns and hair... "I'll have to request a new uniform again."
+  (ctx, t, dur) => {
+    const tUn = when('unleashes', 0, 0.5), tLight = when('light', 0, 2.1), tSigh = when('sighs', 0, 5.4), tUni = when('uniform', 0, 8.2);
+    const [sx, sy] = shakeAt(t, tLight + 0.4, 18, 4);
+    ctx.save(); ctx.translate(sx, sy);
+    backdrop(ctx, 'close', t, dur, 0.5, 0.4, 0.45);
+    const kc = fadeIn(t, 0, 0.6) * (1 - prog(t, tLight - 0.5, 0.4));
+    if (kc > 0) framed(ctx, 'blaze', 40, 420, 1000, 420, { alpha: kc, r: 18 });
+    const kl = ease.outBack(prog(t, tLight - 0.5, 0.6));
+    if (kl > 0) {
+      const x = lerp(40 + 210, W / 2, kl), y = lerp(420 + 200, 640, kl), R = lerp(144, 300, kl);
+      // Light rays bursting outward.
+      const kb = prog(t, tLight, 1.6);
+      if (kb > 0) {
+        ctx.save(); ctx.globalCompositeOperation = 'lighter';
+        for (let i = 0; i < 14; i++) {
+          const a = i / 14 * Math.PI * 2 + t * 0.3, len = R + 600 * ease.outCubic(Math.min(1, kb * 1.5));
+          const g = ctx.createLinearGradient(x, y, x + Math.cos(a) * len, y + Math.sin(a) * len);
+          g.addColorStop(0, 'rgba(255,230,160,0.55)'); g.addColorStop(1, 'rgba(255,230,160,0)');
+          ctx.strokeStyle = g; ctx.lineWidth = 26; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + Math.cos(a) * len, y + Math.sin(a) * len); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      roundInset(ctx, 'blaze', 210, 200, 144, x, y, R);
+    }
+    sparkle(ctx, t, 40, 15, 0.5 + 0.5 * prog(t, tLight, 0.6));
+    ctx.restore();
+    office(ctx, { wash: 0.03 });
+    band(ctx, 1040, 1300, 0.7);
+    if (t > tUn - 0.3 && t < tSigh - 0.3) zplate(ctx, 'A BLAZING LIGHT', W / 2, 1180, t, tUn - 0.3, 46);
+    if (t > tSigh - 0.3) zserif(ctx, '*sigh*', W / 2, 1080, 64, { italic: true, alpha: fadeIn(t, tSigh - 0.3) });
+    if (t > tUni - 1.2) zserif(ctx, '"...a new uniform again."', W / 2, 1190, 66, { italic: true, alpha: fadeIn(t, tUni - 1.2), fill: RED, glowColor: 'rgba(255,90,90,0.9)' });
+  },
+
+  // 5 — Five-star Spectro with gauntlets; the "pocket watch" is an alarm clock.
+  (ctx, t, dur) => {
+    const tStar = when('fivestar', 0, 0.4), tSpec = when('spectro', 0, 1.0), tGaunt = when('gauntlets', 0, 2.0), tWatch = when('watch', 0, 4.1),
+          tAlarm = when('alarm', 0, 5.6), tLate = when('late', 0, 7.3);
+    backdrop(ctx, 'card_full', t, dur, 0.5, 0.3, 0.45);
+    sparkle(ctx, t, 20, 21, 0.6);
+    const p1 = 1 - prog(t, tWatch - 0.6, 0.4);
+    roundInset(ctx, 'card_face', 410, 430, 350, W / 2, lerp(600, 480, 1 - p1), lerp(320, 250, 1 - p1) * ease.outBack(prog(t, 0, 0.6)));
+    if (p1 > 0) {
+      ctx.save(); ctx.globalAlpha = p1;
+      fiveStars(ctx, t, tStar, 1010);
+      badge(ctx, t, tSpec - 0.2, W / 2 - 150, 1170, 'SPECTRO', '255,220,130', 76);
+      badge(ctx, t, tGaunt - 0.2, W / 2 + 150, 1170, 'GAUNTLETS', '255,120,120', 76);
+      ctx.restore();
+    }
+    if (t > tWatch - 0.4) alarmClock(ctx, W / 2, 920, 1.1 * ease.outBack(prog(t, tWatch - 0.4, 0.5)), t, t > tAlarm - 0.2 && t < tLate);
+    office(ctx, { wash: 0.03 });
+    band(ctx, 1110, 1300, 0.6 * (1 - p1));
+    if (t > tWatch - 0.3 && t < tAlarm - 0.3) zserif(ctx, 'a pocket watch?', W / 2, 1200, 70, { italic: true, alpha: fadeIn(t, tWatch - 0.3) });
+    if (t > tAlarm - 0.3 && t < tLate - 0.3) withT(ctx, W / 2, 1200, pop(t, tAlarm - 0.3, 0.45), 0, () => zplate(ctx, 'AN ALARM CLOCK', 0, 0, t, tAlarm - 0.3, 44));
+    if (t > tLate - 0.3) withT(ctx, W / 2, 1200, pop(t, tLate - 0.3, 0.45), -0.03, () => zserif(ctx, 'never late since', 0, 0, 74, { italic: true }));
+  },
+
+  // 6 — Outro: do you relate to Zani's work life?
+  (ctx, t, dur) => {
+    const tRel = when('relate', 0, 0.7), tWork = when('work', 0, 1.6), tComments = when('comments', 0, 3.1);
+    cover(ctx, 'vert', t, dur, [0.5, 0.3, 1.45], [0.5, 0.32, 1.6]);
+    sparkle(ctx, t, 26, 31);
+    office(ctx, { wash: 0.05 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    if (t > tRel - 0.3) zserif(ctx, 'Do you relate to', W / 2, 1000, 84, { italic: true, alpha: fadeIn(t, tRel - 0.3, 0.6) });
+    if (t > tWork - 0.3) zserif(ctx, "Zani's work life?", W / 2, 1105, 84, { italic: true, alpha: fadeIn(t, tWork - 0.3, 0.6) });
+    if (t > tComments - 0.3) zplate(ctx, 'TELL ME IN THE COMMENTS', W / 2, 1215, t, tComments - 0.3, 38);
+  },
+];
+</script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+{
+  "title": "Who is Zani? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Zani",
+    "clocking",
+    "Averardo",
+    "Vault",
+    "security",
+    "Best",
+    "Employee",
+    "eyeshadow",
+    "hard",
+    "work",
+    "Devil's",
+    "Tax",
+    "hammer",
+    "horns",
+    "tail",
+    "towels",
+    "fluffy",
+    "pillow",
+    "Resonance",
+    "light",
+    "uniform",
+    "five-star",
+    "Spectro",
+    "gauntlets",
+    "alarm",
+    "clock",
+    "late"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#FF7A7A",
+    "keyword": "#FFE6A8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 2509 'Profile Reveal | Scorched Radiance — Zani': a member of Averardo Vault's security team and holder of 'Best Employee' for longer than she cares to count; her biggest mission is simple: clocking out on time. Attribute Spectro, Weapon Gauntlets, 5 stars",
+    "Official news 2500 'Post-Lament Anthropocene: Stars Intertwined | Zani': quote ('that's not eyeshadow. It's proof of my hard work, a badge of honor for my dedication'); Devil's Tax (energy drink; 'One swig feels like a hammer blow to the head'); One Tail and Two Horns (every week she moisturizes and wraps them in steaming towels; at night she puts fluffy protectors on her head to stop the horns from poking holes in the pillow and mattress); A Blazing Light (light gathers and bursts through her horns and hair; 'Oh, I'll have to request a new uniform again.'); Zani's Story (the big pocket watch is actually an alarm clock; she almost caused a major incident by being late, and hasn't been late since)",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "Her biggest mission isn't combat. It's clocking out on time. This is Zani, of Averardo Vault's security team, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "combat",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "tick",
+          "word": "time",
+          "offset": -0.1,
+          "volume": 0.16
+        },
+        {
+          "sound": "deep_rise",
+          "word": "zani",
+          "offset": -0.4,
+          "volume": 0.6
+        },
+        {
+          "sound": "swish",
+          "word": "averardo",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "She's held Best Employee for longer than she cares to count. Those dark circles? Not eyeshadow. She calls them proof of her hard work.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "best",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "tick",
+          "word": "count",
+          "offset": -0.2,
+          "volume": 0.14
+        },
+        {
+          "sound": "swish",
+          "word": "dark",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "thud",
+          "word": "not",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "sound": "soft_hit",
+          "word": "proof",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Her fuel is an energy drink called Devil's Tax. Fans say one swig feels like a hammer blow to the head.",
+      "sfx": [
+        {
+          "sound": "swish",
+          "word": "drink",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "tax",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "swig",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "impact",
+          "word": "hammer",
+          "offset": -0.1,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "narration": "Her horns and tail get weekly care in steaming towels, and at night she wears fluffy covers, so her horns don't poke holes in her pillow.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "horns",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swell_soft",
+          "word": "steaming",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "fluffy",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "pillow",
+          "offset": -0.2,
+          "volume": 0.16
+        }
+      ]
+    },
+    {
+      "narration": "When she unleashes her Resonance, light bursts through her horns and hair. Then she sighs: I'll have to request a new uniform again.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "word": "unleashes",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "deep_rise",
+          "word": "light",
+          "offset": -0.4,
+          "volume": 0.55
+        },
+        {
+          "sound": "impact",
+          "word": "bursts",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "sighs",
+          "offset": -0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "She's a five-star Spectro fighter with gauntlets. And that big pocket watch? It's actually an alarm clock. She hasn't been late since.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "spectro",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "gauntlets",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "tick",
+          "word": "alarm",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "tick",
+          "word": "alarm",
+          "offset": 0.1,
+          "volume": 0.14
+        },
+        {
+          "sound": "soft_hit",
+          "word": "late",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "So, do you relate to Zani's work life? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "work",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
