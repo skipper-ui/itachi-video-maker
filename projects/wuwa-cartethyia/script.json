@@ -1,0 +1,264 @@
+{
+  "title": "Who is Cartethyia? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Cartethyia",
+    "Fleurdelys",
+    "Blessed",
+    "Maiden",
+    "knight",
+    "Divinity",
+    "Queen",
+    "Gale",
+    "Tide",
+    "Threnodian",
+    "curse",
+    "malice",
+    "plot",
+    "forms",
+    "storm",
+    "simulation",
+    "solemn",
+    "manners",
+    "wooden",
+    "sword",
+    "injustice",
+    "five-star",
+    "Aero"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#9FE6FF",
+    "keyword": "#FFE3A8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 2755 'Profile Reveal | Feathered Tempest — Cartethyia': the wandering knight who travels across Rinascita; formerly the Blessed Maiden, the vessel of Divinity, and the Queen of Gale and Tide, she went by the name Fleurdelys; now a free and unfettered wandering knight. Attribute Aero, Weapon Sword, 5 stars",
+    "Official news 2748 'Post-Lament Anthropocene: Stars Intertwined | Cartethyia' lore images: Cartethyia's Story ('I was born from the Threnodian's curse and malice. It made me wear the crown, bathe in the glory of the Blessed Maiden'); Overclock Diagnostic Report (a Second Awakening lets her transition freely between two forms; 'When Miss Cartethyia... No, wait, Fleurdelys, demonstrated her powers, the storm nearly tore the entire simulation apart!'); A Different Form (transforms into Fleurdelys upon using her Resonance Ability; as Fleurdelys she's the Queen of Gale and Tide); Cartethyia's Worry (when transforming into Fleurdelys she has to keep reminding herself: manners, tone, everything composed and solemn, 'it's actually really hard'); Worn Wooden Sword (a gift from a retired dramatist; as a child she patrolled the village, brandishing it at every 'injustice')",
+    "Official news 2364 'Post-Lament Anthropocene: Enemies — Fleurdelys': 'The fabricated Maiden, a vessel forged by divine hands. Her birth was but a carefully orchestrated plot.'",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "She was once worshipped as the Blessed Maiden. Now she's just a wandering knight. This is Cartethyia, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "blessed",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "knight",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "cartethyia",
+          "offset": -0.4,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "Her old titles: vessel of Divinity, and Queen of Gale and Tide. Back then, she went by the name Fleurdelys.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "vessel",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "queen",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "fleurdelys",
+          "offset": -0.4,
+          "volume": 0.55
+        },
+        {
+          "sound": "swish",
+          "word": "fleurdelys",
+          "offset": 0.1,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "But that life began with a curse. She was born from the Threnodian's malice, and her birth was part of a carefully orchestrated plot.",
+      "sfx": [
+        {
+          "sound": "rumble",
+          "word": "curse",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "thud",
+          "word": "threnodians",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "orchestrated",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "plot",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Today, she can switch freely between two forms. When she becomes Fleurdelys, her storm once nearly tore a test simulation apart.",
+      "sfx": [
+        {
+          "sound": "swish",
+          "word": "two",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "becomes",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "whoosh",
+          "word": "storm",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "rumble",
+          "word": "storm",
+          "offset": 0.0,
+          "volume": 0.4
+        },
+        {
+          "sound": "impact",
+          "word": "apart",
+          "offset": -0.1,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "The hard part? Staying solemn as Fleurdelys. She has to keep reminding herself to mind her manners and her tone.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "hard",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "solemn",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "tap",
+          "word": "manners",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "tap",
+          "word": "tone",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "As a child, she patrolled her village with a wooden sword, swinging it at every injustice. Now she's a five-star Aero sword user.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "child",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "swinging",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "swish",
+          "word": "injustice",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "deep_rise",
+          "word": "now",
+          "offset": -0.3,
+          "volume": 0.45
+        },
+        {
+          "sound": "soft_hit",
+          "word": "aero",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "So, Cartethyia or Fleurdelys: which form do you like more? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "cartethyia",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "fleurdelys",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
