@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who is Verina? motion scenes</title>
+<script>
+// Official Kuro Games art (see presskit/SOURCE.txt), cropped only and credited.
+window.ART = Object.fromEntries(['vert', 'key', 'story', 'report', 'starflower', 'goggles'].map(n => [n, `presskit/${n}.jpg`]));
+</script>
+<script src="../../motion/lib.js"></script>
+<script src="../../motion/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1420, so keep that band calm.
+// Verina's palette: leaf green and sunlight, with Spectro gold.
+const LEAF = ['#FFFFFF', '#F0FFDC', '#9BE05A'];
+const LGLOW = 'rgba(150,230,90,0.9)';
+const SUN = ['#FFFFFF', '#FFF4CC', '#F2C84A'];
+const vplate = (ctx, str, x, y, t, t0, size = 44) =>
+  plate(ctx, str, x, y, t, t0, size, { border: 'rgba(180,240,120,0.95)', bg: 'rgba(16,36,14,0.8)', color: '#F6FFEA' });
+const vserif = (ctx, str, x, y, size, opts = {}) => serif(ctx, str, x, y, size, { fill: LEAF, glowColor: LGLOW, ...opts });
+const fadeIn = (t, t0, d = 0.5) => ease.outCubic(prog(t, t0, d));
+
+function meadow(ctx, { wash = 0.05 } = {}) {
+  ctx.fillStyle = `rgba(10,40,10,${wash})`; ctx.fillRect(0, 0, W, H);
+  vignette(ctx, 0.62);
+  credit(ctx, 'Art © Kuro Games · official Wuthering Waves art');
+}
+function band(ctx, y0 = 920, y1 = 1290, a = 0.65) {
+  ctx.fillStyle = vgrad(ctx, y0, y1, [[0, 'rgba(10,28,10,0)'], [0.3, `rgba(10,28,10,${a})`], [0.8, `rgba(10,28,10,${a})`], [1, 'rgba(10,28,10,0)']]);
+  ctx.fillRect(0, y0, W, y1 - y0);
+}
+// Drifting leaves and pollen.
+function leaves(ctx, t, { n = 20, seed = 6, a = 1 } = {}) {
+  const r = rng(seed);
+  for (let i = 0; i < n; i++) {
+    const x0 = r() * W, y0 = r() * H, s = 0.5 + r() * 0.6, ph = r() * 6.28;
+    const x = x0 + Math.sin(t * 0.8 + ph) * 70, y = ((y0 + t * 55 * (0.5 + r())) % (H + 100)) - 50;
+    withT(ctx, x, y, s, t * (0.5 + r()) + ph, () => {
+      ctx.globalAlpha *= a * 0.85;
+      ctx.fillStyle = i % 3 ? '#8FD45A' : '#C6EE7A';
+      ctx.beginPath(); ctx.moveTo(0, -24); ctx.quadraticCurveTo(18, 0, 0, 24); ctx.quadraticCurveTo(-18, 0, 0, -24); ctx.fill();
+    });
+  }
+}
+// A star-shaped flower that can bloom (k=1) or wither (k=0..).
+function starflower(ctx, x, y, s, open, t, ph = 0, droop = 0) {
+  withT(ctx, x, y, s, Math.sin(t * 1.5 + ph) * 0.08 + droop * 0.6, () => {
+    if (open > 0.5) glow(ctx, 0, 0, 70, '255,250,210', 0.4 * open);
+    for (let i = 0; i < 5; i++) {
+      const a = i / 5 * Math.PI * 2 - Math.PI / 2;
+      ctx.fillStyle = droop > 0 ? `rgb(${lerp(255, 200, droop) | 0},${lerp(255, 190, droop) | 0},${lerp(245, 150, droop) | 0})` : '#FFFDF2';
+      ctx.beginPath(); ctx.ellipse(Math.cos(a) * 18 * open, Math.sin(a) * 18 * open + droop * 10, 20 * open, 9 * open, a, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = '#F2C84A'; ctx.beginPath(); ctx.arc(0, 0, 7, 0, Math.PI * 2); ctx.fill();
+  });
+}
+function orchid(ctx, x, y, s, t, glowK) {
+  withT(ctx, x, y, s, Math.sin(t + x) * 0.06, () => {
+    ctx.strokeStyle = '#3E7A35'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 70); ctx.stroke();
+    if (glowK > 0) glow(ctx, 0, 0, 60, '200,180,255', 0.6 * glowK);
+    for (let i = 0; i < 3; i++) { const a = -Math.PI / 2 + (i - 1) * 0.9; ctx.fillStyle = `rgba(${200 + 40 * glowK | 0},${170 + 40 * glowK | 0},255,0.95)`; ctx.beginPath(); ctx.ellipse(Math.cos(a) * 16, Math.sin(a) * 16, 16, 9, a, 0, Math.PI * 2); ctx.fill(); }
+    ctx.fillStyle = '#FFF2A8'; ctx.beginPath(); ctx.arc(0, 0, 6, 0, Math.PI * 2); ctx.fill();
+  });
+}
+
+function framed(ctx, name, x, y, w, h, { alpha = 1, r = 26, border = 'rgba(180,240,120,0.95)' } = {}) {
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.shadowColor = 'rgba(0,40,0,0.45)'; ctx.shadowBlur = 50;
+  ctx.fillStyle = '#000'; ctx.fill(rectPath(x, y, w, h, r));
+  ctx.shadowBlur = 0;
+  ctx.save(); ctx.clip(rectPath(x, y, w, h, r));
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, x, y, w, h);
+  ctx.restore();
+  ctx.lineWidth = 5; ctx.strokeStyle = border; ctx.stroke(rectPath(x, y, w, h, r));
+  ctx.restore();
+}
+function backdrop(ctx, name, t, dur, fx = 0.5, fy = 0.5, dark = 0.3) {
+  cover(ctx, name, t, dur, [fx, fy, 1.25], [fx, fy, 1.35], { filter: 'blur(18px) saturate(1.2)' });
+  ctx.fillStyle = `rgba(10,28,10,${dark})`; ctx.fillRect(0, 0, W, H);
+}
+function roundInset(ctx, name, sx, sy, sr, x, y, R, col = '180,240,120') {
+  glow(ctx, x, y, R * 1.5, col, 0.45);
+  ctx.save(); ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.clip();
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(ARTS[name].img, sx - sr, sy - sr, 2 * sr, 2 * sr, x - R, y - R, 2 * R, 2 * R);
+  ctx.restore();
+  ctx.lineWidth = 7; ctx.strokeStyle = `rgba(${col},0.95)`; ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.stroke();
+}
+function badge(ctx, t, t0, x, y, label, col, r = 80) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    glow(ctx, 0, 0, r * 1.8, col, 0.5 + 0.15 * Math.sin(t * 4));
+    ctx.fillStyle = 'rgba(16,36,14,0.85)';
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 6; ctx.strokeStyle = `rgb(${col})`; ctx.stroke();
+    serif(ctx, label, 0, 4, r * 0.34, { fill: ['#FFFFFF', `rgb(${col})`], glowColor: `rgba(${col},0.9)` });
+  });
+  ring(ctx, t, t0, x, y, { maxR: r * 3, life: 0.6, color: col, width: 10 });
+}
+function fiveStars(ctx, t, t0, y) {
+  for (let i = 0; i < 5; i++) {
+    const k = pop(t, t0 - 0.2 + i * 0.07, 0.4);
+    if (k > 0) withT(ctx, W / 2 + (i - 2) * 92, y, k, 0, () => {
+      glow(ctx, 0, 0, 60, '255,210,120', 0.6);
+      ctx.fillStyle = '#FFD27A'; ctx.fill(starPath(38, 16));
+      ctx.lineWidth = 3; ctx.strokeStyle = '#7A4A10'; ctx.stroke(starPath(38, 16));
+    });
+  }
+}
+
+window.scenes = [
+  // 0 — "Any plants that pique your interest? Let her know." This is Verina, the plant breeder.
+  (ctx, t, dur) => {
+    const tPl = when('plants', 0, 1.0), tKnow = when('know', 0, 3.0), tVer = when('verina', 0, 4.4), tBr = when('breeder', 0, 5.9);
+    cover(ctx, 'vert', t, dur, [0.38, 0.26, 2.1], [0.45, 0.42, 1.06]);
+    leaves(ctx, t, { n: 18 });
+    meadow(ctx, { wash: 0.02 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    const early = 1 - prog(t, tVer - 0.5, 0.4);
+    if (early > 0) {
+      ctx.save(); ctx.globalAlpha = early;
+      if (t > tPl - 0.3) vserif(ctx, 'found an interesting plant?', W / 2, 1020, 64, { italic: true, alpha: fadeIn(t, tPl - 0.3) });
+      if (t > tKnow - 0.3) withT(ctx, W / 2, 1130, pop(t, tKnow - 0.3, 0.45), 0, () => vplate(ctx, 'LET HER KNOW!', 0, 0, t, tKnow - 0.3, 44));
+      ctx.restore();
+    }
+    const kc = prog(t, tVer - 0.2, 0.6);
+    if (kc > 0) {
+      ctx.fillStyle = `rgba(240,255,220,${0.35 * (1 - kc)})`; ctx.fillRect(0, 0, W, H);
+      withT(ctx, W / 2, 1050, lerp(1.25, 1, ease.outCubic(kc)), 0, () => vserif(ctx, 'VERINA', 0, 0, 160, { alpha: ease.outCubic(kc) }));
+    }
+    if (t > tBr - 0.3) vplate(ctx, 'PLANT BREEDER', W / 2, 1195, t, tBr - 0.3, 40);
+  },
+
+  // 1 — Strange night sounds; villagers go up armed expecting a Tacet Discord... find a girl planting orchids.
+  (ctx, t, dur) => {
+    const tNight = when('night', 0, 0.3), tStr = when('strange', 0, 1.4), tTacet = when('tacet', 0, 4.1), tArmed = when('armed', 0, 5.9), tGirl = when('girl', 0, 7.1), tOrch = when('orchids', 0, 7.8);
+    ctx.fillStyle = vgrad(ctx, 0, H, [[0, '#06101E'], [0.6, '#132A2A'], [1, '#0A1A12']]); ctx.fillRect(-40, -40, W + 80, H + 80);
+    glow(ctx, 820, 240, 140, '230,240,255', 0.5); ctx.fillStyle = '#EEF4FF'; ctx.beginPath(); ctx.arc(820, 240, 60, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#081510'; ctx.beginPath(); ctx.moveTo(0, 1000); ctx.lineTo(380, 520); ctx.lineTo(620, 760); ctx.lineTo(860, 560); ctx.lineTo(1080, 900); ctx.lineTo(1080, 1300); ctx.lineTo(0, 1300); ctx.fill();
+    // "???" sound marks.
+    if (t > tStr - 0.3 && t < tGirl - 0.3) { const r = rng(3); for (let i = 0; i < 4; i++) { const k = fadeIn(t, tStr - 0.3 + i * 0.3, 0.3); ctx.save(); ctx.globalAlpha = k * (0.6 + 0.4 * Math.sin(t * 6 + i)); vserif(ctx, '?', 300 + r() * 480, 480 + r() * 260, 70, { fill: ['#FFFFFF', '#DCE8FF', '#9DB8F0'], glowColor: 'rgba(140,170,240,0.9)' }); ctx.restore(); } }
+    // Torches climbing.
+    if (t > tArmed - 0.6) { for (let i = 0; i < 4; i++) { const k = prog(t, tArmed - 0.6, 3); const x = 120 + i * 70 + k * 200, y = 1150 - k * 330 - i * 15; glow(ctx, x, y, 60, '255,170,80', 0.7); ctx.fillStyle = '#FFCF7A'; ctx.beginPath(); ctx.arc(x, y, 8, 0, Math.PI * 2); ctx.fill(); } }
+    // The girl planting.
+    const kg = fadeIn(t, tGirl - 0.4, 0.6);
+    if (kg > 0) {
+      roundInset(ctx, 'story', 520, 260, 240, 600, 640, 190 * kg);
+      for (let i = 0; i < 5; i++) orchid(ctx, 470 + i * 70, 860, 0.9 * ease.outBack(prog(t, tOrch - 0.3 + i * 0.08, 0.4)), t, 0);
+    }
+    meadow(ctx, { wash: 0.0 });
+    band(ctx, 1080, 1300, 0.65);
+    if (t > tNight - 0.3 && t < tTacet - 0.4) vplate(ctx, 'STRANGE SOUNDS AT NIGHT', W / 2, 1180, t, tNight - 0.3, 40);
+    if (t > tTacet - 0.4 && t < tGirl - 0.4) vserif(ctx, 'a Tacet Discord?!', W / 2, 1180, 72, { italic: true, alpha: fadeIn(t, tTacet - 0.4), fill: ['#FFFFFF', '#FFD9C8', '#FF8A5A'], glowColor: 'rgba(255,120,80,0.9)' });
+    if (t > tGirl - 0.3) vserif(ctx, '...a girl, planting orchids', W / 2, 1180, 64, { italic: true, alpha: fadeIn(t, tGirl - 0.3) });
+  },
+
+  // 2 — "The flowers told me they want moonlight." Weeks later the slope glows with blossoms.
+  (ctx, t, dur) => {
+    const tTold = when('told', 0, 0.7), tMoon = when('moonlight', 0, 1.6), tWeeks = when('weeks', 0, 3.7), tGlow = when('glowing', 0, 5.5);
+    const kb = prog(t, tWeeks - 0.3, 1.8);
+    ctx.fillStyle = vgrad(ctx, 0, H, [[0, '#0A1430'], [0.6, '#1B3A3E'], [1, '#0E2418']]); ctx.fillRect(-40, -40, W + 80, H + 80);
+    const km = fadeIn(t, tMoon - 0.4, 0.8);
+    glow(ctx, 760, 260, 300, '230,240,255', 0.3 + 0.4 * km); ctx.fillStyle = '#F2F6FF'; ctx.beginPath(); ctx.arc(760, 260, 70, 0, Math.PI * 2); ctx.fill();
+    if (km > 0) { ctx.save(); ctx.globalAlpha = 0.25 * km; ctx.fillStyle = '#E8F0FF'; ctx.beginPath(); ctx.moveTo(700, 300); ctx.lineTo(820, 300); ctx.lineTo(1000, 1100); ctx.lineTo(200, 1100); ctx.fill(); ctx.restore(); }
+    ctx.fillStyle = '#0B1E14'; ctx.beginPath(); ctx.moveTo(0, 900); ctx.quadraticCurveTo(540, 650, 1080, 860); ctx.lineTo(1080, 1300); ctx.lineTo(0, 1300); ctx.fill();
+    const r = rng(17);
+    for (let i = 0; i < 40; i++) {
+      const x = 30 + r() * 1020, base = 900 - 260 * Math.sin((x / 1080) * Math.PI) * 0.9 + r() * 260, d = r() * 1.2;
+      const k = ease.outBack(prog(t, tWeeks - 0.3 + d, 0.6));
+      if (k > 0) orchid(ctx, x, Math.max(base, 760 + Math.abs(x - 540) * 0.25), 0.8 * k, t, prog(t, tGlow - 0.4, 0.8));
+    }
+    leaves(ctx, t, { n: 10, seed: 23, a: 0.4 });
+    meadow(ctx, { wash: 0.0 });
+    band(ctx, 1080, 1300, 0.65);
+    if (t > tTold - 0.3 && t < tWeeks - 0.3) vserif(ctx, '"they want moonlight"', W / 2, 1180, 72, { italic: true, alpha: fadeIn(t, tTold - 0.3) });
+    if (t > tWeeks - 0.3 && t < tGlow - 0.4) vplate(ctx, 'WEEKS LATER...', W / 2, 1180, t, tWeeks - 0.3, 44);
+    if (t > tGlow - 0.4) withT(ctx, W / 2, 1180, pop(t, tGlow - 0.4, 0.45), 0, () => vserif(ctx, 'the whole slope glowed', 0, 0, 70, { italic: true, fill: SUN, glowColor: 'rgba(255,220,120,0.9)' }));
+  },
+
+  // 3 — Teammates by plant names: the tall guy who drinks a lot = Coral Oats. She said it out loud, and blushed.
+  (ctx, t, dur) => {
+    const tNames = when('names', 0, 1.9), tTall = when('tall', 0, 3.0), tCoral = when('coral', 0, 5.6), tLoud = when('loud', 0, 8.3), tBlush = when('blushed', 0, 8.7);
+    backdrop(ctx, 'story', t, dur, 0.5, 0.35, 0.3);
+    const kc = fadeIn(t, 0, 0.6);
+    framed(ctx, 'story', 40, 220 + (1 - kc) * 60, 1000, 685, { alpha: kc });
+    // Name tags hang on a "team".
+    const tags = [['CORAL OATS', 220, 560], ['WATERLAMP', 860, 560], ['NOCTEMINT', 860, 780]];
+    tags.forEach(([s, x, y], i) => {
+      const t0 = i === 0 ? tCoral - 0.3 : tNames - 0.2 + i * 0.3;
+      if (t > t0) withT(ctx, x, y + Math.sin(t * 2 + i) * 6, pop(t, t0, 0.45), (i - 1) * 0.08, () => vplate(ctx, s, 0, 0, t, t0, 28));
+    });
+    // Blush.
+    const kb = fadeIn(t, tBlush - 0.4, 0.4);
+    if (kb > 0) { ctx.fillStyle = `rgba(255,120,140,${0.35 * kb})`; [[470, 470], [600, 470]].forEach(([x, y]) => { ctx.beginPath(); ctx.ellipse(x, y, 34, 18, 0, 0, Math.PI * 2); ctx.fill(); }); }
+    leaves(ctx, t, { n: 12, seed: 27, a: 0.5 });
+    meadow(ctx, { wash: 0.02 });
+    band(ctx, 980, 1300, 0.72);
+    if (t > tNames - 0.3) vplate(ctx, 'TEAMMATES = PLANTS', W / 2, 1060, t, tNames - 0.3, 42);
+    if (t > tTall - 0.3 && t < tLoud - 0.4) vserif(ctx, 'tall + drinks lots of water...', W / 2, 1180, 58, { italic: true, alpha: fadeIn(t, tTall - 0.3) });
+    if (t > tLoud - 0.4) withT(ctx, W / 2, 1180, pop(t, tLoud - 0.4, 0.45), -0.03, () => vserif(ctx, 'said it out loud...', 0, 0, 66, { italic: true, fill: ['#FFFFFF', '#FFE0E6', '#FF8FA8'], glowColor: 'rgba(255,120,150,0.9)' }));
+  },
+
+  // 4 — Starflowers bloom when she's happy, wither when she's sad or embarrassed.
+  (ctx, t, dur) => {
+    const tStar = when('starflowers', 0, 0.0), tBloom = when('bloom', 0, 3.0), tWith = when('wither', 0, 4.9), tEmb = when('embarrassed', 0, 6.2);
+    backdrop(ctx, 'vert', t, dur, 0.5, 0.3, 0.3);
+    const R = 300;
+    roundInset(ctx, 'starflower', 150, 150, 140, W / 2, 620, R * ease.outBack(prog(t, 0, 0.6)));
+    const open = clamp(fadeIn(t, tBloom - 0.4, 0.6) * (1 - 0.6 * prog(t, tWith - 0.2, 0.6))), droop = prog(t, tWith - 0.2, 0.8);
+    for (let i = 0; i < 10; i++) {
+      const a = i / 10 * Math.PI * 2 + 0.3;
+      starflower(ctx, W / 2 + Math.cos(a) * (R + 60), 620 + Math.sin(a) * (R + 60), 1.3, Math.max(0.25, open), t, i, droop);
+    }
+    if (t > tBloom - 0.2 && t < tWith) burst(ctx, t, tBloom - 0.2, W / 2, 620, { n: 30, color: '255,250,200', speed: 600, life: 0.8, size: 7 });
+    leaves(ctx, t, { n: 12, seed: 31, a: 0.5 });
+    meadow(ctx, { wash: 0.02 });
+    band(ctx, 1060, 1300, 0.72);
+    if (t > tStar - 0.2 && t < tBloom - 0.3) vplate(ctx, 'STARFLOWERS', W / 2, 1180, t, tStar - 0.2, 46);
+    if (t > tBloom - 0.3 && t < tWith - 0.3) vserif(ctx, 'happy: they bloom', W / 2, 1180, 72, { italic: true, alpha: fadeIn(t, tBloom - 0.3), fill: SUN, glowColor: 'rgba(255,220,120,0.9)' });
+    if (t > tWith - 0.3) vserif(ctx, 'sad or embarrassed: they wilt', W / 2, 1180, 58, { italic: true, alpha: fadeIn(t, tWith - 0.3), fill: ['#FFFFFF', '#EDE3D2', '#B9A27A'], glowColor: 'rgba(160,140,100,0.9)' });
+  },
+
+  // 5 — Plants talk in a silent, sincere language; she can translate. Five-star Spectro healer.
+  (ctx, t, dur) => {
+    const tTalk = when('talk', 0, 1.1), tTrans = when('translate', 0, 3.8), tStar = when('fivestar', 0, 5.7), tSpec = when('spectro', 0, 6.3), tHeal = when('healer', 0, 6.9);
+    backdrop(ctx, 'key', t, dur, 0.4, 0.4, 0.35);
+    const p1 = 1 - prog(t, tStar - 0.6, 0.4);
+    if (p1 > 0) {
+      ctx.save(); ctx.globalAlpha = p1;
+      framed(ctx, 'key', 190, 200, 700, 830);
+      // Speech bubbles from plants.
+      [[300, 900, '...'], [760, 960, '♪'], [540, 1010, '!']].forEach(([x, y, s], i) => {
+        if (t > tTalk - 0.3 + i * 0.25) withT(ctx, x, y + Math.sin(t * 2 + i) * 6, pop(t, tTalk - 0.3 + i * 0.25, 0.4), 0, () => {
+          ctx.fillStyle = 'rgba(250,255,240,0.95)'; ctx.fill(rectPath(-60, -40, 120, 80, 30)); ctx.fill(polyPath([[-10, 38], [10, 38], [-20, 60]]));
+          vserif(ctx, s, 0, 4, 46, { fill: ['#3E7A35', '#3E7A35'], glowColor: 'rgba(0,0,0,0)' });
+        });
+      });
+      ctx.restore();
+    }
+    if (t > tStar - 0.5) {
+      roundInset(ctx, 'report', 704, 692, 220, W / 2, 500, 270 * ease.outBack(prog(t, tStar - 0.5, 0.6)));
+      fiveStars(ctx, t, tStar, 860);
+      badge(ctx, t, tSpec - 0.2, W / 2 - 150, 1030, 'SPECTRO', '255,225,130', 74);
+      badge(ctx, t, tHeal - 0.2, W / 2 + 150, 1030, 'HEALER', '170,240,110', 74);
+    }
+    leaves(ctx, t, { n: 12, seed: 33, a: 0.5 });
+    meadow(ctx, { wash: 0.02 });
+    band(ctx, 1080, 1300, 0.7 * p1);
+    if (t > tTalk - 0.3 && p1 > 0) { ctx.save(); ctx.globalAlpha = p1; vplate(ctx, 'PLANTS TALK', W / 2, 1110, t, tTalk - 0.3, 44); ctx.restore(); }
+    if (t > tTrans - 0.4 && p1 > 0) { ctx.save(); ctx.globalAlpha = p1; vserif(ctx, '...and she translates', W / 2, 1215, 62, { italic: true, alpha: fadeIn(t, tTrans - 0.4) }); ctx.restore(); }
+  },
+
+  // 6 — Outro: what would your plant nickname be?
+  (ctx, t, dur) => {
+    const tPlant = when('plant', 0, 0.8), tNick = when('nickname', 0, 1.1), tComments = when('comments', 0, 2.8);
+    cover(ctx, 'vert', t, dur, [0.4, 0.3, 1.45], [0.4, 0.32, 1.6]);
+    leaves(ctx, t, { n: 22, seed: 41 });
+    meadow(ctx, { wash: 0.03 });
+    band(ctx, 900, 1290, 0.6 * fadeIn(t, 0, 0.6));
+    if (t > tPlant - 0.6) vserif(ctx, "What's your", W / 2, 1000, 86, { italic: true, alpha: fadeIn(t, tPlant - 0.6, 0.6) });
+    if (t > tNick - 0.4) vserif(ctx, 'plant nickname?', W / 2, 1105, 86, { italic: true, alpha: fadeIn(t, tNick - 0.4, 0.6), fill: SUN, glowColor: 'rgba(255,220,120,0.9)' });
+    if (t > tComments - 0.3) vplate(ctx, 'TELL ME IN THE COMMENTS', W / 2, 1215, t, tComments - 0.3, 38);
+  },
+];
+</script>
+</body>
+</html>

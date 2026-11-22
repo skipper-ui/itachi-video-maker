@@ -1,0 +1,234 @@
+{
+  "title": "Who is Verina? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Verina",
+    "Plant",
+    "Breeder",
+    "botany",
+    "villagers",
+    "mountain",
+    "night",
+    "Tacet",
+    "Discord",
+    "orchids",
+    "moonlight",
+    "nicknames",
+    "Coral",
+    "Oats",
+    "teammates",
+    "starflowers",
+    "bloom",
+    "wither",
+    "talk",
+    "translate",
+    "five-star",
+    "Spectro",
+    "healer"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#B8F06A",
+    "keyword": "#FFE6A8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 676 'Profile Reveal: Nature Calling — Verina': extensive knowledge of botany; always smiling, wishing for every flower to be blessed with the miracle of life. Key art: Plant Breeder; 'If you come across any plants that pique your interest, do let me know!' Affiliation Jinzhou, Attribute Spectro",
+    "Official news 676 lore images: Anecdote from the Mountains (strange sounds from the mountain at night; villagers feared a Tacet Discord, went armed and found a girl digging holes to plant Dim Orchids; 'The flowers told me they want to settle on a slope with moonlight and moist winds'; weeks later the slope glowed with blossoming Dim Orchids); Shy Caretaker (memorized every teammate by plant names, e.g. 'That tall big guy needs a lot of water like Coral Oats'; once called a teammate by their plant name and blushed); Starflower (starflowers grow from her ears and back, withering in sadness or embarrassment and blooming in joy); Plants' Talk ('Plants talk in a silent and sincere language. I can translate their talk for you, if you want.')",
+    "Five-star rarity and healer role: per the game's character listing",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "If you find any plants that pique your interest, she'd love to know. This is Verina, the plant breeder, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.45
+        },
+        {
+          "sound": "soft_hit",
+          "word": "know",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "verina",
+          "offset": -0.4,
+          "volume": 0.55
+        },
+        {
+          "sound": "swish",
+          "word": "breeder",
+          "offset": -0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "One night, villagers heard strange sounds on the mountain. Expecting a Tacet Discord, they went up armed, and found a girl planting orchids.",
+      "sfx": [
+        {
+          "sound": "rumble",
+          "word": "strange",
+          "offset": -0.3,
+          "volume": 0.3
+        },
+        {
+          "sound": "thud",
+          "word": "tacet",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "sound": "swish",
+          "word": "armed",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "soft_hit",
+          "word": "girl",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "The flowers told me they want moonlight, she explained. Weeks later, the whole slope was glowing with blossoms.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "word": "moonlight",
+          "offset": -0.4,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "weeks",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "deep_rise",
+          "word": "glowing",
+          "offset": -0.4,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "She remembers her teammates by plant names. The tall guy who drinks a lot of water? Coral Oats. She once called him that out loud, and blushed.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "names",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "pop",
+          "word": "coral",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "swish",
+          "word": "loud",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "pop",
+          "word": "blushed",
+          "offset": -0.2,
+          "volume": 0.14
+        }
+      ]
+    },
+    {
+      "narration": "Starflowers grow from her ears and back. They bloom when she's happy, and wither when she's sad or embarrassed.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "starflowers",
+          "offset": 0.0,
+          "volume": 0.35
+        },
+        {
+          "sound": "swell_soft",
+          "word": "bloom",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "wither",
+          "offset": -0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "narration": "She says plants talk in a silent, sincere language, and she can translate for you. She's a five-star Spectro healer.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "talk",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "translate",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "spectro",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "So, what would your plant nickname be? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.45
+        },
+        {
+          "sound": "soft_hit",
+          "word": "nickname",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    }
+  ]
+}
