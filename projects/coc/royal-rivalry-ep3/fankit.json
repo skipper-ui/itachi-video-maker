@@ -1,0 +1,90 @@
+{
+  "library": 338,
+  "assets": {
+    "king_point": {
+      "id": 66196,
+      "title": "Barbarian_King_1",
+      "width": 1400
+    },
+    "king_charge": {
+      "id": 66197,
+      "title": "Barbarian_King_2",
+      "width": 1400
+    },
+    "queen_aim": {
+      "id": 66174,
+      "title": "Archer_Queen_5",
+      "width": 1400
+    },
+    "queen_stand": {
+      "id": 66172,
+      "title": "Archer_Queen_3",
+      "width": 1400
+    },
+    "warden": {
+      "id": 52412,
+      "title": "Grand_Warden_1",
+      "width": 1400
+    },
+    "bk_emote": {
+      "id": 168121,
+      "title": "BK_emote",
+      "width": 700
+    },
+    "aq_emote": {
+      "id": 168113,
+      "title": "AQ_emote",
+      "width": 700
+    },
+    "barb_emote_set_3": {
+      "id": 168116,
+      "title": "Barb_emote_set_3",
+      "width": 600
+    },
+    "barb_emote_set_4": {
+      "id": 168115,
+      "title": "Barb_emote_set_4",
+      "width": 600
+    },
+    "archer_emote": {
+      "id": 168112,
+      "title": "Archer_emote",
+      "width": 700
+    },
+    "bg_2026_hammerjam_backgroundonly": {
+      "id": 166893,
+      "title": "BG_2026_HammerJam_BackgroundOnly",
+      "width": 2400
+    },
+    "edrag_1": {
+      "id": 52392,
+      "title": "Troop_HV_Electro_Dragon_1",
+      "width": 1600
+    },
+    "th19": {
+      "id": 168064,
+      "title": "th19_default_2k",
+      "width": 1400
+    },
+    "goblin_07": {
+      "id": 102838,
+      "title": "Goblin_07",
+      "width": 900
+    },
+    "healer": {
+      "id": 65933,
+      "title": "Troop_HV_Healer_3",
+      "width": 1200
+    },
+    "healer_b": {
+      "id": 65931,
+      "title": "Troop_HV_Healer_1",
+      "width": 800
+    },
+    "titan": {
+      "id": 62223,
+      "title": "Troop_HV_Electro_Titan_1",
+      "width": 1600
+    }
+  }
+}

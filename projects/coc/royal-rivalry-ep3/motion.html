@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Royal Rivalry, Episode 3</title>
+<script>
+// Official Supercell Fan Kit art (fankit.json), used under Supercell's Fan Content Policy.
+window.ART = Object.fromEntries(['king_point', 'king_charge', 'queen_aim', 'queen_stand', 'warden', 'bk_emote', 'aq_emote', 'barb_emote_set_3',
+  'barb_emote_set_4', 'archer_emote', 'bg_2026_hammerjam_backgroundonly', 'edrag_1', 'th19', 'goblin_07', 'healer', 'titan']
+  .map(n => [n, `fankit/${n}.png`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/coc/comic.js"></script>
+</head>
+<body>
+<script>
+const BG = 'bg_2026_hammerjam_backgroundonly';
+const half = (tier, side, gap = 24) => { const [x, y, w, h] = tier, hw = (w - gap) / 2; return side ? [x + hw + gap, y, hw, h] : [x, y, hw, h]; };
+const storm = (c, x, y, w, h) => sky(c, x, y, w, h, '#0B1230', '#2C3A6E');
+// The storm sigil: a lightning bolt inside two rings, crackling.
+function sigil(c, t, x, y, r, a = 1) {
+  if (a <= 0) return;
+  c.save(); c.globalAlpha *= a;
+  glow(c, x, y, r * 2.2, '120,200,255', 0.7);
+  c.lineWidth = 10; c.strokeStyle = 'rgba(200,240,255,0.95)'; c.shadowColor = 'rgba(90,180,255,1)'; c.shadowBlur = 30;
+  c.beginPath(); c.arc(x, y, r, 0, Math.PI * 2); c.stroke();
+  c.lineWidth = 5; c.beginPath(); c.arc(x, y, r * 0.78, 0, Math.PI * 2); c.stroke();
+  c.fillStyle = 'rgba(225,248,255,0.95)';
+  c.fill(polyPath([[x + r * 0.1, y - r * 0.62], [x - r * 0.32, y + r * 0.06], [x - r * 0.02, y + r * 0.06], [x - r * 0.14, y + r * 0.62], [x + r * 0.32, y - r * 0.1], [x + r * 0.02, y - r * 0.1]]));
+  c.restore();
+  for (let i = 0; i < 3; i++) { const a0 = t * 2 + i * 2.1; bolt(c, t, x + Math.cos(a0) * r, y + Math.sin(a0) * r, x + Math.cos(a0) * (r + 90), y + Math.sin(a0) * (r + 90), { a: a * 0.8, seed: 40 + i, w: 4 }); }
+}
+
+window.scenes = [
+  // 0 — Recap: the Electro Dragon struck, the Warden fell.
+  (ctx, t, dur) => {
+    const tFell = when('fell', 0, 4.0);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      storm(c, x, y, w, h);
+      art(c, 'th19', x + w / 2 - 120, y + h - 300, 520, { shadow: false });
+      art(c, 'warden', x + w / 2 + 170, y + h - 170, 440, { shadow: false, rot: 1.45, alpha: 0.75 });
+      art(c, 'edrag_1', x + w - 250, y + 560, 440, { shadow: false, flip: true });
+      bolt(c, t, x + w - 320, y + 600, x + w / 2 + 180, y + h - 260, { a: 0.85, seed: 3, w: 12 });
+      withT(c, W / 2, y + 260, ease.outBack(prog(t, 0.1, 0.5)), -0.04, () => {
+        title(c, 'THE ROYAL RIVALRY', 0, -40, 70, { lw: 14 });
+        title(c, 'EPISODE 3', 0, 50, 54, { lw: 12, fill: ['#FFFFFF', '#BFE6FF', '#5EC8FF'] });
+      });
+    }, { from: 'none' });
+    capBox(ctx, t, 0.2, 60, 110, 'Previously...', { size: 40 });
+    comicCredit(ctx);
+  },
+
+  // 1 — Morning: the dragon is gone; the village lies in smoking ruins.
+  (ctx, t, dur) => {
+    const tGone = when('gone', 0, 1.6), tRuins = when('ruins', 0, 4.0);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      coverRect(c, BG, x, y, w, h, 0.5, 0.55, 1.35 - 0.06 * t / dur);
+      c.fillStyle = 'rgba(60,40,30,0.35)'; c.fillRect(x, y, w, h);
+      [[x + 230, y + 720], [x + 560, y + 860], [x + 800, y + 640], [x + 400, y + 1000]].forEach(([sx, sy], i) => smoke(c, t + i * 0.7, 0, sx, sy, { n: 5, size: 55, col: '70,64,60' }));
+    }, { from: 'none' });
+    capBox(ctx, t, 0.1, 60, 110, 'By morning...', { size: 40 });
+    panel(ctx, t, tRuins - 0.6, ...BOT, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#C9B79A', '#EFE3CB');
+      art(c, 'barb_emote_set_3', x + 200, y + h / 2 + 10, 300, { shadow: false });
+      art(c, 'archer_emote', x + w - 220, y + h / 2 + 10, 300, { shadow: false });
+      bubble(c, t, tRuins - 0.3, x + w / 2, y + h / 2 - 40, 'Our village...', x + 330, y + h / 2, { size: 42 });
+    });
+    comicCredit(ctx);
+  },
+
+  // 2 — The Healer's light brings the Warden back: alive, but too weak to stand.
+  (ctx, t, dur) => {
+    const tHeal = when('healer', 0, 0.2), tLight = when('light', 0, 1.8), tBack = when('back', 0, 3.1), tWeak = when('weak', 0, 5.6);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#FFE9B8', '#FFF8E8');
+      const kl = prog(t, tLight - 0.3, 1.2);
+      if (kl > 0) { sunburst(c, x + w / 2, y + h - 240, t, 'rgba(255,230,140,0.6)', 'rgba(255,245,200,0.4)'); glow(c, x + w / 2, y + h - 240, 420 * kl, '255,240,170', 0.8 * kl); }
+      art(c, 'warden', x + w / 2, y + h - 180, 460, { shadow: false, rot: 1.45 - 0.25 * ease.outCubic(prog(t, tBack - 0.3, 0.8)) });
+      const kh = ease.outCubic(prog(t, tHeal - 0.3, 1.0));
+      art(c, 'healer', x + lerp(w + 300, w / 2 + 60, kh), y + 360 + Math.sin(t * 2) * 15, 560, { shadow: false });
+      for (let i = 0; i < 12; i++) { const k = ((t * 0.5 + i / 12) % 1); if (kl > 0) { c.fillStyle = `rgba(255,240,170,${kl * Math.sin(k * Math.PI)})`; c.fill(new Path2D(`M ${x + 260 + i * 45} ${y + h - 150 - k * 500} m -12 0 l 12 -12 l 12 12 l -12 12 z`)); } }
+    }, { from: 'none' });
+    capBox(ctx, t, tHeal - 0.3, 60, 110, 'The Healer arrived!', { size: 40 });
+    panel(ctx, t, tWeak - 0.8, ...BOT, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#DCCFF5', '#F4EFFF');
+      art(c, 'warden', x + 230, y + h / 2 + 50, 330, { shadow: false });
+      bubble(c, t, tWeak - 0.4, x + 660, y + h / 2 - 10, 'I... need to sit down.', x + 400, y + h / 2 - 40, { size: 40, mw: 380 });
+    });
+    comicCredit(ctx);
+  },
+
+  // 3 — Of course, the King and Queen blamed each other.
+  (ctx, t, dur) => {
+    const tKing = when('king', 0, 1.1), tBlame = when('blamed', 0, 2.0);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      speedLines(c, x, y, w, h, x + w / 2, y + h / 2, t, 'rgba(200,60,40,0.15)', 60);
+      art(c, 'king_point', x + 280, y + h - 380, 700, { shadow: false });
+      art(c, 'queen_stand', x + w - 270, y + h - 380, 720, { shadow: false, flip: true });
+      bubble(c, t, tKing - 0.4, x + 300, y + 170, 'You shot my HELMET!', x + 290, y + 380, { size: 44, shout: true, mw: 360 });
+      bubble(c, t, tBlame - 0.4, x + w - 290, y + 330, 'You charged like a BOAR!', x + w - 270, y + 520, { size: 44, shout: true, mw: 360 });
+    }, { bg: '#FFD9C2', from: 'none' });
+    capBox(ctx, t, 0.0, 60, 110, 'And of course...', { size: 40 });
+    comicCredit(ctx);
+  },
+
+  // 4 — The Warden whispers: "That dragon did not come on its own."
+  (ctx, t, dur) => {
+    const tWhisp = when('whispered', 0, 0.8), tSil = when('silenced', 0, 1.8), tDragon = when('dragon', 0, 3.6);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#2E2A4A', '#5A5480');
+      glow(c, x + w / 2, y + h / 2, 520, '255,220,140', 0.25);
+      art(c, 'warden', x + w / 2, y + h - 420, 780, { shadow: false });
+      bubble(c, t, tDragon - 0.3, x + w / 2, y + 190, 'That dragon... did not come on its own.', x + w / 2 + 20, y + 400, { size: 42, mw: 560 });
+    }, { from: 'none' });
+    capBox(ctx, t, tWhisp - 0.3, 60, 110, 'The Warden whispered...', { size: 40 });
+    const [lx, ly, lw, lh] = half(BOT, 0), [rx, ry, rw, rh] = half(BOT, 1);
+    panel(ctx, t, tSil - 0.4, lx, ly, lw, lh, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#3A3F66', '#6A73A0');
+      art(c, 'bk_emote', x + w / 2, y + h / 2 + 40, 280, { shadow: false });
+      bubble(c, t, tSil, x + w / 2 + 120, y + 70, '!?', x + w / 2 + 40, y + 140, { size: 44 });
+    });
+    panel(ctx, t, tSil - 0.2, rx, ry, rw, rh, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#3A3F66', '#6A73A0');
+      art(c, 'aq_emote', x + w / 2, y + h / 2 + 40, 300, { shadow: false });
+      bubble(c, t, tSil + 0.2, x + w / 2 - 120, y + 70, '!?', x + w / 2 - 40, y + 140, { size: 44 });
+    });
+    comicCredit(ctx);
+  },
+
+  // 5 — In the ashes, the Queen finds a strange mark crackling with blue lightning.
+  (ctx, t, dur) => {
+    const tAsh = when('ashes', 0, 0.4), tQueen = when('queen', 0, 1.4), tMark = when('mark', 0, 2.7), tCrack = when('crackling', 0, 3.9);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#2B2622', '#4A4038');
+      const r = rng(9); for (let i = 0; i < 60; i++) { c.fillStyle = `rgba(${90 + r() * 40},${80 + r() * 30},${70 + r() * 30},0.8)`; c.beginPath(); c.ellipse(x + r() * w, y + h * 0.55 + r() * h * 0.45, 30 + r() * 60, 10 + r() * 20, 0, 0, Math.PI * 2); c.fill(); }
+      art(c, 'queen_aim', x + 270, y + h - 520, 620, { shadow: false });
+      const km = ease.outBack(prog(t, tMark - 0.4, 0.6));
+      sigil(c, t, x + w - 300, y + h - 330, 170 * km, km);
+      if (t > tCrack - 0.2) sfxWord(c, t, tCrack - 0.2, 'KZZT!', x + w - 260, y + 260, 90, 0.1, ['#FFFFFF', '#BFE6FF', '#2E8BFF']);
+      bubble(c, t, tMark + 0.3, x + 310, y + 180, "What is THIS?", x + 300, y + 420, { size: 46 });
+    }, { from: 'none' });
+    capBox(ctx, t, tAsh - 0.3, 60, 110, 'In the ashes...', { size: 40 });
+    comicCredit(ctx);
+  },
+
+  // 6 — Someone sent that dragon. Someone with the power of a storm. To be continued.
+  (ctx, t, dur) => {
+    const tSent = when('sent', 0, 0.5), tStorm = when('storm', 0, 2.9), tCont = when('continued', 0, 4.2), tWho = when('who', 0, 5.3);
+    const [sx, sy] = shakeAt(t, tStorm, 18, 4);
+    paper(ctx, t);
+    ctx.save(); ctx.translate(sx, sy);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#04060F', '#101A3A');
+      const ks = prog(t, tStorm - 0.6, 1.0);
+      // The sender, hidden in storm clouds: only a faint shape and her lightning show.
+      if (ks > 0) {
+        art(c, 'titan', x + w / 2, y + h / 2 + 40, 900, { shadow: false, alpha: 0.85 * ks });
+        c.fillStyle = `rgba(4,6,15,${0.82 * ks})`; c.fillRect(x, y, w, h);
+        bolt(c, t, x + 150, y, x + 300, y + h * 0.6, { a: ks, seed: 61 });
+        bolt(c, t, x + w - 150, y, x + w - 320, y + h * 0.55, { a: ks, seed: 62 });
+        const eo = ease.outCubic(prog(t, tStorm - 0.1, 0.5));
+        [[x + w / 2 - 50, y + 400], [x + w / 2 + 50, y + 400]].forEach(([ex, ey]) => { glow(c, ex, ey, 90, '150,220,255', 0.9 * eo); c.fillStyle = `rgba(230,250,255,${eo})`; c.beginPath(); c.ellipse(ex, ey, 26, 10 * eo + 1, 0, 0, Math.PI * 2); c.fill(); });
+      }
+      sigil(c, t, x + w / 2, y + 230, 80, 1 - ks);
+    }, { from: 'none' });
+    ctx.restore();
+    capBox(ctx, t, tSent - 0.3, 60, 110, 'Someone SENT that dragon...', { size: 40, bg: '#FF9A7A' });
+    if (t > tCont - 0.3) withT(ctx, W / 2, 1130, ease.outBack(prog(t, tCont - 0.3, 0.5)), -0.04, () => title(ctx, 'TO BE CONTINUED...', 0, 0, 74, { fill: ['#FFFFFF', '#FFD86B', '#FF7A1E'] }));
+    panel(ctx, t, tWho - 0.4, ...BOT, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h / 2, t, '#BFE6FF', '#8FCBFF');
+      title(c, 'WHO IS IT?', x + w / 2, y + h / 2 - 20, 90, { fill: ['#FFFFFF', '#BFE6FF', '#2E8BFF'] });
+      title(c, 'Comment your guess!', x + w / 2, y + h / 2 + 80, 44, { fill: ['#FFFFFF', '#FFF1A8', '#FFC83D'] });
+    });
+    comicCredit(ctx);
+  },
+];
+</script>
+</body>
+</html>
