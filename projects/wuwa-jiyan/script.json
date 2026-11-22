@@ -1,0 +1,256 @@
+{
+  "title": "Who is Jiyan? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Jiyan",
+    "General",
+    "Midnight",
+    "Rangers",
+    "Qingloong",
+    "winds",
+    "dragon",
+    "medic",
+    "medical",
+    "gourd",
+    "pill",
+    "candy",
+    "infinite",
+    "lance",
+    "siege",
+    "Mutant",
+    "Resonator",
+    "dust",
+    "vambrace",
+    "Knell",
+    "Square",
+    "flowers",
+    "fallen",
+    "five-star",
+    "Aero",
+    "broadblade",
+    "inspection"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#7FFFE0",
+    "keyword": "#FFE6A8",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 795 'Profile Reveal: General of the Midnight Rangers — Jiyan': leader of the Midnight Rangers; conjures a powerful Qingloong from the winds; Attribute Aero, 5 stars, affiliation Jinzhou",
+    "Official news 795 lore images: Two Gourds? (one is a communication terminal, the other a gourd-shaped pillcase; born into a medical family, he first served as an army medic; someone saw him handing out candies from the pillcase to kids, starting a myth the gourd has infinite space inside); Sword? Or Lance? (lance fighting wasn't his strong suit; appointed ad hoc leader in a devastating siege, the winds converged and transformed into the lance he now wields); A Case of OCD? Or... ('I still see dust on window sills... Clean them up.' 'Third row, fourth from the left... Adjust your vambrace. It's off-centered.'); Never Forget (the flowers in Knell Square were planted for the fallen; each time he returns from a fierce battle he plants new seeds); Resonance Evaluation Report (Classification: Mutant Resonator); Imposing Qingloong (wields a broadblade in one hand and a Qingloong lance in the other)",
+    "Official news 176 profile: Weapon Claymore (in-game: Broadblade)",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "He bends the wind itself, and shapes it into a dragon. This is Jiyan, General of the Midnight Rangers, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "whoosh",
+          "word": "wind",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "soft_hit",
+          "word": "dragon",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "jiyan",
+          "offset": -0.4,
+          "volume": 0.6
+        },
+        {
+          "sound": "swish",
+          "word": "general",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Before he was a general, he was an army medic, born into a medical family. He still carries a gourd-shaped pill case for first aid.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "medic",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "gourdshaped",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "pop",
+          "word": "aid",
+          "offset": -0.2,
+          "volume": 0.16
+        }
+      ]
+    },
+    {
+      "narration": "Someone once saw him handing out candy from it to kids. Now there's a myth that the gourd has infinite space inside.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "candy",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "pop",
+          "word": "kids",
+          "offset": -0.2,
+          "volume": 0.14
+        },
+        {
+          "sound": "soft_hit",
+          "word": "myth",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "deep_rise",
+          "word": "infinite",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Funny thing: he was never great with a lance. But during a devastating siege, the winds converged and became the lance he wields today.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "lance",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "rumble",
+          "word": "siege",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "whoosh",
+          "word": "winds",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "impact",
+          "word": "became",
+          "offset": -0.1,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "He also runs a very tight ship. Dust on the window sills? Clean it up. Third row, fourth from the left: your vambrace is off-center.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "ship",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "clean",
+          "offset": -0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "tick",
+          "word": "third",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "thud",
+          "word": "offcenter",
+          "offset": -0.1,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Yet after every battle, he plants new seeds in Knell Square, where the flowers honor the fallen. He's a five-star Aero Resonator.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "word": "battle",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "knell",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "fallen",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "aero",
+          "offset": -0.3,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "So, would you survive Jiyan's inspection? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "inspection",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
