@@ -1,0 +1,239 @@
+{
+  "title": "The Royal Rivalry, Episode 1: Who Is the Greatest?",
+  "series": "The Royal Rivalry (Clash of Clans fan comic)",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "King",
+    "Queen",
+    "Barbarian",
+    "Archer",
+    "kingdom",
+    "greatest",
+    "hero",
+    "Warden",
+    "contest",
+    "goblin",
+    "goblins",
+    "raid",
+    "alone",
+    "night",
+    "mine",
+    "watching",
+    "dark",
+    "continued"
+  ],
+  "voice_id": "IKne3meq5aSn9XLyUdCD",
+  "voice_name": "Charlie",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_strategy",
+    "volume": 0.22
+  },
+  "sources": [
+    "Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."
+  ],
+  "scenes": [
+    {
+      "narration": "In a kingdom of mighty walls and shining gold, two heroes kept the peace: the Barbarian King, and the Archer Queen.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "at": 0.1,
+          "volume": 0.45
+        },
+        {
+          "sound": "stamp",
+          "at": 0.35,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "barbarian",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "archer",
+          "offset": -0.3,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "narration": "There was just one problem. They could not agree on anything.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "at": 0.15,
+          "volume": 0.45
+        },
+        {
+          "sound": "pop",
+          "word": "problem",
+          "offset": 0.5,
+          "volume": 0.45
+        },
+        {
+          "sound": "thud",
+          "word": "agree",
+          "offset": -0.2,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "Not who led the army. Not who guarded the gold. Not even whose statue belonged in the town square.",
+      "sfx": [
+        {
+          "sound": "pop",
+          "word": "not",
+          "offset": 0.05,
+          "nth": 0,
+          "volume": 0.4
+        },
+        {
+          "sound": "pop",
+          "word": "not",
+          "offset": 0.05,
+          "nth": 1,
+          "volume": 0.4
+        },
+        {
+          "sound": "pop",
+          "word": "not",
+          "offset": 0.05,
+          "nth": 2,
+          "volume": 0.4
+        },
+        {
+          "sound": "whoosh",
+          "word": "statue",
+          "offset": -0.4,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Soon, the whole village took sides. Barbarians cheered for their King. Archers backed their Queen.",
+      "sfx": [
+        {
+          "sound": "whoosh",
+          "word": "sides",
+          "offset": -0.3,
+          "volume": 0.35
+        },
+        {
+          "sound": "march",
+          "word": "barbarians",
+          "offset": -0.3,
+          "volume": 0.4
+        },
+        {
+          "sound": "pop",
+          "word": "archers",
+          "offset": -0.3,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "Finally, the Grand Warden had heard enough. The next goblin raid would settle it. Whoever stopped it alone would be crowned the greatest hero.",
+      "sfx": [
+        {
+          "sound": "impact",
+          "word": "enough",
+          "offset": -0.15,
+          "volume": 0.55
+        },
+        {
+          "sound": "whoosh",
+          "word": "raid",
+          "offset": -0.4,
+          "volume": 0.35
+        },
+        {
+          "sound": "tick",
+          "word": "alone",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "levelup",
+          "word": "crowned",
+          "offset": -0.3,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "That very night, the goblins came. And both heroes charged at the very same goblin.",
+      "sfx": [
+        {
+          "sound": "tick",
+          "word": "night",
+          "offset": -0.4,
+          "volume": 0.3
+        },
+        {
+          "sound": "tap",
+          "word": "goblins",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "whoosh",
+          "word": "both",
+          "offset": 0.0,
+          "volume": 0.45
+        },
+        {
+          "sound": "impact",
+          "word": "goblin",
+          "offset": -0.05,
+          "nth": 0,
+          "volume": 0.55
+        }
+      ]
+    },
+    {
+      "narration": "But while they fought over one tiny goblin, something much bigger was watching from the dark. To be continued. Team King or team Queen? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "ding",
+          "word": "fought",
+          "offset": 0.0,
+          "volume": 0.3
+        },
+        {
+          "sound": "rumble",
+          "word": "bigger",
+          "offset": -0.4,
+          "volume": 0.5
+        },
+        {
+          "sound": "thud",
+          "word": "continued",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "sound": "pop",
+          "word": "team",
+          "offset": -0.4,
+          "nth": 0,
+          "volume": 0.45
+        },
+        {
+          "sound": "pop",
+          "word": "team",
+          "offset": -0.4,
+          "nth": 1,
+          "volume": 0.45
+        }
+      ]
+    }
+  ]
+}

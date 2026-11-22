@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Royal Rivalry, Episode 1</title>
+<script>
+// Official Supercell Fan Kit art (fankit.json), used under Supercell's Fan Content Policy.
+window.ART = Object.fromEntries(['king_point', 'king_charge', 'king_army', 'queen_stand', 'queen_aim', 'queen_leap', 'warden',
+  'barbarian', 'archer', 'bk_emote', 'aq_emote', 'archer_emote', 'barb_emote', 'barb_emote_set_1', 'barb_emote_set_3',
+  'barb_emote_set_4', 'goblin_03', 'goblin_04', 'goblin_06', 'goblin_07', 'bg_2026_hammerjam_backgroundonly']
+  .map(n => [n, `fankit/${n}.png`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/coc/comic.js"></script>
+</head>
+<body>
+<script>
+const BG = 'bg_2026_hammerjam_backgroundonly';
+const half = (tier, side, gap = 24) => { const [x, y, w, h] = tier, hw = (w - gap) / 2; return side ? [x + hw + gap, y, hw, h] : [x, y, hw, h]; };
+
+window.scenes = [
+  // 0 — Title page: a kingdom of walls and gold; the Barbarian King and the Archer Queen.
+  (ctx, t, dur) => {
+    const tBK = when('barbarian', 0, 4.5), tAQ = when('archer', 0, 6.2);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      coverRect(c, BG, x, y, w, h, 0.5 + 0.04 * t / dur, 0.55, 1.15 + 0.08 * t / dur);
+      c.fillStyle = vgrad(c, y, y + h, [[0, 'rgba(0,0,0,0)'], [0.65, 'rgba(0,0,0,0.1)'], [1, 'rgba(20,10,0,0.55)']]); c.fillRect(x, y, w, h);
+      withT(c, W / 2, y + 260, ease.outBack(prog(t, 0.2, 0.5)), -0.04, () => {
+        title(c, 'THE ROYAL', 0, -70, 110, { lw: 22 });
+        title(c, 'RIVALRY', 0, 60, 150, { lw: 28, fill: ['#FFFFFF', '#FFD86B', '#FF8A1E'] });
+      });
+      capBox(c, t, 0.6, x + 30, y + h - 110, 'Episode 1: Who is the greatest?', { size: 34 });
+    }, { from: 'none' });
+    const [lx, ly, lw, lh] = half(BOT, 0), [rx, ry, rw, rh] = half(BOT, 1);
+    panel(ctx, t, tBK - 0.3, lx, ly, lw, lh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h, t, '#FFB65C', '#FF9A3A');
+      art(c, 'king_point', x + w / 2, y + h / 2 + 40, 420, { shadow: false });
+      capBox(c, t, tBK, x + 14, y + 14, 'Barbarian King', { size: 26 });
+    });
+    panel(ctx, t, tAQ - 0.3, rx, ry, rw, rh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h, t, '#C9A2FF', '#A97BFF');
+      art(c, 'queen_stand', x + w / 2, y + h / 2 + 50, 430, { shadow: false });
+      capBox(c, t, tAQ, x + 14, y + 14, 'Archer Queen', { size: 26 });
+    });
+    comicCredit(ctx);
+  },
+
+  // 1 — One problem: they could not agree on anything.
+  (ctx, t, dur) => {
+    const tProb = when('problem', 0, 0.9), tAgree = when('agree', 0, 2.7);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      speedLines(c, x, y, w, h, x + 300, y + h - 300, t);
+      art(c, 'king_point', x + 330, y + h - 420, 820, { shadow: false });
+      bubble(c, t, 0.15, x + 700, y + 230, "I'm the greatest hero in the kingdom!", x + 470, y + 430, { size: 48, mw: 440 });
+    }, { bg: '#FFE7B8', from: 'none' });
+    panel(ctx, t, tProb + 0.3, ...BOT, (c, x, y, w, h) => {
+      speedLines(c, x, y, w, h, x + w - 220, y + h / 2, t, 'rgba(90,40,140,0.15)');
+      art(c, 'queen_aim', x + w - 230, y + h / 2 + 30, 400, { shadow: false, flip: false });
+      bubble(c, t, tProb + 0.5, x + 340, y + h / 2, "You can't even aim!", x + 620, y + h / 2 - 40, { size: 44, mw: 420 });
+    }, { bg: '#EBDDFF' });
+    if (t > tAgree - 0.2) sfxWord(ctx, t, tAgree - 0.2, 'GRRR!', W / 2 + 230, 1180, 90, 0.08, ['#FFFFFF', '#FF9A9A', '#E02E2E']);
+    comicCredit(ctx);
+  },
+
+  // 2 — Not who led the army. Not who guarded the gold. Not even whose statue went in the square.
+  (ctx, t, dur) => {
+    const beats = [[when('not', 0, 0.0), 'Who leads the army?'], [when('not', 1, 1.7), 'Who guards the gold?'], [when('not', 2, 3.6), 'Whose statue?']];
+    const cur = beats.filter(([b]) => t >= b - 0.15).length - 1;
+    paper(ctx, t);
+    const [lx, ly, lw, lh] = half(TOP, 0), [rx, ry, rw, rh] = half(TOP, 1);
+    panel(ctx, t, 0, lx, ly, lw, lh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h * 0.55, t, '#FFCF7A', '#FFB347');
+      art(c, 'bk_emote', x + w / 2, y + h * 0.6, 470, { shadow: false });
+    }, { from: 'none' });
+    panel(ctx, t, 0, rx, ry, rw, rh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h * 0.55, t, '#D9B8FF', '#B894FF');
+      art(c, 'aq_emote', x + w / 2, y + h * 0.6, 520, { shadow: false });
+    }, { from: 'none' });
+    if (cur >= 0) {
+      const t0 = beats[cur][0];
+      capBox(ctx, t, t0 - 0.15, 60, 110, beats[cur][1], { size: 40 });
+      bubble(ctx, t, t0 + 0.05, lx + lw / 2 - 40, ly + 330, 'ME!', lx + lw / 2, ly + 500, { size: 64, shout: true });
+      bubble(ctx, t, t0 + 0.2, rx + rw / 2 + 40, ry + 330, 'NO, ME!', rx + rw / 2, ry + 500, { size: 56, shout: true });
+    }
+    const tSt = when('statue', 0, 4.4);
+    panel(ctx, t, tSt - 0.4, ...BOT, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#9FDBFF', '#E9F7FF');
+      c.fillStyle = '#B9B2A4'; c.fillRect(x + w / 2 - 150, y + h - 150, 300, 150); c.fillRect(x + w / 2 - 190, y + h - 170, 380, 30);
+      c.lineWidth = 6; c.strokeStyle = INK; c.strokeRect(x + w / 2 - 150, y + h - 150, 300, 150); c.strokeRect(x + w / 2 - 190, y + h - 170, 380, 30);
+      title(c, '???', x + w / 2, y + h - 250, 110, { fill: ['#FFFFFF', '#DDDDDD', '#AAAAAA'] });
+      art(c, 'king_charge', x + 150, y + h / 2 + 30, 300, { shadow: false });
+      art(c, 'queen_aim', x + w - 150, y + h / 2 + 30, 300, { shadow: false });
+    });
+    comicCredit(ctx);
+  },
+
+  // 3 — The village took sides: Barbarians for the King, Archers for the Queen.
+  (ctx, t, dur) => {
+    const tSides = when('sides', 0, 1.8), tBarb = when('barbarians', 0, 2.9), tArch = when('archers', 0, 5.4);
+    paper(ctx, t);
+    const [lx, ly, lw, lh] = half(TOP, 0), [rx, ry, rw, rh] = half(TOP, 1);
+    panel(ctx, t, tBarb - 0.3, lx, ly, lw, lh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h * 0.5, t, '#FFCF7A', '#FFB347');
+      art(c, 'barb_emote', x + w / 2, y + h * 0.62, 560, { shadow: false });
+      bubble(c, t, tBarb + 0.1, x + w / 2, y + 170, 'KING! KING!', x + w / 2, y + 330, { size: 52, shout: true });
+    });
+    panel(ctx, t, tArch - 0.3, rx, ry, rw, rh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h * 0.5, t, '#9EE89A', '#6FD06A');
+      art(c, 'archer_emote', x + w / 2, y + h * 0.62, 460, { shadow: false });
+      bubble(c, t, tArch + 0.1, x + w / 2, y + 170, 'QUEEN, obviously.', x + w / 2, y + 330, { size: 40, mw: 300 });
+    });
+    panel(ctx, t, tSides - 0.3, ...BOT, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#FFE0A8', '#FFF6E0');
+      for (let i = 0; i < 3; i++) art(c, 'barbarian', x + 90 + i * 110, y + h / 2 + 40 + (i % 2) * 20, 250, { shadow: false });
+      for (let i = 0; i < 3; i++) art(c, 'archer', x + w - 90 - i * 110, y + h / 2 + 40 + (i % 2) * 20, 250, { shadow: false, flip: true });
+      sfxWord(c, t, tSides, 'VS', x + w / 2, y + h / 2, 110, -0.1, ['#FFFFFF', '#FF9A9A', '#E02E2E']);
+    });
+    if (t < tBarb - 0.3) capBox(ctx, t, tSides - 0.4, 60, 120, 'The whole village took sides...', { size: 38 });
+    comicCredit(ctx);
+  },
+
+  // 4 — The Grand Warden: "ENOUGH!" The contest: stop the next goblin raid alone, be crowned greatest.
+  (ctx, t, dur) => {
+    const tEnough = when('enough', 0, 2.1), tRaid = when('raid', 0, 4.0), tAlone = when('alone', 0, 6.2), tCrown = when('crowned', 0, 7.4);
+    const [sx, sy] = shakeAt(t, tEnough, 18, 6);
+    paper(ctx, t);
+    ctx.save(); ctx.translate(sx, sy);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#C9B6FF', '#F2ECFF');
+      if (t > tEnough - 0.2) speedLines(c, x, y, w, h, x + w / 2, y + h * 0.55, t, 'rgba(80,40,160,0.2)', 60);
+      art(c, 'warden', x + w / 2 + 120, y + h - 430, 820, { shadow: false });
+      bubble(c, t, tEnough - 0.15, x + 330, y + 230, 'ENOUGH!!', x + 520, y + 470, { size: 92, shout: true });
+    }, { from: 'none' });
+    ctx.restore();
+    panel(ctx, t, tRaid - 0.4, ...BOT, (c, x, y, w, h) => {
+      c.fillStyle = '#F2DFAE'; c.fillRect(x, y, w, h);
+      c.strokeStyle = 'rgba(120,80,30,0.25)'; c.lineWidth = 3; for (let i = 0; i < 6; i++) { c.beginPath(); c.moveTo(x + 40, y + 60 + i * 52); c.lineTo(x + w - 40, y + 60 + i * 52); c.stroke(); }
+      title(c, 'THE CONTEST', x + 300, y + 80, 56, { fill: ['#FFFFFF', '#FFD86B', '#C97A1E'] });
+      c.font = `38px ${FONT}`; c.fillStyle = INK; c.textAlign = 'left';
+      if (t > tRaid - 0.2) c.fillText('1. Stop the next goblin raid', x + 50, y + 180);
+      if (t > tAlone - 0.2) { c.fillText('2. ALONE', x + 50, y + 245); }
+      if (t > tCrown - 0.3) c.fillText('Prize: GREATEST HERO', x + 50, y + 310);
+      if (t > tCrown - 0.3) crown(c, x + w - 170, y + h / 2 + 10, 1.1 * ease.outBack(prog(t, tCrown - 0.3, 0.5)));
+    }, { bg: '#F2DFAE' });
+    comicCredit(ctx);
+  },
+
+  // 5 — That night the goblins came; both heroes charged at the very same goblin.
+  (ctx, t, dur) => {
+    const tNight = when('night', 0, 0.7), tGob = when('goblins', 0, 1.5), tBoth = when('both', 0, 3.0), tSame = when('same', 0, 4.9), tHit = when('goblin', 0, 5.3);
+    paper(ctx, t);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#0E1638', '#33427A');
+      glow(c, x + w - 180, y + 170, 160, '240,240,210', 0.5); c.fillStyle = '#FFF8DC'; c.beginPath(); c.arc(x + w - 180, y + 170, 70, 0, Math.PI * 2); c.fill();
+      const r = rng(5); for (let i = 0; i < 40; i++) { c.fillStyle = `rgba(255,255,255,${0.4 + 0.5 * r()})`; c.beginPath(); c.arc(x + r() * w, y + r() * h * 0.6, 2 + r() * 2, 0, Math.PI * 2); c.fill(); }
+      const kg = prog(t, tGob - 0.4, 3.0);
+      art(c, 'goblin_03', x + lerp(-120, 380, kg), y + h - 250, 330, { shadow: false });
+      art(c, 'goblin_06', x + lerp(-320, 160, kg), y + h - 300, 420, { shadow: false });
+      art(c, 'goblin_04', x + lerp(-520, -40, kg) + 700, y + h - 330, 470, { shadow: false, alpha: fadeOrZero(t, tGob) });
+      sfxWord(c, t, tGob, 'SNEAK... SNEAK...', x + w / 2, y + 330, 64, -0.06, ['#E8FFE0', '#9BE08A', '#3E9A3A']);
+    }, { from: 'none' });
+    capBox(ctx, t, tNight - 0.4, 60, 110, 'That very night...', { size: 40 });
+    panel(ctx, t, tBoth - 0.4, ...BOT, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#FFE6A8', '#FFF6E0');
+      speedLines(c, x, y, w, h, x + w / 2, y + h / 2, t);
+      const kc = ease.inCubic(prog(t, tBoth, tHit - tBoth));
+      art(c, 'king_charge', x + lerp(140, 380, kc), y + h / 2 + 20, 330, { shadow: false });
+      art(c, 'queen_leap', x + w - lerp(140, 380, kc), y + h / 2 + 20, 330, { shadow: false, flip: true });
+      art(c, 'goblin_03', x + w / 2, y + h - 80, 150, { shadow: false });
+      bubble(c, t, tBoth + 0.4, x + 170, y + 70, 'MINE!', x + 220, y + 160, { size: 40, shout: true });
+      bubble(c, t, tBoth + 0.6, x + w - 170, y + 70, 'MINE!', x + w - 220, y + 160, { size: 40, shout: true });
+      if (t > tHit - 0.05) { flash(c, t, tHit - 0.05, { color: '255,255,255', peak: 0.8, life: 0.3 }); sfxWord(c, t, tHit - 0.05, 'BONK!', x + w / 2, y + h / 2 - 40, 130, -0.12, ['#FFFFFF', '#FFE15A', '#FF7A1E']); }
+    });
+    comicCredit(ctx);
+  },
+
+  // 6 — Something bigger watches from the dark. To be continued. Team King or Team Queen?
+  (ctx, t, dur) => {
+    const tFought = when('fought', 0, 0.7), tBig = when('bigger', 0, 3.5), tCont = when('continued', 0, 5.9), tTeam = when('team', 0, 7.0), tComm = when('comments', 0, 9.8);
+    paper(ctx, t);
+    const dark = prog(t, tBig - 0.8, 1.2);
+    panel(ctx, t, 0, ...TOP, (c, x, y, w, h) => {
+      sky(c, x, y, w, h, '#2A2E55', '#596494');
+      // The two heroes in a dizzy heap, stars circling.
+      art(c, 'king_charge', x + 380, y + h - 330, 520, { shadow: false, rot: -0.35 });
+      art(c, 'queen_leap', x + 620, y + h - 330, 520, { shadow: false, rot: 0.4, flip: true });
+      for (let i = 0; i < 5; i++) { const a = t * 3 + i * 1.256; withT(c, x + 500 + Math.cos(a) * 160, y + h - 620 + Math.sin(a) * 40, 1, a, () => { c.fillStyle = '#FFE15A'; c.fill(starPath(28, 12)); c.lineWidth = 4; c.strokeStyle = INK; c.stroke(starPath(28, 12)); }); }
+      art(c, 'goblin_07', x + lerp(w - 160, w + 300, prog(t, tFought, 3)), y + h - 260, 380, { shadow: false });
+      // Darkness falls and a giant shape opens its eyes.
+      if (dark > 0) {
+        c.fillStyle = `rgba(4,2,10,${0.86 * dark})`; c.fillRect(x, y, w, h);
+        c.fillStyle = `rgba(10,6,20,${dark})`;
+        c.beginPath(); c.moveTo(x, y + 420); c.lineTo(x + 220, y + 180); c.lineTo(x + 420, y + 300); c.lineTo(x + 560, y + 90); c.lineTo(x + 760, y + 280); c.lineTo(x + w, y + 160); c.lineTo(x + w, y); c.lineTo(x, y); c.fill();
+        const eo = ease.outCubic(prog(t, tBig - 0.2, 0.6)), blink = Math.sin(t * 1.3) > 0.97 ? 0.1 : 1;
+        [[x + 400, y + 300], [x + 640, y + 300]].forEach(([ex, ey]) => {
+          glow(c, ex, ey, 140, '255,60,40', 0.8 * eo);
+          c.fillStyle = `rgba(255,${120 + 80 * eo | 0},60,${eo})`; c.beginPath(); c.ellipse(ex, ey, 70, 26 * eo * blink + 1, 0, 0, Math.PI * 2); c.fill();
+        });
+      }
+    }, { from: 'none' });
+    if (t < tBig - 0.8) capBox(ctx, t, tFought - 0.4, 60, 110, 'Over ONE tiny goblin...', { size: 40 });
+    if (t > tBig - 0.3) capBox(ctx, t, tBig - 0.3, 60, 110, 'Meanwhile, in the dark...', { size: 40, bg: '#FF9A7A' });
+    if (t > tCont - 0.3) withT(ctx, W / 2, 1180, ease.outBack(prog(t, tCont - 0.3, 0.5)), -0.04, () => title(ctx, 'TO BE CONTINUED...', 0, 0, 74, { fill: ['#FFFFFF', '#FFD86B', '#FF7A1E'] }));
+    const [lx, ly, lw, lh] = half(BOT, 0), [rx, ry, rw, rh] = half(BOT, 1);
+    panel(ctx, t, tTeam - 0.4, lx, ly, lw, lh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h / 2, t, '#FFCF7A', '#FFB347');
+      art(c, 'bk_emote', x + w / 2, y + h / 2 + 30, 290, { shadow: false });
+      capBox(c, t, tTeam - 0.2, x + 14, y + 14, 'Team King', { size: 30 });
+    });
+    panel(ctx, t, when('team', 1, 8.1) - 0.4, rx, ry, rw, rh, (c, x, y, w, h) => {
+      sunburst(c, x + w / 2, y + h / 2, t, '#D9B8FF', '#B894FF');
+      art(c, 'aq_emote', x + w / 2, y + h / 2 + 30, 310, { shadow: false });
+      capBox(c, t, when('team', 1, 8.1) - 0.2, x + 14, y + 14, 'Team Queen', { size: 30 });
+    });
+    comicCredit(ctx);
+  },
+];
+function fadeOrZero(t, t0) { return ease.outCubic(prog(t, t0 + 0.6, 0.6)); }
+</script>
+</body>
+</html>
