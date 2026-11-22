@@ -1,0 +1,269 @@
+{
+  "title": "Who is Calcharo? Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Calcharo",
+    "Ghost",
+    "Hounds",
+    "mercenary",
+    "Ruthless",
+    "Vengeful",
+    "Unforgiving",
+    "rumors",
+    "crusade",
+    "police",
+    "legends",
+    "unprofitable",
+    "information",
+    "contacts",
+    "Shell",
+    "Credit",
+    "informers",
+    "snack",
+    "overclocking",
+    "Liberation",
+    "mirages",
+    "thorns",
+    "nameplate",
+    "dog",
+    "puppy",
+    "hardtack",
+    "five-star",
+    "Electro",
+    "hire"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.3
+  },
+  "caption": {
+    "active": "#B9A2FF",
+    "keyword": "#FFD27A",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://wutheringwaves.kurogames.com official news 710 'Profile Reveal: Phantom Hunters — Calcharo': leader of the 'Ghost Hounds', an independent multinational mercenary group; ruthless, vengeful, and unforgiving; a potential client must be mindful of the price. Key art: Leader of the Ghost Hounds; Attribute Electro; 5 stars",
+    "Official news 710 lore images: Cradle of Rumors (stories of him surviving a crusade against the entire country's cops; at the center of countless tales); Quid Pro Quo (never take an unprofitable job, though information, contacts and consensus are as valuable as money; to desperate people he offered '1 Shell Credit' with one condition: become his informers; one can never know if the lady selling snacks in the alley works for Calcharo); Overclock Diagnostic Report (extremely high risk of Overclocking, documented history); Mirage Etching (during Resonance Liberation, indigo thorns made of electric mirages wrap around his body); The Underdog's Nameplate (his childhood nameplate, rusty carvings of a dog crudely drawn by a child); A Customized Arsenal (cartoon puppy-shaped hardtacks; a special affection for puppies)",
+    "Art: official Kuro Games images, cropped only (see presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "He leads the Ghost Hounds, a mercenary group. Ruthless. Vengeful. Unforgiving. This is Calcharo, in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "thud",
+          "word": "ruthless",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "thud",
+          "word": "vengeful",
+          "offset": -0.1,
+          "volume": 0.35
+        },
+        {
+          "sound": "thud",
+          "word": "unforgiving",
+          "offset": -0.1,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "calcharo",
+          "offset": -0.4,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "Rumors say he once survived a crusade against an entire country's police. Today, he's at the center of countless legends.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "rumors",
+          "offset": 0.0,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "crusade",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "rumble",
+          "word": "police",
+          "offset": -0.3,
+          "volume": 0.3
+        },
+        {
+          "sound": "deep_rise",
+          "word": "legends",
+          "offset": -0.3,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "His first rule: never take an unprofitable job. But to him, information and contacts are worth just as much as money.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "rule",
+          "offset": -0.2,
+          "volume": 0.45
+        },
+        {
+          "sound": "thud",
+          "word": "unprofitable",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "sound": "swish",
+          "word": "information",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "tick",
+          "word": "money",
+          "offset": -0.2,
+          "volume": 0.16
+        }
+      ]
+    },
+    {
+      "narration": "Desperate people who begged for help paid him just one Shell Credit, on one condition: become his informers. Even the snack seller in the alley might work for him.",
+      "sfx": [
+        {
+          "sound": "tick",
+          "word": "shell",
+          "offset": -0.2,
+          "volume": 0.18
+        },
+        {
+          "sound": "soft_hit",
+          "word": "condition",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "informers",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swell_soft",
+          "word": "snack",
+          "offset": -0.5,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "work",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "His file warns of an extremely high risk of overclocking. And in his Liberation, electric mirages wrap around him like thorns.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "file",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "impact",
+          "word": "overclocking",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "liberation",
+          "offset": -0.4,
+          "volume": 0.45
+        },
+        {
+          "sound": "whoosh",
+          "word": "mirages",
+          "offset": -0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "narration": "Yet he still carries a rusty childhood nameplate, carved with a little dog. And his base stocks puppy-shaped hardtack. He's a five-star Electro Resonator.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "rusty",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "dog",
+          "offset": -0.2,
+          "volume": 0.3
+        },
+        {
+          "sound": "pop",
+          "word": "puppyshaped",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "soft_hit",
+          "word": "fivestar",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "electro",
+          "offset": -0.3,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "narration": "So, what would you pay to hire Calcharo? Tell me in the comments.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "tick",
+          "word": "pay",
+          "offset": -0.2,
+          "volume": 0.16
+        },
+        {
+          "sound": "swish",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}
