@@ -8,11 +8,13 @@ function loadJSONSync(url) { const x = new XMLHttpRequest(); x.open('GET', url, 
 
 const WIDE = W > H;
 // Usable page area: wide pages leave the bottom band for narrator subtitles.
-const AREA = WIDE ? [40, 30, W - 80, 880] : [40, 90, 1000, 1180];
+const AREA = WIDE ? [40, 30, W - 80, 880] : [40, 110, 1000, 1330];
 const GAP = 26;
 const LAYOUTS = {
   '1': [[0, 0, 1, 1]],
   '2': [[0, 0, .5, 1], [.5, 0, .5, 1]],
+  '2v': [[0, 0, 1, .5], [0, .5, 1, .5]],
+  '3v': [[0, 0, 1, 1 / 3], [0, 1 / 3, 1, 1 / 3], [0, 2 / 3, 1, 1 / 3]],
   '3': [[0, 0, 1 / 3, 1], [1 / 3, 0, 1 / 3, 1], [2 / 3, 0, 1 / 3, 1]],
   '1+2': [[0, 0, .58, 1], [.58, 0, .42, .5], [.58, .5, .42, .5]],
   '2+1': [[0, 0, .42, .5], [0, .5, .42, .5], [.42, 0, .58, 1]],
@@ -123,11 +125,16 @@ function drawPanel(c, t, dur, p, rect, idx) {
     for (const a of p.art || []) drawArt(cc, t, dur, a, X, Y, Wd, Ht);
     drawFx(cc, t, dur, p.fx, X, Y, Wd, Ht, 200 + idx * 10);
     for (const s of p.sfx || []) sfxWord(cc, t, T(s.at, dur, 0), s.text, X + (s.x ?? 0.5) * Wd, Y + (s.y ?? 0.3) * Ht, s.size || (WIDE ? 90 : 100), s.rot ?? -0.1, SFX_STYLES[s.style] || SFX_STYLES.fire);
-    for (const b of p.bubbles || []) {
-      const L = window.LINES || [], line = b.line !== undefined ? L[b.line] : null;
+    // A bubble gives way when a later bubble opens in the same spot of the same panel.
+    const L = window.LINES || [], bubs = (p.bubbles || []).map(b => {
+      const line = b.line !== undefined ? L[b.line] : null;
+      return { b, line, at: T(b.at, dur, line ? line[2] - 0.12 : 0) };
+    });
+    for (const { b, line, at } of bubs) {
       const text = b.text || (line ? line[1] : '');
-      const at = T(b.at, dur, line ? line[2] - 0.12 : 0);
-      if (b.until !== undefined && t > T(b.until, dur, dur)) continue;
+      const next = bubs.filter(o => o.at > at + 0.05 && Math.abs((o.b.x ?? 0.5) - (b.x ?? 0.5)) < 0.2 && Math.abs((o.b.y ?? 0.2) - (b.y ?? 0.2)) < 0.2);
+      const until = b.until !== undefined ? T(b.until, dur, dur) : (next.length ? Math.min(...next.map(o => o.at)) : Infinity);
+      if (t > until) continue;
       const bx = X + (b.x ?? 0.5) * Wd, by = Y + (b.y ?? 0.2) * Ht, tail = b.tail || [b.x ?? 0.5, (b.y ?? 0.2) + 0.22];
       bubble(cc, t, at, bx, by, text, X + tail[0] * Wd, Y + tail[1] * Ht, { size: b.size || (WIDE ? 34 : 44), mw: b.w || (WIDE ? 440 : 460), shout: !!b.shout });
     }
