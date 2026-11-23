@@ -12,6 +12,7 @@ The model is downloaded from Hugging Face on first use. Output carries Chatterbo
 Perth watermark.
 """
 import json
+import math
 import os
 import sys
 import time
@@ -28,8 +29,18 @@ def main():
     model = ChatterboxTTS.from_pretrained(device="cuda" if torch.cuda.is_available() else "cpu")
     t0 = time.time()
     for n, job in enumerate(jobs, 1):
-        torch.manual_seed(job.get("seed", 7))
-        wav = model.generate(job["text"], audio_prompt_path=job["ref"], exaggeration=job["exaggeration"], cfg_weight=job["cfg"])
+        # Chatterbox now and then clips a line or rambles on; retry with other seeds and keep the most natural take.
+        words, best = len(job["text"].split()), None
+        for seed in range(job.get("seed", 7), job.get("seed", 7) + 4):
+            torch.manual_seed(seed)
+            wav = model.generate(job["text"], audio_prompt_path=job["ref"], exaggeration=job["exaggeration"], cfg_weight=job["cfg"])
+            dur = wav.shape[-1] / model.sr
+            miss = abs(math.log(max(dur, 0.05) / (0.35 + words / 2.8)))
+            if best is None or miss < best[0]:
+                best = (miss, wav)
+            if miss < 0.7:
+                break
+        wav = best[1]
         tmp = job["out"] + ".tmp.wav"
         torchaudio.save(tmp, wav, model.sr)
         os.replace(tmp, job["out"])
