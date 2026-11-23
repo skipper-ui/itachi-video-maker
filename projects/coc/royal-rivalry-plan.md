@@ -35,7 +35,7 @@ Every reveal is set up by clues already on screen, so a rewatch pays off.
 3. **Picking Up the Pieces** (full episode + promo done): the Healer saves the Warden; near-teamwork at the falling tower;
    the goblin escapes with a map showing the storm mark; the Warden tells the legend of the Storm Sorceress.
    Cliffhanger: a castle made of storm, and eyes looking back.
-4. **The Storm Sorceress** (full episode scripted): the Electro Titan appears in a storm vision and demands the kingdom's Elixir. That night
+4. **The Storm Sorceress** (full episode + promo done): the Electro Titan appears in a storm vision and demands the kingdom's Elixir. That night
    three dragons strike, but the attack is a distraction: the Elixir storage is emptied *from inside*, and the
    gate was unbarred with a key. **Twist: there is a traitor in the kingdom.** Everyone suspects the goblin.
 

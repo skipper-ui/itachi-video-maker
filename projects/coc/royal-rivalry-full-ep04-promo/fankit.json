@@ -1,0 +1,272 @@
+{
+  "library": 338,
+  "assets": {
+    "bk_emote": {
+      "id": 168121,
+      "title": "BK_emote",
+      "width": 700
+    },
+    "aq_emote": {
+      "id": 168113,
+      "title": "AQ_emote",
+      "width": 700
+    },
+    "archer_emote": {
+      "id": 168112,
+      "title": "Archer_emote",
+      "width": 700
+    },
+    "barb_emote": {
+      "id": 168118,
+      "title": "Barb_emote",
+      "width": 700
+    },
+    "barb_emote_set_1": {
+      "id": 168111,
+      "title": "Barb_emote_set_1",
+      "width": 600
+    },
+    "barb_emote_set_3": {
+      "id": 168116,
+      "title": "Barb_emote_set_3",
+      "width": 600
+    },
+    "barb_emote_set_4": {
+      "id": 168115,
+      "title": "Barb_emote_set_4",
+      "width": 600
+    },
+    "goblin_03": {
+      "id": 102869,
+      "title": "Goblin_03",
+      "width": 900
+    },
+    "goblin_04": {
+      "id": 102867,
+      "title": "Goblin_04",
+      "width": 800
+    },
+    "goblin_06": {
+      "id": 102839,
+      "title": "Goblin_06",
+      "width": 800
+    },
+    "goblin_07": {
+      "id": 102838,
+      "title": "Goblin_07",
+      "width": 900
+    },
+    "bg_2026_hammerjam_backgroundonly": {
+      "id": 166893,
+      "title": "BG_2026_HammerJam_BackgroundOnly",
+      "width": 2400
+    },
+    "king_point": {
+      "id": 66196,
+      "title": "Barbarian_King_1",
+      "width": 1400
+    },
+    "king_charge": {
+      "id": 66197,
+      "title": "Barbarian_King_2",
+      "width": 1400
+    },
+    "king_army": {
+      "id": 66194,
+      "title": "Barbarian_King_3",
+      "width": 1400
+    },
+    "queen_stand": {
+      "id": 66172,
+      "title": "Archer_Queen_3",
+      "width": 1400
+    },
+    "queen_aim": {
+      "id": 66174,
+      "title": "Archer_Queen_5",
+      "width": 1400
+    },
+    "queen_leap": {
+      "id": 66175,
+      "title": "Archer_Queen_6",
+      "width": 1400
+    },
+    "warden": {
+      "id": 52412,
+      "title": "Grand_Warden_1",
+      "width": 1400
+    },
+    "barbarian": {
+      "id": 168173,
+      "title": "barbarian_lvl14",
+      "width": 700
+    },
+    "archer": {
+      "id": 168174,
+      "title": "archer_lvl_15",
+      "width": 700
+    },
+    "edrag_1": {
+      "id": 52392,
+      "title": "Troop_HV_Electro_Dragon_1",
+      "width": 1600
+    },
+    "edrag_2": {
+      "id": 52391,
+      "title": "Troop_HV_Electro_Dragon_2",
+      "width": 1600
+    },
+    "edrag_3": {
+      "id": 65913,
+      "title": "Troop_HV_Electro_Dragon_3",
+      "width": 1600
+    },
+    "edrag_lvl10": {
+      "id": 168162,
+      "title": "electrodragon_lvl_10",
+      "width": 1000
+    },
+    "edrag_emote": {
+      "id": 168122,
+      "title": "Edrag_emote",
+      "width": 600
+    },
+    "th19": {
+      "id": 168064,
+      "title": "th19_default_2k",
+      "width": 1400
+    },
+    "healer": {
+      "id": 65933,
+      "title": "Troop_HV_Healer_3",
+      "width": 1200
+    },
+    "barb_emote_set_2": {
+      "id": 168114,
+      "title": "Barb_emote_set_2",
+      "width": 800
+    },
+    "barb_emote_set_5": {
+      "id": 168117,
+      "title": "Barb_emote_set_5",
+      "width": 800
+    },
+    "goblin": {
+      "id": 102889,
+      "title": "Goblin",
+      "width": 800
+    },
+    "goblin_02": {
+      "id": 102870,
+      "title": "Goblin_02",
+      "width": 800
+    },
+    "goblin_05": {
+      "id": 102866,
+      "title": "Goblin_05",
+      "width": 800
+    },
+    "goblin_08": {
+      "id": 102868,
+      "title": "Goblin_08",
+      "width": 800
+    },
+    "wizard": {
+      "id": 168168,
+      "title": "wizard_lvl_15",
+      "width": 700
+    },
+    "gold_full": {
+      "id": 123272,
+      "title": "Building_HV_Gold_Storage_level_19",
+      "width": 900
+    },
+    "gold_empty": {
+      "id": 123279,
+      "title": "Building_HV_Gold_Storage_level_19_empty",
+      "width": 900
+    },
+    "gold_icon": {
+      "id": 66335,
+      "title": "Icon_HV_Resource_Gold_1",
+      "width": 300
+    },
+    "snack_cake": {
+      "id": 78989,
+      "title": "Clan castle cake"
+    },
+    "snack_pancakes": {
+      "id": 78991,
+      "title": "Power pancakes"
+    },
+    "snack_skewer": {
+      "id": 78990,
+      "title": "Hero skewer"
+    },
+    "snack_soup": {
+      "id": 78992,
+      "title": "Study soup"
+    },
+    "eq_tome": {
+      "id": 64154,
+      "title": "Hero_Equipment_GW_Eternal_Tome",
+      "width": 700
+    },
+    "archer_tower": {
+      "id": 168206,
+      "title": "Building_HV_Archer_Tower_level_22",
+      "width": 600,
+      "trim": true
+    },
+    "air_defense": {
+      "id": 168205,
+      "title": "Building_HV_Air_Defense_level_17",
+      "width": 600,
+      "trim": true
+    },
+    "elixir_collector": {
+      "id": 168179,
+      "title": "Building_HV_elixir_Collectorlevel_18",
+      "width": 1024
+    },
+    "elixir_storage": {
+      "id": 123274,
+      "title": "Building_HV_Elixir_Storage_level_19",
+      "width": 1200
+    },
+    "wall": {
+      "id": 123293,
+      "title": "Building_HV_Wall_level_19",
+      "width": 4096,
+      "trim": true
+    },
+    "titan5": {
+      "id": 134865,
+      "title": "ElectroTitan_lvl5",
+      "width": 2000,
+      "trim": true
+    },
+    "titan_a": {
+      "id": 62223,
+      "title": "Troop_HV_Electro_Titan_1",
+      "width": 2000,
+      "trim": true
+    },
+    "titan_b": {
+      "id": 62224,
+      "title": "Troop_HV_Electro_Titan_2",
+      "width": 2000,
+      "trim": true
+    },
+    "titan_d": {
+      "id": 62226,
+      "title": "Troop_HV_Electro_Titan_4",
+      "width": 2000,
+      "trim": true
+    },
+    "titan_emote": {
+      "id": 168128,
+      "title": "titan_emote"
+    }
+  }
+}

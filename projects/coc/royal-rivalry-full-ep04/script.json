@@ -2840,8 +2840,8 @@
       "sfx": [
        {
         "text": "FWIP FWIP FWIP!",
-        "x": 0.7,
-        "y": 0.2,
+        "x": 0.62,
+        "y": 0.84,
         "at": "line:1",
         "style": "gold",
         "size": 60
@@ -3068,8 +3068,8 @@
       "sfx": [
        {
         "text": "KRAKOOM!",
-        "x": 0.5,
-        "y": 0.2,
+        "x": 0.52,
+        "y": 0.62,
         "at": "line:1+1.5",
         "style": "fire",
         "size": 110

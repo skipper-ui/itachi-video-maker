@@ -1,0 +1,870 @@
+{
+ "title": "The Royal Rivalry, Episode 4: The Storm Sorceress (promo)",
+ "series": "The Royal Rivalry (Clash of Clans fan comic), full-episode promos",
+ "visuals": "motion",
+ "title_card": false,
+ "width": 1080,
+ "height": 1920,
+ "tts": "elevenlabs",
+ "cast": {
+  "narrator": "IKne3meq5aSn9XLyUdCD",
+  "king": "nPczCjzI2devNBz1zQrb",
+  "queen": "Xb7hH8MSUJpSbSDYk0k2",
+  "warden": "JBFqnCBsd6RMkjVDRZzb",
+  "wizard": "onwK4e9ZLuTAKqWW03F9",
+  "goblin": "SOYHLrjzK2X1ezoPC6cr",
+  "boss": "N2lVS1w4EtoT3dr4eOWO",
+  "healer": "EXAVITQu4vr4xnSDxMaL",
+  "barbarians": "CwhRBWXzGAHq8TQ4Fs17",
+  "titan": "pFZP5JQG7iQjIQuC4Bku"
+ },
+ "scene_pad": 0.45,
+ "caption": {
+  "max_chars": 18,
+  "max_words": 4,
+  "size": 0.05,
+  "margin": 0.185
+ },
+ "music": {
+  "sound": "music_strategy",
+  "volume": 0.18
+ },
+ "sources": [
+  "Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."
+ ],
+ "scenes": [
+  {
+   "lines": [
+    [
+     "narrator",
+     "At noon, the sun went out."
+    ],
+    [
+     "narrator",
+     "And the sky grew a face."
+    ],
+    [
+     "titan",
+     "Hello, little kingdom."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan5",
+        "x": 0.5,
+        "y": 0.55,
+        "h": 0.7,
+        "alpha": 0.85,
+        "enter": "down",
+        "at": "line:1",
+        "bob": 10
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "flash:150,210,255@line:1",
+       "bolt:0.1,0,0.3,0.4,0.7@0.6"
+      ],
+      "under": [
+       "smoke:0.3,0.35,110",
+       "smoke:0.7,0.3,100"
+      ]
+     }
+    ],
+    "titles": [
+     {
+      "text": "THE ROYAL RIVALRY",
+      "y": 0.84,
+      "size": 96,
+      "at": "line:2"
+     },
+     {
+      "text": "THE STORM SORCERESS",
+      "y": 0.91,
+      "size": 60,
+      "at": "line:2+0.5",
+      "style": "white"
+     }
+    ],
+    "shake": [
+     "line:1"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": "line:1",
+     "volume": 0.45
+    },
+    {
+     "sound": "stamp",
+     "at": "line:2",
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "line:2+0.5",
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "titan",
+     "You have something of mine. Give it back by the full moon."
+    ],
+    [
+     "king",
+     "Give it BACK? It's ours!"
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_d",
+        "x": 0.4,
+        "y": 0.62,
+        "h": 0.9,
+        "alpha": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.62,
+        "y": 0.25,
+        "tail": [
+         0.45,
+         0.4
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "smoke:0.3,0.35,110",
+       "smoke:0.7,0.3,100"
+      ]
+     },
+     {
+      "bg": "red",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.32,
+        "y": 0.6,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.7,
+        "y": 0.26,
+        "tail": [
+         0.45,
+         0.4
+        ],
+        "shout": true,
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "titan",
+     "Is it? Ask the old man where it came from."
+    ],
+    [
+     "titan",
+     "Hello, old teacher."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_emote",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.2,
+        "tail": [
+         0.5,
+         0.35
+        ],
+        "w": 560
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.2,
+        "tail": [
+         0.5,
+         0.35
+        ],
+        "w": 440
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "Teacher?",
+        "at": "lineend:1",
+        "y": 0.86
+       }
+      ],
+      "sfx": [],
+      "fx": [
+       "darken:0.3@0"
+      ],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "On the full moon, three dragons came. And for once, the heroes fought together."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "edrag_1",
+        "x": 0.2,
+        "y": 0.3,
+        "h": 0.3,
+        "bob": 12,
+        "enter": "left",
+        "at": 0.4
+       },
+       {
+        "name": "edrag_2",
+        "x": 0.5,
+        "y": 0.22,
+        "h": 0.3,
+        "bob": 12,
+        "enter": "up",
+        "at": 0.8
+       },
+       {
+        "name": "edrag_3",
+        "x": 0.8,
+        "y": 0.3,
+        "h": 0.3,
+        "flip": true,
+        "bob": 12,
+        "enter": "right",
+        "at": 1.2
+       },
+       {
+        "name": "king_charge",
+        "x": 0.28,
+        "y": 0.8,
+        "h": 0.35,
+        "enter": "left",
+        "at": 2.2
+       },
+       {
+        "name": "queen_aim",
+        "x": 0.72,
+        "y": 0.8,
+        "h": 0.35,
+        "flip": true,
+        "enter": "right",
+        "at": 2.5
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "flash:150,210,255@0.4"
+      ],
+      "under": [
+       "moon:0.5,0.15"
+      ]
+     }
+    ],
+    "shake": [
+     0.4
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": 0.4,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "He threw a boulder. She split it in mid air."
+    ],
+    [
+     "queen",
+     "That was OUR dragon."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "queen_aim",
+        "x": 0.25,
+        "y": 0.74,
+        "h": 0.45
+       },
+       {
+        "name": "edrag_2",
+        "x": 0.72,
+        "y": 0.3,
+        "h": 0.35,
+        "bob": 10
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.62,
+        "y": 0.66,
+        "tail": [
+         0.35,
+         0.6
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "KRAKOOM!",
+        "x": 0.5,
+        "y": 0.5,
+        "at": 2.2,
+        "style": "fire",
+        "size": 120
+       }
+      ],
+      "fx": [
+       "burst:0.5,0.45@2.2",
+       "flash@2.2"
+      ],
+      "under": [
+       "speed:0.5,0.5"
+      ]
+     }
+    ],
+    "shake": [
+     2.2
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": 2.2,
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": 2.2,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Then the dragons flew home. Too easily."
+    ],
+    [
+     "narrator",
+     "Because the Elixir storage was empty."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "edrag_1",
+        "x": 0.3,
+        "y": 0.5,
+        "h": 0.25,
+        "move": [
+         0.1,
+         0.1
+        ],
+        "moveAt": 0.8,
+        "moveEnd": 3
+       },
+       {
+        "name": "edrag_3",
+        "x": 0.7,
+        "y": 0.5,
+        "h": 0.25,
+        "flip": true,
+        "move": [
+         0.9,
+         0.1
+        ],
+        "moveAt": 0.8,
+        "moveEnd": 3
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "moon:0.5,0.2"
+      ]
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "elixir_storage",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.75
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "...EMPTY.",
+        "x": 0.5,
+        "y": 0.16,
+        "at": "line:1+1.5",
+        "style": "white",
+        "size": 90
+       }
+      ],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "whoosh",
+     "at": "line:1+1.5",
+     "volume": 0.42
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "The gate's been opened. Not broken. Opened."
+    ],
+    [
+     "queen",
+     "Someone in this kingdom is working for her."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.32,
+        "y": 0.6,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.7,
+        "y": 0.26,
+        "tail": [
+         0.45,
+         0.4
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.68,
+        "y": 0.6,
+        "h": 0.9,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.3,
+        "y": 0.26,
+        "tail": [
+         0.55,
+         0.4
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "wizard",
+     "I was here the whole time! I didn't hear a thing."
+    ],
+    [
+     "narrator",
+     "Not a sound. Not a single thing."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.75
+       },
+       {
+        "name": "elixir_storage",
+        "x": 0.75,
+        "y": 0.82,
+        "h": 0.3
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 640
+       }
+      ],
+      "caps": [
+       {
+        "text": "Not a single thing.",
+        "at": "line:1+0.5",
+        "y": 0.92
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Traitor."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.2,0,0.35,0.6,0.8@0.2",
+       "flash:150,210,255@0.2"
+      ],
+      "under": []
+     }
+    ],
+    "titles": [
+     {
+      "text": "TRAITOR.",
+      "y": 0.5,
+      "size": 170,
+      "at": 0.3
+     }
+    ],
+    "shake": [
+     0.2
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": 0.2,
+     "volume": 0.45
+    },
+    {
+     "sound": "stamp",
+     "at": 0.3,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Everyone blamed the goblin. But the goblin was on a hill, talking to a dragon scale."
+    ],
+    [
+     "goblin",
+     "I did what you asked. Now let my Boss go."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.75
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "glow:0.6,0.55,200,120,210,255"
+      ],
+      "under": [
+       "stars",
+       "moon:0.8,0.2"
+      ]
+     },
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.3,
+        "y": 0.62,
+        "h": 0.7
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.66,
+        "y": 0.26,
+        "tail": [
+         0.4,
+         0.4
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "So who opened the gate? Episode four. Watch the full episode now, on the channel."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.3,200,200,120,255@0.4",
+       "sigil:0.5,0.3,130@1"
+      ],
+      "under": []
+     }
+    ],
+    "titles": [
+     {
+      "text": "FULL EPISODE",
+      "y": 0.5,
+      "size": 110,
+      "at": "lineend:0-3.2"
+     },
+     {
+      "text": "ON THE CHANNEL",
+      "y": 0.6,
+      "size": 80,
+      "at": "lineend:0-2.6",
+      "style": "white"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "stamp",
+     "at": "lineend:0-3.2",
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "lineend:0-2.6",
+     "volume": 0.4
+    }
+   ]
+  }
+ ]
+}
