@@ -17,7 +17,7 @@ KOKORO_CAST = {
     "goblin": "am_puck", "goblin2": "am_echo", "boss": "am_onyx", "barbarians": "am_eric", "archers": "af_kore", "healer": "af_sky",
     "titan": "bf_emma",  # the Storm Sorceress (Electro Titan)
 }
-# ElevenLabs premade voices for the 1-minute promos (library voices need a paid plan).
+# ElevenLabs premade voices: the promos, and the character lines of the full episodes (acted by Eleven v3).
 ELEVEN_CAST = {
     "narrator": "IKne3meq5aSn9XLyUdCD",  # Charlie, the channel's Shorts narrator
     "king": "nPczCjzI2devNBz1zQrb",      # Brian
@@ -29,6 +29,8 @@ ELEVEN_CAST = {
     "healer": "EXAVITQu4vr4xnSDxMaL",    # Sarah
     "barbarians": "CwhRBWXzGAHq8TQ4Fs17",  # Roger
     "titan": "pFZP5JQG7iQjIQuC4Bku",     # Lily, the Storm Sorceress
+    "archers": "FGY2WhTYpPnrIDTdsKH5",   # Laura
+    "goblin2": "TX3LPaxmHKxFdv7VOQHJ",   # Liam
 }
 SOURCES = ["Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), "
            "used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."]
@@ -83,8 +85,8 @@ def full_episode_spec(title, pages):
         "title": title, "series": "The Royal Rivalry (Clash of Clans fan comic), full episodes",
         "visuals": "motion", "title_card": False, "width": 1920, "height": 1080,
         "tts": "kokoro", "cast": KOKORO_CAST, "speed": 0.92, "scene_pad": 1.0,
-        # Narrator on Kokoro; every character line acted with emotion by Chatterbox in the same voice.
-        "emotive": {"skip": ["narrator"]},
+        # Narrator on Kokoro; every character line acted by ElevenLabs v3 from its tone tag (see L()).
+        "emotive": {"engine": "eleven_v3", "cast": ELEVEN_CAST, "skip": ["narrator"]},
         "caption": {"max_chars": 46, "max_words": 8, "size": 0.046, "margin": 0.03},
         "music": {"sound": "music_strategy", "volume": 0.10},
         "sources": SOURCES, "scenes": add_cues(pages),

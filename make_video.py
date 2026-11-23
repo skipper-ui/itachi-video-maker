@@ -213,24 +213,91 @@ def speech_text(text):
     return re.sub(r"(^|[.!?]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), text)
 
 
-def emotive_path(out_dir, voice, line):
-    ex, cfg = emotion_for(line)
-    h = hashlib.sha1(json.dumps([voice, speech_text(line[1]), ex, cfg]).encode()).hexdigest()[:16]
+def emotive_engine(spec):
+    return spec["emotive"].get("engine", "chatterbox")
+
+
+def emotive_voice(spec, who):
+    """The voice a character line is acted in: the emotive cast if the script gives one, else the main cast."""
+    return spec["emotive"].get("cast", spec["cast"])[who]
+
+
+def v3_text(line):
+    """ElevenLabs v3 reads acting directions in square brackets: L("king", "MINE!", "shouting") -> "[shouting] MINE!".
+    Capitals stay as they are: v3 treats them as emphasis rather than spelling them out."""
+    tone = line[2].get("tone") if len(line) > 2 and isinstance(line[2], dict) else None
+    return f"[{tone}] {line[1]}" if tone else line[1]
+
+
+def emotive_path(out_dir, voice, line, engine="chatterbox"):
+    if engine == "eleven_v3":
+        h = hashlib.sha1(json.dumps(["eleven_v3", voice, v3_text(line)]).encode()).hexdigest()[:16]
+    else:
+        ex, cfg = emotion_for(line)
+        h = hashlib.sha1(json.dumps([voice, speech_text(line[1]), ex, cfg]).encode()).hexdigest()[:16]
     return out_dir / "lines" / f"{h}.wav"
 
 
-def prepare_emotive(spec, out_dir):
-    """Voice every character line (not the narrator) with Chatterbox in one batch.
+def eleven_v3_line(text, voice_id):
+    """One acted line from ElevenLabs v3 (stability 0.5, "Natural"); returns (float32 samples, 24 kHz)."""
+    import numpy as np
+    body = {"text": text, "model_id": "eleven_v3", "voice_settings": {"stability": 0.5}}
+    r = eleven_post(f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}", body, 180)
+    r.raise_for_status()
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", "pipe:0", "-f", "f32le", "-ac", "1", "-ar", "24000", "pipe:1"],
+                         input=r.content, capture_output=True, check=True).stdout
+    return np.frombuffer(pcm, dtype="<f4").copy(), 24000
 
-    Each character's Kokoro voice is the reference, so the cast keeps its voices and gains emotion.
+
+def prepare_emotive_v3(spec, out_dir, skip):
+    """Act every character line with ElevenLabs v3, each cached as lines/<hash>.wav."""
+    import soundfile as sf
+    jobs = {}
+    for sc in spec["scenes"]:
+        for line in sc.get("lines", []):
+            if line[0] in skip:
+                continue
+            voice = emotive_voice(spec, line[0])
+            out = emotive_path(out_dir, voice, line, "eleven_v3")
+            if not out.exists():
+                jobs[str(out)] = (v3_text(line), voice)
+    if not jobs:
+        return
+    print(f"Acting {len(jobs)} character lines with ElevenLabs v3 ({sum(len(t) for t, _ in jobs.values())} characters)...")
+
+    def one(item):
+        out, (text, voice) = item
+        a, sr = eleven_v3_line(text, voice)
+        sf.write(out + ".tmp.wav", a, sr)
+        os.replace(out + ".tmp.wav", out)
+
+    failed = []
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        for item, fut in [(it, pool.submit(one, it)) for it in jobs.items()]:
+            try:
+                fut.result()
+            except Exception as e:  # out of credit, network: keep what was made, report the rest
+                failed.append((item[1][0], str(e)[:120]))
+    if failed:
+        sys.exit(f"ElevenLabs v3 could not voice {len(failed)} of {len(jobs)} lines (first: {failed[0]}). "
+                 "Lines already made are cached; run again once the key has credit.")
+
+
+def prepare_emotive(spec, out_dir):
+    """Voice every character line (not the narrator) in one batch, before the scenes are assembled.
+
+    Engine "eleven_v3": ElevenLabs v3 acts each line from its tone tag, in the emotive cast's voices.
+    Engine "chatterbox" (default): Chatterbox, with each character's Kokoro voice as the reference.
     """
     skip = emotive_skip(spec)
     if skip is None:
         return
+    (out_dir / "lines").mkdir(exist_ok=True)
+    if emotive_engine(spec) == "eleven_v3":
+        return prepare_emotive_v3(spec, out_dir, skip)
     import soundfile as sf
     if not EMOTIVE_PY.exists():
         sys.exit(f"Expressive voices need Chatterbox: see the setup in tools/emotive_tts.py ({EMOTIVE_PY} missing).")
-    (out_dir / "lines").mkdir(exist_ok=True)
     refs = out_dir / "refs"
     refs.mkdir(exist_ok=True)
     jobs = {}
@@ -283,7 +350,7 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
         if provider == "elevenlabs":
             a, sr = eleven_line(text, cast[who], out_dir)
         elif skip is not None and who not in skip:
-            a, sr = sf.read(emotive_path(out_dir, cast[who], line), dtype="float32")
+            a, sr = sf.read(emotive_path(out_dir, emotive_voice(spec, who), line, emotive_engine(spec)), dtype="float32")
         else:
             a, sr = kokoro_line(speech_text(text), cast[who], speed)
         if skip is not None and len(a):
