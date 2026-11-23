@@ -1,0 +1,929 @@
+{
+ "title": "The Royal Rivalry, Episode 2: The Storm Arrives (promo)",
+ "series": "The Royal Rivalry (Clash of Clans fan comic), full-episode promos",
+ "visuals": "motion",
+ "title_card": false,
+ "width": 1080,
+ "height": 1920,
+ "tts": "elevenlabs",
+ "cast": {
+  "narrator": "IKne3meq5aSn9XLyUdCD",
+  "king": "nPczCjzI2devNBz1zQrb",
+  "queen": "Xb7hH8MSUJpSbSDYk0k2",
+  "warden": "JBFqnCBsd6RMkjVDRZzb",
+  "wizard": "onwK4e9ZLuTAKqWW03F9",
+  "goblin": "SOYHLrjzK2X1ezoPC6cr",
+  "boss": "N2lVS1w4EtoT3dr4eOWO",
+  "healer": "EXAVITQu4vr4xnSDxMaL",
+  "barbarians": "CwhRBWXzGAHq8TQ4Fs17"
+ },
+ "scene_pad": 0.45,
+ "caption": {
+  "max_chars": 18,
+  "max_words": 4,
+  "size": 0.05,
+  "margin": 0.185
+ },
+ "music": {
+  "sound": "music_strategy",
+  "volume": 0.18
+ },
+ "sources": [
+  "Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."
+ ],
+ "scenes": [
+  {
+   "lines": [
+    [
+     "narrator",
+     "Last time, two heroes lost the gold. This time, they could lose everything."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.15,0,0.3,0.45,0.8@1.2",
+       "bolt:0.85,0,0.7,0.4,0.8@1.6",
+       "eyes:0.5,0.3,0.06,120,210,255@2"
+      ],
+      "under": [
+       "stars"
+      ]
+     }
+    ],
+    "titles": [
+     {
+      "text": "THE ROYAL RIVALRY",
+      "y": 0.5,
+      "size": 96,
+      "at": "lineend:0-0.4"
+     },
+     {
+      "text": "THE STORM ARRIVES",
+      "y": 0.58,
+      "size": 64,
+      "at": "lineend:0+0.1",
+      "style": "white"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "stamp",
+     "at": "lineend:0-0.4",
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "lineend:0+0.1",
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "wizard",
+     "Clear skies all week. Not a single cloud."
+    ],
+    [
+     "narrator",
+     "High above the hills, a cloud disagreed."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "day",
+      "art": [
+       {
+        "name": "th19",
+        "x": 0.25,
+        "y": 0.7,
+        "h": 0.62
+       },
+       {
+        "name": "wizard",
+        "x": 0.72,
+        "y": 0.64,
+        "h": 0.86,
+        "enter": "right"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.34,
+        "y": 0.24,
+        "tail": [
+         0.62,
+         0.4
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "storm",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "RUMBLE...",
+        "x": 0.5,
+        "y": 0.8,
+        "at": "line:1+1",
+        "style": "zap",
+        "size": 80
+       }
+      ],
+      "fx": [
+       "bolt:0.6,0,0.5,0.6,0.8@line:1+1.2",
+       "flash@line:1+1.2"
+      ],
+      "under": [
+       "smoke:0.5,0.4,80"
+      ],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "magic",
+     "at": "line:1+1",
+     "volume": 0.42
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Then the sky split open. An Electro Dragon. The biggest anyone had ever seen."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "edrag_lvl10",
+        "x": 0.5,
+        "y": 0.5,
+        "h": 0.55,
+        "enter": "down",
+        "at": 1.0,
+        "bob": 18
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "KRRRZZZT!",
+        "x": 0.5,
+        "y": 0.14,
+        "at": "lineend:0-1.2",
+        "style": "zap",
+        "size": 120
+       }
+      ],
+      "fx": [
+       "bolt:0.05,0,0.2,0.4,0.6@1.2",
+       "bolt:0.95,0,0.8,0.45,0.6@2"
+      ],
+      "under": []
+     }
+    ],
+    "shake": [
+     "lineend:0-1.2"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "magic",
+     "at": "lineend:0-1.2",
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": "lineend:0-1.2",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Stand back. This dragon is MINE."
+    ],
+    [
+     "queen",
+     "You can't punch something that flies."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "burst:orange",
+      "art": [
+       {
+        "name": "king_charge",
+        "x": 0.32,
+        "y": 0.6,
+        "h": 0.9,
+        "enter": "left"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.7,
+        "y": 0.26,
+        "tail": [
+         0.45,
+         0.4
+        ],
+        "shout": true,
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "queen_aim",
+        "x": 0.7,
+        "y": 0.6,
+        "h": 0.9,
+        "enter": "right"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.3,
+        "y": 0.26,
+        "tail": [
+         0.6,
+         0.4
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "The Barbarians threw their swords. The swords came back down."
+    ],
+    [
+     "barbarians",
+     "Ow. Ow. OW."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.3,
+        "y": 0.66,
+        "h": 0.85
+       },
+       {
+        "name": "edrag_2",
+        "x": 0.78,
+        "y": 0.3,
+        "h": 0.45,
+        "bob": 12
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "WHOOSH!",
+        "x": 0.55,
+        "y": 0.2,
+        "at": 1.2,
+        "style": "white",
+        "size": 80
+       }
+      ],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:red",
+      "art": [
+       {
+        "name": "barb_emote_set_3",
+        "x": 0.35,
+        "y": 0.6,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.72,
+        "y": 0.26,
+        "tail": [
+         0.5,
+         0.4
+        ],
+        "size": 40,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "BONK!",
+        "x": 0.75,
+        "y": 0.7,
+        "at": "line:1-0.2",
+        "style": "red",
+        "size": 80
+       }
+      ],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.5"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "whoosh",
+     "at": 1.2,
+     "volume": 0.42
+    },
+    {
+     "sound": "pop",
+     "at": "line:1-0.5",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "thud",
+     "at": "line:1-0.2",
+     "volume": 0.42
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "He missed by forty feet. She hit his helmet instead."
+    ],
+    [
+     "king",
+     "MY HELMET!"
+    ],
+    [
+     "queen",
+     "Your head was in my shot."
+    ]
+   ],
+   "page": {
+    "layout": "1/2",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "king_charge",
+        "x": 0.25,
+        "y": 0.78,
+        "h": 0.5,
+        "move": [
+         0.5,
+         0.3
+        ],
+        "moveAt": 0.3,
+        "moveEnd": 1.8,
+        "rot": -0.3
+       },
+       {
+        "name": "edrag_3",
+        "x": 0.8,
+        "y": 0.22,
+        "h": 0.32,
+        "bob": 12
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "SPLOOSH!",
+        "x": 0.5,
+        "y": 0.8,
+        "at": 2.0,
+        "style": "zap",
+        "size": 90
+       },
+       {
+        "text": "CLANG!",
+        "x": 0.5,
+        "y": 0.45,
+        "at": "line:1-0.3",
+        "style": "red",
+        "size": 110
+       }
+      ],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:red",
+      "art": [
+       {
+        "name": "bk_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "shout": true,
+        "size": 36,
+        "w": 380
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "aq_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "size": 32,
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ],
+    "shake": [
+     "line:1-0.3"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "magic",
+     "at": 2.0,
+     "volume": 0.42
+    },
+    {
+     "sound": "thud",
+     "at": "line:1-0.3",
+     "volume": 0.42
+    },
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "impact",
+     "at": "line:1-0.3",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "And lightning loves a crowd."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.25,
+        "y": 0.72,
+        "h": 0.4
+       },
+       {
+        "name": "archer",
+        "x": 0.5,
+        "y": 0.72,
+        "h": 0.38,
+        "flip": true
+       },
+       {
+        "name": "barbarian",
+        "x": 0.75,
+        "y": 0.72,
+        "h": 0.38
+       },
+       {
+        "name": "edrag_1",
+        "x": 0.75,
+        "y": 0.2,
+        "h": 0.3,
+        "bob": 10
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "ZAP! ZAP! ZAP!",
+        "x": 0.5,
+        "y": 0.45,
+        "at": 0.3,
+        "style": "zap",
+        "size": 100
+       }
+      ],
+      "fx": [
+       "bolt:0.75,0.25,0.25,0.65,1,14@0.3",
+       "bolt:0.25,0.65,0.5,0.65,1,12@0.6",
+       "bolt:0.5,0.65,0.75,0.65,1,12@0.9",
+       "flash:150,210,255@0.3"
+      ],
+      "under": []
+     }
+    ],
+    "shake": [
+     0.3,
+     0.9
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "magic",
+     "at": 0.3,
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": 0.3,
+     "volume": 0.45
+    },
+    {
+     "sound": "impact",
+     "at": 0.9,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "warden",
+     "STOP! Together, or not at all!"
+    ],
+    [
+     "narrator",
+     "But they were too busy shouting to hear him."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "gold",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.7
+       },
+       {
+        "name": "eq_tome",
+        "x": 0.78,
+        "y": 0.72,
+        "h": 0.2,
+        "bob": 8
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 560
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "ring:0.5,0.5,900@0.8",
+       "ring:0.5,0.5,900@1.8"
+      ],
+      "under": [
+       "glow:0.5,0.5,700"
+      ]
+     }
+    ],
+    "shake": [
+     0.4
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": 0.4,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "The dragon struck. The golden shield shattered. And the Grand Warden fell."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "edrag_1",
+        "x": 0.3,
+        "y": 0.25,
+        "h": 0.35,
+        "flip": true,
+        "bob": 10
+       },
+       {
+        "name": "warden",
+        "x": 0.62,
+        "y": 0.7,
+        "h": 0.5
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "SHATTER!",
+        "x": 0.5,
+        "y": 0.45,
+        "at": 3.4,
+        "style": "white",
+        "size": 110
+       }
+      ],
+      "fx": [
+       "bolt:0.35,0.3,0.6,0.62,1,22@2.2",
+       "flash:150,210,255@2.2",
+       "ring:0.6,0.65,800@3.4",
+       "darken:0.6@lineend:0-1"
+      ],
+      "under": [
+       "glow:0.5,0.5,600"
+      ]
+     }
+    ],
+    "shake": [
+     2.2,
+     3.4
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "whoosh",
+     "at": 3.4,
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": 2.2,
+     "volume": 0.45
+    },
+    {
+     "sound": "impact",
+     "at": 3.4,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "queen",
+     "Do you think he'll wake up?"
+    ],
+    [
+     "king",
+     "He has to. Who else is going to yell at us?"
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.25,
+        "y": 0.7,
+        "h": 0.5
+       },
+       {
+        "name": "queen_stand",
+        "x": 0.75,
+        "y": 0.7,
+        "h": 0.52,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.7,
+        "y": 0.2,
+        "tail": [
+         0.75,
+         0.45
+        ],
+        "w": 440
+       },
+       {
+        "line": 1,
+        "x": 0.3,
+        "y": 0.34,
+        "tail": [
+         0.25,
+         0.5
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "rain"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Someone sent that dragon. Episode two, The Storm Arrives. Watch the full episode now, on the channel."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "sigil:0.5,0.3,150@0.8",
+       "bolt:0.1,0,0.25,0.4,0.8@0.6"
+      ],
+      "under": [
+       "stars"
+      ]
+     }
+    ],
+    "titles": [
+     {
+      "text": "FULL EPISODE",
+      "y": 0.5,
+      "size": 110,
+      "at": "lineend:0-3.2"
+     },
+     {
+      "text": "ON THE CHANNEL",
+      "y": 0.6,
+      "size": 80,
+      "at": "lineend:0-2.6",
+      "style": "white"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "stamp",
+     "at": "lineend:0-3.2",
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "lineend:0-2.6",
+     "volume": 0.4
+    }
+   ]
+  }
+ ]
+}

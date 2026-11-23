@@ -18,7 +18,7 @@ voiced with ElevenLabs premade voices.
 
 ## Arc 1: The Storm
 1. **Who Is the Greatest?** (full episode + promo done): the rivalry, the Warden's contest, the goblin collision, eyes in the dark.
-2. **The Storm Arrives** (full episode scripted): an Electro Dragon attacks, the heroes sabotage each other, the Warden falls.
+2. **The Storm Arrives** (full episode + promo done): an Electro Dragon attacks, the heroes sabotage each other, the Warden falls.
 3. **Picking Up the Pieces:** the village in ruins, the Healer saves the Warden, the heroes blame each other;
    the Warden warns the dragon was *sent*; the Queen finds a crackling storm mark. Cliffhanger: who sent it?
 4. **The Storm Sorceress:** the mark leads to a vision of the Electro Titan on her floating citadel; she wants

@@ -26,6 +26,7 @@ ELEVEN_CAST = {
     "goblin": "SOYHLrjzK2X1ezoPC6cr",    # Harry
     "boss": "N2lVS1w4EtoT3dr4eOWO",      # Callum
     "healer": "EXAVITQu4vr4xnSDxMaL",    # Sarah
+    "barbarians": "CwhRBWXzGAHq8TQ4Fs17",  # Roger
 }
 SOURCES = ["Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), "
            "used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."]
