@@ -170,6 +170,75 @@ def eleven_line(text, voice_id, out_wav):
     return np.frombuffer(pcm, dtype="<f4").copy(), 24000
 
 
+# Expressive character voices (long episodes): Chatterbox, run in its own environment by tools/emotive_tts.py.
+EMOTIVE_PY = Path(os.environ.get("EMOTIVE_PYTHON", Path.home() / ".venvs" / "chatterbox" / "bin" / "python"))
+EMOTIVE_REF_TEXT = ("I have walked a long road to get here, through rain and wind and fire. "
+                    "Some days were bright, some days were hard, and I would do it all again tomorrow.")
+
+
+def emotion_for(line):
+    """Chatterbox (exaggeration, cfg_weight) for a cast line: shouts get the most, questions a little more."""
+    text = line[1]
+    if len(line) > 2 and isinstance(line[2], dict) and "emo" in line[2]:
+        return float(line[2]["emo"]), float(line[2].get("cfg", 0.4))
+    words = re.findall(r"[A-Za-z']+", text)
+    if "!" in text or any(len(w) > 1 and w.isupper() for w in words):
+        return 0.85, 0.3
+    if "?" in text:
+        return 0.6, 0.45
+    return 0.55, 0.5
+
+
+def emotive_skip(spec):
+    return set(spec["emotive"].get("skip", ["narrator"])) if spec.get("emotive") else None
+
+
+def emotive_path(out_dir, voice, line):
+    ex, cfg = emotion_for(line)
+    h = hashlib.sha1(json.dumps([voice, line[1], ex, cfg]).encode()).hexdigest()[:16]
+    return out_dir / "lines" / f"{h}.wav"
+
+
+def prepare_emotive(spec, out_dir):
+    """Voice every character line (not the narrator) with Chatterbox in one batch.
+
+    Each character's Kokoro voice is the reference, so the cast keeps its voices and gains emotion.
+    """
+    skip = emotive_skip(spec)
+    if skip is None:
+        return
+    import soundfile as sf
+    if not EMOTIVE_PY.exists():
+        sys.exit(f"Expressive voices need Chatterbox: see the setup in tools/emotive_tts.py ({EMOTIVE_PY} missing).")
+    (out_dir / "lines").mkdir(exist_ok=True)
+    refs = out_dir / "refs"
+    refs.mkdir(exist_ok=True)
+    jobs = {}
+    for sc in spec["scenes"]:
+        for line in sc.get("lines", []):
+            if line[0] in skip:
+                continue
+            voice = spec["cast"][line[0]]
+            out = emotive_path(out_dir, voice, line)
+            if out.exists() or str(out) in jobs:
+                continue
+            ref = refs / f"{voice}.wav"
+            if not ref.exists():
+                a, sr = kokoro_line(EMOTIVE_REF_TEXT, voice, 1.0)
+                sf.write(ref, a, sr)
+            ex, cfg = emotion_for(line)
+            jobs[str(out)] = {"text": line[1], "ref": str(ref), "exaggeration": ex, "cfg": cfg, "out": str(out)}
+    if not jobs:
+        return
+    print(f"Voicing {len(jobs)} character lines with emotion (Chatterbox, slow on CPU)...")
+    jf = out_dir / "emotive_jobs.json"
+    jf.write_text(json.dumps(list(jobs.values()), indent=1))
+    with open(out_dir / "emotive.log", "w") as log:
+        r = subprocess.run([str(EMOTIVE_PY), str(Path(__file__).parent / "tools" / "emotive_tts.py"), str(jf)], stderr=log)
+    if r.returncode:
+        sys.exit(f"Chatterbox failed; see {out_dir / 'emotive.log'}")
+
+
 def synthesize_lines(scene_idx, scene, spec, out_dir, force):
     """Voice a scene written as cast lines: [[speaker, text], ...].
 
@@ -183,16 +252,24 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
     audio = out_dir / f"scene{scene_idx:02d}.mp3"
     timing = out_dir / f"scene{scene_idx:02d}.timing.json"
     lines_path = out_dir / f"scene{scene_idx:02d}.lines.json"
-    key = fingerprint(scene["lines"], {k: cast[k] for k in {l[0] for l in scene["lines"]}}, provider, speed, TTS_MODEL)
+    skip = emotive_skip(spec)
+    key = fingerprint(scene["lines"], {k: cast[k] for k in {l[0] for l in scene["lines"]}}, provider, speed, TTS_MODEL, spec.get("emotive"))
     if not force and is_fresh(audio, key) and timing.exists() and lines_path.exists():
         return
     chunks, chars, starts, ends, meta, t = [], [], [], [], [], 0.0
     sr = 24000
-    for n, (who, text) in enumerate(scene["lines"]):
+    for n, line in enumerate(scene["lines"]):
+        who, text = line[0], line[1]
         if provider == "elevenlabs":
             a, sr = eleven_line(text, cast[who], out_dir)
+        elif skip is not None and who not in skip:
+            a, sr = sf.read(emotive_path(out_dir, cast[who], line), dtype="float32")
         else:
             a, sr = kokoro_line(text, cast[who], speed)
+        if skip is not None and len(a):
+            # Even out the two engines: every line to the same speech level, peaks kept under full scale.
+            rms = float(np.sqrt(np.mean(a ** 2))) or 1.0
+            a = a * min(0.085 / rms, 0.97 / (float(np.abs(a).max()) or 1.0))
         # Trim Kokoro's leading/trailing near-silence so timings sit on the speech.
         loud = np.where(np.abs(a) > 0.01)[0]
         if len(loud):
@@ -669,6 +746,8 @@ def main():
     prompts = [] if motion else [f"{s['image'].format(character=spec['character'])}, {spec['style']}" for s in scenes]
 
     print(f"Generating narration{"" if motion else " and images"} for {len(scenes)} scenes...")
+    if spec.get("cast"):
+        prepare_emotive(spec, out_dir)
     with ThreadPoolExecutor(max_workers=4) as pool:
         if spec.get("cast"):
             jobs = [pool.submit(synthesize_lines, i, scenes[i], spec, out_dir, args.force) for i in range(len(scenes))]

@@ -4,7 +4,8 @@ A Clash of Clans fan comic built from official Supercell Fan Kit art. Every epis
 and a comment prompt.
 
 **Format (current):** full episodes of about 10 minutes, 16:9 (1920x1080), voiced by a local Kokoro cast
-(narrator plus a voice per character, narrator-only subtitles), each with a ~1-minute vertical promo Short
+(narrator plus a voice per character, narrator-only subtitles; character lines acted with emotion by
+Chatterbox in their Kokoro voice, see tools/emotive_tts.py), each with a ~1-minute vertical promo Short
 voiced with ElevenLabs premade voices.
 - Full episodes: `projects/coc/royal-rivalry-full-ep<NN>/` (build.py writes script.json)
 - Promos: `projects/coc/royal-rivalry-full-ep<NN>-promo/`

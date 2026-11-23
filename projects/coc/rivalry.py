@@ -76,8 +76,10 @@ def full_episode_spec(title, pages):
         "title": title, "series": "The Royal Rivalry (Clash of Clans fan comic), full episodes",
         "visuals": "motion", "title_card": False, "width": 1920, "height": 1080,
         "tts": "kokoro", "cast": KOKORO_CAST, "speed": 0.92, "scene_pad": 1.0,
+        # Narrator on Kokoro; every character line acted with emotion by Chatterbox in the same voice.
+        "emotive": {"skip": ["narrator"]},
         "caption": {"max_chars": 46, "max_words": 8, "size": 0.046, "margin": 0.03},
-        "music": {"sound": "music_strategy", "volume": 0.16},
+        "music": {"sound": "music_strategy", "volume": 0.10},
         "sources": SOURCES, "scenes": add_cues(pages),
     }
 

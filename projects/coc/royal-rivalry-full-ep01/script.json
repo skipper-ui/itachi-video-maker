@@ -21,6 +21,11 @@
  },
  "speed": 0.92,
  "scene_pad": 1.0,
+ "emotive": {
+  "skip": [
+   "narrator"
+  ]
+ },
  "caption": {
   "max_chars": 46,
   "max_words": 8,
@@ -29,7 +34,7 @@
  },
  "music": {
   "sound": "music_strategy",
-  "volume": 0.16
+  "volume": 0.1
  },
  "sources": [
   "Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."
