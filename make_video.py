@@ -73,7 +73,7 @@ def mark(path, key):
 
 # --- narration -------------------------------------------------------------
 
-ELEVEN_KEY_VARS = ("ELEVENLABS_API_KEY", "ELEVENLABS_API_KEY_2")
+ELEVEN_KEY_VARS = ("ELEVENLABS_API_KEY", "ELEVENLABS_API_KEY_2", "ELEVENLABS_API_KEY_3")
 _spent_keys = set()          # key variables that have run out of credit this run
 _spent_lock = threading.Lock()
 
@@ -111,7 +111,7 @@ def eleven_post(url, body, timeout):
             continue
         return r
     if last is None:
-        raise RuntimeError("No ElevenLabs key with credit left (set ELEVENLABS_API_KEY / ELEVENLABS_API_KEY_2 in .env)")
+        raise RuntimeError("No ElevenLabs key with credit left (set ELEVENLABS_API_KEY, _2 or _3 in .env)")
     return last
 
 
