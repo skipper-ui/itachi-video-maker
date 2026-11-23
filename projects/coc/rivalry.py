@@ -15,6 +15,7 @@ HJ = "img:bg_2026_hammerjam_backgroundonly"
 KOKORO_CAST = {
     "narrator": "bm_george", "king": "am_fenrir", "queen": "af_bella", "warden": "bm_fable", "wizard": "bm_lewis",
     "goblin": "am_puck", "goblin2": "am_echo", "boss": "am_onyx", "barbarians": "am_eric", "archers": "af_kore", "healer": "af_sky",
+    "titan": "bf_emma",  # the Storm Sorceress (Electro Titan)
 }
 # ElevenLabs premade voices for the 1-minute promos (library voices need a paid plan).
 ELEVEN_CAST = {
@@ -27,6 +28,7 @@ ELEVEN_CAST = {
     "boss": "N2lVS1w4EtoT3dr4eOWO",      # Callum
     "healer": "EXAVITQu4vr4xnSDxMaL",    # Sarah
     "barbarians": "CwhRBWXzGAHq8TQ4Fs17",  # Roger
+    "titan": "pFZP5JQG7iQjIQuC4Bku",     # Lily, the Storm Sorceress
 }
 SOURCES = ["Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), "
            "used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."]

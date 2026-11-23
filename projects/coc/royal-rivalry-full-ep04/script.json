@@ -1,0 +1,4693 @@
+{
+ "title": "The Royal Rivalry, Episode 4: The Storm Sorceress (full episode)",
+ "series": "The Royal Rivalry (Clash of Clans fan comic), full episodes",
+ "visuals": "motion",
+ "title_card": false,
+ "width": 1920,
+ "height": 1080,
+ "tts": "kokoro",
+ "cast": {
+  "narrator": "bm_george",
+  "king": "am_fenrir",
+  "queen": "af_bella",
+  "warden": "bm_fable",
+  "wizard": "bm_lewis",
+  "goblin": "am_puck",
+  "goblin2": "am_echo",
+  "boss": "am_onyx",
+  "barbarians": "am_eric",
+  "archers": "af_kore",
+  "healer": "af_sky",
+  "titan": "bf_emma"
+ },
+ "speed": 0.92,
+ "scene_pad": 1.0,
+ "emotive": {
+  "skip": [
+   "narrator"
+  ]
+ },
+ "caption": {
+  "max_chars": 46,
+  "max_words": 8,
+  "size": 0.046,
+  "margin": 0.03
+ },
+ "music": {
+  "sound": "music_strategy",
+  "volume": 0.1
+ },
+ "sources": [
+  "Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."
+ ],
+ "scenes": [
+  {
+   "lines": [
+    [
+     "narrator",
+     "Previously, on The Royal Rivalry. The Warden woke up. A goblin ran off with a dragon scale, and left a map behind."
+    ],
+    [
+     "narrator",
+     "And far beyond the hills, a castle made of storm opened its eyes."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "gold",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "Previously...",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "paper",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.3,
+        "y": 0.7,
+        "h": 0.6,
+        "alpha": 0.7
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "sigil:0.7,0.35,70@1"
+      ],
+      "under": [],
+      "at": 4
+     },
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "eyes:0.5,0.4,0.08,120,210,255@line:1+1.5"
+      ],
+      "under": [
+       "stars"
+      ],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": 4,
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Tonight, she stops watching."
+    ],
+    [
+     "narrator",
+     "And starts taking."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_a",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85,
+        "alpha": 0.9,
+        "at": "line:1"
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.2,0,0.3,0.6,0.8@0.8",
+       "bolt:0.8,0,0.7,0.6,0.8@1.2",
+       "flash:150,210,255@line:1"
+      ],
+      "under": [
+       "smoke:0.3,0.35,110",
+       "smoke:0.7,0.3,100",
+       "smoke:0.5,0.25,120"
+      ]
+     }
+    ],
+    "titles": [
+     {
+      "text": "THE ROYAL RIVALRY",
+      "y": 0.36,
+      "size": 120,
+      "at": "lineend:1+0.2"
+     },
+     {
+      "text": "EPISODE 4: THE STORM SORCERESS",
+      "y": 0.53,
+      "size": 54,
+      "at": "lineend:1+0.9",
+      "style": "white"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "stamp",
+     "at": "lineend:1+0.2",
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "lineend:1+0.9",
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "By morning, the storm castle was gone. But everyone had seen it."
+    ],
+    [
+     "narrator",
+     "The whole kingdom crowded into the Town Hall. Which still smelled a little bit of burnt curtains."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "day",
+      "art": [
+       {
+        "name": "th19",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "The Town Hall",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [
+       "smoke:0.62,0.25,40"
+      ],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "warden",
+     "Listen to me. All of you. The Storm Sorceress has woken up."
+    ],
+    [
+     "barbarians",
+     "The one from the bedtime stories?"
+    ],
+    [
+     "warden",
+     "The bedtime stories left out the worst parts."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "gold",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       },
+       {
+        "name": "eq_tome",
+        "x": 0.82,
+        "y": 0.66,
+        "h": 0.22,
+        "bob": 6
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.45,
+        "y": 0.13,
+        "tail": [
+         0.45,
+         0.3
+        ],
+        "w": 560
+       },
+       {
+        "line": 2,
+        "x": 0.45,
+        "y": 0.13,
+        "tail": [
+         0.45,
+         0.3
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "glow:0.5,0.5,500"
+      ]
+     },
+     {
+      "bg": "burst:red",
+      "art": [
+       {
+        "name": "barb_emote_set_2",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "archer_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Then we march out today, and knock her castle down."
+    ],
+    [
+     "queen",
+     "It's made of clouds. What are you going to knock?"
+    ],
+    [
+     "king",
+     "Very hard. I'll knock it very hard."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.86
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 440
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 440
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "warden",
+     "Nobody is marching anywhere. She wants our Elixir. So we guard the Elixir."
+    ],
+    [
+     "wizard",
+     "I'll do it. I'll guard the storage. Personally. Day and night."
+    ],
+    [
+     "narrator",
+     "Everybody thought that was very brave of the Wizard."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "gold",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       },
+       {
+        "name": "elixir_storage",
+        "x": 0.82,
+        "y": 0.78,
+        "h": 0.3
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.45,
+        "y": 0.13,
+        "tail": [
+         0.45,
+         0.3
+        ],
+        "w": 480
+       }
+      ],
+      "caps": [
+       {
+        "text": "Very brave.",
+        "at": "line:2+1",
+        "y": 0.88
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "At noon, the sun went out."
+    ],
+    [
+     "narrator",
+     "Not behind a cloud. It simply went out, like a candle. And the sky began to hum."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "day",
+      "art": [
+       {
+        "name": "th19",
+        "x": 0.5,
+        "y": 0.66,
+        "h": 0.6
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "HMMMMMM...",
+        "x": 0.5,
+        "y": 0.14,
+        "at": "line:1+1.5",
+        "style": "zap",
+        "size": 70
+       }
+      ],
+      "fx": [
+       "darken:0.9@1.2",
+       "bolt:0.3,0,0.4,0.5,0.6@line:1+2",
+       "bolt:0.7,0,0.6,0.45,0.6@line:1+2.6"
+      ],
+      "under": []
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "magic",
+     "at": "line:1+1.5",
+     "volume": 0.42
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "The clouds twisted, and gathered, and became a face. Enormous. Crackling. Smiling."
+    ],
+    [
+     "titan",
+     "Hello, little kingdom."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan5",
+        "x": 0.5,
+        "y": 0.58,
+        "h": 0.95,
+        "alpha": 0.85,
+        "enter": "down",
+        "at": 1.5,
+        "bob": 10
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.2,
+        "y": 0.2,
+        "tail": [
+         0.38,
+         0.4
+        ],
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "flash:150,210,255@1.5",
+       "bolt:0.05,0,0.25,0.6,0.7@3",
+       "bolt:0.95,0,0.75,0.6,0.7@3.4"
+      ],
+      "under": [
+       "smoke:0.3,0.35,110",
+       "smoke:0.7,0.3,100",
+       "smoke:0.5,0.25,120"
+      ]
+     }
+    ],
+    "shake": [
+     1.5
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": 1.5,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "titan",
+     "You have something of mine. Every drop of Elixir in this valley."
+    ],
+    [
+     "titan",
+     "Give it back by the full moon. Or I will come down, and take it."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_d",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.92,
+        "alpha": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 600
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 600
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.7,0.35,0.95,0.7,0.6@2"
+      ],
+      "under": [
+       "smoke:0.3,0.35,110",
+       "smoke:0.7,0.3,100",
+       "smoke:0.5,0.25,120"
+      ]
+     },
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "elixir_storage",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.75
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.5,300,200,120,255"
+      ],
+      "under": [],
+      "at": "line:0+3"
+     },
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "elixir_collector",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.5,0.2,0.5,0.6,0.6@line:1+2"
+      ],
+      "under": [],
+      "at": "line:1"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:0+3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Give it BACK? It's ours!"
+    ],
+    [
+     "titan",
+     "Is it? Ask the old man where it came from."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "red",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_b",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.9,
+        "alpha": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Everyone turned to look at the Warden. The Warden did not look at anyone."
+    ],
+    [
+     "titan",
+     "Hello, old teacher. You look tired."
+    ],
+    [
+     "warden",
+     "Leave this valley alone."
+    ],
+    [
+     "titan",
+     "Funny. That's exactly what I said to you, once."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "darken:0.3@0"
+      ],
+      "under": []
+     },
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 340
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_b",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9,
+        "alpha": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:3-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:3-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "queen",
+     "Teacher? What does she mean, teacher?"
+    ],
+    [
+     "warden",
+     "Not now."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 40
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "titan",
+     "And these are your champions? They can't even stand next to each other."
+    ],
+    [
+     "titan",
+     "Full moon, old man. Don't make me wait."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_a",
+        "x": 0.5,
+        "y": 0.55,
+        "h": 0.8,
+        "alpha": 0.9
+       },
+       {
+        "name": "king_point",
+        "x": 0.12,
+        "y": 0.82,
+        "h": 0.3
+       },
+       {
+        "name": "queen_stand",
+        "x": 0.88,
+        "y": 0.82,
+        "h": 0.3,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 640
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.5,0.1,0.12,0.72,0.8@line:1+1.5",
+       "bolt:0.5,0.1,0.88,0.72,0.8@line:1+1.5",
+       "flash:150,210,255@line:1+1.5",
+       "darken:0.5@line:1+2.5"
+      ],
+      "under": [
+       "smoke:0.3,0.35,110",
+       "smoke:0.7,0.3,100",
+       "smoke:0.5,0.25,120"
+      ]
+     }
+    ],
+    "shake": [
+     "line:1+1.5"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": "line:1+1.5",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "And just like that, the sun came back on. As if nothing had happened."
+    ],
+    [
+     "wizard",
+     "Well. That was. Hm. I'll go and check on the Elixir."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "day",
+      "art": [
+       {
+        "name": "th19",
+        "x": 0.5,
+        "y": 0.66,
+        "h": 0.65
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "flash:255,250,220@0.5"
+      ],
+      "under": []
+     },
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "elixir_storage",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.75
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1+3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "That evening, the Healer found the Warden alone, staring at the Eternal Tome."
+    ],
+    [
+     "healer",
+     "She called you teacher."
+    ],
+    [
+     "warden",
+     "She was my student. The brightest I ever had. A long, long time ago."
+    ],
+    [
+     "healer",
+     "What happened?"
+    ],
+    [
+     "warden",
+     "I taught her everything I knew. And then I made a mistake."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "dusk",
+      "art": [
+       {
+        "name": "healer",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.88,
+        "bob": 6
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 380
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "glow:0.5,0.4,360"
+      ]
+     },
+     {
+      "bg": "dusk",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9,
+        "flip": true
+       },
+       {
+        "name": "eq_tome",
+        "x": 0.8,
+        "y": 0.7,
+        "h": 0.22,
+        "bob": 6
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 520
+       },
+       {
+        "line": 4,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "healer",
+     "What kind of mistake?"
+    ],
+    [
+     "warden",
+     "The kind you don't get to take back."
+    ],
+    [
+     "narrator",
+     "And that was all he would say."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 360
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "darken:0.35@line:2"
+      ],
+      "under": [
+       "glow:0.5,0.45,300"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "The full moon was three nights away. The kingdom had never worked so hard."
+    ],
+    [
+     "narrator",
+     "The Barbarians piled stones. The Archers fletched arrows. Nobody complained. Well. Hardly anybody."
+    ]
+   ],
+   "page": {
+    "layout": "3",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       },
+       {
+        "name": "wall",
+        "x": 0.7,
+        "y": 0.84,
+        "h": 0.3
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "archer",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": 3
+     },
+     {
+      "bg": "burst:orange",
+      "art": [
+       {
+        "name": "barb_emote_set_4",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.75
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1+3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": 3,
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "The Barbarians built a catapult, to throw rocks at dragons. They tested it on the first rock they found."
+    ],
+    [
+     "barbarians",
+     "Ready? Three. Two..."
+    ],
+    [
+     "narrator",
+     "The rock went straight up. And then, straight back down."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "day",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.3,
+        "y": 0.66,
+        "h": 0.75
+       },
+       {
+        "name": "wall",
+        "x": 0.7,
+        "y": 0.8,
+        "h": 0.35
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "SPROING!",
+        "x": 0.6,
+        "y": 0.2,
+        "at": "line:1+1.8",
+        "style": "gold",
+        "size": 80
+       }
+      ],
+      "fx": [
+       "speed:0.5,0.2@line:1+2"
+      ],
+      "under": []
+     },
+     {
+      "bg": "burst:red",
+      "art": [
+       {
+        "name": "barb_emote_set_3",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 26
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "day",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.5,
+        "y": 0.7,
+        "h": 0.7
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "BONK!",
+        "x": 0.5,
+        "y": 0.25,
+        "at": "line:2+2",
+        "style": "red",
+        "size": 90
+       }
+      ],
+      "fx": [
+       "dizzy:0.5,0.3@line:2+2.2"
+      ],
+      "under": [],
+      "at": "line:2"
+     }
+    ],
+    "shake": [
+     "line:2+2"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "ding",
+     "at": "line:1+1.8",
+     "volume": 0.42
+    },
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "thud",
+     "at": "line:2+2",
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": "line:2+2",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Wizard! Any news about the weather for the full moon?"
+    ],
+    [
+     "wizard",
+     "Clear skies. Not a single cloud."
+    ],
+    [
+     "narrator",
+     "Everybody stared at him."
+    ],
+    [
+     "wizard",
+     "Probably. Mostly. I'll check again."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.86
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ],
+    "caps": [
+     {
+      "text": "Everybody stared.",
+      "at": "line:2",
+      "x": 0.38,
+      "y": 0.88
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "We should meet the dragons outside the walls. Head on. Charge!"
+    ],
+    [
+     "queen",
+     "We should put every archer on the towers, and let the dragons come to us."
+    ],
+    [
+     "narrator",
+     "They argued for an hour. Then the Warden made the decision for them."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "red",
+      "art": [
+       {
+        "name": "king_charge",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.86
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 440
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "speed:0.5,0.5"
+      ]
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_aim",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ],
+    "caps": [
+     {
+      "text": "One hour later...",
+      "at": "line:2+1",
+      "x": 0.38,
+      "y": 0.88
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "warden",
+     "King, you guard the gate. Queen, you take the towers. And the Wizard keeps the Elixir."
+    ],
+    [
+     "king",
+     "Fine."
+    ],
+    [
+     "queen",
+     "Fine."
+    ],
+    [
+     "warden",
+     "And try not to shoot each other."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "gold",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 600
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:orange",
+      "art": [
+       {
+        "name": "bk_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "size": 36
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "aq_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "size": 36
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Down in the square, the Barbarian and the Archer from the day before were sharing lunch again."
+    ],
+    [
+     "barbarians",
+     "If a dragon comes, I'll protect you."
+    ],
+    [
+     "archers",
+     "If a dragon comes, I'll be on a tower. Shooting it. Protecting you."
+    ],
+    [
+     "barbarians",
+     "Oh. Even better."
+    ]
+   ],
+   "page": {
+    "layout": "1/2",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.3,
+        "y": 0.66,
+        "h": 0.75
+       },
+       {
+        "name": "archer",
+        "x": 0.7,
+        "y": 0.66,
+        "h": 0.72,
+        "flip": true
+       },
+       {
+        "name": "snack_soup",
+        "x": 0.5,
+        "y": 0.55,
+        "h": 0.2,
+        "bob": 6
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "hearts@line:3"
+      ],
+      "under": []
+     },
+     {
+      "bg": "burst:gold",
+      "art": [
+       {
+        "name": "barb_emote_set_5",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 26
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "burst:green",
+      "art": [
+       {
+        "name": "archer_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "On the second night, the Queen spotted something on the wall. Small. Green. Sneaking."
+    ],
+    [
+     "queen",
+     "You again!"
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "wall",
+        "x": 0.5,
+        "y": 0.8,
+        "h": 0.5
+       },
+       {
+        "name": "goblin_07",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.35,
+        "at": 2.5
+       },
+       {
+        "name": "queen_aim",
+        "x": 0.15,
+        "y": 0.7,
+        "h": 0.5
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.2,
+        "y": 0.16,
+        "tail": [
+         0.15,
+         0.4
+        ],
+        "shout": true
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "eyes:0.5,0.6,0.02,255,255,180@1.5"
+      ],
+      "under": [
+       "stars",
+       "moon:0.8,0.18"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "She fired. The arrow hit the stone where the goblin had been standing, half a second before."
+    ],
+    [
+     "narrator",
+     "He was gone. Again. But there were tiny muddy footprints, leading straight toward the gate."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "wall",
+        "x": 0.5,
+        "y": 0.78,
+        "h": 0.6
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "THWACK!",
+        "x": 0.5,
+        "y": 0.35,
+        "at": 2.5,
+        "style": "gold",
+        "size": 80
+       }
+      ],
+      "fx": [
+       "burst:0.5,0.6@2.5"
+      ],
+      "under": [
+       "stars"
+      ]
+     },
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "wall",
+        "x": 0.5,
+        "y": 0.82,
+        "h": 0.45
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "Footprints.",
+        "at": "line:1+3",
+        "y": 0.88
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars"
+      ],
+      "at": "line:1-0.3"
+     }
+    ],
+    "shake": [
+     2.5
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "ding",
+     "at": 2.5,
+     "volume": 0.42
+    },
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "impact",
+     "at": 2.5,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "queen",
+     "The goblin was at the gate. Tonight. Why?"
+    ],
+    [
+     "king",
+     "Snacks?"
+    ],
+    [
+     "queen",
+     "Nobody sneaks past a hundred archers for snacks."
+    ],
+    [
+     "king",
+     "I would."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.86
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ]
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ]
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "On the last night before the full moon, the King walked the wall. The Queen was already up there."
+    ],
+    [
+     "king",
+     "She said we can't stand next to each other."
+    ],
+    [
+     "queen",
+     "We're standing next to each other right now."
+    ],
+    [
+     "king",
+     "So she's wrong."
+    ],
+    [
+     "queen",
+     "Let's make sure she's wrong."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "wall",
+        "x": 0.5,
+        "y": 0.88,
+        "h": 0.8
+       },
+       {
+        "name": "king_point",
+        "x": 0.32,
+        "y": 0.66,
+        "h": 0.55
+       },
+       {
+        "name": "queen_stand",
+        "x": 0.68,
+        "y": 0.66,
+        "h": 0.57,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.25,
+        "y": 0.14,
+        "tail": [
+         0.3,
+         0.38
+        ],
+        "w": 420
+       },
+       {
+        "line": 2,
+        "x": 0.75,
+        "y": 0.14,
+        "tail": [
+         0.7,
+         0.38
+        ],
+        "w": 440
+       },
+       {
+        "line": 3,
+        "x": 0.25,
+        "y": 0.14,
+        "tail": [
+         0.3,
+         0.38
+        ],
+        "w": 320
+       },
+       {
+        "line": 4,
+        "x": 0.75,
+        "y": 0.14,
+        "tail": [
+         0.7,
+         0.38
+        ],
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "moon:0.5,0.16"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "In the Healer's house, the Warden was asleep. The lightning inside him crackled, a little louder than before."
+    ],
+    [
+     "narrator",
+     "Someone was sitting by his bed. The Wizard."
+    ],
+    [
+     "wizard",
+     "Hold on, old friend. Just a little longer. I promise."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.8,
+        "alpha": 0.85
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.4,0.5,0.6,0.45,0.4@2",
+       "bolt:0.6,0.4,0.45,0.6,0.4@3"
+      ],
+      "under": [
+       "glow:0.5,0.5,380"
+      ]
+     },
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1"
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "The night of the full moon came. The kingdom held its breath."
+    ],
+    [
+     "narrator",
+     "The King stood at the gate. The Queen stood on the tallest tower. And the Wizard stood by the Elixir. Very, very still."
+    ]
+   ],
+   "page": {
+    "layout": "1/3",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "th19",
+        "x": 0.5,
+        "y": 0.7,
+        "h": 0.45
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "The full moon",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "moon:0.5,0.2"
+      ]
+     },
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "king_army",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1"
+     },
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "queen_aim",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1+3"
+     },
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1+6"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+6",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "At midnight, the moon turned blue."
+    ],
+    [
+     "narrator",
+     "And out of the clouds came three Electro Dragons. One from the north. One from the east. One from the west."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "edrag_1",
+        "x": 0.2,
+        "y": 0.35,
+        "h": 0.3,
+        "enter": "left",
+        "at": "line:1+2",
+        "bob": 12
+       },
+       {
+        "name": "edrag_2",
+        "x": 0.5,
+        "y": 0.25,
+        "h": 0.3,
+        "enter": "up",
+        "at": "line:1+3.5",
+        "bob": 12
+       },
+       {
+        "name": "edrag_3",
+        "x": 0.8,
+        "y": 0.35,
+        "h": 0.3,
+        "flip": true,
+        "enter": "right",
+        "at": "line:1+5",
+        "bob": 12
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.2,300,120,210,255@1",
+       "flash:150,210,255@line:1+2"
+      ],
+      "under": [
+       "moon:0.5,0.2"
+      ]
+     }
+    ],
+    "shake": [
+     "line:1+2"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": "line:1+2",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "queen",
+     "Archers! North dragon! Fire!"
+    ],
+    [
+     "narrator",
+     "A hundred arrows flew. The north dragon roared, and swerved away from the towers."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_aim",
+        "x": 0.35,
+        "y": 0.64,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.4,
+        "y": 0.13,
+        "tail": [
+         0.35,
+         0.3
+        ],
+        "shout": true,
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "FWIP FWIP FWIP!",
+        "x": 0.7,
+        "y": 0.2,
+        "at": "line:1",
+        "style": "gold",
+        "size": 60
+       }
+      ],
+      "fx": [],
+      "under": [
+       "speed:0.7,0.3"
+      ]
+     },
+     {
+      "bg": "burst:green",
+      "art": [
+       {
+        "name": "archer_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1"
+     },
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "edrag_1",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8,
+        "bob": 10
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.2,0.5,0.5,0.3,0.6@line:1+2"
+      ],
+      "under": [],
+      "at": "line:1+2"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "ding",
+     "at": "line:1",
+     "volume": 0.42
+    },
+    {
+     "sound": "pop",
+     "at": "line:1",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+2",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Barbarians! East dragon! With me!"
+    ],
+    [
+     "narrator",
+     "The King grabbed a boulder the size of a cow, and threw it with everything he had."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "red",
+      "art": [
+       {
+        "name": "king_charge",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "speed:0.5,0.5"
+      ]
+     },
+     {
+      "bg": "burst:red",
+      "art": [
+       {
+        "name": "barb_emote_set_1",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:0+2"
+     },
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "edrag_2",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8,
+        "bob": 10
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "WHOOSH!",
+        "x": 0.5,
+        "y": 0.2,
+        "at": "line:1+3",
+        "style": "white",
+        "size": 70
+       }
+      ],
+      "fx": [],
+      "under": [],
+      "at": "line:1+2"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:0+2",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+2",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "whoosh",
+     "at": "line:1+3",
+     "volume": 0.42
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "queen",
+     "Too low! Let me fix that."
+    ],
+    [
+     "narrator",
+     "Her arrow hit the boulder in mid air, and split it into twenty pieces. Twenty pieces, straight into the dragon."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "queen_aim",
+        "x": 0.15,
+        "y": 0.72,
+        "h": 0.45
+       },
+       {
+        "name": "edrag_2",
+        "x": 0.75,
+        "y": 0.3,
+        "h": 0.35,
+        "bob": 10
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.13,
+        "tail": [
+         0.2,
+         0.4
+        ],
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "KRAKOOM!",
+        "x": 0.5,
+        "y": 0.2,
+        "at": "line:1+1.5",
+        "style": "fire",
+        "size": 110
+       }
+      ],
+      "fx": [
+       "burst:0.5,0.45@line:1+1.5",
+       "flash@line:1+1.5",
+       "bolt:0.75,0.3,0.95,0.05,0.6@line:1+4"
+      ],
+      "under": [
+       "speed:0.5,0.5"
+      ]
+     }
+    ],
+    "shake": [
+     "line:1+1.5"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": "line:1+1.5",
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": "line:1+1.5",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Did you just..."
+    ],
+    [
+     "queen",
+     "Fix your throw? You're welcome."
+    ],
+    [
+     "king",
+     "That was MY boulder!"
+    ],
+    [
+     "queen",
+     "That was OUR dragon."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.86
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ]
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 380
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ],
+    "caps": [
+     {
+      "text": "Our dragon.",
+      "at": "line:3+1",
+      "x": 0.42,
+      "y": 0.88
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Then, as suddenly as they came, all three dragons turned around, and flew away."
+    ],
+    [
+     "narrator",
+     "Not chased off. Not beaten. Called home. As if they had finished their job."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "edrag_1",
+        "x": 0.3,
+        "y": 0.4,
+        "h": 0.2,
+        "move": [
+         0.1,
+         0.1
+        ],
+        "moveAt": 1.5,
+        "moveEnd": 5
+       },
+       {
+        "name": "edrag_2",
+        "x": 0.5,
+        "y": 0.35,
+        "h": 0.2,
+        "move": [
+         0.5,
+         -0.1
+        ],
+        "moveAt": 1.5,
+        "moveEnd": 5
+       },
+       {
+        "name": "edrag_3",
+        "x": 0.7,
+        "y": 0.4,
+        "h": 0.2,
+        "flip": true,
+        "move": [
+         0.9,
+         0.1
+        ],
+        "moveAt": 1.5,
+        "moveEnd": 5
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "moon:0.5,0.2"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "barbarians",
+     "We won! We actually WON!"
+    ],
+    [
+     "archers",
+     "Three dragons! Not a single building lost!"
+    ],
+    [
+     "warden",
+     "Too easy. That was far too easy."
+    ]
+   ],
+   "page": {
+    "layout": "1/2",
+    "panels": [
+     {
+      "bg": "gold",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.3,
+        "y": 0.66,
+        "h": 0.75
+       },
+       {
+        "name": "archer",
+        "x": 0.7,
+        "y": 0.66,
+        "h": 0.72,
+        "flip": true
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "HOORAY!",
+        "x": 0.5,
+        "y": 0.18,
+        "at": 0.5,
+        "style": "gold",
+        "size": 90
+       }
+      ],
+      "fx": [
+       "burst:0.5,0.4@0.5",
+       "burst:0.3,0.5@1.5"
+      ],
+      "under": []
+     },
+     {
+      "bg": "burst:red",
+      "art": [
+       {
+        "name": "barb_emote_set_2",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "ding",
+     "at": 0.5,
+     "volume": 0.42
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "The Warden was right."
+    ],
+    [
+     "narrator",
+     "When they opened the Elixir storage, it was empty. Every last drop. Gone."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "elixir_storage",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.7
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "...EMPTY.",
+        "x": 0.5,
+        "y": 0.16,
+        "at": "line:1+3",
+        "style": "white",
+        "size": 80
+       }
+      ],
+      "fx": [
+       "darken:0.4@line:1+2"
+      ],
+      "under": []
+     }
+    ],
+    "shake": [
+     "line:1+3"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "whoosh",
+     "at": "line:1+3",
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": "line:1+3",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "How? Nothing touched it! We were standing RIGHT THERE!"
+    ],
+    [
+     "queen",
+     "There's no hole. No broken wall. The lock is still locked."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "red",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.86
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "wizard",
+     "I was here the whole time! I didn't hear anything. Not a sound. Nothing at all."
+    ],
+    [
+     "narrator",
+     "The Wizard looked very pale. Everyone agreed he must have had a terrible fright."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.35,
+        "y": 0.64,
+        "h": 0.85
+       },
+       {
+        "name": "elixir_storage",
+        "x": 0.78,
+        "y": 0.7,
+        "h": 0.45
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.4,
+        "y": 0.13,
+        "tail": [
+         0.35,
+         0.3
+        ],
+        "w": 560
+       }
+      ],
+      "caps": [
+       {
+        "text": "A terrible fright.",
+        "at": "line:1+2",
+        "x": 0.6,
+        "y": 0.88
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Then the King went to check the gate. And stopped."
+    ],
+    [
+     "king",
+     "The gate's been opened. Not broken. Opened."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "wall",
+        "x": 0.5,
+        "y": 0.75,
+        "h": 0.7
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "The gate",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.6,300"
+      ],
+      "under": []
+     },
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "night",
+      "art": [],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "Opened with a key.",
+        "at": 0,
+        "y": 0.88
+       }
+      ],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.5,220",
+       "ring:0.5,0.5,300@line:1+2.5"
+      ],
+      "under": [],
+      "at": "line:1+2"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+2",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "queen",
+     "So the dragons were never the attack. They were the distraction."
+    ],
+    [
+     "queen",
+     "While we were all looking at the sky, someone opened the gate from inside, and let the Elixir walk out."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.2,
+        "y": 0.66,
+        "h": 0.7
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.62,
+        "y": 0.14,
+        "tail": [
+         0.25,
+         0.35
+        ],
+        "w": 600
+       },
+       {
+        "line": 1,
+        "x": 0.62,
+        "y": 0.14,
+        "tail": [
+         0.25,
+         0.35
+        ],
+        "w": 640
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "sigil:0.7,0.4,90@line:1+2"
+      ],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "From inside. You mean..."
+    ],
+    [
+     "queen",
+     "Someone in this kingdom is working for her."
+    ],
+    [
+     "narrator",
+     "Nobody said the word. But everybody was thinking it."
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.86
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ]
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 440
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Traitor."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.2,0,0.35,0.7,0.8@0.3",
+       "flash:150,210,255@0.3"
+      ],
+      "under": []
+     }
+    ],
+    "titles": [
+     {
+      "text": "TRAITOR.",
+      "y": 0.5,
+      "size": 170,
+      "at": 0.4
+     }
+    ],
+    "shake": [
+     0.3
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": 0.3,
+     "volume": 0.45
+    },
+    {
+     "sound": "stamp",
+     "at": 0.4,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "warden",
+     "A traitor. In my kingdom."
+    ],
+    [
+     "narrator",
+     "The Warden looked slowly around the room. At the Barbarians. At the Archers. At the Healer. At the Wizard. At the King, and the Queen."
+    ],
+    [
+     "warden",
+     "Whoever you are. I will find you."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "darken:0.3@line:1"
+      ],
+      "under": [
+       "glow:0.5,0.45,420"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "barbarians",
+     "It was the Archers! They were on the towers, nobody was watching them!"
+    ],
+    [
+     "archers",
+     "It was the Barbarians! They had the gate!"
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "burst:red",
+      "art": [
+       {
+        "name": "barb_emote_set_1",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 24,
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:green",
+      "art": [
+       {
+        "name": "archer_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 24,
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "queen",
+     "Stop it! Both of you. Look at the gate. Look at the mud."
+    ],
+    [
+     "narrator",
+     "There they were. Tiny, muddy footprints, all around the gate."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.88,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 480
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "wall",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.5
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1"
+     },
+     {
+      "bg": "ash",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8,
+        "alpha": 0.6
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1+2.5"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+2.5",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "barbarians",
+     "The goblin!"
+    ],
+    [
+     "archers",
+     "The goblin!"
+    ],
+    [
+     "king",
+     "Of course. The goblin."
+    ],
+    [
+     "narrator",
+     "And for the first time in a very long time, the whole kingdom agreed on something."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "img:bg_2026_hammerjam_backgroundonly@0.5,0.6,1.5",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.2,
+        "y": 0.72,
+        "h": 0.5
+       },
+       {
+        "name": "archer",
+        "x": 0.8,
+        "y": 0.72,
+        "h": 0.48,
+        "flip": true
+       },
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.72,
+        "h": 0.55
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.2,
+        "y": 0.16,
+        "tail": [
+         0.2,
+         0.45
+        ],
+        "shout": true,
+        "size": 30
+       },
+       {
+        "line": 1,
+        "x": 0.8,
+        "y": 0.16,
+        "tail": [
+         0.8,
+         0.45
+        ],
+        "shout": true,
+        "size": 30
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.42
+        ],
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "darken:0.2@0"
+      ],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "But the Healer wasn't listening. She was kneeling by the Elixir storage, looking at the lock."
+    ],
+    [
+     "narrator",
+     "There was a scorch mark on it. Small. Neat. The kind of mark a spell leaves."
+    ],
+    [
+     "healer",
+     "Warden? Could you look at this?"
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "healer",
+        "x": 0.3,
+        "y": 0.62,
+        "h": 0.8,
+        "bob": 6
+       },
+       {
+        "name": "elixir_storage",
+        "x": 0.75,
+        "y": 0.7,
+        "h": 0.5
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "glow:0.75,0.6,160,200,120,255"
+      ],
+      "under": []
+     },
+     {
+      "bg": "purple",
+      "art": [],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "A spell-burn.",
+        "at": 0,
+        "y": 0.88
+       }
+      ],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.5,160,200,120,255",
+       "ring:0.5,0.5,200@line:1+2"
+      ],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "dusk",
+      "art": [
+       {
+        "name": "healer",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "But the Warden was already gone. Out to the gate with everybody else, shouting about goblins."
+    ],
+    [
+     "narrator",
+     "And by the time anyone thought about that lock again, the scorch mark had been wiped clean."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "elixir_storage",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.6
+       },
+       {
+        "name": "healer",
+        "x": 0.15,
+        "y": 0.7,
+        "h": 0.4,
+        "alpha": 0.6
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.6,140,200,120,255",
+       "darken:0.5@line:1+2"
+      ],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Far away, on a hill above the kingdom, a small green figure sat alone, holding a blue dragon scale."
+    ],
+    [
+     "narrator",
+     "The scale began to crackle. Then it began to speak."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.4,
+        "y": 0.7,
+        "h": 0.55
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "Meanwhile, on the hill...",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.55,200,120,210,255",
+       "bolt:0.5,0.55,0.55,0.4,0.4@line:1"
+      ],
+      "under": [
+       "stars",
+       "moon:0.8,0.2"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "titan",
+     "You did well, little one. They found your map. They're blaming you for everything."
+    ],
+    [
+     "goblin",
+     "I did what you asked. Now let my Boss go."
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "titan_b",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.9,
+        "alpha": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 640
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.2,0,0.3,0.4,0.5@1"
+      ],
+      "under": []
+     },
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "storm",
+      "art": [
+       {
+        "name": "goblin_02",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8,
+        "alpha": 0.6
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.2,0.2,0.8,0.8,0.5@line:1+2",
+       "bolt:0.8,0.2,0.2,0.8,0.5@line:1+2.3"
+      ],
+      "under": [],
+      "at": "line:1+1.5"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+1.5",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "titan",
+     "Not yet. I have one more job for you."
+    ],
+    [
+     "narrator",
+     "The scale went dark. And the goblin, who had stolen from a hundred kingdoms, looked very, very small."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.5,
+        "y": 0.72,
+        "h": 0.35
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.45
+        ],
+        "w": 460
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "darken:0.4@line:1"
+      ],
+      "under": [
+       "stars",
+       "moon:0.8,0.2"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "And back in the kingdom, while everyone was out hunting a goblin, the Town Hall was very quiet."
+    ],
+    [
+     "narrator",
+     "Someone walked in. Someone hung a key back on its hook. Very carefully. Very quietly."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "th19",
+        "x": 0.5,
+        "y": 0.66,
+        "h": 0.6
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "darken:0.4@0",
+       "glow:0.62,0.6,90,200,120,255@line:1+1"
+      ],
+      "under": [
+       "stars"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Someone who was not a goblin."
+    ],
+    [
+     "narrator",
+     "To be continued. Who opened the gate? Tell me who you suspect, in the comments."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "glow:0.5,0.45,200,200,120,255@0.5",
+       "sigil:0.5,0.45,110@1.5"
+      ],
+      "under": []
+     }
+    ],
+    "titles": [
+     {
+      "text": "WHO OPENED THE GATE?",
+      "y": 0.68,
+      "size": 90,
+      "at": "line:1-0.2"
+     },
+     {
+      "text": "TO BE CONTINUED...",
+      "y": 0.82,
+      "size": 60,
+      "at": "line:1+1.5",
+      "style": "white"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "stamp",
+     "at": "line:1-0.2",
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "line:1+1.5",
+     "volume": 0.4
+    }
+   ]
+  }
+ ]
+}
