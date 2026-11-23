@@ -1,8 +1,15 @@
 # The Royal Rivalry: series plan (12 episodes)
 
-A Clash of Clans fan comic told as vertical motion-comic Shorts (~50-60 s each), narrated by Charlie,
-built from official Supercell Fan Kit art. Every episode ends on a cliffhanger and a comment prompt.
-Project folders: `projects/coc/royal-rivalry-ep<N>/`; shared comic style: `motion/coc/comic.js`.
+A Clash of Clans fan comic built from official Supercell Fan Kit art. Every episode ends on a cliffhanger
+and a comment prompt.
+
+**Format (current):** full episodes of about 10 minutes, 16:9 (1920x1080), voiced by a local Kokoro cast
+(narrator plus a voice per character, narrator-only subtitles), each with a ~1-minute vertical promo Short
+voiced with ElevenLabs premade voices.
+- Full episodes: `projects/coc/royal-rivalry-full-ep<NN>/` (build.py writes script.json)
+- Promos: `projects/coc/royal-rivalry-full-ep<NN>-promo/`
+- Page helpers and casts: `projects/coc/rivalry.py`; page engine: `motion/coc/comicpage.js`
+- The earlier vertical Shorts (`royal-rivalry-ep1..3`) were the pilot of the same story.
 
 **Main cast:** Barbarian King and Archer Queen (rivals), Grand Warden (mentor), the Goblin from Ep 1
 (comic relief, later a guide), Barbarians and Archers (the two factions), Healer.
@@ -10,8 +17,8 @@ Project folders: `projects/coc/royal-rivalry-ep<N>/`; shared comic style: `motio
 **Her forces:** Electro Dragons, a P.E.K.K.A guard. **Late allies:** Royal Champion, Dragons, Balloons.
 
 ## Arc 1: The Storm
-1. **Who Is the Greatest?** (done): the rivalry, the Warden's contest, the goblin collision, eyes in the dark.
-2. **The Storm Arrives** (done): an Electro Dragon attacks, the heroes sabotage each other, the Warden falls.
+1. **Who Is the Greatest?** (full episode + promo done): the rivalry, the Warden's contest, the goblin collision, eyes in the dark.
+2. **The Storm Arrives** (full episode scripted): an Electro Dragon attacks, the heroes sabotage each other, the Warden falls.
 3. **Picking Up the Pieces:** the village in ruins, the Healer saves the Warden, the heroes blame each other;
    the Warden warns the dragon was *sent*; the Queen finds a crackling storm mark. Cliffhanger: who sent it?
 4. **The Storm Sorceress:** the mark leads to a vision of the Electro Titan on her floating citadel; she wants
