@@ -486,14 +486,17 @@ def ass_time(t):
     return f"{cs // 360000}:{cs // 6000 % 60:02d}:{cs // 100 % 60:02d}.{cs % 100:02d}"
 
 
-def motion_clip(scene_idx, page, seconds, words, out_dir, force):
-    """Render scene `scene_idx` of a canvas page (see motion/lib.js) to an MP4."""
+def motion_clip(scene_idx, page, seconds, words, out_dir, force, scene=None):
+    """Render scene `scene_idx` of a canvas page (see motion/lib.js) to an MP4.
+
+    `scene` is this scene's entry from the script; it is part of the cache key, because comic pages read
+    their layout from script.json at render time."""
     path = out_dir / f"scene{scene_idx:02d}.mp4"
     words_path = out_dir / f"scene{scene_idx:02d}.words.json"
     words_path.write_text(json.dumps(words))
     root = Path(__file__).parent
-    sources = [page, *sorted((root / "motion").rglob("*.js"))]
-    key = fingerprint([hashlib.sha256(p.read_bytes()).hexdigest() for p in sources], round(seconds, 3), words, FPS)
+    sources = [page, *sorted((root / "motion").rglob("*.js")), *sorted(page.parent.glob("fankit.json"))]
+    key = fingerprint([hashlib.sha256(p.read_bytes()).hexdigest() for p in sources], round(seconds, 3), words, FPS, scene)
     if not force and is_fresh(path, key):
         return path
     run(["node", str(root / "motion" / "render.js"), str(page), str(scene_idx), f"{seconds:.3f}", str(FPS),
@@ -771,7 +774,7 @@ def main():
     if motion:
         page = args.script.parent / spec.get("motion_page", "motion.html")
         with ThreadPoolExecutor(max_workers=3) as pool:
-            clips = list(pool.map(lambda i: motion_clip(i, page, lengths[i], scene_words[i], out_dir, args.force),
+            clips = list(pool.map(lambda i: motion_clip(i, page, lengths[i], scene_words[i], out_dir, args.force, scenes[i]),
                                   range(len(scenes))))
     else:
         # Every clip but the last runs XFADE longer so it can overlap the next scene.
