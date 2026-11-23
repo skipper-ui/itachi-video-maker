@@ -8,7 +8,7 @@ function loadJSONSync(url) { const x = new XMLHttpRequest(); x.open('GET', url, 
 
 const WIDE = W > H;
 // Usable page area: wide pages leave the bottom band for narrator subtitles.
-const AREA = WIDE ? [40, 30, W - 80, 880] : [40, 110, 1000, 1330];
+const AREA = WIDE ? [40, 30, W - 80, 880] : [40, 110, 1000, 1290];
 const GAP = 26;
 const LAYOUTS = {
   '1': [[0, 0, 1, 1]],

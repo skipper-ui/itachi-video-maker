@@ -86,7 +86,7 @@ def promo_spec(title, pages):
         "title": title, "series": "The Royal Rivalry (Clash of Clans fan comic), full-episode promos",
         "visuals": "motion", "title_card": False, "width": 1080, "height": 1920,
         "tts": "elevenlabs", "cast": ELEVEN_CAST, "scene_pad": 0.45,
-        "caption": {"max_chars": 22, "max_words": 4, "size": 0.05, "margin": 0.2},
+        "caption": {"max_chars": 18, "max_words": 4, "size": 0.05, "margin": 0.185},
         "music": {"sound": "music_strategy", "volume": 0.18},
         "sources": SOURCES, "scenes": add_cues(pages),
     }
