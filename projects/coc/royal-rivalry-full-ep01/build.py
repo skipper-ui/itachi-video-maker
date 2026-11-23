@@ -286,7 +286,7 @@ pages = [
           P("night", under=["stars"], art=[A("king_point", h=.85)], at="line:0+1"),
           P("storm", fx=["bolt:0.2,0,0.5,0.9,0.9@line:1+2", "flash@line:1+2"], at="line:1")]),
     page([(N, "Far beyond the walls, on top of a storm-dark hill, something had watched the whole thing. And it was smiling."),
-          (N, "To be continued. Who is the greatest hero, the King or the Queen? Tell me in the comments.")], "1",
+          (N, "To be continued. Who do you think is watching from that hill? Tell me in the comments. And like and subscribe, so you don't miss the next part.")], "1",
          [P("dark", under=["stars"], fx=["bolt:0.1,0,0.25,0.6,0.8@line:0+2", "bolt:0.9,0,0.75,0.5,0.8@line:0+3", "eyes:0.5,0.4,0.06,120,210,255@line:0+3.5"])],
          titles=[{"text": "TO BE CONTINUED...", "y": 0.62, "size": 100, "at": "line:1-0.2"}]),
 ]
