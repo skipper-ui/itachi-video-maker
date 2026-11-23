@@ -34,6 +34,11 @@ SOURCES = ["Original fan story. Characters and art: official Supercell Fan Kit (
            "used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."]
 
 
+def L(who, text, tone=None):
+    """A spoken line with an acting direction, e.g. L("king", "MINE!", "shouting")."""
+    return (who, text, {"tone": tone}) if tone else (who, text)
+
+
 def A(name, x=.5, y=.62, h=.85, **kw): return {"name": name, "x": x, "y": y, "h": h, **kw}
 def B(line, x=.5, y=.18, tail=None, **kw): return {"line": line, "x": x, "y": y, **({"tail": tail} if tail else {}), **kw}
 def Cap(text, at=0, **kw): return {"text": text, "at": at, **kw}

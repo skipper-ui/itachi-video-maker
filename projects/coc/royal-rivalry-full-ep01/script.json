@@ -17,7 +17,8 @@
   "boss": "am_onyx",
   "barbarians": "am_eric",
   "archers": "af_kore",
-  "healer": "af_sky"
+  "healer": "af_sky",
+  "titan": "bf_emma"
  },
  "speed": 0.92,
  "scene_pad": 1.0,
@@ -44,11 +45,11 @@
    "lines": [
     [
      "narrator",
-     "Every legend begins somewhere. Ours begins in the dark, with a pair of eyes that should not be there."
+     "Every legend begins somewhere. This one begins in the dark, with a pair of eyes that should not be there."
     ],
     [
      "narrator",
-     "But to understand what those eyes were watching, we have to go back. Back to an argument."
+     "And with an argument."
     ]
    ],
    "page": {
@@ -76,13 +77,13 @@
       "text": "THE ROYAL RIVALRY",
       "y": 0.38,
       "size": 120,
-      "at": "line:1+1.2"
+      "at": "line:1+0.6"
      },
      {
       "text": "EPISODE 1: WHO IS THE GREATEST?",
       "y": 0.55,
       "size": 54,
-      "at": "line:1+2",
+      "at": "line:1+1.4",
       "style": "white"
      }
     ]
@@ -90,12 +91,12 @@
    "sfx": [
     {
      "sound": "stamp",
-     "at": "line:1+1.2",
+     "at": "line:1+0.6",
      "volume": 0.4
     },
     {
      "sound": "stamp",
-     "at": "line:1+2",
+     "at": "line:1+1.4",
      "volume": 0.4
     }
    ]
@@ -103,12 +104,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "In a green valley, ringed by mighty walls, there stood a kingdom of builders, soldiers and dreamers."
+     "warden",
+     "Welcome, traveller. Strong walls, tall towers, plenty of gold. And people who are, mostly, happy.",
+     {
+      "tone": "warm"
+     }
     ],
     [
-     "narrator",
-     "Its towers were tall. Its gold was plentiful. And its people were, mostly, happy."
+     "wizard",
+     "Mostly! Very mostly!",
+     {
+      "tone": "cheerful"
+     }
     ]
    ],
    "page": {
@@ -116,8 +123,45 @@
     "panels": [
      {
       "bg": "img:bg_2026_hammerjam_backgroundonly@0.5,0.55,1.15",
-      "art": [],
-      "bubbles": [],
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.14,
+        "y": 0.72,
+        "h": 0.5,
+        "enter": "left"
+       },
+       {
+        "name": "wizard",
+        "x": 0.88,
+        "y": 0.74,
+        "h": 0.42,
+        "enter": "right",
+        "at": "line:1-0.4"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.42,
+        "y": 0.14,
+        "tail": [
+         0.18,
+         0.45
+        ],
+        "w": 620
+       },
+       {
+        "line": 1,
+        "x": 0.72,
+        "y": 0.22,
+        "tail": [
+         0.86,
+         0.5
+        ],
+        "w": 360
+       }
+      ],
       "caps": [
        {
         "text": "The Kingdom",
@@ -137,20 +181,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "Barbarians guarded the gates."
+     "barbarians",
+     "Gates secure! Nobody gets past us!",
+     {
+      "tone": "shouting"
+     }
     ],
     [
-     "narrator",
-     "Archers watched from the towers."
+     "archers",
+     "Towers clear. Eyes on the hills.",
+     {
+      "tone": "calm"
+     }
     ],
     [
-     "narrator",
-     "And the Wizards, well, the Wizards mostly set things on fire by accident."
+     "warden",
+     "And our Wizards mostly set things on fire by accident.",
+     {
+      "tone": "dry"
+     }
     ],
     [
      "wizard",
-     "That was ONE time!"
+     "That was ONE time!",
+     {
+      "tone": "defensive"
+     }
     ]
    ],
    "page": {
@@ -166,7 +222,20 @@
         "h": 0.62
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.72
+        ],
+        "shout": true,
+        "size": 26,
+        "w": 300
+       }
+      ],
       "caps": [
        {
         "text": "The gates",
@@ -187,7 +256,19 @@
         "h": 0.62
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.72
+        ],
+        "size": 26,
+        "w": 300
+       }
+      ],
       "caps": [
        {
         "text": "The towers",
@@ -213,14 +294,14 @@
        {
         "line": 3,
         "x": 0.5,
-        "y": 0.14,
+        "y": 0.86,
         "tail": [
          0.5,
-         0.32
+         0.72
         ],
         "shout": true,
         "size": 30,
-        "w": 320
+        "w": 300
        }
       ],
       "caps": [],
@@ -229,7 +310,7 @@
         "text": "FWOOSH!",
         "x": 0.5,
         "y": 0.2,
-        "at": "line:2+2.5",
+        "at": "line:2+2",
         "style": "fire",
         "size": 70
        }
@@ -255,7 +336,7 @@
     },
     {
      "sound": "impact",
-     "at": "line:2+2.5",
+     "at": "line:2+2",
      "volume": 0.42
     }
    ]
@@ -263,16 +344,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Leading them all were two heroes. The first was the Barbarian King."
+     "barbarians",
+     "Make way! Make way for the Barbarian King!",
+     {
+      "tone": "excited"
+     }
     ],
     [
-     "narrator",
-     "Loud, brave, and always the first to charge, usually before anyone had finished making a plan."
+     "warden",
+     "Loud, brave, and always the first to charge. Usually before anyone has finished the plan.",
+     {
+      "tone": "sighing"
+     }
     ],
     [
      "king",
-     "Plans are for people who can't punch!"
+     "Plans are for people who can't punch!",
+     {
+      "tone": "proud shout"
+     }
     ]
    ],
    "page": {
@@ -315,48 +405,66 @@
       "bg": "burst:gold",
       "art": [
        {
-        "name": "bk_emote",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.85
-       }
-      ],
-      "bubbles": [],
-      "caps": [],
-      "sfx": [],
-      "fx": [],
-      "under": [],
-      "at": "line:1"
-     },
-     {
-      "bg": "burst:gold",
-      "art": [
-       {
         "name": "barb_emote",
         "x": 0.5,
         "y": 0.62,
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "shout": true,
+        "size": 24,
+        "w": 320
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 360
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.4"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1",
-     "offset": 0.05,
-     "volume": 0.28
-    },
-    {
-     "sound": "pop",
-     "at": "line:2-0.4",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -365,21 +473,51 @@
   {
    "lines": [
     [
-     "narrator",
-     "The second was the Archer Queen."
-    ],
-    [
-     "narrator",
-     "Calm, precise, and she had never missed a shot in her life. Or so she liked to remind everyone."
+     "archers",
+     "All hail the Archer Queen! She has never missed a shot!",
+     {
+      "tone": "proud"
+     }
     ],
     [
      "queen",
-     "Eleven thousand bullseyes. But who's counting? Me. I am counting."
+     "Eleven thousand bullseyes. But who's counting? Me. I am counting.",
+     {
+      "tone": "smug"
+     }
     ]
    ],
    "page": {
     "layout": "2+1",
     "panels": [
+     {
+      "bg": "burst:green",
+      "art": [
+       {
+        "name": "archer_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
      {
       "bg": "burst:purple",
       "art": [
@@ -398,23 +536,6 @@
       "at": "line:1"
      },
      {
-      "bg": "burst:green",
-      "art": [
-       {
-        "name": "archer_emote",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.85
-       }
-      ],
-      "bubbles": [],
-      "caps": [],
-      "sfx": [],
-      "fx": [],
-      "under": [],
-      "at": "line:1+2"
-     },
-     {
       "bg": "burst:purple",
       "art": [
        {
@@ -427,7 +548,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.55,
         "y": 0.16,
         "tail": [
@@ -445,14 +566,21 @@
       ],
       "sfx": [],
       "fx": [],
-      "under": []
+      "under": [],
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1+2",
+     "at": "line:1",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -461,20 +589,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Together, they kept the kingdom safe from every threat."
-    ],
-    [
-     "narrator",
-     "They kept the peace with everyone. Except each other."
-    ],
-    [
      "king",
-     "Morning, Your Majesty."
+     "Morning, Your Majesty.",
+     {
+      "tone": "forced polite"
+     }
     ],
     [
      "queen",
-     "Morning. You have breakfast in your beard."
+     "Morning. You have breakfast in your beard.",
+     {
+      "tone": "dry"
+     }
+    ],
+    [
+     "king",
+     "That's a snack. For later.",
+     {
+      "tone": "proud"
+     }
     ]
    ],
    "page": {
@@ -491,6 +624,15 @@
        }
       ],
       "bubbles": [
+       {
+        "line": 0,
+        "x": 0.55,
+        "y": 0.14,
+        "tail": [
+         0.45,
+         0.3
+        ]
+       },
        {
         "line": 2,
         "x": 0.55,
@@ -521,7 +663,7 @@
       ],
       "bubbles": [
        {
-        "line": 3,
+        "line": 1,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -534,14 +676,14 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:1"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -550,20 +692,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "Nobody remembers exactly when the two heroes first arrived. Mostly because they arrived on the very same day, at the very same gate, at the very same moment."
+     "warden",
+     "They arrived on the very same day. At the very same gate. At the very same moment.",
+     {
+      "tone": "amused"
+     }
     ],
     [
      "king",
-     "I was here first."
+     "I was here first.",
+     {
+      "tone": "insistent"
+     }
     ],
     [
      "queen",
-     "By half a step. Which you tripped over."
+     "By half a step. Which you tripped over.",
+     {
+      "tone": "smug"
+     }
     ],
     [
-     "narrator",
-     "They have been arguing about that half a step ever since."
+     "king",
+     "It was a strategic trip!",
+     {
+      "tone": "indignant"
+     }
     ]
    ],
    "page": {
@@ -589,6 +743,16 @@
          0.48,
          0.3
         ]
+       },
+       {
+        "line": 3,
+        "x": 0.55,
+        "y": 0.14,
+        "tail": [
+         0.48,
+         0.3
+        ],
+        "shout": true
        }
       ],
       "caps": [
@@ -634,7 +798,7 @@
     "caps": [
      {
       "text": "Half a step.",
-      "at": "line:3",
+      "at": "line:3+1",
       "x": 0.42,
       "y": 0.86
      }
@@ -652,16 +816,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Grand Warden remembered it well. Back then, the kingdom was just a few huts and a wall made of fence posts."
+     "warden",
+     "Back then, this was a few huts and a fence. Those two built all of this. Together.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "healer",
+     "Together? Don't let them hear you say that.",
+     {
+      "tone": "laughing"
+     }
     ],
     [
      "warden",
-     "They were the bravest heroes I had ever seen. And the loudest. By far the loudest."
-    ],
-    [
-     "narrator",
-     "Together, they had turned that little camp into a kingdom. Not that either of them would ever admit the other one had helped."
+     "Oh, I would never. They'd argue about who said it first.",
+     {
+      "tone": "chuckling"
+     }
     ]
    ],
    "page": {
@@ -679,7 +852,17 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 560
+       },
+       {
+        "line": 2,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -706,24 +889,37 @@
       "bg": "burst:orange",
       "art": [
        {
-        "name": "king_army",
+        "name": "healer",
         "x": 0.5,
         "y": 0.62,
-        "h": 0.9
+        "h": 0.9,
+        "bob": 8
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 360
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      },
      {
       "bg": "burst:purple",
       "art": [
        {
-        "name": "queen_stand",
+        "name": "king_army",
         "x": 0.5,
         "y": 0.62,
         "h": 0.9
@@ -741,7 +937,7 @@
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
@@ -756,16 +952,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Every morning, the King trained his Barbarians in the town square."
-    ],
-    [
      "king",
-     "Again! Swing like you mean it! Faster! LOUDER!"
+     "Again! Swing like you mean it! Faster! LOUDER!",
+     {
+      "tone": "shouting"
+     }
     ],
     [
-     "narrator",
-     "The Barbarians swung. They yelled. One of them fell over."
+     "barbarians",
+     "RAAAAH!",
+     {
+      "tone": "battle cry"
+     }
+    ],
+    [
+     "barbarians",
+     "Ow. I fell over.",
+     {
+      "tone": "embarrassed"
+     }
     ]
    ],
    "page": {
@@ -784,7 +989,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.66,
         "y": 0.22,
         "tail": [
@@ -814,20 +1019,32 @@
         "h": 0.8
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 30
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "SWISH!",
         "x": 0.75,
-        "y": 0.3,
-        "at": "line:2+0.6",
+        "y": 0.7,
+        "at": "line:1+0.4",
         "size": 60
        }
       ],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      },
      {
       "bg": "burst:orange",
@@ -839,25 +1056,47 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 26
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "THUD!",
-        "x": 0.7,
-        "y": 0.25,
-        "at": "line:2+2",
+        "x": 0.75,
+        "y": 0.7,
+        "at": "line:2-0.2",
         "style": "red",
         "size": 60
        }
       ],
       "fx": [],
       "under": [],
-      "at": "line:2+1.6"
+      "at": "line:2-0.3"
      }
     ]
    },
    "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "impact",
+     "at": "line:1+0.4",
+     "volume": 0.42
+    },
     {
      "sound": "pop",
      "at": "line:2-0.3",
@@ -865,19 +1104,8 @@
      "volume": 0.28
     },
     {
-     "sound": "impact",
-     "at": "line:2+0.6",
-     "volume": 0.42
-    },
-    {
-     "sound": "pop",
-     "at": "line:2+1.6",
-     "offset": 0.05,
-     "volume": 0.28
-    },
-    {
      "sound": "thud",
-     "at": "line:2+2",
+     "at": "line:2-0.2",
      "volume": 0.42
     }
    ]
@@ -885,16 +1113,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Across the square, the Queen trained her Archers in perfect silence."
+     "queen",
+     "Breathe in. Aim. Release.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "archers",
+     "Twenty arrows. Twenty bullseyes!",
+     {
+      "tone": "amazed"
+     }
     ],
     [
      "queen",
-     "Breathe in. Aim. Release."
-    ],
-    [
-     "narrator",
-     "Twenty arrows. Twenty bullseyes. Then she turned, slowly enough to make sure the King was watching."
+     "Is he watching? Good.",
+     {
+      "tone": "smug whisper"
+     }
     ]
    ],
    "page": {
@@ -912,7 +1149,16 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
+        "x": 0.7,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.32
+        ]
+       },
+       {
+        "line": 2,
         "x": 0.7,
         "y": 0.15,
         "tail": [
@@ -925,9 +1171,9 @@
       "sfx": [
        {
         "text": "THUNK! THUNK! THUNK!",
-        "x": 0.55,
+        "x": 0.5,
         "y": 0.88,
-        "at": "line:2",
+        "at": "line:0+2.5",
         "style": "gold",
         "size": 56
        }
@@ -945,18 +1191,30 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 340
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:0+1.5"
+      "at": "line:1-0.3"
      },
      {
-      "bg": "burst:purple",
+      "bg": "burst:orange",
       "art": [
        {
-        "name": "aq_emote",
+        "name": "bk_emote",
         "x": 0.5,
         "y": 0.62,
         "h": 0.85
@@ -967,25 +1225,25 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2+3"
+      "at": "line:2"
      }
     ]
    },
    "sfx": [
     {
      "sound": "ding",
-     "at": "line:2",
+     "at": "line:0+2.5",
      "volume": 0.42
     },
     {
      "sound": "pop",
-     "at": "line:0+1.5",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:2+3",
+     "at": "line:2",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -995,19 +1253,31 @@
    "lines": [
     [
      "king",
-     "Arrows! A real hero fights up close, where the danger is!"
+     "Arrows! A real hero fights up close, where the danger is!",
+     {
+      "tone": "scornful"
+     }
     ],
     [
      "queen",
-     "A real hero fights where she won't get her crown dented."
+     "A real hero fights where she won't get her crown dented.",
+     {
+      "tone": "cool"
+     }
     ],
     [
      "king",
-     "My crown has NEVER been dented."
+     "My crown has NEVER been dented!",
+     {
+      "tone": "offended"
+     }
     ],
     [
-     "narrator",
-     "His crown had been dented eleven times."
+     "queen",
+     "Eleven times. I counted.",
+     {
+      "tone": "smug"
+     }
     ]
    ],
    "page": {
@@ -1073,13 +1343,22 @@
          0.5,
          0.3
         ]
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ]
        }
       ],
       "caps": [
        {
         "text": "Eleven times.",
-        "at": "line:3",
-        "y": 0.88
+        "at": "line:3+1",
+        "y": 0.12
        }
       ],
       "sfx": [],
@@ -1095,8 +1374,11 @@
   {
    "lines": [
     [
-     "narrator",
-     "At lunch, the royal feast was served. Power pancakes. Hero skewers. And a cake shaped like the Clan Castle."
+     "wizard",
+     "Lunch is served! Power pancakes! Hero skewers! And a cake shaped like the Clan Castle!",
+     {
+      "tone": "excited"
+     }
     ]
    ],
    "page": {
@@ -1177,20 +1459,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "There was exactly one pancake left."
+     "barbarians",
+     "Uh oh. There's only one pancake left.",
+     {
+      "tone": "nervous"
+     }
     ],
     [
      "king",
-     "That pancake is mine. I trained all morning."
+     "That pancake is mine. I trained all morning.",
+     {
+      "tone": "possessive"
+     }
     ],
     [
      "queen",
-     "I hit twenty bullseyes. Before breakfast."
+     "I hit twenty bullseyes. Before breakfast.",
+     {
+      "tone": "cool"
+     }
     ],
     [
-     "narrator",
-     "They reached for it at the very same time."
+     "wizard",
+     "Oh no. They're both reaching for it.",
+     {
+      "tone": "worried"
+     }
     ]
    ],
    "page": {
@@ -1222,6 +1516,17 @@
       ],
       "bubbles": [
        {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.4,
+        "tail": [
+         0.5,
+         0.6
+        ],
+        "size": 24,
+        "w": 360
+       },
+       {
         "line": 1,
         "x": 0.2,
         "y": 0.14,
@@ -1238,6 +1543,17 @@
          0.8,
          0.3
         ]
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.4,
+        "tail": [
+         0.5,
+         0.6
+        ],
+        "size": 24,
+        "w": 360
        }
       ],
       "caps": [],
@@ -1245,7 +1561,7 @@
        {
         "text": "GRAB!",
         "x": 0.5,
-        "y": 0.4,
+        "y": 0.52,
         "at": "line:3+1",
         "style": "red",
         "size": 90
@@ -1269,12 +1585,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The pancake did not survive."
+     "healer",
+     "Well. The pancake did not survive.",
+     {
+      "tone": "dry"
+     }
     ],
     [
      "wizard",
-     "I'll, uh, go get a mop."
+     "I'll, uh, go get a mop.",
+     {
+      "tone": "sheepish"
+     }
     ]
    ],
    "page": {
@@ -1290,20 +1612,31 @@
         "h": 0.55
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "w": 380
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "SPLAT!",
         "x": 0.5,
         "y": 0.3,
-        "at": 0.6,
+        "at": 0.4,
         "style": "fire",
         "size": 120
        }
       ],
       "fx": [
-       "burst:0.5,0.55@0.6"
+       "burst:0.5,0.55@0.4"
       ],
       "under": []
      },
@@ -1337,13 +1670,13 @@
      }
     ],
     "shake": [
-     0.6
+     0.4
     ]
    },
    "sfx": [
     {
      "sound": "impact",
-     "at": 0.6,
+     "at": 0.4,
      "volume": 0.42
     },
     {
@@ -1354,7 +1687,7 @@
     },
     {
      "sound": "impact",
-     "at": 0.6,
+     "at": 0.4,
      "volume": 0.45
     }
    ]
@@ -1362,12 +1695,11 @@
   {
    "lines": [
     [
-     "narrator",
-     "That afternoon, the town council met to discuss something important: the kingdom's brand new statue."
-    ],
-    [
      "wizard",
-     "The council proposes a statue of the kingdom's greatest hero, right here in the square."
+     "Order! Order! The council proposes a statue of the kingdom's greatest hero, right here in the square!",
+     {
+      "tone": "formal"
+     }
     ]
    ],
    "page": {
@@ -1387,20 +1719,19 @@
         "x": 0.7,
         "y": 0.65,
         "h": 0.75,
-        "enter": "right",
-        "at": "line:1-0.4"
+        "enter": "right"
        }
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.45,
         "y": 0.2,
         "tail": [
          0.62,
          0.36
         ],
-        "w": 520
+        "w": 560
        }
       ],
       "caps": [
@@ -1421,15 +1752,24 @@
    "lines": [
     [
      "king",
-     "Obviously, that's me."
+     "Obviously, that's me.",
+     {
+      "tone": "smug"
+     }
     ],
     [
      "queen",
-     "Obviously, it's me."
+     "Obviously, it's me.",
+     {
+      "tone": "smug"
+     }
     ],
     [
      "wizard",
-     "Ah. I was worried this would happen."
+     "Ah. I was worried this would happen.",
+     {
+      "tone": "nervous"
+     }
     ]
    ],
    "page": {
@@ -1512,16 +1852,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Within minutes, the whole village had chosen sides."
-    ],
-    [
      "barbarians",
-     "KING! KING! KING!"
+     "KING! KING! KING!",
+     {
+      "tone": "chanting"
+     }
     ],
     [
      "archers",
-     "Queen. Obviously."
+     "Queen. Obviously.",
+     {
+      "tone": "unimpressed"
+     }
+    ],
+    [
+     "healer",
+     "And there goes the whole village. Picking sides.",
+     {
+      "tone": "sighing"
+     }
     ]
    ],
    "page": {
@@ -1539,7 +1888,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -1554,8 +1903,7 @@
       "caps": [],
       "sfx": [],
       "fx": [],
-      "under": [],
-      "at": "line:1-0.4"
+      "under": []
      },
      {
       "bg": "burst:red",
@@ -1574,20 +1922,33 @@
         "flip": true
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.72
+        ],
+        "size": 22,
+        "w": 320
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "VS",
         "x": 0.5,
         "y": 0.45,
-        "at": 0.5,
+        "at": "line:2",
         "style": "red",
         "size": 110
        }
       ],
       "fx": [],
-      "under": []
+      "under": [],
+      "at": "line:2-0.3"
      },
      {
       "bg": "burst:green",
@@ -1601,7 +1962,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -1616,19 +1977,25 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.4"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
      "sound": "thud",
-     "at": 0.5,
+     "at": "line:2",
      "volume": 0.42
     },
     {
      "sound": "pop",
-     "at": "line:2-0.4",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -1637,24 +2004,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "Soon, the village was placing bets."
+     "wizard",
+     "Place your bets! Place your bets!",
+     {
+      "tone": "showman"
+     }
     ],
     [
      "barbarians",
-     "Ten gold on the King!"
+     "Ten gold on the King!",
+     {
+      "tone": "excited"
+     }
     ],
     [
      "archers",
-     "Twenty on the Queen."
+     "Twenty on the Queen.",
+     {
+      "tone": "confident"
+     }
     ],
     [
      "wizard",
-     "Fifty on them both falling into the fountain."
-    ],
-    [
-     "narrator",
-     "The Wizard was about to win a lot of gold."
+     "And fifty, from me, on them both falling into the fountain.",
+     {
+      "tone": "sly"
+     }
     ]
    ],
    "page": {
@@ -1738,7 +2113,7 @@
       ],
       "bubbles": [
        {
-        "line": 3,
+        "line": 0,
         "x": 0.5,
         "y": 0.86,
         "tail": [
@@ -1747,13 +2122,23 @@
         ],
         "size": 26,
         "w": 320
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24,
+        "w": 320
        }
       ],
       "caps": [],
       "sfx": [],
       "fx": [],
-      "under": [],
-      "at": "line:3-0.3"
+      "under": []
      }
     ],
     "caps": [
@@ -1769,28 +2154,31 @@
      "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
-    },
-    {
-     "sound": "pop",
-     "at": "line:3-0.3",
-     "offset": 0.05,
-     "volume": 0.28
     }
    ]
   },
   {
    "lines": [
     [
-     "narrator",
-     "Nobody noticed the small green visitor slipping through the crowd."
+     "goblin2",
+     "Psst. Nobody's watching. Grab what you can.",
+     {
+      "tone": "whispering"
+     }
     ],
     [
      "goblin",
-     "Ooh, shiny. And shiny. And very, very shiny."
+     "Ooh, shiny. And shiny. And very, very shiny.",
+     {
+      "tone": "giddy whisper"
+     }
     ],
     [
      "wizard",
-     "Has anyone seen my coin purse?"
+     "Has anyone seen my coin purse?",
+     {
+      "tone": "confused"
+     }
     ]
    ],
    "page": {
@@ -1823,7 +2211,19 @@
         ]
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.45,
+        "y": 0.3,
+        "tail": [
+         0.52,
+         0.62
+        ],
+        "size": 24,
+        "w": 380
+       }
+      ],
       "caps": [
        {
         "text": "A small green visitor...",
@@ -1855,7 +2255,7 @@
          0.5,
          0.3
         ],
-        "size": 28,
+        "size": 26,
         "w": 330
        }
       ],
@@ -1915,19 +2315,31 @@
    "lines": [
     [
      "king",
-     "I have charged into a hundred battles!"
+     "I have charged into a hundred battles!",
+     {
+      "tone": "boasting"
+     }
     ],
     [
      "queen",
-     "And I won them for you, from the back."
+     "And I won them for you, from the back.",
+     {
+      "tone": "cool"
+     }
     ],
     [
      "king",
-     "I could beat you with one hand!"
+     "I could beat you with one hand!",
+     {
+      "tone": "angry"
+     }
     ],
     [
      "queen",
-     "You'd need the other one to find your sword."
+     "You'd need the other one to find your sword.",
+     {
+      "tone": "mocking"
+     }
     ]
    ],
    "page": {
@@ -1962,8 +2374,7 @@
          0.5,
          0.7
         ],
-        "shout": true,
-        "at": "line:2-0.1"
+        "shout": true
        }
       ],
       "caps": [],
@@ -2009,7 +2420,8 @@
       "fx": [],
       "under": [
        "speed:0.5,0.5"
-      ]
+      ],
+      "at": "line:1-0.3"
      }
     ],
     "titles": [
@@ -2025,6 +2437,12 @@
    },
    "sfx": [
     {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
      "sound": "stamp",
      "at": "lineend:3",
      "volume": 0.4
@@ -2034,16 +2452,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The argument became a challenge. The challenge became a duel, right in the middle of the square."
+     "barbarians",
+     "A duel! A duel in the square!",
+     {
+      "tone": "excited"
+     }
     ],
     [
      "king",
-     "First one to fall loses!"
+     "First one to fall loses!",
+     {
+      "tone": "fierce"
+     }
     ],
     [
      "queen",
-     "Then you've already lost."
+     "Then you've already lost.",
+     {
+      "tone": "smirking"
+     }
     ]
    ],
    "page": {
@@ -2144,12 +2571,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "The King charged. The Queen stepped aside. And the King, unable to stop, sailed straight into the fountain."
+     "king",
+     "CHARGE!",
+     {
+      "tone": "battle cry"
+     }
     ],
     [
-     "narrator",
-     "The Queen laughed so hard she slipped, and followed him in."
+     "queen",
+     "Missed me.",
+     {
+      "tone": "teasing"
+     }
+    ],
+    [
+     "king",
+     "Wait! I can't stop! I can't stooop!",
+     {
+      "tone": "panicked"
+     }
+    ],
+    [
+     "queen",
+     "Ha! Look at you, you're soaking... whoa, whoa, WHOA!",
+     {
+      "tone": "laughing then panicked"
+     }
     ]
    ],
    "page": {
@@ -2167,8 +2614,8 @@
          0.55,
          0.7
         ],
-        "moveAt": "line:0+2.5",
-        "moveEnd": "lineend:0",
+        "moveAt": "line:2",
+        "moveEnd": "lineend:2",
         "rot": 0.3
        },
        {
@@ -2182,62 +2629,103 @@
          0.6,
          0.72
         ],
-        "moveAt": "line:1+1.5",
-        "moveEnd": "lineend:1",
+        "moveAt": "line:3+1.5",
+        "moveEnd": "lineend:3",
         "rot": -0.3
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.3,
+         0.32
+        ],
+        "shout": true,
+        "size": 40
+       },
+       {
+        "line": 1,
+        "x": 0.78,
+        "y": 0.14,
+        "tail": [
+         0.78,
+         0.32
+        ]
+       },
+       {
+        "line": 2,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.35,
+         0.32
+        ],
+        "shout": true
+       },
+       {
+        "line": 3,
+        "x": 0.74,
+        "y": 0.14,
+        "tail": [
+         0.74,
+         0.32
+        ],
+        "w": 420
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "SPLASH!",
         "x": 0.5,
-        "y": 0.25,
-        "at": "lineend:0-0.3",
+        "y": 0.45,
+        "at": "lineend:2-0.2",
         "style": "zap",
         "size": 120
        },
        {
         "text": "SPLOOSH!",
         "x": 0.62,
-        "y": 0.45,
-        "at": "lineend:1-0.3",
+        "y": 0.55,
+        "at": "lineend:3-0.2",
         "style": "zap",
         "size": 90
        }
       ],
       "fx": [
-       "burst:0.55,0.75@lineend:0-0.3",
-       "burst:0.6,0.75@lineend:1-0.3"
+       "burst:0.55,0.75@lineend:2-0.2",
+       "burst:0.6,0.75@lineend:3-0.2"
       ],
       "under": []
      }
     ],
     "shake": [
-     "lineend:0-0.3",
-     "lineend:1-0.3"
+     "lineend:2-0.2",
+     "lineend:3-0.2"
     ]
    },
    "sfx": [
     {
      "sound": "magic",
-     "at": "lineend:0-0.3",
+     "at": "lineend:2-0.2",
      "volume": 0.42
     },
     {
      "sound": "magic",
-     "at": "lineend:1-0.3",
+     "at": "lineend:3-0.2",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "lineend:0-0.3",
+     "at": "lineend:2-0.2",
      "volume": 0.45
     },
     {
      "sound": "impact",
-     "at": "lineend:1-0.3",
+     "at": "lineend:3-0.2",
      "volume": 0.45
     }
    ]
@@ -2245,16 +2733,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Healer, who had seen all of this before, sighed and patched them both up."
+     "healer",
+     "Again? This is the fourth time this week.",
+     {
+      "tone": "exasperated"
+     }
     ],
     [
-     "healer",
-     "Again? This is the fourth time this week."
+     "king",
+     "She started it.",
+     {
+      "tone": "sulky"
+     }
+    ],
+    [
+     "queen",
+     "He started it.",
+     {
+      "tone": "sulky"
+     }
     ],
     [
      "wizard",
-     "Fifty gold, please."
+     "Fifty gold, please!",
+     {
+      "tone": "delighted"
+     }
     ]
    ],
    "page": {
@@ -2273,7 +2777,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.12,
         "tail": [
@@ -2294,18 +2798,39 @@
       "bg": "burst:grey",
       "art": [
        {
-        "name": "barb_emote_set_3",
+        "name": "bk_emote",
         "x": 0.5,
         "y": 0.62,
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "size": 26
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:0+2"
+      "at": "line:1-0.3"
      },
      {
       "bg": "burst:purple",
@@ -2326,7 +2851,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 3,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -2340,20 +2865,20 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:3-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:0+2",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:3-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -2362,12 +2887,11 @@
   {
    "lines": [
     [
-     "narrator",
-     "Then the ground shook. Just a little. The way it does when a very old, very tired wizard has heard enough."
-    ],
-    [
      "warden",
-     "ENOUGH!"
+     "ENOUGH!",
+     {
+      "tone": "thundering"
+     }
     ]
    ],
    "page": {
@@ -2386,7 +2910,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.25,
         "y": 0.25,
         "tail": [
@@ -2401,25 +2925,19 @@
       "sfx": [],
       "fx": [
        "speed:0.5,0.5",
-       "flash@line:1"
+       "flash@line:0"
       ],
       "under": []
      }
     ],
     "shake": [
-     "line:0+1",
-     "line:1"
+     "line:0"
     ]
    },
    "sfx": [
     {
      "sound": "impact",
-     "at": "line:0+1",
-     "volume": 0.45
-    },
-    {
-     "sound": "impact",
-     "at": "line:1",
+     "at": "line:0",
      "volume": 0.45
     }
    ]
@@ -2428,15 +2946,31 @@
    "lines": [
     [
      "warden",
-     "A hero is not measured by how loud they shout, or how many arrows they count."
+     "A hero is not measured by how loud they shout, or how many arrows they count.",
+     {
+      "tone": "stern"
+     }
     ],
     [
      "warden",
-     "A hero is measured by what they do when the kingdom needs them."
+     "A hero is measured by what they do when the kingdom needs them.",
+     {
+      "tone": "stern"
+     }
     ],
     [
-     "narrator",
-     "The King and Queen nodded wisely. Then went straight back to glaring at each other."
+     "king",
+     "Very wise.",
+     {
+      "tone": "pretending"
+     }
+    ],
+    [
+     "queen",
+     "Very, very wise.",
+     {
+      "tone": "pretending"
+     }
     ]
    ],
    "page": {
@@ -2471,8 +3005,7 @@
          0.5,
          0.32
         ],
-        "w": 560,
-        "at": "line:1-0.1"
+        "w": 560
        }
       ],
       "caps": [],
@@ -2492,12 +3025,23 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 26
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2"
+      "at": "line:2-0.3"
      },
      {
       "bg": "burst:purple",
@@ -2509,25 +3053,44 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 26
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2+0.4"
+      "at": "line:3-0.3"
+     }
+    ],
+    "caps": [
+     {
+      "text": "Still glaring.",
+      "at": "lineend:3",
+      "x": 0.4,
+      "y": 0.88
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:2+0.4",
+     "at": "line:3-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -2537,11 +3100,17 @@
    "lines": [
     [
      "warden",
-     "Very well. A contest. The next time goblins raid this kingdom, whoever stops them, alone, will be named its greatest hero."
+     "Very well. A contest. The next time goblins raid this kingdom, whoever stops them, alone, will be named its greatest hero.",
+     {
+      "tone": "solemn"
+     }
     ],
     [
-     "narrator",
-     "And the statue, of course, would be theirs."
+     "wizard",
+     "And the statue goes to the winner!",
+     {
+      "tone": "excited"
+     }
     ]
    ],
    "page": {
@@ -2555,6 +3124,13 @@
         "x": 0.82,
         "y": 0.6,
         "h": 0.8
+       },
+       {
+        "name": "wizard",
+        "x": 0.1,
+        "y": 0.72,
+        "h": 0.4,
+        "at": "line:1-0.3"
        }
       ],
       "bubbles": [
@@ -2567,6 +3143,16 @@
          0.4
         ],
         "w": 640
+       },
+       {
+        "line": 1,
+        "x": 0.3,
+        "y": 0.3,
+        "tail": [
+         0.12,
+         0.5
+        ],
+        "w": 420
        }
       ],
       "caps": [
@@ -2578,7 +3164,7 @@
       ],
       "sfx": [],
       "fx": [
-       "crown:0.32,0.55,1.4@line:1"
+       "crown:0.38,0.55,1.4@line:1"
       ],
       "under": []
      }
@@ -2590,15 +3176,31 @@
    "lines": [
     [
      "king",
-     "Done! Start carving my nose."
+     "Done! Start carving my nose.",
+     {
+      "tone": "confident"
+     }
     ],
     [
      "queen",
-     "Carve mine smaller. And prettier."
+     "Carve mine smaller. And prettier.",
+     {
+      "tone": "smug"
+     }
     ],
     [
-     "narrator",
-     "They shook hands. It lasted eleven seconds, and both of them squeezed the entire time."
+     "healer",
+     "Are they still shaking hands?",
+     {
+      "tone": "puzzled"
+     }
+    ],
+    [
+     "wizard",
+     "Eleven seconds now. They're both squeezing.",
+     {
+      "tone": "amused"
+     }
     ]
    ],
    "page": {
@@ -2623,6 +3225,17 @@
          0.5,
          0.3
         ]
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24,
+        "w": 340
        }
       ],
       "caps": [],
@@ -2650,6 +3263,17 @@
          0.5,
          0.3
         ]
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24,
+        "w": 380
        }
       ],
       "caps": [],
@@ -2665,12 +3289,12 @@
       "x": 0.5,
       "y": 0.5,
       "size": 100,
-      "at": "line:2+1.5",
+      "at": "line:3",
       "style": "red"
      }
     ],
     "shake": [
-     "line:2+1.5"
+     "line:3"
     ]
    },
    "sfx": [
@@ -2682,12 +3306,12 @@
     },
     {
      "sound": "impact",
-     "at": "line:2+1.5",
+     "at": "line:3",
      "volume": 0.45
     },
     {
      "sound": "stamp",
-     "at": "line:2+1.5",
+     "at": "line:3",
      "volume": 0.4
     }
    ]
@@ -2695,20 +3319,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Later that evening, the Warden found the King alone in the training yard."
-    ],
-    [
      "warden",
-     "You charge into everything, my friend. One day, you will charge into something you cannot punch."
+     "You charge into everything, my friend. One day, you will charge into something you cannot punch.",
+     {
+      "tone": "gentle"
+     }
     ],
     [
      "king",
-     "Then I'll punch it harder."
+     "Then I'll punch it harder.",
+     {
+      "tone": "cheerful"
+     }
     ],
     [
-     "narrator",
-     "The Warden sighed. It was a very long sigh."
+     "warden",
+     "Of course you will.",
+     {
+      "tone": "long sigh"
+     }
     ]
    ],
    "page": {
@@ -2729,12 +3358,12 @@
         "y": 0.64,
         "h": 0.8,
         "flip": true,
-        "at": "line:2-0.4"
+        "at": "line:1-0.4"
        }
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.32,
         "y": 0.13,
         "tail": [
@@ -2744,14 +3373,13 @@
         "w": 560
        },
        {
-        "line": 2,
+        "line": 1,
         "x": 0.76,
         "y": 0.16,
         "tail": [
          0.74,
          0.34
-        ],
-        "at": "line:2-0.1"
+        ]
        }
       ],
       "caps": [
@@ -2780,7 +3408,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2"
+      "at": "line:1+1"
      },
      {
       "bg": "gloom",
@@ -2792,25 +3420,36 @@
         "h": 0.88
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 26
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:3-0.3"
+      "at": "line:2-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2",
+     "at": "line:1+1",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:3-0.3",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -2819,20 +3458,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Then he found the Queen, on the archery range, still practicing by moonlight."
-    ],
-    [
      "warden",
-     "You never miss. But you never let anyone stand beside you, either."
+     "You never miss. But you never let anyone stand beside you, either.",
+     {
+      "tone": "gentle"
+     }
     ],
     [
      "queen",
-     "People beside me get in the way of my shots."
+     "People beside me get in the way of my shots.",
+     {
+      "tone": "defensive"
+     }
     ],
     [
      "warden",
-     "Or they cover your back."
+     "Or they cover your back.",
+     {
+      "tone": "quiet"
+     }
     ]
    ],
    "page": {
@@ -2850,7 +3494,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.55,
         "y": 0.14,
         "tail": [
@@ -2860,7 +3504,12 @@
         "w": 420
        }
       ],
-      "caps": [],
+      "caps": [
+       {
+        "text": "By moonlight...",
+        "at": 0
+       }
+      ],
       "sfx": [],
       "fx": [],
       "under": [
@@ -2881,7 +3530,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -2891,14 +3540,13 @@
         "w": 420
        },
        {
-        "line": 3,
+        "line": 2,
         "x": 0.5,
         "y": 0.86,
         "tail": [
          0.5,
          0.7
-        ],
-        "at": "line:3-0.1"
+        ]
        }
       ],
       "caps": [],
@@ -2906,37 +3554,45 @@
       "fx": [],
       "under": [
        "stars"
-      ],
-      "at": "line:1-0.4"
+      ]
      }
     ]
    },
-   "sfx": [
-    {
-     "sound": "pop",
-     "at": "line:1-0.4",
-     "offset": 0.05,
-     "volume": 0.28
-    }
-   ]
+   "sfx": []
   },
   {
    "lines": [
     [
-     "narrator",
-     "For days, the kingdom prepared."
+     "king",
+     "Sharper! Sharp enough to slice through a rumour!",
+     {
+      "tone": "intense"
+     }
     ],
     [
-     "narrator",
-     "The King sharpened his sword, until it was sharp enough to slice through a rumor."
+     "queen",
+     "Thirty-nine. Forty. Restrung forty times. Just to be sure.",
+     {
+      "tone": "focused"
+     }
     ],
     [
-     "narrator",
-     "The Queen restrung her crossbow forty times. Just to be sure."
+     "barbarians",
+     "Team King! Free snacks!",
+     {
+      "tone": "cheering"
+     }
+    ],
+    [
+     "archers",
+     "Team Queen. Better snacks.",
+     {
+      "tone": "smug"
+     }
     ]
    ],
    "page": {
-    "layout": "3",
+    "layout": "4",
     "panels": [
      {
       "bg": "burst:orange",
@@ -2945,43 +3601,33 @@
         "name": "king_charge",
         "x": 0.5,
         "y": 0.62,
-        "h": 0.7
+        "h": 0.8
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24,
+        "w": 380
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "SHING!",
-        "x": 0.6,
+        "x": 0.7,
         "y": 0.2,
-        "at": "line:1+1.5",
+        "at": "line:0+1",
         "style": "white",
         "size": 56
        }
       ],
-      "fx": [],
-      "under": [],
-      "at": "line:1-0.3"
-     },
-     {
-      "bg": "burst:gold",
-      "art": [
-       {
-        "name": "barb_emote_set_2",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.75
-       }
-      ],
-      "bubbles": [],
-      "caps": [
-       {
-        "text": "Days of training",
-        "at": 0
-       }
-      ],
-      "sfx": [],
       "fx": [],
       "under": []
      },
@@ -2992,61 +3638,38 @@
         "name": "queen_aim",
         "x": 0.5,
         "y": 0.62,
-        "h": 0.7,
+        "h": 0.8,
         "flip": true
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 22,
+        "w": 400
+       }
+      ],
       "caps": [],
       "sfx": [
        {
-        "text": "TWANG! x40",
-        "x": 0.5,
+        "text": "TWANG!",
+        "x": 0.3,
         "y": 0.2,
-        "at": "line:2+1.5",
+        "at": "line:1+1",
         "style": "gold",
         "size": 50
        }
       ],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
-     }
-    ]
-   },
-   "sfx": [
-    {
-     "sound": "whoosh",
-     "at": "line:1+1.5",
-     "volume": 0.42
-    },
-    {
-     "sound": "pop",
-     "at": "line:2-0.3",
-     "offset": 0.05,
-     "volume": 0.28
-    },
-    {
-     "sound": "ding",
-     "at": "line:2+1.5",
-     "volume": 0.42
-    }
-   ]
-  },
-  {
-   "lines": [
-    [
-     "barbarians",
-     "Team King! Free snacks!"
-    ],
-    [
-     "archers",
-     "Team Queen. Better snacks."
-    ]
-   ],
-   "page": {
-    "layout": "2",
-    "panels": [
+      "at": "line:1-0.3"
+     },
      {
       "bg": "burst:gold",
       "art": [
@@ -3059,26 +3682,28 @@
       ],
       "bubbles": [
        {
-        "line": 0,
+        "line": 2,
         "x": 0.5,
         "y": 0.86,
         "tail": [
          0.5,
          0.7
         ],
-        "shout": true
+        "shout": true,
+        "size": 24
        }
       ],
       "caps": [
        {
         "text": "TEAM KING HQ",
         "at": 0,
-        "size": 40
+        "size": 32
        }
       ],
       "sfx": [],
       "fx": [],
-      "under": []
+      "under": [],
+      "at": "line:2-0.3"
      },
      {
       "bg": "burst:green",
@@ -3092,33 +3717,64 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 3,
         "x": 0.5,
         "y": 0.86,
         "tail": [
          0.5,
          0.7
-        ]
+        ],
+        "size": 24
        }
       ],
       "caps": [
        {
         "text": "TEAM QUEEN HQ",
         "at": 0,
-        "size": 40
+        "size": 32
        }
       ],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:1-0.3"
+      "at": "line:3-0.3"
+     }
+    ],
+    "caps": [
+     {
+      "text": "Days of training",
+      "at": 0,
+      "x": 0.4,
+      "y": 0.02
      }
     ]
    },
    "sfx": [
     {
+     "sound": "whoosh",
+     "at": "line:0+1",
+     "volume": 0.42
+    },
+    {
      "sound": "pop",
      "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "ding",
+     "at": "line:1+1",
+     "volume": 0.42
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:3-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -3127,20 +3783,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "On the last day, both heroes secretly visited the gold storage, to study where the goblins might strike."
-    ],
-    [
-     "narrator",
-     "Each one hid behind a barrel the moment the other walked in."
-    ],
-    [
      "king",
-     "I can see your crown."
+     "Hmm. If I were a goblin, I'd sneak in right... here.",
+     {
+      "tone": "scheming whisper"
+     }
     ],
     [
      "queen",
-     "I can see your entire body."
+     "Right... here.",
+     {
+      "tone": "scheming whisper"
+     }
+    ],
+    [
+     "king",
+     "I can see your crown.",
+     {
+      "tone": "flat"
+     }
+    ],
+    [
+     "queen",
+     "I can see your entire body.",
+     {
+      "tone": "flat"
+     }
     ]
    ],
    "page": {
@@ -3159,8 +3827,7 @@
         "name": "king_point",
         "x": 0.16,
         "y": 0.68,
-        "h": 0.62,
-        "at": "line:1-0.3"
+        "h": 0.62
        },
        {
         "name": "queen_stand",
@@ -3168,10 +3835,29 @@
         "y": 0.68,
         "h": 0.64,
         "flip": true,
-        "at": "line:1+0.5"
+        "at": "line:1-0.3"
        }
       ],
       "bubbles": [
+       {
+        "line": 0,
+        "x": 0.2,
+        "y": 0.14,
+        "tail": [
+         0.18,
+         0.32
+        ],
+        "w": 420
+       },
+       {
+        "line": 1,
+        "x": 0.82,
+        "y": 0.14,
+        "tail": [
+         0.84,
+         0.32
+        ]
+       },
        {
         "line": 2,
         "x": 0.2,
@@ -3193,7 +3879,7 @@
       ],
       "caps": [
        {
-        "text": "The last day",
+        "text": "The gold storage, the day before",
         "at": 0
        }
       ],
@@ -3208,20 +3894,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "Then came the night watch. The King on the east wall. The Queen on the west."
-    ],
-    [
-     "narrator",
-     "Each pretending not to check whether the other was still awake."
-    ],
-    [
      "king",
-     "She's still awake."
+     "Is she still awake? She's still awake.",
+     {
+      "tone": "muttering"
+     }
     ],
     [
      "queen",
-     "He's still awake."
+     "He's still awake. Of course he is.",
+     {
+      "tone": "muttering"
+     }
     ]
    ],
    "page": {
@@ -3239,16 +3923,22 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 0,
         "x": 0.6,
         "y": 0.16,
         "tail": [
          0.5,
          0.32
-        ]
+        ],
+        "w": 420
        }
       ],
-      "caps": [],
+      "caps": [
+       {
+        "text": "The night watch",
+        "at": 0
+       }
+      ],
       "sfx": [],
       "fx": [],
       "under": [
@@ -3269,13 +3959,14 @@
       ],
       "bubbles": [
        {
-        "line": 3,
+        "line": 1,
         "x": 0.4,
         "y": 0.16,
         "tail": [
          0.5,
          0.32
-        ]
+        ],
+        "w": 420
        }
       ],
       "caps": [],
@@ -3285,14 +3976,14 @@
        "stars",
        "moon:0.7,0.18"
       ],
-      "at": "line:0+3.5"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:0+3.5",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -3301,16 +3992,143 @@
   {
    "lines": [
     [
-     "narrator",
-     "Meanwhile, in a muddy camp beyond the walls, lived the Goblin Boss."
+     "healer",
+     "Do you really think a contest will fix those two?",
+     {
+      "tone": "doubtful"
+     }
     ],
     [
-     "narrator",
-     "He had raided this kingdom forty times. He had lost thirty-nine of them. But he was an optimist."
+     "warden",
+     "No. But it might show them what they cannot do alone.",
+     {
+      "tone": "thoughtful"
+     }
+    ],
+    [
+     "healer",
+     "And if the kingdom pays the price while they learn?",
+     {
+      "tone": "worried"
+     }
+    ],
+    [
+     "warden",
+     "Then I will be there to catch it. I always am.",
+     {
+      "tone": "quiet resolve"
+     }
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "healer",
+        "x": 0.25,
+        "y": 0.64,
+        "h": 0.7,
+        "bob": 8
+       },
+       {
+        "name": "warden",
+        "x": 0.76,
+        "y": 0.66,
+        "h": 0.72,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.25,
+         0.36
+        ],
+        "w": 440
+       },
+       {
+        "line": 1,
+        "x": 0.72,
+        "y": 0.14,
+        "tail": [
+         0.76,
+         0.36
+        ],
+        "w": 460
+       },
+       {
+        "line": 2,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.25,
+         0.36
+        ],
+        "w": 440
+       },
+       {
+        "line": 3,
+        "x": 0.72,
+        "y": 0.14,
+        "tail": [
+         0.76,
+         0.36
+        ],
+        "w": 440
+       }
+      ],
+      "caps": [
+       {
+        "text": "The Warden's tower",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "moon:0.5,0.16"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "goblin",
+     "Boss, we've raided this kingdom forty times.",
+     {
+      "tone": "doubtful"
+     }
     ],
     [
      "boss",
-     "Forty-one is my lucky number. I can feel it."
+     "And?",
+     {
+      "tone": "gruff"
+     }
+    ],
+    [
+     "goblin",
+     "We lost thirty-nine.",
+     {
+      "tone": "glum"
+     }
+    ],
+    [
+     "boss",
+     "Which makes forty-one my lucky number. I can feel it.",
+     {
+      "tone": "grandly optimistic"
+     }
     ]
    ],
    "page": {
@@ -3328,7 +4146,17 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 34
+       },
+       {
+        "line": 3,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -3360,7 +4188,19 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 22,
+        "w": 340
+       }
+      ],
       "caps": [
        {
         "text": "Raids: 40",
@@ -3370,8 +4210,7 @@
       ],
       "sfx": [],
       "fx": [],
-      "under": [],
-      "at": "line:1"
+      "under": []
      },
      {
       "bg": "burst:red",
@@ -3383,7 +4222,18 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24
+       }
+      ],
       "caps": [
        {
         "text": "Wins: 1",
@@ -3394,20 +4244,14 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:1+2.2"
+      "at": "line:2-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1",
-     "offset": 0.05,
-     "volume": 0.28
-    },
-    {
-     "sound": "pop",
-     "at": "line:1+2.2",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -3417,15 +4261,24 @@
    "lines": [
     [
      "boss",
-     "Listen up! Tonight, we hit the gold storage."
+     "Listen up! Tonight, we hit the gold storage.",
+     {
+      "tone": "commanding"
+     }
     ],
     [
      "goblin",
-     "What about the King and Queen?"
+     "What about the King and Queen?",
+     {
+      "tone": "nervous"
+     }
     ],
     [
      "boss",
-     "Rule one: don't wake the King. Rule two: definitely don't annoy the Queen."
+     "Rule one: don't wake the King. Rule two: definitely don't annoy the Queen.",
+     {
+      "tone": "serious"
+     }
     ]
    ],
    "page": {
@@ -3473,8 +4326,7 @@
         "tail": [
          0.68,
          0.36
-        ],
-        "at": "line:1-0.1"
+        ]
        },
        {
         "line": 2,
@@ -3507,15 +4359,24 @@
    "lines": [
     [
      "boss",
-     "Rule three. What was rule three?"
+     "Rule three. What was rule three?",
+     {
+      "tone": "puzzled"
+     }
     ],
     [
      "goblin",
-     "Bring snacks?"
+     "Bring snacks?",
+     {
+      "tone": "hopeful"
+     }
     ],
     [
      "boss",
-     "Rule three: bring snacks."
+     "Rule three: bring snacks!",
+     {
+      "tone": "triumphant"
+     }
     ]
    ],
    "page": {
@@ -3631,16 +4492,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Just after midnight, twenty small green shadows crept toward the wall."
+     "boss",
+     "Midnight. Go, go, go!",
+     {
+      "tone": "loud whisper"
+     }
     ],
     [
      "goblin",
-     "Shh! Nobody breathe."
+     "Shh! Nobody breathe.",
+     {
+      "tone": "whispering"
+     }
     ],
     [
      "goblin2",
-     "I literally need to breathe."
+     "I literally need to breathe.",
+     {
+      "tone": "annoyed whisper"
+     }
     ]
    ],
    "page": {
@@ -3679,6 +4549,16 @@
        }
       ],
       "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.45,
+        "tail": [
+         0.3,
+         0.62
+        ],
+        "size": 28
+       },
        {
         "line": 1,
         "x": 0.72,
@@ -3729,16 +4609,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "On the wall, a single Barbarian stood guard. He had been awake for nineteen hours."
-    ],
-    [
      "barbarians",
-     "I am... totally... awake."
+     "I am... totally... awake.",
+     {
+      "tone": "sleepy"
+     }
     ],
     [
-     "narrator",
-     "He was not."
+     "goblin2",
+     "He's asleep. Go!",
+     {
+      "tone": "whispering"
+     }
     ]
    ],
    "page": {
@@ -3756,7 +4638,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -3772,7 +4654,7 @@
         "text": "Zzz...",
         "x": 0.78,
         "y": 0.22,
-        "at": "line:2",
+        "at": "lineend:0",
         "style": "white",
         "size": 70
        }
@@ -3794,7 +4676,7 @@
          0.7,
          0.7
         ],
-        "moveAt": "line:2"
+        "moveAt": "line:1"
        },
        {
         "name": "goblin_03",
@@ -3805,17 +4687,28 @@
          0.5,
          0.76
         ],
-        "moveAt": "line:2+0.3"
+        "moveAt": "line:1+0.3"
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.2,
+        "tail": [
+         0.4,
+         0.5
+        ],
+        "size": 28
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "TIPTOE... TIPTOE...",
         "x": 0.5,
-        "y": 0.25,
-        "at": "line:2",
+        "y": 0.88,
+        "at": "line:1",
         "style": "green",
         "size": 50
        }
@@ -3825,25 +4718,25 @@
        "stars",
        "moon:0.8,0.18"
       ],
-      "at": "line:1"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "whoosh",
-     "at": "line:2",
+     "at": "lineend:0",
      "volume": 0.42
     },
     {
      "sound": "pop",
-     "at": "line:1",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "tap",
-     "at": "line:2",
+     "at": "line:1",
      "volume": 0.42
     }
    ]
@@ -3851,12 +4744,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "They slipped through a crack in the wall, straight into the gold storage."
+     "goblin",
+     "We're in! Look at all this gold!",
+     {
+      "tone": "gleeful whisper"
+     }
     ],
     [
      "wizard",
-     "GOBLINS! GOBLINS IN THE GOLD!"
+     "GOBLINS! GOBLINS IN THE GOLD!",
+     {
+      "tone": "screaming"
+     }
     ]
    ],
    "page": {
@@ -3885,7 +4784,18 @@
         "flip": true
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.25,
+         0.5
+        ],
+        "w": 420
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
@@ -3982,16 +4892,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Both heroes heard the alarm. Both leapt from the walls. Both ran for the very same door."
+     "warden",
+     "Both of you, go! Together!",
+     {
+      "tone": "urgent"
+     }
     ],
     [
      "king",
-     "MINE!"
+     "MINE!",
+     {
+      "tone": "shouting"
+     }
     ],
     [
      "queen",
-     "MINE!"
+     "MINE!",
+     {
+      "tone": "shouting"
+     }
     ]
    ],
    "page": {
@@ -4060,6 +4979,14 @@
        "speed:0.2,0.5"
       ]
      }
+    ],
+    "caps": [
+     {
+      "text": "Together.",
+      "at": "lineend:0",
+      "x": 0.43,
+      "y": 0.04
+     }
     ]
    },
    "sfx": []
@@ -4067,20 +4994,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Queen fired an arrow to slow the goblins down."
-    ],
-    [
-     "narrator",
-     "It slowed down the King instead, pinning his cape to a barrel."
+     "queen",
+     "I'll slow them down!",
+     {
+      "tone": "focused"
+     }
     ],
     [
      "king",
-     "HEY! Unpin me this instant!"
+     "HEY! You pinned my cape! Unpin me this instant!",
+     {
+      "tone": "outraged"
+     }
     ],
     [
      "queen",
-     "Oops."
+     "Oops.",
+     {
+      "tone": "not sorry"
+     }
     ]
    ],
    "page": {
@@ -4098,14 +5030,15 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.66,
         "y": 0.16,
         "tail": [
          0.45,
          0.32
         ],
-        "shout": true
+        "shout": true,
+        "w": 420
        }
       ],
       "caps": [],
@@ -4114,7 +5047,7 @@
         "text": "THWACK!",
         "x": 0.7,
         "y": 0.45,
-        "at": "line:1+1.2",
+        "at": "lineend:0+0.2",
         "style": "red",
         "size": 80
        }
@@ -4134,12 +5067,22 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 26
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
-      "under": [],
-      "at": 0.2
+      "under": []
      },
      {
       "bg": "burst:purple",
@@ -4153,7 +5096,7 @@
       ],
       "bubbles": [
        {
-        "line": 3,
+        "line": 2,
         "x": 0.5,
         "y": 0.15,
         "tail": [
@@ -4167,25 +5110,19 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:3-0.3"
+      "at": "line:2-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "thud",
-     "at": "line:1+1.2",
+     "at": "lineend:0+0.2",
      "volume": 0.42
     },
     {
      "sound": "pop",
-     "at": 0.2,
-     "offset": 0.05,
-     "volume": 0.28
-    },
-    {
-     "sound": "pop",
-     "at": "line:3-0.3",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -4195,15 +5132,24 @@
    "lines": [
     [
      "boss",
-     "Fill every pocket! Fill every hat!"
+     "Fill every pocket! Fill every hat!",
+     {
+      "tone": "greedy shout"
+     }
     ],
     [
      "goblin",
-     "Boss, I've run out of pockets."
+     "Boss, I've run out of pockets.",
+     {
+      "tone": "worried"
+     }
     ],
     [
      "boss",
-     "Then use your ears!"
+     "Then use your ears!",
+     {
+      "tone": "shouting"
+     }
     ]
    ],
    "page": {
@@ -4312,12 +5258,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Inside, it was chaos. Gold coins flew everywhere."
+     "goblin2",
+     "Pockets full! Hat full! Ears... full!",
+     {
+      "tone": "gleeful"
+     }
     ],
     [
-     "narrator",
-     "Goblins stuffed their pockets, their hats, and, as instructed, their ears."
+     "goblin",
+     "What? I can't hear anything!",
+     {
+      "tone": "shouting"
+     }
+    ],
+    [
+     "boss",
+     "Then you're doing it right!",
+     {
+      "tone": "laughing"
+     }
     ]
    ],
    "page": {
@@ -4379,13 +5338,43 @@
         "at": 1.3
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 460
+       },
+       {
+        "line": 1,
+        "x": 0.78,
+        "y": 0.14,
+        "tail": [
+         0.8,
+         0.36
+        ],
+        "shout": true
+       },
+       {
+        "line": 2,
+        "x": 0.22,
+        "y": 0.14,
+        "tail": [
+         0.2,
+         0.36
+        ]
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "CLINK! CLANK!",
         "x": 0.5,
-        "y": 0.1,
+        "y": 0.9,
         "at": 0.5,
         "style": "gold",
         "size": 70
@@ -4415,16 +5404,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "Then the King and Queen both spotted the same tiny goblin. And both charged."
-    ],
-    [
      "king",
-     "This one is MINE!"
+     "That little one has the most gold. This one is MINE!",
+     {
+      "tone": "determined"
+     }
     ],
     [
      "queen",
-     "Get your own goblin!"
+     "Get your own goblin!",
+     {
+      "tone": "shouting"
+     }
     ]
    ],
    "page": {
@@ -4442,8 +5433,8 @@
          0.4,
          0.6
         ],
-        "moveAt": "line:1",
-        "moveEnd": "lineend:2"
+        "moveAt": "line:0+1",
+        "moveEnd": "lineend:1"
        },
        {
         "name": "queen_leap",
@@ -4455,8 +5446,8 @@
          0.6,
          0.6
         ],
-        "moveAt": "line:1",
-        "moveEnd": "lineend:2"
+        "moveAt": "line:0+1",
+        "moveEnd": "lineend:1"
        },
        {
         "name": "goblin_03",
@@ -4467,17 +5458,18 @@
       ],
       "bubbles": [
        {
-        "line": 1,
-        "x": 0.2,
+        "line": 0,
+        "x": 0.22,
         "y": 0.16,
         "tail": [
          0.22,
          0.32
         ],
-        "shout": true
+        "shout": true,
+        "w": 420
        },
        {
-        "line": 2,
+        "line": 1,
         "x": 0.8,
         "y": 0.16,
         "tail": [
@@ -4493,13 +5485,13 @@
         "text": "BONK!",
         "x": 0.5,
         "y": 0.4,
-        "at": "lineend:2",
+        "at": "lineend:1",
         "style": "fire",
         "size": 150
        }
       ],
       "fx": [
-       "flash@lineend:2"
+       "flash@lineend:1"
       ],
       "under": [
        "speed:0.5,0.55"
@@ -4507,18 +5499,18 @@
      }
     ],
     "shake": [
-     "lineend:2"
+     "lineend:1"
     ]
    },
    "sfx": [
     {
      "sound": "impact",
-     "at": "lineend:2",
+     "at": "lineend:1",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "lineend:2",
+     "at": "lineend:1",
      "volume": 0.45
     }
    ]
@@ -4526,12 +5518,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "They met in the middle. Hard."
+     "king",
+     "Ow.",
+     {
+      "tone": "dazed"
+     }
+    ],
+    [
+     "queen",
+     "Ow.",
+     {
+      "tone": "dazed"
+     }
     ],
     [
      "goblin",
-     "Thanks for the gold! Same time next week?"
+     "Thanks for the gold! Same time next week?",
+     {
+      "tone": "cheeky"
+     }
     ]
    ],
    "page": {
@@ -4556,7 +5561,28 @@
         "flip": true
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.25,
+        "y": 0.14,
+        "tail": [
+         0.35,
+         0.4
+        ],
+        "size": 30
+       },
+       {
+        "line": 1,
+        "x": 0.75,
+        "y": 0.14,
+        "tail": [
+         0.65,
+         0.4
+        ],
+        "size": 30
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [
@@ -4576,12 +5602,12 @@
          0.75,
          0.62
         ],
-        "moveAt": "line:1"
+        "moveAt": "line:2+1"
        }
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 2,
         "x": 0.4,
         "y": 0.16,
         "tail": [
@@ -4597,14 +5623,14 @@
       "under": [
        "stars"
       ],
-      "at": "line:1-0.4"
+      "at": "line:2-0.4"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1-0.4",
+     "at": "line:2-0.4",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -4613,12 +5639,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "By dawn, the gold storage was nearly empty."
+     "wizard",
+     "Oh dear. Oh dear, oh dear. It's nearly empty.",
+     {
+      "tone": "dismayed"
+     }
     ],
     [
      "warden",
-     "Two heroes. Twenty goblins. And not a single one caught."
+     "Two heroes. Twenty goblins. And not a single one caught.",
+     {
+      "tone": "disappointed"
+     }
     ]
    ],
    "page": {
@@ -4646,6 +5678,34 @@
       "under": []
      },
      {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
       "bg": "gloom",
       "art": [
        {
@@ -4664,7 +5724,7 @@
          0.5,
          0.3
         ],
-        "size": 26,
+        "size": 24,
         "w": 360
        }
       ],
@@ -4673,23 +5733,6 @@
       "fx": [],
       "under": [],
       "at": "line:1-0.4"
-     },
-     {
-      "bg": "burst:grey",
-      "art": [
-       {
-        "name": "barb_emote_set_3",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.85
-       }
-      ],
-      "bubbles": [],
-      "caps": [],
-      "sfx": [],
-      "fx": [],
-      "under": [],
-      "at": "line:1+2"
      }
     ]
    },
@@ -4699,28 +5742,24 @@
      "at": "line:1-0.4",
      "offset": 0.05,
      "volume": 0.28
-    },
-    {
-     "sound": "pop",
-     "at": "line:1+2",
-     "offset": 0.05,
-     "volume": 0.28
     }
    ]
   },
   {
    "lines": [
     [
-     "narrator",
-     "The villagers gathered around the empty storage, very quietly."
-    ],
-    [
      "barbarians",
-     "So, who pays out my bet now?"
+     "So, um. Who pays out my bet now?",
+     {
+      "tone": "awkward"
+     }
     ],
     [
      "wizard",
-     "Technically, they both fell in the fountain. I win."
+     "Technically, they both fell in the fountain. I win.",
+     {
+      "tone": "pleased"
+     }
     ]
    ],
    "page": {
@@ -4738,7 +5777,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -4751,8 +5790,7 @@
       "caps": [],
       "sfx": [],
       "fx": [],
-      "under": [],
-      "at": "line:1-0.3"
+      "under": []
      },
      {
       "bg": "burst:purple",
@@ -4773,7 +5811,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -4788,7 +5826,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      }
     ],
     "caps": [
@@ -4801,7 +5839,154 @@
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "boss",
+     "Forty-one! I told you! Lucky number!",
+     {
+      "tone": "ecstatic"
+     }
+    ],
+    [
+     "goblin",
+     "Boss, can I take the coins out of my ears now?",
+     {
+      "tone": "pleading"
+     }
+    ],
+    [
+     "boss",
+     "No. Those are lucky coins now.",
+     {
+      "tone": "firm"
+     }
+    ]
+   ],
+   "page": {
+    "layout": "1+2",
+    "panels": [
+     {
+      "bg": "dawn",
+      "art": [
+       {
+        "name": "goblin_02",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.92
+       },
+       {
+        "name": "gold_icon",
+        "x": 0.2,
+        "y": 0.3,
+        "h": 0.12,
+        "bob": 16
+       },
+       {
+        "name": "gold_icon",
+        "x": 0.82,
+        "y": 0.26,
+        "h": 0.1,
+        "bob": 20
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 460
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [
+       {
+        "text": "The goblin camp",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:green",
+      "art": [
+       {
+        "name": "goblin_05",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 360
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "burst:gold",
+      "art": [
+       {
+        "name": "gold_full",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.75
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -4811,15 +5996,24 @@
    "lines": [
     [
      "king",
-     "She shot my cape!"
+     "She shot my cape!",
+     {
+      "tone": "accusing"
+     }
     ],
     [
      "queen",
-     "He ran into my goblin!"
+     "He ran into my goblin!",
+     {
+      "tone": "accusing"
+     }
     ],
     [
      "warden",
-     "Neither of you won this contest. The kingdom lost it."
+     "Neither of you won this contest. The kingdom lost it.",
+     {
+      "tone": "cold"
+     }
     ]
    ],
    "page": {
@@ -4930,12 +6124,168 @@
   {
    "lines": [
     [
-     "narrator",
-     "In the town square, the statue's stone stood uncarved. Waiting for a hero who had not yet earned it."
+     "barbarians",
+     "You were great, my King. Mostly.",
+     {
+      "tone": "encouraging"
+     }
     ],
     [
-     "narrator",
-     "The King walked past it twice. The Queen walked past it three times. Neither of them said a word."
+     "king",
+     "Mostly?",
+     {
+      "tone": "suspicious"
+     }
+    ],
+    [
+     "archers",
+     "Your aim was perfect, my Queen.",
+     {
+      "tone": "loyal"
+     }
+    ],
+    [
+     "queen",
+     "Except for the King's cape.",
+     {
+      "tone": "grudging"
+     }
+    ],
+    [
+     "archers",
+     "Except for that.",
+     {
+      "tone": "awkward"
+     }
+    ]
+   ],
+   "page": {
+    "layout": "2",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "barbarian",
+        "x": 0.3,
+        "y": 0.68,
+        "h": 0.62
+       },
+       {
+        "name": "king_point",
+        "x": 0.72,
+        "y": 0.64,
+        "h": 0.8,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.3,
+         0.4
+        ],
+        "w": 400
+       },
+       {
+        "line": 1,
+        "x": 0.72,
+        "y": 0.14,
+        "tail": [
+         0.72,
+         0.32
+        ],
+        "size": 34
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "archer",
+        "x": 0.7,
+        "y": 0.68,
+        "h": 0.6,
+        "flip": true
+       },
+       {
+        "name": "queen_stand",
+        "x": 0.28,
+        "y": 0.64,
+        "h": 0.82
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.68,
+        "y": 0.14,
+        "tail": [
+         0.7,
+         0.4
+        ],
+        "w": 400
+       },
+       {
+        "line": 3,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.28,
+         0.32
+        ],
+        "w": 380
+       },
+       {
+        "line": 4,
+        "x": 0.68,
+        "y": 0.14,
+        "tail": [
+         0.7,
+         0.4
+        ]
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "healer",
+     "The statue stone is still waiting. Uncarved.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "warden",
+     "Waiting for a hero who has earned it.",
+     {
+      "tone": "quiet"
+     }
     ]
    ],
    "page": {
@@ -4943,8 +6293,44 @@
     "panels": [
      {
       "bg": "img:bg_2026_hammerjam_backgroundonly@0.5,0.45,1.5",
-      "art": [],
-      "bubbles": [],
+      "art": [
+       {
+        "name": "healer",
+        "x": 0.12,
+        "y": 0.72,
+        "h": 0.45,
+        "at": 0.2
+       },
+       {
+        "name": "warden",
+        "x": 0.88,
+        "y": 0.72,
+        "h": 0.5,
+        "at": "line:1-0.3"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.32,
+        "y": 0.14,
+        "tail": [
+         0.14,
+         0.45
+        ],
+        "w": 420
+       },
+       {
+        "line": 1,
+        "x": 0.66,
+        "y": 0.14,
+        "tail": [
+         0.86,
+         0.45
+        ],
+        "w": 420
+       }
+      ],
       "caps": [
        {
         "text": "The empty statue",
@@ -4965,20 +6351,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "That night, neither hero slept."
-    ],
-    [
-     "narrator",
-     "And for the first time, each of them wondered if the other might be, just a little bit, right."
-    ],
-    [
      "king",
-     "Nice shot, earlier. On the cape."
+     "Hey. Nice shot, earlier. On the cape.",
+     {
+      "tone": "grudging"
+     }
     ],
     [
      "queen",
-     "Nice charge. Into my face."
+     "Nice charge. Into my face.",
+     {
+      "tone": "half smiling"
+     }
+    ],
+    [
+     "king",
+     "Goodnight, Queen.",
+     {
+      "tone": "softer"
+     }
+    ],
+    [
+     "queen",
+     "Goodnight, King.",
+     {
+      "tone": "softer"
+     }
     ]
    ],
    "page": {
@@ -4996,6 +6394,16 @@
       ],
       "bubbles": [
        {
+        "line": 0,
+        "x": 0.55,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "w": 420
+       },
+       {
         "line": 2,
         "x": 0.55,
         "y": 0.16,
@@ -5005,7 +6413,12 @@
         ]
        }
       ],
-      "caps": [],
+      "caps": [
+       {
+        "text": "That night...",
+        "at": 0
+       }
+      ],
       "sfx": [],
       "fx": [],
       "under": [
@@ -5026,6 +6439,16 @@
       ],
       "bubbles": [
        {
+        "line": 1,
+        "x": 0.45,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "w": 420
+       },
+       {
         "line": 3,
         "x": 0.45,
         "y": 0.16,
@@ -5042,14 +6465,14 @@
        "stars",
        "moon:0.7,0.2"
       ],
-      "at": "line:1"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -5058,16 +6481,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "From his tower, the Grand Warden watched them both."
+     "warden",
+     "Two halves of one hero. If only they knew it.",
+     {
+      "tone": "fond"
+     }
     ],
     [
      "warden",
-     "Two halves of one hero. If only they knew it."
-    ],
-    [
-     "narrator",
-     "Then a cold wind blew across the valley, and the Warden frowned. He knew that wind. It smelled of lightning."
+     "That wind. Cold, from the hills. It smells of lightning.",
+     {
+      "tone": "uneasy"
+     }
     ]
    ],
    "page": {
@@ -5084,6 +6509,16 @@
        }
       ],
       "bubbles": [
+       {
+        "line": 0,
+        "x": 0.45,
+        "y": 0.13,
+        "tail": [
+         0.42,
+         0.3
+        ],
+        "w": 520
+       },
        {
         "line": 1,
         "x": 0.45,
@@ -5120,7 +6555,7 @@
       "under": [
        "stars"
       ],
-      "at": "line:1-0.3"
+      "at": "line:0+1"
      },
      {
       "bg": "storm",
@@ -5129,24 +6564,24 @@
       "caps": [],
       "sfx": [],
       "fx": [
-       "bolt:0.2,0,0.5,0.9,0.9@line:2+3",
-       "flash@line:2+3"
+       "bolt:0.2,0,0.5,0.9,0.9@line:1+2",
+       "flash@line:1+2"
       ],
       "under": [],
-      "at": "line:2"
+      "at": "line:1"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1-0.3",
+     "at": "line:0+1",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:2",
+     "at": "line:1",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -5156,11 +6591,7 @@
    "lines": [
     [
      "narrator",
-     "But far beyond the walls, on top of a storm-dark hill, something had watched the whole thing."
-    ],
-    [
-     "narrator",
-     "And it was smiling."
+     "Far beyond the walls, on top of a storm-dark hill, something had watched the whole thing. And it was smiling."
     ],
     [
      "narrator",
@@ -5191,14 +6622,14 @@
       "text": "TO BE CONTINUED...",
       "y": 0.62,
       "size": 100,
-      "at": "line:2-0.2"
+      "at": "line:1-0.2"
      }
     ]
    },
    "sfx": [
     {
      "sound": "stamp",
-     "at": "line:2-0.2",
+     "at": "line:1-0.2",
      "volume": 0.4
     }
    ]

@@ -193,9 +193,29 @@ def emotive_skip(spec):
     return set(spec["emotive"].get("skip", ["narrator"])) if spec.get("emotive") else None
 
 
+# Words the local voices get wrong, respelled for them (the on-screen text keeps the real spelling).
+SAY_AS = {"elixir": "elixer"}
+
+
+def speech_text(text):
+    """The text a local voice reads. Words in capitals are emphasis in our scripts, but the voices spell
+    them out ("ONE" -> "O. N. E."), so they are spoken in normal case; emotion_for still sees the capitals."""
+    def fix(m):
+        w = m.group(0)
+        if len(w) > 1 and w.isupper():
+            w = w.lower()
+        low = w.lower()
+        if low in SAY_AS:
+            w = SAY_AS[low] if w.islower() else SAY_AS[low].capitalize()
+        return w
+    text = re.sub(r"[A-Za-z]+", fix, text)
+    # Capitalise the start of each sentence again after lower-casing.
+    return re.sub(r"(^|[.!?]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), text)
+
+
 def emotive_path(out_dir, voice, line):
     ex, cfg = emotion_for(line)
-    h = hashlib.sha1(json.dumps([voice, line[1], ex, cfg]).encode()).hexdigest()[:16]
+    h = hashlib.sha1(json.dumps([voice, speech_text(line[1]), ex, cfg]).encode()).hexdigest()[:16]
     return out_dir / "lines" / f"{h}.wav"
 
 
@@ -227,7 +247,7 @@ def prepare_emotive(spec, out_dir):
                 a, sr = kokoro_line(EMOTIVE_REF_TEXT, voice, 1.0)
                 sf.write(ref, a, sr)
             ex, cfg = emotion_for(line)
-            jobs[str(out)] = {"text": line[1], "ref": str(ref), "exaggeration": ex, "cfg": cfg, "out": str(out)}
+            jobs[str(out)] = {"text": speech_text(line[1]), "ref": str(ref), "exaggeration": ex, "cfg": cfg, "out": str(out)}
     if not jobs:
         return
     print(f"Voicing {len(jobs)} character lines with emotion (Chatterbox, slow on CPU)...")
@@ -265,7 +285,7 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
         elif skip is not None and who not in skip:
             a, sr = sf.read(emotive_path(out_dir, cast[who], line), dtype="float32")
         else:
-            a, sr = kokoro_line(text, cast[who], speed)
+            a, sr = kokoro_line(speech_text(text), cast[who], speed)
         if skip is not None and len(a):
             # Even out the two engines: every line to the same speech level, peaks kept under full scale.
             rms = float(np.sqrt(np.mean(a ** 2))) or 1.0
