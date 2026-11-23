@@ -179,3 +179,17 @@ function arrowShot(ctx, t, t0, d, x0, y0, x1, y1) {
     ctx.fillStyle = '#E04848'; const fl = polyPath([[-110, 0], [-130, -18], [-90, 0], [-130, 18]]); ctx.fill(fl); ctx.stroke(fl);
   });
 }
+
+// The storm sigil: a lightning bolt inside two rings, crackling.
+function sigil(c, t, x, y, r, a = 1) {
+  if (a <= 0) return;
+  c.save(); c.globalAlpha *= a;
+  glow(c, x, y, r * 2.2, '120,200,255', 0.7);
+  c.lineWidth = 10; c.strokeStyle = 'rgba(200,240,255,0.95)'; c.shadowColor = 'rgba(90,180,255,1)'; c.shadowBlur = 30;
+  c.beginPath(); c.arc(x, y, r, 0, Math.PI * 2); c.stroke();
+  c.lineWidth = 5; c.beginPath(); c.arc(x, y, r * 0.78, 0, Math.PI * 2); c.stroke();
+  c.fillStyle = 'rgba(225,248,255,0.95)';
+  c.fill(polyPath([[x + r * 0.1, y - r * 0.62], [x - r * 0.32, y + r * 0.06], [x - r * 0.02, y + r * 0.06], [x - r * 0.14, y + r * 0.62], [x + r * 0.32, y - r * 0.1], [x + r * 0.02, y - r * 0.1]]));
+  c.restore();
+  for (let i = 0; i < 3; i++) { const a0 = t * 2 + i * 2.1; bolt(c, t, x + Math.cos(a0) * r, y + Math.sin(a0) * r, x + Math.cos(a0) * (r + 90), y + Math.sin(a0) * (r + 90), { a: a * 0.8, seed: 40 + i, w: 4 }); }
+}

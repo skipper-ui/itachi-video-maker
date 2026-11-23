@@ -1,0 +1,793 @@
+{
+ "title": "The Royal Rivalry, Episode 1: Who Is the Greatest? (promo)",
+ "series": "The Royal Rivalry (Clash of Clans fan comic), full-episode promos",
+ "visuals": "motion",
+ "title_card": false,
+ "width": 1080,
+ "height": 1920,
+ "tts": "elevenlabs",
+ "cast": {
+  "narrator": "IKne3meq5aSn9XLyUdCD",
+  "king": "nPczCjzI2devNBz1zQrb",
+  "queen": "Xb7hH8MSUJpSbSDYk0k2",
+  "warden": "JBFqnCBsd6RMkjVDRZzb",
+  "wizard": "onwK4e9ZLuTAKqWW03F9",
+  "goblin": "SOYHLrjzK2X1ezoPC6cr",
+  "boss": "N2lVS1w4EtoT3dr4eOWO",
+  "healer": "EXAVITQu4vr4xnSDxMaL"
+ },
+ "scene_pad": 0.45,
+ "caption": {
+  "max_chars": 22,
+  "max_words": 4,
+  "size": 0.05,
+  "margin": 0.2
+ },
+ "music": {
+  "sound": "music_strategy",
+  "volume": 0.18
+ },
+ "sources": [
+  "Original fan story. Characters and art: official Supercell Fan Kit (https://fankit.supercell.com), used under Supercell's Fan Content Policy: unofficial, not endorsed by Supercell."
+ ],
+ "scenes": [
+  {
+   "lines": [
+    [
+     "narrator",
+     "Two heroes. One statue. And absolutely zero chill."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "img:bg_2026_hammerjam_backgroundonly@0.5,0.5,1.6",
+      "art": [
+       {
+        "name": "king_charge",
+        "x": 0.3,
+        "y": 0.7,
+        "h": 0.55,
+        "enter": "left",
+        "at": 0.2
+       },
+       {
+        "name": "queen_leap",
+        "x": 0.72,
+        "y": 0.7,
+        "h": 0.55,
+        "flip": true,
+        "enter": "right",
+        "at": 1.0
+       }
+      ],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "VS",
+        "x": 0.5,
+        "y": 0.5,
+        "at": 1.6,
+        "style": "red",
+        "size": 150
+       }
+      ],
+      "fx": [],
+      "under": []
+     }
+    ],
+    "titles": [
+     {
+      "text": "THE ROYAL RIVALRY",
+      "y": 0.2,
+      "size": 96,
+      "at": "lineend:0-0.2"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "thud",
+     "at": 1.6,
+     "volume": 0.42
+    },
+    {
+     "sound": "stamp",
+     "at": "lineend:0-0.2",
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Plans are for people who can't punch!"
+    ],
+    [
+     "queen",
+     "Eleven thousand bullseyes. But who's counting? Me. I am counting."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "burst:orange",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.9,
+        "enter": "left"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.62,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 520
+       }
+      ],
+      "caps": [
+       {
+        "text": "The Barbarian King",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "queen_aim",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.9,
+        "enter": "right"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.45,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 560
+       }
+      ],
+      "caps": [
+       {
+        "text": "The Archer Queen",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "There was exactly one pancake left."
+    ],
+    [
+     "king",
+     "That pancake is mine."
+    ],
+    [
+     "queen",
+     "I hit twenty bullseyes. Before breakfast."
+    ],
+    [
+     "narrator",
+     "The pancake did not survive."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.22,
+        "y": 0.72,
+        "h": 0.5
+       },
+       {
+        "name": "queen_stand",
+        "x": 0.78,
+        "y": 0.72,
+        "h": 0.52,
+        "flip": true
+       },
+       {
+        "name": "snack_pancakes",
+        "x": 0.5,
+        "y": 0.5,
+        "h": 0.22,
+        "at": 0.3
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.25,
+        "y": 0.13,
+        "tail": [
+         0.22,
+         0.45
+        ],
+        "w": 420
+       },
+       {
+        "line": 2,
+        "x": 0.72,
+        "y": 0.26,
+        "tail": [
+         0.78,
+         0.45
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "SPLAT!",
+        "x": 0.5,
+        "y": 0.45,
+        "at": "line:3-0.35",
+        "style": "fire",
+        "size": 150
+       }
+      ],
+      "fx": [
+       "burst:0.5,0.5@line:3-0.35"
+      ],
+      "under": [
+       "speed:0.5,0.6"
+      ]
+     }
+    ],
+    "shake": [
+     "line:3-0.35"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": "line:3-0.35",
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": "line:3-0.35",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "wizard",
+     "The council proposes a statue of the kingdom's greatest hero."
+    ],
+    [
+     "king",
+     "Obviously, that's me."
+    ],
+    [
+     "queen",
+     "Obviously, it's me."
+    ]
+   ],
+   "page": {
+    "layout": "1/2",
+    "panels": [
+     {
+      "bg": "img:bg_2026_hammerjam_backgroundonly@0.55,0.5,1.4",
+      "art": [
+       {
+        "name": "wizard",
+        "x": 0.72,
+        "y": 0.66,
+        "h": 0.8,
+        "enter": "right"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.38,
+        "y": 0.2,
+        "tail": [
+         0.6,
+         0.38
+        ],
+        "w": 560
+       }
+      ],
+      "caps": [
+       {
+        "text": "The town council",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:gold",
+      "art": [
+       {
+        "name": "bk_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "shout": true,
+        "size": 36,
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "aq_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "shout": true,
+        "size": 36,
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:2-0.3"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.3",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "So they made it a contest. Whoever guards the gold best, wins."
+    ],
+    [
+     "boss",
+     "Tonight, we hit the gold storage."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "gold_full",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.75
+       },
+       {
+        "name": "king_point",
+        "x": 0.14,
+        "y": 0.72,
+        "h": 0.55,
+        "at": 1.0
+       },
+       {
+        "name": "queen_stand",
+        "x": 0.86,
+        "y": 0.72,
+        "h": 0.56,
+        "flip": true,
+        "at": 1.6
+       }
+      ],
+      "bubbles": [],
+      "caps": [
+       {
+        "text": "The contest",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "goblin_02",
+        "x": 0.4,
+        "y": 0.62,
+        "h": 0.9
+       },
+       {
+        "name": "goblin_05",
+        "x": 0.82,
+        "y": 0.7,
+        "h": 0.5,
+        "at": "line:1+0.6"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.55,
+        "y": 0.16,
+        "tail": [
+         0.45,
+         0.34
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [
+       {
+        "text": "Meanwhile, beyond the walls...",
+        "at": 0
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "moon:0.82,0.2"
+      ],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "This one is MINE!"
+    ],
+    [
+     "queen",
+     "Get your own goblin!"
+    ],
+    [
+     "narrator",
+     "They met in the middle. Hard."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_charge",
+        "x": 0.2,
+        "y": 0.55,
+        "h": 0.5,
+        "move": [
+         0.4,
+         0.55
+        ],
+        "moveAt": "line:0",
+        "moveEnd": "lineend:1"
+       },
+       {
+        "name": "queen_leap",
+        "x": 0.8,
+        "y": 0.55,
+        "h": 0.5,
+        "flip": true,
+        "move": [
+         0.6,
+         0.55
+        ],
+        "moveAt": "line:0",
+        "moveEnd": "lineend:1"
+       },
+       {
+        "name": "goblin_03",
+        "x": 0.5,
+        "y": 0.82,
+        "h": 0.2
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.25,
+        "y": 0.12,
+        "tail": [
+         0.22,
+         0.3
+        ],
+        "shout": true,
+        "w": 400
+       },
+       {
+        "line": 1,
+        "x": 0.75,
+        "y": 0.12,
+        "tail": [
+         0.78,
+         0.3
+        ],
+        "shout": true,
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [
+       {
+        "text": "BONK!",
+        "x": 0.5,
+        "y": 0.4,
+        "at": "lineend:1",
+        "style": "fire",
+        "size": 180
+       }
+      ],
+      "fx": [
+       "flash@lineend:1",
+       "dizzy:0.5,0.25@line:2"
+      ],
+      "under": [
+       "speed:0.5,0.55"
+      ]
+     }
+    ],
+    "shake": [
+     "lineend:1"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": "lineend:1",
+     "volume": 0.42
+    },
+    {
+     "sound": "impact",
+     "at": "lineend:1",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "goblin",
+     "Thanks for the gold! Same time next week?"
+    ],
+    [
+     "warden",
+     "Two heroes. Twenty goblins. And not a single one caught."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "goblin_07",
+        "x": 0.4,
+        "y": 0.62,
+        "h": 0.85,
+        "move": [
+         0.7,
+         0.62
+        ],
+        "moveAt": "line:0+1"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.4,
+        "y": 0.16,
+        "tail": [
+         0.45,
+         0.34
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars"
+      ]
+     },
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.88
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 600
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "And far beyond the walls, something in the storm was watching."
+    ],
+    [
+     "narrator",
+     "Episode one, Who Is the Greatest. Watch the full episode now, on the channel."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "bolt:0.15,0,0.3,0.5,0.8@line:0+1.5",
+       "bolt:0.85,0,0.7,0.45,0.8@line:0+2",
+       "eyes:0.5,0.32,0.06,120,210,255@line:0+2.4"
+      ],
+      "under": [
+       "stars"
+      ]
+     }
+    ],
+    "titles": [
+     {
+      "text": "FULL EPISODE",
+      "y": 0.5,
+      "size": 110,
+      "at": "line:1+1.8"
+     },
+     {
+      "text": "ON THE CHANNEL",
+      "y": 0.6,
+      "size": 80,
+      "at": "line:1+2.4",
+      "style": "white"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "stamp",
+     "at": "line:1+1.8",
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "line:1+2.4",
+     "volume": 0.4
+    }
+   ]
+  }
+ ]
+}

@@ -29,9 +29,12 @@ async function main() {
   const [page, scene, seconds, fps, out, wordsPath] = args;
   const frames = Math.round(Number(seconds) * Number(fps));
   const words = wordsPath ? require('fs').readFileSync(wordsPath, 'utf8') : '[]';
+  // Dialogue scenes also have sceneNN.lines.json ([speaker, text, start, end] per line) next to the words file.
+  const linesPath = wordsPath ? wordsPath.replace(/\.words\.json$/, '.lines.json') : null;
+  const lines = linesPath && require('fs').existsSync(linesPath) ? require('fs').readFileSync(linesPath, 'utf8') : '[]';
   const browser = await chromium.launch();
-  const tab = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
-  await tab.addInitScript(`window.WORDS = ${words};`);
+  const tab = await browser.newPage({ viewport: { width: 1920, height: 1920 }, deviceScaleFactor: 1 });
+  await tab.addInitScript(`window.WORDS = ${words}; window.LINES = ${lines};`);
   const root = path.resolve(__dirname, '..');
   const server = await serve(root);
   const rel = path.relative(root, path.resolve(page)).split(path.sep).join('/');

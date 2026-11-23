@@ -23,7 +23,7 @@ models/
 tools/geo/data/
 
 # Supercell Fan Kit art (downloaded by tools/fankit.py; shown in videos, not redistributed)
-projects/*/*/fankit/
+projects/*/*/fankit
 
 # Official press-kit art (e.g. Kuro Games): shown in videos with credit, not redistributed
 projects/*/*/presskit/

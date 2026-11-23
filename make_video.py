@@ -20,6 +20,7 @@ import base64
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -139,6 +140,85 @@ def synthesize(scene_idx, scenes, voice_id, out_dir, force):
     timing.write_text(json.dumps(data["alignment"]))
     mark(audio, key)
     print(f"  narration {scene_idx + 1}/{len(scenes)} done")
+
+
+LINE_GAP = 0.28          # silence between dialogue lines (s)
+_KOKORO = None
+_KOKORO_LOCK = threading.Lock()
+
+
+def kokoro_line(text, voice, speed=1.0):
+    """Synthesize one line locally with Kokoro; returns (float32 samples @ 24 kHz)."""
+    global _KOKORO
+    from kokoro_onnx import Kokoro  # optional dependency: uv run --extra local-audio
+    with _KOKORO_LOCK:
+        if _KOKORO is None:
+            m = Path(__file__).parent / "models" / "kokoro"
+            _KOKORO = Kokoro(str(m / "kokoro-v1.0.onnx"), str(m / "voices-v1.0.bin"))
+        audio, sr = _KOKORO.create(text, voice=voice, speed=speed, lang="en-gb" if voice.startswith("b") else "en-us")
+    return audio, sr
+
+
+def eleven_line(text, voice_id, out_wav):
+    """Synthesize one line with ElevenLabs; returns (float32 samples @ 24 kHz)."""
+    import numpy as np
+    body = {"text": text, "model_id": TTS_MODEL, "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.35}}
+    r = eleven_post(f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}", body, 120)
+    r.raise_for_status()
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", "pipe:0", "-f", "f32le", "-ac", "1", "-ar", "24000", "pipe:1"],
+                         input=r.content, capture_output=True, check=True).stdout
+    return np.frombuffer(pcm, dtype="<f4").copy(), 24000
+
+
+def synthesize_lines(scene_idx, scene, spec, out_dir, force):
+    """Voice a scene written as cast lines: [[speaker, text], ...].
+
+    Each line is synthesized on its own (Kokoro locally, or ElevenLabs when spec["tts"] == "elevenlabs"),
+    joined with short pauses, and timed per character within its line, so the rest of the pipeline sees the
+    same alignment format as ElevenLabs' with-timestamps output. Line boundaries go to sceneNN.lines.json.
+    """
+    import numpy as np
+    import soundfile as sf
+    provider, cast, speed = spec.get("tts", "kokoro"), spec["cast"], spec.get("speed", 1.0)
+    audio = out_dir / f"scene{scene_idx:02d}.mp3"
+    timing = out_dir / f"scene{scene_idx:02d}.timing.json"
+    lines_path = out_dir / f"scene{scene_idx:02d}.lines.json"
+    key = fingerprint(scene["lines"], {k: cast[k] for k in {l[0] for l in scene["lines"]}}, provider, speed, TTS_MODEL)
+    if not force and is_fresh(audio, key) and timing.exists() and lines_path.exists():
+        return
+    chunks, chars, starts, ends, meta, t = [], [], [], [], [], 0.0
+    sr = 24000
+    for n, (who, text) in enumerate(scene["lines"]):
+        if provider == "elevenlabs":
+            a, sr = eleven_line(text, cast[who], out_dir)
+        else:
+            a, sr = kokoro_line(text, cast[who], speed)
+        # Trim Kokoro's leading/trailing near-silence so timings sit on the speech.
+        loud = np.where(np.abs(a) > 0.01)[0]
+        if len(loud):
+            a = a[max(0, loud[0] - int(0.03 * sr)): loud[-1] + int(0.06 * sr)]
+        dur = len(a) / sr
+        body = (" " if n else "") + text
+        # Spread characters across the line, weighting letters over spaces/punctuation a little.
+        weights = [1.0 if ch.isalnum() else 0.5 for ch in body]
+        total = sum(weights) or 1
+        acc = t - (dur / total * weights[0] if n else 0)
+        for ch, wgt in zip(body, weights):
+            step = dur * wgt / total
+            chars.append(ch); starts.append(round(max(acc, t), 3)); ends.append(round(max(acc + step, t), 3)); acc += step
+        meta.append([who, text, round(t, 3), round(t + dur, 3)])
+        chunks.append(a)
+        t += dur
+        if n < len(scene["lines"]) - 1:
+            chunks.append(np.zeros(int(LINE_GAP * sr), dtype="float32")); t += LINE_GAP
+    wav = out_dir / f"scene{scene_idx:02d}.wav"
+    sf.write(wav, np.concatenate(chunks), sr)
+    run(["ffmpeg", "-y", "-i", str(wav), "-c:a", "libmp3lame", "-q:a", "2", str(audio)])
+    wav.unlink()
+    timing.write_text(json.dumps({"characters": chars, "character_start_times_seconds": starts, "character_end_times_seconds": ends}))
+    lines_path.write_text(json.dumps(meta))
+    mark(audio, key)
+    print(f"  dialogue {scene_idx + 1} done ({len(scene['lines'])} lines, {t:.1f}s)")
 
 
 def words_from_alignment(alignment):
@@ -335,7 +415,7 @@ def motion_clip(scene_idx, page, seconds, words, out_dir, force):
     words_path = out_dir / f"scene{scene_idx:02d}.words.json"
     words_path.write_text(json.dumps(words))
     root = Path(__file__).parent
-    sources = [page, root / "motion" / "lib.js", root / "motion" / "render.js"]
+    sources = [page, *sorted((root / "motion").rglob("*.js"))]
     key = fingerprint([hashlib.sha256(p.read_bytes()).hexdigest() for p in sources], round(seconds, 3), words, FPS)
     if not force and is_fresh(path, key):
         return path
@@ -358,6 +438,9 @@ CAPTION = {
     "active": "#FFC83D",    # the word being spoken right now
     "keyword": "#8FE3FF",   # names and skills listed in the script's "keywords"
     "max_chars": 16,        # keep chunks short so they read at a glance
+    "max_words": 3,
+    "size": 0.058,          # font size as a fraction of video height
+    "margin": 0.27,         # distance from the bottom as a fraction of video height
 }
 
 
@@ -385,7 +468,7 @@ def write_captions(scene_words, scene_starts, width, height, path, keywords=(), 
     # A script can restyle captions with "caption": {"font", "base", "active", "keyword", "max_chars"}.
     cap = {**CAPTION, **(style or {})}
     keys = {k.upper() for k in keywords}
-    size = round(height * 0.058)
+    size = round(height * cap["size"])
     header = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {width}
@@ -395,7 +478,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,{cap["font"]},{size},{ass_color(cap["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,{round(size * 0.11)},{round(size * 0.07)},2,70,70,{round(height * 0.27)},1
+Style: Cap,{cap["font"]},{size},{ass_color(cap["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,{round(size * 0.11)},{round(size * 0.07)},2,70,70,{round(height * cap['margin'])},1
 Style: Title,{cap["font"]},{round(height * 0.085)},{ass_color(cap["base"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,6,0,1,{round(height * 0.006)},{round(height * 0.004)},8,60,60,{round(height * 0.11)},1
 Style: Sub,{cap["font"]},{round(height * 0.03)},{ass_color(cap["active"])},&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,8,0,1,{round(height * 0.0035)},{round(height * 0.003)},8,60,60,{round(height * 0.205)},1
 
@@ -425,7 +508,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         return " ".join(parts)
 
     for words, offset in zip(scene_words, scene_starts):
-        chunks = chunk_words(words, cap["max_chars"])
+        chunks = chunk_words(words, cap["max_chars"], cap["max_words"])
         for c, chunk in enumerate(chunks):
             # Hold the chunk until the next one starts so captions never blink off mid-sentence.
             chunk_end = chunks[c + 1][0][1] if c + 1 < len(chunks) else chunk[-1][2] + 0.35
@@ -484,7 +567,12 @@ def sound_cues(scenes, scene_words, starts):
     cues = []
     for scene, words, start in zip(scenes, scene_words, starts):
         for cue in scene.get("sfx", []):
-            t0 = (word_time(words, cue["word"], cue.get("nth", 0)) if "word" in cue else cue.get("at", 0.0))
+            at = cue.get("at", 0.0)
+            if isinstance(at, str):  # "line:N[+/-s]" or "lineend:N[+/-s]" for dialogue scenes
+                m = re.match(r"^(line|lineend):(\d+)([+-][\d.]+)?$", at)
+                line = scene.get("_line_times", [])[int(m.group(2))] if m and int(m.group(2)) < len(scene.get("_line_times", [])) else None
+                at = (line[0] if m.group(1) == "line" else line[1]) + float(m.group(3) or 0) if line else 0.0
+            t0 = (word_time(words, cue["word"], cue.get("nth", 0)) if "word" in cue else at)
             t0 += cue.get("offset", 0.0)
             n = cue.get("repeat", 1)
             if "until_word" in cue and n > 1:
@@ -582,7 +670,10 @@ def main():
 
     print(f"Generating narration{"" if motion else " and images"} for {len(scenes)} scenes...")
     with ThreadPoolExecutor(max_workers=4) as pool:
-        jobs = [pool.submit(synthesize, i, scenes, spec["voice_id"], out_dir, args.force) for i in range(len(scenes))]
+        if spec.get("cast"):
+            jobs = [pool.submit(synthesize_lines, i, scenes[i], spec, out_dir, args.force) for i in range(len(scenes))]
+        else:
+            jobs = [pool.submit(synthesize, i, scenes, spec["voice_id"], out_dir, args.force) for i in range(len(scenes))]
         if not motion:
             jobs += [pool.submit(generate_image, args.images, i, p, width, height, out_dir, args.force)
                      for i, p in enumerate(prompts)]
@@ -590,7 +681,8 @@ def main():
             j.result()
 
     audios = [out_dir / f"scene{i:02d}.mp3" for i in range(len(scenes))]
-    durations = [probe_duration(a) + SCENE_PAD for a in audios]
+    pad = spec.get("scene_pad", SCENE_PAD)   # breathing room after each scene's audio
+    durations = [probe_duration(a) + pad for a in audios]
     scene_words = [words_from_alignment(json.loads((out_dir / f"scene{i:02d}.timing.json").read_text()))
                    for i in range(len(scenes))]
     starts = [sum(durations[:i]) for i in range(len(scenes))]
@@ -610,13 +702,23 @@ def main():
                                          width, height, out_dir, args.force, scenes[i].get("fx")),
                 range(len(scenes))))
 
+    caption_words = scene_words
+    if spec.get("cast"):
+        narr = spec.get("caption_speakers", ["narrator"])
+        caption_words = []
+        for i, words in enumerate(scene_words):
+            spans = [(a, b) for who, _, a, b in json.loads((out_dir / f"scene{i:02d}.lines.json").read_text()) if who in narr]
+            caption_words.append([w for w in words if any(a - 0.05 <= w[1] <= b + 0.05 for a, b in spans)])
     captions = out_dir / "captions.ass"
-    write_captions(scene_words, starts, width, height, captions,
+    write_captions(caption_words, starts, width, height, captions,
                    keywords=spec.get("keywords", []),
                    title=spec.get("title") if spec.get("title_card", True) else None,
                    style=spec.get("caption"))
     final = out_dir / f"{name}.mp4"
     print("Assembling final video...")
+    if spec.get("cast"):
+        for i, sc in enumerate(scenes):
+            sc["_line_times"] = [(l[2], l[3]) for l in json.loads((out_dir / f"scene{i:02d}.lines.json").read_text())]
     cues = sound_cues(scenes, scene_words, starts)
     assemble(clips, audios, durations, captions, final, cues=cues, music=spec.get("music"))
     print(f"Done: {final} ({probe_duration(final):.1f}s)")

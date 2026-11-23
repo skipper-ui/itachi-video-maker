@@ -5,6 +5,7 @@
 
 A project's fankit.json maps names to assets:
   {"library": 338, "assets": {"th19": {"id": 168064, "title": "th19_default_2k", "width": 1600}}}
+Add "trim": true to an asset to crop a big transparent margin after download (needs Pillow).
 Files land in projects/coc/<name>/fankit/<name>.png (gitignored: Supercell's files are shown in our
 videos under the Fan Content Policy, but are not redistributed in this repository).
 
@@ -43,6 +44,16 @@ def find(asset_id, title, library):
         page += 1
 
 
+def trim(path, pad=8):
+    """Crop away a transparent margin (some building renders sit small in a big empty canvas)."""
+    from PIL import Image
+    im = Image.open(path).convert("RGBA")
+    box = im.getchannel("A").point(lambda a: 255 if a > 8 else 0).getbbox()
+    if box:
+        l, t, r, b = box
+        im.crop((max(0, l - pad), max(0, t - pad), min(im.width, r + pad), min(im.height, b + pad))).save(path)
+
+
 def fetch(manifest_path):
     manifest = json.loads(pathlib.Path(manifest_path).read_text())
     library = manifest.get("library", CLASH_OF_CLANS)
@@ -57,6 +68,8 @@ def fetch(manifest_path):
         url = a["generic_url"].replace("{width}", str(width))
         with urllib.request.urlopen(url, timeout=120) as r:
             dest.write_bytes(r.read())
+        if spec.get("trim"):
+            trim(dest)
         print(f"  {name}: {a['title']} ({width}px, {dest.stat().st_size // 1024} KB)")
     print(f"Art in {out}/. Put this in the video description:\n  {DISCLAIMER}")
 

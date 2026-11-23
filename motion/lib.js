@@ -2,7 +2,8 @@
 // (seconds since the scene started), so frames can be rendered in any order.
 /* eslint-disable no-unused-vars */
 
-const W = 1080, H = 1920;
+// Stage size: 1080x1920 (vertical Shorts) unless the page sets window.STAGE = {w, h} before loading lib.js.
+const W = (window.STAGE && window.STAGE.w) || 1080, H = (window.STAGE && window.STAGE.h) || 1920;
 
 // ---- timing & easing --------------------------------------------------------
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
