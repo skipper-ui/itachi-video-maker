@@ -1,0 +1,2282 @@
+{
+ "title": "KEYHOLDER: The F-Rank Sealer Who Can Unlock Anything",
+ "series": "Standalone manhwa-style story (original)",
+ "character": "",
+ "style": "",
+ "width": 1920,
+ "height": 1080,
+ "title_card": false,
+ "tts": "kokoro",
+ "cast": {
+  "narrator": "am_michael"
+ },
+ "speed": 0.95,
+ "scene_pad": 0.8,
+ "emotive": {
+  "engine": "eleven_v3",
+  "cast": {
+   "jiho": "TX3LPaxmHKxFdv7VOQHJ",
+   "yeonah": "EXAVITQu4vr4xnSDxMaL",
+   "kwon": "cjVigY5qzO86Huf0OWal",
+   "mingyu": "SOYHLrjzK2X1ezoPC6cr",
+   "jiah": "cgSgspJ2msm6clMCkdW9",
+   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "official": "iP95p4xoKVk53GoZ742B",
+   "anchor": "onwK4e9ZLuTAKqWW03F9",
+   "doctor": "pqHfZKP75CvOlQylNhV4",
+   "hunter": "bIHbv24MWmeRgasZH58o",
+   "nurse": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "skip": [
+   "narrator"
+  ]
+ },
+ "caption_speakers": [
+  "narrator",
+  "jiho",
+  "yeonah",
+  "kwon",
+  "mingyu",
+  "jiah",
+  "voice",
+  "official",
+  "anchor",
+  "doctor",
+  "hunter",
+  "nurse"
+ ],
+ "caption": {
+  "max_chars": 46,
+  "max_words": 8,
+  "size": 0.046,
+  "margin": 0.05
+ },
+ "images": {
+  "upscale": true
+ },
+ "music": {
+  "sound": "music_strategy",
+  "volume": 0.1
+ },
+ "sources": [
+  "Original story and characters. Artwork generated with AI (Magic Hour)."
+ ],
+ "scenes": [
+  {
+   "image": "wide establishing shot of the Seoul skyline at night with dozens of glowing blue and red portal gates floating in the sky above skyscrapers, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Seoul. Ten years after the first Gate opened in the sky."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "hunters in armor fighting a giant horned monster in a ruined Seoul street at night, sparks and blue magic, cars overturned, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Monsters poured out of them. Hunters rose to fight back. And when the fighting was over, someone had to close the door."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest kneeling in the rain with his palm pressed against a small fading blue portal on a ruined street, faint light on his hand, an official in a reflective vest with a clipboard behind him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Seal complete. Gate C-114 is closed.",
+     {
+      "tone": "tired"
+     }
+    ],
+    [
+     "official",
+     "Sign here, Sealer. You've got six more tonight.",
+     {
+      "tone": "bored"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest standing alone in the rain under a streetlight, small figure in a huge city, lonely mood, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That someone was Yoon Ji-ho. F-rank. The lowest rank a hunter can have. His only skill: closing Gates after real hunters had finished with them."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Hunter Association evaluation hall, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest with his hand on a large crystal orb that glows only very faintly, an official reading a tablet, other hunters laughing in the background, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "official",
+     "Yoon Ji-ho. Re-evaluation result: F-rank. Again.",
+     {
+      "tone": "bored"
+     }
+    ],
+    [
+     "jiho",
+     "Could you check one more time? Maybe the machine's broken.",
+     {
+      "tone": "hopeful"
+     }
+    ],
+    [
+     "official",
+     "The machine's fine, kid. You're just weak. Next!",
+     {
+      "tone": "dismissive"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets snatching a pay envelope out of Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's hands in a guild hallway, counting the money with a grin, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Sealer fee, thirty thousand won. Guild cut, twenty-nine thousand.",
+     {
+      "tone": "smug"
+     }
+    ],
+    [
+     "jiho",
+     "That leaves me one thousand.",
+     {
+      "tone": "flat"
+     }
+    ],
+    [
+     "mingyu",
+     "Buy yourself some nice gum.",
+     {
+      "tone": "mocking laugh"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "bright luxurious guild hall lobby with marble floor and a golden lion emblem, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets smirking at Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest who carries a heavy equipment bag, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Look who it is. The janitor. You missed a spot yesterday, Sealer.",
+     {
+      "tone": "mocking"
+     }
+    ],
+    [
+     "jiho",
+     "Good morning to you too, Min-gyu.",
+     {
+      "tone": "flat"
+     }
+    ],
+    [
+     "mingyu",
+     "That's Mister B-rank to you.",
+     {
+      "tone": "smug"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole walking down a marble staircase smiling warmly, guild members bowing, golden light from tall windows, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The Hwarang Guild. The richest guild in Korea. And its Director, the most beloved man in Seoul."
+    ],
+    [
+     "kwon",
+     "Now, now, Min-gyu. Every great guild needs someone to close the doors. Ji-ho, you'll join today's raid.",
+     {
+      "tone": "warm, smooth"
+     }
+    ],
+    [
+     "jiho",
+     "Me? On a Red Gate?",
+     {
+      "tone": "surprised"
+     }
+    ],
+    [
+     "kwon",
+     "Someone has to seal it afterwards. Who better than our best Sealer?",
+     {
+      "tone": "smiling"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "hospital room with afternoon light, Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown sitting up in bed smiling, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest sitting beside her holding a paper bag of snacks, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiah",
+     "Oppa, you're late again.",
+     {
+      "tone": "teasing"
+     }
+    ],
+    [
+     "jiho",
+     "Traffic. Monster traffic. Very rude monsters.",
+     {
+      "tone": "joking"
+     }
+    ],
+    [
+     "jiah",
+     "Liar.",
+     {
+      "tone": "giggling"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of a hospital IV drip and a medicine bottle with a very expensive price label on a bedside table, soft sad lighting, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ji-ah had Gate Fever. A sickness that came with the Gates. There was no cure. Only medicine. Very expensive medicine."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of a girl's small hand and a young man's hand making a pinky promise above a hospital blanket, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiah",
+     "Promise you'll come home tonight.",
+     {
+      "tone": "worried"
+     }
+    ],
+    [
+     "jiho",
+     "I promise. I'm just the Sealer. I stand at the back. Nobody ever looks at the Sealer.",
+     {
+      "tone": "gentle"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a huge glowing red portal gate in the middle of an evacuated Seoul plaza, police tape, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana standing in front of a squad of armored hunters, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Leading the raid was Seo Yeon-ah. S-rank. They called her the Frost Blade."
+    ],
+    [
+     "yeonah",
+     "Sealer. Stay behind me. Don't touch anything.",
+     {
+      "tone": "cold"
+     }
+    ],
+    [
+     "jiho",
+     "Yes, ma'am.",
+     {
+      "tone": "nervous"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "inside a vast red crystal cavern dungeon, glowing red crystals, a squad of hunters walking carefully, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets swinging his gauntlets casually, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Easy raid. Easy money.",
+     {
+      "tone": "cocky"
+     }
+    ],
+    [
+     "yeonah",
+     "Quiet. Something's wrong. It's too quiet.",
+     {
+      "tone": "tense whisper"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a swarm of glowing red crystal beetles the size of dogs pouring from the cavern walls, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana unleashing a huge frost slash that freezes a wave of them, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hunter",
+     "Contact! Crystal beetles, dozens of them!",
+     {
+      "tone": "shouting"
+     }
+    ],
+    [
+     "yeonah",
+     "Formation! Shields forward, mages behind me!",
+     {
+      "tone": "commanding"
+     }
+    ],
+    [
+     "mingyu",
+     "Show-off.",
+     {
+      "tone": "muttering"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest pulling a wounded young hunter in light armor up from the cavern floor, putting the hunter's arm over his shoulder, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana glancing back, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hunter",
+     "My leg! I can't feel my leg!",
+     {
+      "tone": "panicked"
+     }
+    ],
+    [
+     "jiho",
+     "Hold on. I've got you. Lean on me.",
+     {
+      "tone": "steady"
+     }
+    ],
+    [
+     "yeonah",
+     "Sealer. I told you to stay back.",
+     {
+      "tone": "sharp"
+     }
+    ],
+    [
+     "jiho",
+     "He was falling behind. Nobody gets left.",
+     {
+      "tone": "firm"
+     }
+    ],
+    [
+     "yeonah",
+     "Fine. Then keep him alive.",
+     {
+      "tone": "after a pause"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a colossal stone golem forty meters tall rising from the red crystal cavern floor, a glowing red core in its chest, tiny hunters below, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The boss of the Gate rose from the floor. A Stone Warden. Forty meters tall."
+    ],
+    [
+     "mingyu",
+     "That's not a Red Gate boss. That's a calamity!",
+     {
+      "tone": "panicking"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana slashing her katana against the giant stone golem's leg, ice shards exploding, but the stone is completely unharmed, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "My blade isn't even scratching it.",
+     {
+      "tone": "shocked"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the giant stone golem sweeping its arm through a line of armored hunters who are thrown across the red crystal cavern, chaos, dust, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hunter",
+     "It's too strong! We can't hold it!",
+     {
+      "tone": "terrified"
+     }
+    ],
+    [
+     "yeonah",
+     "Fall back! Everyone to the exit! Now!",
+     {
+      "tone": "commanding shout"
+     }
+    ],
+    [
+     "narrator",
+     "One by one, the strongest hunters in Korea were thrown aside like toys."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest pressing his hand against the swirling red exit portal of the cavern, which is shrinking and covered with dark chains, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hunter",
+     "The exit! The Gate's closing behind us!",
+     {
+      "tone": "screaming"
+     }
+    ],
+    [
+     "jiho",
+     "It's not closing. It's being locked. From the outside.",
+     {
+      "tone": "stunned"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest holding a radio earpiece, red light on his face, horrified expression, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Sealer. The boss is about to break into the city. Seal the Gate. Now.",
+     {
+      "tone": "calm, cold"
+     }
+    ],
+    [
+     "jiho",
+     "Director, there are twelve hunters still inside!",
+     {
+      "tone": "desperate"
+     }
+    ],
+    [
+     "kwon",
+     "Twelve hunters, or ten million citizens. Seal it.",
+     {
+      "tone": "icy"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "dramatic close-up of Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's determined face, red light, sweat, gritted teeth, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "No.",
+     {
+      "tone": "firm"
+     }
+    ],
+    [
+     "kwon",
+     "Then you can stay in there with them.",
+     {
+      "tone": "pleasant, chilling"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the red exit portal sealing shut with black chains and a black keyhole symbol glowing on it, hunters screaming in the dark cavern, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The Gate locked itself behind them. Someone had made the choice for him."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest dragging the wounded Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana behind a fallen crystal pillar, her armor cracked, blood on her lip, the stone golem looming, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Why didn't you run?",
+     {
+      "tone": "weak"
+     }
+    ],
+    [
+     "jiho",
+     "Sealers stay until everyone's out. That's the only rule I've got.",
+     {
+      "tone": "breathless"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the giant stone golem raising its huge fist above Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest who shields Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana with his body, his hand touching a glowing red crystal shard on the ground, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "Keyholder. At last, you have come.",
+     {
+      "tone": "ancient, echoing whisper"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a vast white void with an enormous golden floating keyhole in the center, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest standing small before it, golden particles, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "Every lock has a key. Every key has a holder. Open your eyes, Keyholder.",
+     {
+      "tone": "solemn"
+     }
+    ],
+    [
+     "jiho",
+     "Who are you?",
+     {
+      "tone": "awed"
+     }
+    ],
+    [
+     "voice",
+     "Look.",
+     {
+      "tone": "commanding"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge, his eyes now glowing bright gold, golden keyhole symbols floating in the red cavern around him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Suddenly, he could see them. Keyholes. Glowing gold. On the walls. On the Gate. And on the monster itself."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge leaping up the giant stone golem's arm toward a glowing golden keyhole on its chest core, dynamic action pose, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Unlock.",
+     {
+      "tone": "intense"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the giant stone golem shattering into hundreds of falling stone pieces, golden light bursting from its chest, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest falling through the debris, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The forty-meter Stone Warden came apart like a broken lock."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest walking out of the red portal carrying the unconscious Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana on his back, reporters and camera flashes outside, crowd cheering, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "The Frost Blade did it! She killed the boss! She saved us all!",
+     {
+      "tone": "ecstatic"
+     }
+    ],
+    [
+     "narrator",
+     "Nobody looked at the Sealer. They never did."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana on a stretcher half-conscious, looking at Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest walking away in the crowd, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "It wasn't me, was it?",
+     {
+      "tone": "faint whisper"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest sitting on the floor of a tiny cramped studio apartment at night, holding his brass key badge which glows gold, moonlight through the window, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "You have opened your first lock. One fragment of nine.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "jiho",
+     "Nine? Nine what?",
+     {
+      "tone": "confused"
+     }
+    ],
+    [
+     "voice",
+     "Find them. Before he does.",
+     {
+      "tone": "warning"
+     }
+    ],
+    [
+     "jiho",
+     "Before who? Hello?",
+     {
+      "tone": "frustrated"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest eating instant ramen in front of a small TV showing a news broadcast of Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana with a heroic headline graphic, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "anchor",
+     "The Hwarang Guild's Red Gate raid ends in triumph, as S-rank hunter Seo Yeon-ah defeats a calamity-class boss single-handedly.",
+     {
+      "tone": "news broadcast"
+     }
+    ],
+    [
+     "jiho",
+     "Triumph. Sure.",
+     {
+      "tone": "sarcastic"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole warmly gripping Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's shoulder in a bright guild office, smiling kindly, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Ji-ho! Our brave Sealer. I'm so glad you survived. The radio failed in there, you know. A terrible accident.",
+     {
+      "tone": "warm, concerned"
+     }
+    ],
+    [
+     "jiho",
+     "The radio didn't fail. I heard every word.",
+     {
+      "tone": "inner thought, quiet"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole sliding an envelope across a polished desk toward Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, city view behind, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "I've paid your sister's hospital bills. All of them. Consider it a thank you.",
+     {
+      "tone": "generous"
+     }
+    ],
+    [
+     "jiho",
+     "You what?",
+     {
+      "tone": "stunned"
+     }
+    ],
+    [
+     "kwon",
+     "Just stay close to me, Ji-ho. I'd hate to lose you.",
+     {
+      "tone": "soft, menacing"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "extreme close-up of a gold ring engraved with a keyhole symbol on a man's hand resting on a desk, dramatic lighting, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On the Director's finger was a gold ring. Engraved with a keyhole."
+    ],
+    [
+     "jiho",
+     "That symbol...",
+     {
+      "tone": "whisper"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge standing in front of a vending machine at night, a golden keyhole glowing on it, a can dropping out, comedic, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Unlock.",
+     {
+      "tone": "testing"
+     }
+    ],
+    [
+     "narrator",
+     "Clunk."
+    ],
+    [
+     "jiho",
+     "Okay. That's useful.",
+     {
+      "tone": "amused"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest in a small bathroom looking into a cracked mirror, a nosebleed running down his lip, his golden eyes fading back to dark, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "Every lock you open takes something from you. Open too many, and you will be the one who breaks.",
+     {
+      "tone": "warning"
+     }
+    ],
+    [
+     "jiho",
+     "Great. Fine print. Love it.",
+     {
+      "tone": "sarcastic, wiping blood"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge fighting a pack of small goblin monsters inside a dark low-rank dungeon, golden keyholes glowing on each monster, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Unlock. Unlock. Unlock!",
+     {
+      "tone": "focused"
+     }
+    ],
+    [
+     "narrator",
+     "Every night, he entered the Gates nobody wanted. Every night, he got a little faster."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge raising his hand as a huge wolf monster freezes mid-leap, golden chains wrapping its claws, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "Two fragments of nine. Now learn the other half.",
+     {
+      "tone": "approving"
+     }
+    ],
+    [
+     "jiho",
+     "Lock.",
+     {
+      "tone": "commanding"
+     }
+    ],
+    [
+     "jiho",
+     "It can close things too.",
+     {
+      "tone": "amazed"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "rooftop of a Seoul building at night with city lights, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana leaning on the railing waiting, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest arriving surprised, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "You've been entering E-rank Gates alone. At night. An F-rank Sealer.",
+     {
+      "tone": "cool"
+     }
+    ],
+    [
+     "jiho",
+     "Are you following me?",
+     {
+      "tone": "defensive"
+     }
+    ],
+    [
+     "yeonah",
+     "You saved my life. I like to know who I owe.",
+     {
+      "tone": "matter-of-fact"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest facing each other on the rooftop at night, wind blowing her white hair, tense, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "In the Gate, your eyes turned gold. And the Stone Warden fell apart. I saw it.",
+     {
+      "tone": "steady"
+     }
+    ],
+    [
+     "jiho",
+     "You were half unconscious.",
+     {
+      "tone": "nervous laugh"
+     }
+    ],
+    [
+     "yeonah",
+     "Half. Not all.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana drawing her katana and pointing it at Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, frost mist, a small golden keyhole glowing on the buckle of her armor, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Then show me. Find my weakness.",
+     {
+      "tone": "challenging"
+     }
+    ],
+    [
+     "jiho",
+     "Unlock.",
+     {
+      "tone": "smirking"
+     }
+    ],
+    [
+     "narrator",
+     "Her armor's buckle clicked open. Her sword arm dropped."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana with a rare small smile, sheathing her sword, city lights behind her, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Impressive. And extremely annoying.",
+     {
+      "tone": "dry, amused"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana looking out over the Seoul night skyline from the rooftop, wind in her white hair, sad expression, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest beside her, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Five years ago, my brother walked into a Hwarang Gate. A simple C-rank. It locked. They called it an accident.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "jiho",
+     "You never believed them.",
+     {
+      "tone": "gentle"
+     }
+    ],
+    [
+     "yeonah",
+     "I became S-rank so I could find out the truth. I think I'm looking at it.",
+     {
+      "tone": "steely"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana sparring with Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest on a moonlit rooftop, her wooden practice sword at his throat, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest sweating and smiling, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "You can see every weakness in the world, and you still leave your left side open.",
+     {
+      "tone": "unimpressed"
+     }
+    ],
+    [
+     "jiho",
+     "I was letting you win.",
+     {
+      "tone": "out of breath"
+     }
+    ],
+    [
+     "yeonah",
+     "Again.",
+     {
+      "tone": "stern"
+     }
+    ],
+    [
+     "jiho",
+     "Can we at least take a water break?",
+     {
+      "tone": "pleading"
+     }
+    ],
+    [
+     "yeonah",
+     "Monsters don't take water breaks. Again.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest sitting on the rooftop ledge looking at a map of Seoul covered with gate markers on a tablet, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Gates don't lock themselves. Someone locked ours. From the outside. With a key.",
+     {
+      "tone": "serious"
+     }
+    ],
+    [
+     "jiho",
+     "Director Kwon wears a ring with a keyhole on it.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "Neither of them said anything for a long time."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a dark guild archive vault at night lit by a flashlight, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge opening a heavy steel door with a golden keyhole glowing on it, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana keeping watch, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Unlock.",
+     {
+      "tone": "whisper"
+     }
+    ],
+    [
+     "yeonah",
+     "Ten years of Gate records. Quickly.",
+     {
+      "tone": "urgent whisper"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest and Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana reading stacks of files by flashlight in the archive, red ACCIDENT stamps on the pages, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Gate locked. Hunters lost. Accident. Gate locked. Accident. Accident. Accident.",
+     {
+      "tone": "growing horror"
+     }
+    ],
+    [
+     "yeonah",
+     "Seo Joon-ho. My brother. Gate locked by order of the Director.",
+     {
+      "tone": "barely holding together"
+     }
+    ],
+    [
+     "jiho",
+     "Yeon-ah...",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "yeonah",
+     "Don't. Not now. We finish this first.",
+     {
+      "tone": "trembling, resolute"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "bright hospital room, Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown pointing excitedly at Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana who stands stiffly by the door, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest looking embarrassed, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiah",
+     "Oppa! Is she your girlfriend?",
+     {
+      "tone": "excited"
+     }
+    ],
+    [
+     "jiho",
+     "No!",
+     {
+      "tone": "flustered"
+     }
+    ],
+    [
+     "yeonah",
+     "Absolutely not.",
+     {
+      "tone": "flat"
+     }
+    ],
+    [
+     "jiah",
+     "You both said that really fast.",
+     {
+      "tone": "giggling"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana kneeling by the hospital bed placing a small glowing snowflake crystal charm in Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown's hands, soft warm light, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "For luck. It never melts.",
+     {
+      "tone": "softer than usual"
+     }
+    ],
+    [
+     "jiah",
+     "It's so pretty! Thank you, unni!",
+     {
+      "tone": "delighted"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "hospital corridor, a worried doctor in a white coat talking to Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "doctor",
+     "Her fever spiked the night the Red Gate opened. It happens every time a big Gate opens.",
+     {
+      "tone": "grave"
+     }
+    ],
+    [
+     "jiho",
+     "Every time?",
+     {
+      "tone": "alarmed"
+     }
+    ],
+    [
+     "doctor",
+     "It's as if the Gates are feeding on her.",
+     {
+      "tone": "uneasy"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown in her hospital bed at night, eyes half open, a faint red glow from the window, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest holding her hand, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiah",
+     "Oppa. I dreamed of a giant door. Somebody was knocking on it. From the other side.",
+     {
+      "tone": "sleepy, scared"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "guild training gym, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets slamming his gauntlet into a wall beside Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's head, aggressive, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Nobody walks out of a locked Gate. Nobody. Except you. So what are you, janitor?",
+     {
+      "tone": "aggressive"
+     }
+    ],
+    [
+     "jiho",
+     "Lucky.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "mingyu",
+     "I'm going to find out.",
+     {
+      "tone": "threatening"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets standing before Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole's desk in a dark luxury office, Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole smiling, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Director, the Sealer's hiding something. Let me take him into a Gate and prove it.",
+     {
+      "tone": "eager"
+     }
+    ],
+    [
+     "kwon",
+     "What a wonderful idea. Take Gate D-7. I'll handle the paperwork.",
+     {
+      "tone": "delighted"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole alone in his dark office, his gold keyhole ring glowing black, a black keyhole symbol appearing over a gate on a holographic city map, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Two problems. One Gate.",
+     {
+      "tone": "cold whisper"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets entering a dim forest dungeon through a small portal, the portal behind them sealing with a black keyhole, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Just you and me, janitor. Show me what you've got.",
+     {
+      "tone": "cocky"
+     }
+    ],
+    [
+     "jiho",
+     "Min-gyu. The Gate just locked. And this lock isn't gold. It's black.",
+     {
+      "tone": "alarmed"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "huge mutated black wolves with glowing red eyes surging out of a dark forest dungeon, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets punching one with his gauntlet, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "This is a D-rank Gate? These are A-rank monsters!",
+     {
+      "tone": "shouting"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets wounded and sitting against a tree, his gauntlet cracked, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest kneeling beside him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "The Director sent me in here. He locked it on me too?",
+     {
+      "tone": "shocked, hurt"
+     }
+    ],
+    [
+     "jiho",
+     "Welcome to the club.",
+     {
+      "tone": "grim"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets and Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest sitting against a tree in the dark dungeon forest, a small fire between them, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets looking at the flames, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "You know why I hate Sealers? My dad was one. Twenty years closing Gates for rich guilds. Died in one. Nobody even came to the funeral.",
+     {
+      "tone": "bitter, quiet"
+     }
+    ],
+    [
+     "jiho",
+     "So you became the guy who laughs at Sealers.",
+     {
+      "tone": "gentle"
+     }
+    ],
+    [
+     "mingyu",
+     "Yeah. Stupid, right?",
+     {
+      "tone": "rueful"
+     }
+    ],
+    [
+     "jiho",
+     "A little.",
+     {
+      "tone": "small smile"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge touching a black keyhole floating in the air which sparks and burns his hand, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Unlock! Why won't it open?",
+     {
+      "tone": "straining"
+     }
+    ],
+    [
+     "voice",
+     "That lock was not made by you. To open it, you must take its key.",
+     {
+      "tone": "urgent"
+     }
+    ],
+    [
+     "jiho",
+     "Whose key?",
+     {
+      "tone": "gasping"
+     }
+    ],
+    [
+     "voice",
+     "The one who made it. It is inside the beast.",
+     {
+      "tone": "grave"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a giant black alpha wolf with a black keyhole glowing in its chest lunging at Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge, golden chains wrapping its jaws, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Lock!",
+     {
+      "tone": "shouting"
+     }
+    ],
+    [
+     "jiho",
+     "And unlock.",
+     {
+      "tone": "intense"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the black alpha wolf dissolving into black smoke, a small black key shard falling into Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's hand, the exit portal opening with golden light, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The beast came apart. And in Ji-ho's hand, a shard of black key."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest supporting the injured Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets with an arm over his shoulder, walking out of a portal into the dawn, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "You saved me. After everything I said to you.",
+     {
+      "tone": "ashamed"
+     }
+    ],
+    [
+     "jiho",
+     "You were annoying. Not evil. There's a difference.",
+     {
+      "tone": "tired smile"
+     }
+    ],
+    [
+     "mingyu",
+     "I owe you, janitor.",
+     {
+      "tone": "gruff"
+     }
+    ],
+    [
+     "jiho",
+     "Ji-ho.",
+     {
+      "tone": "firm"
+     }
+    ],
+    [
+     "mingyu",
+     "Ji-ho.",
+     {
+      "tone": "grudging respect"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets talking on a phone in a hospital corridor with a bandaged arm, a cold expression, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest listening from around a corner, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Min-gyu. You're alive. How wonderful. And our Sealer?",
+     {
+      "tone": "sweet"
+     }
+    ],
+    [
+     "mingyu",
+     "He didn't make it, Director. The wolves got him.",
+     {
+      "tone": "lying, steady"
+     }
+    ],
+    [
+     "kwon",
+     "What a tragedy. Come and see me tomorrow.",
+     {
+      "tone": "pleased"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of a black key shard glowing in Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's open palm, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "Three fragments of nine. And now he knows you exist.",
+     {
+      "tone": "ominous"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole in his dark office, his gold ring cracked down the middle, his gentle smile gone, cold furious eyes behind gold glasses, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "So. There is another Keyholder.",
+     {
+      "tone": "cold, dangerous"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a luxurious rooftop restaurant at night, Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole pouring wine at a candlelit table, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest sitting stiffly across from him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Sit, Ji-ho. Eat. You look thin.",
+     {
+      "tone": "fatherly"
+     }
+    ],
+    [
+     "kwon",
+     "Two Keyholders, working together. Every Gate in the world would answer to us. Money. Power. A cure for your sister.",
+     {
+      "tone": "persuasive"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole smiling over a wine glass, his cracked keyhole ring visible, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest gripping the table edge, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "And the hunters you locked inside?",
+     {
+      "tone": "controlled anger"
+     }
+    ],
+    [
+     "kwon",
+     "Sacrifices. Every great door needs its keys.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "jiho",
+     "No.",
+     {
+      "tone": "firm"
+     }
+    ],
+    [
+     "kwon",
+     "Think about it. Hospitals can be such dangerous places.",
+     {
+      "tone": "gentle, threatening"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a closed noodle restaurant at night, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets sitting at a small table with bowls, serious faces, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "He's been locking Gates for years. Letting the monsters inside grow. Bigger monster, bigger core. And cores sell for billions.",
+     {
+      "tone": "angry"
+     }
+    ],
+    [
+     "yeonah",
+     "And the hunters who asked questions never came back.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest staring at his hands at the noodle restaurant table, steam rising, realization on his face, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "My sister's fever spikes every time one of his locked Gates grows. He's not just killing hunters. He's feeding something.",
+     {
+      "tone": "horrified"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana placing a thick folder of archive files on the noodle restaurant table, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets and Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest leaning in, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "We take the archive records to the Hunter Association. Tomorrow morning.",
+     {
+      "tone": "decisive"
+     }
+    ],
+    [
+     "mingyu",
+     "And if the Director finds out first?",
+     {
+      "tone": "uneasy"
+     }
+    ],
+    [
+     "jiho",
+     "Then we'd better hope he doesn't.",
+     {
+      "tone": "grim"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a vision of two figures in ancient robes, an old master and a young student, standing before a colossal door made of black stone, golden light, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "There were two Keyholders once. A teacher, and his student. The student wanted to open every door. Even the one that must stay closed.",
+     {
+      "tone": "sorrowful"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest in the noodle restaurant, eyes glowing gold, whispering, the others staring at him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "The Great Gate.",
+     {
+      "tone": "whisper"
+     }
+    ],
+    [
+     "voice",
+     "Beneath Seoul. And the student's name was Kwon.",
+     {
+      "tone": "grave"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "giant billboard screens across Seoul at night all showing Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole smiling, crowds looking up, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Citizens of Seoul. Tonight, the Hwarang Guild opens the door to a new era.",
+     {
+      "tone": "grand, smiling"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "an enormous black and gold portal gate tearing open in the sky above the entire Seoul skyline, lightning, cars stopped, people screaming, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Above Seoul, the largest Gate ever recorded began to open. And this time, it was opening on purpose."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "hospital room in chaos, red light, a nurse checking monitors, Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown gasping in bed, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "nurse",
+     "Her fever's off the charts!",
+     {
+      "tone": "panicked"
+     }
+    ],
+    [
+     "jiah",
+     "Oppa. The door is opening.",
+     {
+      "tone": "faint"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's hand and Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown's small hand in a pinky promise again, red light from the window, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Hold on, Ji-ah. I'm going to close it. I promise.",
+     {
+      "tone": "determined, tender"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets standing side by side in a ruined street, facing the colossal black and gold Gate above Seoul, wind and debris, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "So the plan is, the F-rank janitor walks into the biggest Gate in history.",
+     {
+      "tone": "nervous laugh"
+     }
+    ],
+    [
+     "jiho",
+     "Sealer.",
+     {
+      "tone": "dry"
+     }
+    ],
+    [
+     "yeonah",
+     "And the S-rank and the B-rank keep him alive.",
+     {
+      "tone": "resolute"
+     }
+    ],
+    [
+     "mingyu",
+     "Great plan. Love it. We're all going to die.",
+     {
+      "tone": "sarcastic"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "inside the Great Gate, a colossal cathedral of black stone shaped like a giant keyhole, golden chains everywhere, Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole standing at the center with glowing black and gold eyes, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Ji-ho. My little Sealer. You should have stayed at the back.",
+     {
+      "tone": "amused"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana pulling a broken silver sword out of a mass of black chains in the dark cathedral, her hands shaking, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "This is Joon-ho's sword.",
+     {
+      "tone": "breaking"
+     }
+    ],
+    [
+     "kwon",
+     "Your brother asked too many questions too. He made an excellent key.",
+     {
+      "tone": "pleasant"
+     }
+    ],
+    [
+     "yeonah",
+     "I'm going to end you.",
+     {
+      "tone": "cold fury"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole spreading his arms before an enormous sealed door covered in chains behind him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Do you know what's behind this door? Power. The core of every Gate that has ever opened.",
+     {
+      "tone": "ecstatic"
+     }
+    ],
+    [
+     "jiho",
+     "And my sister? And every hunter you locked away?",
+     {
+      "tone": "furious"
+     }
+    ],
+    [
+     "kwon",
+     "Keys for the door. Nothing more.",
+     {
+      "tone": "dismissive"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole looking up at the giant chained door with a strange longing, black and gold light on his face, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "My teacher gave me one fragment and told me to guard this door. Forever. Alone, in the dark.",
+     {
+      "tone": "bitter"
+     }
+    ],
+    [
+     "kwon",
+     "So I decided I would rather open it.",
+     {
+      "tone": "quiet, certain"
+     }
+    ],
+    [
+     "jiho",
+     "He trusted you.",
+     {
+      "tone": "angry"
+     }
+    ],
+    [
+     "kwon",
+     "He trusted a lock. I am not a lock.",
+     {
+      "tone": "cold"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana slicing through swarms of black chain monsters with frost blasts while Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets smashes through them with his gauntlets, epic battle, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Go, Ji-ho! We've got these!",
+     {
+      "tone": "shouting"
+     }
+    ],
+    [
+     "mingyu",
+     "Go! Before I change my mind!",
+     {
+      "tone": "shouting"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets catching a giant black armored knight's sword with both gauntlets, sparks flying, teeth gritted, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "My dad closed Gates for twenty years! You think I'm scared of you?",
+     {
+      "tone": "roaring"
+     }
+    ],
+    [
+     "mingyu",
+     "Okay, a little scared! But mostly angry!",
+     {
+      "tone": "straining"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole pointing his ringed hand at Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge, black chains wrapping and freezing Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest mid-air, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Lock.",
+     {
+      "tone": "cold"
+     }
+    ],
+    [
+     "kwon",
+     "Did you really think you were the only one?",
+     {
+      "tone": "mocking"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest frozen in black chains, a black keyhole glowing on his chest, straining, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "A Keyholder cannot unlock himself. He must be opened by another.",
+     {
+      "tone": "urgent"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana leaping and slashing her frost katana through the black keyhole on Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's chest, ice and gold light exploding, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Then I'll be your key!",
+     {
+      "tone": "fierce shout"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest inside a dark dream space surrounded by black chains, a small glowing vision of Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown holding the snowflake charm reaching toward him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiah",
+     "Oppa. You promised. You always come home.",
+     {
+      "tone": "echoing, gentle"
+     }
+    ],
+    [
+     "jiho",
+     "I know. I'm coming.",
+     {
+      "tone": "determined"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge landing free from shattered black chains, golden light all around him, facing Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "Impossible!",
+     {
+      "tone": "shocked"
+     }
+    ],
+    [
+     "jiho",
+     "You taught your student to open every door. You forgot why some doors stay closed.",
+     {
+      "tone": "steady, powerful"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge grabbing Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole's hand, a golden keyhole glowing on the gold ring, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Unlock.",
+     {
+      "tone": "final"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the gold keyhole ring shattering into pieces, black energy draining out of Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole who falls to his knees screaming, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kwon",
+     "No. No! My key!",
+     {
+      "tone": "anguished scream"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the enormous sealed door behind the cathedral cracking open, a gigantic glowing eye staring through the gap, tiny figures below, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "But it was too late. Behind the door, something enormous opened its eye."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge standing before the cracking door, golden light, looking back over his shoulder at Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "To seal the Great Gate, someone must lock it from the inside.",
+     {
+      "tone": "solemn"
+     }
+    ],
+    [
+     "mingyu",
+     "No. No way. We're not leaving you!",
+     {
+      "tone": "desperate"
+     }
+    ],
+    [
+     "jiho",
+     "Sealers stay until everyone's out. That's the rule.",
+     {
+      "tone": "gentle smile"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest pushing Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets through a closing golden portal, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana reaching back for him, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "yeonah",
+     "Ji-ho!",
+     {
+      "tone": "screaming"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge alone, both hands pressed against a colossal golden keyhole on the giant door, blinding golden light, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Lock.",
+     {
+      "tone": "whisper, final"
+     }
+    ],
+    [
+     "narrator",
+     "And for the first time in ten years, the biggest door in the world closed."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "the Seoul skyline at dawn, the giant gate in the sky gone, clouds parting, golden sunlight, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The sky over Seoul cleared. The Gate was gone."
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets sitting in the rubble at dawn, staring at the empty sky, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "He's not coming out, is he?",
+     {
+      "tone": "broken"
+     }
+    ],
+    [
+     "yeonah",
+     "He's coming out. He promised his sister.",
+     {
+      "tone": "certain"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "a small golden keyhole appearing in the empty air at dawn, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest stumbling out of it with a burnt jacket and a tired grin, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiho",
+     "Did somebody call a Sealer?",
+     {
+      "tone": "exhausted grin"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana punching Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest's arm while smiling with tears, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets crying and laughing beside them, dawn light, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Don't scare me like that, janitor!",
+     {
+      "tone": "crying, laughing"
+     }
+    ],
+    [
+     "jiho",
+     "Ji-ho.",
+     {
+      "tone": "laughing"
+     }
+    ],
+    [
+     "yeonah",
+     "Idiot.",
+     {
+      "tone": "tearful smile"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "bright hospital room with morning sun, Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown sitting up healthy and beaming, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest with bandages hugging her, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiah",
+     "Oppa! The knocking stopped!",
+     {
+      "tone": "overjoyed"
+     }
+    ],
+    [
+     "jiho",
+     "Told you. I'm the guy who closes doors.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown and Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana sitting together on the hospital bed laughing, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana braiding Yoon Ji-ah, a 12-year-old Korean girl with a short black bob haircut, pale cheeks, in a light blue hospital gown's hair, the snowflake charm glowing on the bedside table, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "jiah",
+     "Unni, will you teach me to use a sword?",
+     {
+      "tone": "eager"
+     }
+    ],
+    [
+     "yeonah",
+     "When you're older. And when your brother learns to guard his left side.",
+     {
+      "tone": "amused"
+     }
+    ],
+    [
+     "jiho",
+     "I heard that!",
+     {
+      "tone": "from the doorway"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Director Kwon, a handsome 45-year-old Korean man with slicked-back grey-streaked hair, thin gold-rimmed glasses, wearing an immaculate white three-piece suit and a gold ring engraved with a keyhole in handcuffs being led away by hunter association officers, cameras flashing, his glasses cracked, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "anchor",
+     "Hwarang Guild Director Kwon has been arrested on charges of illegal Gate manipulation.",
+     {
+      "tone": "news broadcast"
+     }
+    ],
+    [
+     "kwon",
+     "You think it's over? There are still five fragments out there. And others are looking for them.",
+     {
+      "tone": "unsettling laugh"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Hunter Association evaluation hall, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest with his hand on the crystal orb which blazes with blinding golden light, the official's jaw dropped, hunters staring, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "official",
+     "Yoon Ji-ho. Re-evaluation result... unmeasurable?",
+     {
+      "tone": "stammering"
+     }
+    ],
+    [
+     "jiho",
+     "Could you check one more time? Maybe the machine's broken.",
+     {
+      "tone": "deadpan"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets standing in front of a tiny old shop front with an empty sign, morning sun, a small brass key hanging above the door, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mingyu",
+     "Every guild in Korea wants you now. So what are you going to do?",
+     {
+      "tone": "curious"
+     }
+    ],
+    [
+     "jiho",
+     "Start my own. Small. Three people. We close the doors nobody else will.",
+     {
+      "tone": "content"
+     }
+    ],
+    [
+     "yeonah",
+     "Does it have a name?",
+     {
+      "tone": "interested"
+     }
+    ],
+    [
+     "jiho",
+     "The Keyholders.",
+     {
+      "tone": "proud"
+     }
+    ],
+    [
+     "mingyu",
+     "Cheesy.",
+     {
+      "tone": "grinning"
+     }
+    ],
+    [
+     "yeonah",
+     "I like it.",
+     {
+      "tone": "smiling"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest on a rooftop at night, his brass key badge glowing gold, across the city several small portals flicker with black keyholes, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "voice",
+     "Four fragments of nine, Keyholder. There are other doors.",
+     {
+      "tone": "ominous whisper"
+     }
+    ]
+   ],
+   "fx": []
+  },
+  {
+   "image": "Yoon Ji-ho, a 20-year-old Korean young man with messy black hair and glowing golden eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small glowing brass key badge looking at the camera with a confident smile, wind in his hair, golden keyholes floating around him, city lights, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The weakest hunter in Korea had closed the greatest Gate in history. But somewhere out there, other doors were waiting."
+    ],
+    [
+     "narrator",
+     "Who do you think holds the other keys? Tell me in the comments. And like and subscribe for more stories like this."
+    ]
+   ],
+   "fx": []
+  }
+ ]
+}

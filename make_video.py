@@ -428,6 +428,21 @@ def generate_image(provider, scene_idx, prompt, width, height, out_dir, force):
     print(f"  image {scene_idx + 1} done")
 
 
+UPSCALE_MODEL = Path(os.environ.get("UPSCALE_MODEL", Path.home() / "models" / "RealESRGAN_x4plus_anime_6B.pth"))
+
+
+def upscale_images(paths, width):
+    """Upscale every image narrower than the video 4x with tools/upscale.py (Real-ESRGAN anime, in EMOTIVE_PY's env)."""
+    from PIL import Image
+    small = [str(p) for p in paths if Image.open(p).width < width]
+    if not small:
+        return
+    if not (EMOTIVE_PY.exists() and UPSCALE_MODEL.exists()):
+        sys.exit(f"Upscaling needs {EMOTIVE_PY} and {UPSCALE_MODEL}: see the setup in tools/upscale.py.")
+    print(f"Upscaling {len(small)} images...")
+    subprocess.run([str(EMOTIVE_PY), str(Path(__file__).parent / "tools" / "upscale.py"), str(UPSCALE_MODEL), *small], check=True)
+
+
 def magic_hour_image(scene_idx, prompt, width, height, project, path):
     from magic_hour import Client
 
@@ -855,6 +870,8 @@ def main():
                      for i, p in enumerate(prompts)]
         for j in jobs:
             j.result()
+    if not motion and spec.get("images", {}).get("upscale"):
+        upscale_images([out_dir / f"scene{i:02d}.png" for i in range(len(scenes))], width)
 
     audios = [out_dir / f"scene{i:02d}.mp3" for i in range(len(scenes))]
     pad = spec.get("scene_pad", SCENE_PAD)   # breathing room after each scene's audio
