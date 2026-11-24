@@ -470,8 +470,10 @@ UPSCALE_MODEL = Path(os.environ.get("UPSCALE_MODEL", Path.home() / "models" / "R
 
 def upscale_images(paths, width):
     """Upscale every image narrower than the video 4x with tools/upscale.py (Real-ESRGAN anime, in EMOTIVE_PY's env)."""
-    from PIL import Image
-    small = [str(p) for p in paths if Image.open(p).width < width]
+    def image_width(p):
+        return int(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=width", "-of", "csv=p=0", str(p)],
+                                  capture_output=True, text=True, check=True).stdout.split()[0])
+    small = [str(p) for p in paths if image_width(p) < width]
     if not small:
         return
     if not (EMOTIVE_PY.exists() and UPSCALE_MODEL.exists()):
