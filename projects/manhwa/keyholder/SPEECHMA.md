@@ -1,574 +1,1492 @@
-# KEYHOLDER: voice script for Speechma
+# KEYHOLDER: Speechma recording script
 
-Make one audio file per clip and name it exactly as shown (e.g. `clip-001.mp3`; .wav or .m4a also work). The words in brackets are acting notes: pick a voice and speed that fit, but don't type them into Speechma.
+236 clips, grouped by voice: choose the voice in Speechma once, then go through that character's clips in order.
 
-Send the files back in any batch size: every clip you send replaces its placeholder voice in the video, the rest keep the placeholder until you record them.
+**For every clip:**
+
+1. Copy the text in the grey box into Speechma (just the text).
+2. Set the speed and pitch shown ("normal" means leave them as they are).
+3. Generate, download, and rename the file to the name shown, e.g. `clip-001.mp3`.
+
+Send the files back in any batches; each one replaces its placeholder voice in the video.
 
 ## Voices
 
-- **Narrator**: a deep, calm male narrator (e.g. Guy or Christopher)
-- **Ji-ho**: young male (e.g. Brian or Andrew)
-- **Yeon-ah**: young female, cool (e.g. Jenny or Aria)
-- **Director Kwon**: smooth middle-aged male (e.g. Eric or Davis)
-- **Min-gyu**: young male, rough (e.g. Roger or Tony)
-- **Ji-ah**: a child or bright young female (e.g. Ana)
-- **The Voice**: old British male (e.g. Ryan, UK)
-- **Association official**: any male
-- **News anchor**: news-style male (e.g. Thomas, UK)
-- **Doctor**: older male
-- **Hunter**: young male
-- **Nurse**: female
+| Character | Clips | Suggested Speechma voice |
+|---|---|---|
+| Narrator | 24 | a deep, calm male narrator (e.g. Guy or Christopher) |
+| Ji-ho | 72 | young male (e.g. Brian or Andrew) |
+| Association official | 4 | any male |
+| Min-gyu | 32 | young male, rough (e.g. Roger or Tony) |
+| Director Kwon | 30 | smooth middle-aged male (e.g. Eric or Davis) |
+| Ji-ah | 11 | a child or bright young female (e.g. Ana) |
+| Yeon-ah | 39 | young female, cool (e.g. Jenny or Aria) |
+| Hunter | 4 | young male |
+| The Voice | 15 | old British male (e.g. Ryan, UK) |
+| News anchor | 2 | news-style male (e.g. Thomas, UK) |
+| Doctor | 2 | older male |
+| Nurse | 1 | female |
 
-## Scene 1
+## Narrator (24 clips)
 
-- `clip-001` **Narrator**: Seoul. Ten years after the first Gate opened in the sky.
+Voice: a deep, calm male narrator (e.g. Guy or Christopher)
 
-## Scene 2
+**clip-001.mp3**, normal
 
-- `clip-002` **Narrator**: Monsters poured out of them. Hunters rose to fight back. And when the fighting was over, someone had to close the door.
+```
+Seoul. Ten years after the first Gate opened in the sky.
+```
 
-## Scene 3
+**clip-002.mp3**, normal
 
-- `clip-003` **Ji-ho** *(tired)*: Seal complete. Gate C-114 is closed.
-- `clip-004` **Association official** *(bored)*: Sign here, Sealer. You've got six more tonight.
+```
+Monsters poured out of them. Hunters rose to fight back. And when the fighting was over, someone had to close the door.
+```
 
-## Scene 4
+**clip-005.mp3**, normal
 
-- `clip-005` **Narrator**: That someone was Yoon Ji-ho. F-rank. The lowest rank a hunter can have. His only skill: closing Gates after real hunters had finished with them.
+```
+That someone was Yoon Ji-ho. F-rank. The lowest rank a hunter can have. His only skill: closing Gates after real hunters had finished with them.
+```
 
-## Scene 5
+**clip-015.mp3**, normal
 
-- `clip-006` **Association official** *(bored)*: Yoon Ji-ho. Re-evaluation result: F-rank. Again.
-- `clip-007` **Ji-ho** *(hopeful)*: Could you check one more time? Maybe the machine's broken.
-- `clip-008` **Association official** *(dismissive)*: The machine's fine, kid. You're just weak. Next!
+```
+The Hwarang Guild. The richest guild in Korea. And its Director, the most beloved man in Seoul.
+```
 
-## Scene 6
+**clip-022.mp3**, normal
 
-- `clip-009` **Min-gyu** *(smug)*: Sealer fee, thirty thousand won. Guild cut, twenty-nine thousand.
-- `clip-010` **Ji-ho** *(flat)*: That leaves me one thousand.
-- `clip-011` **Min-gyu** *(mocking laugh)*: Buy yourself some nice gum.
+```
+Ji-ah had Gate Fever. A sickness that came with the Gates. There was no cure. Only medicine. Very expensive medicine.
+```
 
-## Scene 7
+**clip-025.mp3**, normal
 
-- `clip-012` **Min-gyu** *(mocking)*: Look who it is. The janitor. You missed a spot yesterday, Sealer.
-- `clip-013` **Ji-ho** *(flat)*: Good morning to you too, Min-gyu.
-- `clip-014` **Min-gyu** *(smug)*: That's Mister B-rank to you.
+```
+Leading the raid was Seo Yeon-ah. S-rank. They called her the Frost Blade.
+```
 
-## Scene 8
+**clip-038.mp3**, normal
 
-- `clip-015` **Narrator**: The Hwarang Guild. The richest guild in Korea. And its Director, the most beloved man in Seoul.
-- `clip-016` **Director Kwon** *(warm, smooth)*: Now, now, Min-gyu. Every great guild needs someone to close the doors. Ji-ho, you'll join today's raid.
-- `clip-017` **Ji-ho** *(surprised)*: Me? On a Red Gate?
-- `clip-018` **Director Kwon** *(smiling)*: Someone has to seal it afterwards. Who better than our best Sealer?
+```
+The boss of the Gate rose from the floor. A Stone Warden. Forty meters tall.
+```
 
-## Scene 9
+**clip-043.mp3**, normal
 
-- `clip-019` **Ji-ah** *(teasing)*: Oppa, you're late again.
-- `clip-020` **Ji-ho** *(joking)*: Traffic. Monster traffic. Very rude monsters.
-- `clip-021` **Ji-ah** *(giggling)*: Liar.
+```
+One by one, the strongest hunters in Korea were thrown aside like toys.
+```
 
-## Scene 10
+**clip-051.mp3**, normal
 
-- `clip-022` **Narrator**: Ji-ah had Gate Fever. A sickness that came with the Gates. There was no cure. Only medicine. Very expensive medicine.
+```
+The Gate locked itself behind them. Someone had made the choice for him.
+```
 
-## Scene 11
+**clip-058.mp3**, normal
 
-- `clip-023` **Ji-ah** *(worried)*: Promise you'll come home tonight.
-- `clip-024` **Ji-ho** *(gentle)*: I promise. I'm just the Sealer. I stand at the back. Nobody ever looks at the Sealer.
+```
+Suddenly, he could see them. Keyholes. Glowing gold. On the walls. On the Gate. And on the monster itself.
+```
 
-## Scene 12
+**clip-060.mp3**, normal
 
-- `clip-025` **Narrator**: Leading the raid was Seo Yeon-ah. S-rank. They called her the Frost Blade.
-- `clip-026` **Yeon-ah** *(cold)*: Sealer. Stay behind me. Don't touch anything.
-- `clip-027` **Ji-ho** *(nervous)*: Yes, ma'am.
+```
+The forty-meter Stone Warden came apart like a broken lock.
+```
 
-## Scene 13
+**clip-062.mp3**, normal
 
-- `clip-028` **Min-gyu** *(cocky)*: Easy raid. Easy money.
-- `clip-029` **Yeon-ah** *(tense whisper)*: Quiet. Something's wrong. It's too quiet.
+```
+Nobody looked at the Sealer. They never did.
+```
 
-## Scene 14
+**clip-075.mp3**, normal
 
-- `clip-030` **Hunter** *(shouting)*: Contact! Crystal beetles, dozens of them!
-- `clip-031` **Yeon-ah** *(commanding)*: Formation! Shields forward, mages behind me!
-- `clip-032` **Min-gyu** *(muttering)*: Show-off.
+```
+On the Director's finger was a gold ring. Engraved with a keyhole.
+```
 
-## Scene 15
+**clip-078.mp3**, normal
 
-- `clip-033` **Hunter** *(panicked)*: My leg! I can't feel my leg!
-- `clip-034` **Ji-ho** *(steady)*: Hold on. I've got you. Lean on me.
-- `clip-035` **Yeon-ah** *(sharp)*: Sealer. I told you to stay back.
-- `clip-036` **Ji-ho** *(firm)*: He was falling behind. Nobody gets left.
-- `clip-037` **Yeon-ah** *(after a pause)*: Fine. Then keep him alive.
+```
+Clunk.
+```
 
-## Scene 16
+**clip-083.mp3**, normal
 
-- `clip-038` **Narrator**: The boss of the Gate rose from the floor. A Stone Warden. Forty meters tall.
-- `clip-039` **Min-gyu** *(panicking)*: That's not a Red Gate boss. That's a calamity!
+```
+Every night, he entered the Gates nobody wanted. Every night, he got a little faster.
+```
 
-## Scene 17
+**clip-095.mp3**, normal
 
-- `clip-040` **Yeon-ah** *(shocked)*: My blade isn't even scratching it.
+```
+Her armor's buckle clicked open. Her sword arm dropped.
+```
 
-## Scene 18
+**clip-107.mp3**, normal
 
-- `clip-041` **Hunter** *(terrified)*: It's too strong! We can't hold it!
-- `clip-042` **Yeon-ah** *(commanding shout)*: Fall back! Everyone to the exit! Now!
-- `clip-043` **Narrator**: One by one, the strongest hunters in Korea were thrown aside like toys.
+```
+Neither of them said anything for a long time.
+```
 
-## Scene 19
+**clip-145.mp3**, normal
 
-- `clip-044` **Hunter** *(screaming)*: The exit! The Gate's closing behind us!
-- `clip-045` **Ji-ho** *(stunned)*: It's not closing. It's being locked. From the outside.
+```
+The beast came apart. And in Ji-ho's hand, a shard of black key.
+```
 
-## Scene 20
+**clip-172.mp3**, normal
 
-- `clip-046` **Director Kwon** *(calm, cold)*: Sealer. The boss is about to break into the city. Seal the Gate. Now.
-- `clip-047` **Ji-ho** *(desperate)*: Director, there are twelve hunters still inside!
-- `clip-048` **Director Kwon** *(icy)*: Twelve hunters, or ten million citizens. Seal it.
+```
+Above Seoul, the largest Gate ever recorded began to open. And this time, it was opening on purpose.
+```
 
-## Scene 21
+**clip-205.mp3**, normal
 
-- `clip-049` **Ji-ho** *(firm)*: No.
-- `clip-050` **Director Kwon** *(pleasant, chilling)*: Then you can stay in there with them.
+```
+But it was too late. Behind the door, something enormous opened its eye.
+```
 
-## Scene 22
+**clip-211.mp3**, normal
 
-- `clip-051` **Narrator**: The Gate locked itself behind them. Someone had made the choice for him.
+```
+And for the first time in ten years, the biggest door in the world closed.
+```
 
-## Scene 23
+**clip-212.mp3**, normal
 
-- `clip-052` **Yeon-ah** *(weak)*: Why didn't you run?
-- `clip-053` **Ji-ho** *(breathless)*: Sealers stay until everyone's out. That's the only rule I've got.
+```
+The sky over Seoul cleared. The Gate was gone.
+```
 
-## Scene 24
+**clip-235.mp3**, normal
 
-- `clip-054` **The Voice** *(ancient, echoing whisper)*: Keyholder. At last, you have come.
+```
+The weakest hunter in Korea had closed the greatest Gate in history. But somewhere out there, other doors were waiting.
+```
 
-## Scene 25
+**clip-236.mp3**, normal
 
-- `clip-055` **The Voice** *(solemn)*: Every lock has a key. Every key has a holder. Open your eyes, Keyholder.
-- `clip-056` **Ji-ho** *(awed)*: Who are you?
-- `clip-057` **The Voice** *(commanding)*: Look.
+```
+Who do you think holds the other keys? Tell me in the comments. And like and subscribe for more stories like this.
+```
 
-## Scene 26
+## Ji-ho (72 clips)
 
-- `clip-058` **Narrator**: Suddenly, he could see them. Keyholes. Glowing gold. On the walls. On the Gate. And on the monster itself.
+Voice: young male (e.g. Brian or Andrew)
 
-## Scene 27
+**clip-003.mp3** (tired), normal
 
-- `clip-059` **Ji-ho** *(intense)*: Unlock.
+```
+Seal complete. Gate C-114 is closed.
+```
 
-## Scene 28
+**clip-007.mp3** (hopeful), normal
 
-- `clip-060` **Narrator**: The forty-meter Stone Warden came apart like a broken lock.
+```
+Could you check one more time? Maybe the machine's broken.
+```
 
-## Scene 29
+**clip-010.mp3** (flat), normal
 
-- `clip-061` **Min-gyu** *(ecstatic)*: The Frost Blade did it! She killed the boss! She saved us all!
-- `clip-062` **Narrator**: Nobody looked at the Sealer. They never did.
+```
+That leaves me one thousand.
+```
 
-## Scene 30
+**clip-013.mp3** (flat), normal
 
-- `clip-063` **Yeon-ah** *(faint whisper)*: It wasn't me, was it?
+```
+Good morning to you too, Min-gyu.
+```
 
-## Scene 31
+**clip-017.mp3** (surprised), normal
 
-- `clip-064` **The Voice** *(quiet)*: You have opened your first lock. One fragment of nine.
-- `clip-065` **Ji-ho** *(confused)*: Nine? Nine what?
-- `clip-066` **The Voice** *(warning)*: Find them. Before he does.
-- `clip-067` **Ji-ho** *(frustrated)*: Before who? Hello?
+```
+Me? On a Red Gate?
+```
 
-## Scene 32
+**clip-020.mp3** (joking), normal
 
-- `clip-068` **News anchor** *(news broadcast)*: The Hwarang Guild's Red Gate raid ends in triumph, as S-rank hunter Seo Yeon-ah defeats a calamity-class boss single-handedly.
-- `clip-069` **Ji-ho** *(sarcastic)*: Triumph. Sure.
+```
+Traffic. Monster traffic. Very rude monsters.
+```
 
-## Scene 33
+**clip-024.mp3** (gentle), speed -10%, pitch -5%
 
-- `clip-070` **Director Kwon** *(warm, concerned)*: Ji-ho! Our brave Sealer. I'm so glad you survived. The radio failed in there, you know. A terrible accident.
-- `clip-071` **Ji-ho** *(inner thought, quiet)*: The radio didn't fail. I heard every word.
+```
+I promise. I'm just the Sealer. I stand at the back. Nobody ever looks at the Sealer.
+```
 
-## Scene 34
+**clip-027.mp3** (nervous), normal
 
-- `clip-072` **Director Kwon** *(generous)*: I've paid your sister's hospital bills. All of them. Consider it a thank you.
-- `clip-073` **Ji-ho** *(stunned)*: You what?
-- `clip-074` **Director Kwon** *(soft, menacing)*: Just stay close to me, Ji-ho. I'd hate to lose you.
+```
+Yes, ma'am.
+```
 
-## Scene 35
+**clip-034.mp3** (steady), normal
 
-- `clip-075` **Narrator**: On the Director's finger was a gold ring. Engraved with a keyhole.
-- `clip-076` **Ji-ho** *(whisper)*: That symbol...
+```
+Hold on. I've got you. Lean on me.
+```
 
-## Scene 36
+**clip-036.mp3** (firm), normal
 
-- `clip-077` **Ji-ho** *(testing)*: Unlock.
-- `clip-078` **Narrator**: Clunk.
-- `clip-079` **Ji-ho** *(amused)*: Okay. That's useful.
+```
+He was falling behind. Nobody gets left.
+```
 
-## Scene 37
+**clip-045.mp3** (stunned), normal
 
-- `clip-080` **The Voice** *(warning)*: Every lock you open takes something from you. Open too many, and you will be the one who breaks.
-- `clip-081` **Ji-ho** *(sarcastic, wiping blood)*: Great. Fine print. Love it.
+```
+It's not closing. It's being locked. From the outside.
+```
 
-## Scene 38
+**clip-047.mp3** (desperate), normal
 
-- `clip-082` **Ji-ho** *(focused)*: Unlock. Unlock. Unlock!
-- `clip-083` **Narrator**: Every night, he entered the Gates nobody wanted. Every night, he got a little faster.
+```
+Director, there are twelve hunters still inside!
+```
 
-## Scene 39
+**clip-049.mp3** (firm), normal
 
-- `clip-084` **The Voice** *(approving)*: Two fragments of nine. Now learn the other half.
-- `clip-085` **Ji-ho** *(commanding)*: Lock.
-- `clip-086` **Ji-ho** *(amazed)*: It can close things too.
+```
+No.
+```
 
-## Scene 40
+**clip-053.mp3** (breathless), normal
 
-- `clip-087` **Yeon-ah** *(cool)*: You've been entering E-rank Gates alone. At night. An F-rank Sealer.
-- `clip-088` **Ji-ho** *(defensive)*: Are you following me?
-- `clip-089` **Yeon-ah** *(matter-of-fact)*: You saved my life. I like to know who I owe.
+```
+Sealers stay until everyone's out. That's the only rule I've got.
+```
 
-## Scene 41
+**clip-056.mp3** (awed), normal
 
-- `clip-090` **Yeon-ah** *(steady)*: In the Gate, your eyes turned gold. And the Stone Warden fell apart. I saw it.
-- `clip-091` **Ji-ho** *(nervous laugh)*: You were half unconscious.
-- `clip-092` **Yeon-ah** *(dry)*: Half. Not all.
+```
+Who are you?
+```
 
-## Scene 42
+**clip-059.mp3** (intense), normal
 
-- `clip-093` **Yeon-ah** *(challenging)*: Then show me. Find my weakness.
-- `clip-094` **Ji-ho** *(smirking)*: Unlock.
-- `clip-095` **Narrator**: Her armor's buckle clicked open. Her sword arm dropped.
+```
+Unlock.
+```
 
-## Scene 43
+**clip-065.mp3** (confused), normal
 
-- `clip-096` **Yeon-ah** *(dry, amused)*: Impressive. And extremely annoying.
+```
+Nine? Nine what?
+```
 
-## Scene 44
+**clip-067.mp3** (frustrated), normal
 
-- `clip-097` **Yeon-ah** *(quiet)*: Five years ago, my brother walked into a Hwarang Gate. A simple C-rank. It locked. They called it an accident.
-- `clip-098` **Ji-ho** *(gentle)*: You never believed them.
-- `clip-099` **Yeon-ah** *(steely)*: I became S-rank so I could find out the truth. I think I'm looking at it.
+```
+Before who? Hello?
+```
 
-## Scene 45
+**clip-069.mp3** (sarcastic), normal
 
-- `clip-100` **Yeon-ah** *(unimpressed)*: You can see every weakness in the world, and you still leave your left side open.
-- `clip-101` **Ji-ho** *(out of breath)*: I was letting you win.
-- `clip-102` **Yeon-ah** *(stern)*: Again.
-- `clip-103` **Ji-ho** *(pleading)*: Can we at least take a water break?
-- `clip-104` **Yeon-ah** *(dry)*: Monsters don't take water breaks. Again.
+```
+Triumph. Sure.
+```
 
-## Scene 46
+**clip-071.mp3** (inner thought, quiet), speed -10%, pitch -5%
 
-- `clip-105` **Yeon-ah** *(serious)*: Gates don't lock themselves. Someone locked ours. From the outside. With a key.
-- `clip-106` **Ji-ho** *(quiet)*: Director Kwon wears a ring with a keyhole on it.
-- `clip-107` **Narrator**: Neither of them said anything for a long time.
+```
+The radio didn't fail. I heard every word.
+```
 
-## Scene 47
+**clip-073.mp3** (stunned), normal
 
-- `clip-108` **Ji-ho** *(whisper)*: Unlock.
-- `clip-109` **Yeon-ah** *(urgent whisper)*: Ten years of Gate records. Quickly.
+```
+You what?
+```
 
-## Scene 48
+**clip-076.mp3** (whisper), speed -10%, pitch -5%
 
-- `clip-110` **Ji-ho** *(growing horror)*: Gate locked. Hunters lost. Accident. Gate locked. Accident. Accident. Accident.
-- `clip-111` **Yeon-ah** *(barely holding together)*: Seo Joon-ho. My brother. Gate locked by order of the Director.
-- `clip-112` **Ji-ho** *(soft)*: Yeon-ah...
-- `clip-113` **Yeon-ah** *(trembling, resolute)*: Don't. Not now. We finish this first.
+```
+That symbol...
+```
 
-## Scene 49
+**clip-077.mp3** (testing), normal
 
-- `clip-114` **Ji-ah** *(excited)*: Oppa! Is she your girlfriend?
-- `clip-115` **Ji-ho** *(flustered)*: No!
-- `clip-116` **Yeon-ah** *(flat)*: Absolutely not.
-- `clip-117` **Ji-ah** *(giggling)*: You both said that really fast.
+```
+Unlock.
+```
 
-## Scene 50
+**clip-079.mp3** (amused), normal
 
-- `clip-118` **Yeon-ah** *(softer than usual)*: For luck. It never melts.
-- `clip-119` **Ji-ah** *(delighted)*: It's so pretty! Thank you, unni!
+```
+Okay. That's useful.
+```
 
-## Scene 51
+**clip-081.mp3** (sarcastic, wiping blood), normal
 
-- `clip-120` **Doctor** *(grave)*: Her fever spiked the night the Red Gate opened. It happens every time a big Gate opens.
-- `clip-121` **Ji-ho** *(alarmed)*: Every time?
-- `clip-122` **Doctor** *(uneasy)*: It's as if the Gates are feeding on her.
+```
+Great. Fine print. Love it.
+```
 
-## Scene 52
+**clip-082.mp3** (focused), normal
 
-- `clip-123` **Ji-ah** *(sleepy, scared)*: Oppa. I dreamed of a giant door. Somebody was knocking on it. From the other side.
+```
+Unlock. Unlock. Unlock!
+```
 
-## Scene 53
+**clip-085.mp3** (commanding), speed +10%, pitch +5%
 
-- `clip-124` **Min-gyu** *(aggressive)*: Nobody walks out of a locked Gate. Nobody. Except you. So what are you, janitor?
-- `clip-125` **Ji-ho** *(calm)*: Lucky.
-- `clip-126` **Min-gyu** *(threatening)*: I'm going to find out.
+```
+Lock.
+```
 
-## Scene 54
+**clip-086.mp3** (amazed), normal
 
-- `clip-127` **Min-gyu** *(eager)*: Director, the Sealer's hiding something. Let me take him into a Gate and prove it.
-- `clip-128` **Director Kwon** *(delighted)*: What a wonderful idea. Take Gate D-7. I'll handle the paperwork.
+```
+It can close things too.
+```
 
-## Scene 55
+**clip-088.mp3** (defensive), normal
 
-- `clip-129` **Director Kwon** *(cold whisper)*: Two problems. One Gate.
+```
+Are you following me?
+```
 
-## Scene 56
+**clip-091.mp3** (nervous laugh), normal
 
-- `clip-130` **Min-gyu** *(cocky)*: Just you and me, janitor. Show me what you've got.
-- `clip-131` **Ji-ho** *(alarmed)*: Min-gyu. The Gate just locked. And this lock isn't gold. It's black.
+```
+You were half unconscious.
+```
 
-## Scene 57
+**clip-094.mp3** (smirking), normal
 
-- `clip-132` **Min-gyu** *(shouting)*: This is a D-rank Gate? These are A-rank monsters!
+```
+Unlock.
+```
 
-## Scene 58
+**clip-098.mp3** (gentle), speed -10%, pitch -5%
 
-- `clip-133` **Min-gyu** *(shocked, hurt)*: The Director sent me in here. He locked it on me too?
-- `clip-134` **Ji-ho** *(grim)*: Welcome to the club.
+```
+You never believed them.
+```
 
-## Scene 59
+**clip-101.mp3** (out of breath), normal
 
-- `clip-135` **Min-gyu** *(bitter, quiet)*: You know why I hate Sealers? My dad was one. Twenty years closing Gates for rich guilds. Died in one. Nobody even came to the funeral.
-- `clip-136` **Ji-ho** *(gentle)*: So you became the guy who laughs at Sealers.
-- `clip-137` **Min-gyu** *(rueful)*: Yeah. Stupid, right?
-- `clip-138` **Ji-ho** *(small smile)*: A little.
+```
+I was letting you win.
+```
 
-## Scene 60
+**clip-103.mp3** (pleading), normal
 
-- `clip-139` **Ji-ho** *(straining)*: Unlock! Why won't it open?
-- `clip-140` **The Voice** *(urgent)*: That lock was not made by you. To open it, you must take its key.
-- `clip-141` **Ji-ho** *(gasping)*: Whose key?
-- `clip-142` **The Voice** *(grave)*: The one who made it. It is inside the beast.
+```
+Can we at least take a water break?
+```
 
-## Scene 61
+**clip-106.mp3** (quiet), speed -10%, pitch -5%
 
-- `clip-143` **Ji-ho** *(shouting)*: Lock!
-- `clip-144` **Ji-ho** *(intense)*: And unlock.
+```
+Director Kwon wears a ring with a keyhole on it.
+```
 
-## Scene 62
+**clip-108.mp3** (whisper), speed -10%, pitch -5%
 
-- `clip-145` **Narrator**: The beast came apart. And in Ji-ho's hand, a shard of black key.
+```
+Unlock.
+```
 
-## Scene 63
+**clip-110.mp3** (growing horror), normal
 
-- `clip-146` **Min-gyu** *(ashamed)*: You saved me. After everything I said to you.
-- `clip-147` **Ji-ho** *(tired smile)*: You were annoying. Not evil. There's a difference.
-- `clip-148` **Min-gyu** *(gruff)*: I owe you, janitor.
-- `clip-149` **Ji-ho** *(firm)*: Ji-ho.
-- `clip-150` **Min-gyu** *(grudging respect)*: Ji-ho.
+```
+Gate locked. Hunters lost. Accident. Gate locked. Accident. Accident. Accident.
+```
 
-## Scene 64
+**clip-112.mp3** (soft), speed -10%, pitch -5%
 
-- `clip-151` **Director Kwon** *(sweet)*: Min-gyu. You're alive. How wonderful. And our Sealer?
-- `clip-152` **Min-gyu** *(lying, steady)*: He didn't make it, Director. The wolves got him.
-- `clip-153` **Director Kwon** *(pleased)*: What a tragedy. Come and see me tomorrow.
+```
+Yeon-ah...
+```
 
-## Scene 65
+**clip-115.mp3** (flustered), normal
 
-- `clip-154` **The Voice** *(ominous)*: Three fragments of nine. And now he knows you exist.
+```
+No!
+```
 
-## Scene 66
+**clip-121.mp3** (alarmed), normal
 
-- `clip-155` **Director Kwon** *(cold, dangerous)*: So. There is another Keyholder.
+```
+Every time?
+```
 
-## Scene 67
+**clip-125.mp3** (calm), normal
 
-- `clip-156` **Director Kwon** *(fatherly)*: Sit, Ji-ho. Eat. You look thin.
-- `clip-157` **Director Kwon** *(persuasive)*: Two Keyholders, working together. Every Gate in the world would answer to us. Money. Power. A cure for your sister.
+```
+Lucky.
+```
 
-## Scene 68
+**clip-131.mp3** (alarmed), normal
 
-- `clip-158` **Ji-ho** *(controlled anger)*: And the hunters you locked inside?
-- `clip-159` **Director Kwon** *(calm)*: Sacrifices. Every great door needs its keys.
-- `clip-160` **Ji-ho** *(firm)*: No.
-- `clip-161` **Director Kwon** *(gentle, threatening)*: Think about it. Hospitals can be such dangerous places.
+```
+Min-gyu. The Gate just locked. And this lock isn't gold. It's black.
+```
 
-## Scene 69
+**clip-134.mp3** (grim), normal
 
-- `clip-162` **Min-gyu** *(angry)*: He's been locking Gates for years. Letting the monsters inside grow. Bigger monster, bigger core. And cores sell for billions.
-- `clip-163` **Yeon-ah** *(quiet)*: And the hunters who asked questions never came back.
+```
+Welcome to the club.
+```
 
-## Scene 70
+**clip-136.mp3** (gentle), speed -10%, pitch -5%
 
-- `clip-164` **Ji-ho** *(horrified)*: My sister's fever spikes every time one of his locked Gates grows. He's not just killing hunters. He's feeding something.
+```
+So you became the guy who laughs at Sealers.
+```
 
-## Scene 71
+**clip-138.mp3** (small smile), normal
 
-- `clip-165` **Yeon-ah** *(decisive)*: We take the archive records to the Hunter Association. Tomorrow morning.
-- `clip-166` **Min-gyu** *(uneasy)*: And if the Director finds out first?
-- `clip-167` **Ji-ho** *(grim)*: Then we'd better hope he doesn't.
+```
+A little.
+```
 
-## Scene 72
+**clip-139.mp3** (straining), normal
 
-- `clip-168` **The Voice** *(sorrowful)*: There were two Keyholders once. A teacher, and his student. The student wanted to open every door. Even the one that must stay closed.
+```
+Unlock! Why won't it open?
+```
 
-## Scene 73
+**clip-141.mp3** (gasping), normal
 
-- `clip-169` **Ji-ho** *(whisper)*: The Great Gate.
-- `clip-170` **The Voice** *(grave)*: Beneath Seoul. And the student's name was Kwon.
+```
+Whose key?
+```
 
-## Scene 74
+**clip-143.mp3** (shouting), speed +10%, pitch +5%
 
-- `clip-171` **Director Kwon** *(grand, smiling)*: Citizens of Seoul. Tonight, the Hwarang Guild opens the door to a new era.
+```
+Lock!
+```
 
-## Scene 75
+**clip-144.mp3** (intense), normal
 
-- `clip-172` **Narrator**: Above Seoul, the largest Gate ever recorded began to open. And this time, it was opening on purpose.
+```
+And unlock.
+```
 
-## Scene 76
+**clip-147.mp3** (tired smile), normal
 
-- `clip-173` **Nurse** *(panicked)*: Her fever's off the charts!
-- `clip-174` **Ji-ah** *(faint)*: Oppa. The door is opening.
+```
+You were annoying. Not evil. There's a difference.
+```
 
-## Scene 77
+**clip-149.mp3** (firm), normal
 
-- `clip-175` **Ji-ho** *(determined, tender)*: Hold on, Ji-ah. I'm going to close it. I promise.
+```
+Ji-ho.
+```
 
-## Scene 78
+**clip-158.mp3** (controlled anger), normal
 
-- `clip-176` **Min-gyu** *(nervous laugh)*: So the plan is, the F-rank janitor walks into the biggest Gate in history.
-- `clip-177` **Ji-ho** *(dry)*: Sealer.
-- `clip-178` **Yeon-ah** *(resolute)*: And the S-rank and the B-rank keep him alive.
-- `clip-179` **Min-gyu** *(sarcastic)*: Great plan. Love it. We're all going to die.
+```
+And the hunters you locked inside?
+```
 
-## Scene 79
+**clip-160.mp3** (firm), normal
 
-- `clip-180` **Director Kwon** *(amused)*: Ji-ho. My little Sealer. You should have stayed at the back.
+```
+No.
+```
 
-## Scene 80
+**clip-164.mp3** (horrified), normal
 
-- `clip-181` **Yeon-ah** *(breaking)*: This is Joon-ho's sword.
-- `clip-182` **Director Kwon** *(pleasant)*: Your brother asked too many questions too. He made an excellent key.
-- `clip-183` **Yeon-ah** *(cold fury)*: I'm going to end you.
+```
+My sister's fever spikes every time one of his locked Gates grows. He's not just killing hunters. He's feeding something.
+```
 
-## Scene 81
+**clip-167.mp3** (grim), normal
 
-- `clip-184` **Director Kwon** *(ecstatic)*: Do you know what's behind this door? Power. The core of every Gate that has ever opened.
-- `clip-185` **Ji-ho** *(furious)*: And my sister? And every hunter you locked away?
-- `clip-186` **Director Kwon** *(dismissive)*: Keys for the door. Nothing more.
+```
+Then we'd better hope he doesn't.
+```
 
-## Scene 82
+**clip-169.mp3** (whisper), speed -10%, pitch -5%
 
-- `clip-187` **Director Kwon** *(bitter)*: My teacher gave me one fragment and told me to guard this door. Forever. Alone, in the dark.
-- `clip-188` **Director Kwon** *(quiet, certain)*: So I decided I would rather open it.
-- `clip-189` **Ji-ho** *(angry)*: He trusted you.
-- `clip-190` **Director Kwon** *(cold)*: He trusted a lock. I am not a lock.
+```
+The Great Gate.
+```
 
-## Scene 83
+**clip-175.mp3** (determined, tender), speed -10%, pitch -5%
 
-- `clip-191` **Yeon-ah** *(shouting)*: Go, Ji-ho! We've got these!
-- `clip-192` **Min-gyu** *(shouting)*: Go! Before I change my mind!
+```
+Hold on, Ji-ah. I'm going to close it. I promise.
+```
 
-## Scene 84
+**clip-177.mp3** (dry), normal
 
-- `clip-193` **Min-gyu** *(roaring)*: My dad closed Gates for twenty years! You think I'm scared of you?
-- `clip-194` **Min-gyu** *(straining)*: Okay, a little scared! But mostly angry!
+```
+Sealer.
+```
 
-## Scene 85
+**clip-185.mp3** (furious), speed +10%, pitch +5%
 
-- `clip-195` **Director Kwon** *(cold)*: Lock.
-- `clip-196` **Director Kwon** *(mocking)*: Did you really think you were the only one?
+```
+And my sister? And every hunter you locked away?
+```
 
-## Scene 86
+**clip-189.mp3** (angry), normal
 
-- `clip-197` **The Voice** *(urgent)*: A Keyholder cannot unlock himself. He must be opened by another.
+```
+He trusted you.
+```
 
-## Scene 87
+**clip-200.mp3** (determined), normal
 
-- `clip-198` **Yeon-ah** *(fierce shout)*: Then I'll be your key!
+```
+I know. I'm coming.
+```
 
-## Scene 88
+**clip-202.mp3** (steady, powerful), normal
 
-- `clip-199` **Ji-ah** *(echoing, gentle)*: Oppa. You promised. You always come home.
-- `clip-200` **Ji-ho** *(determined)*: I know. I'm coming.
+```
+You taught your student to open every door. You forgot why some doors stay closed.
+```
 
-## Scene 89
+**clip-203.mp3** (final), normal
 
-- `clip-201` **Director Kwon** *(shocked)*: Impossible!
-- `clip-202` **Ji-ho** *(steady, powerful)*: You taught your student to open every door. You forgot why some doors stay closed.
+```
+Unlock.
+```
 
-## Scene 90
+**clip-208.mp3** (gentle smile), speed -10%, pitch -5%
 
-- `clip-203` **Ji-ho** *(final)*: Unlock.
+```
+Sealers stay until everyone's out. That's the rule.
+```
 
-## Scene 91
+**clip-210.mp3** (whisper, final), speed -10%, pitch -5%
 
-- `clip-204` **Director Kwon** *(anguished scream)*: No. No! My key!
+```
+Lock.
+```
 
-## Scene 92
+**clip-215.mp3** (exhausted grin), normal
 
-- `clip-205` **Narrator**: But it was too late. Behind the door, something enormous opened its eye.
+```
+Did somebody call a Sealer?
+```
 
-## Scene 93
+**clip-217.mp3** (laughing), normal
 
-- `clip-206` **The Voice** *(solemn)*: To seal the Great Gate, someone must lock it from the inside.
-- `clip-207` **Min-gyu** *(desperate)*: No. No way. We're not leaving you!
-- `clip-208` **Ji-ho** *(gentle smile)*: Sealers stay until everyone's out. That's the rule.
+```
+Ji-ho.
+```
 
-## Scene 94
+**clip-220.mp3** (warm), normal
 
-- `clip-209` **Yeon-ah** *(screaming)*: Ji-ho!
+```
+Told you. I'm the guy who closes doors.
+```
 
-## Scene 95
+**clip-223.mp3** (from the doorway), normal
 
-- `clip-210` **Ji-ho** *(whisper, final)*: Lock.
-- `clip-211` **Narrator**: And for the first time in ten years, the biggest door in the world closed.
+```
+I heard that!
+```
 
-## Scene 96
+**clip-227.mp3** (deadpan), normal
 
-- `clip-212` **Narrator**: The sky over Seoul cleared. The Gate was gone.
+```
+Could you check one more time? Maybe the machine's broken.
+```
 
-## Scene 97
+**clip-229.mp3** (content), normal
 
-- `clip-213` **Min-gyu** *(broken)*: He's not coming out, is he?
-- `clip-214` **Yeon-ah** *(certain)*: He's coming out. He promised his sister.
+```
+Start my own. Small. Three people. We close the doors nobody else will.
+```
 
-## Scene 98
+**clip-231.mp3** (proud), normal
 
-- `clip-215` **Ji-ho** *(exhausted grin)*: Did somebody call a Sealer?
+```
+The Keyholders.
+```
 
-## Scene 99
+## Association official (4 clips)
 
-- `clip-216` **Min-gyu** *(crying, laughing)*: Don't scare me like that, janitor!
-- `clip-217` **Ji-ho** *(laughing)*: Ji-ho.
-- `clip-218` **Yeon-ah** *(tearful smile)*: Idiot.
+Voice: any male
 
-## Scene 100
+**clip-004.mp3** (bored), normal
 
-- `clip-219` **Ji-ah** *(overjoyed)*: Oppa! The knocking stopped!
-- `clip-220` **Ji-ho** *(warm)*: Told you. I'm the guy who closes doors.
+```
+Sign here, Sealer. You've got six more tonight.
+```
 
-## Scene 101
+**clip-006.mp3** (bored), normal
 
-- `clip-221` **Ji-ah** *(eager)*: Unni, will you teach me to use a sword?
-- `clip-222` **Yeon-ah** *(amused)*: When you're older. And when your brother learns to guard his left side.
-- `clip-223` **Ji-ho** *(from the doorway)*: I heard that!
+```
+Yoon Ji-ho. Re-evaluation result: F-rank. Again.
+```
 
-## Scene 102
+**clip-008.mp3** (dismissive), normal
 
-- `clip-224` **News anchor** *(news broadcast)*: Hwarang Guild Director Kwon has been arrested on charges of illegal Gate manipulation.
-- `clip-225` **Director Kwon** *(unsettling laugh)*: You think it's over? There are still five fragments out there. And others are looking for them.
+```
+The machine's fine, kid. You're just weak. Next!
+```
 
-## Scene 103
+**clip-226.mp3** (stammering), normal
 
-- `clip-226` **Association official** *(stammering)*: Yoon Ji-ho. Re-evaluation result... unmeasurable?
-- `clip-227` **Ji-ho** *(deadpan)*: Could you check one more time? Maybe the machine's broken.
+```
+Yoon Ji-ho. Re-evaluation result... Unmeasurable?
+```
 
-## Scene 104
+## Min-gyu (32 clips)
 
-- `clip-228` **Min-gyu** *(curious)*: Every guild in Korea wants you now. So what are you going to do?
-- `clip-229` **Ji-ho** *(content)*: Start my own. Small. Three people. We close the doors nobody else will.
-- `clip-230` **Yeon-ah** *(interested)*: Does it have a name?
-- `clip-231` **Ji-ho** *(proud)*: The Keyholders.
-- `clip-232` **Min-gyu** *(grinning)*: Cheesy.
-- `clip-233` **Yeon-ah** *(smiling)*: I like it.
+Voice: young male, rough (e.g. Roger or Tony)
 
-## Scene 105
+**clip-009.mp3** (smug), normal
 
-- `clip-234` **The Voice** *(ominous whisper)*: Four fragments of nine, Keyholder. There are other doors.
+```
+Sealer fee, thirty thousand won. Guild cut, twenty-nine thousand.
+```
 
-## Scene 106
+**clip-011.mp3** (mocking laugh), normal
 
-- `clip-235` **Narrator**: The weakest hunter in Korea had closed the greatest Gate in history. But somewhere out there, other doors were waiting.
-- `clip-236` **Narrator**: Who do you think holds the other keys? Tell me in the comments. And like and subscribe for more stories like this.
+```
+Buy yourself some nice gum.
+```
+
+**clip-012.mp3** (mocking), normal
+
+```
+Look who it is. The janitor. You missed a spot yesterday, Sealer.
+```
+
+**clip-014.mp3** (smug), normal
+
+```
+That's Mister B-rank to you.
+```
+
+**clip-028.mp3** (cocky), normal
+
+```
+Easy raid. Easy money.
+```
+
+**clip-032.mp3** (muttering), normal
+
+```
+Show-off.
+```
+
+**clip-039.mp3** (panicking), speed +10%, pitch +5%
+
+```
+That's not a Red Gate boss. That's a calamity!
+```
+
+**clip-061.mp3** (ecstatic), speed +10%, pitch +5%
+
+```
+The Frost Blade did it! She killed the boss! She saved us all!
+```
+
+**clip-124.mp3** (aggressive), normal
+
+```
+Nobody walks out of a locked Gate. Nobody. Except you. So what are you, janitor?
+```
+
+**clip-126.mp3** (threatening), normal
+
+```
+I'm going to find out.
+```
+
+**clip-127.mp3** (eager), normal
+
+```
+Director, the Sealer's hiding something. Let me take him into a Gate and prove it.
+```
+
+**clip-130.mp3** (cocky), normal
+
+```
+Just you and me, janitor. Show me what you've got.
+```
+
+**clip-132.mp3** (shouting), speed +10%, pitch +5%
+
+```
+This is a D-rank Gate? These are A-rank monsters!
+```
+
+**clip-133.mp3** (shocked, hurt), normal
+
+```
+The Director sent me in here. He locked it on me too?
+```
+
+**clip-135.mp3** (bitter, quiet), speed -10%, pitch -5%
+
+```
+You know why I hate Sealers? My dad was one. Twenty years closing Gates for rich guilds. Died in one. Nobody even came to the funeral.
+```
+
+**clip-137.mp3** (rueful), normal
+
+```
+Yeah. Stupid, right?
+```
+
+**clip-146.mp3** (ashamed), normal
+
+```
+You saved me. After everything I said to you.
+```
+
+**clip-148.mp3** (gruff), normal
+
+```
+I owe you, janitor.
+```
+
+**clip-150.mp3** (grudging respect), normal
+
+```
+Ji-ho.
+```
+
+**clip-152.mp3** (lying, steady), normal
+
+```
+He didn't make it, Director. The wolves got him.
+```
+
+**clip-162.mp3** (angry), normal
+
+```
+He's been locking Gates for years. Letting the monsters inside grow. Bigger monster, bigger core. And cores sell for billions.
+```
+
+**clip-166.mp3** (uneasy), normal
+
+```
+And if the Director finds out first?
+```
+
+**clip-176.mp3** (nervous laugh), normal
+
+```
+So the plan is, the F-rank janitor walks into the biggest Gate in history.
+```
+
+**clip-179.mp3** (sarcastic), normal
+
+```
+Great plan. Love it. We're all going to die.
+```
+
+**clip-192.mp3** (shouting), speed +10%, pitch +5%
+
+```
+Go! Before I change my mind!
+```
+
+**clip-193.mp3** (roaring), speed +10%, pitch +5%
+
+```
+My dad closed Gates for twenty years! You think I'm scared of you?
+```
+
+**clip-194.mp3** (straining), normal
+
+```
+Okay, a little scared! But mostly angry!
+```
+
+**clip-207.mp3** (desperate), normal
+
+```
+No. No way. We're not leaving you!
+```
+
+**clip-213.mp3** (broken), speed -10%, pitch -5%
+
+```
+He's not coming out, is he?
+```
+
+**clip-216.mp3** (crying, laughing), normal
+
+```
+Don't scare me like that, janitor!
+```
+
+**clip-228.mp3** (curious), normal
+
+```
+Every guild in Korea wants you now. So what are you going to do?
+```
+
+**clip-232.mp3** (grinning), normal
+
+```
+Cheesy.
+```
+
+## Director Kwon (30 clips)
+
+Voice: smooth middle-aged male (e.g. Eric or Davis)
+
+**clip-016.mp3** (warm, smooth), normal
+
+```
+Now, now, Min-gyu. Every great guild needs someone to close the doors. Ji-ho, you'll join today's raid.
+```
+
+**clip-018.mp3** (smiling), normal
+
+```
+Someone has to seal it afterwards. Who better than our best Sealer?
+```
+
+**clip-046.mp3** (calm, cold), normal
+
+```
+Sealer. The boss is about to break into the city. Seal the Gate. Now.
+```
+
+**clip-048.mp3** (icy), normal
+
+```
+Twelve hunters, or ten million citizens. Seal it.
+```
+
+**clip-050.mp3** (pleasant, chilling), normal
+
+```
+Then you can stay in there with them.
+```
+
+**clip-070.mp3** (warm, concerned), normal
+
+```
+Ji-ho! Our brave Sealer. I'm so glad you survived. The radio failed in there, you know. A terrible accident.
+```
+
+**clip-072.mp3** (generous), normal
+
+```
+I've paid your sister's hospital bills. All of them. Consider it a thank you.
+```
+
+**clip-074.mp3** (soft, menacing), speed -10%, pitch -5%
+
+```
+Just stay close to me, Ji-ho. I'd hate to lose you.
+```
+
+**clip-128.mp3** (delighted), normal
+
+```
+What a wonderful idea. Take Gate D-7. I'll handle the paperwork.
+```
+
+**clip-129.mp3** (cold whisper), speed -10%, pitch -5%
+
+```
+Two problems. One Gate.
+```
+
+**clip-151.mp3** (sweet), normal
+
+```
+Min-gyu. You're alive. How wonderful. And our Sealer?
+```
+
+**clip-153.mp3** (pleased), normal
+
+```
+What a tragedy. Come and see me tomorrow.
+```
+
+**clip-155.mp3** (cold, dangerous), normal
+
+```
+So. There is another Keyholder.
+```
+
+**clip-156.mp3** (fatherly), normal
+
+```
+Sit, Ji-ho. Eat. You look thin.
+```
+
+**clip-157.mp3** (persuasive), normal
+
+```
+Two Keyholders, working together. Every Gate in the world would answer to us. Money. Power. A cure for your sister.
+```
+
+**clip-159.mp3** (calm), normal
+
+```
+Sacrifices. Every great door needs its keys.
+```
+
+**clip-161.mp3** (gentle, threatening), speed -10%, pitch -5%
+
+```
+Think about it. Hospitals can be such dangerous places.
+```
+
+**clip-171.mp3** (grand, smiling), normal
+
+```
+Citizens of Seoul. Tonight, the Hwarang Guild opens the door to a new era.
+```
+
+**clip-180.mp3** (amused), normal
+
+```
+Ji-ho. My little Sealer. You should have stayed at the back.
+```
+
+**clip-182.mp3** (pleasant), normal
+
+```
+Your brother asked too many questions too. He made an excellent key.
+```
+
+**clip-184.mp3** (ecstatic), speed +10%, pitch +5%
+
+```
+Do you know what's behind this door? Power. The core of every Gate that has ever opened.
+```
+
+**clip-186.mp3** (dismissive), normal
+
+```
+Keys for the door. Nothing more.
+```
+
+**clip-187.mp3** (bitter), normal
+
+```
+My teacher gave me one fragment and told me to guard this door. Forever. Alone, in the dark.
+```
+
+**clip-188.mp3** (quiet, certain), speed -10%, pitch -5%
+
+```
+So I decided I would rather open it.
+```
+
+**clip-190.mp3** (cold), normal
+
+```
+He trusted a lock. I am not a lock.
+```
+
+**clip-195.mp3** (cold), normal
+
+```
+Lock.
+```
+
+**clip-196.mp3** (mocking), normal
+
+```
+Did you really think you were the only one?
+```
+
+**clip-201.mp3** (shocked), normal
+
+```
+Impossible!
+```
+
+**clip-204.mp3** (anguished scream), speed +10%, pitch +5%
+
+```
+No. No! My key!
+```
+
+**clip-225.mp3** (unsettling laugh), normal
+
+```
+You think it's over? There are still five fragments out there. And others are looking for them.
+```
+
+## Ji-ah (11 clips)
+
+Voice: a child or bright young female (e.g. Ana)
+
+**clip-019.mp3** (teasing), normal
+
+```
+Oppa, you're late again.
+```
+
+**clip-021.mp3** (giggling), normal
+
+```
+Liar.
+```
+
+**clip-023.mp3** (worried), normal
+
+```
+Promise you'll come home tonight.
+```
+
+**clip-114.mp3** (excited), normal
+
+```
+Oppa! Is she your girlfriend?
+```
+
+**clip-117.mp3** (giggling), normal
+
+```
+You both said that really fast.
+```
+
+**clip-119.mp3** (delighted), normal
+
+```
+It's so pretty! Thank you, unni!
+```
+
+**clip-123.mp3** (sleepy, scared), normal
+
+```
+Oppa. I dreamed of a giant door. Somebody was knocking on it. From the other side.
+```
+
+**clip-174.mp3** (faint), speed -10%, pitch -5%
+
+```
+Oppa. The door is opening.
+```
+
+**clip-199.mp3** (echoing, gentle), speed -10%, pitch -5%
+
+```
+Oppa. You promised. You always come home.
+```
+
+**clip-219.mp3** (overjoyed), normal
+
+```
+Oppa! The knocking stopped!
+```
+
+**clip-221.mp3** (eager), normal
+
+```
+Unni, will you teach me to use a sword?
+```
+
+## Yeon-ah (39 clips)
+
+Voice: young female, cool (e.g. Jenny or Aria)
+
+**clip-026.mp3** (cold), normal
+
+```
+Sealer. Stay behind me. Don't touch anything.
+```
+
+**clip-029.mp3** (tense whisper), speed -10%, pitch -5%
+
+```
+Quiet. Something's wrong. It's too quiet.
+```
+
+**clip-031.mp3** (commanding), speed +10%, pitch +5%
+
+```
+Formation! Shields forward, mages behind me!
+```
+
+**clip-035.mp3** (sharp), normal
+
+```
+Sealer. I told you to stay back.
+```
+
+**clip-037.mp3** (after a pause), normal
+
+```
+Fine. Then keep him alive.
+```
+
+**clip-040.mp3** (shocked), normal
+
+```
+My blade isn't even scratching it.
+```
+
+**clip-042.mp3** (commanding shout), speed +10%, pitch +5%
+
+```
+Fall back! Everyone to the exit! Now!
+```
+
+**clip-052.mp3** (weak), normal
+
+```
+Why didn't you run?
+```
+
+**clip-063.mp3** (faint whisper), speed -10%, pitch -5%
+
+```
+It wasn't me, was it?
+```
+
+**clip-087.mp3** (cool), normal
+
+```
+You've been entering E-rank Gates alone. At night. An F-rank Sealer.
+```
+
+**clip-089.mp3** (matter-of-fact), normal
+
+```
+You saved my life. I like to know who I owe.
+```
+
+**clip-090.mp3** (steady), normal
+
+```
+In the Gate, your eyes turned gold. And the Stone Warden fell apart. I saw it.
+```
+
+**clip-092.mp3** (dry), normal
+
+```
+Half. Not all.
+```
+
+**clip-093.mp3** (challenging), normal
+
+```
+Then show me. Find my weakness.
+```
+
+**clip-096.mp3** (dry, amused), normal
+
+```
+Impressive. And extremely annoying.
+```
+
+**clip-097.mp3** (quiet), speed -10%, pitch -5%
+
+```
+Five years ago, my brother walked into a Hwarang Gate. A simple C-rank. It locked. They called it an accident.
+```
+
+**clip-099.mp3** (steely), normal
+
+```
+I became S-rank so I could find out the truth. I think I'm looking at it.
+```
+
+**clip-100.mp3** (unimpressed), normal
+
+```
+You can see every weakness in the world, and you still leave your left side open.
+```
+
+**clip-102.mp3** (stern), normal
+
+```
+Again.
+```
+
+**clip-104.mp3** (dry), normal
+
+```
+Monsters don't take water breaks. Again.
+```
+
+**clip-105.mp3** (serious), normal
+
+```
+Gates don't lock themselves. Someone locked ours. From the outside. With a key.
+```
+
+**clip-109.mp3** (urgent whisper), speed -10%, pitch -5%
+
+```
+Ten years of Gate records. Quickly.
+```
+
+**clip-111.mp3** (barely holding together), speed -10%, pitch -5%
+
+```
+Seo Joon-ho. My brother. Gate locked by order of the Director.
+```
+
+**clip-113.mp3** (trembling, resolute), speed -10%, pitch -5%
+
+```
+Don't. Not now. We finish this first.
+```
+
+**clip-116.mp3** (flat), normal
+
+```
+Absolutely not.
+```
+
+**clip-118.mp3** (softer than usual), speed -10%, pitch -5%
+
+```
+For luck. It never melts.
+```
+
+**clip-163.mp3** (quiet), speed -10%, pitch -5%
+
+```
+And the hunters who asked questions never came back.
+```
+
+**clip-165.mp3** (decisive), normal
+
+```
+We take the archive records to the Hunter Association. Tomorrow morning.
+```
+
+**clip-178.mp3** (resolute), normal
+
+```
+And the S-rank and the B-rank keep him alive.
+```
+
+**clip-181.mp3** (breaking), speed -10%, pitch -5%
+
+```
+This is Joon-ho's sword.
+```
+
+**clip-183.mp3** (cold fury), normal
+
+```
+I'm going to end you.
+```
+
+**clip-191.mp3** (shouting), speed +10%, pitch +5%
+
+```
+Go, Ji-ho! We've got these!
+```
+
+**clip-198.mp3** (fierce shout), speed +10%, pitch +5%
+
+```
+Then I'll be your key!
+```
+
+**clip-209.mp3** (screaming), speed +10%, pitch +5%
+
+```
+Ji-ho!
+```
+
+**clip-214.mp3** (certain), normal
+
+```
+He's coming out. He promised his sister.
+```
+
+**clip-218.mp3** (tearful smile), normal
+
+```
+Idiot.
+```
+
+**clip-222.mp3** (amused), normal
+
+```
+When you're older. And when your brother learns to guard his left side.
+```
+
+**clip-230.mp3** (interested), normal
+
+```
+Does it have a name?
+```
+
+**clip-233.mp3** (smiling), normal
+
+```
+I like it.
+```
+
+## Hunter (4 clips)
+
+Voice: young male
+
+**clip-030.mp3** (shouting), speed +10%, pitch +5%
+
+```
+Contact! Crystal beetles, dozens of them!
+```
+
+**clip-033.mp3** (panicked), speed +10%, pitch +5%
+
+```
+My leg! I can't feel my leg!
+```
+
+**clip-041.mp3** (terrified), normal
+
+```
+It's too strong! We can't hold it!
+```
+
+**clip-044.mp3** (screaming), speed +10%, pitch +5%
+
+```
+The exit! The Gate's closing behind us!
+```
+
+## The Voice (15 clips)
+
+Voice: old British male (e.g. Ryan, UK)
+
+**clip-054.mp3** (ancient, echoing whisper), speed -10%, pitch -5%
+
+```
+Keyholder. At last, you have come.
+```
+
+**clip-055.mp3** (solemn), normal
+
+```
+Every lock has a key. Every key has a holder. Open your eyes, Keyholder.
+```
+
+**clip-057.mp3** (commanding), speed +10%, pitch +5%
+
+```
+Look.
+```
+
+**clip-064.mp3** (quiet), speed -10%, pitch -5%
+
+```
+You have opened your first lock. One fragment of nine.
+```
+
+**clip-066.mp3** (warning), normal
+
+```
+Find them. Before he does.
+```
+
+**clip-080.mp3** (warning), normal
+
+```
+Every lock you open takes something from you. Open too many, and you will be the one who breaks.
+```
+
+**clip-084.mp3** (approving), normal
+
+```
+Two fragments of nine. Now learn the other half.
+```
+
+**clip-140.mp3** (urgent), normal
+
+```
+That lock was not made by you. To open it, you must take its key.
+```
+
+**clip-142.mp3** (grave), normal
+
+```
+The one who made it. It is inside the beast.
+```
+
+**clip-154.mp3** (ominous), normal
+
+```
+Three fragments of nine. And now he knows you exist.
+```
+
+**clip-168.mp3** (sorrowful), speed -10%, pitch -5%
+
+```
+There were two Keyholders once. A teacher, and his student. The student wanted to open every door. Even the one that must stay closed.
+```
+
+**clip-170.mp3** (grave), normal
+
+```
+Beneath Seoul. And the student's name was Kwon.
+```
+
+**clip-197.mp3** (urgent), normal
+
+```
+A Keyholder cannot unlock himself. He must be opened by another.
+```
+
+**clip-206.mp3** (solemn), normal
+
+```
+To seal the Great Gate, someone must lock it from the inside.
+```
+
+**clip-234.mp3** (ominous whisper), speed -10%, pitch -5%
+
+```
+Four fragments of nine, Keyholder. There are other doors.
+```
+
+## News anchor (2 clips)
+
+Voice: news-style male (e.g. Thomas, UK)
+
+**clip-068.mp3** (news broadcast), normal
+
+```
+The Hwarang Guild's Red Gate raid ends in triumph, as S-rank hunter Seo Yeon-ah defeats a calamity-class boss single-handedly.
+```
+
+**clip-224.mp3** (news broadcast), normal
+
+```
+Hwarang Guild Director Kwon has been arrested on charges of illegal Gate manipulation.
+```
+
+## Doctor (2 clips)
+
+Voice: older male
+
+**clip-120.mp3** (grave), normal
+
+```
+Her fever spiked the night the Red Gate opened. It happens every time a big Gate opens.
+```
+
+**clip-122.mp3** (uneasy), normal
+
+```
+It's as if the Gates are feeding on her.
+```
+
+## Nurse (1 clips)
+
+Voice: female
+
+**clip-173.mp3** (panicked), speed +10%, pitch +5%
+
+```
+Her fever's off the charts!
+```

@@ -447,21 +447,50 @@ for sc in spec["scenes"]:
 
 (HERE / "script.json").write_text(json.dumps(spec, indent=1, ensure_ascii=False) + "\n")
 
-# The same script, clip by clip, for recording in Speechma.
-out = ["# KEYHOLDER: voice script for Speechma", "",
-       "Make one audio file per clip and name it exactly as shown (e.g. `clip-001.mp3`; .wav or .m4a also work). "
-       "The words in brackets are acting notes: pick a voice and speed that fit, but don't type them into Speechma.", "",
-       "Send the files back in any batch size: every clip you send replaces its placeholder voice in the video, "
-       "the rest keep the placeholder until you record them.", "", "## Voices", ""]
-out += [f"- **{NAMES[k]}**: {v}" for k, v in SPEECHMA_VOICES.items()]
-n = 0
-for i, sc in enumerate(spec["scenes"], 1):
-    out += ["", f"## Scene {i}", ""]
+# The same script for recording in Speechma: grouped by voice, one copy-ready block per clip.
+import re  # noqa: E402
+
+LOUD = ("shout", "scream", "roar", "yell", "battle cry", "commanding", "panick", "furious", "outraged", "ecstatic", "screaming")
+QUIET = ("whisper", "quiet", "soft", "faint", "gentle", "tender", "sad", "breaking", "sorrowful", "barely", "broken", "trembling")
+
+
+def hint(tone):
+    t = (tone or "").lower()
+    if any(w in t for w in LOUD):
+        return "speed +10%, pitch +5%"
+    if any(w in t for w in QUIET):
+        return "speed -10%, pitch -5%"
+    return "normal"
+
+
+def say(text):
+    """Normal case for words in capitals (the voices spell them out), keeping sentence starts capitalised."""
+    text = re.sub(r"\b[A-Z]{2,}\b", lambda m: m.group(0).lower(), text)
+    return re.sub(r"(^|[.!?]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), text)
+
+
+by_voice = {}
+for sc in spec["scenes"]:
     for line in sc["lines"]:
-        n += 1
-        tone = f" *({line[2]['tone']})*" if line[2].get("tone") else ""
-        out.append(f"- `clip-{n:03d}` **{NAMES[line[0]]}**{tone}: {line[1]}")
+        by_voice.setdefault(line[0], []).append(line)
+out = ["# KEYHOLDER: Speechma recording script", "",
+       f"{sum(len(v) for v in by_voice.values())} clips, grouped by voice: choose the voice in Speechma once, then go "
+       "through that character's clips in order.", "",
+       "**For every clip:**", "",
+       "1. Copy the text in the grey box into Speechma (just the text).",
+       "2. Set the speed and pitch shown (\"normal\" means leave them as they are).",
+       "3. Generate, download, and rename the file to the name shown, e.g. `clip-001.mp3`.", "",
+       "Send the files back in any batches; each one replaces its placeholder voice in the video.", "",
+       "## Voices", "", "| Character | Clips | Suggested Speechma voice |", "|---|---|---|"]
+out += [f"| {NAMES[k]} | {len(v)} | {SPEECHMA_VOICES[k]} |" for k, v in by_voice.items()]
+for who, ls in by_voice.items():
+    out += ["", f"## {NAMES[who]} ({len(ls)} clips)", "", f"Voice: {SPEECHMA_VOICES[who]}"]
+    for line in ls:
+        meta = line[2]
+        mood = f" ({meta['tone']})" if meta.get("tone") else ""
+        out += ["", f"**clip-{meta['clip']:03d}.mp3**{mood}, {hint(meta.get('tone'))}", "", "```", say(line[1]), "```"]
 (HERE / "SPEECHMA.md").write_text("\n".join(out) + "\n")
+n = clip
 
 lines = [l for sc in spec["scenes"] for l in sc["lines"]]
 words = sum(len(l[1].split()) for l in lines)
