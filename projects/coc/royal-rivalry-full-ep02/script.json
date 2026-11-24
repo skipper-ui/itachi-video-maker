@@ -628,7 +628,8 @@
          0.15,
          0.32
         ],
-        "shout": true
+        "shout": true,
+        "until": "lineend:2+0.3"
        },
        {
         "line": 3,
@@ -1286,7 +1287,8 @@
       "caps": [
        {
         "text": "The weather report",
-        "at": 0
+        "at": 0,
+        "y": 0.9
        }
       ],
       "sfx": [],
@@ -1391,7 +1393,8 @@
       "caps": [
        {
         "text": "The Healer returns",
-        "at": 0
+        "at": 0,
+        "y": 0.9
        }
       ],
       "sfx": [],
@@ -1646,7 +1649,8 @@
          0.85,
          0.34
         ],
-        "w": 520
+        "w": 520,
+        "until": "lineend:0+0.3"
        },
        {
         "line": 1,
@@ -1748,7 +1752,8 @@
       "caps": [
        {
         "text": "Beyond the walls",
-        "at": 0
+        "at": 0,
+        "y": 0.9
        }
       ],
       "sfx": [],
@@ -1890,7 +1895,8 @@
       "caps": [
        {
         "text": "That night",
-        "at": 0
+        "at": 0,
+        "y": 0.9
        }
       ],
       "sfx": [],
@@ -2021,7 +2027,8 @@
          0.82,
          0.4
         ],
-        "w": 440
+        "w": 440,
+        "until": "lineend:0+0.3"
        },
        {
         "line": 1,
@@ -2940,7 +2947,7 @@
       "bubbles": [
        {
         "line": 0,
-        "x": 0.3,
+        "x": 0.4,
         "y": 0.14,
         "tail": [
          0.25,
@@ -3463,8 +3470,8 @@
       "sfx": [
        {
         "text": "CLANG!",
-        "x": 0.5,
-        "y": 0.2,
+        "x": 0.62,
+        "y": 0.62,
         "at": "lineend:2",
         "style": "red",
         "size": 110
