@@ -1,9 +1,10 @@
 """Builds script.json for KEYHOLDER, a standalone ~20-minute manhwa-style story video (16:9).
 
 Run: python3 projects/manhwa/keyholder/build.py
-Original story and characters. Each scene is one AI image (Magic Hour, upscaled locally) under its spoken lines;
-the narrator links scenes (Kokoro) and the characters act their lines (ElevenLabs v3, tone in L()).
-SPEECHMA.md, written alongside, is the same script laid out clip by clip for recording in Speechma.
+Original story and characters. Each scene is one AI image (Pollinations, FLUX.2 klein) under its spoken lines.
+Voices are recorded in Speechma: SPEECHMA.md, written alongside, lists every clip; recorded files go in
+audio/clip-NNN.mp3 and are used automatically. Any clip not recorded yet is voiced by a local Kokoro placeholder,
+so a draft can be rendered at any time.
 """
 import json
 from pathlib import Path
@@ -27,7 +28,10 @@ C = {
 STYLE = ("Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, "
          "highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark")
 
-KOKORO = {"narrator": "am_michael"}
+# Placeholder voices (Kokoro, local) for clips that haven't been recorded in Speechma yet.
+KOKORO = {"narrator": "am_michael", "jiho": "am_puck", "yeonah": "af_nicole", "kwon": "am_onyx", "mingyu": "am_fenrir",
+          "jiah": "af_sky", "voice": "bm_fable", "official": "am_eric", "anchor": "bm_daniel", "doctor": "bm_george",
+          "hunter": "am_echo", "nurse": "af_bella"}
 ELEVEN = {
     "jiho": "TX3LPaxmHKxFdv7VOQHJ",     # Liam
     "yeonah": "EXAVITQu4vr4xnSDxMaL",   # Sarah
@@ -424,35 +428,42 @@ spec = {
     "character": "", "style": "",
     "width": 1920, "height": 1080, "title_card": False,
     "tts": "kokoro", "cast": KOKORO, "speed": 0.95, "scene_pad": 0.8,
-    "emotive": {"engine": "eleven_v3", "cast": ELEVEN, "skip": ["narrator"]},
+    "clips_dir": "audio",
     "caption_speakers": list(NAMES),
     "caption": {"max_chars": 46, "max_words": 8, "size": 0.046, "margin": 0.05},
-    "images": {"upscale": True},
+    "images": {"provider": "pollinations"},
     "music": {"sound": "music_strategy", "volume": 0.10},
-    "sources": ["Original story and characters. Artwork generated with AI (Magic Hour)."],
+    "sources": ["Original story and characters. Artwork generated with AI (Pollinations, FLUX.2 klein)."],
     "scenes": [{**sc, "fx": sc.get("fx", [])} for sc in scenes],
 }
+clip = 0
 for sc in spec["scenes"]:
     sc["image"] = sc["image"].replace("{", "(").replace("}", ")")  # make_video formats prompts; keep them brace-free
+    for line in sc["lines"]:  # number every line: its Speechma recording is audio/clip-NNN.mp3
+        clip += 1
+        if len(line) < 3:
+            line.append({})
+        line[2]["clip"] = clip
 
 (HERE / "script.json").write_text(json.dumps(spec, indent=1, ensure_ascii=False) + "\n")
 
 # The same script, clip by clip, for recording in Speechma.
 out = ["# KEYHOLDER: voice script for Speechma", "",
-       "One audio file per clip, named as shown (e.g. `clip-001.mp3`). Read the direction in brackets as acting "
-       "notes; don't speak it.", "", "## Voices", ""]
+       "Make one audio file per clip and name it exactly as shown (e.g. `clip-001.mp3`; .wav or .m4a also work). "
+       "The words in brackets are acting notes: pick a voice and speed that fit, but don't type them into Speechma.", "",
+       "Send the files back in any batch size: every clip you send replaces its placeholder voice in the video, "
+       "the rest keep the placeholder until you record them.", "", "## Voices", ""]
 out += [f"- **{NAMES[k]}**: {v}" for k, v in SPEECHMA_VOICES.items()]
 n = 0
 for i, sc in enumerate(spec["scenes"], 1):
     out += ["", f"## Scene {i}", ""]
     for line in sc["lines"]:
         n += 1
-        tone = f" *({line[2]['tone']})*" if len(line) > 2 else ""
+        tone = f" *({line[2]['tone']})*" if line[2].get("tone") else ""
         out.append(f"- `clip-{n:03d}` **{NAMES[line[0]]}**{tone}: {line[1]}")
 (HERE / "SPEECHMA.md").write_text("\n".join(out) + "\n")
 
 lines = [l for sc in spec["scenes"] for l in sc["lines"]]
 words = sum(len(l[1].split()) for l in lines)
 nw = sum(len(l[1].split()) for l in lines if l[0] == N)
-v3 = sum(len((f"[{l[2]['tone']}] " if len(l) > 2 else "") + l[1]) for l in lines if l[0] != N)
-print(f"{len(spec['scenes'])} scenes, {len(lines)} lines ({n} clips), {words} words ({nw} narrator), v3 characters {v3}")
+print(f"{len(spec['scenes'])} scenes, {len(lines)} lines ({n} clips), {words} words ({nw} narrator)")

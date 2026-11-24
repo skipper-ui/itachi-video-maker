@@ -8,29 +8,22 @@
  "title_card": false,
  "tts": "kokoro",
  "cast": {
-  "narrator": "am_michael"
+  "narrator": "am_michael",
+  "jiho": "am_puck",
+  "yeonah": "af_nicole",
+  "kwon": "am_onyx",
+  "mingyu": "am_fenrir",
+  "jiah": "af_sky",
+  "voice": "bm_fable",
+  "official": "am_eric",
+  "anchor": "bm_daniel",
+  "doctor": "bm_george",
+  "hunter": "am_echo",
+  "nurse": "af_bella"
  },
  "speed": 0.95,
  "scene_pad": 0.8,
- "emotive": {
-  "engine": "eleven_v3",
-  "cast": {
-   "jiho": "TX3LPaxmHKxFdv7VOQHJ",
-   "yeonah": "EXAVITQu4vr4xnSDxMaL",
-   "kwon": "cjVigY5qzO86Huf0OWal",
-   "mingyu": "SOYHLrjzK2X1ezoPC6cr",
-   "jiah": "cgSgspJ2msm6clMCkdW9",
-   "voice": "JBFqnCBsd6RMkjVDRZzb",
-   "official": "iP95p4xoKVk53GoZ742B",
-   "anchor": "onwK4e9ZLuTAKqWW03F9",
-   "doctor": "pqHfZKP75CvOlQylNhV4",
-   "hunter": "bIHbv24MWmeRgasZH58o",
-   "nurse": "FGY2WhTYpPnrIDTdsKH5"
-  },
-  "skip": [
-   "narrator"
-  ]
- },
+ "clips_dir": "audio",
  "caption_speakers": [
   "narrator",
   "jiho",
@@ -52,14 +45,14 @@
   "margin": 0.05
  },
  "images": {
-  "upscale": true
+  "provider": "pollinations"
  },
  "music": {
   "sound": "music_strategy",
   "volume": 0.1
  },
  "sources": [
-  "Original story and characters. Artwork generated with AI (Magic Hour)."
+  "Original story and characters. Artwork generated with AI (Pollinations, FLUX.2 klein)."
  ],
  "scenes": [
   {
@@ -67,7 +60,10 @@
    "lines": [
     [
      "narrator",
-     "Seoul. Ten years after the first Gate opened in the sky."
+     "Seoul. Ten years after the first Gate opened in the sky.",
+     {
+      "clip": 1
+     }
     ]
    ],
    "fx": []
@@ -77,7 +73,10 @@
    "lines": [
     [
      "narrator",
-     "Monsters poured out of them. Hunters rose to fight back. And when the fighting was over, someone had to close the door."
+     "Monsters poured out of them. Hunters rose to fight back. And when the fighting was over, someone had to close the door.",
+     {
+      "clip": 2
+     }
     ]
    ],
    "fx": []
@@ -89,14 +88,16 @@
      "jiho",
      "Seal complete. Gate C-114 is closed.",
      {
-      "tone": "tired"
+      "tone": "tired",
+      "clip": 3
      }
     ],
     [
      "official",
      "Sign here, Sealer. You've got six more tonight.",
      {
-      "tone": "bored"
+      "tone": "bored",
+      "clip": 4
      }
     ]
    ],
@@ -107,7 +108,10 @@
    "lines": [
     [
      "narrator",
-     "That someone was Yoon Ji-ho. F-rank. The lowest rank a hunter can have. His only skill: closing Gates after real hunters had finished with them."
+     "That someone was Yoon Ji-ho. F-rank. The lowest rank a hunter can have. His only skill: closing Gates after real hunters had finished with them.",
+     {
+      "clip": 5
+     }
     ]
    ],
    "fx": []
@@ -119,21 +123,24 @@
      "official",
      "Yoon Ji-ho. Re-evaluation result: F-rank. Again.",
      {
-      "tone": "bored"
+      "tone": "bored",
+      "clip": 6
      }
     ],
     [
      "jiho",
      "Could you check one more time? Maybe the machine's broken.",
      {
-      "tone": "hopeful"
+      "tone": "hopeful",
+      "clip": 7
      }
     ],
     [
      "official",
      "The machine's fine, kid. You're just weak. Next!",
      {
-      "tone": "dismissive"
+      "tone": "dismissive",
+      "clip": 8
      }
     ]
    ],
@@ -146,21 +153,24 @@
      "mingyu",
      "Sealer fee, thirty thousand won. Guild cut, twenty-nine thousand.",
      {
-      "tone": "smug"
+      "tone": "smug",
+      "clip": 9
      }
     ],
     [
      "jiho",
      "That leaves me one thousand.",
      {
-      "tone": "flat"
+      "tone": "flat",
+      "clip": 10
      }
     ],
     [
      "mingyu",
      "Buy yourself some nice gum.",
      {
-      "tone": "mocking laugh"
+      "tone": "mocking laugh",
+      "clip": 11
      }
     ]
    ],
@@ -173,21 +183,24 @@
      "mingyu",
      "Look who it is. The janitor. You missed a spot yesterday, Sealer.",
      {
-      "tone": "mocking"
+      "tone": "mocking",
+      "clip": 12
      }
     ],
     [
      "jiho",
      "Good morning to you too, Min-gyu.",
      {
-      "tone": "flat"
+      "tone": "flat",
+      "clip": 13
      }
     ],
     [
      "mingyu",
      "That's Mister B-rank to you.",
      {
-      "tone": "smug"
+      "tone": "smug",
+      "clip": 14
      }
     ]
    ],
@@ -198,27 +211,33 @@
    "lines": [
     [
      "narrator",
-     "The Hwarang Guild. The richest guild in Korea. And its Director, the most beloved man in Seoul."
+     "The Hwarang Guild. The richest guild in Korea. And its Director, the most beloved man in Seoul.",
+     {
+      "clip": 15
+     }
     ],
     [
      "kwon",
      "Now, now, Min-gyu. Every great guild needs someone to close the doors. Ji-ho, you'll join today's raid.",
      {
-      "tone": "warm, smooth"
+      "tone": "warm, smooth",
+      "clip": 16
      }
     ],
     [
      "jiho",
      "Me? On a Red Gate?",
      {
-      "tone": "surprised"
+      "tone": "surprised",
+      "clip": 17
      }
     ],
     [
      "kwon",
      "Someone has to seal it afterwards. Who better than our best Sealer?",
      {
-      "tone": "smiling"
+      "tone": "smiling",
+      "clip": 18
      }
     ]
    ],
@@ -231,21 +250,24 @@
      "jiah",
      "Oppa, you're late again.",
      {
-      "tone": "teasing"
+      "tone": "teasing",
+      "clip": 19
      }
     ],
     [
      "jiho",
      "Traffic. Monster traffic. Very rude monsters.",
      {
-      "tone": "joking"
+      "tone": "joking",
+      "clip": 20
      }
     ],
     [
      "jiah",
      "Liar.",
      {
-      "tone": "giggling"
+      "tone": "giggling",
+      "clip": 21
      }
     ]
    ],
@@ -256,7 +278,10 @@
    "lines": [
     [
      "narrator",
-     "Ji-ah had Gate Fever. A sickness that came with the Gates. There was no cure. Only medicine. Very expensive medicine."
+     "Ji-ah had Gate Fever. A sickness that came with the Gates. There was no cure. Only medicine. Very expensive medicine.",
+     {
+      "clip": 22
+     }
     ]
    ],
    "fx": []
@@ -268,14 +293,16 @@
      "jiah",
      "Promise you'll come home tonight.",
      {
-      "tone": "worried"
+      "tone": "worried",
+      "clip": 23
      }
     ],
     [
      "jiho",
      "I promise. I'm just the Sealer. I stand at the back. Nobody ever looks at the Sealer.",
      {
-      "tone": "gentle"
+      "tone": "gentle",
+      "clip": 24
      }
     ]
    ],
@@ -286,20 +313,25 @@
    "lines": [
     [
      "narrator",
-     "Leading the raid was Seo Yeon-ah. S-rank. They called her the Frost Blade."
+     "Leading the raid was Seo Yeon-ah. S-rank. They called her the Frost Blade.",
+     {
+      "clip": 25
+     }
     ],
     [
      "yeonah",
      "Sealer. Stay behind me. Don't touch anything.",
      {
-      "tone": "cold"
+      "tone": "cold",
+      "clip": 26
      }
     ],
     [
      "jiho",
      "Yes, ma'am.",
      {
-      "tone": "nervous"
+      "tone": "nervous",
+      "clip": 27
      }
     ]
    ],
@@ -312,14 +344,16 @@
      "mingyu",
      "Easy raid. Easy money.",
      {
-      "tone": "cocky"
+      "tone": "cocky",
+      "clip": 28
      }
     ],
     [
      "yeonah",
      "Quiet. Something's wrong. It's too quiet.",
      {
-      "tone": "tense whisper"
+      "tone": "tense whisper",
+      "clip": 29
      }
     ]
    ],
@@ -332,21 +366,24 @@
      "hunter",
      "Contact! Crystal beetles, dozens of them!",
      {
-      "tone": "shouting"
+      "tone": "shouting",
+      "clip": 30
      }
     ],
     [
      "yeonah",
      "Formation! Shields forward, mages behind me!",
      {
-      "tone": "commanding"
+      "tone": "commanding",
+      "clip": 31
      }
     ],
     [
      "mingyu",
      "Show-off.",
      {
-      "tone": "muttering"
+      "tone": "muttering",
+      "clip": 32
      }
     ]
    ],
@@ -359,35 +396,40 @@
      "hunter",
      "My leg! I can't feel my leg!",
      {
-      "tone": "panicked"
+      "tone": "panicked",
+      "clip": 33
      }
     ],
     [
      "jiho",
      "Hold on. I've got you. Lean on me.",
      {
-      "tone": "steady"
+      "tone": "steady",
+      "clip": 34
      }
     ],
     [
      "yeonah",
      "Sealer. I told you to stay back.",
      {
-      "tone": "sharp"
+      "tone": "sharp",
+      "clip": 35
      }
     ],
     [
      "jiho",
      "He was falling behind. Nobody gets left.",
      {
-      "tone": "firm"
+      "tone": "firm",
+      "clip": 36
      }
     ],
     [
      "yeonah",
      "Fine. Then keep him alive.",
      {
-      "tone": "after a pause"
+      "tone": "after a pause",
+      "clip": 37
      }
     ]
    ],
@@ -398,13 +440,17 @@
    "lines": [
     [
      "narrator",
-     "The boss of the Gate rose from the floor. A Stone Warden. Forty meters tall."
+     "The boss of the Gate rose from the floor. A Stone Warden. Forty meters tall.",
+     {
+      "clip": 38
+     }
     ],
     [
      "mingyu",
      "That's not a Red Gate boss. That's a calamity!",
      {
-      "tone": "panicking"
+      "tone": "panicking",
+      "clip": 39
      }
     ]
    ],
@@ -417,7 +463,8 @@
      "yeonah",
      "My blade isn't even scratching it.",
      {
-      "tone": "shocked"
+      "tone": "shocked",
+      "clip": 40
      }
     ]
    ],
@@ -430,19 +477,24 @@
      "hunter",
      "It's too strong! We can't hold it!",
      {
-      "tone": "terrified"
+      "tone": "terrified",
+      "clip": 41
      }
     ],
     [
      "yeonah",
      "Fall back! Everyone to the exit! Now!",
      {
-      "tone": "commanding shout"
+      "tone": "commanding shout",
+      "clip": 42
      }
     ],
     [
      "narrator",
-     "One by one, the strongest hunters in Korea were thrown aside like toys."
+     "One by one, the strongest hunters in Korea were thrown aside like toys.",
+     {
+      "clip": 43
+     }
     ]
    ],
    "fx": []
@@ -454,14 +506,16 @@
      "hunter",
      "The exit! The Gate's closing behind us!",
      {
-      "tone": "screaming"
+      "tone": "screaming",
+      "clip": 44
      }
     ],
     [
      "jiho",
      "It's not closing. It's being locked. From the outside.",
      {
-      "tone": "stunned"
+      "tone": "stunned",
+      "clip": 45
      }
     ]
    ],
@@ -474,21 +528,24 @@
      "kwon",
      "Sealer. The boss is about to break into the city. Seal the Gate. Now.",
      {
-      "tone": "calm, cold"
+      "tone": "calm, cold",
+      "clip": 46
      }
     ],
     [
      "jiho",
      "Director, there are twelve hunters still inside!",
      {
-      "tone": "desperate"
+      "tone": "desperate",
+      "clip": 47
      }
     ],
     [
      "kwon",
      "Twelve hunters, or ten million citizens. Seal it.",
      {
-      "tone": "icy"
+      "tone": "icy",
+      "clip": 48
      }
     ]
    ],
@@ -501,14 +558,16 @@
      "jiho",
      "No.",
      {
-      "tone": "firm"
+      "tone": "firm",
+      "clip": 49
      }
     ],
     [
      "kwon",
      "Then you can stay in there with them.",
      {
-      "tone": "pleasant, chilling"
+      "tone": "pleasant, chilling",
+      "clip": 50
      }
     ]
    ],
@@ -519,7 +578,10 @@
    "lines": [
     [
      "narrator",
-     "The Gate locked itself behind them. Someone had made the choice for him."
+     "The Gate locked itself behind them. Someone had made the choice for him.",
+     {
+      "clip": 51
+     }
     ]
    ],
    "fx": []
@@ -531,14 +593,16 @@
      "yeonah",
      "Why didn't you run?",
      {
-      "tone": "weak"
+      "tone": "weak",
+      "clip": 52
      }
     ],
     [
      "jiho",
      "Sealers stay until everyone's out. That's the only rule I've got.",
      {
-      "tone": "breathless"
+      "tone": "breathless",
+      "clip": 53
      }
     ]
    ],
@@ -551,7 +615,8 @@
      "voice",
      "Keyholder. At last, you have come.",
      {
-      "tone": "ancient, echoing whisper"
+      "tone": "ancient, echoing whisper",
+      "clip": 54
      }
     ]
    ],
@@ -564,21 +629,24 @@
      "voice",
      "Every lock has a key. Every key has a holder. Open your eyes, Keyholder.",
      {
-      "tone": "solemn"
+      "tone": "solemn",
+      "clip": 55
      }
     ],
     [
      "jiho",
      "Who are you?",
      {
-      "tone": "awed"
+      "tone": "awed",
+      "clip": 56
      }
     ],
     [
      "voice",
      "Look.",
      {
-      "tone": "commanding"
+      "tone": "commanding",
+      "clip": 57
      }
     ]
    ],
@@ -589,7 +657,10 @@
    "lines": [
     [
      "narrator",
-     "Suddenly, he could see them. Keyholes. Glowing gold. On the walls. On the Gate. And on the monster itself."
+     "Suddenly, he could see them. Keyholes. Glowing gold. On the walls. On the Gate. And on the monster itself.",
+     {
+      "clip": 58
+     }
     ]
    ],
    "fx": []
@@ -601,7 +672,8 @@
      "jiho",
      "Unlock.",
      {
-      "tone": "intense"
+      "tone": "intense",
+      "clip": 59
      }
     ]
    ],
@@ -612,7 +684,10 @@
    "lines": [
     [
      "narrator",
-     "The forty-meter Stone Warden came apart like a broken lock."
+     "The forty-meter Stone Warden came apart like a broken lock.",
+     {
+      "clip": 60
+     }
     ]
    ],
    "fx": []
@@ -624,12 +699,16 @@
      "mingyu",
      "The Frost Blade did it! She killed the boss! She saved us all!",
      {
-      "tone": "ecstatic"
+      "tone": "ecstatic",
+      "clip": 61
      }
     ],
     [
      "narrator",
-     "Nobody looked at the Sealer. They never did."
+     "Nobody looked at the Sealer. They never did.",
+     {
+      "clip": 62
+     }
     ]
    ],
    "fx": []
@@ -641,7 +720,8 @@
      "yeonah",
      "It wasn't me, was it?",
      {
-      "tone": "faint whisper"
+      "tone": "faint whisper",
+      "clip": 63
      }
     ]
    ],
@@ -654,28 +734,32 @@
      "voice",
      "You have opened your first lock. One fragment of nine.",
      {
-      "tone": "quiet"
+      "tone": "quiet",
+      "clip": 64
      }
     ],
     [
      "jiho",
      "Nine? Nine what?",
      {
-      "tone": "confused"
+      "tone": "confused",
+      "clip": 65
      }
     ],
     [
      "voice",
      "Find them. Before he does.",
      {
-      "tone": "warning"
+      "tone": "warning",
+      "clip": 66
      }
     ],
     [
      "jiho",
      "Before who? Hello?",
      {
-      "tone": "frustrated"
+      "tone": "frustrated",
+      "clip": 67
      }
     ]
    ],
@@ -688,14 +772,16 @@
      "anchor",
      "The Hwarang Guild's Red Gate raid ends in triumph, as S-rank hunter Seo Yeon-ah defeats a calamity-class boss single-handedly.",
      {
-      "tone": "news broadcast"
+      "tone": "news broadcast",
+      "clip": 68
      }
     ],
     [
      "jiho",
      "Triumph. Sure.",
      {
-      "tone": "sarcastic"
+      "tone": "sarcastic",
+      "clip": 69
      }
     ]
    ],
@@ -708,14 +794,16 @@
      "kwon",
      "Ji-ho! Our brave Sealer. I'm so glad you survived. The radio failed in there, you know. A terrible accident.",
      {
-      "tone": "warm, concerned"
+      "tone": "warm, concerned",
+      "clip": 70
      }
     ],
     [
      "jiho",
      "The radio didn't fail. I heard every word.",
      {
-      "tone": "inner thought, quiet"
+      "tone": "inner thought, quiet",
+      "clip": 71
      }
     ]
    ],
@@ -728,21 +816,24 @@
      "kwon",
      "I've paid your sister's hospital bills. All of them. Consider it a thank you.",
      {
-      "tone": "generous"
+      "tone": "generous",
+      "clip": 72
      }
     ],
     [
      "jiho",
      "You what?",
      {
-      "tone": "stunned"
+      "tone": "stunned",
+      "clip": 73
      }
     ],
     [
      "kwon",
      "Just stay close to me, Ji-ho. I'd hate to lose you.",
      {
-      "tone": "soft, menacing"
+      "tone": "soft, menacing",
+      "clip": 74
      }
     ]
    ],
@@ -753,13 +844,17 @@
    "lines": [
     [
      "narrator",
-     "On the Director's finger was a gold ring. Engraved with a keyhole."
+     "On the Director's finger was a gold ring. Engraved with a keyhole.",
+     {
+      "clip": 75
+     }
     ],
     [
      "jiho",
      "That symbol...",
      {
-      "tone": "whisper"
+      "tone": "whisper",
+      "clip": 76
      }
     ]
    ],
@@ -772,18 +867,23 @@
      "jiho",
      "Unlock.",
      {
-      "tone": "testing"
+      "tone": "testing",
+      "clip": 77
      }
     ],
     [
      "narrator",
-     "Clunk."
+     "Clunk.",
+     {
+      "clip": 78
+     }
     ],
     [
      "jiho",
      "Okay. That's useful.",
      {
-      "tone": "amused"
+      "tone": "amused",
+      "clip": 79
      }
     ]
    ],
@@ -796,14 +896,16 @@
      "voice",
      "Every lock you open takes something from you. Open too many, and you will be the one who breaks.",
      {
-      "tone": "warning"
+      "tone": "warning",
+      "clip": 80
      }
     ],
     [
      "jiho",
      "Great. Fine print. Love it.",
      {
-      "tone": "sarcastic, wiping blood"
+      "tone": "sarcastic, wiping blood",
+      "clip": 81
      }
     ]
    ],
@@ -816,12 +918,16 @@
      "jiho",
      "Unlock. Unlock. Unlock!",
      {
-      "tone": "focused"
+      "tone": "focused",
+      "clip": 82
      }
     ],
     [
      "narrator",
-     "Every night, he entered the Gates nobody wanted. Every night, he got a little faster."
+     "Every night, he entered the Gates nobody wanted. Every night, he got a little faster.",
+     {
+      "clip": 83
+     }
     ]
    ],
    "fx": []
@@ -833,21 +939,24 @@
      "voice",
      "Two fragments of nine. Now learn the other half.",
      {
-      "tone": "approving"
+      "tone": "approving",
+      "clip": 84
      }
     ],
     [
      "jiho",
      "Lock.",
      {
-      "tone": "commanding"
+      "tone": "commanding",
+      "clip": 85
      }
     ],
     [
      "jiho",
      "It can close things too.",
      {
-      "tone": "amazed"
+      "tone": "amazed",
+      "clip": 86
      }
     ]
    ],
@@ -860,21 +969,24 @@
      "yeonah",
      "You've been entering E-rank Gates alone. At night. An F-rank Sealer.",
      {
-      "tone": "cool"
+      "tone": "cool",
+      "clip": 87
      }
     ],
     [
      "jiho",
      "Are you following me?",
      {
-      "tone": "defensive"
+      "tone": "defensive",
+      "clip": 88
      }
     ],
     [
      "yeonah",
      "You saved my life. I like to know who I owe.",
      {
-      "tone": "matter-of-fact"
+      "tone": "matter-of-fact",
+      "clip": 89
      }
     ]
    ],
@@ -887,21 +999,24 @@
      "yeonah",
      "In the Gate, your eyes turned gold. And the Stone Warden fell apart. I saw it.",
      {
-      "tone": "steady"
+      "tone": "steady",
+      "clip": 90
      }
     ],
     [
      "jiho",
      "You were half unconscious.",
      {
-      "tone": "nervous laugh"
+      "tone": "nervous laugh",
+      "clip": 91
      }
     ],
     [
      "yeonah",
      "Half. Not all.",
      {
-      "tone": "dry"
+      "tone": "dry",
+      "clip": 92
      }
     ]
    ],
@@ -914,19 +1029,24 @@
      "yeonah",
      "Then show me. Find my weakness.",
      {
-      "tone": "challenging"
+      "tone": "challenging",
+      "clip": 93
      }
     ],
     [
      "jiho",
      "Unlock.",
      {
-      "tone": "smirking"
+      "tone": "smirking",
+      "clip": 94
      }
     ],
     [
      "narrator",
-     "Her armor's buckle clicked open. Her sword arm dropped."
+     "Her armor's buckle clicked open. Her sword arm dropped.",
+     {
+      "clip": 95
+     }
     ]
    ],
    "fx": []
@@ -938,7 +1058,8 @@
      "yeonah",
      "Impressive. And extremely annoying.",
      {
-      "tone": "dry, amused"
+      "tone": "dry, amused",
+      "clip": 96
      }
     ]
    ],
@@ -951,21 +1072,24 @@
      "yeonah",
      "Five years ago, my brother walked into a Hwarang Gate. A simple C-rank. It locked. They called it an accident.",
      {
-      "tone": "quiet"
+      "tone": "quiet",
+      "clip": 97
      }
     ],
     [
      "jiho",
      "You never believed them.",
      {
-      "tone": "gentle"
+      "tone": "gentle",
+      "clip": 98
      }
     ],
     [
      "yeonah",
      "I became S-rank so I could find out the truth. I think I'm looking at it.",
      {
-      "tone": "steely"
+      "tone": "steely",
+      "clip": 99
      }
     ]
    ],
@@ -978,35 +1102,40 @@
      "yeonah",
      "You can see every weakness in the world, and you still leave your left side open.",
      {
-      "tone": "unimpressed"
+      "tone": "unimpressed",
+      "clip": 100
      }
     ],
     [
      "jiho",
      "I was letting you win.",
      {
-      "tone": "out of breath"
+      "tone": "out of breath",
+      "clip": 101
      }
     ],
     [
      "yeonah",
      "Again.",
      {
-      "tone": "stern"
+      "tone": "stern",
+      "clip": 102
      }
     ],
     [
      "jiho",
      "Can we at least take a water break?",
      {
-      "tone": "pleading"
+      "tone": "pleading",
+      "clip": 103
      }
     ],
     [
      "yeonah",
      "Monsters don't take water breaks. Again.",
      {
-      "tone": "dry"
+      "tone": "dry",
+      "clip": 104
      }
     ]
    ],
@@ -1019,19 +1148,24 @@
      "yeonah",
      "Gates don't lock themselves. Someone locked ours. From the outside. With a key.",
      {
-      "tone": "serious"
+      "tone": "serious",
+      "clip": 105
      }
     ],
     [
      "jiho",
      "Director Kwon wears a ring with a keyhole on it.",
      {
-      "tone": "quiet"
+      "tone": "quiet",
+      "clip": 106
      }
     ],
     [
      "narrator",
-     "Neither of them said anything for a long time."
+     "Neither of them said anything for a long time.",
+     {
+      "clip": 107
+     }
     ]
    ],
    "fx": []
@@ -1043,14 +1177,16 @@
      "jiho",
      "Unlock.",
      {
-      "tone": "whisper"
+      "tone": "whisper",
+      "clip": 108
      }
     ],
     [
      "yeonah",
      "Ten years of Gate records. Quickly.",
      {
-      "tone": "urgent whisper"
+      "tone": "urgent whisper",
+      "clip": 109
      }
     ]
    ],
@@ -1063,28 +1199,32 @@
      "jiho",
      "Gate locked. Hunters lost. Accident. Gate locked. Accident. Accident. Accident.",
      {
-      "tone": "growing horror"
+      "tone": "growing horror",
+      "clip": 110
      }
     ],
     [
      "yeonah",
      "Seo Joon-ho. My brother. Gate locked by order of the Director.",
      {
-      "tone": "barely holding together"
+      "tone": "barely holding together",
+      "clip": 111
      }
     ],
     [
      "jiho",
      "Yeon-ah...",
      {
-      "tone": "soft"
+      "tone": "soft",
+      "clip": 112
      }
     ],
     [
      "yeonah",
      "Don't. Not now. We finish this first.",
      {
-      "tone": "trembling, resolute"
+      "tone": "trembling, resolute",
+      "clip": 113
      }
     ]
    ],
@@ -1097,28 +1237,32 @@
      "jiah",
      "Oppa! Is she your girlfriend?",
      {
-      "tone": "excited"
+      "tone": "excited",
+      "clip": 114
      }
     ],
     [
      "jiho",
      "No!",
      {
-      "tone": "flustered"
+      "tone": "flustered",
+      "clip": 115
      }
     ],
     [
      "yeonah",
      "Absolutely not.",
      {
-      "tone": "flat"
+      "tone": "flat",
+      "clip": 116
      }
     ],
     [
      "jiah",
      "You both said that really fast.",
      {
-      "tone": "giggling"
+      "tone": "giggling",
+      "clip": 117
      }
     ]
    ],
@@ -1131,14 +1275,16 @@
      "yeonah",
      "For luck. It never melts.",
      {
-      "tone": "softer than usual"
+      "tone": "softer than usual",
+      "clip": 118
      }
     ],
     [
      "jiah",
      "It's so pretty! Thank you, unni!",
      {
-      "tone": "delighted"
+      "tone": "delighted",
+      "clip": 119
      }
     ]
    ],
@@ -1151,21 +1297,24 @@
      "doctor",
      "Her fever spiked the night the Red Gate opened. It happens every time a big Gate opens.",
      {
-      "tone": "grave"
+      "tone": "grave",
+      "clip": 120
      }
     ],
     [
      "jiho",
      "Every time?",
      {
-      "tone": "alarmed"
+      "tone": "alarmed",
+      "clip": 121
      }
     ],
     [
      "doctor",
      "It's as if the Gates are feeding on her.",
      {
-      "tone": "uneasy"
+      "tone": "uneasy",
+      "clip": 122
      }
     ]
    ],
@@ -1178,7 +1327,8 @@
      "jiah",
      "Oppa. I dreamed of a giant door. Somebody was knocking on it. From the other side.",
      {
-      "tone": "sleepy, scared"
+      "tone": "sleepy, scared",
+      "clip": 123
      }
     ]
    ],
@@ -1191,21 +1341,24 @@
      "mingyu",
      "Nobody walks out of a locked Gate. Nobody. Except you. So what are you, janitor?",
      {
-      "tone": "aggressive"
+      "tone": "aggressive",
+      "clip": 124
      }
     ],
     [
      "jiho",
      "Lucky.",
      {
-      "tone": "calm"
+      "tone": "calm",
+      "clip": 125
      }
     ],
     [
      "mingyu",
      "I'm going to find out.",
      {
-      "tone": "threatening"
+      "tone": "threatening",
+      "clip": 126
      }
     ]
    ],
@@ -1218,14 +1371,16 @@
      "mingyu",
      "Director, the Sealer's hiding something. Let me take him into a Gate and prove it.",
      {
-      "tone": "eager"
+      "tone": "eager",
+      "clip": 127
      }
     ],
     [
      "kwon",
      "What a wonderful idea. Take Gate D-7. I'll handle the paperwork.",
      {
-      "tone": "delighted"
+      "tone": "delighted",
+      "clip": 128
      }
     ]
    ],
@@ -1238,7 +1393,8 @@
      "kwon",
      "Two problems. One Gate.",
      {
-      "tone": "cold whisper"
+      "tone": "cold whisper",
+      "clip": 129
      }
     ]
    ],
@@ -1251,14 +1407,16 @@
      "mingyu",
      "Just you and me, janitor. Show me what you've got.",
      {
-      "tone": "cocky"
+      "tone": "cocky",
+      "clip": 130
      }
     ],
     [
      "jiho",
      "Min-gyu. The Gate just locked. And this lock isn't gold. It's black.",
      {
-      "tone": "alarmed"
+      "tone": "alarmed",
+      "clip": 131
      }
     ]
    ],
@@ -1271,7 +1429,8 @@
      "mingyu",
      "This is a D-rank Gate? These are A-rank monsters!",
      {
-      "tone": "shouting"
+      "tone": "shouting",
+      "clip": 132
      }
     ]
    ],
@@ -1284,14 +1443,16 @@
      "mingyu",
      "The Director sent me in here. He locked it on me too?",
      {
-      "tone": "shocked, hurt"
+      "tone": "shocked, hurt",
+      "clip": 133
      }
     ],
     [
      "jiho",
      "Welcome to the club.",
      {
-      "tone": "grim"
+      "tone": "grim",
+      "clip": 134
      }
     ]
    ],
@@ -1304,28 +1465,32 @@
      "mingyu",
      "You know why I hate Sealers? My dad was one. Twenty years closing Gates for rich guilds. Died in one. Nobody even came to the funeral.",
      {
-      "tone": "bitter, quiet"
+      "tone": "bitter, quiet",
+      "clip": 135
      }
     ],
     [
      "jiho",
      "So you became the guy who laughs at Sealers.",
      {
-      "tone": "gentle"
+      "tone": "gentle",
+      "clip": 136
      }
     ],
     [
      "mingyu",
      "Yeah. Stupid, right?",
      {
-      "tone": "rueful"
+      "tone": "rueful",
+      "clip": 137
      }
     ],
     [
      "jiho",
      "A little.",
      {
-      "tone": "small smile"
+      "tone": "small smile",
+      "clip": 138
      }
     ]
    ],
@@ -1338,28 +1503,32 @@
      "jiho",
      "Unlock! Why won't it open?",
      {
-      "tone": "straining"
+      "tone": "straining",
+      "clip": 139
      }
     ],
     [
      "voice",
      "That lock was not made by you. To open it, you must take its key.",
      {
-      "tone": "urgent"
+      "tone": "urgent",
+      "clip": 140
      }
     ],
     [
      "jiho",
      "Whose key?",
      {
-      "tone": "gasping"
+      "tone": "gasping",
+      "clip": 141
      }
     ],
     [
      "voice",
      "The one who made it. It is inside the beast.",
      {
-      "tone": "grave"
+      "tone": "grave",
+      "clip": 142
      }
     ]
    ],
@@ -1372,14 +1541,16 @@
      "jiho",
      "Lock!",
      {
-      "tone": "shouting"
+      "tone": "shouting",
+      "clip": 143
      }
     ],
     [
      "jiho",
      "And unlock.",
      {
-      "tone": "intense"
+      "tone": "intense",
+      "clip": 144
      }
     ]
    ],
@@ -1390,7 +1561,10 @@
    "lines": [
     [
      "narrator",
-     "The beast came apart. And in Ji-ho's hand, a shard of black key."
+     "The beast came apart. And in Ji-ho's hand, a shard of black key.",
+     {
+      "clip": 145
+     }
     ]
    ],
    "fx": []
@@ -1402,35 +1576,40 @@
      "mingyu",
      "You saved me. After everything I said to you.",
      {
-      "tone": "ashamed"
+      "tone": "ashamed",
+      "clip": 146
      }
     ],
     [
      "jiho",
      "You were annoying. Not evil. There's a difference.",
      {
-      "tone": "tired smile"
+      "tone": "tired smile",
+      "clip": 147
      }
     ],
     [
      "mingyu",
      "I owe you, janitor.",
      {
-      "tone": "gruff"
+      "tone": "gruff",
+      "clip": 148
      }
     ],
     [
      "jiho",
      "Ji-ho.",
      {
-      "tone": "firm"
+      "tone": "firm",
+      "clip": 149
      }
     ],
     [
      "mingyu",
      "Ji-ho.",
      {
-      "tone": "grudging respect"
+      "tone": "grudging respect",
+      "clip": 150
      }
     ]
    ],
@@ -1443,21 +1622,24 @@
      "kwon",
      "Min-gyu. You're alive. How wonderful. And our Sealer?",
      {
-      "tone": "sweet"
+      "tone": "sweet",
+      "clip": 151
      }
     ],
     [
      "mingyu",
      "He didn't make it, Director. The wolves got him.",
      {
-      "tone": "lying, steady"
+      "tone": "lying, steady",
+      "clip": 152
      }
     ],
     [
      "kwon",
      "What a tragedy. Come and see me tomorrow.",
      {
-      "tone": "pleased"
+      "tone": "pleased",
+      "clip": 153
      }
     ]
    ],
@@ -1470,7 +1652,8 @@
      "voice",
      "Three fragments of nine. And now he knows you exist.",
      {
-      "tone": "ominous"
+      "tone": "ominous",
+      "clip": 154
      }
     ]
    ],
@@ -1483,7 +1666,8 @@
      "kwon",
      "So. There is another Keyholder.",
      {
-      "tone": "cold, dangerous"
+      "tone": "cold, dangerous",
+      "clip": 155
      }
     ]
    ],
@@ -1496,14 +1680,16 @@
      "kwon",
      "Sit, Ji-ho. Eat. You look thin.",
      {
-      "tone": "fatherly"
+      "tone": "fatherly",
+      "clip": 156
      }
     ],
     [
      "kwon",
      "Two Keyholders, working together. Every Gate in the world would answer to us. Money. Power. A cure for your sister.",
      {
-      "tone": "persuasive"
+      "tone": "persuasive",
+      "clip": 157
      }
     ]
    ],
@@ -1516,28 +1702,32 @@
      "jiho",
      "And the hunters you locked inside?",
      {
-      "tone": "controlled anger"
+      "tone": "controlled anger",
+      "clip": 158
      }
     ],
     [
      "kwon",
      "Sacrifices. Every great door needs its keys.",
      {
-      "tone": "calm"
+      "tone": "calm",
+      "clip": 159
      }
     ],
     [
      "jiho",
      "No.",
      {
-      "tone": "firm"
+      "tone": "firm",
+      "clip": 160
      }
     ],
     [
      "kwon",
      "Think about it. Hospitals can be such dangerous places.",
      {
-      "tone": "gentle, threatening"
+      "tone": "gentle, threatening",
+      "clip": 161
      }
     ]
    ],
@@ -1550,14 +1740,16 @@
      "mingyu",
      "He's been locking Gates for years. Letting the monsters inside grow. Bigger monster, bigger core. And cores sell for billions.",
      {
-      "tone": "angry"
+      "tone": "angry",
+      "clip": 162
      }
     ],
     [
      "yeonah",
      "And the hunters who asked questions never came back.",
      {
-      "tone": "quiet"
+      "tone": "quiet",
+      "clip": 163
      }
     ]
    ],
@@ -1570,7 +1762,8 @@
      "jiho",
      "My sister's fever spikes every time one of his locked Gates grows. He's not just killing hunters. He's feeding something.",
      {
-      "tone": "horrified"
+      "tone": "horrified",
+      "clip": 164
      }
     ]
    ],
@@ -1583,21 +1776,24 @@
      "yeonah",
      "We take the archive records to the Hunter Association. Tomorrow morning.",
      {
-      "tone": "decisive"
+      "tone": "decisive",
+      "clip": 165
      }
     ],
     [
      "mingyu",
      "And if the Director finds out first?",
      {
-      "tone": "uneasy"
+      "tone": "uneasy",
+      "clip": 166
      }
     ],
     [
      "jiho",
      "Then we'd better hope he doesn't.",
      {
-      "tone": "grim"
+      "tone": "grim",
+      "clip": 167
      }
     ]
    ],
@@ -1610,7 +1806,8 @@
      "voice",
      "There were two Keyholders once. A teacher, and his student. The student wanted to open every door. Even the one that must stay closed.",
      {
-      "tone": "sorrowful"
+      "tone": "sorrowful",
+      "clip": 168
      }
     ]
    ],
@@ -1623,14 +1820,16 @@
      "jiho",
      "The Great Gate.",
      {
-      "tone": "whisper"
+      "tone": "whisper",
+      "clip": 169
      }
     ],
     [
      "voice",
      "Beneath Seoul. And the student's name was Kwon.",
      {
-      "tone": "grave"
+      "tone": "grave",
+      "clip": 170
      }
     ]
    ],
@@ -1643,7 +1842,8 @@
      "kwon",
      "Citizens of Seoul. Tonight, the Hwarang Guild opens the door to a new era.",
      {
-      "tone": "grand, smiling"
+      "tone": "grand, smiling",
+      "clip": 171
      }
     ]
    ],
@@ -1654,7 +1854,10 @@
    "lines": [
     [
      "narrator",
-     "Above Seoul, the largest Gate ever recorded began to open. And this time, it was opening on purpose."
+     "Above Seoul, the largest Gate ever recorded began to open. And this time, it was opening on purpose.",
+     {
+      "clip": 172
+     }
     ]
    ],
    "fx": []
@@ -1666,14 +1869,16 @@
      "nurse",
      "Her fever's off the charts!",
      {
-      "tone": "panicked"
+      "tone": "panicked",
+      "clip": 173
      }
     ],
     [
      "jiah",
      "Oppa. The door is opening.",
      {
-      "tone": "faint"
+      "tone": "faint",
+      "clip": 174
      }
     ]
    ],
@@ -1686,7 +1891,8 @@
      "jiho",
      "Hold on, Ji-ah. I'm going to close it. I promise.",
      {
-      "tone": "determined, tender"
+      "tone": "determined, tender",
+      "clip": 175
      }
     ]
    ],
@@ -1699,28 +1905,32 @@
      "mingyu",
      "So the plan is, the F-rank janitor walks into the biggest Gate in history.",
      {
-      "tone": "nervous laugh"
+      "tone": "nervous laugh",
+      "clip": 176
      }
     ],
     [
      "jiho",
      "Sealer.",
      {
-      "tone": "dry"
+      "tone": "dry",
+      "clip": 177
      }
     ],
     [
      "yeonah",
      "And the S-rank and the B-rank keep him alive.",
      {
-      "tone": "resolute"
+      "tone": "resolute",
+      "clip": 178
      }
     ],
     [
      "mingyu",
      "Great plan. Love it. We're all going to die.",
      {
-      "tone": "sarcastic"
+      "tone": "sarcastic",
+      "clip": 179
      }
     ]
    ],
@@ -1733,7 +1943,8 @@
      "kwon",
      "Ji-ho. My little Sealer. You should have stayed at the back.",
      {
-      "tone": "amused"
+      "tone": "amused",
+      "clip": 180
      }
     ]
    ],
@@ -1746,21 +1957,24 @@
      "yeonah",
      "This is Joon-ho's sword.",
      {
-      "tone": "breaking"
+      "tone": "breaking",
+      "clip": 181
      }
     ],
     [
      "kwon",
      "Your brother asked too many questions too. He made an excellent key.",
      {
-      "tone": "pleasant"
+      "tone": "pleasant",
+      "clip": 182
      }
     ],
     [
      "yeonah",
      "I'm going to end you.",
      {
-      "tone": "cold fury"
+      "tone": "cold fury",
+      "clip": 183
      }
     ]
    ],
@@ -1773,21 +1987,24 @@
      "kwon",
      "Do you know what's behind this door? Power. The core of every Gate that has ever opened.",
      {
-      "tone": "ecstatic"
+      "tone": "ecstatic",
+      "clip": 184
      }
     ],
     [
      "jiho",
      "And my sister? And every hunter you locked away?",
      {
-      "tone": "furious"
+      "tone": "furious",
+      "clip": 185
      }
     ],
     [
      "kwon",
      "Keys for the door. Nothing more.",
      {
-      "tone": "dismissive"
+      "tone": "dismissive",
+      "clip": 186
      }
     ]
    ],
@@ -1800,28 +2017,32 @@
      "kwon",
      "My teacher gave me one fragment and told me to guard this door. Forever. Alone, in the dark.",
      {
-      "tone": "bitter"
+      "tone": "bitter",
+      "clip": 187
      }
     ],
     [
      "kwon",
      "So I decided I would rather open it.",
      {
-      "tone": "quiet, certain"
+      "tone": "quiet, certain",
+      "clip": 188
      }
     ],
     [
      "jiho",
      "He trusted you.",
      {
-      "tone": "angry"
+      "tone": "angry",
+      "clip": 189
      }
     ],
     [
      "kwon",
      "He trusted a lock. I am not a lock.",
      {
-      "tone": "cold"
+      "tone": "cold",
+      "clip": 190
      }
     ]
    ],
@@ -1834,14 +2055,16 @@
      "yeonah",
      "Go, Ji-ho! We've got these!",
      {
-      "tone": "shouting"
+      "tone": "shouting",
+      "clip": 191
      }
     ],
     [
      "mingyu",
      "Go! Before I change my mind!",
      {
-      "tone": "shouting"
+      "tone": "shouting",
+      "clip": 192
      }
     ]
    ],
@@ -1854,14 +2077,16 @@
      "mingyu",
      "My dad closed Gates for twenty years! You think I'm scared of you?",
      {
-      "tone": "roaring"
+      "tone": "roaring",
+      "clip": 193
      }
     ],
     [
      "mingyu",
      "Okay, a little scared! But mostly angry!",
      {
-      "tone": "straining"
+      "tone": "straining",
+      "clip": 194
      }
     ]
    ],
@@ -1874,14 +2099,16 @@
      "kwon",
      "Lock.",
      {
-      "tone": "cold"
+      "tone": "cold",
+      "clip": 195
      }
     ],
     [
      "kwon",
      "Did you really think you were the only one?",
      {
-      "tone": "mocking"
+      "tone": "mocking",
+      "clip": 196
      }
     ]
    ],
@@ -1894,7 +2121,8 @@
      "voice",
      "A Keyholder cannot unlock himself. He must be opened by another.",
      {
-      "tone": "urgent"
+      "tone": "urgent",
+      "clip": 197
      }
     ]
    ],
@@ -1907,7 +2135,8 @@
      "yeonah",
      "Then I'll be your key!",
      {
-      "tone": "fierce shout"
+      "tone": "fierce shout",
+      "clip": 198
      }
     ]
    ],
@@ -1920,14 +2149,16 @@
      "jiah",
      "Oppa. You promised. You always come home.",
      {
-      "tone": "echoing, gentle"
+      "tone": "echoing, gentle",
+      "clip": 199
      }
     ],
     [
      "jiho",
      "I know. I'm coming.",
      {
-      "tone": "determined"
+      "tone": "determined",
+      "clip": 200
      }
     ]
    ],
@@ -1940,14 +2171,16 @@
      "kwon",
      "Impossible!",
      {
-      "tone": "shocked"
+      "tone": "shocked",
+      "clip": 201
      }
     ],
     [
      "jiho",
      "You taught your student to open every door. You forgot why some doors stay closed.",
      {
-      "tone": "steady, powerful"
+      "tone": "steady, powerful",
+      "clip": 202
      }
     ]
    ],
@@ -1960,7 +2193,8 @@
      "jiho",
      "Unlock.",
      {
-      "tone": "final"
+      "tone": "final",
+      "clip": 203
      }
     ]
    ],
@@ -1973,7 +2207,8 @@
      "kwon",
      "No. No! My key!",
      {
-      "tone": "anguished scream"
+      "tone": "anguished scream",
+      "clip": 204
      }
     ]
    ],
@@ -1984,7 +2219,10 @@
    "lines": [
     [
      "narrator",
-     "But it was too late. Behind the door, something enormous opened its eye."
+     "But it was too late. Behind the door, something enormous opened its eye.",
+     {
+      "clip": 205
+     }
     ]
    ],
    "fx": []
@@ -1996,21 +2234,24 @@
      "voice",
      "To seal the Great Gate, someone must lock it from the inside.",
      {
-      "tone": "solemn"
+      "tone": "solemn",
+      "clip": 206
      }
     ],
     [
      "mingyu",
      "No. No way. We're not leaving you!",
      {
-      "tone": "desperate"
+      "tone": "desperate",
+      "clip": 207
      }
     ],
     [
      "jiho",
      "Sealers stay until everyone's out. That's the rule.",
      {
-      "tone": "gentle smile"
+      "tone": "gentle smile",
+      "clip": 208
      }
     ]
    ],
@@ -2023,7 +2264,8 @@
      "yeonah",
      "Ji-ho!",
      {
-      "tone": "screaming"
+      "tone": "screaming",
+      "clip": 209
      }
     ]
    ],
@@ -2036,12 +2278,16 @@
      "jiho",
      "Lock.",
      {
-      "tone": "whisper, final"
+      "tone": "whisper, final",
+      "clip": 210
      }
     ],
     [
      "narrator",
-     "And for the first time in ten years, the biggest door in the world closed."
+     "And for the first time in ten years, the biggest door in the world closed.",
+     {
+      "clip": 211
+     }
     ]
    ],
    "fx": []
@@ -2051,7 +2297,10 @@
    "lines": [
     [
      "narrator",
-     "The sky over Seoul cleared. The Gate was gone."
+     "The sky over Seoul cleared. The Gate was gone.",
+     {
+      "clip": 212
+     }
     ]
    ],
    "fx": []
@@ -2063,14 +2312,16 @@
      "mingyu",
      "He's not coming out, is he?",
      {
-      "tone": "broken"
+      "tone": "broken",
+      "clip": 213
      }
     ],
     [
      "yeonah",
      "He's coming out. He promised his sister.",
      {
-      "tone": "certain"
+      "tone": "certain",
+      "clip": 214
      }
     ]
    ],
@@ -2083,7 +2334,8 @@
      "jiho",
      "Did somebody call a Sealer?",
      {
-      "tone": "exhausted grin"
+      "tone": "exhausted grin",
+      "clip": 215
      }
     ]
    ],
@@ -2096,21 +2348,24 @@
      "mingyu",
      "Don't scare me like that, janitor!",
      {
-      "tone": "crying, laughing"
+      "tone": "crying, laughing",
+      "clip": 216
      }
     ],
     [
      "jiho",
      "Ji-ho.",
      {
-      "tone": "laughing"
+      "tone": "laughing",
+      "clip": 217
      }
     ],
     [
      "yeonah",
      "Idiot.",
      {
-      "tone": "tearful smile"
+      "tone": "tearful smile",
+      "clip": 218
      }
     ]
    ],
@@ -2123,14 +2378,16 @@
      "jiah",
      "Oppa! The knocking stopped!",
      {
-      "tone": "overjoyed"
+      "tone": "overjoyed",
+      "clip": 219
      }
     ],
     [
      "jiho",
      "Told you. I'm the guy who closes doors.",
      {
-      "tone": "warm"
+      "tone": "warm",
+      "clip": 220
      }
     ]
    ],
@@ -2143,21 +2400,24 @@
      "jiah",
      "Unni, will you teach me to use a sword?",
      {
-      "tone": "eager"
+      "tone": "eager",
+      "clip": 221
      }
     ],
     [
      "yeonah",
      "When you're older. And when your brother learns to guard his left side.",
      {
-      "tone": "amused"
+      "tone": "amused",
+      "clip": 222
      }
     ],
     [
      "jiho",
      "I heard that!",
      {
-      "tone": "from the doorway"
+      "tone": "from the doorway",
+      "clip": 223
      }
     ]
    ],
@@ -2170,14 +2430,16 @@
      "anchor",
      "Hwarang Guild Director Kwon has been arrested on charges of illegal Gate manipulation.",
      {
-      "tone": "news broadcast"
+      "tone": "news broadcast",
+      "clip": 224
      }
     ],
     [
      "kwon",
      "You think it's over? There are still five fragments out there. And others are looking for them.",
      {
-      "tone": "unsettling laugh"
+      "tone": "unsettling laugh",
+      "clip": 225
      }
     ]
    ],
@@ -2190,14 +2452,16 @@
      "official",
      "Yoon Ji-ho. Re-evaluation result... unmeasurable?",
      {
-      "tone": "stammering"
+      "tone": "stammering",
+      "clip": 226
      }
     ],
     [
      "jiho",
      "Could you check one more time? Maybe the machine's broken.",
      {
-      "tone": "deadpan"
+      "tone": "deadpan",
+      "clip": 227
      }
     ]
    ],
@@ -2210,42 +2474,48 @@
      "mingyu",
      "Every guild in Korea wants you now. So what are you going to do?",
      {
-      "tone": "curious"
+      "tone": "curious",
+      "clip": 228
      }
     ],
     [
      "jiho",
      "Start my own. Small. Three people. We close the doors nobody else will.",
      {
-      "tone": "content"
+      "tone": "content",
+      "clip": 229
      }
     ],
     [
      "yeonah",
      "Does it have a name?",
      {
-      "tone": "interested"
+      "tone": "interested",
+      "clip": 230
      }
     ],
     [
      "jiho",
      "The Keyholders.",
      {
-      "tone": "proud"
+      "tone": "proud",
+      "clip": 231
      }
     ],
     [
      "mingyu",
      "Cheesy.",
      {
-      "tone": "grinning"
+      "tone": "grinning",
+      "clip": 232
      }
     ],
     [
      "yeonah",
      "I like it.",
      {
-      "tone": "smiling"
+      "tone": "smiling",
+      "clip": 233
      }
     ]
    ],
@@ -2258,7 +2528,8 @@
      "voice",
      "Four fragments of nine, Keyholder. There are other doors.",
      {
-      "tone": "ominous whisper"
+      "tone": "ominous whisper",
+      "clip": 234
      }
     ]
    ],
@@ -2269,11 +2540,17 @@
    "lines": [
     [
      "narrator",
-     "The weakest hunter in Korea had closed the greatest Gate in history. But somewhere out there, other doors were waiting."
+     "The weakest hunter in Korea had closed the greatest Gate in history. But somewhere out there, other doors were waiting.",
+     {
+      "clip": 235
+     }
     ],
     [
      "narrator",
-     "Who do you think holds the other keys? Tell me in the comments. And like and subscribe for more stories like this."
+     "Who do you think holds the other keys? Tell me in the comments. And like and subscribe for more stories like this.",
+     {
+      "clip": 236
+     }
     ]
    ],
    "fx": []

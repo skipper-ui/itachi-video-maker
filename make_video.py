@@ -331,6 +331,29 @@ def prepare_emotive(spec, out_dir):
         sys.exit(f"Chatterbox failed; see {out_dir / 'emotive.log'}")
 
 
+def recorded_clip(spec, line):
+    """The recorded audio for a line, if the script uses recorded clips ("clips_dir") and this one exists.
+
+    Lines carry their clip number in line[2]["clip"]; the file is <clips_dir>/clip-NNN.<mp3|wav|m4a|ogg>."""
+    folder = spec.get("clips_dir")
+    num = line[2].get("clip") if len(line) > 2 and isinstance(line[2], dict) else None
+    if not folder or num is None:
+        return None
+    for ext in ("mp3", "wav", "m4a", "ogg", "webm"):
+        p = Path(folder) / f"clip-{num:03d}.{ext}"
+        if p.exists():
+            return p
+    return None
+
+
+def decode_audio(path):
+    """Any audio file -> (float32 mono samples at 24 kHz, 24000)."""
+    import numpy as np
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "f32le", "-ac", "1", "-ar", "24000", "pipe:1"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(pcm, dtype="<f4").copy(), 24000
+
+
 def synthesize_lines(scene_idx, scene, spec, out_dir, force):
     """Voice a scene written as cast lines: [[speaker, text], ...].
 
@@ -345,7 +368,9 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
     timing = out_dir / f"scene{scene_idx:02d}.timing.json"
     lines_path = out_dir / f"scene{scene_idx:02d}.lines.json"
     skip = emotive_skip(spec)
-    key = fingerprint(scene["lines"], {k: cast[k] for k in {l[0] for l in scene["lines"]}}, provider, speed, TTS_MODEL, spec.get("emotive"))
+    clips = [recorded_clip(spec, line) for line in scene["lines"]]
+    key = fingerprint(scene["lines"], {k: cast[k] for k in {l[0] for l in scene["lines"]}}, provider, speed, TTS_MODEL, spec.get("emotive"),
+                      [(c.name, c.stat().st_size, c.stat().st_mtime_ns) if c else None for c in clips])
     if not force and is_fresh(audio, key) and timing.exists() and lines_path.exists():
         return
     chunks, chars, starts, ends, meta, t = [], [], [], [], [], 0.0
@@ -354,13 +379,15 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
         who, text = line[0], line[1]
         if is_silent(text):
             a = np.zeros(int(1.2 * sr), dtype="float32")
+        elif clips[n]:
+            a, sr = decode_audio(clips[n])
         elif provider == "elevenlabs":
             a, sr = eleven_line(text, cast[who], out_dir)
         elif skip is not None and who not in skip:
             a, sr = sf.read(emotive_path(out_dir, emotive_voice(spec, who), line, emotive_engine(spec)), dtype="float32")
         else:
             a, sr = kokoro_line(speech_text(text), cast[who], speed)
-        if skip is not None and len(a) and not is_silent(text):
+        if (skip is not None or spec.get("clips_dir")) and len(a) and not is_silent(text):
             # Even out the two engines: every line to the same speech level, peaks kept under full scale.
             rms = float(np.sqrt(np.mean(a ** 2))) or 1.0
             a = a * min(0.085 / rms, 0.97 / (float(np.abs(a).max()) or 1.0))
@@ -416,12 +443,14 @@ def words_from_alignment(alignment):
 
 def generate_image(provider, scene_idx, prompt, width, height, out_dir, force):
     path = out_dir / f"scene{scene_idx:02d}.png"
-    model = IMAGE_MODEL if provider == "fal" else (MH_MODEL, MH_RESOLUTION)
+    model = {"fal": IMAGE_MODEL, "pollinations": POLLINATIONS_MODEL}.get(provider, (MH_MODEL, MH_RESOLUTION))
     key = fingerprint(prompt, width, height, provider, model)
     if not force and is_fresh(path, key):
         return
     if provider == "magichour":
         magic_hour_image(scene_idx, prompt, width, height, out_dir.name, path)
+    elif provider == "pollinations":
+        pollinations_image(scene_idx, prompt, width, height, path)
     else:
         fal_image(scene_idx, prompt, width, height, path)
     mark(path, key)
@@ -441,6 +470,27 @@ def upscale_images(paths, width):
         sys.exit(f"Upscaling needs {EMOTIVE_PY} and {UPSCALE_MODEL}: see the setup in tools/upscale.py.")
     print(f"Upscaling {len(small)} images...")
     subprocess.run([str(EMOTIVE_PY), str(Path(__file__).parent / "tools" / "upscale.py"), str(UPSCALE_MODEL), *small], check=True)
+
+
+POLLINATIONS_MODEL = os.environ.get("POLLINATIONS_MODEL", "black-forest-labs/flux.2-klein-4b")
+
+
+def pollinations_image(scene_idx, prompt, width, height, path):
+    """One image from Pollinations (gen.pollinations.ai) with POLLINATIONS_API_KEY; retried on rate limits."""
+    from urllib.parse import quote
+    url = f"https://gen.pollinations.ai/image/{quote(prompt)}"
+    params = {"model": POLLINATIONS_MODEL, "width": width, "height": height, "seed": 1000 + scene_idx, "nologo": "true"}
+    for attempt in range(6):
+        r = requests.get(url, params=params, headers={"Authorization": f"Bearer {os.environ['POLLINATIONS_API_KEY']}"}, timeout=300)
+        if r.status_code not in (429, 500, 502, 503, 504):
+            break
+        time.sleep(5 * 2 ** attempt)
+    r.raise_for_status()
+    if not r.headers.get("content-type", "").startswith("image/"):
+        raise RuntimeError(f"Pollinations image {scene_idx + 1}: unexpected response {r.text[:200]}")
+    from PIL import Image
+    import io
+    Image.open(io.BytesIO(r.content)).convert("RGB").save(path)
 
 
 def magic_hour_image(scene_idx, prompt, width, height, project, path):
@@ -836,13 +886,15 @@ def assemble(clips, audios, durations, captions, out_path, cues=(), music=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("script", type=Path)
-    parser.add_argument("--images", choices=["fal", "magichour"],
+    parser.add_argument("--images", choices=["fal", "magichour", "pollinations"],
                         default=os.environ.get("IMAGE_PROVIDER", "fal"),
                         help="image generator (default: $IMAGE_PROVIDER or fal)")
     parser.add_argument("--force", action="store_true", help="regenerate all assets")
     args = parser.parse_args()
 
     spec = json.loads(args.script.read_text())
+    if spec.get("clips_dir"):  # recorded voice clips live next to the script
+        spec["clips_dir"] = str(args.script.parent / spec["clips_dir"])
     name = args.script.parent.name
     # Mirror the project's place under projects/ (e.g. projects/coc/th19 -> output/coc/th19).
     projects_dir = (Path(__file__).parent / "projects").resolve()
@@ -866,7 +918,8 @@ def main():
         else:
             jobs = [pool.submit(synthesize, i, scenes, spec["voice_id"], out_dir, args.force) for i in range(len(scenes))]
         if not motion:
-            jobs += [pool.submit(generate_image, args.images, i, p, width, height, out_dir, args.force)
+            provider = spec.get("images", {}).get("provider", args.images)
+            jobs += [pool.submit(generate_image, provider, i, p, width, height, out_dir, args.force)
                      for i, p in enumerate(prompts)]
         for j in jobs:
             j.result()

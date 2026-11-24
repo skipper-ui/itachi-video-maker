@@ -1,6 +1,8 @@
 # KEYHOLDER: voice script for Speechma
 
-One audio file per clip, named as shown (e.g. `clip-001.mp3`). Read the direction in brackets as acting notes; don't speak it.
+Make one audio file per clip and name it exactly as shown (e.g. `clip-001.mp3`; .wav or .m4a also work). The words in brackets are acting notes: pick a voice and speed that fit, but don't type them into Speechma.
+
+Send the files back in any batch size: every clip you send replaces its placeholder voice in the video, the rest keep the placeholder until you record them.
 
 ## Voices
 
