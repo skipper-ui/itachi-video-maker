@@ -25,6 +25,7 @@ def main():
     ap.add_argument("out", type=Path)
     ap.add_argument("--size", default="1024x576")
     ap.add_argument("--scenes", default="")
+    ap.add_argument("--seed", type=int, default=1000, help="base seed; scene N uses seed+N (change it to redraw a scene)")
     args = ap.parse_args()
     import torch
     from diffusers import Flux2KleinPipeline
@@ -57,7 +58,7 @@ def main():
         for n, i in enumerate(todo, 1):
             emb = torch.load(emb_dir / f"{i:02d}.pt")
             img = painter(prompt_embeds=emb, width=w, height=h, num_inference_steps=4, guidance_scale=1.0,
-                          generator=torch.Generator().manual_seed(1000 + i)).images[0]
+                          generator=torch.Generator().manual_seed(args.seed + i)).images[0]
             tmp = args.out / f"scene{i:02d}.tmp.png"
             img.save(tmp)
             os.replace(tmp, args.out / f"scene{i:02d}.png")

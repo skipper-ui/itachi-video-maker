@@ -73,7 +73,8 @@
   "margin": 0.05
  },
  "images": {
-  "provider": "pollinations"
+  "provider": "pollinations",
+  "upscale": true
  },
  "music": {
   "sound": "music_strategy",
@@ -1762,7 +1763,7 @@
    "fx": []
   },
   {
-   "image": "a closed noodle restaurant at night, Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana and Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets sitting at a small table with bowls, serious faces, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "image": "exactly three people sitting at a small table with noodle bowls in a closed noodle restaurant at night, serious faces, only one woman: on the left Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, in the middle Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana, on the right Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
    "lines": [
     [
      "mingyu",
@@ -1798,7 +1799,7 @@
    "fx": []
   },
   {
-   "image": "Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana placing a thick folder of archive files on the noodle restaurant table, Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets and Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest leaning in, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "image": "exactly three people at a small noodle restaurant table at night, only one woman: on the left Yoon Ji-ho, a 20-year-old Korean young man with messy black hair, tired dark eyes, a thin scar on his left cheek, wearing a worn navy-blue utility jacket with a small brass key badge on the chest, in the middle Seo Yeon-ah, a 22-year-old Korean woman with long straight white hair in a high ponytail, ice-blue eyes, wearing a black and silver armored hunter coat, holding a slender katana placing a thick folder of files on the table, on the right Park Min-gyu, a 23-year-old Korean man with spiky dyed red hair, sharp grin, wearing a red leather hunter jacket and heavy steel gauntlets, both men leaning in, Korean manhwa webtoon art style, clean bold line art, cel shading, dramatic cinematic lighting, vibrant colors, highly detailed illustration, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
    "lines": [
     [
      "yeonah",
