@@ -1,13 +1,13 @@
-"""Upscale AI images 4x with an anime-trained Real-ESRGAN model, run in the Chatterbox environment (PyTorch).
+"""Upscale AI images 4x with an anime-trained Real-ESRGAN model, run in the image environment (PyTorch).
 
 make_video.py calls this for scripts with "images": {"upscale": true}, so 640px images from a free image plan
 come out crisp at 1080p. One-time setup (outside the repo):
 
-  VIRTUAL_ENV=~/.venvs/chatterbox uv pip install spandrel
+  uv venv --python 3.11 ~/.venvs/imagegen && VIRTUAL_ENV=~/.venvs/imagegen uv pip install torch spandrel pillow
   mkdir -p ~/models && curl -L -o ~/models/RealESRGAN_x4plus_anime_6B.pth \\
     https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth
 
-Usage: ~/.venvs/chatterbox/bin/python tools/upscale.py MODEL.pth IMAGE.png [IMAGE.png ...]   (overwrites each image)
+Usage: ~/.venvs/imagegen/bin/python tools/upscale.py MODEL.pth IMAGE.png [IMAGE.png ...]   (overwrites each image)
 """
 import os
 import sys

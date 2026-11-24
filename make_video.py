@@ -466,6 +466,8 @@ def generate_image(provider, scene_idx, prompt, width, height, out_dir, force):
 
 
 UPSCALE_MODEL = Path(os.environ.get("UPSCALE_MODEL", Path.home() / "models" / "RealESRGAN_x4plus_anime_6B.pth"))
+# The upscaler runs in the image environment (torch + spandrel); see tools/upscale.py.
+UPSCALE_PY = Path(os.environ.get("UPSCALE_PYTHON", Path.home() / ".venvs" / "imagegen" / "bin" / "python"))
 
 
 def upscale_images(paths, width):
@@ -476,10 +478,10 @@ def upscale_images(paths, width):
     small = [str(p) for p in paths if image_width(p) < width]
     if not small:
         return
-    if not (EMOTIVE_PY.exists() and UPSCALE_MODEL.exists()):
-        sys.exit(f"Upscaling needs {EMOTIVE_PY} and {UPSCALE_MODEL}: see the setup in tools/upscale.py.")
+    if not (UPSCALE_PY.exists() and UPSCALE_MODEL.exists()):
+        sys.exit(f"Upscaling needs {UPSCALE_PY} and {UPSCALE_MODEL}: see the setup in tools/upscale.py.")
     print(f"Upscaling {len(small)} images...")
-    subprocess.run([str(EMOTIVE_PY), str(Path(__file__).parent / "tools" / "upscale.py"), str(UPSCALE_MODEL), *small], check=True)
+    subprocess.run([str(UPSCALE_PY), str(Path(__file__).parent / "tools" / "upscale.py"), str(UPSCALE_MODEL), *small], check=True)
 
 
 POLLINATIONS_MODEL = os.environ.get("POLLINATIONS_MODEL", "black-forest-labs/flux.2-klein-4b")
