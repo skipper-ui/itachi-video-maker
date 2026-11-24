@@ -14,7 +14,11 @@
   "wizard": "onwK4e9ZLuTAKqWW03F9",
   "goblin": "SOYHLrjzK2X1ezoPC6cr",
   "boss": "N2lVS1w4EtoT3dr4eOWO",
-  "healer": "EXAVITQu4vr4xnSDxMaL"
+  "healer": "EXAVITQu4vr4xnSDxMaL",
+  "barbarians": "CwhRBWXzGAHq8TQ4Fs17",
+  "titan": "pFZP5JQG7iQjIQuC4Bku",
+  "archers": "FGY2WhTYpPnrIDTdsKH5",
+  "goblin2": "TX3LPaxmHKxFdv7VOQHJ"
  },
  "scene_pad": 0.45,
  "caption": {
@@ -35,7 +39,7 @@
    "lines": [
     [
      "narrator",
-     "Two heroes. One statue. And absolutely zero chill."
+     "Two heroes. One kingdom. And room for only one statue."
     ]
    ],
    "page": {
@@ -59,7 +63,7 @@
         "h": 0.55,
         "flip": true,
         "enter": "right",
-        "at": 1.0
+        "at": 0.9
        }
       ],
       "bubbles": [],
@@ -83,7 +87,7 @@
       "text": "THE ROYAL RIVALRY",
       "y": 0.2,
       "size": 96,
-      "at": "lineend:0-0.2"
+      "at": "lineend:0-0.4"
      }
     ]
    },
@@ -95,7 +99,7 @@
     },
     {
      "sound": "stamp",
-     "at": "lineend:0-0.2",
+     "at": "lineend:0-0.4",
      "volume": 0.4
     }
    ]
@@ -198,104 +202,81 @@
   {
    "lines": [
     [
-     "narrator",
-     "There was exactly one pancake left."
-    ],
-    [
      "king",
-     "That pancake is mine."
+     "Morning, Your Majesty."
     ],
     [
      "queen",
-     "I hit twenty bullseyes. Before breakfast."
-    ],
-    [
-     "narrator",
-     "The pancake did not survive."
+     "Morning. You have breakfast in your beard."
     ]
    ],
    "page": {
-    "layout": "1",
+    "layout": "2v",
     "panels": [
      {
       "bg": "warm",
       "art": [
        {
         "name": "king_point",
-        "x": 0.22,
-        "y": 0.72,
-        "h": 0.5
-       },
+        "x": 0.32,
+        "y": 0.6,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.7,
+        "y": 0.26,
+        "tail": [
+         0.45,
+         0.4
+        ],
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
        {
         "name": "queen_stand",
-        "x": 0.78,
-        "y": 0.72,
-        "h": 0.52,
+        "x": 0.68,
+        "y": 0.6,
+        "h": 0.9,
         "flip": true
-       },
-       {
-        "name": "snack_pancakes",
-        "x": 0.5,
-        "y": 0.5,
-        "h": 0.22,
-        "at": 0.3
        }
       ],
       "bubbles": [
        {
         "line": 1,
-        "x": 0.25,
-        "y": 0.13,
-        "tail": [
-         0.22,
-         0.45
-        ],
-        "w": 420
-       },
-       {
-        "line": 2,
-        "x": 0.72,
+        "x": 0.3,
         "y": 0.26,
         "tail": [
-         0.78,
-         0.45
+         0.55,
+         0.4
         ],
-        "w": 420
+        "w": 440
        }
       ],
       "caps": [],
-      "sfx": [
-       {
-        "text": "SPLAT!",
-        "x": 0.5,
-        "y": 0.45,
-        "at": "line:3-0.35",
-        "style": "fire",
-        "size": 150
-       }
-      ],
-      "fx": [
-       "burst:0.5,0.5@line:3-0.35"
-      ],
-      "under": [
-       "speed:0.5,0.6"
-      ]
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
      }
-    ],
-    "shake": [
-     "line:3-0.35"
     ]
    },
    "sfx": [
     {
-     "sound": "impact",
-     "at": "line:3-0.35",
-     "volume": 0.42
-    },
-    {
-     "sound": "impact",
-     "at": "line:3-0.35",
-     "volume": 0.45
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
     }
    ]
   },
@@ -303,7 +284,7 @@
    "lines": [
     [
      "wizard",
-     "The council proposes a statue of the kingdom's greatest hero."
+     "The council proposes a statue of the kingdom's greatest hero!"
     ],
     [
      "king",
@@ -431,94 +412,75 @@
   {
    "lines": [
     [
-     "narrator",
-     "So they made it a contest. Whoever guards the gold best, wins."
+     "king",
+     "I could beat you with one hand!"
     ],
     [
-     "boss",
-     "Tonight, we hit the gold storage."
+     "queen",
+     "You'd need the other one to find your sword."
     ]
    ],
    "page": {
     "layout": "2v",
     "panels": [
      {
-      "bg": "warm",
+      "bg": "red",
       "art": [
-       {
-        "name": "gold_full",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.75
-       },
        {
         "name": "king_point",
-        "x": 0.14,
-        "y": 0.72,
-        "h": 0.55,
-        "at": 1.0
-       },
-       {
-        "name": "queen_stand",
-        "x": 0.86,
-        "y": 0.72,
-        "h": 0.56,
-        "flip": true,
-        "at": 1.6
+        "x": 0.32,
+        "y": 0.6,
+        "h": 0.9
        }
       ],
-      "bubbles": [],
-      "caps": [
+      "bubbles": [
        {
-        "text": "The contest",
-        "at": 0
+        "line": 0,
+        "x": 0.7,
+        "y": 0.26,
+        "tail": [
+         0.45,
+         0.4
+        ],
+        "shout": true,
+        "w": 420
        }
       ],
+      "caps": [],
       "sfx": [],
       "fx": [],
-      "under": []
+      "under": [
+       "speed:0.5,0.5"
+      ]
      },
      {
-      "bg": "night",
+      "bg": "cool",
       "art": [
        {
-        "name": "goblin_02",
-        "x": 0.4,
-        "y": 0.62,
-        "h": 0.9
-       },
-       {
-        "name": "goblin_05",
-        "x": 0.82,
-        "y": 0.7,
-        "h": 0.5,
-        "at": "line:1+0.6"
+        "name": "queen_aim",
+        "x": 0.68,
+        "y": 0.6,
+        "h": 0.9,
+        "flip": true
        }
       ],
       "bubbles": [
        {
         "line": 1,
-        "x": 0.58,
+        "x": 0.3,
         "y": 0.26,
         "tail": [
-         0.45,
-         0.45
+         0.55,
+         0.4
         ],
-        "w": 520
+        "w": 440
        }
       ],
-      "caps": [
-       {
-        "text": "Meanwhile, beyond the walls...",
-        "at": 0,
-        "y": 0.86
-       }
-      ],
+      "caps": [],
       "sfx": [],
       "fx": [],
       "under": [
-       "stars",
-       "moon:0.82,0.2"
+       "speed:0.5,0.5"
       ],
       "at": "line:1-0.4"
      }
@@ -536,185 +498,67 @@
   {
    "lines": [
     [
-     "king",
-     "This one is MINE!"
+     "barbarians",
+     "KING! KING! KING!"
     ],
     [
-     "queen",
-     "Get your own goblin!"
-    ],
-    [
-     "narrator",
-     "They met in the middle. Hard."
-    ]
-   ],
-   "page": {
-    "layout": "1",
-    "panels": [
-     {
-      "bg": "warm",
-      "art": [
-       {
-        "name": "king_charge",
-        "x": 0.2,
-        "y": 0.55,
-        "h": 0.5,
-        "move": [
-         0.4,
-         0.55
-        ],
-        "moveAt": "line:0",
-        "moveEnd": "lineend:1"
-       },
-       {
-        "name": "queen_leap",
-        "x": 0.8,
-        "y": 0.55,
-        "h": 0.5,
-        "flip": true,
-        "move": [
-         0.6,
-         0.55
-        ],
-        "moveAt": "line:0",
-        "moveEnd": "lineend:1"
-       },
-       {
-        "name": "goblin_03",
-        "x": 0.5,
-        "y": 0.82,
-        "h": 0.2
-       }
-      ],
-      "bubbles": [
-       {
-        "line": 0,
-        "x": 0.25,
-        "y": 0.12,
-        "tail": [
-         0.22,
-         0.3
-        ],
-        "shout": true,
-        "w": 400
-       },
-       {
-        "line": 1,
-        "x": 0.75,
-        "y": 0.12,
-        "tail": [
-         0.78,
-         0.3
-        ],
-        "shout": true,
-        "w": 400
-       }
-      ],
-      "caps": [],
-      "sfx": [
-       {
-        "text": "BONK!",
-        "x": 0.5,
-        "y": 0.4,
-        "at": "lineend:1",
-        "style": "fire",
-        "size": 180
-       }
-      ],
-      "fx": [
-       "flash@lineend:1",
-       "dizzy:0.5,0.25@line:2"
-      ],
-      "under": [
-       "speed:0.5,0.55"
-      ]
-     }
-    ],
-    "shake": [
-     "lineend:1"
-    ]
-   },
-   "sfx": [
-    {
-     "sound": "impact",
-     "at": "lineend:1",
-     "volume": 0.42
-    },
-    {
-     "sound": "impact",
-     "at": "lineend:1",
-     "volume": 0.45
-    }
-   ]
-  },
-  {
-   "lines": [
-    [
-     "goblin",
-     "Thanks for the gold! Same time next week?"
-    ],
-    [
-     "warden",
-     "Two heroes. Twenty goblins. And not a single one caught."
+     "archers",
+     "Queen. Obviously."
     ]
    ],
    "page": {
     "layout": "2v",
     "panels": [
      {
-      "bg": "night",
+      "bg": "burst:gold",
       "art": [
        {
-        "name": "goblin_07",
-        "x": 0.62,
-        "y": 0.62,
-        "h": 0.85,
-        "move": [
-         0.85,
-         0.62
-        ],
-        "moveAt": "line:0+1"
+        "name": "barb_emote_set_1",
+        "x": 0.5,
+        "y": 0.6,
+        "h": 0.8
        }
       ],
       "bubbles": [
        {
         "line": 0,
-        "x": 0.3,
-        "y": 0.25,
+        "x": 0.5,
+        "y": 0.2,
         "tail": [
          0.5,
-         0.4
+         0.35
         ],
-        "w": 460
+        "shout": true,
+        "size": 40,
+        "w": 440
        }
       ],
       "caps": [],
       "sfx": [],
       "fx": [],
-      "under": [
-       "stars"
-      ]
+      "under": []
      },
      {
-      "bg": "gloom",
+      "bg": "burst:green",
       "art": [
        {
-        "name": "warden",
+        "name": "archer_emote",
         "x": 0.5,
-        "y": 0.62,
-        "h": 0.88
+        "y": 0.6,
+        "h": 0.8
        }
       ],
       "bubbles": [
        {
         "line": 1,
         "x": 0.5,
-        "y": 0.24,
+        "y": 0.2,
         "tail": [
          0.5,
-         0.42
+         0.35
         ],
-        "w": 600
+        "size": 40,
+        "w": 420
        }
       ],
       "caps": [],
@@ -737,12 +581,322 @@
   {
    "lines": [
     [
-     "narrator",
-     "And far beyond the walls, something in the storm was watching."
+     "warden",
+     "ENOUGH!"
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "gloom",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.8,
+        "enter": "up"
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 80
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "speed:0.5,0.5",
+       "flash@line:0"
+      ],
+      "under": []
+     }
+    ],
+    "shake": [
+     "line:0"
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "impact",
+     "at": "line:0",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "warden",
+     "The next time goblins raid this kingdom, whoever stops them, alone, will be named its greatest hero."
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "paper",
+      "art": [
+       {
+        "name": "warden",
+        "x": 0.5,
+        "y": 0.66,
+        "h": 0.7
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "w": 640
+       }
+      ],
+      "caps": [
+       {
+        "text": "THE CONTEST",
+        "at": 0.3,
+        "size": 48,
+        "y": 0.9
+       }
+      ],
+      "sfx": [],
+      "fx": [
+       "crown:0.5,0.3,1.2@lineend:0-1.5"
+      ],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "king",
+     "Done! Start carving my nose."
     ],
     [
+     "queen",
+     "Carve mine smaller. And prettier."
+    ]
+   ],
+   "page": {
+    "layout": "2v",
+    "panels": [
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_point",
+        "x": 0.32,
+        "y": 0.6,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.7,
+        "y": 0.26,
+        "tail": [
+         0.45,
+         0.4
+        ],
+        "w": 400
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.68,
+        "y": 0.6,
+        "h": 0.9,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.3,
+        "y": 0.26,
+        "tail": [
+         0.55,
+         0.4
+        ],
+        "w": 420
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.4"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.4",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
+     "boss",
+     "Tonight, we hit the gold storage."
+    ],
+    [
+     "king",
+     "MINE!"
+    ],
+    [
+     "queen",
+     "MINE!"
+    ]
+   ],
+   "page": {
+    "layout": "1/2",
+    "panels": [
+     {
+      "bg": "night",
+      "art": [
+       {
+        "name": "goblin_02",
+        "x": 0.5,
+        "y": 0.64,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.2,
+        "tail": [
+         0.5,
+         0.4
+        ],
+        "w": 520
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "stars",
+       "moon:0.82,0.2"
+      ]
+     },
+     {
+      "bg": "warm",
+      "art": [
+       {
+        "name": "king_charge",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "shout": true,
+        "size": 44
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "speed:0.8,0.5"
+      ],
+      "at": "line:1-0.2"
+     },
+     {
+      "bg": "cool",
+      "art": [
+       {
+        "name": "queen_leap",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.9,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.16,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "shout": true,
+        "size": 44
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [
+       "speed:0.2,0.5"
+      ],
+      "at": "line:2-0.2"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1-0.2",
+     "offset": 0.05,
+     "volume": 0.28
+    },
+    {
+     "sound": "pop",
+     "at": "line:2-0.2",
+     "offset": 0.05,
+     "volume": 0.28
+    }
+   ]
+  },
+  {
+   "lines": [
+    [
      "narrator",
-     "Episode one, Who Is the Greatest. Watch the full episode now, on the channel."
+     "Who will be the greatest? And what is watching from the storm?"
     ]
    ],
    "page": {
@@ -755,9 +909,36 @@
       "caps": [],
       "sfx": [],
       "fx": [
-       "bolt:0.15,0,0.3,0.5,0.8@line:0+1.5",
-       "bolt:0.85,0,0.7,0.45,0.8@line:0+2",
-       "eyes:0.5,0.32,0.06,120,210,255@line:0+2.4"
+       "bolt:0.15,0,0.3,0.5,0.8@1.2",
+       "bolt:0.85,0,0.7,0.45,0.8@1.6",
+       "eyes:0.5,0.32,0.06,120,210,255@lineend:0-1.5"
+      ],
+      "under": [
+       "stars"
+      ]
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    [
+     "narrator",
+     "Episode one, Who Is the Greatest. Full episode now, on the channel. Like and subscribe!"
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "eyes:0.5,0.32,0.06,120,210,255@0"
       ],
       "under": [
        "stars"
@@ -767,28 +948,39 @@
     "titles": [
      {
       "text": "FULL EPISODE",
-      "y": 0.5,
+      "y": 0.44,
       "size": 110,
-      "at": "line:1+1.8"
+      "at": 1.2
      },
      {
       "text": "ON THE CHANNEL",
-      "y": 0.6,
+      "y": 0.52,
       "size": 80,
-      "at": "line:1+2.4",
+      "at": 1.8,
       "style": "white"
+     },
+     {
+      "text": "LIKE & SUBSCRIBE",
+      "y": 0.62,
+      "size": 70,
+      "at": "lineend:0-1.4"
      }
     ]
    },
    "sfx": [
     {
      "sound": "stamp",
-     "at": "line:1+1.8",
+     "at": 1.2,
      "volume": 0.4
     },
     {
      "sound": "stamp",
-     "at": "line:1+2.4",
+     "at": 1.8,
+     "volume": 0.4
+    },
+    {
+     "sound": "stamp",
+     "at": "lineend:0-1.4",
      "volume": 0.4
     }
    ]
