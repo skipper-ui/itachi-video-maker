@@ -271,7 +271,7 @@ def prepare_emotive_v3(spec, out_dir, skip):
     # Voice the main characters first, so a key running dry costs the minor roles, not the leads.
     first = spec["emotive"].get("priority", [])
     jobs = dict(sorted(jobs.items(), key=lambda kv: first.index(kv[1][2]) if kv[1][2] in first else len(first)))
-    print(f"Acting {len(jobs)} character lines with ElevenLabs v3 ({sum(len(t) for t, _ in jobs.values())} characters)...")
+    print(f"Acting {len(jobs)} character lines with ElevenLabs v3 ({sum(len(j[0]) for j in jobs.values())} characters)...")
 
     def one(item):
         out, (text, voice, _) = item
