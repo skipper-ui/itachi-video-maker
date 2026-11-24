@@ -429,6 +429,9 @@ spec = {
     "width": 1920, "height": 1080, "title_card": False,
     "tts": "kokoro", "cast": KOKORO, "speed": 0.95, "scene_pad": 0.8,
     "clips_dir": "audio",
+    # Characters acted by ElevenLabs v3 (narrator stays on Kokoro); leads first, local placeholder if credits run out.
+    "emotive": {"engine": "eleven_v3", "cast": ELEVEN, "skip": ["narrator"], "fallback": True,
+                "priority": ["jiho", "yeonah", "kwon", "mingyu", "jiah", "voice"]},
     "caption_speakers": list(NAMES),
     "caption": {"max_chars": 46, "max_words": 8, "size": 0.046, "margin": 0.05},
     "images": {"provider": "pollinations"},

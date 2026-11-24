@@ -265,13 +265,16 @@ def prepare_emotive_v3(spec, out_dir, skip):
             voice = emotive_voice(spec, line[0])
             out = emotive_path(out_dir, voice, line, "eleven_v3")
             if not out.exists():
-                jobs[str(out)] = (v3_text(line), voice)
+                jobs[str(out)] = (v3_text(line), voice, line[0])
     if not jobs:
         return
+    # Voice the main characters first, so a key running dry costs the minor roles, not the leads.
+    first = spec["emotive"].get("priority", [])
+    jobs = dict(sorted(jobs.items(), key=lambda kv: first.index(kv[1][2]) if kv[1][2] in first else len(first)))
     print(f"Acting {len(jobs)} character lines with ElevenLabs v3 ({sum(len(t) for t, _ in jobs.values())} characters)...")
 
     def one(item):
-        out, (text, voice) = item
+        out, (text, voice, _) = item
         a, sr = eleven_v3_line(text, voice)
         sf.write(out + ".tmp.wav", a, sr)
         os.replace(out + ".tmp.wav", out)
@@ -283,7 +286,10 @@ def prepare_emotive_v3(spec, out_dir, skip):
                 fut.result()
             except Exception as e:  # out of credit, network: keep what was made, report the rest
                 failed.append((item[1][0], str(e)[:120]))
-    if failed:
+    if failed and spec["emotive"].get("fallback"):
+        print(f"  ElevenLabs v3 could not voice {len(failed)} of {len(jobs)} lines (first: {failed[0]}); "
+              "they use the local placeholder voice until run again with credit.")
+    elif failed:
         sys.exit(f"ElevenLabs v3 could not voice {len(failed)} of {len(jobs)} lines (first: {failed[0]}). "
                  "Lines already made are cached; run again once the key has credit.")
 
@@ -370,7 +376,9 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
     skip = emotive_skip(spec)
     clips = [recorded_clip(spec, line) for line in scene["lines"]]
     key = fingerprint(scene["lines"], {k: cast[k] for k in {l[0] for l in scene["lines"]}}, provider, speed, TTS_MODEL, spec.get("emotive"),
-                      [(c.name, c.stat().st_size, c.stat().st_mtime_ns) if c else None for c in clips])
+                      [(c.name, c.stat().st_size, c.stat().st_mtime_ns) if c else None for c in clips],
+                      [skip is not None and l[0] not in skip and not is_silent(l[1])
+                       and emotive_path(out_dir, emotive_voice(spec, l[0]), l, emotive_engine(spec)).exists() for l in scene["lines"]])
     if not force and is_fresh(audio, key) and timing.exists() and lines_path.exists():
         return
     chunks, chars, starts, ends, meta, t = [], [], [], [], [], 0.0
@@ -383,8 +391,8 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
             a, sr = decode_audio(clips[n])
         elif provider == "elevenlabs":
             a, sr = eleven_line(text, cast[who], out_dir)
-        elif skip is not None and who not in skip:
-            a, sr = sf.read(emotive_path(out_dir, emotive_voice(spec, who), line, emotive_engine(spec)), dtype="float32")
+        elif skip is not None and who not in skip and (emo := emotive_path(out_dir, emotive_voice(spec, who), line, emotive_engine(spec))).exists():
+            a, sr = sf.read(emo, dtype="float32")
         else:
             a, sr = kokoro_line(speech_text(text), cast[who], speed)
         if (skip is not None or spec.get("clips_dir")) and len(a) and not is_silent(text):
@@ -488,9 +496,8 @@ def pollinations_image(scene_idx, prompt, width, height, path):
     r.raise_for_status()
     if not r.headers.get("content-type", "").startswith("image/"):
         raise RuntimeError(f"Pollinations image {scene_idx + 1}: unexpected response {r.text[:200]}")
-    from PIL import Image
-    import io
-    Image.open(io.BytesIO(r.content)).convert("RGB").save(path)
+    # Pollinations returns JPEG; the pipeline expects sceneNN.png.
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", "pipe:0", str(path)], input=r.content, check=True)
 
 
 def magic_hour_image(scene_idx, prompt, width, height, project, path):

@@ -24,6 +24,34 @@
  "speed": 0.95,
  "scene_pad": 0.8,
  "clips_dir": "audio",
+ "emotive": {
+  "engine": "eleven_v3",
+  "cast": {
+   "jiho": "TX3LPaxmHKxFdv7VOQHJ",
+   "yeonah": "EXAVITQu4vr4xnSDxMaL",
+   "kwon": "cjVigY5qzO86Huf0OWal",
+   "mingyu": "SOYHLrjzK2X1ezoPC6cr",
+   "jiah": "cgSgspJ2msm6clMCkdW9",
+   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "official": "iP95p4xoKVk53GoZ742B",
+   "anchor": "onwK4e9ZLuTAKqWW03F9",
+   "doctor": "pqHfZKP75CvOlQylNhV4",
+   "hunter": "bIHbv24MWmeRgasZH58o",
+   "nurse": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "skip": [
+   "narrator"
+  ],
+  "fallback": true,
+  "priority": [
+   "jiho",
+   "yeonah",
+   "kwon",
+   "mingyu",
+   "jiah",
+   "voice"
+  ]
+ },
  "caption_speakers": [
   "narrator",
   "jiho",
