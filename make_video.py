@@ -74,7 +74,7 @@ def mark(path, key):
 
 # --- narration -------------------------------------------------------------
 
-ELEVEN_KEY_VARS = ("ELEVENLABS_API_KEY", "ELEVENLABS_API_KEY_2", "ELEVENLABS_API_KEY_3")
+ELEVEN_KEY_VARS = ("ELEVENLABS_API_KEY", "ELEVENLABS_API_KEY_2", "ELEVENLABS_API_KEY_3", "ELEVENLABS_API_KEY_4")
 _spent_keys = set()          # key variables that have run out of credit this run
 _spent_lock = threading.Lock()
 
