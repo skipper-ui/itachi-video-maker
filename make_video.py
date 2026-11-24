@@ -213,6 +213,11 @@ def speech_text(text):
     return re.sub(r"(^|[.!?]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), text)
 
 
+def is_silent(text):
+    """A line like "..." is a held beat: a pause, with its bubble on screen, rather than a voice."""
+    return not re.search(r"[A-Za-z0-9]", text)
+
+
 def emotive_engine(spec):
     return spec["emotive"].get("engine", "chatterbox")
 
@@ -255,7 +260,7 @@ def prepare_emotive_v3(spec, out_dir, skip):
     jobs = {}
     for sc in spec["scenes"]:
         for line in sc.get("lines", []):
-            if line[0] in skip:
+            if line[0] in skip or is_silent(line[1]):
                 continue
             voice = emotive_voice(spec, line[0])
             out = emotive_path(out_dir, voice, line, "eleven_v3")
@@ -347,19 +352,21 @@ def synthesize_lines(scene_idx, scene, spec, out_dir, force):
     sr = 24000
     for n, line in enumerate(scene["lines"]):
         who, text = line[0], line[1]
-        if provider == "elevenlabs":
+        if is_silent(text):
+            a = np.zeros(int(1.2 * sr), dtype="float32")
+        elif provider == "elevenlabs":
             a, sr = eleven_line(text, cast[who], out_dir)
         elif skip is not None and who not in skip:
             a, sr = sf.read(emotive_path(out_dir, emotive_voice(spec, who), line, emotive_engine(spec)), dtype="float32")
         else:
             a, sr = kokoro_line(speech_text(text), cast[who], speed)
-        if skip is not None and len(a):
+        if skip is not None and len(a) and not is_silent(text):
             # Even out the two engines: every line to the same speech level, peaks kept under full scale.
             rms = float(np.sqrt(np.mean(a ** 2))) or 1.0
             a = a * min(0.085 / rms, 0.97 / (float(np.abs(a).max()) or 1.0))
         # Trim Kokoro's leading/trailing near-silence so timings sit on the speech.
         loud = np.where(np.abs(a) > 0.01)[0]
-        if len(loud):
+        if len(loud) and not is_silent(text):
             a = a[max(0, loud[0] - int(0.03 * sr)): loud[-1] + int(0.06 * sr)]
         dur = len(a) / sr
         body = (" " if n else "") + text

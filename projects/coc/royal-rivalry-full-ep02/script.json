@@ -17,11 +17,27 @@
   "boss": "am_onyx",
   "barbarians": "am_eric",
   "archers": "af_kore",
-  "healer": "af_sky"
+  "healer": "af_sky",
+  "titan": "bf_emma"
  },
  "speed": 0.92,
  "scene_pad": 1.0,
  "emotive": {
+  "engine": "eleven_v3",
+  "cast": {
+   "narrator": "IKne3meq5aSn9XLyUdCD",
+   "king": "nPczCjzI2devNBz1zQrb",
+   "queen": "Xb7hH8MSUJpSbSDYk0k2",
+   "warden": "JBFqnCBsd6RMkjVDRZzb",
+   "wizard": "onwK4e9ZLuTAKqWW03F9",
+   "goblin": "SOYHLrjzK2X1ezoPC6cr",
+   "boss": "N2lVS1w4EtoT3dr4eOWO",
+   "healer": "EXAVITQu4vr4xnSDxMaL",
+   "barbarians": "CwhRBWXzGAHq8TQ4Fs17",
+   "titan": "pFZP5JQG7iQjIQuC4Bku",
+   "archers": "FGY2WhTYpPnrIDTdsKH5",
+   "goblin2": "TX3LPaxmHKxFdv7VOQHJ"
+  },
   "skip": [
    "narrator"
   ]
@@ -47,12 +63,15 @@
      "Previously, on The Royal Rivalry. Two heroes. One statue. And one very bad night."
     ],
     [
-     "narrator",
-     "The Barbarian King and the Archer Queen were given one job: guard the gold. Together."
+     "goblin",
+     "Thanks for the gold! Same time next week?",
+     {
+      "tone": "cheeky"
+     }
     ],
     [
      "narrator",
-     "They guarded each other instead. Twenty goblins walked away rich."
+     "And on a storm-dark hill, something had watched it all."
     ]
    ],
    "page": {
@@ -102,23 +121,6 @@
       ]
      },
      {
-      "bg": "dawn",
-      "art": [
-       {
-        "name": "gold_empty",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.6
-       }
-      ],
-      "bubbles": [],
-      "caps": [],
-      "sfx": [],
-      "fx": [],
-      "under": [],
-      "at": "line:1"
-     },
-     {
       "bg": "night",
       "art": [
        {
@@ -128,10 +130,36 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 340
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
+      "under": [
+       "stars"
+      ],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "dark",
+      "art": [],
+      "bubbles": [],
+      "caps": [],
+      "sfx": [],
+      "fx": [
+       "eyes:0.5,0.45,0.1,120,210,255@line:2+1.5"
+      ],
       "under": [
        "stars"
       ],
@@ -147,7 +175,7 @@
     },
     {
      "sound": "pop",
-     "at": "line:1",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
@@ -163,11 +191,7 @@
    "lines": [
     [
      "narrator",
-     "But on a storm-dark hill beyond the walls, something had watched the whole thing."
-    ],
-    [
-     "narrator",
-     "Today, we find out what."
+     "Today, it stops watching."
     ]
    ],
    "page": {
@@ -180,9 +204,9 @@
       "caps": [],
       "sfx": [],
       "fx": [
-       "bolt:0.15,0,0.3,0.6,0.7@line:0+2",
-       "bolt:0.85,0,0.7,0.55,0.7@line:0+2.4",
-       "eyes:0.5,0.42,0.06,120,210,255@line:0+3"
+       "bolt:0.15,0,0.3,0.6,0.7@0.4",
+       "bolt:0.85,0,0.7,0.55,0.7@0.8",
+       "eyes:0.5,0.42,0.06,120,210,255@0.2"
       ],
       "under": [
        "stars"
@@ -194,13 +218,13 @@
       "text": "THE ROYAL RIVALRY",
       "y": 0.36,
       "size": 120,
-      "at": "line:1-0.2"
+      "at": 0.9
      },
      {
       "text": "EPISODE 2: THE STORM ARRIVES",
       "y": 0.53,
       "size": 54,
-      "at": "line:1+0.6",
+      "at": 1.6,
       "style": "white"
      }
     ]
@@ -208,12 +232,12 @@
    "sfx": [
     {
      "sound": "stamp",
-     "at": "line:1-0.2",
+     "at": 0.9,
      "volume": 0.4
     },
     {
      "sound": "stamp",
-     "at": "line:1+0.6",
+     "at": 1.6,
      "volume": 0.4
     }
    ]
@@ -221,24 +245,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "The morning after the raid, the Grand Warden called both heroes to the broken wall."
-    ],
-    [
      "warden",
-     "You lost the gold together. So together, you will rebuild this wall."
+     "You two lost the gold together. So together, you will rebuild this wall.",
+     {
+      "tone": "stern"
+     }
     ],
     [
      "king",
-     "With HER?"
+     "With HER?",
+     {
+      "tone": "outraged"
+     }
     ],
     [
      "queen",
-     "With HIM?"
+     "With HIM?",
+     {
+      "tone": "appalled"
+     }
     ],
     [
      "warden",
-     "With each other. Bring gloves."
+     "With each other. Bring gloves.",
+     {
+      "tone": "dry"
+     }
     ]
    ],
    "page": {
@@ -256,7 +288,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -266,7 +298,7 @@
         "w": 560
        },
        {
-        "line": 4,
+        "line": 3,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -297,6 +329,35 @@
       ],
       "bubbles": [
        {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 34
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": [],
+      "at": "line:1-0.3"
+     },
+     {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "aq_emote",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
         "line": 2,
         "x": 0.5,
         "y": 0.15,
@@ -313,48 +374,19 @@
       "fx": [],
       "under": [],
       "at": "line:2-0.3"
-     },
-     {
-      "bg": "burst:purple",
-      "art": [
-       {
-        "name": "aq_emote",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.85
-       }
-      ],
-      "bubbles": [
-       {
-        "line": 3,
-        "x": 0.5,
-        "y": 0.15,
-        "tail": [
-         0.5,
-         0.3
-        ],
-        "shout": true,
-        "size": 34
-       }
-      ],
-      "caps": [],
-      "sfx": [],
-      "fx": [],
-      "under": [],
-      "at": "line:3-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:3-0.3",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -363,12 +395,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The King carried three stones at once, because carrying one stone was for people with small arms."
+     "king",
+     "Three stones at once! Carrying one stone is for people with small arms!",
+     {
+      "tone": "straining, proud"
+     }
     ],
     [
-     "narrator",
-     "The Queen placed each stone with a ruler, because a wall should be straight. Obviously."
+     "queen",
+     "And every stone placed with a ruler. A wall should be straight. Obviously.",
+     {
+      "tone": "precise"
+     }
     ]
    ],
    "page": {
@@ -398,13 +436,26 @@
         "at": 1.6
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 24,
+        "w": 420
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "HUFF! PUFF!",
         "x": 0.5,
-        "y": 0.14,
+        "y": 0.88,
         "at": 2.0,
         "style": "red",
         "size": 60
@@ -430,13 +481,25 @@
         "at": "line:1+1.5"
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 420
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "TAP. TAP.",
         "x": 0.7,
-        "y": 0.2,
+        "y": 0.88,
         "at": "line:1+2",
         "style": "green",
         "size": 54
@@ -471,19 +534,31 @@
    "lines": [
     [
      "king",
-     "It's a wall, not a painting."
+     "It's a wall, not a painting.",
+     {
+      "tone": "irritated"
+     }
     ],
     [
      "queen",
-     "Your half is leaning."
+     "Your half is leaning.",
+     {
+      "tone": "flat"
+     }
     ],
     [
      "king",
-     "My half is NOT leaning."
+     "My half is NOT leaning!",
+     {
+      "tone": "indignant"
+     }
     ],
     [
-     "narrator",
-     "His half was leaning."
+     "wizard",
+     "It's leaning a little.",
+     {
+      "tone": "timid"
+     }
     ]
    ],
    "page": {
@@ -517,6 +592,13 @@
         "y": 0.66,
         "h": 0.74,
         "flip": true
+       },
+       {
+        "name": "wizard",
+        "x": 0.5,
+        "y": 0.5,
+        "h": 0.3,
+        "at": "line:3-0.3"
        }
       ],
       "bubbles": [
@@ -546,14 +628,23 @@
          0.15,
          0.32
         ],
-        "shout": true,
-        "at": "line:2"
+        "shout": true
+       },
+       {
+        "line": 3,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.32
+        ],
+        "size": 26
        }
       ],
       "caps": [
        {
         "text": "It was leaning.",
-        "at": "line:3",
+        "at": "lineend:3",
         "x": 0.4,
         "y": 0.88
        }
@@ -569,20 +660,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "By noon, they had drawn a line right down the middle of the wall."
-    ],
-    [
      "king",
-     "This side is mine."
+     "Right. A line. Down the middle. This side is mine.",
+     {
+      "tone": "territorial"
+     }
     ],
     [
      "queen",
-     "This side is mine."
+     "And this side is mine.",
+     {
+      "tone": "territorial"
+     }
     ],
     [
      "wizard",
-     "It's... one wall. You do know it's one wall?"
+     "It's... one wall. You do know it's one wall?",
+     {
+      "tone": "baffled"
+     }
     ]
    ],
    "page": {
@@ -596,6 +692,35 @@
         "x": 0.5,
         "y": 0.62,
         "h": 0.85
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24,
+        "w": 380
+       }
+      ],
+      "caps": [],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     },
+     {
+      "bg": "burst:purple",
+      "art": [
+       {
+        "name": "queen_stand",
+        "x": 0.5,
+        "y": 0.62,
+        "h": 0.85,
+        "flip": true
        }
       ],
       "bubbles": [
@@ -614,34 +739,6 @@
       "fx": [],
       "under": [],
       "at": "line:1-0.3"
-     },
-     {
-      "bg": "burst:purple",
-      "art": [
-       {
-        "name": "queen_stand",
-        "x": 0.5,
-        "y": 0.62,
-        "h": 0.85,
-        "flip": true
-       }
-      ],
-      "bubbles": [
-       {
-        "line": 2,
-        "x": 0.5,
-        "y": 0.14,
-        "tail": [
-         0.5,
-         0.3
-        ]
-       }
-      ],
-      "caps": [],
-      "sfx": [],
-      "fx": [],
-      "under": [],
-      "at": "line:2-0.3"
      },
      {
       "bg": "warm",
@@ -663,12 +760,12 @@
         "x": 0.82,
         "y": 0.62,
         "h": 0.62,
-        "at": "line:3-0.4"
+        "at": "line:2-0.4"
        }
       ],
       "bubbles": [
        {
-        "line": 3,
+        "line": 2,
         "x": 0.45,
         "y": 0.14,
         "tail": [
@@ -693,7 +790,7 @@
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -702,24 +799,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "The villagers took sides again, of course."
-    ],
-    [
      "barbarians",
-     "Team King snack delivery! Extra crunchy!"
+     "Team King snack delivery! Extra crunchy!",
+     {
+      "tone": "cheerful shout"
+     }
     ],
     [
      "archers",
-     "Tea for the Queen. Exactly as you like it."
+     "Tea for the Queen. Exactly as you like it.",
+     {
+      "tone": "polite"
+     }
     ],
     [
      "king",
-     "Is that tea? Can I have some tea?"
+     "Is that tea? Can I have some tea?",
+     {
+      "tone": "hopeful"
+     }
     ],
     [
      "queen",
-     "Get your own tea."
+     "Get your own tea.",
+     {
+      "tone": "cold"
+     }
     ]
    ],
    "page": {
@@ -744,7 +849,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.68,
         "y": 0.14,
         "tail": [
@@ -757,8 +862,7 @@
       "caps": [],
       "sfx": [],
       "fx": [],
-      "under": [],
-      "at": "line:1-0.3"
+      "under": []
      },
      {
       "bg": "burst:green",
@@ -778,7 +882,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -792,7 +896,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      },
      {
       "bg": "burst:orange",
@@ -806,7 +910,7 @@
       ],
       "bubbles": [
        {
-        "line": 3,
+        "line": 2,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -816,34 +920,33 @@
         "w": 380
        },
        {
-        "line": 4,
+        "line": 3,
         "x": 0.5,
         "y": 0.86,
         "tail": [
          0.5,
          0.7
-        ],
-        "at": "line:4-0.1"
+        ]
        }
       ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:3-0.3"
+      "at": "line:2-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:3-0.3",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -852,20 +955,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "Then a letter arrived, nailed to an arrow, signed with a muddy green thumbprint."
+     "wizard",
+     "A letter! Nailed to an arrow. Signed with a muddy green thumbprint.",
+     {
+      "tone": "reading aloud"
+     }
     ],
     [
      "boss",
-     "Dear King and Queen. Thank you for the gold. Same time next week? Love, the Goblins."
+     "Dear King and Queen. Thank you for the gold. Same time next week? Love, the Goblins.",
+     {
+      "tone": "smug"
+     }
     ],
     [
      "king",
-     "I will hunt down every goblin in this valley."
+     "I will hunt down every goblin in this valley!",
+     {
+      "tone": "furious"
+     }
     ],
     [
      "queen",
-     "You couldn't hunt down one. I was there."
+     "You couldn't hunt down one. I was there.",
+     {
+      "tone": "dry"
+     }
     ]
    ],
    "page": {
@@ -881,9 +996,25 @@
         "h": 0.7,
         "enter": "right",
         "at": "line:1-0.3"
+       },
+       {
+        "name": "wizard",
+        "x": 0.14,
+        "y": 0.7,
+        "h": 0.5
        }
       ],
       "bubbles": [
+       {
+        "line": 0,
+        "x": 0.38,
+        "y": 0.3,
+        "tail": [
+         0.15,
+         0.5
+        ],
+        "w": 520
+       },
        {
         "line": 1,
         "x": 0.38,
@@ -892,8 +1023,8 @@
          0.7,
          0.4
         ],
-        "w": 640,
-        "size": 36
+        "w": 600,
+        "size": 34
        }
       ],
       "caps": [
@@ -985,16 +1116,139 @@
   {
    "lines": [
     [
-     "narrator",
-     "In the Town Hall, the Wizard gave his daily weather report."
+     "king",
+     "You know... your half isn't bad.",
+     {
+      "tone": "awkward"
+     }
     ],
+    [
+     "queen",
+     "Your half is still leaning.",
+     {
+      "tone": "dry"
+     }
+    ],
+    [
+     "king",
+     "Leaning with style.",
+     {
+      "tone": "grinning"
+     }
+    ],
+    [
+     "queen",
+     "Ha. That was almost funny.",
+     {
+      "tone": "trying not to laugh"
+     }
+    ]
+   ],
+   "page": {
+    "layout": "1",
+    "panels": [
+     {
+      "bg": "dusk",
+      "art": [
+       {
+        "name": "wall",
+        "x": 0.32,
+        "y": 0.76,
+        "h": 0.45,
+        "rot": -0.12
+       },
+       {
+        "name": "wall",
+        "x": 0.68,
+        "y": 0.76,
+        "h": 0.45
+       },
+       {
+        "name": "king_point",
+        "x": 0.14,
+        "y": 0.66,
+        "h": 0.66
+       },
+       {
+        "name": "queen_stand",
+        "x": 0.86,
+        "y": 0.66,
+        "h": 0.68,
+        "flip": true
+       }
+      ],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.26,
+        "y": 0.14,
+        "tail": [
+         0.15,
+         0.34
+        ],
+        "w": 400
+       },
+       {
+        "line": 1,
+        "x": 0.76,
+        "y": 0.14,
+        "tail": [
+         0.86,
+         0.34
+        ],
+        "w": 380
+       },
+       {
+        "line": 2,
+        "x": 0.26,
+        "y": 0.14,
+        "tail": [
+         0.15,
+         0.34
+        ],
+        "w": 360
+       },
+       {
+        "line": 3,
+        "x": 0.76,
+        "y": 0.14,
+        "tail": [
+         0.86,
+         0.34
+        ],
+        "w": 400
+       }
+      ],
+      "caps": [
+       {
+        "text": "Sunset",
+        "at": 0,
+        "y": 0.9
+       }
+      ],
+      "sfx": [],
+      "fx": [],
+      "under": []
+     }
+    ]
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
     [
      "wizard",
-     "Clear skies all week. Not a single cloud. Lovely weather for wall building."
+     "Today's weather! Clear skies all week. Not a single cloud. Lovely weather for wall building!",
+     {
+      "tone": "chirpy"
+     }
     ],
     [
-     "narrator",
-     "High above the hills, a cloud disagreed."
+     "barbarians",
+     "Then what's that cloud?",
+     {
+      "tone": "confused"
+     }
     ]
    ],
    "page": {
@@ -1019,7 +1273,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -1029,7 +1283,12 @@
         "w": 520
        }
       ],
-      "caps": [],
+      "caps": [
+       {
+        "text": "The weather report",
+        "at": 0
+       }
+      ],
       "sfx": [],
       "fx": [],
       "under": []
@@ -1037,39 +1296,50 @@
      {
       "bg": "storm",
       "art": [],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 26
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "RUMBLE...",
         "x": 0.5,
-        "y": 0.78,
-        "at": "line:2+1",
+        "y": 0.2,
+        "at": "line:1+1",
         "style": "zap",
         "size": 70
        }
       ],
       "fx": [
-       "bolt:0.6,0,0.5,0.5,0.5@line:2+1.2",
-       "flash@line:2+1.2"
+       "bolt:0.6,0,0.5,0.5,0.5@line:1+1.2",
+       "flash@line:1+1.2"
       ],
       "under": [
        "smoke:0.5,0.4,80"
       ],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "magic",
-     "at": "line:2+1",
+     "at": "line:1+1",
      "volume": 0.42
     }
    ]
@@ -1077,16 +1347,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "That afternoon, a visitor flew in over the walls. The kingdom's Healer, back from a long journey."
-    ],
-    [
      "healer",
-     "Is it just me, or is the wind strange today? It makes my wings tingle."
+     "I'm home! Did you miss me? Is it just me, or is the wind strange today? It makes my wings tingle.",
+     {
+      "tone": "bright, then puzzled"
+     }
     ],
     [
      "warden",
-     "It is not just you."
+     "It is not just you.",
+     {
+      "tone": "grave"
+     }
     ]
    ],
    "page": {
@@ -1106,19 +1378,19 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
          0.5,
          0.3
         ],
-        "w": 560
+        "w": 600
        }
       ],
       "caps": [
        {
-        "text": "The Healer",
+        "text": "The Healer returns",
         "at": 0
        }
       ],
@@ -1144,7 +1416,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:1"
+      "at": "line:0+3"
      },
      {
       "bg": "gloom",
@@ -1158,7 +1430,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -1173,20 +1445,20 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:1",
+     "at": "line:0+3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -1196,19 +1468,31 @@
    "lines": [
     [
      "healer",
-     "You have felt this wind before, haven't you?"
+     "You have felt this wind before, haven't you?",
+     {
+      "tone": "gentle"
+     }
     ],
     [
      "warden",
-     "Once. Many years ago, before there were walls here. Before there was a kingdom."
+     "Once. Many years ago, before there were walls here. Before there was a kingdom.",
+     {
+      "tone": "distant"
+     }
     ],
     [
      "healer",
-     "And what happened?"
+     "And what happened?",
+     {
+      "tone": "curious"
+     }
     ],
     [
      "warden",
-     "Ask me again tomorrow. If there is a tomorrow."
+     "Ask me again tomorrow. If there is a tomorrow.",
+     {
+      "tone": "heavy"
+     }
     ]
    ],
    "page": {
@@ -1305,16 +1589,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "Down by the collectors, the Elixir began to do something it had never done before."
-    ],
-    [
      "wizard",
-     "The Elixir is... fizzing. Elixir does not fizz. Why is it fizzing?"
+     "The Elixir is... fizzing. Elixir does not fizz. Why is it fizzing?",
+     {
+      "tone": "alarmed"
+     }
     ],
     [
-     "narrator",
-     "Every drop of it was trembling, and every drop was pointing at the hills."
+     "archers",
+     "And look. Every drop is pointing the same way. At the hills.",
+     {
+      "tone": "uneasy"
+     }
     ]
    ],
    "page": {
@@ -1341,20 +1627,36 @@
         "x": 0.9,
         "y": 0.66,
         "h": 0.55,
-        "flip": true,
-        "at": "line:1-0.4"
+        "flip": true
+       },
+       {
+        "name": "archer",
+        "x": 0.1,
+        "y": 0.7,
+        "h": 0.45,
+        "at": "line:1-0.3"
        }
       ],
       "bubbles": [
        {
-        "line": 1,
-        "x": 0.5,
+        "line": 0,
+        "x": 0.6,
         "y": 0.14,
         "tail": [
          0.85,
          0.34
         ],
-        "w": 540
+        "w": 520
+       },
+       {
+        "line": 1,
+        "x": 0.35,
+        "y": 0.14,
+        "tail": [
+         0.12,
+         0.4
+        ],
+        "w": 480
        }
       ],
       "caps": [],
@@ -1363,15 +1665,15 @@
         "text": "FIZZ! FIZZ!",
         "x": 0.5,
         "y": 0.86,
-        "at": "line:1+0.6",
+        "at": 0.6,
         "style": "purple",
         "size": 60
        }
       ],
       "fx": [
        "glow:0.5,0.5,520,200,120,255",
-       "bolt:0.3,0.3,0.7,0.35,0.5@line:1+2",
-       "bolt:0.7,0.35,0.95,0.1,0.5@line:2+1"
+       "bolt:0.3,0.3,0.7,0.35,0.5@1.5",
+       "bolt:0.7,0.35,0.95,0.1,0.5@line:1+1.5"
       ],
       "under": []
      }
@@ -1380,7 +1682,7 @@
    "sfx": [
     {
      "sound": "magic",
-     "at": "line:1+0.6",
+     "at": 0.6,
      "volume": 0.42
     }
    ]
@@ -1388,20 +1690,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Beyond the walls, the Goblin Boss sniffed the wind, and turned very pale. Very pale, for a green person."
-    ],
-    [
      "boss",
-     "Boys. Pack up the snacks. We're leaving."
+     "Boys. Pack up the snacks. We're leaving.",
+     {
+      "tone": "spooked"
+     }
     ],
     [
      "goblin",
-     "But we just unpacked the snacks!"
+     "But we just unpacked the snacks!",
+     {
+      "tone": "whining"
+     }
     ],
     [
      "boss",
-     "When goblins run away from something, everybody else should too."
+     "When goblins run away from something, everybody else should too.",
+     {
+      "tone": "deadly serious"
+     }
     ]
    ],
    "page": {
@@ -1419,7 +1726,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -1428,7 +1735,7 @@
         ]
        },
        {
-        "line": 3,
+        "line": 2,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -1438,7 +1745,12 @@
         "w": 520
        }
       ],
-      "caps": [],
+      "caps": [
+       {
+        "text": "Beyond the walls",
+        "at": 0
+       }
+      ],
       "sfx": [],
       "fx": [],
       "under": []
@@ -1455,7 +1767,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.15,
         "tail": [
@@ -1470,7 +1782,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      },
      {
       "bg": "storm",
@@ -1484,7 +1796,7 @@
          -0.2,
          0.74
         ],
-        "moveAt": "line:3"
+        "moveAt": "line:2"
        },
        {
         "name": "goblin_03",
@@ -1495,31 +1807,31 @@
          -0.1,
          0.76
         ],
-        "moveAt": "line:3+0.4"
+        "moveAt": "line:2+0.4"
        }
       ],
       "bubbles": [],
       "caps": [],
       "sfx": [],
       "fx": [
-       "bolt:0.5,0,0.45,0.7,0.8@line:3+1.5",
-       "flash@line:3+1.5"
+       "bolt:0.5,0,0.45,0.7,0.8@line:2+1.5",
+       "flash@line:2+1.5"
       ],
       "under": [],
-      "at": "line:3-0.3"
+      "at": "line:2-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:3-0.3",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -1528,16 +1840,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "That night, the Warden sat alone with his Eternal Tome, the old book that had shielded this kingdom a hundred times."
-    ],
-    [
-     "narrator",
-     "Its pages turned by themselves, and stopped on a drawing of a storm."
+     "warden",
+     "Old friend. You have shielded this kingdom a hundred times. Tell me what is coming.",
+     {
+      "tone": "whispering"
+     }
     ],
     [
      "warden",
-     "I have felt this wind before. Long ago. I had hoped never to feel it again."
+     "A storm. I have felt this wind before. I had hoped never to feel it again.",
+     {
+      "tone": "fearful"
+     }
     ]
    ],
    "page": {
@@ -1561,7 +1875,18 @@
         "at": 2
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.45,
+        "y": 0.13,
+        "tail": [
+         0.32,
+         0.3
+        ],
+        "w": 560
+       }
+      ],
       "caps": [
        {
         "text": "That night",
@@ -1591,7 +1916,7 @@
       "caps": [],
       "sfx": [],
       "fx": [
-       "sigil:0.5,0.5,110@line:1+2.5"
+       "sigil:0.5,0.5,110@line:1+1"
       ],
       "under": [],
       "at": "line:1-0.3"
@@ -1608,14 +1933,14 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.14,
         "tail": [
          0.5,
          0.3
         ],
-        "size": 26,
+        "size": 22,
         "w": 380
        }
       ],
@@ -1625,7 +1950,7 @@
       "under": [
        "stars"
       ],
-      "at": "line:2-0.3"
+      "at": "line:1+2"
      }
     ]
    },
@@ -1638,7 +1963,7 @@
     },
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1+2",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -1647,12 +1972,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The next day, at noon, the sky went dark. No rain. No wind. Just a low, crackling hum."
+     "barbarians",
+     "Uh, is it supposed to be night at lunchtime?",
+     {
+      "tone": "nervous"
+     }
     ],
     [
-     "barbarians",
-     "Uh, is it supposed to be night at lunchtime?"
+     "archers",
+     "No rain. No wind. Just that humming.",
+     {
+      "tone": "whispering"
+     }
     ]
    ],
    "page": {
@@ -1671,13 +2002,19 @@
         "name": "barb_emote_set_3",
         "x": 0.85,
         "y": 0.7,
-        "h": 0.5,
-        "at": "line:1-0.4"
+        "h": 0.5
+       },
+       {
+        "name": "archer_emote",
+        "x": 0.15,
+        "y": 0.7,
+        "h": 0.45,
+        "at": "line:1-0.3"
        }
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.62,
         "y": 0.2,
         "tail": [
@@ -1685,6 +2022,16 @@
          0.4
         ],
         "w": 440
+       },
+       {
+        "line": 1,
+        "x": 0.38,
+        "y": 0.2,
+        "tail": [
+         0.18,
+         0.4
+        ],
+        "w": 400
        }
       ],
       "caps": [
@@ -1693,7 +2040,16 @@
         "at": 0
        }
       ],
-      "sfx": [],
+      "sfx": [
+       {
+        "text": "HMMMMM...",
+        "x": 0.5,
+        "y": 0.9,
+        "at": 0.5,
+        "style": "zap",
+        "size": 60
+       }
+      ],
       "fx": [
        "darken:0.4@0.5"
       ],
@@ -1704,25 +2060,36 @@
      }
     ]
    },
-   "sfx": []
+   "sfx": [
+    {
+     "sound": "magic",
+     "at": 0.5,
+     "volume": 0.42
+    }
+   ]
   },
   {
    "lines": [
     [
-     "narrator",
-     "Then a single bolt of lightning struck the new wall. Exactly on the line down the middle."
-    ],
-    [
      "king",
-     "It hit MY side!"
+     "It hit MY side!",
+     {
+      "tone": "outraged"
+     }
     ],
     [
      "queen",
-     "It hit the line. The line is mine."
+     "It hit the line. The line is mine.",
+     {
+      "tone": "smug"
+     }
     ],
     [
      "warden",
-     "Both of you. Quiet. Look up."
+     "Both of you. Quiet. Look up.",
+     {
+      "tone": "urgent hush"
+     }
     ]
    ],
    "page": {
@@ -1740,7 +2107,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.15,
         "tail": [
@@ -1755,7 +2122,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:1-0.3"
+      "at": 1.4
      },
      {
       "bg": "burst:purple",
@@ -1769,7 +2136,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.15,
         "tail": [
@@ -1784,7 +2151,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2-0.3"
+      "at": "line:1-0.3"
      },
      {
       "bg": "storm",
@@ -1804,14 +2171,13 @@
       ],
       "bubbles": [
        {
-        "line": 3,
+        "line": 2,
         "x": 0.5,
         "y": 0.86,
         "tail": [
          0.5,
          0.7
         ],
-        "at": "line:3",
         "w": 420
        }
       ],
@@ -1821,38 +2187,38 @@
         "text": "KRAKOOM!",
         "x": 0.5,
         "y": 0.3,
-        "at": 1.6,
+        "at": 0.2,
         "style": "zap",
         "size": 120
        }
       ],
       "fx": [
-       "bolt:0.5,0,0.5,0.7,1,16@1.6",
-       "flash@1.6",
-       "smoke:0.5,0.65,60@1.8"
+       "bolt:0.5,0,0.5,0.7,1,16@0.2",
+       "flash@0.2",
+       "smoke:0.5,0.65,60@0.4"
       ],
       "under": []
      }
     ],
     "shake": [
-     1.6
+     0.2
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2-0.3",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "magic",
-     "at": 1.6,
+     "at": 0.2,
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": 1.6,
+     "at": 0.2,
      "volume": 0.45
     }
    ]
@@ -1860,12 +2226,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "Out of the clouds came a shape. Long wings. Glowing blue scales. And a mouth full of lightning."
+     "archers",
+     "Something's coming out of the clouds. Long wings. Blue scales.",
+     {
+      "tone": "terrified"
+     }
     ],
     [
-     "narrator",
-     "An Electro Dragon. The biggest anyone had ever seen."
+     "barbarians",
+     "An Electro Dragon! The biggest one I've ever seen!",
+     {
+      "tone": "screaming"
+     }
     ]
    ],
    "page": {
@@ -1884,20 +2256,42 @@
         "bob": 18
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.22,
+        "y": 0.14,
+        "tail": [
+         0.3,
+         0.4
+        ],
+        "w": 420
+       },
+       {
+        "line": 1,
+        "x": 0.78,
+        "y": 0.14,
+        "tail": [
+         0.7,
+         0.4
+        ],
+        "shout": true,
+        "w": 420
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "KRRRZZZT!",
         "x": 0.5,
-        "y": 0.15,
+        "y": 0.88,
         "at": "line:1",
         "style": "zap",
         "size": 110
        }
       ],
       "fx": [
-       "bolt:0.05,0,0.2,0.5,0.6@line:0+2",
+       "bolt:0.05,0,0.2,0.5,0.6@2",
        "bolt:0.95,0,0.8,0.6,0.6@line:1"
       ],
       "under": []
@@ -1924,15 +2318,24 @@
    "lines": [
     [
      "wizard",
-     "DRAGON! Big one! Very sparkly! Everybody panic!"
+     "DRAGON! Big one! Very sparkly! Everybody panic!",
+     {
+      "tone": "panicking"
+     }
     ],
     [
      "healer",
-     "Wizard, don't tell them to panic!"
+     "Wizard, don't tell them to panic!",
+     {
+      "tone": "exasperated"
+     }
     ],
     [
      "wizard",
-     "Sorry! Everybody panic calmly!"
+     "Sorry! Everybody panic calmly!",
+     {
+      "tone": "panicking"
+     }
     ]
    ],
    "page": {
@@ -2037,12 +2440,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The kingdom's towers fired. The Air Defense launched its rockets. The Archer Towers let their arrows fly."
+     "archers",
+     "Air Defense, fire! Towers, fire!",
+     {
+      "tone": "commanding"
+     }
     ],
     [
-     "narrator",
-     "The dragon opened its mouth, and the lightning jumped. From tower, to tower, to tower."
+     "wizard",
+     "Oh no. The lightning's jumping! Tower, to tower, to tower!",
+     {
+      "tone": "horrified"
+     }
     ]
    ],
    "page": {
@@ -2058,7 +2467,20 @@
         "h": 0.55
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "shout": true,
+        "size": 24,
+        "w": 300
+       }
+      ],
       "caps": [],
       "sfx": [
        {
@@ -2092,7 +2514,7 @@
         "text": "TWANG!",
         "x": 0.5,
         "y": 0.2,
-        "at": 2.2,
+        "at": 2.0,
         "style": "gold",
         "size": 60
        }
@@ -2101,7 +2523,7 @@
        "bolt:0.5,0.4,1,0.3,1@line:1+2"
       ],
       "under": [],
-      "at": 1.8
+      "at": 1.6
      },
      {
       "bg": "storm",
@@ -2114,7 +2536,19 @@
         "bob": 12
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 22,
+        "w": 300
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [
@@ -2136,13 +2570,13 @@
     },
     {
      "sound": "pop",
-     "at": 1.8,
+     "at": 1.6,
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "ding",
-     "at": 2.2,
+     "at": 2.0,
      "volume": 0.42
     },
     {
@@ -2161,16 +2595,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Barbarians threw their swords at the dragon. The swords went up. The swords came back down."
-    ],
-    [
-     "narrator",
-     "Mostly on the Barbarians."
+     "barbarians",
+     "Throw your swords! Up! UP!",
+     {
+      "tone": "battle cry"
+     }
     ],
     [
      "barbarians",
-     "Ow. Ow. OW."
+     "Wait. What goes up must come...",
+     {
+      "tone": "worried"
+     }
+    ],
+    [
+     "barbarians",
+     "Ow. Ow. OW.",
+     {
+      "tone": "pained"
+     }
     ]
    ],
    "page": {
@@ -2193,14 +2636,26 @@
         "bob": 12
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.2,
+        "tail": [
+         0.3,
+         0.4
+        ],
+        "shout": true,
+        "w": 380
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "WHOOSH!",
         "x": 0.5,
         "y": 0.3,
-        "at": 1.5,
+        "at": 1.2,
         "style": "white",
         "size": 70
        }
@@ -2218,14 +2673,25 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 24
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "BONK!",
         "x": 0.5,
-        "y": 0.2,
-        "at": "line:1+0.3",
+        "y": 0.86,
+        "at": "lineend:1",
         "style": "red",
         "size": 60
        }
@@ -2267,7 +2733,7 @@
    "sfx": [
     {
      "sound": "whoosh",
-     "at": 1.5,
+     "at": 1.2,
      "volume": 0.42
     },
     {
@@ -2278,7 +2744,7 @@
     },
     {
      "sound": "thud",
-     "at": "line:1+0.3",
+     "at": "lineend:1",
      "volume": 0.42
     },
     {
@@ -2293,15 +2759,24 @@
    "lines": [
     [
      "king",
-     "Everyone stand back. This dragon is MINE."
+     "Everyone stand back. This dragon is MINE.",
+     {
+      "tone": "fierce"
+     }
     ],
     [
      "queen",
-     "You can't punch something that flies."
+     "You can't punch something that flies.",
+     {
+      "tone": "dismissive"
+     }
     ],
     [
      "king",
-     "Watch me."
+     "Watch me.",
+     {
+      "tone": "determined"
+     }
     ]
    ],
    "page": {
@@ -2414,16 +2889,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The King ran. The King jumped. The King jumped higher than any King had ever jumped."
+     "king",
+     "Hrraaaagh! Higher! HIGHER!",
+     {
+      "tone": "mighty leap"
+     }
     ],
     [
-     "narrator",
-     "He missed the dragon by about forty feet, and landed in the fountain."
+     "king",
+     "Missed. Missed by... a lot. Uh oh. Fountain.",
+     {
+      "tone": "dismayed"
+     }
     ],
     [
      "wizard",
-     "Still counting that as a fountain win, by the way."
+     "Still counting that as a fountain win, by the way.",
+     {
+      "tone": "smug"
+     }
     ]
    ],
    "page": {
@@ -2441,7 +2925,7 @@
          0.55,
          0.25
         ],
-        "moveAt": 1.2,
+        "moveAt": 0.3,
         "moveEnd": "line:1",
         "rot": -0.3
        },
@@ -2453,14 +2937,25 @@
         "bob": 14
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.25,
+         0.4
+        ],
+        "shout": true
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "WHOOOSH!",
         "x": 0.4,
         "y": 0.55,
-        "at": 1.5,
+        "at": 0.6,
         "style": "white",
         "size": 70
        }
@@ -2480,21 +2975,33 @@
         "h": 0.8
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 22,
+        "w": 340
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "SPLOOSH!",
         "x": 0.5,
-        "y": 0.2,
-        "at": "line:1+2",
+        "y": 0.86,
+        "at": "lineend:1",
         "style": "zap",
         "size": 60
        }
       ],
       "fx": [],
       "under": [],
-      "at": "line:1+1.6"
+      "at": "line:1-0.3"
      },
      {
       "bg": "burst:purple",
@@ -2537,18 +3044,18 @@
    "sfx": [
     {
      "sound": "whoosh",
-     "at": 1.5,
+     "at": 0.6,
      "volume": 0.42
     },
     {
      "sound": "pop",
-     "at": "line:1+1.6",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "magic",
-     "at": "line:1+2",
+     "at": "lineend:1",
      "volume": 0.42
     },
     {
@@ -2563,15 +3070,17 @@
    "lines": [
     [
      "queen",
-     "Out of my way. A dragon is just a very large target."
+     "Out of my way. A dragon is just a very large target. Ten arrows. Two seconds.",
+     {
+      "tone": "cold focus"
+     }
     ],
     [
-     "narrator",
-     "She fired. Ten arrows in two seconds. Every one of them hit."
-    ],
-    [
-     "narrator",
-     "Every one of them bounced off the crackling scales, and fell to the ground, melted."
+     "archers",
+     "Every one hit! But they're bouncing off! They're melting!",
+     {
+      "tone": "shocked"
+     }
     ]
    ],
    "page": {
@@ -2605,7 +3114,7 @@
         "text": "THWIP x10!",
         "x": 0.5,
         "y": 0.88,
-        "at": "line:1+0.5",
+        "at": "lineend:0-1",
         "style": "gold",
         "size": 60
        }
@@ -2626,42 +3135,54 @@
         "bob": 12
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24,
+        "w": 420
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "PING! PING! PING!",
         "x": 0.5,
         "y": 0.15,
-        "at": "line:2",
+        "at": "line:1",
         "style": "zap",
         "size": 60
        }
       ],
       "fx": [
-       "flash:150,210,255@line:2",
-       "bolt:0.2,0.3,0.4,0.5,0.6@line:2"
+       "flash:150,210,255@line:1",
+       "bolt:0.2,0.3,0.4,0.5,0.6@line:1"
       ],
       "under": [],
-      "at": "line:1"
+      "at": "line:1-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "ding",
-     "at": "line:1+0.5",
+     "at": "lineend:0-1",
      "volume": 0.42
     },
     {
      "sound": "pop",
-     "at": "line:1",
+     "at": "line:1-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "magic",
-     "at": "line:2",
+     "at": "line:1",
      "volume": 0.42
     }
    ]
@@ -2669,12 +3190,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The King climbed out of the fountain, grabbed a barrel, and threw it at the dragon with all his might."
+     "king",
+     "Fine! Then I'll throw a barrel at it! HEAVE!",
+     {
+      "tone": "straining"
+     }
     ],
     [
-     "narrator",
-     "The barrel flew beautifully. Straight past the dragon. Straight into the Queen's crossbow."
+     "queen",
+     "Wait. Wait! That's heading straight for... my crossbow!",
+     {
+      "tone": "alarmed"
+     }
     ]
    ],
    "page": {
@@ -2701,26 +3228,41 @@
         "x": 0.7,
         "y": 0.72,
         "h": 0.6,
-        "at": "line:1",
+        "at": "line:1-0.3",
         "flip": true
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.22,
+        "y": 0.14,
+        "tail": [
+         0.15,
+         0.4
+        ],
+        "shout": true,
+        "w": 420
+       },
+       {
+        "line": 1,
+        "x": 0.7,
+        "y": 0.14,
+        "tail": [
+         0.7,
+         0.45
+        ],
+        "shout": true,
+        "w": 440
+       }
+      ],
       "caps": [],
       "sfx": [
-       {
-        "text": "HEAVE!",
-        "x": 0.2,
-        "y": 0.2,
-        "at": 2.0,
-        "style": "red",
-        "size": 60
-       },
        {
         "text": "CRASH!",
         "x": 0.7,
         "y": 0.5,
-        "at": "line:1+3",
+        "at": "lineend:1",
         "style": "fire",
         "size": 100
        }
@@ -2732,23 +3274,18 @@
      }
     ],
     "shake": [
-     "line:1+3"
+     "lineend:1"
     ]
    },
    "sfx": [
     {
-     "sound": "thud",
-     "at": 2.0,
+     "sound": "impact",
+     "at": "lineend:1",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "line:1+3",
-     "volume": 0.42
-    },
-    {
-     "sound": "impact",
-     "at": "line:1+3",
+     "at": "lineend:1",
      "volume": 0.45
     }
    ]
@@ -2757,27 +3294,45 @@
    "lines": [
     [
      "queen",
-     "You knocked my shot sideways!"
+     "You knocked my shot sideways!",
+     {
+      "tone": "furious"
+     }
     ],
     [
      "king",
-     "You were standing where I was throwing!"
-    ],
-    [
-     "narrator",
-     "She fixed her aim, and fired again. The arrow meant for the dragon struck the King's helmet instead."
-    ],
-    [
-     "king",
-     "MY HELMET!"
+     "You were standing where I was throwing!",
+     {
+      "tone": "furious"
+     }
     ],
     [
      "queen",
-     "Your head was in my shot."
+     "Hold still. Aiming again. Dragon. Dragon. And...",
+     {
+      "tone": "focused"
+     }
     ],
     [
      "king",
-     "Your shot was in my HEAD!"
+     "MY HELMET!",
+     {
+      "tone": "howling"
+     }
+    ],
+    [
+     "queen",
+     "Your head was in my shot.",
+     {
+      "tone": "unapologetic"
+     }
+    ],
+    [
+     "king",
+     "Your shot was in my HEAD!",
+     {
+      "tone": "outraged"
+     }
     ]
    ],
    "page": {
@@ -2872,9 +3427,27 @@
         "x": 0.5,
         "y": 0.64,
         "h": 0.9
+       },
+       {
+        "name": "queen_aim",
+        "x": 0.12,
+        "y": 0.7,
+        "h": 0.4,
+        "at": "line:2"
        }
       ],
       "bubbles": [
+       {
+        "line": 2,
+        "x": 0.3,
+        "y": 0.2,
+        "tail": [
+         0.15,
+         0.4
+        ],
+        "size": 24,
+        "w": 420
+       },
        {
         "line": 3,
         "x": 0.78,
@@ -2892,18 +3465,18 @@
         "text": "CLANG!",
         "x": 0.5,
         "y": 0.2,
-        "at": "line:2+4.2",
+        "at": "lineend:2",
         "style": "red",
         "size": 110
        }
       ],
       "fx": [],
       "under": [],
-      "at": "line:2"
+      "at": "line:2-0.3"
      }
     ],
     "shake": [
-     "line:2+4.2"
+     "lineend:2"
     ]
    },
    "sfx": [
@@ -2915,18 +3488,18 @@
     },
     {
      "sound": "pop",
-     "at": "line:2",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "thud",
-     "at": "line:2+4.2",
+     "at": "lineend:2",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "line:2+4.2",
+     "at": "lineend:2",
      "volume": 0.45
     }
    ]
@@ -2934,12 +3507,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Barbarians charged to help their King. The Archers rushed to help their Queen."
+     "barbarians",
+     "Protect the King!",
+     {
+      "tone": "charging"
+     }
     ],
     [
-     "narrator",
-     "They met in the middle of the square, in one big, tight, shoving crowd."
+     "archers",
+     "Protect the Queen!",
+     {
+      "tone": "charging"
+     }
+    ],
+    [
+     "barbarians",
+     "Hey! Stop shoving!",
+     {
+      "tone": "squashed"
+     }
+    ],
+    [
+     "archers",
+     "YOU stop shoving!",
+     {
+      "tone": "squashed"
+     }
     ]
    ],
    "page": {
@@ -2957,8 +3550,8 @@
          0.42,
          0.68
         ],
-        "moveAt": 0.6,
-        "moveEnd": "line:1"
+        "moveAt": 0.3,
+        "moveEnd": "line:2"
        },
        {
         "name": "archer",
@@ -2970,32 +3563,73 @@
          0.58,
          0.68
         ],
-        "moveAt": 0.9,
-        "moveEnd": "line:1"
+        "moveAt": "line:1",
+        "moveEnd": "line:2"
        },
        {
         "name": "barb_emote_set_1",
         "x": 0.3,
         "y": 0.3,
         "h": 0.3,
-        "at": "line:1+1"
+        "at": "line:2"
        },
        {
         "name": "archer_emote",
         "x": 0.7,
         "y": 0.3,
         "h": 0.3,
-        "at": "line:1+1.4"
+        "at": "line:3"
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.2,
+        "y": 0.14,
+        "tail": [
+         0.15,
+         0.4
+        ],
+        "shout": true
+       },
+       {
+        "line": 1,
+        "x": 0.8,
+        "y": 0.14,
+        "tail": [
+         0.85,
+         0.4
+        ],
+        "shout": true
+       },
+       {
+        "line": 2,
+        "x": 0.22,
+        "y": 0.5,
+        "tail": [
+         0.3,
+         0.3
+        ],
+        "size": 26
+       },
+       {
+        "line": 3,
+        "x": 0.78,
+        "y": 0.5,
+        "tail": [
+         0.7,
+         0.3
+        ],
+        "size": 26
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "SHOVE!",
         "x": 0.5,
-        "y": 0.2,
-        "at": "line:1+2",
+        "y": 0.9,
+        "at": "line:2",
         "style": "red",
         "size": 80
        }
@@ -3008,7 +3642,7 @@
    "sfx": [
     {
      "sound": "thud",
-     "at": "line:1+2",
+     "at": "line:2",
      "volume": 0.42
     }
    ]
@@ -3016,12 +3650,11 @@
   {
    "lines": [
     [
-     "narrator",
-     "And lightning loves a crowd."
-    ],
-    [
-     "narrator",
-     "One bolt struck the first Barbarian, jumped to an Archer, then another, then twelve more."
+     "healer",
+     "No, no, no! Don't bunch up! Lightning loves a crowd!",
+     {
+      "tone": "screaming warning"
+     }
     ]
    ],
    "page": {
@@ -3057,46 +3690,58 @@
         "bob": 10
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.35,
+        "y": 0.14,
+        "tail": [
+         0.3,
+         0.4
+        ],
+        "shout": true,
+        "w": 520
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "ZAP! ZAP! ZAP!",
         "x": 0.45,
-        "y": 0.2,
-        "at": "line:1+1",
+        "y": 0.9,
+        "at": "lineend:0+0.4",
         "style": "zap",
         "size": 100
        }
       ],
       "fx": [
-       "bolt:0.85,0.3,0.3,0.6,1,14@line:1",
-       "bolt:0.3,0.6,0.55,0.6,1,12@line:1+1.2",
-       "bolt:0.55,0.6,0.78,0.6,1,12@line:1+2",
-       "flash:150,210,255@line:1"
+       "bolt:0.85,0.3,0.3,0.6,1,14@lineend:0",
+       "bolt:0.3,0.6,0.55,0.6,1,12@lineend:0+0.6",
+       "bolt:0.55,0.6,0.78,0.6,1,12@lineend:0+1.2",
+       "flash:150,210,255@lineend:0"
       ],
       "under": []
      }
     ],
     "shake": [
-     "line:1",
-     "line:1+2"
+     "lineend:0",
+     "lineend:0+1.2"
     ]
    },
    "sfx": [
     {
      "sound": "magic",
-     "at": "line:1+1",
+     "at": "lineend:0+0.4",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "line:1",
+     "at": "lineend:0",
      "volume": 0.45
     },
     {
      "sound": "impact",
-     "at": "line:1+2",
+     "at": "lineend:0+1.2",
      "volume": 0.45
     }
    ]
@@ -3104,12 +3749,11 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Healer dove into the smoke, her wings glowing gold, and one by one, the soldiers got back up."
-    ],
-    [
      "healer",
-     "Spread out! Lightning jumps between you when you stand too close!"
+     "Up you get. And you. And you. Spread out! Lightning jumps between you when you stand too close!",
+     {
+      "tone": "urgent, caring"
+     }
     ]
    ],
    "page": {
@@ -3128,7 +3772,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -3136,7 +3780,7 @@
          0.3
         ],
         "shout": true,
-        "w": 560
+        "w": 600
        }
       ],
       "caps": [],
@@ -3203,19 +3847,31 @@
    "lines": [
     [
      "king",
-     "Barbarians! Follow ME!"
+     "Barbarians! Follow ME!",
+     {
+      "tone": "commanding"
+     }
     ],
     [
      "queen",
-     "Archers! Follow ME!"
+     "Archers! Follow ME!",
+     {
+      "tone": "commanding"
+     }
     ],
     [
-     "narrator",
-     "Half the soldiers ran left. Half ran right. A few ran in a small, confused circle."
+     "barbarians",
+     "Which way? Left? Right? I'm going in a circle!",
+     {
+      "tone": "dizzy"
+     }
     ],
     [
      "wizard",
-     "I'll just... follow the dragon, then?"
+     "I'll just... follow the dragon, then?",
+     {
+      "tone": "lost"
+     }
     ]
    ],
    "page": {
@@ -3314,6 +3970,16 @@
       ],
       "bubbles": [
        {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.3,
+         0.4
+        ],
+        "w": 520
+       },
+       {
         "line": 3,
         "x": 0.5,
         "y": 0.15,
@@ -3327,7 +3993,7 @@
       "caps": [],
       "sfx": [],
       "fx": [
-       "dizzy:0.5,0.4@line:2+2"
+       "dizzy:0.3,0.4@line:2+1"
       ],
       "under": [],
       "at": "line:2-0.3"
@@ -3353,11 +4019,24 @@
    "lines": [
     [
      "warden",
-     "STOP! Both of you! Together, or not at all!"
+     "STOP! Both of you! Together, or not at all!",
+     {
+      "tone": "desperate shout"
+     }
     ],
     [
-     "narrator",
-     "But the King and Queen were far too busy shouting at each other to hear him."
+     "king",
+     "Not now, old man!",
+     {
+      "tone": "shouting"
+     }
+    ],
+    [
+     "queen",
+     "We're busy!",
+     {
+      "tone": "shouting"
+     }
     ]
    ],
    "page": {
@@ -3384,12 +4063,34 @@
         ],
         "shout": true,
         "w": 560
+       },
+       {
+        "line": 1,
+        "x": 0.2,
+        "y": 0.5,
+        "tail": [
+         0.35,
+         0.6
+        ],
+        "shout": true,
+        "size": 28
+       },
+       {
+        "line": 2,
+        "x": 0.8,
+        "y": 0.5,
+        "tail": [
+         0.65,
+         0.6
+        ],
+        "shout": true,
+        "size": 28
        }
       ],
       "caps": [
        {
-        "text": "They didn't hear him.",
-        "at": "line:1+2",
+        "text": "They didn't listen.",
+        "at": "lineend:2",
         "x": 0.03,
         "y": 0.88
        }
@@ -3416,12 +4117,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The dragon turned its head toward the Town Hall. Toward the Elixir storage. Toward the heart of the kingdom."
+     "wizard",
+     "It's turning. Toward the Town Hall. Toward the Elixir!",
+     {
+      "tone": "terrified"
+     }
     ],
     [
-     "narrator",
-     "Between the dragon and the Town Hall stood one old man."
+     "healer",
+     "Warden? Warden, what are you doing? Come back!",
+     {
+      "tone": "frantic"
+     }
     ]
    ],
    "page": {
@@ -3458,11 +4165,33 @@
         "flip": true
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.3,
+         0.3
+        ],
+        "w": 520
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.45,
+         0.5
+        ],
+        "w": 520
+       }
+      ],
       "caps": [
        {
         "text": "The Town Hall",
-        "at": 0
+        "at": 0,
+        "y": 0.9
        }
       ],
       "sfx": [],
@@ -3478,12 +4207,11 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Grand Warden opened his Eternal Tome."
-    ],
-    [
-     "narrator",
-     "Golden light poured out of its pages, and spread over the village like a great glowing dome."
+     "warden",
+     "Nobody touches this kingdom. Not while I still stand. Rise, old friend. Shield them all!",
+     {
+      "tone": "commanding, powerful"
+     }
     ]
    ],
    "page": {
@@ -3499,12 +4227,24 @@
         "h": 0.92
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 600
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [
-       "ring:0.5,0.5,900@line:1+1",
-       "ring:0.5,0.5,900@line:1+2"
+       "ring:0.5,0.5,900@lineend:0-1",
+       "ring:0.5,0.5,900@lineend:0"
       ],
       "under": [
        "glow:0.5,0.5,700"
@@ -3526,7 +4266,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": 0.5
+      "at": 1.5
      },
      {
       "bg": "gold",
@@ -3545,20 +4285,20 @@
        "glow:0.5,0.5,400"
       ],
       "under": [],
-      "at": "line:1"
+      "at": "lineend:0-1"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": 0.5,
+     "at": 1.5,
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:1",
+     "at": "lineend:0-1",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -3567,12 +4307,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The dragon breathed the biggest bolt of lightning the kingdom had ever seen."
+     "archers",
+     "It's breathing lightning! The biggest bolt I've ever...",
+     {
+      "tone": "terrified"
+     }
     ],
     [
-     "narrator",
-     "It struck the golden shield. And the shield held."
+     "barbarians",
+     "The shield! The shield is holding!",
+     {
+      "tone": "amazed"
+     }
     ]
    ],
    "page": {
@@ -3596,22 +4342,44 @@
         "h": 0.6
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.3,
+         0.3
+        ],
+        "w": 480
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.88,
+        "tail": [
+         0.7,
+         0.75
+        ],
+        "shout": true,
+        "w": 460
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "KRAKA-BOOM!",
         "x": 0.45,
-        "y": 0.15,
-        "at": "line:0+3",
+        "y": 0.5,
+        "at": "lineend:0",
         "style": "zap",
         "size": 110
        }
       ],
       "fx": [
-       "bolt:0.25,0.4,0.65,0.6,1,20@line:0+3",
-       "flash:150,210,255@line:0+3",
-       "ring:0.75,0.6,700@line:1+1"
+       "bolt:0.25,0.4,0.65,0.6,1,20@lineend:0",
+       "flash:150,210,255@lineend:0",
+       "ring:0.75,0.6,700@line:1+0.5"
       ],
       "under": [
        "glow:0.7,0.6,600"
@@ -3619,18 +4387,18 @@
      }
     ],
     "shake": [
-     "line:0+3"
+     "lineend:0"
     ]
    },
    "sfx": [
     {
      "sound": "magic",
-     "at": "line:0+3",
+     "at": "lineend:0",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "line:0+3",
+     "at": "lineend:0",
      "volume": 0.45
     }
    ]
@@ -3639,11 +4407,24 @@
    "lines": [
     [
      "warden",
-     "NOW! Strike it together while it's tired! King, the jump! Queen, the shot!"
+     "NOW! Strike it together while it's tired! King, the jump! Queen, the shot!",
+     {
+      "tone": "straining shout"
+     }
     ],
     [
-     "narrator",
-     "It was the perfect chance. The dragon hung there, gasping, just above the shield."
+     "king",
+     "On it!",
+     {
+      "tone": "eager"
+     }
+    ],
+    [
+     "queen",
+     "Got it!",
+     {
+      "tone": "eager"
+     }
     ]
    ],
    "page": {
@@ -3689,7 +4470,19 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 34
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
@@ -3706,12 +4499,24 @@
         "h": 0.85
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.15,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "size": 34
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:1+0.5"
+      "at": "line:2-0.3"
      }
     ]
    },
@@ -3724,7 +4529,7 @@
     },
     {
      "sound": "pop",
-     "at": "line:1+0.5",
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -3733,12 +4538,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The King jumped for the dragon. The Queen fired at the dragon. From opposite sides. At the very same moment."
+     "king",
+     "Here I come, dragon!",
+     {
+      "tone": "mid-air yell"
+     }
     ],
     [
-     "narrator",
-     "His jump carried him straight into the path of her arrow. Again."
+     "queen",
+     "Clear shot. Firing!",
+     {
+      "tone": "focused"
+     }
+    ],
+    [
+     "king",
+     "Wait, why is there an arrow coming at...",
+     {
+      "tone": "panicked"
+     }
     ]
    ],
    "page": {
@@ -3756,8 +4574,8 @@
          0.48,
          0.4
         ],
-        "moveAt": "line:0+2",
-        "moveEnd": "line:1+1.5",
+        "moveAt": 0.3,
+        "moveEnd": "lineend:2",
         "rot": -0.2
        },
        {
@@ -3775,20 +4593,51 @@
         "bob": 10
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.2,
+        "y": 0.4,
+        "tail": [
+         0.25,
+         0.55
+        ],
+        "shout": true
+       },
+       {
+        "line": 1,
+        "x": 0.82,
+        "y": 0.4,
+        "tail": [
+         0.82,
+         0.58
+        ]
+       },
+       {
+        "line": 2,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.42,
+         0.32
+        ],
+        "shout": true,
+        "w": 440
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "THWACK!",
         "x": 0.5,
-        "y": 0.4,
-        "at": "line:1+2",
+        "y": 0.5,
+        "at": "lineend:2",
         "style": "red",
         "size": 120
        }
       ],
       "fx": [
-       "flash@line:1+2"
+       "flash@lineend:2"
       ],
       "under": [
        "speed:0.5,0.5"
@@ -3796,18 +4645,18 @@
      }
     ],
     "shake": [
-     "line:1+2"
+     "lineend:2"
     ]
    },
    "sfx": [
     {
      "sound": "thud",
-     "at": "line:1+2",
+     "at": "lineend:2",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "line:1+2",
+     "at": "lineend:2",
      "volume": 0.45
     }
    ]
@@ -3815,8 +4664,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "Both heroes crashed to the ground. And the dragon, rested now, breathed again."
+     "king",
+     "Ugh. My head.",
+     {
+      "tone": "groaning"
+     }
+    ],
+    [
+     "queen",
+     "My arrow.",
+     {
+      "tone": "groaning"
+     }
+    ],
+    [
+     "healer",
+     "Get up, both of you! It's breathing again!",
+     {
+      "tone": "screaming"
+     }
     ]
    ],
    "page": {
@@ -3841,7 +4707,28 @@
         "flip": true
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.25,
+        "y": 0.14,
+        "tail": [
+         0.35,
+         0.45
+        ],
+        "size": 28
+       },
+       {
+        "line": 1,
+        "x": 0.75,
+        "y": 0.14,
+        "tail": [
+         0.65,
+         0.45
+        ],
+        "size": 28
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [
@@ -3860,21 +4747,34 @@
         "bob": 12
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "shout": true,
+        "size": 24,
+        "w": 420
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [
-       "flash:150,210,255@3"
+       "flash:150,210,255@lineend:2"
       ],
       "under": [],
-      "at": 2
+      "at": "line:2-0.3"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": 2,
+     "at": "line:2-0.3",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -3883,16 +4783,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "For eight long seconds, the golden shield held."
+     "warden",
+     "Hold... hold... I can't... hold it...",
+     {
+      "tone": "straining, weakening"
+     }
     ],
     [
-     "narrator",
-     "Then it cracked. Then it shattered."
+     "healer",
+     "The shield is cracking!",
+     {
+      "tone": "horrified"
+     }
     ],
     [
-     "narrator",
-     "And the lightning found the one person standing in its way."
+     "warden",
+     "Run. All of you. RUN!",
+     {
+      "tone": "final shout"
+     }
     ]
    ],
    "page": {
@@ -3908,13 +4817,45 @@
         "h": 0.75
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 480
+       },
+       {
+        "line": 1,
+        "x": 0.2,
+        "y": 0.5,
+        "tail": [
+         0.35,
+         0.6
+        ],
+        "shout": true,
+        "size": 26
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true
+       }
+      ],
       "caps": [],
       "sfx": [
        {
         "text": "CRACK!",
         "x": 0.3,
-        "y": 0.2,
+        "y": 0.9,
         "at": "line:1",
         "style": "white",
         "size": 80
@@ -3922,18 +4863,18 @@
        {
         "text": "SHATTER!",
         "x": 0.7,
-        "y": 0.2,
-        "at": "line:1+1",
+        "y": 0.9,
+        "at": "line:2",
         "style": "white",
         "size": 80
        }
       ],
       "fx": [
        "ring:0.5,0.5,900@line:1",
-       "flash@line:1+1",
-       "bolt:0.5,0,0.5,0.55,1,22@line:2+2",
-       "flash:150,210,255@line:2+2",
-       "darken:0.5@line:2+2.4"
+       "flash@line:2",
+       "bolt:0.5,0,0.5,0.55,1,22@lineend:2",
+       "flash:150,210,255@lineend:2",
+       "darken:0.5@lineend:2+0.4"
       ],
       "under": [
        "glow:0.5,0.5,600"
@@ -3941,8 +4882,8 @@
      }
     ],
     "shake": [
-     "line:1+1",
-     "line:2+2"
+     "line:2",
+     "lineend:2"
     ]
    },
    "sfx": [
@@ -3953,17 +4894,17 @@
     },
     {
      "sound": "whoosh",
-     "at": "line:1+1",
+     "at": "line:2",
      "volume": 0.42
     },
     {
      "sound": "impact",
-     "at": "line:1+1",
+     "at": "line:2",
      "volume": 0.45
     },
     {
      "sound": "impact",
-     "at": "line:2+2",
+     "at": "lineend:2",
      "volume": 0.45
     }
    ]
@@ -3971,16 +4912,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Grand Warden fell."
+     "archers",
+     "The Warden! He's down! The Warden is down!",
+     {
+      "tone": "anguished"
+     }
     ],
     [
-     "narrator",
-     "The dragon circled once over the silent village. Then it rose into the clouds, and was gone."
+     "barbarians",
+     "The dragon's leaving. It's going back into the clouds.",
+     {
+      "tone": "stunned"
+     }
     ],
     [
-     "narrator",
-     "Behind it, burned into the sky, it left a strange mark."
+     "wizard",
+     "What is that? Burned into the sky. A mark.",
+     {
+      "tone": "shaken whisper"
+     }
     ]
    ],
    "page": {
@@ -3998,7 +4948,19 @@
         "alpha": 0.9
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "shout": true,
+        "w": 460
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [
@@ -4018,11 +4980,34 @@
          0.5,
          -0.4
         ],
-        "moveAt": "line:1+2",
+        "moveAt": "line:1+1",
         "moveEnd": "line:2"
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24,
+        "w": 440
+       },
+       {
+        "line": 2,
+        "x": 0.5,
+        "y": 0.86,
+        "tail": [
+         0.5,
+         0.7
+        ],
+        "size": 24,
+        "w": 440
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [
@@ -4045,12 +5030,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "Then, finally, it began to rain."
+     "king",
+     "Warden!",
+     {
+      "tone": "desperate shout"
+     }
     ],
     [
-     "narrator",
-     "The King and Queen ran to the Warden. Neither one of them ran faster than the other this time."
+     "queen",
+     "Warden!",
+     {
+      "tone": "desperate shout"
+     }
     ]
    ],
    "page": {
@@ -4064,8 +5055,7 @@
         "x": 0.25,
         "y": 0.66,
         "h": 0.72,
-        "enter": "left",
-        "at": "line:1"
+        "enter": "left"
        },
        {
         "name": "queen_stand",
@@ -4074,7 +5064,7 @@
         "h": 0.74,
         "flip": true,
         "enter": "right",
-        "at": "line:1+0.3"
+        "at": 0.3
        },
        {
         "name": "eq_tome",
@@ -4084,8 +5074,36 @@
         "rot": 0.6
        }
       ],
-      "bubbles": [],
-      "caps": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.25,
+        "y": 0.14,
+        "tail": [
+         0.25,
+         0.35
+        ],
+        "shout": true,
+        "size": 40
+       },
+       {
+        "line": 1,
+        "x": 0.75,
+        "y": 0.14,
+        "tail": [
+         0.75,
+         0.35
+        ],
+        "shout": true,
+        "size": 40
+       }
+      ],
+      "caps": [
+       {
+        "text": "Then the rain came.",
+        "at": 0
+       }
+      ],
       "sfx": [],
       "fx": [],
       "under": [
@@ -4100,11 +5118,17 @@
    "lines": [
     [
      "king",
-     "Old man? Hey. Wake up. You're supposed to be yelling at us right now."
+     "Old man? Hey. Wake up. You're supposed to be yelling at us right now.",
+     {
+      "tone": "voice breaking"
+     }
     ],
     [
      "queen",
-     "Warden. Please. Please open your eyes."
+     "Warden. Please. Please open your eyes.",
+     {
+      "tone": "pleading"
+     }
     ]
    ],
    "page": {
@@ -4184,16 +5208,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Warden's eyes opened, just a little."
-    ],
-    [
      "warden",
-     "Two halves... of one hero. Remember?"
+     "Two halves... of one hero. Remember?",
+     {
+      "tone": "faint whisper"
+     }
     ],
     [
-     "narrator",
-     "Then they closed again."
+     "queen",
+     "Warden? No. No, no, stay with us.",
+     {
+      "tone": "frightened"
+     }
     ]
    ],
    "page": {
@@ -4212,7 +5238,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -4220,12 +5246,22 @@
          0.3
         ],
         "w": 520
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.88,
+        "tail": [
+         0.5,
+         0.75
+        ],
+        "w": 520
        }
       ],
       "caps": [],
       "sfx": [],
       "fx": [
-       "darken:0.45@line:2+0.5"
+       "darken:0.45@lineend:0"
       ],
       "under": [
        "rain",
@@ -4239,16 +5275,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "The Healer landed beside him, and her hands glowed gold."
+     "healer",
+     "Move. Let me through. He's breathing. Barely. I need the whole night, and I need quiet.",
+     {
+      "tone": "urgent"
+     }
     ],
     [
      "healer",
-     "He's breathing. Barely. I need the whole night, and I need quiet."
-    ],
-    [
-     "healer",
-     "Which means the two of you need to stop shouting. For once."
+     "Which means the two of you need to stop shouting. For once.",
+     {
+      "tone": "fierce"
+     }
     ]
    ],
    "page": {
@@ -4267,17 +5305,17 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.13,
         "tail": [
          0.5,
          0.3
         ],
-        "w": 560
+        "w": 600
        },
        {
-        "line": 2,
+        "line": 1,
         "x": 0.5,
         "y": 0.13,
         "tail": [
@@ -4310,7 +5348,7 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2"
+      "at": "line:1"
      },
      {
       "bg": "burst:grey",
@@ -4327,20 +5365,20 @@
       "sfx": [],
       "fx": [],
       "under": [],
-      "at": "line:2+1"
+      "at": "line:1+1"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:2",
+     "at": "line:1",
      "offset": 0.05,
      "volume": 0.28
     },
     {
      "sound": "pop",
-     "at": "line:2+1",
+     "at": "line:1+1",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -4349,16 +5387,25 @@
   {
    "lines": [
     [
-     "narrator",
-     "The villagers gathered in the rain. Nobody cheered for Team King. Nobody cheered for Team Queen."
-    ],
-    [
      "barbarians",
-     "Is this... our fault?"
+     "Is this... our fault?",
+     {
+      "tone": "small voice"
+     }
     ],
     [
-     "narrator",
-     "Nobody answered."
+     "archers",
+     "...",
+     {
+      "tone": "silent"
+     }
+    ],
+    [
+     "archers",
+     "I think it might be all of ours.",
+     {
+      "tone": "quiet"
+     }
     ]
    ],
    "page": {
@@ -4376,7 +5423,7 @@
       ],
       "bubbles": [
        {
-        "line": 1,
+        "line": 0,
         "x": 0.5,
         "y": 0.14,
         "tail": [
@@ -4386,7 +5433,12 @@
         "size": 30
        }
       ],
-      "caps": [],
+      "caps": [
+       {
+        "text": "Nobody cheered.",
+        "at": 0
+       }
+      ],
       "sfx": [],
       "fx": [],
       "under": [
@@ -4403,28 +5455,33 @@
         "h": 0.82
        }
       ],
-      "bubbles": [],
-      "caps": [
+      "bubbles": [
        {
-        "text": "Nobody answered.",
-        "at": "line:2",
-        "x": 0.05,
-        "y": 0.88
+        "line": 2,
+        "x": 0.5,
+        "y": 0.14,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "size": 26,
+        "w": 380
        }
       ],
+      "caps": [],
       "sfx": [],
       "fx": [],
       "under": [
        "rain"
       ],
-      "at": "line:0+3"
+      "at": "line:1"
      }
     ]
    },
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:0+3",
+     "at": "line:1",
      "offset": 0.05,
      "volume": 0.28
     }
@@ -4434,15 +5491,31 @@
    "lines": [
     [
      "king",
-     "If you had hit the dragon instead of my helmet..."
+     "If you had hit the dragon instead of my helmet...",
+     {
+      "tone": "bitter"
+     }
     ],
     [
      "queen",
-     "If you had stayed out of my shot..."
+     "If you had stayed out of my shot...",
+     {
+      "tone": "bitter"
+     }
     ],
     [
-     "narrator",
-     "And for the first time in their lives, neither of them finished the argument."
+     "king",
+     "...",
+     {
+      "tone": "silent"
+     }
+    ],
+    [
+     "queen",
+     "...",
+     {
+      "tone": "silent"
+     }
     ]
    ],
    "page": {
@@ -4512,7 +5585,7 @@
     "caps": [
      {
       "text": "Neither of them finished.",
-      "at": "line:2+1.5",
+      "at": "line:2",
       "x": 0.34,
       "y": 0.86
      }
@@ -4530,12 +5603,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "Later that night, the King stood alone at the wall. At the line down the middle."
+     "king",
+     "My side. Her side. Stupid line.",
+     {
+      "tone": "muttering"
+     }
     ],
     [
-     "narrator",
-     "He looked at it for a long time. Then he rubbed it out with his boot."
+     "king",
+     "There. Gone.",
+     {
+      "tone": "quiet"
+     }
     ]
    ],
    "page": {
@@ -4563,14 +5642,39 @@
         "h": 0.72
        }
       ],
-      "bubbles": [],
-      "caps": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.2,
+         0.36
+        ],
+        "w": 420
+       },
+       {
+        "line": 1,
+        "x": 0.3,
+        "y": 0.14,
+        "tail": [
+         0.2,
+         0.36
+        ]
+       }
+      ],
+      "caps": [
+       {
+        "text": "Later that night...",
+        "at": 0
+       }
+      ],
       "sfx": [
        {
         "text": "SCRUB. SCRUB.",
         "x": 0.55,
         "y": 0.25,
-        "at": "line:1+2",
+        "at": "lineend:0+0.3",
         "style": "white",
         "size": 60
        }
@@ -4586,7 +5690,7 @@
    "sfx": [
     {
      "sound": "whoosh",
-     "at": "line:1+2",
+     "at": "lineend:0+0.3",
      "volume": 0.42
     }
    ]
@@ -4594,12 +5698,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "On the archery range, the Queen saw him do it. She didn't say a word."
+     "queen",
+     "He rubbed it out.",
+     {
+      "tone": "surprised whisper"
+     }
     ],
     [
-     "narrator",
-     "But she quietly put down her ruler."
+     "queen",
+     "Fine. No more ruler.",
+     {
+      "tone": "soft"
+     }
     ]
    ],
    "page": {
@@ -4615,7 +5725,28 @@
         "h": 0.9
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 380
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.13,
+        "tail": [
+         0.5,
+         0.3
+        ],
+        "w": 380
+       }
+      ],
       "caps": [],
       "sfx": [],
       "fx": [],
@@ -4641,7 +5772,7 @@
       "under": [
        "stars"
       ],
-      "at": "line:0+3"
+      "at": "line:0+1.5"
      },
      {
       "bg": "night",
@@ -4667,7 +5798,7 @@
    "sfx": [
     {
      "sound": "pop",
-     "at": "line:0+3",
+     "at": "line:0+1.5",
      "offset": 0.05,
      "volume": 0.28
     },
@@ -4682,20 +5813,32 @@
   {
    "lines": [
     [
-     "narrator",
-     "All night long, the Healer worked. And all night long, two heroes sat on the bench outside her door."
-    ],
-    [
-     "narrator",
-     "The same bench. At opposite ends. But the same bench."
-    ],
-    [
      "queen",
-     "Do you think he'll wake up?"
+     "Do you think he'll wake up?",
+     {
+      "tone": "worried"
+     }
     ],
     [
      "king",
-     "He has to. Who else is going to yell at us?"
+     "He has to. Who else is going to yell at us?",
+     {
+      "tone": "trying to joke"
+     }
+    ],
+    [
+     "queen",
+     "Same bench, huh?",
+     {
+      "tone": "small smile"
+     }
+    ],
+    [
+     "king",
+     "Same bench.",
+     {
+      "tone": "small smile"
+     }
     ]
    ],
    "page": {
@@ -4720,7 +5863,7 @@
       ],
       "bubbles": [
        {
-        "line": 2,
+        "line": 0,
         "x": 0.78,
         "y": 0.14,
         "tail": [
@@ -4730,7 +5873,7 @@
         "w": 420
        },
        {
-        "line": 3,
+        "line": 1,
         "x": 0.24,
         "y": 0.14,
         "tail": [
@@ -4738,14 +5881,33 @@
          0.36
         ],
         "w": 440
+       },
+       {
+        "line": 2,
+        "x": 0.78,
+        "y": 0.14,
+        "tail": [
+         0.8,
+         0.36
+        ],
+        "w": 380
+       },
+       {
+        "line": 3,
+        "x": 0.24,
+        "y": 0.14,
+        "tail": [
+         0.2,
+         0.36
+        ],
+        "w": 340
        }
       ],
       "caps": [
        {
-        "text": "The same bench.",
-        "at": "line:1",
-        "x": 0.4,
-        "y": 0.88
+        "text": "Outside the Healer's door",
+        "at": 0,
+        "y": 0.9
        }
       ],
       "sfx": [],
@@ -4763,12 +5925,18 @@
   {
    "lines": [
     [
-     "narrator",
-     "And in the Town Hall, the Eternal Tome lay on the Warden's table. Its pages turned once more, all by themselves."
+     "wizard",
+     "The Warden's book. It's turning its own pages. It's stopped on a drawing. A storm.",
+     {
+      "tone": "awed whisper"
+     }
     ],
     [
-     "narrator",
-     "They stopped on the drawing of the storm. Beside it, someone had written a single word: Titan."
+     "wizard",
+     "And one word, written beside it. Titan.",
+     {
+      "tone": "fearful whisper"
+     }
     ]
    ],
    "page": {
@@ -4783,13 +5951,40 @@
         "y": 0.58,
         "h": 0.7,
         "bob": 6
+       },
+       {
+        "name": "wizard",
+        "x": 0.1,
+        "y": 0.72,
+        "h": 0.4
        }
       ],
-      "bubbles": [],
+      "bubbles": [
+       {
+        "line": 0,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.15,
+         0.45
+        ],
+        "w": 600
+       },
+       {
+        "line": 1,
+        "x": 0.5,
+        "y": 0.12,
+        "tail": [
+         0.15,
+         0.45
+        ],
+        "w": 480
+       }
+      ],
       "caps": [
        {
         "text": "TITAN",
-        "at": "line:1+5",
+        "at": "lineend:1-0.6",
         "x": 0.42,
         "y": 0.86,
         "size": 56,
@@ -4798,7 +5993,7 @@
       ],
       "sfx": [],
       "fx": [
-       "sigil:0.78,0.4,100@line:1+2"
+       "sigil:0.78,0.4,100@line:1"
       ],
       "under": [
        "glow:0.5,0.55,460"
@@ -4812,15 +6007,11 @@
    "lines": [
     [
      "narrator",
-     "Because that dragon did not come on its own. Someone sent it."
+     "That dragon did not come on its own. Someone sent it. Someone with the power of a storm."
     ],
     [
      "narrator",
-     "Someone with the power of a storm. And they were not finished."
-    ],
-    [
-     "narrator",
-     "To be continued. Should the King and Queen finally team up? Tell me in the comments."
+     "To be continued. Who do you think sent the dragon? Tell me in the comments. And like and subscribe, so you don't miss the next part."
     ]
    ],
    "page": {
@@ -4834,9 +6025,9 @@
       "sfx": [],
       "fx": [
        "bolt:0.1,0,0.25,0.6,0.8@line:0+2",
-       "bolt:0.9,0,0.75,0.5,0.8@line:1",
-       "eyes:0.5,0.4,0.06,120,210,255@line:1+1",
-       "sigil:0.5,0.4,150@line:1+3"
+       "bolt:0.9,0,0.75,0.5,0.8@line:0+3",
+       "eyes:0.5,0.4,0.06,120,210,255@line:0+4",
+       "sigil:0.5,0.4,150@line:1+1"
       ],
       "under": [
        "stars"
@@ -4848,14 +6039,14 @@
       "text": "TO BE CONTINUED...",
       "y": 0.66,
       "size": 100,
-      "at": "line:2-0.2"
+      "at": "line:1-0.2"
      }
     ]
    },
    "sfx": [
     {
      "sound": "stamp",
-     "at": "line:2-0.2",
+     "at": "line:1-0.2",
      "volume": 0.4
     }
    ]
