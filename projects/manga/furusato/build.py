@@ -219,7 +219,7 @@ scenes = [
     S("{MIO} jumping onto {HARUTO_HOME}'s back from behind with a big grin, entrance of a Japanese house",
       L("mio", "Big brother! You actually came back! Did Tokyo finally kick you out?", "teasing, cheerful"),
       L("haruto", "...Something like that.", "awkward laugh")),
-    S("a Japanese family dinner table with rice, miso soup and grilled fish, {HARUTO_HOME} staring at his untouched bowl, {DAD} and {MOM} watching him",
+    S("a Japanese family dinner, {HARUTO_HOME} sitting alone on the left side of the table staring at his untouched bowl of rice, across the table {DAD} and {MOM} sit side by side watching him with worry, miso soup and grilled fish, only three people",
       (N, "At dinner, I tried to act normal. I lasted about five minutes.", "wry")),
     S("{DAD} putting down his chopsticks and looking seriously across the dinner table, traditional Japanese dining room",
       L("dad", "Haruto. Your mother made your favorite and you haven't touched it. Talk.", "gruff")),
