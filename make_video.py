@@ -452,6 +452,10 @@ def words_from_alignment(alignment):
 def generate_image(provider, scene_idx, prompt, width, height, out_dir, force):
     path = out_dir / f"scene{scene_idx:02d}.png"
     model = {"fal": IMAGE_MODEL, "pollinations": POLLINATIONS_MODEL}.get(provider, (MH_MODEL, MH_RESOLUTION))
+    if provider == "local":  # drawn beforehand on this machine (tools/flux_local.py); nothing to fetch
+        if not path.exists():
+            raise SystemExit(f"{path.name} is missing: draw the scenes first with tools/flux_local.py")
+        return
     key = fingerprint(prompt, width, height, provider, model)
     if not force and is_fresh(path, key):
         return
@@ -789,6 +793,66 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     path.write_text(header + "\n".join(lines) + "\n")
 
 
+def wrap_text(text, width):
+    """Break text into lines of at most `width` characters, on spaces."""
+    lines, cur = [], ""
+    for word in text.split():
+        if cur and len(cur) + 1 + len(word) > width:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = f"{cur} {word}".strip()
+    return lines + ([cur] if cur else [])
+
+
+def write_boxes(scenes, scene_lines, scene_starts, durations, width, height, path, style=None, narrators=("narrator",)):
+    """Manga-dub captions: each line in a white box with a black border, shown while it is spoken.
+
+    Narration sits in a box at the top of the panel; dialogue in a box near the bottom, on the speaker's side if the
+    scene gives one ("pos": {"daichi": "l"}), else centred. scene_lines are each scene's [who, text, start, end].
+    """
+    cap = {"font": "Comic Neue", "size": 0.04, **(style or {})}
+    size = round(height * cap["size"])
+    pad = round(size * 0.5)
+    edge = max(2, round(height * 0.0035))
+    # BorderStyle 4 draws one box (BackColour) around the whole event, padded by the outline width; the glyph outline
+    # takes the box colour so it disappears. A black box a few pixels larger underneath gives the border.
+    box = lambda name, fill, back: (f"Style: {name},{cap['font']},{size},{fill},&H000000FF,{back},{back},-1,0,0,0,"
+                                    f"100,100,0.5,0,4,{pad + (edge if name.endswith('Edge') else 0)},0,5,0,0,0,1")
+    header = f"""[Script Info]
+ScriptType: v4.00+
+PlayResX: {width}
+PlayResY: {height}
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+{box("BoxEdge", "&HFF000000", "&H00000000")}
+{box("Box", "&H00141414", "&H00FFFFFF")}
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+"""
+    events = []
+    xs = {"l": 0.3, "c": 0.5, "r": 0.7}
+    for scene, lines, start, dur in zip(scenes, scene_lines, scene_starts, durations):
+        spoken = [l for l in lines if re.search(r"[A-Za-z0-9]", l[1])]
+        for j, (who, text, a, _) in enumerate(spoken):
+            # Each box stays up until the next line starts (the last one until the scene fades out).
+            t0, t1 = start + a, start + (spoken[j + 1][2] if j + 1 < len(spoken) else dur - 0.15)
+            narr = who in narrators
+            rows = wrap_text(text.upper(), 46 if narr else 34)
+            h_box = len(rows) * size * 1.18 + 2 * pad
+            x = width / 2 if narr else width * xs.get(scene.get("pos", {}).get(who, "c"), 0.5)
+            y = (height * 0.035 + h_box / 2) if narr else (height * 0.935 - h_box / 2)
+            body = "\\N".join(rows)
+            fx = f"{{\\pos({x:.0f},{y:.0f})\\fad(120,100)}}"
+            events.append(f"Dialogue: 0,{ass_time(t0)},{ass_time(t1)},BoxEdge,,0,0,0,,{fx}{body}")
+            events.append(f"Dialogue: 1,{ass_time(t0)},{ass_time(t1)},Box,,0,0,0,,{fx}{body}")
+    path.write_text(header + "\n".join(events) + "\n")
+
+
 # --- sound effects & music ---------------------------------------------------
 
 SFX_LIBRARY = Path(__file__).parent / "sfx_library.json"
@@ -852,7 +916,7 @@ def sound_cues(scenes, scene_words, starts):
     return cues
 
 
-def assemble(clips, audios, durations, captions, out_path, cues=(), music=None):
+def assemble(clips, audios, durations, captions, out_path, cues=(), music=None, fonts_dir=None):
     n = len(clips)
     total = sum(durations)
     cmd = ["ffmpeg", "-y"]
@@ -877,7 +941,7 @@ def assemble(clips, audios, durations, captions, out_path, cues=(), music=None):
         out = f"[v{k}]"
         filters.append(f"{prev}[{k}:v]xfade=transition=fade:duration={XFADE}:offset={offset:.3f}{out}")
         prev = out
-    filters.append(f"{prev}ass={captions}[vout]")
+    filters.append(f"{prev}ass={captions}" + (f":fontsdir={fonts_dir}" if fonts_dir else "") + "[vout]")
     # Narration: pad each scene's voice to its slot, then concatenate.
     for k in range(n):
         filters.append(f"[{n + k}:a]aresample=44100,apad,atrim=0:{durations[k]:.3f}[a{k}]")
@@ -990,17 +1054,25 @@ def main():
             spans = [(a, b) for who, _, a, b in json.loads((out_dir / f"scene{i:02d}.lines.json").read_text()) if who in narr]
             caption_words.append([w for w in words if any(a - 0.05 <= w[1] <= b + 0.05 for a, b in spans)])
     captions = out_dir / "captions.ass"
-    write_captions(caption_words, starts, width, height, captions,
-                   keywords=spec.get("keywords", []),
-                   title=spec.get("title") if spec.get("title_card", True) else None,
-                   style=spec.get("caption"))
+    cap_style = spec.get("caption") or {}
+    if cap_style.get("mode") == "boxes":
+        write_boxes(scenes, [json.loads((out_dir / f"scene{i:02d}.lines.json").read_text()) for i in range(len(scenes))],
+                    starts, durations, width, height, captions, style=cap_style,
+                    narrators=spec.get("caption_speakers", ["narrator"]))
+    else:
+        write_captions(caption_words, starts, width, height, captions,
+                       keywords=spec.get("keywords", []),
+                       title=spec.get("title") if spec.get("title_card", True) else None,
+                       style=spec.get("caption"))
     final = out_dir / f"{name}.mp4"
     print("Assembling final video...")
     if spec.get("cast"):
         for i, sc in enumerate(scenes):
             sc["_line_times"] = [(l[2], l[3]) for l in json.loads((out_dir / f"scene{i:02d}.lines.json").read_text())]
     cues = sound_cues(scenes, scene_words, starts)
-    assemble(clips, audios, durations, captions, final, cues=cues, music=spec.get("music"))
+    fonts = cap_style.get("fonts_dir")
+    assemble(clips, audios, durations, captions, final, cues=cues, music=spec.get("music"),
+             fonts_dir=Path(__file__).parent / fonts if fonts else None)
     print(f"Done: {final} ({probe_duration(final):.1f}s)")
 
 

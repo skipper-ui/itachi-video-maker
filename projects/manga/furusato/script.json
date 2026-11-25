@@ -1,0 +1,2706 @@
+{
+ "title": "My Best Friend Stole My Project, My Wife and My Job... So I Went Home and Built Something Better [Manga Dub]",
+ "character": "",
+ "style": "",
+ "width": 1920,
+ "height": 1080,
+ "title_card": false,
+ "tts": "kokoro",
+ "cast": {
+  "narrator": "am_michael",
+  "haruto": "am_michael",
+  "daichi": "am_puck",
+  "erika": "af_nicole",
+  "saki": "af_sky",
+  "okabe": "am_onyx",
+  "mio": "af_bella",
+  "dad": "bm_george",
+  "mom": "bf_emma",
+  "president": "bm_daniel",
+  "engineer": "am_echo",
+  "kitano": "am_fenrir",
+  "anchor": "bm_fable"
+ },
+ "speed": 0.95,
+ "scene_pad": 0.7,
+ "emotive": {
+  "engine": "eleven_v3",
+  "cast": {
+   "narrator": "TX3LPaxmHKxFdv7VOQHJ",
+   "haruto": "TX3LPaxmHKxFdv7VOQHJ",
+   "daichi": "iP95p4xoKVk53GoZ742B",
+   "erika": "FGY2WhTYpPnrIDTdsKH5",
+   "saki": "EXAVITQu4vr4xnSDxMaL",
+   "okabe": "N2lVS1w4EtoT3dr4eOWO",
+   "mio": "cgSgspJ2msm6clMCkdW9",
+   "dad": "pqHfZKP75CvOlQylNhV4",
+   "mom": "XrExE9yKIg1WjnnlVkGX",
+   "president": "nPczCjzI2devNBz1zQrb",
+   "engineer": "bIHbv24MWmeRgasZH58o",
+   "kitano": "CwhRBWXzGAHq8TQ4Fs17",
+   "anchor": "onwK4e9ZLuTAKqWW03F9"
+  },
+  "skip": [],
+  "fallback": true,
+  "priority": [
+   "narrator",
+   "haruto",
+   "daichi",
+   "erika",
+   "saki",
+   "dad",
+   "mom",
+   "mio",
+   "president",
+   "okabe"
+  ]
+ },
+ "caption": {
+  "mode": "boxes",
+  "font": "Comic Neue",
+  "fonts_dir": "assets/fonts"
+ },
+ "images": {
+  "provider": "local",
+  "upscale": true
+ },
+ "characters": {
+  "haruto": "character reference portrait, waist-up front view of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "daichi": "character reference portrait, waist-up front view of Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "erika": "character reference portrait, waist-up front view of Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "saki": "character reference portrait, waist-up front view of Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "okabe": "character reference portrait, waist-up front view of Section Chief Okabe (a chubby balding 55-year-old Japanese man with a thin mustache and a stern face, wearing a brown suit), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mio": "character reference portrait, waist-up front view of Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "dad": "character reference portrait, waist-up front view of Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mom": "character reference portrait, waist-up front view of Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "president": "character reference portrait, waist-up front view of President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark"
+ },
+ "music": {
+  "sound": "music_strategy",
+  "volume": 0.07
+ },
+ "sources": [
+  "Original story and characters. Artwork drawn with AI (FLUX.2 klein, run locally)."
+ ],
+ "scenes": [
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) standing alone in the rain at night holding a cardboard box of office belongings, soaked, empty eyes, city lights behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "In one week, I lost my project, my wife, and my job.",
+     {
+      "tone": "quiet, bitter"
+     }
+    ],
+    [
+     "narrator",
+     "And the man who took all three... was my best friend.",
+     {
+      "tone": "slow, bitter"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "exterior of a tall modern glass office building in Tokyo on a sunny morning, salarymen walking in, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My name is Haruto Mizuki. I'm twenty-eight, and I work in the product planning department at Hikari Electric, a company that makes small home appliances."
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) at his desk late at night in a bright modern Japanese open-plan office, only his desk lamp on, a sleek white compact rice cooker prototype and design drawings on the desk, tired but focused, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "For the past year, I'd poured everything into one project. A compact rice cooker that makes perfect rice in just fifteen minutes."
+    ],
+    [
+     "narrator",
+     "We called it Project Hinata.",
+     {
+      "tone": "proud"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) leaning casually on the side of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie)'s desk holding two cans of coffee, grinning, in a bright modern Japanese open-plan office at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And this is Daichi Kurosawa. My best friend since university. He worked in sales, two floors down."
+    ],
+    [
+     "daichi",
+     "Still here, Haruto? At this rate you're going to marry that rice cooker.",
+     {
+      "tone": {
+       "tone": "teasing, laughing"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Very funny. The presentation is on Friday. It has to be perfect.",
+     {
+      "tone": {
+       "tone": "tired laugh"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "haruto"
+   ],
+   "pos": {
+    "daichi": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "close-up of Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) smiling warmly and holding out his hand, office at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "Relax. If anyone can pull it off, it's you. Hey, send me your files. I'll double-check the sales numbers for you.",
+     {
+      "tone": {
+       "tone": "friendly"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Really? Thanks, Daichi. You're a lifesaver.",
+     {
+      "tone": {
+       "tone": "grateful"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) smiling as he clicks send on his laptop, a file transfer progress bar on the screen, office at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't think twice. Daichi had always been there for me.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "narrator",
+     "Or so I thought.",
+     {
+      "tone": "dark"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) shyly handing a blue folder to Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) at his desk, she is blushing slightly, in a bright modern Japanese open-plan office in the evening, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "Um, Mizuki-san... I double-checked the cost sheets for Hinata. Everything matches.",
+     {
+      "tone": {
+       "tone": "shy, soft"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Thank you, Aoyama-san. You didn't have to stay late for this.",
+     {
+      "tone": {
+       "tone": "kind"
+      }
+     }
+    ],
+    [
+     "saki",
+     "I wanted to. I... really believe in this project.",
+     {
+      "tone": {
+       "tone": "shy"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "saki"
+   ],
+   "pos": {
+    "saki": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "close-up of Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) adjusting her round glasses and smiling to herself, office background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Saki Aoyama, from accounting. Quiet, careful, and one of the few people who ever noticed my work."
+    ]
+   ],
+   "refs": [
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) entering a modern Tokyo apartment living room at night, Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) lying on the sofa scrolling her phone and not looking up, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "At home, my wife Erika was waiting for me. Well... waiting might be the wrong word.",
+     {
+      "tone": "wry"
+     }
+    ],
+    [
+     "haruto",
+     "I'm home. Sorry I'm late again.",
+     {
+      "tone": {
+       "tone": "tired"
+      }
+     }
+    ],
+    [
+     "erika",
+     "Mm. There's leftover curry in the fridge.",
+     {
+      "tone": {
+       "tone": "uninterested"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika",
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) sitting at the end of the sofa talking hopefully to Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) who keeps looking at her phone, apartment at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "The presentation's this Friday. If it goes well, I might get promoted. We could finally take that trip to Okinawa.",
+     {
+      "tone": {
+       "tone": "hopeful"
+      }
+     }
+    ],
+    [
+     "erika",
+     "Sure. If.",
+     {
+      "tone": {
+       "tone": "dismissive"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika",
+    "haruto"
+   ],
+   "pos": {
+    "haruto": "l",
+    "erika": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "close-up of a smartphone lying on a glass coffee table, its screen lit with a new message notification showing a pink heart emoji, dark apartment, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Her phone buzzed. She turned it face down before I could see it.",
+     {
+      "tone": "uneasy"
+     }
+    ],
+    [
+     "narrator",
+     "I told myself it was nothing.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "large corporate conference room full of executives in suits around a long table, a projector screen at the front, Section Chief Okabe (a chubby balding 55-year-old Japanese man with a thin mustache and a stern face, wearing a brown suit) sitting at the head of the table, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Friday came. The whole department gathered in the big conference room. Even the company president was there."
+    ]
+   ],
+   "refs": [
+    "okabe"
+   ],
+   "fx": []
+  },
+  {
+   "image": "President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) sitting at a conference table with his hands folded, calm and observant, executives beside him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "President Shiraishi. A man who almost never spoke in meetings. But when he did, everyone listened."
+    ]
+   ],
+   "refs": [
+    "president"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Section Chief Okabe (a chubby balding 55-year-old Japanese man with a thin mustache and a stern face, wearing a brown suit) standing at the head of the conference table and gesturing toward the door, executives watching, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "okabe",
+     "Before Mizuki begins, Kurosawa from sales has asked to present a new product idea.",
+     {
+      "tone": {
+       "tone": "pompous"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "okabe"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) standing confidently in front of a projector screen showing a white compact rice cooker design, presenting to a conference room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "Thank you, Chief. Ladies and gentlemen... allow me to introduce Project Hinata.",
+     {
+      "tone": {
+       "tone": "confident, showman"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) sitting at the conference table frozen in shock, eyes wide, sweat on his face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My slides. My data. My fifteen-minute rice cooker. Every word of it... was mine.",
+     {
+      "tone": "stunned"
+     }
+    ],
+    [
+     "haruto",
+     "Daichi... what are you doing?",
+     {
+      "tone": {
+       "tone": "whispering, shocked"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) smiling smugly at the projector screen while executives nod approvingly, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "I came up with the concept while talking to our customers. After all, sales knows what people really want.",
+     {
+      "tone": {
+       "tone": "smug"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) standing up suddenly from his chair in the conference room, slamming his hands on the table, angry, executives turning to look, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "That's my proposal! I've been working on Hinata for a whole year!",
+     {
+      "tone": {
+       "tone": "shouting"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Section Chief Okabe (a chubby balding 55-year-old Japanese man with a thin mustache and a stern face, wearing a brown suit) glaring and pointing at someone across the conference table, angry red face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "okabe",
+     "Mizuki! Sit down! Do you have any proof?",
+     {
+      "tone": {
+       "tone": "angry"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "The files are on my computer. The timestamps will show...",
+     {
+      "tone": {
+       "tone": "desperate"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "okabe"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) holding up a tablet showing a file list, looking calm and amused, conference room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "Funny. My files are dated a whole month before yours.",
+     {
+      "tone": {
+       "tone": "smug, calm"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) sitting back down, pale and trembling, staring at the table, conference room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He'd sent my files to himself and changed the dates. The same files I'd given him to check the sales numbers.",
+     {
+      "tone": "bitter"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) looking thoughtfully across the room, eyes narrowed, hand on his chin, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "president",
+     "...Interesting. We will discuss this later.",
+     {
+      "tone": {
+       "tone": "calm, thoughtful"
+      }
+     }
+    ],
+    [
+     "narrator",
+     "He said nothing more. But I noticed he was looking at me. Not at Daichi."
+    ]
+   ],
+   "refs": [
+    "president"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) grabbing Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch)'s arm in an empty office hallway, Haruto angry and hurt, Daichi turning around, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Daichi! Why? We've been friends for ten years!",
+     {
+      "tone": {
+       "tone": "hurt, angry"
+      }
+     }
+    ],
+    [
+     "daichi",
+     "Friends? Haruto, you were always the smart one. Top of the class. Everyone's favorite. Do you have any idea how that felt?",
+     {
+      "tone": {
+       "tone": "bitter"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "haruto"
+   ],
+   "pos": {
+    "haruto": "l",
+    "daichi": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "close-up of Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) leaning in with a cold sneer, office hallway, dramatic shadow over his eyes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "This time, I win. And Hinata isn't the only thing I'm taking from you.",
+     {
+      "tone": {
+       "tone": "cold whisper"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "What's that supposed to mean?",
+     {
+      "tone": {
+       "tone": "confused"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) walking away down an office hallway, waving over his shoulder without looking back, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "You'll find out. Go home early today, buddy.",
+     {
+      "tone": {
+       "tone": "mocking"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) standing at the corner of the hallway holding a folder to her chest, looking worried at Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie), modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "Mizuki-san... I know Hinata is yours. I saw you working on it every single night.",
+     {
+      "tone": {
+       "tone": "worried, gentle"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Thank you, Aoyama-san. But I don't think anyone else is going to believe that.",
+     {
+      "tone": {
+       "tone": "defeated"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "saki"
+   ],
+   "pos": {
+    "saki": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) on a commuter train in the afternoon holding a small white cake box on his lap, a tired hopeful smile, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I went home early. It was our third wedding anniversary, so I stopped and bought Erika's favorite strawberry cake.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "narrator",
+     "I thought... at least I still had my family.",
+     {
+      "tone": "sad"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of an apartment entrance floor with a pair of shiny expensive brown Italian leather men's shoes next to women's red high heels, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "At the door, there was a pair of shoes I recognized. Expensive Italian leather. Daichi never stopped bragging about them.",
+     {
+      "tone": "dread"
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) on a living room sofa with his arm around Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings), both turning toward the doorway, modern apartment, afternoon light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "...Erika?",
+     {
+      "tone": {
+       "tone": "barely a whisper"
+      }
+     }
+    ],
+    [
+     "erika",
+     "Oh. You're early.",
+     {
+      "tone": {
+       "tone": "cold, unbothered"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "erika"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a white cake box falling and hitting the floor of an apartment hallway, a strawberry cake spilling out, Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie)'s legs in the background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "How long?",
+     {
+      "tone": {
+       "tone": "trembling"
+      }
+     }
+    ],
+    [
+     "erika",
+     "Six months. Maybe seven. Does it matter?",
+     {
+      "tone": {
+       "tone": "bored"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) standing with her arms crossed and looking down at someone with contempt, apartment living room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "erika",
+     "Daichi is going places, Haruto. He's going to be a section chief. And you? You're a man who stays late with rice cookers.",
+     {
+      "tone": {
+       "tone": "contemptuous"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) slapping divorce papers down on a glass coffee table, close-up of her hand with red nails, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "erika",
+     "Sign these. I already filled in my part.",
+     {
+      "tone": {
+       "tone": "sharp"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) lounging on the sofa laughing, one arm over the backrest, apartment living room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "Told you to go home early, buddy.",
+     {
+      "tone": {
+       "tone": "laughing"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Get out. Both of you. Get out of my home!",
+     {
+      "tone": {
+       "tone": "furious, shouting"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) at the apartment door with a rolling suitcase, looking back over her shoulder, Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) waiting outside, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "erika",
+     "Gladly. And my name's on the lease too, so you have until the end of the month.",
+     {
+      "tone": {
+       "tone": "sharp, smug"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "erika"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) sitting on the floor of a dark apartment hallway at dawn, knees up, head down, the crushed strawberry cake on the floor beside him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That night, I sat on the floor until the sun came up. The cake was still lying where I'd dropped it.",
+     {
+      "tone": "hollow"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Section Chief Okabe (a chubby balding 55-year-old Japanese man with a thin mustache and a stern face, wearing a brown suit) sitting at his desk and glaring up at Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) who stands in front of him, a security guard by the door, in a bright modern Japanese open-plan office, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "okabe",
+     "Mizuki. Confidential design data for Hinata was leaked to Kitano Appliances, our biggest competitor. And the leak came from your account.",
+     {
+      "tone": {
+       "tone": "stern"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "What? I never... I would never do that!",
+     {
+      "tone": {
+       "tone": "shocked"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "okabe"
+   ],
+   "pos": {
+    "okabe": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "Section Chief Okabe (a chubby balding 55-year-old Japanese man with a thin mustache and a stern face, wearing a brown suit) slapping a printed access log onto his desk, angry, office background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "okabe",
+     "The access log doesn't lie. You're dismissed, effective immediately. Be grateful we're not pressing charges.",
+     {
+      "tone": {
+       "tone": "cold"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "okabe"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) behind a glass office wall giving a small mocking wave and smirking, office background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Behind the glass wall, Daichi gave me a little wave. That's when I understood.",
+     {
+      "tone": "realizing"
+     }
+    ],
+    [
+     "narrator",
+     "He knew my password. I'd given it to him years ago, when he helped me fix my laptop.",
+     {
+      "tone": "bitter"
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) carrying a cardboard box of belongings through the office while coworkers at their desks whisper and look away, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I carried five years of work out in a single cardboard box. People I'd worked with every day wouldn't even look at me.",
+     {
+      "tone": "sad"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) running across an office building lobby toward Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) who carries a cardboard box, she is out of breath, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "Mizuki-san! Wait!",
+     {
+      "tone": {
+       "tone": "calling out, out of breath"
+      }
+     }
+    ],
+    [
+     "saki",
+     "I don't believe it. Not for a second. Please... don't give up.",
+     {
+      "tone": {
+       "tone": "earnest"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Thank you, Aoyama-san. Take care of yourself.",
+     {
+      "tone": {
+       "tone": "forced smile"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "saki"
+   ],
+   "pos": {
+    "saki": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) waiting at a bus stop in heavy rain at night holding a cardboard box, looking at his glowing phone, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "No job. No wife. Soon, no apartment. My phone had one unread message. It was from my mom.",
+     {
+      "tone": "numb"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of a smartphone in a man's wet hand showing a voice message from Mom, raindrops on the screen, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mom",
+     "Haruto, it's Mom. You haven't come home in two years. Your father misses you, even if he won't say it. Come home anytime, okay?",
+     {
+      "tone": {
+       "tone": "gentle, voice message"
+      }
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "close-up of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie)'s face in the rain, tears mixing with raindrops, a small sad smile, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "...Yeah. Maybe it's time.",
+     {
+      "tone": {
+       "tone": "tearful, soft"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a small local train crossing green rice fields with tall mountains of Nagano behind, bright summer morning, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My hometown is a small town in the mountains of Nagano, three hours from Tokyo. Rice fields, old houses, and one convenience store that closes at nine.",
+     {
+      "tone": "fond"
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "an old Japanese countryside house with a tiled roof next to a small wooden machine workshop with a big sliding door, summer, cicadas, blue sky, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My family's house sits behind my father's old workshop. For thirty years, he repaired every machine on every farm in the valley."
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) hugging Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) tightly at the front door of an old Japanese house, she is overjoyed and teary, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mom",
+     "Haruto! Oh, look at you. You're so thin! Are you eating properly?",
+     {
+      "tone": {
+       "tone": "overjoyed"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "I'm home, Mom.",
+     {
+      "tone": {
+       "tone": "emotional"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) jumping onto Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers)'s back from behind with a big grin, entrance of a Japanese house, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Big brother! You actually came back! Did Tokyo finally kick you out?",
+     {
+      "tone": {
+       "tone": "teasing, cheerful"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "...Something like that.",
+     {
+      "tone": {
+       "tone": "awkward laugh"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a Japanese family dinner table with rice, miso soup and grilled fish, Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) staring at his untouched bowl, Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) and Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) watching him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "At dinner, I tried to act normal. I lasted about five minutes.",
+     {
+      "tone": "wry"
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto",
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) putting down his chopsticks and looking seriously across the dinner table, traditional Japanese dining room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "dad",
+     "Haruto. Your mother made your favorite and you haven't touched it. Talk.",
+     {
+      "tone": {
+       "tone": "gruff"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) with his head bowed speaking at the dinner table while Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie), Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) and Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) listen in shock, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "So I told them everything. The project. Daichi. Erika. The leak. The box in the rain.",
+     {
+      "tone": "heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto",
+    "mio",
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) slamming both hands on the dinner table, furious, chopsticks flying, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "That snake! I always hated that Daichi guy! He ate all my pudding at New Year's!",
+     {
+      "tone": {
+       "tone": "furious"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) covering her mouth with her hand, teary eyes, dining room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mom",
+     "And Erika... after everything you did for her.",
+     {
+      "tone": {
+       "tone": "heartbroken"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) standing and placing a firm hand on Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers)'s shoulder, warm lamplight, dining room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "dad",
+     "Listen to me. A man who steals an idea only gets the idea. He doesn't get the head it came from.",
+     {
+      "tone": {
+       "tone": "firm, warm"
+      }
+     }
+    ],
+    [
+     "dad",
+     "You built that rice cooker once. You can build something better. And this time, you build it for yourself.",
+     {
+      "tone": {
+       "tone": "warm"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) looking up with tears in his eyes and a trembling smile, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Dad...",
+     {
+      "tone": {
+       "tone": "choked up"
+      }
+     }
+    ],
+    [
+     "narrator",
+     "For the first time in a week, I felt something besides pain. I felt like I could breathe again.",
+     {
+      "tone": "relieved"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) sliding open the big door of a dusty old machine workshop in morning sunlight, lathe, workbenches, tools on the walls and a small 3D printer, Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "dad",
+     "The workshop's been empty since I retired. It's yours. Lathe, soldering station, 3D printer... everything.",
+     {
+      "tone": {
+       "tone": "proud"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Wait. You have a 3D printer?",
+     {
+      "tone": {
+       "tone": "surprised"
+      }
+     }
+    ],
+    [
+     "dad",
+     "Your sister made me buy it. I used it once. To print a cup holder.",
+     {
+      "tone": {
+       "tone": "deadpan"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) sitting cross-legged with a laptop covered in stickers, grinning mischievously, workshop background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "And don't forget, I study computer science! If you need an app, a website, or someone to hack your ex-best-friend's... I mean, if you need help, I'm here!",
+     {
+      "tone": {
+       "tone": "mischievous"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "No hacking, Mio.",
+     {
+      "tone": {
+       "tone": "laughing"
+      }
+     }
+    ],
+    [
+     "mio",
+     "Fine, fine.",
+     {
+      "tone": {
+       "tone": "pouting"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) sitting at a wooden workbench sketching designs in a notebook, crumpled paper around him, workshop at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't want to rebuild Hinata. Daichi could keep it. I wanted to make something new.",
+     {
+      "tone": "determined"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) lifting the lid of an old black clay rice pot on a gas stove in a traditional Japanese kitchen, steam rising, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The answer came from my mother's kitchen."
+    ],
+    [
+     "mom",
+     "This old clay pot is slow, but nothing tastes better. The new machines just aren't the same.",
+     {
+      "tone": {
+       "tone": "wistful"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Mom... say that again.",
+     {
+      "tone": {
+       "tone": "realizing"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) with wide excited eyes, a bright idea glow around his head, kitchen background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Every fast rice cooker, Hinata included, traded flavor for speed. But what if you didn't have to choose?",
+     {
+      "tone": "excited"
+     }
+    ],
+    [
+     "haruto",
+     "A cooker that heats like a clay pot... but fast enough for a family where everyone works!",
+     {
+      "tone": {
+       "tone": "excited"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) and Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) working side by side at a workbench at night, sparks from a grinder, circuit boards and metal parts, warm workshop light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "For three months, my father and I worked in that workshop every day. He knew metal and heat like nobody else. I knew the design and the electronics."
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) typing on a laptop surrounded by empty energy drink cans, a cute rice-grain mascot character on the screen, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Mio wrote an app that let you start the rice from your phone, and learned each family's favorite texture."
+    ],
+    [
+     "mio",
+     "I named the AI Okome-chan. She's very polite!",
+     {
+      "tone": {
+       "tone": "proud"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a metal rice cooker prototype on a workbench with black smoke pouring out, Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) and Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) coughing and waving the smoke away, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Our first prototype caught fire.",
+     {
+      "tone": "deadpan"
+     }
+    ],
+    [
+     "dad",
+     "...Well. It's warm.",
+     {
+      "tone": {
+       "tone": "deadpan"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) tasting rice with chopsticks with an amazed teary expression while Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers), Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) and Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) watch nervously, workshop table, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Our seventh prototype cooked rice in eighteen minutes. And when my mother tasted it, she went very quiet."
+    ],
+    [
+     "mom",
+     "Haruto... this tastes just like my grandmother's rice.",
+     {
+      "tone": {
+       "tone": "amazed, tearful"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto",
+    "mio",
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) proudly holding up a beautiful finished rice cooker with a matte white body and a warm wooden lid, workshop background, morning light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "We called it Furusato. It means hometown.",
+     {
+      "tone": "proud, warm"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) filming with a smartphone on a tripod while Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) stands stiffly next to the wooden-lid rice cooker in the workshop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Okay, smile, big brother! We launch the crowdfunding campaign tonight!",
+     {
+      "tone": {
+       "tone": "cheerful"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "I'm really not good in front of cameras...",
+     {
+      "tone": {
+       "tone": "nervous"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) in a new private office leaning back in a leather chair with his feet up on the desk, smug, city view window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Meanwhile, back in Tokyo, things weren't going so well for Daichi. I only heard about it later."
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "worried young engineers in work uniforms showing Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) a tablet with a red warning graph, a lab with rice cooker prototypes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "engineer",
+     "Kurosawa-san, the Hinata prototype keeps overheating. What temperature curve did you use in the original design?",
+     {
+      "tone": {
+       "tone": "worried"
+      }
+     }
+    ],
+    [
+     "daichi",
+     "Uh... just fix it! That's your job, isn't it?",
+     {
+      "tone": {
+       "tone": "panicking"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) alone at night sweating in front of a computer monitor full of technical diagrams, loosened tie, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Of course he couldn't answer. He'd copied my slides, but he never understood the engineering behind them."
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) in a luxury boutique holding up a designer handbag, Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) beside her with a strained smile holding a credit card, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "erika",
+     "Daichi, I want this one. And we should move to a bigger apartment, don't you think?",
+     {
+      "tone": {
+       "tone": "spoiled"
+      }
+     }
+    ],
+    [
+     "daichi",
+     "Sure, babe. Anything for you.",
+     {
+      "tone": {
+       "tone": "strained"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "erika"
+   ],
+   "pos": {
+    "erika": "l",
+    "daichi": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) staring in horror at a long credit card bill, sitting on the edge of a bed at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Daichi was spending money he didn't have. And to keep up, he'd made a very dangerous decision.",
+     {
+      "tone": "ominous"
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) meeting a shady man in a black coat and sunglasses in a dim underground parking garage, an envelope being handed over, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kitano",
+     "Your last data package was useful, Kurosawa. Bring the rest, and you'll get the other half.",
+     {
+      "tone": {
+       "tone": "sinister"
+      }
+     }
+    ],
+    [
+     "daichi",
+     "Keep your voice down. Nobody can know about this.",
+     {
+      "tone": {
+       "tone": "nervous whisper"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "pos": {
+    "kitano": "l",
+    "daichi": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) alone at her desk late at night in a dark office, the glow of two monitors with spreadsheets on her face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "But someone in Tokyo hadn't forgotten about me.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": [
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) frowning at a computer monitor showing a table of access logs, office at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "That's strange... Mizuki-san's account sent the files to Kitano at eleven forty-two P.M. on the fourteenth.",
+     {
+      "tone": {
+       "tone": "puzzled, murmuring"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) with her eyes widening in realization, hand on her mouth, a soft memory glow behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "But on the fourteenth, Mizuki-san was with me in accounting until midnight. We were checking the cost sheets. He never went back to his desk!",
+     {
+      "tone": {
+       "tone": "realizing"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a computer monitor showing grainy security camera footage of Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) sitting at a dark office desk at night using a computer, Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) reflected in the screen, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "She asked security for the camera footage from that night. And there he was. Daichi. Sitting at my desk.",
+     {
+      "tone": "tense"
+     }
+    ],
+    [
+     "saki",
+     "Got you.",
+     {
+      "tone": {
+       "tone": "quiet determination"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) on the phone in an empty office stairwell, nervous and hopeful, holding a USB drive, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "Mizuki-san? It's Aoyama. I'm sorry to call so suddenly. I found something. I think I can prove you're innocent.",
+     {
+      "tone": {
+       "tone": "nervous, hopeful"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) holding a phone to his ear in the workshop, shocked and moved, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Aoyama-san... why would you go this far for me?",
+     {
+      "tone": {
+       "tone": "moved"
+      }
+     }
+    ],
+    [
+     "saki",
+     "Because you were the only one who ever said thank you to accounting.",
+     {
+      "tone": {
+       "tone": "shy laugh"
+      }
+     }
+    ],
+    [
+     "saki",
+     "And because... I miss seeing you at the office.",
+     {
+      "tone": {
+       "tone": "very shy, quiet"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) peeking around the workshop door with a huge teasing grin, Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) blushing red holding a phone, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Ohhh? Who's Aoyama-san? Big brother's face is all red!",
+     {
+      "tone": {
+       "tone": "teasing"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Mio! Go away!",
+     {
+      "tone": {
+       "tone": "embarrassed"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ],
+   "pos": {
+    "mio": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "a laptop on a wooden table showing a crowdfunding page with a progress bar far over one hundred percent and confetti graphics, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Then the crowdfunding campaign launched. We hoped to raise one million yen.",
+     {
+      "tone": "nervous"
+     }
+    ],
+    [
+     "narrator",
+     "In the first twenty-four hours, we raised ten million.",
+     {
+      "tone": "amazed"
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) jumping with joy and Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) laughing and clapping in a Japanese living room, Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) looking confused with his arms crossed, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Ten million! TEN MILLION! Okome-chan is famous!",
+     {
+      "tone": {
+       "tone": "screaming with joy"
+      }
+     }
+    ],
+    [
+     "dad",
+     "...Is that a lot?",
+     {
+      "tone": {
+       "tone": "confused"
+      }
+     }
+    ],
+    [
+     "mom",
+     "Dear. It's a lot.",
+     {
+      "tone": {
+       "tone": "laughing"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "mio",
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a TV screen in a living room showing a news program about a rice cooker with a wooden lid, a news anchor at a desk, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "anchor",
+     "A rice cooker built in a small Nagano workshop has become the most funded home appliance in Japanese crowdfunding history.",
+     {
+      "tone": {
+       "tone": "news broadcast"
+      }
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "a shiny black luxury car parked on a gravel road in front of an old wooden workshop in the countryside, President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) stepping out, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "A week later, a black car pulled up in front of our workshop. And out stepped someone I never expected to see again.",
+     {
+      "tone": "surprised"
+     }
+    ]
+   ],
+   "refs": [
+    "president"
+   ],
+   "fx": []
+  },
+  {
+   "image": "President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) bowing politely to a surprised Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) inside the workshop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "president",
+     "Mizuki-kun. I owe you an apology. I should have trusted my instincts at that meeting.",
+     {
+      "tone": {
+       "tone": "sincere"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "President Shiraishi?",
+     {
+      "tone": {
+       "tone": "stunned"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "president"
+   ],
+   "pos": {
+    "president": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) speaking seriously in the workshop, Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) standing behind him waving shyly, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "president",
+     "Hinata has failed every safety test since you left. Whoever invented it doesn't understand it. And Ms. Aoyama from accounting brought me something very interesting.",
+     {
+      "tone": {
+       "tone": "knowing"
+      }
+     }
+    ],
+    [
+     "saki",
+     "Hello, Mizuki-san.",
+     {
+      "tone": {
+       "tone": "shy"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "president",
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) holding out his hand for a handshake toward Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers), workshop with the wooden-lid rice cooker on the bench, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "president",
+     "I'd like to make you an offer. Hikari Electric will manufacture Furusato as your partner. Your company. Your design. Your name.",
+     {
+      "tone": {
+       "tone": "warm, serious"
+      }
+     }
+    ],
+    [
+     "president",
+     "And I'd like you to present it at our shareholders' meeting next month."
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "president"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) giving a proud firm nod with his arms crossed, workshop background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "dad",
+     "Go on. Finish what you started.",
+     {
+      "tone": {
+       "tone": "proud"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) shaking hands firmly with President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit), determined expression, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "I accept. But I have one condition. Daichi Kurosawa must be at that meeting.",
+     {
+      "tone": {
+       "tone": "determined"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "president"
+   ],
+   "pos": {
+    "haruto": "l",
+    "president": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "a huge hotel ballroom set up for a corporate shareholders' meeting, hundreds of seated people, a stage with a big screen, cameras, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The shareholders' meeting. Two hundred people. Cameras everywhere.",
+     {
+      "tone": "tense"
+     }
+    ],
+    [
+     "narrator",
+     "And in the front row... Section Chief Daichi Kurosawa, with Erika on his arm.",
+     {
+      "tone": "cold"
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) and Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) sitting in the front row of an audience, Daichi's jaw dropping in shock, Erika confused, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "Haruto?! What is HE doing here?",
+     {
+      "tone": {
+       "tone": "shocked"
+      }
+     }
+    ],
+    [
+     "erika",
+     "Isn't that your old friend? The failure?",
+     {
+      "tone": {
+       "tone": "confused, snide"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "erika"
+   ],
+   "pos": {
+    "daichi": "l",
+    "erika": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) in a sharp navy suit standing confidently on a stage at a podium with a microphone, a big screen behind him showing the wooden-lid rice cooker, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Good afternoon. My name is Haruto Mizuki. Six months ago, I was fired from this company.",
+     {
+      "tone": {
+       "tone": "confident"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Today, I'm here as its partner.",
+     {
+      "tone": {
+       "tone": "confident"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a ballroom audience applauding enthusiastically, a big screen on stage showing a rice cooker with a wooden lid, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I explained everything about Furusato. The clay-pot heating. Okome-chan. Ten million yen in a single day. The room went silent... and then it burst into applause."
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) standing up in the audience pointing angrily at the stage, red-faced, people around him staring, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "This is ridiculous! He's a thief! He leaked our company's data to Kitano! Why is a criminal standing on that stage?",
+     {
+      "tone": {
+       "tone": "outraged, shouting"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) standing calmly at the side of the stage with his hands behind his back, icy stare, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "president",
+     "Kurosawa-kun. Funny you should mention the leak. Ms. Aoyama, if you would.",
+     {
+      "tone": {
+       "tone": "calm, icy"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "president"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) standing at a laptop on the stage, a big screen behind her showing grainy night security camera footage of Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) at an office computer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "On the night of the leak, Mizuki-san was with me in accounting until midnight. This is the security camera footage from his desk at eleven forty-two.",
+     {
+      "tone": {
+       "tone": "steady"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) pale and sweating, stepping backward, the audience gasping around him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "Th-that's fake! That's not me!",
+     {
+      "tone": {
+       "tone": "panicking"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a big screen on a stage showing bank transfer records with large highlighted numbers, Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) pointing at it, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "And these are payments from Kitano Appliances, to an account in your name. Five million yen. In two parts.",
+     {
+      "tone": {
+       "tone": "firm"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) stepping to the front of the stage and looking down calmly, dramatic spotlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "And Daichi... if Hinata was really your idea, tell everyone. What's the heating curve at minute seven?",
+     {
+      "tone": {
+       "tone": "calm, cutting"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) stammering, eyes darting, sweat dripping, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "The... the heating... it's... eighty... no, it's...",
+     {
+      "tone": {
+       "tone": "stammering"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) with a cold calm stare, stage lights, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "It's a hundred and two degrees, held for ninety seconds. It's on page forty of the design document you stole.",
+     {
+      "tone": {
+       "tone": "cold"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "You never even read it.",
+     {
+      "tone": {
+       "tone": "cold, quiet"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "two security guards approaching Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) in the ballroom aisle, President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit) on stage pointing toward the exit, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "president",
+     "Kurosawa Daichi. You are dismissed, effective immediately. Our lawyers will contact you about the stolen data. And the police are waiting outside.",
+     {
+      "tone": {
+       "tone": "stern"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "daichi",
+    "president"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Section Chief Okabe (a chubby balding 55-year-old Japanese man with a thin mustache and a stern face, wearing a brown suit) trying to sneak toward a side exit of the ballroom, sweating, being stopped by President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, wearing a black three-piece suit), modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "president",
+     "Ah, and Section Chief Okabe. You approved his promotion and signed Mizuki-kun's dismissal without any investigation. We'll be discussing your future as well.",
+     {
+      "tone": {
+       "tone": "cold"
+      }
+     }
+    ],
+    [
+     "okabe",
+     "P-President, I can explain...",
+     {
+      "tone": {
+       "tone": "sweating, panicked"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "okabe",
+    "president"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) being dragged up the aisle by two security guards, shouting back over his shoulder, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daichi",
+     "Haruto! This isn't over! You hear me?!",
+     {
+      "tone": {
+       "tone": "screaming"
+      }
+     }
+    ],
+    [
+     "narrator",
+     "It was over. He just didn't know it yet.",
+     {
+      "tone": "calm"
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) running after Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) down a hotel corridor, desperate, her makeup smudged, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "erika",
+     "Haruto! Wait! Haruto, please!",
+     {
+      "tone": {
+       "tone": "desperate"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika",
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "close-up of Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) crying and clasping her hands, hotel corridor, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "erika",
+     "I made a mistake. Daichi lied to me. He tricked me! I never stopped loving you, Haruto.",
+     {
+      "tone": {
+       "tone": "crying, desperate"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) clutching Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie)'s sleeve with both hands, pleading, hotel corridor, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "erika",
+     "We can start over. You and me. With your company... we could have such a good life together!",
+     {
+      "tone": {
+       "tone": "pleading"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika",
+    "haruto"
+   ],
+   "pos": {
+    "erika": "l",
+    "haruto": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) calmly removing Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings)'s hand from his sleeve, his face calm and sad, hotel corridor, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Erika. On our anniversary, I dropped a strawberry cake on the floor. You stepped over it on your way out.",
+     {
+      "tone": {
+       "tone": "quiet, calm"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "erika",
+    "haruto"
+   ],
+   "pos": {
+    "haruto": "r",
+    "erika": "l"
+   },
+   "fx": []
+  },
+  {
+   "image": "close-up of Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) looking at her with calm, tired eyes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "You didn't fall in love with Daichi. You fell in love with what he promised you. And now you want what I have. Not me.",
+     {
+      "tone": {
+       "tone": "calm"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Goodbye, Erika. I hope you find what you're looking for.",
+     {
+      "tone": {
+       "tone": "gentle, final"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) kneeling alone on the carpet of an empty hotel corridor crying, Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) walking away in the distance, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I later heard that most of Daichi's credit cards were in both their names.",
+     {
+      "tone": "dry"
+     }
+    ],
+    [
+     "narrator",
+     "Erika spent the next few years paying off designer bags she'd already sold.",
+     {
+      "tone": "dry, satisfied"
+     }
+    ]
+   ],
+   "refs": [
+    "erika",
+    "haruto"
+   ],
+   "fx": []
+  },
+  {
+   "image": "a new small modern factory building with a wooden facade in a countryside valley, cherry blossom trees in full bloom, spring, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "One year later, Furusato was the best-selling rice cooker in Japan.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "narrator",
+     "My father's old workshop is now a real factory, with thirty employees from our hometown.",
+     {
+      "tone": "proud"
+     }
+    ]
+   ],
+   "refs": [],
+   "fx": []
+  },
+  {
+   "image": "Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) in a clean factory teaching young workers in caps how to assemble a heating plate, proud and stern, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "dad",
+     "Careful with that! The heat plate is the heart of the machine!",
+     {
+      "tone": {
+       "tone": "gruff, proud"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "dad"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie) in her yellow hoodie spinning in an office chair in front of multiple monitors, a cute rice mascot on screen, modern startup office, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Official title: Chief Technology Officer. And Okome-chan now speaks four languages!",
+     {
+      "tone": {
+       "tone": "proud"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) in a bright test kitchen with grandmothers from the village tasting rice from wooden-lid rice cookers, everyone smiling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Mom runs our test kitchen. Every new model has to pass the grandmother test.",
+     {
+      "tone": "fond"
+     }
+    ]
+   ],
+   "refs": [
+    "mom"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Daichi (a tall 28-year-old Japanese man with styled wavy light-brown hair and a confident smirk, wearing a light grey slim-fit suit, maroon tie and a silver wristwatch) in a convenience store uniform mopping the floor alone at night, tired and unshaven, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "As for Daichi, he was convicted of corporate espionage. After his sentence, I heard he found work on a night shift somewhere.",
+     {
+      "tone": "neutral"
+     }
+    ],
+    [
+     "narrator",
+     "I hope he learned something.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "daichi"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) and Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) walking side by side under cherry blossom trees by a river, petals falling, she is blushing, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "Mizuki-san... I mean, Haruto. Is it really okay for me to leave Hikari and join your company?",
+     {
+      "tone": {
+       "tone": "shy"
+      }
+     }
+    ],
+    [
+     "haruto",
+     "Of course. You're the one who saved me, Saki. I'd like you by my side. At work... and outside of work, too.",
+     {
+      "tone": {
+       "tone": "warm, a little shy"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "saki"
+   ],
+   "pos": {
+    "haruto": "l",
+    "saki": "r"
+   },
+   "fx": []
+  },
+  {
+   "image": "close-up of Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse) blushing with a happy smile, cherry blossom petals around her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saki",
+     "...Yes. I'd like that.",
+     {
+      "tone": {
+       "tone": "happy, blushing"
+      }
+     }
+    ]
+   ],
+   "refs": [
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers), Saki (a 25-year-old Japanese woman with shoulder-length dark brown hair with a small hair clip, round glasses and a gentle face, wearing a light pink cardigan over a white blouse), Mio (a cheerful 20-year-old Japanese woman with long black hair in a high ponytail, wearing an oversized yellow hoodie), Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, wearing a lavender sweater and a white apron) and Dad (a 58-year-old Japanese man with short grey hair, thick eyebrows and glasses pushed up on his forehead, wearing a dark green work jacket) laughing together around a dinner table full of food in a traditional Japanese house, warm evening light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "In one week, I lost everything. But when I went back home, I found out what I really had all along.",
+     {
+      "tone": "warm, moved"
+     }
+    ]
+   ],
+   "refs": [
+    "dad",
+    "haruto",
+    "mio",
+    "mom",
+    "saki"
+   ],
+   "fx": []
+  },
+  {
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) smiling warmly at the viewer, cherry blossom petals falling, soft spring light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "If you were in my place... what would you have said to Erika in that hallway? Tell me in the comments.",
+     {
+      "tone": "warm, inviting"
+     }
+    ],
+    [
+     "narrator",
+     "And like and subscribe for more stories like this.",
+     {
+      "tone": "warm, smiling"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ],
+   "fx": []
+  }
+ ]
+}

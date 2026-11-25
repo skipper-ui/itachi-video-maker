@@ -7,6 +7,10 @@ bf16 weights use the CPU's AMX/AVX-512 BF16 units where available.
 Run in its own environment (torch, diffusers>=0.37, transformers, accelerate):
   ~/.venvs/imagegen/bin/python tools/flux_local.py SCRIPT.json OUT_DIR [--size 1024x576] [--scenes 45,46,...]
 Images are written as OUT_DIR/sceneNN.png (existing ones are skipped, so it can be stopped and resumed).
+
+Recurring characters: if the script has "characters" ({name: portrait prompt}), each portrait is drawn first as
+OUT_DIR/refs/<name>.png, and a scene listing "refs": [names] is drawn with those portraits as reference images,
+so the same faces and outfits come back in every panel. Delete a portrait (and the scenes using it) to redraw it.
 """
 import argparse
 import gc
@@ -33,36 +37,54 @@ def main():
     w, h = map(int, args.size.split("x"))
     spec = json.loads(args.script.read_text())
     wanted = {int(s) for s in args.scenes.split(",") if s} or set(range(len(spec["scenes"])))
-    todo = {i: f"{sc['image'].format(character=spec.get('character', ''))}, {spec.get('style', '')}"
-            for i, sc in enumerate(spec["scenes"]) if i in wanted and not (args.out / f"scene{i:02d}.png").exists()}
-    if not todo:
+    ref_dir = args.out / "refs"
+    chars = spec.get("characters", {})
+    jobs = {f"ref-{k}": (ref_dir / f"{k}.png", v, (576, 768), []) for k, v in chars.items()
+            if not (ref_dir / f"{k}.png").exists()}
+    for i, sc in enumerate(spec["scenes"]):
+        if i in wanted and not (args.out / f"scene{i:02d}.png").exists():
+            prompt = f"{sc['image'].format(character=spec.get('character', ''))}, {spec.get('style', '')}"
+            jobs[f"{i:02d}"] = (args.out / f"scene{i:02d}.png", prompt, (w, h), [r for r in sc.get("refs", []) if r in chars])
+    if not jobs:
         return print("nothing to draw")
     emb_dir = args.out / "flux_embeds"
     emb_dir.mkdir(parents=True, exist_ok=True)
 
-    need = [i for i in todo if not (emb_dir / f"{i:02d}.pt").exists()]
+    def stale(k):  # embeddings missing, or made from an older version of the prompt
+        f = emb_dir / f"{k}.pt"
+        if not f.exists():
+            return True
+        saved = torch.load(f)
+        return not isinstance(saved, dict) or saved["prompt"] != jobs[k][1]
+    need = [k for k in jobs if stale(k)]
     if need:
         t0 = time.time()
         reader = Flux2KleinPipeline.from_pretrained(MODEL, transformer=None, vae=None, torch_dtype=torch.bfloat16)
         with torch.inference_mode():
-            for n, i in enumerate(need, 1):
-                emb = reader.encode_prompt(prompt=todo[i], device="cpu")[0]
-                torch.save(emb.clone(), emb_dir / f"{i:02d}.pt")
+            for n, k in enumerate(need, 1):
+                emb = reader.encode_prompt(prompt=jobs[k][1], device="cpu")[0]
+                torch.save({"prompt": jobs[k][1], "emb": emb.clone()}, emb_dir / f"{k}.pt")
                 print(f"  prompt {n}/{len(need)} read ({time.time() - t0:.0f}s)", flush=True)
         del reader
         gc.collect()
 
     painter = Flux2KleinPipeline.from_pretrained(MODEL, text_encoder=None, tokenizer=None, torch_dtype=torch.bfloat16)
     t0 = time.time()
+    from PIL import Image
+    ref_dir.mkdir(parents=True, exist_ok=True)
     with torch.inference_mode():
-        for n, i in enumerate(todo, 1):
-            emb = torch.load(emb_dir / f"{i:02d}.pt")
-            img = painter(prompt_embeds=emb, width=w, height=h, num_inference_steps=4, guidance_scale=1.0,
-                          generator=torch.Generator().manual_seed(args.seed + i)).images[0]
-            tmp = args.out / f"scene{i:02d}.tmp.png"
+        # portraits first ("ref-..." sorts before the scene numbers), so scenes can use them
+        for n, k in enumerate(sorted(jobs, key=lambda k: (not k.startswith("ref-"), k)), 1):
+            path, _, (jw, jh), refs = jobs[k]
+            emb = torch.load(emb_dir / f"{k}.pt")["emb"]
+            seed = args.seed + (int(k) if k.isdigit() else 500)
+            extra = {"image": [Image.open(ref_dir / f"{r}.png").convert("RGB") for r in refs]} if refs else {}
+            img = painter(prompt_embeds=emb, width=jw, height=jh, num_inference_steps=4, guidance_scale=1.0,
+                          generator=torch.Generator().manual_seed(seed), **extra).images[0]
+            tmp = path.with_suffix(".tmp.png")
             img.save(tmp)
-            os.replace(tmp, args.out / f"scene{i:02d}.png")
-            print(f"  image {n}/{len(todo)} scene {i} drawn ({time.time() - t0:.0f}s)", flush=True)
+            os.replace(tmp, path)
+            print(f"  image {n}/{len(jobs)} {k} drawn{f' with {len(refs)} refs' if refs else ''} ({time.time() - t0:.0f}s)", flush=True)
 
 
 if __name__ == "__main__":
