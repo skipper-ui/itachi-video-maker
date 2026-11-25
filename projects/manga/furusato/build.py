@@ -34,6 +34,8 @@ C = {
            "wearing a dark green work jacket)",
     "MOM": "Mom (a warm 55-year-old Japanese woman with black hair in a low bun and a kind smile, "
            "wearing a lavender sweater and a white apron)",
+    "HOST": "Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, "
+            "big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood)",
     "PRESIDENT": "President Shiraishi (a dignified 65-year-old Japanese man with slicked-back white hair, "
                  "wearing a black three-piece suit)",
 }
@@ -57,24 +59,29 @@ CAST = {
     "engineer": "bIHbv24MWmeRgasZH58o",   # Will
     "kitano": "CwhRBWXzGAHq8TQ4Fs17",     # Roger
     "anchor": "onwK4e9ZLuTAKqWW03F9",     # Daniel
+    "host": "vGQNBgLaiM3EdZtxIiuY",       # Aerisita (ElevenLabs voice library): the outro host
 }
 # Local placeholder voices (Kokoro), used only if ElevenLabs can't voice a line.
 KOKORO = {"narrator": "am_michael", "haruto": "am_michael", "daichi": "am_puck", "erika": "af_nicole", "saki": "af_sky",
           "okabe": "am_onyx", "mio": "af_bella", "dad": "bm_george", "mom": "bf_emma", "president": "bm_daniel",
-          "engineer": "am_echo", "kitano": "am_fenrir", "anchor": "bm_fable"}
+          "engineer": "am_echo", "kitano": "am_fenrir", "anchor": "bm_fable", "host": "af_sky"}
 
 
 def L(who, text, tone=None):
     return [who, text, {"tone": tone}] if tone else [who, text]
 
 
-def S(image, *lines, pos=None):
+def S(image, *lines, pos=None, buttons=None, sfx=None):
     """One panel. pos="daichi:l,erika:r" puts those speakers' boxes on that side (default: bottom centre)."""
-    lines = [L(*l) for l in lines]  # (who, text, tone) tuples -> the same form as L()
+    lines = [l if isinstance(l, list) else L(*l) for l in lines]  # (who, text, tone) tuples -> the same form as L()
     sc = {"image": image.format(**C) + ", " + STYLE, "lines": [list(l) for l in lines],
           "refs": sorted({REFS[k] for k in re.findall(r"\{(\w+)\}", image)})}
     if pos:
         sc["pos"] = dict(p.split(":") for p in pos.split(","))
+    if buttons:
+        sc["buttons"] = buttons
+    if sfx:
+        sc["sfx"] = sfx
     return sc
 
 
@@ -404,8 +411,26 @@ scenes = [
     S("{HARUTO_HOME}, {SAKI}, {MIO}, {MOM} and {DAD} laughing together around a dinner table full of food in a traditional Japanese house, warm evening light",
       (N, "In one week, I lost everything. But when I went back home, I found out what I really had all along.", "warm, moved")),
     S("{HARUTO_HOME} smiling warmly at the viewer, cherry blossom petals falling, soft spring light",
-      (N, "If you were in my place... what would you have said to Erika in that hallway? Tell me in the comments.", "warm, inviting"),
-      (N, "And like and subscribe for more stories like this.", "warm, smiling")),
+      (N, "If you were in my place... what would you have said to Erika in that hallway? Tell me in the comments.", "warm, inviting")),
+
+    # ---- Outro: the channel's host girl ----
+    S("{HOST} waving happily at the viewer with both hands and a big smile, sparkles and little pink hearts floating around her, "
+      "bright pastel pink and lavender background with soft bokeh lights, upper body",
+      L("host", "Thanks for watching~!", "cheerful, cute, sing-song"),
+      L("host", "If you loved Haruto's story, please like, subscribe, and tap the bell, so you never miss the next one!", "bubbly, excited"),
+      pos="host:t", buttons=[
+          {"text": "LIKE", "line": 1, "delay": 1.4, "x": 0.27, "y": 0.84, "fill": "#3EA6FF"},
+          {"text": "SUBSCRIBE", "line": 1, "delay": 1.9, "x": 0.53, "y": 0.84, "press": 1.6, "pressed": "SUBSCRIBED"},
+          {"icon": "bell", "line": 1, "delay": 2.9, "x": 0.76, "y": 0.84}],
+      sfx=[{"sound": "pop", "at": "line:1+1.4", "volume": 0.5}, {"sound": "pop", "at": "line:1+1.9", "volume": 0.5},
+           {"sound": "tap", "at": "line:1+3.5", "volume": 0.6}, {"sound": "ding", "at": "line:1+2.9", "volume": 0.45}]),
+    S("{HOST} winking playfully and making a heart shape with both hands, floating hearts and sparkles, "
+      "bright pastel pink background with soft bokeh lights, upper body",
+      L("host", "Oh! And if you want a part two with Haruto and Saki, comment FURUSATO down below!", "playful, excited, winking"),
+      L("host", "See you in the next story! Bye-bye!", "sweet, cheerful"),
+      pos="host:t", buttons=[{"text": 'COMMENT "FURUSATO" FOR PART 2!', "line": 0, "delay": 2.6, "x": 0.5, "y": 0.84,
+                              "fill": "#FFD43B", "ink": "#141414"}],
+      sfx=[{"sound": "pop", "at": "line:0+2.6", "volume": 0.5}, {"sound": "chime", "at": "line:1", "volume": 0.35}]),
 ]
 
 spec = {
@@ -420,7 +445,7 @@ spec = {
     "characters": {REFS[k]: PORTRAIT.format(who=C[k]) for k in C if "_" not in k},
     "music": {"sound": "music_strategy", "volume": 0.07},
     "sources": ["Original story and characters. Artwork drawn with AI (FLUX.2 klein, run locally)."],
-    "scenes": [{**sc, "fx": []} for sc in scenes],
+    "scenes": [{"fx": [], **sc} for sc in scenes],
 }
 for sc in spec["scenes"]:
     sc["image"] = sc["image"].replace("{", "(").replace("}", ")")  # make_video formats prompts; keep them brace-free

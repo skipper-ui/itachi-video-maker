@@ -103,6 +103,9 @@ def eleven_post(url, body, timeout):
             if r.status_code != 429:
                 break
             time.sleep(2 ** attempt)
+        if r.status_code == 402 and "paid_plan_required" in r.text:
+            last = r  # a free key can't use voice-library voices: try the next key, but keep this one for the rest
+            continue
         if _out_of_credit(r):
             with _spent_lock:
                 if var not in _spent_keys:
@@ -805,6 +808,38 @@ def wrap_text(text, width):
     return lines + ([cur] if cur else [])
 
 
+# A bell outline (two sub-paths: body and clapper) in a 100x100 box, for the subscribe reminder.
+BELL = "m 50 4 b 30 4 20 22 20 44 l 20 64 l 8 78 l 92 78 l 80 64 l 80 44 b 80 22 70 4 50 4 m 38 83 b 38 98 62 98 62 83 l 38 83"
+
+
+def button_events(scene, lines, start, dur, width, height):
+    """Call-to-action buttons that pop in over a scene: "buttons": [{"text": "SUBSCRIBE", "line": 1, "delay": 1.5,
+    "x": 0.5, "y": 0.8, "fill": "#E62117", "ink": "#FFFFFF", "press": 1.2, "pressed": "SUBSCRIBED", "pressed_fill": "#606060"}]
+    or {"icon": "bell", ...}. Each appears `delay` seconds after line `line` starts and stays until the scene ends;
+    "press" swaps it to its pressed look that many seconds later, as if clicked."""
+    out = []
+    pop = r"\fscx0\fscy0\t(0,160,\fscx118\fscy118)\t(160,280,\fscx100\fscy100)"
+    end = start + dur - 0.1
+    for b in scene.get("buttons", []):
+        t0 = start + lines[b.get("line", 0)][2] + b.get("delay", 0.0)
+        x, y = b.get("x", 0.5) * width, b.get("y", 0.8) * height
+        if b.get("icon") == "bell":
+            k = round(height * b.get("size", 0.11))  # drawn at 100 units -> k pixels
+            swing = "".join(f"\\t({i * 140},{(i + 1) * 140},\\frz{a})" for i, a in enumerate((16, -16, 12, -10, 6, 0)))
+            out.append(f"Dialogue: 2,{ass_time(t0)},{ass_time(end)},Icon,,0,0,0,,{{\\pos({x:.0f},{y:.0f})\\org({x:.0f},{y - k / 2:.0f})"
+                       f"\\fscx{k}\\fscy{k}\\fad(100,100)\\p1{swing}}}{BELL}{{\\p0}}")
+            continue
+        looks = [(t0, b.get("press") and t0 + b["press"], b["text"], b.get("fill", "#E62117"), b.get("ink", "#FFFFFF"), pop)]
+        if b.get("press"):
+            squash = r"\fscx88\fscy88\t(0,140,\fscx100\fscy100)"
+            looks.append((t0 + b["press"], None, b.get("pressed", b["text"]), b.get("pressed_fill", "#606060"),
+                          b.get("pressed_ink", "#FFFFFF"), squash))
+        for a, z, text, fill, ink, anim in looks:
+            c = f"\\1c{ass_color(ink)}\\3c{ass_color(fill)}\\4c{ass_color(fill)}"
+            out.append(f"Dialogue: 2,{ass_time(a)},{ass_time(z or end)},Btn,,0,0,0,,{{\\pos({x:.0f},{y:.0f}){c}{anim}}}{text}")
+    return out
+
+
 def write_boxes(scenes, scene_lines, scene_starts, durations, width, height, path, style=None, narrators=("narrator",)):
     """Manga-dub captions: each line in a white box with a black border, shown while it is spoken.
 
@@ -830,6 +865,8 @@ ScaledBorderAndShadow: yes
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 {box("BoxEdge", "&HFF000000", "&H00000000")}
 {box("Box", "&H00141414", "&H00FFFFFF")}
+Style: Btn,{cap['font']},{round(size * 1.25)},&H00FFFFFF,&H000000FF,&H001721E6,&H001721E6,-1,0,0,0,100,100,1,0,4,{round(pad * 0.9)},0,5,0,0,0,1
+Style: Icon,Arial,20,&H0033CCFF,&H000000FF,&H00141414,&H00000000,0,0,0,0,100,100,0,0,1,{edge + 2},0,5,0,0,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -844,12 +881,15 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             narr = who in narrators
             rows = wrap_text(text.upper(), 46 if narr else 34)
             h_box = len(rows) * size * 1.18 + 2 * pad
-            x = width / 2 if narr else width * xs.get(scene.get("pos", {}).get(who, "c"), 0.5)
-            y = (height * 0.035 + h_box / 2) if narr else (height * 0.935 - h_box / 2)
+            side = scene.get("pos", {}).get(who, "c")
+            top = narr or side == "t"  # "t": a speaker's box at the top, like narration
+            x = width / 2 if top else width * xs.get(side, 0.5)
+            y = (height * 0.035 + h_box / 2) if top else (height * 0.935 - h_box / 2)
             body = "\\N".join(rows)
             fx = f"{{\\pos({x:.0f},{y:.0f})\\fad(120,100)}}"
             events.append(f"Dialogue: 0,{ass_time(t0)},{ass_time(t1)},BoxEdge,,0,0,0,,{fx}{body}")
             events.append(f"Dialogue: 1,{ass_time(t0)},{ass_time(t1)},Box,,0,0,0,,{fx}{body}")
+        events += button_events(scene, lines, start, dur, width, height)
     path.write_text(header + "\n".join(events) + "\n")
 
 
