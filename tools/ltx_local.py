@@ -83,6 +83,7 @@ def main():
     ap.add_argument("--seed", type=int, default=2000)
     ap.add_argument("--fit-audio", action="store_true", help="extend each shot to the length of its sceneNN.mp3")
     ap.add_argument("--anchor", type=float, default=0.8, help="how strongly continuation parts return to the scene image")
+    ap.add_argument("--pin-ends", action="store_true", help="steer the first part back to the scene image too")
     ap.add_argument("--tail", type=float, default=0.95, help="seconds added after the audio (make_video's scene pad + crossfade)")
     args = ap.parse_args()
     import torch
@@ -154,7 +155,10 @@ def main():
             part = parts_dir / f"scene{i:02d}-{k}.mp4"
             if not part.exists():
                 if k == 0:
-                    cond = LTXVideoCondition(image=fit(Image.open(args.images / f"scene{i:02d}.png").convert("RGB"), w, h), frame_index=0)
+                    still = fit(Image.open(args.images / f"scene{i:02d}.png").convert("RGB"), w, h)
+                    cond = [LTXVideoCondition(image=still, frame_index=0)]
+                    if args.pin_ends:  # also return to the picture at the end, so nothing drifts mid-shot
+                        cond.append(LTXVideoCondition(image=still, frame_index=(args.frames - 1) // 8 * 8, strength=args.anchor))
                 else:
                     # carry on from the previous part, and steer back to the original picture by the end of this one
                     # so the characters and framing don't drift further with every part
