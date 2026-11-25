@@ -12,7 +12,23 @@ Want a Part 2 with Haruto and Saki? Comment "FURUSATO"!
 👍 Like and 🔔 subscribe for more manga dub stories every week.
 
 CHAPTERS
-(added after the final render)
+0:00 One week, I lost everything
+0:13 Project Hinata
+1:56 The stolen presentation
+3:46 Anniversary surprise
+4:47 Framed and fired
+6:01 Going home to Nagano
+7:30 The family workshop
+9:12 Furusato is born
+9:26 Meanwhile in Tokyo...
+10:16 Saki finds the truth
+11:17 Ten million yen!
+11:49 The president's visit
+12:41 The shareholders' meeting
+14:04 Page forty
+14:50 Erika begs
+15:39 One year later
+16:52 Thanks for watching!
 
 This is an original story with original characters. Any resemblance to real people or companies is coincidental.
 Artwork drawn with AI (FLUX.2 klein). Voices: ElevenLabs.
