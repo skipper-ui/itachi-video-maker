@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Royal Rivalry, Episode 2 thumbnail</title>
+<!-- Official Supercell Fan Kit art (fankit.json), used under Supercell's Fan Content Policy. -->
+<script>window.STAGE = { w: 1920, h: 1080 };</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/coc/comic.js"></script>
+<script src="../../../motion/coc/comicpage.js"></script>
+<script>
+// Thumbnails are full-bleed: no subtitle band, no page margin, no credit line (the credit is in the description).
+layoutRects = () => [[-12, -12, W + 24, H + 24]];
+drawPage = (c, t, dur, pg) => {
+  paper(c, t);
+  (pg.panels || []).forEach((p, i) => drawPanel(c, t, dur, p, layoutRects()[0], i));
+  for (const tt of pg.titles || [])
+    withT(c, (tt.x ?? 0.5) * W, (tt.y ?? 0.45) * H, 1, tt.rot ?? -0.04, () => title(c, tt.text, 0, 0, tt.size || 80, { fill: SFX_STYLES[tt.style] || SFX_STYLES.gold, lw: (tt.size || 80) * 0.18 }));
+  for (const cp of pg.caps || []) capBox(c, t, -1, (cp.x ?? 0.03) * W, (cp.y ?? 0.035) * H, cp.text, { size: cp.size || 34, bg: cp.bg || '#FFE15A' });
+};
+</script>
+</head>
+<body>
+<script>comicEpisode('thumbnail.json', 'fankit.json');</script>
+</body>
+</html>
