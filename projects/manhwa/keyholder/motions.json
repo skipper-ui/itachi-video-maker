@@ -1,5 +1,165 @@
 {
- "1": "The giant horned monster stays in place, roars with its mouth open and slowly swings one clawed arm; the armored hunters step forward and slash with their weapons, blue magic crackles around them, embers drift in the air. Steady camera. The monster keeps its shape and face clearly visible.",
+ "0": "Slow aerial drift over the night city; the floating blue and red portals pulse and slowly rotate, city lights twinkle, thin clouds glide past.",
+ "1": {
+  "motion": "The giant horned monster stays in place, roars with its mouth open and slowly swings one clawed arm; the armored hunters step forward and slash with their weapons, blue magic crackles around them, embers drift in the air. Steady camera. The monster keeps its shape and face clearly visible.",
+  "pin": 0.4
+ },
+ "2": "Rain falls steadily; the young man keeps his palm on the small blue portal as it shrinks and fades with flickering light, then he looks up and speaks, lips moving; raindrops splash on the street. Steady camera.",
+ "3": "Heavy rain falls under the streetlight; the young man stands still, his jacket and hair dripping, he slowly lowers his head; the camera slowly pulls back to show the huge empty city.",
+ "4": "The crystal orb flickers very faintly under the young man's hand; the official reads from a clipboard, talking, lips moving naturally, and shakes his head; the young man looks up hopefully and speaks. Steady camera.",
+ "5": "The red-haired man yanks the envelope away with a smug grin and waves it, talking, lips moving naturally; the young man stares at his empty hand and sighs. Steady camera, both stay in frame.",
+ "6": "The red-haired man leans in smirking, talking, lips moving naturally; the young man gives a tired polite smile and answers; golden light glints off the marble floor. Steady camera.",
+ "7": "The man in the white suit walks slowly down the stairs smiling warmly, talking, lips moving naturally; guild members bow as he passes; golden light streams through the windows. Slow camera follow.",
+ "8": "The girl in the hospital bed smiles and pouts, talking, lips moving naturally; the young man grins sheepishly and scratches his head while answering; curtains sway in the afternoon light. Steady camera.",
+ "9": "The IV drip slowly drips, a single drop falling; dust floats in the soft light; very slow camera push toward the medicine bottle.",
+ "10": "The two little fingers hooked together squeeze gently and shake once; soft light flickers through the window; very slow camera push in. Only two hands.",
+ "11": "The huge red portal swirls and pulses behind them; the white-haired woman turns her head and speaks firmly, talking, lips moving naturally; her coat and hair blow in the wind; the hunters shift in formation. Steady camera.",
+ "12": "The squad walks slowly forward through the cavern; the red-haired man swings his gauntlets casually and grins; the red crystals glow and pulse. Slow camera follow.",
+ "13": {
+  "motion": "The white-haired woman swings her katana in a wide arc, a wave of frost sweeps forward and freezes the glowing red beetles; ice crystals spread and sparkle. Steady camera. Faces and shapes stay clear.",
+  "pin": 0.4
+ },
+ "14": "The young man pulls the wounded hunter up and puts the hunter's arm over his shoulder, they take a step; the white-haired woman looks back at them and speaks, talking, lips moving naturally; red crystal light flickers. Steady camera.",
+ "15": {
+  "motion": "The colossal stone golem slowly rises and straightens up, its glowing red core pulses brightly in its chest, dust and pebbles fall from its body; the tiny hunters below step back. Slow camera tilt up. The golem keeps its shape.",
+  "pin": 0.4
+ },
+ "16": {
+  "motion": "The white-haired woman strikes the golem's stone leg with her katana, ice shards burst and scatter, the stone stays unharmed; her hair and coat whip around. Steady camera.",
+  "pin": 0.4
+ },
+ "17": {
+  "motion": "The stone golem sweeps its huge arm slowly across, the armored hunters are knocked back, dust clouds roll across the red cavern. Steady camera. The golem keeps its shape.",
+  "pin": 0.4
+ },
+ "18": "The swirling red portal shrinks as dark chains tighten around it; the young man presses his hand against it, straining, and speaks in shock, talking, lips moving naturally. Steady camera.",
+ "19": "Close-up: the young man holds the earpiece, red light flickers on his face, his eyes widen in horror and he speaks, talking, lips moving naturally; sweat on his forehead. Very slow push in.",
+ "20": "Dramatic close-up: the young man grits his teeth, red light flickers, a bead of sweat runs down, he says a single word firmly. Very slow push in.",
+ "21": "Black chains wrap tighter around the red portal and it shrinks shut, the black keyhole symbol flares; shadows of hunters move in the dark. Steady camera.",
+ "22": "The young man drags the wounded white-haired woman across the cavern floor step by step; she lifts her head weakly and speaks, he answers, talking, lips moving naturally; red light flickers. Steady camera.",
+ "23": {
+  "motion": "The stone golem slowly raises its huge fist overhead; the young man crouches over the white-haired woman to shield her and looks up; dust falls. Steady camera. Shapes stay clear.",
+  "pin": 0.4
+ },
+ "24": "In the white void, golden particles drift upward around the young man; the enormous golden keyhole glows and pulses; the young man looks up in awe. Very slow push in.",
+ "25": "Close-up: the young man's eyes glow brighter gold, golden keyhole symbols float and slowly rotate around him, his hair moves slightly; he looks around in wonder. Steady camera.",
+ "26": {
+  "motion": "The young man leaps upward along the golem's arm toward the glowing golden keyhole, reaching out with one hand, golden light trailing behind him; dust falls. Steady camera.",
+  "pin": 0.4
+ },
+ "27": {
+  "motion": "The stone golem breaks apart into falling stone pieces, golden light bursts outward from its chest; the young man falls through the light. Slow motion. Steady camera.",
+  "pin": 0.4
+ },
+ "28": "The young man walks slowly out of the red portal carrying the unconscious woman; camera flashes go off, the crowd turns toward them cheering; the red-haired man shouts. Steady camera.",
+ "29": "Close-up: the white-haired woman on the stretcher slowly turns her eyes toward the young man, blinks weakly and speaks softly, talking, lips moving naturally. Very slow push in.",
+ "30": "In the dark apartment the brass key badge in his hands glows brighter gold, light flickering on his face; he stares at it, startled, and speaks, talking, lips moving naturally; moonlight through the window. Steady camera.",
+ "31": "The young man slurps instant ramen with chopsticks, steam rising from the bowl; the old TV flickers with the news; he mutters with a flat expression, talking, lips moving naturally. Steady camera.",
+ "32": "The man in the white suit grips the young man's hand and shoulder warmly, smiling, talking, lips moving naturally; the young man's face stays cold as he answers. Steady camera.",
+ "33": "The man in the white suit slides the envelope slowly across the desk, smiling, talking, lips moving naturally; the young man looks down at it in surprise and speaks. Steady camera.",
+ "34": "Extreme close-up: the fingers tap slowly once on the desk; the gold keyhole ring glints with a slow shimmer of light. Very slow push in.",
+ "35": "The golden keyhole on the vending machine flashes, a can drops out with a clunk; the young man blinks, then smiles and speaks, talking, lips moving naturally. Steady camera.",
+ "36": "The young man looks into the cracked mirror, a drop of blood runs from his nose, his golden eyes slowly fade to dark; he wipes his lip and speaks, talking, lips moving naturally. Steady camera.",
+ "37": {
+  "motion": "The young man raises his hand, golden keyholes on the goblins flash, the goblins freeze and fall back one by one; golden light sparks around his hand. Steady camera.",
+  "pin": 0.4
+ },
+ "38": {
+  "motion": "The young man holds up his hand, golden chains tighten around the huge wolf's claws as it hangs frozen mid-leap, its fur ruffling; golden sparks drift. Steady camera.",
+  "pin": 0.4
+ },
  "39": "Static camera, medium shot. The white-haired woman in armor turns her head toward the young man and talks to him, her lips moving, her long ponytail and hair swaying in the night wind; the young man looks back at her, blinks and answers. Both stay in frame. The city lights twinkle behind them.",
- "74": "The enormous black and gold portal tears wider open in the sky, swirling darkness spinning inside it, lightning strikes down across the skyline, storm clouds race around it, the camera slowly tilts up toward the gate."
+ "40": "The two face each other on the rooftop; the white-haired woman speaks seriously, talking, lips moving naturally; the young man answers, looking away; wind moves their hair; city lights twinkle. Steady camera.",
+ "41": "The white-haired woman holds her katana pointed at the young man, talking, lips moving naturally; he raises a hand and speaks, golden light flickers in his eyes; her coat moves in the wind. Steady camera.",
+ "42": "The white-haired woman smiles a little and slowly slides her sword back into its sheath, talking, lips moving naturally; her hair moves in the wind; city lights twinkle. Steady camera.",
+ "43": "The white-haired woman looks out over the city with a sad face, wind blowing her long white hair, she speaks quietly, talking, lips moving naturally; the young man listens beside her. Steady camera.",
+ "44": "The white-haired woman lunges with a practice strike, the young man dodges clumsily and stumbles; she speaks, he answers, talking, lips moving naturally. Steady camera, both stay in frame.",
+ "45": "The two sit side by side, the white-haired woman speaks quietly, talking, lips moving naturally; the young man turns to her and answers; wind moves their hair; long silence. Steady camera.",
+ "46": "The golden keyhole on the steel door flashes and the heavy door slowly swings open; the flashlight beam sweeps the dark vault; the white-haired woman steps forward and speaks. Steady camera.",
+ "47": "The young man flips through old files under the flashlight; the white-haired woman reads a page, her hands trembling, talking, lips moving naturally; dust floats in the light. Steady camera.",
+ "48": "The girl in the hospital bed points and grins, talking, lips moving naturally; the young man waves his hands in panic; the white-haired woman stands stiffly and answers flatly. Steady camera.",
+ "49": "The white-haired woman gently places the glowing snowflake charm in the girl's hands; the charm sparkles; the girl beams and speaks, talking, lips moving naturally. Soft warm light. Steady camera.",
+ "50": "In the hospital corridor the doctor speaks with a worried face, talking, lips moving naturally; the young man listens and answers, shocked; fluorescent lights hum. Steady camera.",
+ "51": "The girl in bed opens her eyes halfway and whispers, talking, lips moving naturally; the faint red glow from the window pulses; the young man leans closer. Steady camera.",
+ "52": "The red-haired man slams his gauntlet into the wall beside the young man, cracks spread, he leans in and speaks, talking, lips moving naturally; the young man stays calm and answers. Steady camera.",
+ "53": "The red-haired man stands before the desk and speaks, talking, lips moving naturally; the man in the white suit leans back in his chair smiling and answers. Steady camera.",
+ "54": "The man in the white suit stands alone, his ring glows black and pulses; on the holographic map a black keyhole symbol appears and flickers; he speaks quietly with a cold smile. Steady camera.",
+ "55": "The two men walk into the dim forest dungeon, mist drifting between the trees; the red-haired man grins and speaks; the young man stops and looks back, worried. Slow camera follow.",
+ "56": {
+  "motion": "Black wolves with red eyes rush forward out of the dark forest; the red-haired man throws a punch with his gauntlet at the nearest wolf, sparks fly. Steady camera. Shapes stay clear.",
+  "pin": 0.4
+ },
+ "57": "The wounded red-haired man sits against the tree, breathing hard, talking, lips moving naturally; the young man crouches beside him and answers; leaves drift down. Steady camera.",
+ "58": "The two men sit against the tree in the dark forest, a small fire flickers; the red-haired man speaks with a sad smile, talking, lips moving naturally; the young man answers quietly. Steady camera.",
+ "59": "The young man touches the floating black keyhole, it sparks and crackles, he jerks his hand back in pain and shouts, talking, lips moving naturally. Steady camera.",
+ "60": {
+  "motion": "Golden chains snap tight around the black alpha wolf's jaws as it lunges, the black keyhole in its chest glows; the young man holds up his hand firmly. Steady camera. Shapes stay clear.",
+  "pin": 0.4
+ },
+ "61": {
+  "motion": "The black alpha wolf slowly dissolves into swirling black smoke; a small black key shard falls into the young man's open hand; the exit portal opens with light behind him. Steady camera.",
+  "pin": 0.4
+ },
+ "62": "The young man helps the injured red-haired man walk, his arm over his shoulder; the red-haired man speaks, talking, lips moving naturally; the young man answers with a small smile. Slow camera follow.",
+ "63": "The red-haired man talks on the phone with a cold expression, talking, lips moving naturally; the young man stands quietly behind him and listens. Steady camera.",
+ "64": "Close-up: the black key shard glows and pulses in the open palm, wisps of dark energy curl around it; the fingers slowly close. Very slow push in.",
+ "65": "The man in the white suit stares at his cracked ring, his smile fades into cold fury, he speaks quietly, talking, lips moving naturally; shadows move across the office. Very slow push in.",
+ "66": "The man in the white suit pours red wine slowly into a glass, smiling, talking, lips moving naturally; candle flames flicker; the young man sits stiffly across the table. Steady camera.",
+ "67": "Close-up: the man in the white suit smiles over his wine glass and speaks softly, talking, lips moving naturally; the candle flickers; the cracked ring glints. Very slow push in.",
+ "68": "The three people sit at the table with noodle bowls, steam rising; the red-haired man speaks seriously, talking, lips moving naturally; the white-haired woman nods and answers. Steady camera. Exactly three people.",
+ "69": "The young man stares down at his hands, steam rising from the noodles; his eyes widen with realization and he speaks quietly, talking, lips moving naturally. Very slow push in.",
+ "70": "The three people at the table lean in and talk seriously, talking, lips moving naturally; the white-haired woman taps a folder; steam rises from the bowls. Steady camera. Exactly three people.",
+ "71": "Golden light pulses from the colossal black door; the robes of the old master and the young student sway gently; golden dust drifts. Very slow push in.",
+ "72": "The young man's eyes glow gold and he whispers, talking, lips moving naturally; the others stare at him in shock; steam drifts. Steady camera.",
+ "73": "The giant billboards flicker as the man in the white suit smiles and speaks on every screen; the crowd looks up and murmurs; car lights stream below. Slow camera tilt.",
+ "74": "The enormous black and gold portal tears wider open in the sky, swirling darkness spinning inside it, lightning strikes down across the skyline, storm clouds race around it, the camera slowly tilts up toward the gate.",
+ "75": "Red warning light flashes; the nurse checks the beeping monitors in a hurry, talking, lips moving naturally; the girl in bed gasps and whispers. Steady camera.",
+ "76": "Close-up: the two little fingers hooked together in a pinky promise squeeze tightly; red light pulses across them. Very slow push in. Only two hands.",
+ "77": "The three heroes stand together before the gate, wind blowing their hair and coats; the red-haired man speaks, the young man answers, the white-haired woman smirks, talking, lips moving naturally. Steady camera.",
+ "78": "Golden chains sway slowly in the vast black cathedral; the man in the white suit stands at the center, spreads one hand and speaks, talking, lips moving naturally; dark mist drifts. Slow push in.",
+ "79": "The white-haired woman slowly pulls the broken silver sword out of the black chains, her hands shaking, her eyes filling with tears and anger, talking, lips moving naturally. Steady camera.",
+ "80": "The man in the white suit spreads his arms wide before the enormous chained door, smiling, talking, lips moving naturally; the chains rattle and black light pulses. Steady camera.",
+ "81": "The man in the white suit gazes up at the giant chained door with longing, black and gold light flickering across his face, he speaks quietly, talking, lips moving naturally. Very slow push in.",
+ "82": {
+  "motion": "The white-haired woman slashes her katana and frost bursts outward, the black chain monsters freeze; the red-haired man punches beside her, sparks fly. Steady camera. Faces stay clear.",
+  "pin": 0.4
+ },
+ "83": {
+  "motion": "The red-haired man holds back the giant knight's sword with both gauntlets, sparks spray, he grits his teeth and shouts, talking, lips moving naturally. Steady camera.",
+  "pin": 0.4
+ },
+ "84": "The man in the white suit points his ringed hand, black light pulses from the ring, he speaks coldly, talking, lips moving naturally; black chains shoot toward the young man. Steady camera.",
+ "85": "Close-up: the young man strains against the black chains wrapped around him, the black keyhole on his chest pulses; he grits his teeth. Very slow push in.",
+ "86": {
+  "motion": "The white-haired woman leaps and slashes her frost katana through the black keyhole, ice and light burst outward, the chains crack. Steady camera. Faces stay clear.",
+  "pin": 0.4
+ },
+ "87": "In the dark dream space, black chains drift slowly; the small glowing vision of the girl smiles and speaks, talking, lips moving naturally; the young man reaches toward her and answers. Steady camera.",
+ "88": {
+  "motion": "Shattered black chains fall away around the young man as he lands, golden light swirls around him, his jacket and hair flutter; the man in the white suit stares in shock and shouts. Steady camera.",
+  "pin": 0.4
+ },
+ "89": "The young man grabs the man in the white suit's ringed hand, golden light flares from his grip, he says one word firmly. Steady camera.",
+ "90": {
+  "motion": "The gold keyhole ring cracks and shatters, black energy streams out of the man in the white suit as he falls to his knees screaming. Steady camera.",
+  "pin": 0.4
+ },
+ "91": {
+  "motion": "The enormous door slowly cracks further open, the gigantic eye in the gap slowly blinks and looks around; light spills over the tiny figures below. Very slow push in.",
+  "pin": 0.4
+ },
+ "92": "The young man stands before the cracking door in golden light and looks back over his shoulder, talking, lips moving naturally; his friends call out to him; golden particles drift. Steady camera.",
+ "93": "The young man pushes his two friends back toward the exit, the white-haired woman reaches out to him and shouts; golden light floods the scene. Steady camera.",
+ "94": "The young man presses both hands against the colossal golden keyhole, blinding golden light pulses outward, his jacket and hair blow back, he says one word. Very slow push in.",
+ "95": "Golden sunlight rises over the skyline at dawn, clouds slowly part and drift away, birds fly across the clearing sky. Slow camera pan.",
+ "96": "The white-haired woman and the red-haired man sit in the rubble staring at the empty sky; the red-haired man speaks, talking, lips moving naturally; she answers firmly; dust drifts in the dawn light. Steady camera.",
+ "97": "The small golden keyhole glows in the empty air and the young man stumbles out of it with a tired grin, smoke drifting from his burnt jacket, he speaks, talking, lips moving naturally. Steady camera.",
+ "98": "The white-haired woman punches the young man's arm, he winces and laughs; the red-haired man shouts, talking, lips moving naturally; dawn light. Steady camera.",
+ "99": "The girl sits up in bed beaming in the morning sun and speaks, talking, lips moving naturally; the young man smiles warmly and answers; curtains sway. Steady camera.",
+ "100": "The girl and the white-haired woman laugh together on the bed, talking, lips moving naturally; the young man reacts in the background; sunlight streams in. Steady camera.",
+ "101": "Officers lead the handcuffed man in the white suit away, camera flashes go off rapidly; he turns his head and speaks with a cold smile, talking, lips moving naturally. Steady camera.",
+ "102": "The crystal orb under the young man's hand blazes with blinding golden light, the official stares in shock and speaks, talking, lips moving naturally; the young man grins and answers. Steady camera.",
+ "103": "The three heroes stand together in front of a small building, wind moving their hair; they talk and smile, talking, lips moving naturally; the white-haired woman smirks. Steady camera.",
+ "104": "The brass key badge glows gold on the young man's chest; across the night city small portals flicker with black keyholes; his hair and jacket move in the wind. Slow camera pan.",
+ "105": "The young man smiles confidently at the camera, wind moves his hair, golden keyholes float and slowly rotate around him, city lights twinkle. Very slow push in."
 }

@@ -6,7 +6,9 @@ motion prompt into embeddings (saved next to the output), then it is unloaded an
   ~/.venvs/imagegen/bin/python tools/ltx_local.py SCRIPT.json IMAGES_DIR OUT_DIR MOTIONS.json [--scenes 1,39]
       [--size 768x448] [--frames 97] [--seed 2000]
 
-MOTIONS.json maps scene numbers to a description of the movement ("her ponytail blows in the wind as she turns...").
+MOTIONS.json maps scene numbers to a description of the movement ("her ponytail blows in the wind as she turns..."),
+or to {"motion": "...", "pin": 0.4} to also steer that shot back toward its picture (keeps monsters and fast action
+from melting, at the cost of some movement).
 The scene's image prompt is added after it, so the model knows what it is looking at. Shots are written as
 OUT_DIR/sceneNN.mp4 at 24 fps; existing ones are skipped, so it can be stopped and resumed.
 With --fit-audio, each shot is made as long as IMAGES_DIR/sceneNN.mp3: after the first 4 seconds the model carries
@@ -97,19 +99,24 @@ def main():
     spec = json.loads(args.script.read_text())
     motions = {int(k): v for k, v in json.loads(args.motions.read_text()).items()}
     wanted = {int(s) for s in args.scenes.split(",") if s} or set(motions)
-    todo = {}
+    todo, pins = {}, {}
     for i in sorted(wanted):
         if (args.out / f"scene{i:02d}.mp4").exists():
             continue
         look = spec["scenes"][i]["image"].format(character=spec.get("character", "")).split(", Korean manhwa")[0]
-        todo[i] = f"{motions[i]} {look}. Smooth fluid 2D anime animation, Korean manhwa webtoon style, cinematic."
+        m = motions[i] if isinstance(motions[i], dict) else {"motion": motions[i]}
+        pins[i] = m.get("pin", args.anchor if args.pin_ends else None)
+        todo[i] = f"{m['motion']} {look}. Smooth fluid 2D anime animation, Korean manhwa webtoon style, cinematic."
     if not todo:
         return print("nothing to animate")
     emb_dir = args.out / "ltx_embeds"
     emb_dir.mkdir(parents=True, exist_ok=True)
 
     scheduler = FlowMatchEulerDiscreteScheduler.from_pretrained(CONFIG, subfolder="scheduler")
-    need = [i for i in todo if not (emb_dir / f"{i:02d}.pt").exists()]
+    def stale(i):  # embeddings missing, or made from an older version of the prompt
+        f = emb_dir / f"{i:02d}.pt"
+        return not f.exists() or torch.load(f).get("prompt") != todo[i]
+    need = [i for i in todo if stale(i)]
     if need:
         t0 = time.time()
         reader = LTXConditionPipeline(scheduler=scheduler, vae=None, transformer=None,
@@ -119,7 +126,7 @@ def main():
             for n, i in enumerate(need, 1):
                 pe, pm, ne, nm = reader.encode_prompt(prompt=todo[i], negative_prompt=NEGATIVE, do_classifier_free_guidance=True,
                                                       max_sequence_length=256, device="cpu")
-                torch.save({"pe": pe.clone(), "pm": pm.clone(), "ne": ne.clone(), "nm": nm.clone()}, emb_dir / f"{i:02d}.pt")
+                torch.save({"prompt": todo[i], "pe": pe.clone(), "pm": pm.clone(), "ne": ne.clone(), "nm": nm.clone()}, emb_dir / f"{i:02d}.pt")
                 print(f"  prompt {n}/{len(need)} read ({time.time() - t0:.0f}s)", flush=True)
         del reader
         gc.collect()
@@ -157,19 +164,21 @@ def main():
                 if k == 0:
                     still = fit(Image.open(args.images / f"scene{i:02d}.png").convert("RGB"), w, h)
                     cond = [LTXVideoCondition(image=still, frame_index=0)]
-                    if args.pin_ends:  # also return to the picture at the end, so nothing drifts mid-shot
-                        cond.append(LTXVideoCondition(image=still, frame_index=(args.frames - 1) // 8 * 8, strength=args.anchor))
+                    if pins[i]:  # also return to the picture at the end, so nothing drifts mid-shot
+                        cond.append(LTXVideoCondition(image=still, frame_index=(args.frames - 1) // 8 * 8, strength=pins[i]))
                 else:
                     # carry on from the previous part, and steer back to the original picture by the end of this one
                     # so the characters and framing don't drift further with every part
                     still = fit(Image.open(args.images / f"scene{i:02d}.png").convert("RGB"), w, h)
                     cond = [LTXVideoCondition(video=read_frames(parts_dir / f"scene{i:02d}-{k - 1}.mp4", OVERLAP), frame_index=0),
-                            LTXVideoCondition(image=still, frame_index=(args.frames - 1) // 8 * 8, strength=args.anchor)]
+                            LTXVideoCondition(image=still, frame_index=(args.frames - 1) // 8 * 8, strength=pins[i] or args.anchor)]
                 save_mp4(draw(i, k, cond), part)
                 print(f"    scene {i} part {k + 1}/{count} ({time.time() - t0:.0f}s)", flush=True)
             got = read_frames(part)
             frames += got if k == 0 else got[OVERLAP:]
         save_mp4(frames[:need], args.out / f"scene{i:02d}.mp4")
+        for k in range(count):  # the finished shot replaces its parts
+            (parts_dir / f"scene{i:02d}-{k}.mp4").unlink(missing_ok=True)
         print(f"  shot {n}/{len(todo)} scene {i} animated, {need / 24:.1f}s ({time.time() - t0:.0f}s)", flush=True)
 
 if __name__ == "__main__":
