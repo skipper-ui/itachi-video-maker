@@ -1,0 +1,276 @@
+{
+  "title": "Best Lily Build: Wuthering Waves",
+  "visuals": "motion",
+  "title_card": false,
+  "keywords": [
+    "Lily",
+    "Lullaby",
+    "Energy",
+    "Regen",
+    "Spectro",
+    "Slumberland",
+    "Static",
+    "Mist",
+    "Cadenza",
+    "Unison",
+    "Flower",
+    "Tinged",
+    "Yearning",
+    "Formrender",
+    "Rejuvenating",
+    "Glow",
+    "Fallacy",
+    "Return",
+    "HP",
+    "Hsin",
+    "Suoming",
+    "Sigrika",
+    "Lucilla",
+    "Qiuyuan",
+    "260"
+  ],
+  "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+  "voice_name": "Lily - Velvety Actress",
+  "width": 1080,
+  "height": 1920,
+  "music": {
+    "sound": "music_dream",
+    "volume": 0.22
+  },
+  "caption": {
+    "active": "#E9C8FF",
+    "keyword": "#9FD8FF",
+    "base": "#FFFFFF"
+  },
+  "sources": [
+    "https://www.prydwen.gg/wuthering-waves/characters/lily (Energy Regen first, 250-260% target; Flower of Tinged Yearning + Formrender for Unison, Rejuvenating Glow + Fallacy of No Return for all teams; Energy Regen scaling gives 80% Crit Rate on her damaging attacks, no need to farm Crit)",
+    "https://game8.co/games/Wuthering-Waves/archives/629899 (Lullaby best, Cadenza best 4-star; 4-cost HP%, 3-cost Energy Regen, 1-cost HP%; substats HP% and Energy Regen; 260% ER; teams Hsin + Suoming (Unison), Sigrika + Lucilla/Qiuyuan (Echo Skill))",
+    "https://www.sportskeeda.com/esports/best-wuwa-lily-build-guide-echoes-weapons-teams-wuthering-waves (Lullaby; Static Mist alternative; Formrender main echo for Flower of Tinged Yearning; Fallacy of No Return gives team 10% ATK)",
+    "Lullaby: signature 5-star Pistol with Energy Regen substat and Max HP bonus (launch guides)",
+    "Art: Kuro Games Version 3.8 press kit (see ../lily/presskit/SOURCE.txt), credited on screen"
+  ],
+  "scenes": [
+    {
+      "narration": "Want your Lily to heal more, buff harder, and never run out of energy? Here's her best build in Wuthering Waves.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.6
+        },
+        {
+          "sound": "soft_hit",
+          "word": "heal",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "buff",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "build",
+          "offset": -0.2,
+          "volume": 0.7
+        }
+      ]
+    },
+    {
+      "narration": "Lily is a five-star Spectro support. She falls asleep in Slumberland, keeps healing your team from the field, and boosts everyone's attack.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "spectro",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "deep_rise",
+          "word": "slumberland",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "soft_hit",
+          "word": "attack",
+          "offset": -0.2,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "narration": "Her most important stat is Energy Regen. Aim for around two hundred sixty percent. It powers her buffs, and it boosts her crit rate too, so you don't need to farm crit.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "energy",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "deep_rise",
+          "word": "sixty",
+          "offset": -0.4,
+          "volume": 0.7
+        },
+        {
+          "sound": "soft_hit",
+          "word": "crit",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Best weapon: her signature pistol, Lullaby. It gives huge Energy Regen and extra max HP. No Lullaby? Static Mist works if you own it, and Cadenza is the best four-star pick.",
+      "sfx": [
+        {
+          "sound": "deep_rise",
+          "word": "lullaby",
+          "offset": -0.3,
+          "volume": 0.7
+        },
+        {
+          "sound": "swish",
+          "word": "static",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "cadenza",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Echoes depend on your team. In Unison teams, use five-piece Flower of Tinged Yearning, with Formrender as your main echo.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.4
+        },
+        {
+          "sound": "soft_hit",
+          "word": "flower",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "deep_rise",
+          "word": "formrender",
+          "offset": -0.2,
+          "volume": 0.6
+        }
+      ]
+    },
+    {
+      "narration": "For Echo Skill teams, or if you're not sure, use five-piece Rejuvenating Glow, with Fallacy of No Return as your main echo. It buffs your whole team's attack.",
+      "sfx": [
+        {
+          "sound": "soft_hit",
+          "word": "rejuvenating",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "deep_rise",
+          "word": "fallacy",
+          "offset": -0.2,
+          "volume": 0.6
+        },
+        {
+          "sound": "soft_hit",
+          "word": "attack",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Main stats: HP percent on your four-cost, Energy Regen on your three-costs, and HP percent on your one-costs. For substats, chase Energy Regen first, then HP percent.",
+      "sfx": [
+        {
+          "sound": "swish",
+          "word": "fourcost",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "threecosts",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "swish",
+          "word": "onecosts",
+          "offset": -0.2,
+          "volume": 0.35
+        },
+        {
+          "sound": "soft_hit",
+          "word": "substats",
+          "offset": -0.2,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "narration": "Her best team right now is Hsin and Suoming, for Unison. For Echo Skill teams, pair her with Sigrika and Lucilla, or Qiuyuan.",
+      "sfx": [
+        {
+          "sound": "deep_rise",
+          "word": "hsin",
+          "offset": -0.3,
+          "volume": 0.6
+        },
+        {
+          "sound": "soft_hit",
+          "word": "suoming",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "sigrika",
+          "offset": -0.2,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "lucilla",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "narration": "Save this build for later, and tell me in the comments, who's on your Lily team? Like and subscribe for more builds.",
+      "sfx": [
+        {
+          "sound": "swell_soft",
+          "at": 0.0,
+          "volume": 0.5
+        },
+        {
+          "sound": "soft_hit",
+          "word": "comments",
+          "offset": -0.2,
+          "volume": 0.4
+        },
+        {
+          "sound": "swish",
+          "word": "subscribe",
+          "offset": -0.2,
+          "volume": 0.4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Best Lily Build motion scenes</title>
+<script>
+// Official Kuro Games Version 3.8 press-kit art (see ../lily/presskit/SOURCE.txt), cropped only, never altered,
+// and credited on every frame. Build info is drawn as text cards: no in-game icons are used.
+window.ART = Object.fromEntries(['key_vertical', 'key_4k', 'lily_full', 'lily_banner', 'lily_sleeping']
+  .map(n => [n, `../lily/presskit/${n}.jpg`]));
+</script>
+<script src="../../../motion/lib.js"></script>
+<script src="../../../motion/wuwa/wuwa.js"></script>
+</head>
+<body>
+<script>
+// Captions are burned in around y = 1300-1430, so cards stay above 1260.
+const GOLD = ['#FFFFFF', '#FFF1C9', '#FFC864'];
+const MINT = '180,255,210';
+
+// Glass panel that rises and fades in from t0.
+function panel(ctx, x, y, w, h, t, t0, { border = 'rgba(220,190,255,0.9)', bg = 'rgba(18,8,40,0.74)' } = {}) {
+  const k = ease.outCubic(prog(t, t0, 0.5));
+  if (k <= 0) return 0;
+  const yy = y + (1 - k) * 40;
+  ctx.save();
+  ctx.globalAlpha *= k;
+  glow(ctx, x + w / 2, yy + h / 2, Math.max(w, h) * 0.7, '170,140,255', 0.18);
+  ctx.fillStyle = bg; ctx.fill(rectPath(x, yy, w, h, 30));
+  ctx.lineWidth = 3; ctx.strokeStyle = border; ctx.stroke(rectPath(x, yy, w, h, 30));
+  ctx.restore();
+  return k;
+}
+
+// Plain text line (sans or serif), centred at x unless align is given.
+function txt(ctx, str, x, y, size, { alpha = 1, color = '#F4EAFF', font = FONT, weight = '', align = 'center', spacing = 0 } = {}) {
+  if (alpha <= 0) return;
+  ctx.save();
+  ctx.globalAlpha *= alpha;
+  ctx.font = `${weight} ${size}px ${font}`.trim();
+  if ('letterSpacing' in ctx) ctx.letterSpacing = `${size * spacing}px`;
+  ctx.textAlign = align; ctx.textBaseline = 'middle';
+  ctx.shadowColor = 'rgba(0,0,0,0.7)'; ctx.shadowBlur = 8;
+  ctx.fillStyle = color;
+  ctx.fillText(str, x, y);
+  ctx.restore();
+}
+
+// Small caps header in lavender.
+const header = (ctx, str, x, y, a = 1) => txt(ctx, str, x, y, 34, { alpha: a, color: '#C9A7FF', spacing: 0.18 });
+
+// A card: header, big serif name, then detail lines that appear one by one.
+function card(ctx, t, t0, { x = 90, y = 300, w = 900, head, name, nameSize = 96, lines = [], fill = LAV, border } = {}) {
+  const h = 230 + lines.length * 78;
+  const k = panel(ctx, x, y, w, h, t, t0, { border });
+  if (!k) return;
+  const yy = y + (1 - k) * 40;
+  header(ctx, head, x + w / 2, yy + 62, k);
+  serif(ctx, name, x + w / 2, yy + 150, nameSize, { alpha: k, fill });
+  lines.forEach(([str, at], i) => {
+    const a = ease.outCubic(prog(t, at ?? t0 + 0.3 + i * 0.25, 0.4));
+    txt(ctx, str, x + w / 2, yy + 250 + i * 78, 44, { alpha: a * k });
+  });
+}
+
+// Lily asleep (official art) in a framed panel.
+function sleepPanel(ctx, t, t0, y) {
+  const k = ease.outCubic(prog(t, t0, 0.7));
+  if (k <= 0) return;
+  withT(ctx, W / 2, y + (1 - k) * 40, 1, 0, () => {
+    ctx.globalAlpha = k;
+    const w = 940, h = w * ARTS.lily_sleeping.img.height / ARTS.lily_sleeping.img.width;
+    const frame = rectPath(-w / 2, -h / 2, w, h, 24);
+    glow(ctx, 0, 0, 560, MINT, 0.35);
+    ctx.save(); ctx.clip(frame); ctx.drawImage(ARTS.lily_sleeping.img, -w / 2, -h / 2, w, h); ctx.restore();
+    ctx.lineWidth = 4; ctx.strokeStyle = 'rgba(225,255,235,0.9)'; ctx.stroke(frame);
+  });
+  for (let i = 0; i < 4; i++) {
+    const z = prog(t, t0 + 0.3 + i * 0.4, 1.6);
+    if (z > 0 && z < 1) serif(ctx, 'z', 760 + i * 36 + Math.sin(z * 6) * 18, y - 60 - z * 300, 60 + i * 16, { italic: true, alpha: 1 - z });
+  }
+}
+
+// One echo slot tile: cost number on top, main stat below.
+function slot(ctx, t, t0, x, y, cost, stat, color) {
+  const k = pop(t, t0, 0.5);
+  if (k <= 0) return;
+  withT(ctx, x, y, k, 0, () => {
+    const w = 176, h = 250;
+    glow(ctx, 0, 0, 200, color, 0.25);
+    ctx.fillStyle = 'rgba(18,8,40,0.8)'; ctx.fill(rectPath(-w / 2, -h / 2, w, h, 24));
+    ctx.lineWidth = 4; ctx.strokeStyle = `rgba(${color},0.95)`; ctx.stroke(rectPath(-w / 2, -h / 2, w, h, 24));
+    txt(ctx, 'COST', 0, -86, 26, { color: '#C9A7FF', spacing: 0.15 });
+    serif(ctx, String(cost), 0, -30, 90);
+    stat.split('\n').forEach((s, i, all) => txt(ctx, s, 0, 62 + (i - (all.length - 1) / 2) * 40, 34, { weight: 'bold' }));
+  });
+}
+
+// Team row: three name plates with a label above.
+function teamRow(ctx, t, t0, y, label, names, color) {
+  const k = panel(ctx, 70, y - 120, 940, 300, t, t0, { border: `rgba(${color},0.9)` });
+  if (!k) return;
+  header(ctx, label, W / 2, y - 62, k);
+  names.forEach(([n, at], i) => {
+    const a = pop(t, at ?? t0 + 0.2 + i * 0.25, 0.45);
+    if (a <= 0) return;
+    withT(ctx, 230 + i * 310, y + 60, a, 0, () => {
+      ctx.fillStyle = `rgba(${color},0.16)`; ctx.fill(rectPath(-140, -56, 280, 112, 56));
+      ctx.lineWidth = 3; ctx.strokeStyle = `rgba(${color},0.9)`; ctx.stroke(rectPath(-140, -56, 280, 112, 56));
+      txt(ctx, n, 0, 2, n.length > 9 ? 34 : 44, { weight: 'bold', font: SERIF });
+    });
+  });
+}
+
+window.scenes = [
+  // 0 — Hook: "...heal more, buff harder, never run out of energy? Here's her best build."
+  (ctx, t, dur) => {
+    const tHeal = when('heal', 0, 1.0), tBuff = when('buff', 0, 1.8), tEnergy = when('energy', 0, 3.2), tBuild = when('build', 0, 5.0);
+    cover(ctx, 'key_vertical', t, dur, [0.55, 0.2, 1.45], [0.5, 0.3, 1.1]);
+    petals(ctx, t, { n: 22 });
+    butterfly(ctx, t, 170, 600, 1.1, 0); butterfly(ctx, t, 900, 1000, 0.9, 2);
+    finish(ctx);
+    [['HEAL MORE', tHeal, 300], ['BUFF HARDER', tBuff, 410], ['NEVER RUN DRY', tEnergy, 520]]
+      .forEach(([s, t0, y]) => { if (t > t0 - 0.2 && t < tBuild - 0.1) plate(ctx, s, W / 2, y, t, t0 - 0.2, 44); });
+    if (t > tBuild - 0.3) {
+      const k = prog(t, tBuild - 0.3, 0.6);
+      if (k < 1) { ctx.fillStyle = `rgba(235,215,255,${0.35 * (1 - k)})`; ctx.fillRect(0, 0, W, H); }
+      serif(ctx, 'LILY', W / 2, 880, 230, { alpha: ease.outCubic(k) });
+      serif(ctx, 'BEST BUILD', W / 2, 1080, 110, { alpha: ease.outCubic(prog(t, tBuild, 0.5)), fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' });
+    }
+  },
+
+  // 1 — Role: five-star Spectro support; Slumberland heals from the field; team ATK buff.
+  (ctx, t, dur) => {
+    const tFive = when('fivestar', 0, 1.0), tSpec = when('spectro', 0, 1.6), tSup = when('support', 0, 2.2);
+    const tSleep = when('slumberland', 0, 3.6), tAtk = when('attack', 0, 7.0);
+    cover(ctx, 'lily_full', t, dur, [0.5, 0.22, 1.25], [0.5, 0.5, 1.05]);
+    petals(ctx, t, { n: 14, seed: 14 });
+    finish(ctx, { wash: 0.1 });
+    [['★★★★★', tFive, 260, 230], ['SPECTRO', tSpec, 820, 340], ['SUPPORT', tSup, 260, 450]]
+      .forEach(([s, t0, x, y]) => { if (t > t0 - 0.2) plate(ctx, s, x, y, t, t0 - 0.2, 40); });
+    if (t > tSleep - 0.3) {
+      sleepPanel(ctx, t, tSleep - 0.3, 860);
+      plate(ctx, 'HEALS FROM THE FIELD', W / 2, 1070, t, tSleep + 0.6, 38);
+    }
+    if (t > tAtk - 0.3) {
+      ring(ctx, t, tAtk - 0.1, W / 2, 860, { maxR: 640, life: 1.1, color: '255,200,120', width: 14 });
+      plate(ctx, 'TEAM ATK BUFF', W / 2, 1190, t, tAtk - 0.3, 40, { border: 'rgba(255,210,140,0.9)' });
+    }
+  },
+
+  // 2 — Energy Regen: aim for ~260%. Powers her buffs and boosts her crit rate.
+  (ctx, t, dur) => {
+    const tEnergy = when('energy', 0, 1.6), tSixty = when('sixty', 0, 3.8), tBuffs = when('buffs', 0, 5.4), tCrit = when('crit', 0, 7.0);
+    cover(ctx, 'key_4k', t, dur, [0.5, 0.3, 2.4], [0.5, 0.34, 2.2], { filter: 'blur(14px) brightness(0.55)' });
+    sparks(ctx, t, { n: 50, color: '200,180,255', rise: 70, size: 6 });
+    finish(ctx, { wash: 0.15 });
+    header(ctx, 'THE KEY STAT', W / 2, 250, ease.outCubic(prog(t, 0.1, 0.5)));
+    serif(ctx, 'ENERGY REGEN', W / 2, 340, 104, { alpha: ease.outCubic(prog(t, tEnergy - 0.3, 0.6)) });
+    // Gauge: fills from 100% to 260% as the number is said.
+    const cx = W / 2, cy = 760, r = 280;
+    const fill = ease.inOutCubic(prog(t, tEnergy, Math.max(0.8, tSixty - tEnergy + 0.4)));
+    const val = Math.round(100 + 160 * fill);
+    ctx.save();
+    ctx.lineCap = 'round'; ctx.lineWidth = 46;
+    ctx.strokeStyle = 'rgba(255,255,255,0.12)';
+    ctx.beginPath(); ctx.arc(cx, cy, r, Math.PI * 0.75, Math.PI * 2.25); ctx.stroke();
+    const g = ctx.createLinearGradient(cx - r, cy, cx + r, cy);
+    g.addColorStop(0, '#9FD8FF'); g.addColorStop(0.6, '#C9A7FF'); g.addColorStop(1, '#FFC864');
+    ctx.strokeStyle = g; ctx.shadowColor = 'rgba(200,170,255,0.9)'; ctx.shadowBlur = 30;
+    ctx.beginPath(); ctx.arc(cx, cy, r, Math.PI * 0.75, Math.PI * (0.75 + 1.5 * fill)); ctx.stroke();
+    ctx.restore();
+    serif(ctx, `${val}%`, cx, cy - 10, 150, { fill: fill >= 1 ? GOLD : LAV, glowColor: fill >= 1 ? 'rgba(255,190,90,0.9)' : undefined });
+    txt(ctx, 'TARGET', cx, cy + 110, 34, { color: '#C9A7FF', spacing: 0.2 });
+    if (fill >= 1) ring(ctx, t, tSixty + 0.3, cx, cy, { maxR: 520, life: 0.9, color: '255,210,140', width: 16 });
+    if (t > tBuffs - 0.2) plate(ctx, 'POWERS HER BUFFS', W / 2, 1110, t, tBuffs - 0.2, 40);
+    if (t > tCrit - 0.2) plate(ctx, '+ CRIT RATE FOR FREE', W / 2, 1220, t, tCrit - 0.2, 40, { border: 'rgba(255,210,140,0.9)' });
+  },
+
+  // 3 — Weapon: Lullaby; alternatives Static Mist and Cadenza.
+  (ctx, t, dur) => {
+    const tLull = when('lullaby', 0, 2.2), tStatic = when('static', 0, 7.6), tCad = when('cadenza', 0, 9.6);
+    cover(ctx, 'key_4k', t, dur, [0.45, 0.32, 2.0], [0.55, 0.32, 2.2], { filter: 'brightness(0.6)' });
+    petals(ctx, t, { n: 12, seed: 4 });
+    finish(ctx, { wash: 0.15 });
+    const alt = t > tStatic - 0.4;
+    card(ctx, t, tLull - 0.3, {
+      y: alt ? 220 : 330, head: 'BEST WEAPON · SIGNATURE', name: 'Lullaby', nameSize: 120, fill: GOLD,
+      border: 'rgba(255,210,140,0.95)',
+      lines: [['5★ Pistol', tLull + 0.4], ['Huge Energy Regen', when('energy', 0, tLull + 2)], ['+ Max HP', when('hp', 0, tLull + 3)]],
+    });
+    if (t > tStatic - 0.4) {
+      const k = panel(ctx, 90, 760, 430, 300, t, tStatic - 0.3);
+      if (k) { header(ctx, 'IF YOU OWN IT', 305, 820, k); serif(ctx, 'Static Mist', 305, 910, 64, { alpha: k }); txt(ctx, '5★ alternative', 305, 990, 36, { alpha: k }); }
+    }
+    if (t > tCad - 0.4) {
+      const k = panel(ctx, 560, 760, 430, 300, t, tCad - 0.3, { border: 'rgba(159,216,255,0.9)' });
+      if (k) { header(ctx, 'BEST 4★', 775, 820, k); serif(ctx, 'Cadenza', 775, 910, 72, { alpha: k }); txt(ctx, 'budget pick', 775, 990, 36, { alpha: k }); }
+    }
+  },
+
+  // 4 — Unison teams: 5pc Flower of Tinged Yearning, Formrender main echo.
+  (ctx, t, dur) => {
+    const tUni = when('unison', 0, 1.8), tFlower = when('flower', 0, 3.4), tForm = when('formrender', 0, 5.6);
+    cover(ctx, 'key_vertical', t, dur, [0.4, 0.4, 1.5], [0.6, 0.35, 1.35], { filter: 'brightness(0.55)' });
+    petals(ctx, t, { n: 26, seed: 8 });
+    finish(ctx, { wash: 0.15 });
+    header(ctx, 'ECHOES · OPTION 1', W / 2, 230, ease.outCubic(prog(t, 0.1, 0.5)));
+    if (t > tUni - 0.3) plate(ctx, 'UNISON TEAMS', W / 2, 330, t, tUni - 0.3, 50);
+    card(ctx, t, tFlower - 0.3, {
+      y: 450, head: '5-PIECE SET', name: 'Flower of', nameSize: 92,
+      lines: [['Tinged Yearning', tFlower]],
+    });
+    if (t > tForm - 0.3) {
+      const k = panel(ctx, 190, 900, 700, 250, t, tForm - 0.3, { border: 'rgba(255,210,140,0.95)' });
+      if (k) { header(ctx, 'MAIN ECHO', W / 2, 960, k); serif(ctx, 'Formrender', W / 2, 1060, 96, { alpha: k, fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' }); }
+    }
+  },
+
+  // 5 — Echo Skill / any team: 5pc Rejuvenating Glow, Fallacy of No Return main echo (+ team ATK).
+  (ctx, t, dur) => {
+    const tSkill = when('skill', 0, 1.0), tRej = when('rejuvenating', 0, 4.0), tFal = when('fallacy', 0, 6.0), tAtk = when('attack', 0, 9.0);
+    cover(ctx, 'key_4k', t, dur, [0.62, 0.35, 2.3], [0.5, 0.35, 2.0], { filter: 'brightness(0.55)' });
+    sparks(ctx, t, { n: 50, color: MINT, rise: 90, size: 6 });
+    finish(ctx, { wash: 0.15 });
+    header(ctx, 'ECHOES · OPTION 2', W / 2, 230, ease.outCubic(prog(t, 0.1, 0.5)));
+    if (t > tSkill - 0.4) plate(ctx, 'ECHO SKILL · ANY TEAM', W / 2, 330, t, tSkill - 0.4, 46);
+    card(ctx, t, tRej - 0.3, { y: 450, head: '5-PIECE SET', name: 'Rejuvenating', nameSize: 92, lines: [['Glow', tRej + 0.2]], border: `rgba(${MINT},0.9)` });
+    if (t > tFal - 0.3) {
+      const k = panel(ctx, 140, 900, 800, 300, t, tFal - 0.3, { border: 'rgba(255,210,140,0.95)' });
+      if (k) {
+        header(ctx, 'MAIN ECHO', W / 2, 960, k);
+        serif(ctx, 'Fallacy of No Return', W / 2, 1050, 70, { alpha: k, fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' });
+        txt(ctx, '+ team ATK', W / 2, 1130, 40, { alpha: k * ease.outCubic(prog(t, tAtk - 0.3, 0.4)), color: '#FFE3A8', weight: 'bold' });
+      }
+    }
+  },
+
+  // 6 — Main stats per cost, then substats.
+  (ctx, t, dur) => {
+    const tFour = when('fourcost', 0, 1.6), tThree = when('threecosts', 0, 4.0), tOne = when('onecosts', 0, 6.4), tSub = when('substats', 0, 8.2);
+    cover(ctx, 'lily_full', t, dur, [0.5, 0.3, 1.2], [0.5, 0.45, 1.1], { filter: 'blur(10px) brightness(0.5)' });
+    petals(ctx, t, { n: 12, seed: 6 });
+    finish(ctx, { wash: 0.15 });
+    header(ctx, 'ECHO MAIN STATS', W / 2, 230, ease.outCubic(prog(t, 0.1, 0.5)));
+    serif(ctx, '4 · 3 · 3 · 1 · 1', W / 2, 320, 80, { alpha: ease.outCubic(prog(t, 0.3, 0.5)) });
+    const xs = [140, 340, 540, 740, 940];
+    slot(ctx, t, tFour - 0.2, xs[0], 560, 4, 'HP%', '255,200,120');
+    slot(ctx, t, tThree - 0.2, xs[1], 560, 3, 'Energy\nRegen', '201,167,255');
+    slot(ctx, t, tThree + 0.1, xs[2], 560, 3, 'Energy\nRegen', '201,167,255');
+    slot(ctx, t, tOne - 0.2, xs[3], 560, 1, 'HP%', '159,216,255');
+    slot(ctx, t, tOne + 0.1, xs[4], 560, 1, 'HP%', '159,216,255');
+    if (t > tSub - 0.3) {
+      const k = panel(ctx, 140, 800, 800, 380, t, tSub - 0.3);
+      if (k) {
+        header(ctx, 'SUBSTAT PRIORITY', W / 2, 860, k);
+        const a1 = ease.outCubic(prog(t, when('chase', 0, tSub + 0.6), 0.4)), a2 = ease.outCubic(prog(t, when('then', 0, tSub + 2), 0.4));
+        serif(ctx, '1  Energy Regen', W / 2, 960, 70, { alpha: k * a1 });
+        serif(ctx, '2  HP%', W / 2, 1070, 70, { alpha: k * a2 });
+      }
+    }
+  },
+
+  // 7 — Teams.
+  (ctx, t, dur) => {
+    const tHsin = when('hsin', 0, 1.6), tSuo = when('suoming', 0, 2.2), tSig = when('sigrika', 0, 5.6);
+    const tLuc = when('lucilla', 0, 6.4), tQiu = when('qiuyuan', 0, 7.4);
+    cover(ctx, 'key_vertical', t, dur, [0.5, 0.25, 1.2], [0.5, 0.35, 1.05], { filter: 'brightness(0.5)' });
+    petals(ctx, t, { n: 18, seed: 12 });
+    finish(ctx, { wash: 0.15 });
+    header(ctx, 'BEST TEAMS', W / 2, 220, ease.outCubic(prog(t, 0.1, 0.5)));
+    teamRow(ctx, t, tHsin - 0.5, 430, '#1 · UNISON', [['Lily', tHsin - 0.3], ['Hsin', tHsin], ['Suoming', tSuo]], '255,210,140');
+    teamRow(ctx, t, tSig - 0.6, 850, 'ECHO SKILL', [['Lily', tSig - 0.3], ['Sigrika', tSig], [t > tQiu - 0.2 ? 'Lucilla / Qiuyuan' : 'Lucilla', tLuc]], '180,255,210');
+  },
+
+  // 8 — Outro.
+  (ctx, t, dur) => {
+    const tSave = when('save', 0, 0.2), tComments = when('comments', 0, 2.4), tLike = when('like', 0, 5.0);
+    cover(ctx, 'key_4k', t, dur, [0.5, 0.36, 1.9], [0.5, 0.36, 2.15]);
+    petals(ctx, t, { n: 30, seed: 2 });
+    butterfly(ctx, t, 200, 1050, 1, 0); butterfly(ctx, t, 880, 560, 0.8, 3);
+    finish(ctx);
+    if (t > tSave - 0.2) plate(ctx, 'SAVE THIS BUILD', W / 2, 260, t, tSave - 0.2, 48, { border: 'rgba(255,210,140,0.95)' });
+    if (t > tComments - 0.3) serif(ctx, "Who's on your", W / 2, 420, 92, { italic: true, alpha: ease.outCubic(prog(t, tComments - 0.3, 0.6)) });
+    if (t > tComments - 0.1) serif(ctx, 'Lily team?', W / 2, 530, 112, { italic: true, alpha: ease.outCubic(prog(t, tComments - 0.1, 0.6)) });
+    if (t > tLike - 0.3) plate(ctx, 'LIKE & SUBSCRIBE', W / 2, 1190, t, tLike - 0.3, 46);
+  },
+];
+</script>
+</body>
+</html>
