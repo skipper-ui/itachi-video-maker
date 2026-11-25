@@ -82,6 +82,7 @@ def main():
     ap.add_argument("--frames", type=int, default=97, help="8k+1 frames at 24 fps (97 = 4 s)")
     ap.add_argument("--seed", type=int, default=2000)
     ap.add_argument("--fit-audio", action="store_true", help="extend each shot to the length of its sceneNN.mp3")
+    ap.add_argument("--anchor", type=float, default=0.8, help="how strongly continuation parts return to the scene image")
     ap.add_argument("--tail", type=float, default=0.95, help="seconds added after the audio (make_video's scene pad + crossfade)")
     args = ap.parse_args()
     import torch
@@ -135,7 +136,7 @@ def main():
     def draw(i, part, cond):
         e = torch.load(emb_dir / f"{i:02d}.pt")
         with torch.inference_mode():
-            return painter(conditions=[cond], prompt_embeds=e["pe"], prompt_attention_mask=e["pm"],
+            return painter(conditions=cond if isinstance(cond, list) else [cond], prompt_embeds=e["pe"], prompt_attention_mask=e["pm"],
                            negative_prompt_embeds=e["ne"], negative_prompt_attention_mask=e["nm"],
                            width=w, height=h, num_frames=args.frames, frame_rate=24, timesteps=TIMESTEPS,
                            guidance_scale=1.0, decode_timestep=0.05, decode_noise_scale=0.025, image_cond_noise_scale=0.0,
@@ -155,7 +156,11 @@ def main():
                 if k == 0:
                     cond = LTXVideoCondition(image=fit(Image.open(args.images / f"scene{i:02d}.png").convert("RGB"), w, h), frame_index=0)
                 else:
-                    cond = LTXVideoCondition(video=read_frames(parts_dir / f"scene{i:02d}-{k - 1}.mp4", OVERLAP), frame_index=0)
+                    # carry on from the previous part, and steer back to the original picture by the end of this one
+                    # so the characters and framing don't drift further with every part
+                    still = fit(Image.open(args.images / f"scene{i:02d}.png").convert("RGB"), w, h)
+                    cond = [LTXVideoCondition(video=read_frames(parts_dir / f"scene{i:02d}-{k - 1}.mp4", OVERLAP), frame_index=0),
+                            LTXVideoCondition(image=still, frame_index=(args.frames - 1) // 8 * 8, strength=args.anchor)]
                 save_mp4(draw(i, k, cond), part)
                 print(f"    scene {i} part {k + 1}/{count} ({time.time() - t0:.0f}s)", flush=True)
             got = read_frames(part)
