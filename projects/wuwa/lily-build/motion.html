@@ -121,12 +121,13 @@ window.scenes = [
     butterfly(ctx, t, 170, 600, 1.1, 0); butterfly(ctx, t, 900, 1000, 0.9, 2);
     finish(ctx);
     [['HEAL MORE', tHeal, 300], ['BUFF HARDER', tBuff, 410], ['NEVER RUN DRY', tEnergy, 520]]
-      .forEach(([s, t0, y]) => { if (t > t0 - 0.2 && t < tBuild - 0.1) plate(ctx, s, W / 2, y, t, t0 - 0.2, 44); });
-    if (t > tBuild - 0.3) {
-      const k = prog(t, tBuild - 0.3, 0.6);
+      .forEach(([s, t0, y]) => { if (t > t0 - 0.2) plate(ctx, s, W / 2, y, t, t0 - 0.2, 44); });
+    serif(ctx, 'LILY', W / 2, 880, 230, { alpha: ease.outCubic(prog(t, 0.2, 0.8)) });
+    const tBest = when('best', 0, tBuild - 0.4);
+    if (t > tBest - 0.3) {
+      const k = prog(t, tBest - 0.3, 0.6);
       if (k < 1) { ctx.fillStyle = `rgba(235,215,255,${0.35 * (1 - k)})`; ctx.fillRect(0, 0, W, H); }
-      serif(ctx, 'LILY', W / 2, 880, 230, { alpha: ease.outCubic(k) });
-      serif(ctx, 'BEST BUILD', W / 2, 1080, 110, { alpha: ease.outCubic(prog(t, tBuild, 0.5)), fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' });
+      serif(ctx, 'BEST BUILD', W / 2, 1080, 110, { alpha: ease.outCubic(k), fill: GOLD, glowColor: 'rgba(255,190,90,0.9)' });
     }
   },
 
