@@ -579,6 +579,23 @@ def mist(label, w, h, seconds, strength=0.35):
     )
 
 
+def anim_clip(scene_idx, video, seconds, width, height, out_dir, force):
+    """Fit an animated shot (e.g. from tools/ltx_local.py) to the scene: scaled and cropped to fill the frame,
+    converted to FPS, and held on its last frame if it is shorter than the scene."""
+    path = out_dir / f"scene{scene_idx:02d}.mp4"
+    key = fingerprint(hashlib.sha256(video.read_bytes()).hexdigest(), seconds, width, height, FPS, "anim-v1")
+    if not force and is_fresh(path, key):
+        return path
+    frames = round(seconds * FPS)
+    run(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-vf",
+         f"scale={width}:{height}:force_original_aspect_ratio=increase:flags=lanczos,crop={width}:{height},"
+         f"unsharp=5:5:0.6,fps={FPS},tpad=stop_mode=clone:stop_duration={seconds:.3f},setsar=1",
+         "-frames:v", str(frames), "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
+         str(path)])
+    mark(path, key)
+    return path
+
+
 def ken_burns_clip(scene_idx, image, seconds, width, height, out_dir, force, fx=None):
     fx = FX_DEFAULT if fx is None else fx
     path = out_dir / f"scene{scene_idx:02d}.mp4"
@@ -953,11 +970,17 @@ def main():
                                   range(len(scenes))))
     else:
         # Every clip but the last runs XFADE longer so it can overlap the next scene.
+        # Scenes with an animated shot in out_dir/<animation dir>/sceneNN.mp4 use it; the rest get camera moves.
+        anim_dir = out_dir / spec["animation"] if spec.get("animation") else None
+
+        def clip(i):
+            shot = anim_dir / f"scene{i:02d}.mp4" if anim_dir else None
+            if shot and shot.exists():
+                return anim_clip(i, shot, lengths[i], width, height, out_dir, args.force)
+            return ken_burns_clip(i, out_dir / f"scene{i:02d}.png", lengths[i], width, height, out_dir, args.force,
+                                  scenes[i].get("fx"))
         with ThreadPoolExecutor(max_workers=2) as pool:
-            clips = list(pool.map(
-                lambda i: ken_burns_clip(i, out_dir / f"scene{i:02d}.png", lengths[i],
-                                         width, height, out_dir, args.force, scenes[i].get("fx")),
-                range(len(scenes))))
+            clips = list(pool.map(clip, range(len(scenes))))
 
     caption_words = scene_words
     if spec.get("cast"):

@@ -82,6 +82,7 @@ def main():
     ap.add_argument("--frames", type=int, default=97, help="8k+1 frames at 24 fps (97 = 4 s)")
     ap.add_argument("--seed", type=int, default=2000)
     ap.add_argument("--fit-audio", action="store_true", help="extend each shot to the length of its sceneNN.mp3")
+    ap.add_argument("--tail", type=float, default=0.95, help="seconds added after the audio (make_video's scene pad + crossfade)")
     args = ap.parse_args()
     import torch
     from PIL import Image
@@ -144,7 +145,7 @@ def main():
         t0 = time.time()
         need = args.frames
         if args.fit_audio:
-            need = max(args.frames, int(duration(args.images / f"scene{i:02d}.mp3") * 24) + 2)
+            need = max(args.frames, int((duration(args.images / f"scene{i:02d}.mp3") + args.tail) * 24) + 1)
         step = args.frames - OVERLAP
         count = 1 + max(0, -(-(need - args.frames) // step))
         frames = []
