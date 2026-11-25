@@ -437,7 +437,7 @@ spec = {
     # The first 45 images came from Pollinations; the rest were drawn locally with the same model (FLUX.2 klein,
     # tools/flux_local.py at 1024x576) and are upscaled to 1080p.
     "images": {"provider": "pollinations", "upscale": True},
-    "music": {"sound": "music_strategy", "volume": 0.10},
+    "music": {"sound": "music_strategy", "volume": 0.07},
     "sources": ["Original story and characters. Artwork generated with AI (Pollinations, FLUX.2 klein)."],
     "scenes": [{**sc, "fx": sc.get("fx", [])} for sc in scenes],
 }
