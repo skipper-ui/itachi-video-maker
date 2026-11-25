@@ -174,7 +174,7 @@ scenes = [
     S("a white cake box falling and hitting the floor of an apartment hallway, a strawberry cake spilling out, {HARUTO}'s legs in the background",
       L("haruto", "How long?", "trembling"),
       L("erika", "Six months. Maybe seven. Does it matter?", "bored")),
-    S("{ERIKA} standing with her arms crossed and looking down at someone with contempt, apartment living room",
+    S("{ERIKA} standing with her arms crossed, looking with contempt at {HARUTO} who stands facing her in the foreground, apartment living room",
       L("erika", "Daichi is going places, Haruto. He's going to be a section chief. And you? You're a man who stays late with rice cookers.", "contemptuous")),
     S("{ERIKA} slapping divorce papers down on a glass coffee table, close-up of her hand with red nails",
       L("erika", "Sign these. I already filled in my part.", "sharp")),
@@ -183,7 +183,7 @@ scenes = [
       L("haruto", "Get out. Both of you. Get out of my home!", "furious, shouting")),
     S("{ERIKA} at the apartment door with a rolling suitcase, looking back over her shoulder, {DAICHI} waiting outside",
       L("erika", "Gladly. And my name's on the lease too, so you have until the end of the month.", "sharp, smug")),
-    S("{HARUTO_HOME} sitting on the floor of a dark apartment hallway at dawn, knees up, head down, the crushed strawberry cake on the floor beside him",
+    S("{HARUTO} with his tie loosened, sitting on the floor of a dark apartment hallway at dawn, knees up, head down, a dropped cake box with squashed strawberry cake spilling out on the floor beside him",
       (N, "That night, I sat on the floor until the sun came up. The cake was still lying where I'd dropped it.", "hollow")),
 
     # ---- Fired ----

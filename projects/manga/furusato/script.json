@@ -715,7 +715,7 @@
   },
   {
    "fx": [],
-   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) standing with her arms crossed and looking down at someone with contempt, apartment living room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "image": "Erika (a 27-year-old Japanese woman with long wavy chestnut-brown hair and red lipstick, wearing a cream silk blouse, beige skirt and gold earrings) standing with her arms crossed, looking with contempt at Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) who stands facing her in the foreground, apartment living room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
    "lines": [
     [
      "erika",
@@ -726,7 +726,8 @@
     ]
    ],
    "refs": [
-    "erika"
+    "erika",
+    "haruto"
    ]
   },
   {
@@ -787,7 +788,7 @@
   },
   {
    "fx": [],
-   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a plain grey hoodie and dark trousers) sitting on the floor of a dark apartment hallway at dawn, knees up, head down, the crushed strawberry cake on the floor beside him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "image": "Haruto (a 28-year-old Japanese man with short neat black hair, kind dark eyes and a slim build, wearing a navy business suit, white shirt and dark blue tie) with his tie loosened, sitting on the floor of a dark apartment hallway at dawn, knees up, head down, a dropped cake box with squashed strawberry cake spilling out on the floor beside him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
    "lines": [
     [
      "narrator",
