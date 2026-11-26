@@ -216,7 +216,7 @@ scenes = [
     S("{MOM} hugging {HARUTO_HOME} tightly at the front door of an old Japanese house, she is overjoyed and teary",
       L("mom", "Haruto! Oh, look at you. You're so thin! Are you eating properly?", "overjoyed"),
       L("haruto", "I'm home, Mom.", "emotional")),
-    S("{MIO} jumping onto {HARUTO_HOME}'s back from behind with a big grin, entrance of a Japanese house",
+    S("{MIO} hugging {HARUTO_HOME} from behind with both arms wrapped around his neck and her chin on his shoulder, grinning playfully, both facing the viewer, Haruto standing upright with an awkward embarrassed smile, entrance hall of a Japanese house",
       L("mio", "Big brother! You actually came back! Did Tokyo finally kick you out?", "teasing, cheerful"),
       L("haruto", "...Something like that.", "awkward laugh")),
     S("a Japanese family dinner, {HARUTO_HOME} sitting alone on the left side of the table staring at his untouched bowl of rice, across the table {DAD} and {MOM} sit side by side watching him with worry, miso soup and grilled fish, only three people",

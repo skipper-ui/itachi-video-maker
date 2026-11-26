@@ -53,7 +53,7 @@ def draw():
         if not (OUT / "refs" / f"{r}.png").exists():
             shutil.copy(src, OUT / "refs" / f"{r}.png")
     script = OUT / "thumb_script.json"
-    script.write_text(json.dumps({"style": spec["style"], "characters": spec["characters"], "scenes": scenes}, indent=1))
+    script.write_text(json.dumps({"style": spec["style"], "characters": {r: spec["characters"][r] for k in ART for r in ART[k][1]}, "scenes": scenes}, indent=1))
     subprocess.run([str(PY), str(ROOT / "tools" / "flux_local.py"), str(script), str(OUT), "--size", "1024x576",
                     "--seed", os.environ.get("SEED", "4200")], check=True, cwd=ROOT)
     for i, k in enumerate(sorted(ART)):
