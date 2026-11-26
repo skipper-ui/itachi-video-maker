@@ -26,16 +26,16 @@ C = next(ast.literal_eval(n.value) for n in ast.parse((HERE / "build.py").read_t
          if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "C")
 
 ART = {
-    "a": ("{SOTA_CHEF} on the right half of the picture, smiling calmly and confidently, holding out a beautiful "
-          "two-tier black lacquered bento box with both hands; in the lower left corner, smaller and further back, "
-          "{RYUJI} and {MIKA} sitting at a dinner table stare at him in total shock with jaws dropped and wide eyes; "
-          "the upper left is a dark window with blurred city lights at night, elegant modern Japanese restaurant, "
+    "a": ("{SOTA_CHEF} standing on the right half of the picture, smiling calmly and confidently, holding a beautiful "
+          "black lacquered bento box at chest height; on the left, seated at a dinner table, two people frozen in "
+          "total shock with jaws dropped, wide eyes and no smiles at all: {RYUJI}, his grin completely gone, "
+          "and {MIKA}; their heads are in the middle of the picture height; elegant modern Japanese restaurant at night, "
           "warm golden light, dramatic",
           ["sota", "ryuji", "mika"]),
-    "b": ("{TEENRYUJI} on the right laughing cruelly, holding an open bento box upside down so the rice and food "
-          "fall onto the classroom floor; {TEENSOTA} on the left, kneeling low on the floor and looking up at him "
-          "with tears in his eyes and a heartbroken face; the upper left is an empty classroom wall, afternoon light, "
-          "dramatic, emotional close-up",
+    "b": ("wide shot, both people in the lower two-thirds of the picture, plain classroom wall above them: on the left, "
+          "{TEENSOTA} kneeling on the floor among spilled rice, looking up with tears streaming down his face, his face "
+          "clearly visible; at the far right edge, {TEENRYUJI} laughing cruelly while tipping an open bento box upside "
+          "down, afternoon light, dramatic, emotional",
           ["teensota", "teenryuji"]),
 }
 # (text, colour, size[, y]) lines per variant; x is set per variant so the words sit away from the faces
@@ -43,9 +43,9 @@ TEXT = {
     "a": {"x": 0.03, "align": "left", "y": 0.04, "lines": [("THEY CALLED ME", "#FFFFFF", 80), ("\u201cBENTO BOY\u201d", "#FFD43B", 122),
                                                          ("NOW I'M THE CHEF", "#FFD43B", 104, 0.78)], "bottom": True,
           "tag": (1280 - 28, 22), "shade": 330},
-    "b": {"x": 0.03, "align": "left", "y": 0.04, "lines": [("10 YEARS LATER...", "#FFFFFF", 80),
-                                                        ("THEY BOOKED", "#FFD43B", 112), ("MY RESTAURANT", "#FFD43B", 112)],
-          "tag": (1280 - 28, 22), "shade": 420},
+    "b": {"x": 0.03, "align": "left", "y": 0.04, "lines": [("10 YEARS LATER...", "#FFFFFF", 72),
+                                                        ("THEY BOOKED", "#FFD43B", 96), ("MY RESTAURANT", "#FFD43B", 96)],
+          "tag": (1280 - 28, 640), "shade": 380},
 }
 
 
