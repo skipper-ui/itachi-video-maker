@@ -1,0 +1,2358 @@
+{
+ "title": "They Called Me 'Bento Boy' for 3 Years... 10 Years Later, They Booked My Restaurant for Our Reunion [Manga Dub]",
+ "character": "",
+ "style": "",
+ "width": 1920,
+ "height": 1080,
+ "title_card": false,
+ "tts": "kokoro",
+ "cast": {
+  "narrator": "am_michael",
+  "sota": "am_michael",
+  "teensota": "am_michael",
+  "ryuji": "am_puck",
+  "teenryuji": "am_puck",
+  "mika": "af_nicole",
+  "teenmika": "af_nicole",
+  "goro": "am_echo",
+  "teengoro": "am_echo",
+  "nanami": "af_sky",
+  "teennanami": "af_sky",
+  "fujita": "bm_george",
+  "kuroda": "am_onyx",
+  "mom": "bf_emma",
+  "kenji": "am_fenrir",
+  "arai": "af_bella",
+  "waiter": "am_liam",
+  "mori": "bm_daniel",
+  "classmate": "bm_fable",
+  "classmate2": "af_heart",
+  "host": "af_sky"
+ },
+ "speed": 0.95,
+ "scene_pad": 0.7,
+ "emotive": {
+  "engine": "eleven_v3",
+  "cast": {
+   "narrator": "cjVigY5qzO86Huf0OWal",
+   "sota": "cjVigY5qzO86Huf0OWal",
+   "teensota": "cjVigY5qzO86Huf0OWal",
+   "ryuji": "N2lVS1w4EtoT3dr4eOWO",
+   "teenryuji": "N2lVS1w4EtoT3dr4eOWO",
+   "mika": "cgSgspJ2msm6clMCkdW9",
+   "teenmika": "cgSgspJ2msm6clMCkdW9",
+   "goro": "IKne3meq5aSn9XLyUdCD",
+   "teengoro": "IKne3meq5aSn9XLyUdCD",
+   "nanami": "pFZP5JQG7iQjIQuC4Bku",
+   "teennanami": "pFZP5JQG7iQjIQuC4Bku",
+   "fujita": "JBFqnCBsd6RMkjVDRZzb",
+   "kuroda": "pqHfZKP75CvOlQylNhV4",
+   "mom": "XrExE9yKIg1WjnnlVkGX",
+   "kenji": "iP95p4xoKVk53GoZ742B",
+   "arai": "FGY2WhTYpPnrIDTdsKH5",
+   "waiter": "bIHbv24MWmeRgasZH58o",
+   "mori": "nPczCjzI2devNBz1zQrb",
+   "classmate": "CwhRBWXzGAHq8TQ4Fs17",
+   "classmate2": "EXAVITQu4vr4xnSDxMaL",
+   "host": "vGQNBgLaiM3EdZtxIiuY"
+  },
+  "skip": [],
+  "fallback": true,
+  "priority": [
+   "narrator",
+   "sota",
+   "ryuji",
+   "mika",
+   "nanami",
+   "goro",
+   "mom",
+   "kuroda",
+   "arai",
+   "mori"
+  ]
+ },
+ "caption": {
+  "mode": "boxes",
+  "font": "Comic Neue",
+  "fonts_dir": "assets/fonts"
+ },
+ "images": {
+  "provider": "local",
+  "upscale": true
+ },
+ "characters": {
+  "sota": "character reference portrait, waist-up front view of Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "teensota": "character reference portrait, waist-up front view of teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "ryuji": "character reference portrait, waist-up front view of Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "teenryuji": "character reference portrait, waist-up front view of teenage Ryuji (a tall broad-shouldered 17-year-old Japanese boy with short spiky black hair and a cocky grin, wearing a black Japanese school uniform with the collar open and a red baseball wristband), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mika": "character reference portrait, waist-up front view of Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "teenmika": "character reference portrait, waist-up front view of teenage Mika (a 17-year-old Japanese girl with long wavy brown hair and a pink hair clip, wearing a navy Japanese sailor school uniform, holding a smartphone in a pink case), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "goro": "character reference portrait, waist-up front view of Goro (a chubby 28-year-old Japanese man with a buzz cut and a nervous face, wearing an ill-fitting grey suit), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "teengoro": "character reference portrait, waist-up front view of teenage Goro (a chubby 17-year-old Japanese boy with a buzz cut, wearing a black Japanese school uniform), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "nanami": "character reference portrait, waist-up front view of Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "teennanami": "character reference portrait, waist-up front view of teenage Nanami (a 17-year-old Japanese girl with black hair in a high ponytail and determined eyes, wearing a navy Japanese sailor school uniform), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "fujita": "character reference portrait, waist-up front view of Mr. Fujita (a thin 62-year-old Japanese man with thinning grey hair and glasses, wearing a brown tweed jacket), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "kuroda": "character reference portrait, waist-up front view of Chef Kuroda (a stern 70-year-old Japanese man, bald with a short white goatee, wearing a traditional white Japanese chef's coat and a white headband), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mom": "character reference portrait, waist-up front view of Mom (a gentle 55-year-old Japanese woman with short permed black hair streaked with grey, wearing a green apron over a beige sweater), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "kenji": "character reference portrait, waist-up front view of Kenji (a 30-year-old Japanese sous chef with short spiky dark hair and an energetic grin, wearing a white chef's jacket), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "arai": "character reference portrait, waist-up front view of Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "waiter": "character reference portrait, waist-up front view of a young waiter (a slim 20-year-old Japanese man with neat short hair, wearing a black vest and a bow tie), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mori": "character reference portrait, waist-up front view of Director Mori (a stern 60-year-old Japanese executive with slicked-back grey hair and a hard face, wearing a dark suit), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "host": "character reference portrait, waist-up front view of Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark"
+ },
+ "music": {
+  "sound": "music_strategy",
+  "volume": 0.07
+ },
+ "sources": [
+  "Original story and characters. Artwork drawn with AI (FLUX.2 klein, run locally)."
+ ],
+ "scenes": [
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) carefully plating a beautiful dish with tweezers in a gleaming professional restaurant kitchen with steel counters and copper pans, intense focus, flames from a stove behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ten years ago, my classmates threw my lunch on the floor and called me Bento Boy.",
+     {
+      "tone": "quiet, bitter"
+     }
+    ],
+    [
+     "narrator",
+     "Ten years later, they walked into my restaurant for our class reunion... and none of them knew who was cooking.",
+     {
+      "tone": "cold, confident"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "exterior of an elegant small restaurant with a wooden facade and soft lanterns on a quiet street in Ginza at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My name is Sota Kanzaki. I'm twenty-eight years old, and this is Hoshizora. My restaurant.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "narrator",
+     "But to understand why that reunion night mattered so much... I have to start at the beginning.",
+     {
+      "tone": "reflective"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mom (a gentle 55-year-old Japanese woman with short permed black hair streaked with grey, wearing a green apron over a beige sweater) packing colorful bento boxes at dawn in a tiny cramped bento shop kitchen, teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) watching sleepily at the counter, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My mother ran a tiny bento shop in our neighborhood. Every morning at five, she made a hundred lunches... and one more, for me.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "mom",
+     "Eat every bite, Sota. Food made with care gives people strength.",
+     {
+      "tone": "gentle, loving"
+     }
+    ]
+   ],
+   "refs": [
+    "mom",
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) happily opening a beautiful handmade bento box at his desk in a Japanese high school classroom at lunchtime, desks and a blackboard, afternoon sunlight, rolled omelet, little octopus-shaped sausages and star-shaped rice, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Her bentos were beautiful. Rolled omelet. Little octopus sausages. Rice shaped like a star.",
+     {
+      "tone": "fond"
+     }
+    ],
+    [
+     "narrator",
+     "For me, it was the best part of the day.",
+     {
+      "tone": "fond"
+     }
+    ]
+   ],
+   "refs": [
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Ryuji (a tall broad-shouldered 17-year-old Japanese boy with short spiky black hair and a cocky grin, wearing a black Japanese school uniform with the collar open and a red baseball wristband) snatching the bento box from teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform)'s desk and holding it up high, grinning, teenage Goro (a chubby 17-year-old Japanese boy with a buzz cut, wearing a black Japanese school uniform) laughing behind him, in a Japanese high school classroom at lunchtime, desks and a blackboard, afternoon sunlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "teenryuji",
+     "Whoa, look at this! Bento Boy's mommy made him star-shaped rice!",
+     {
+      "tone": "mocking, loud"
+     }
+    ],
+    [
+     "teengoro",
+     "Ha! What are you, five years old?",
+     {
+      "tone": "laughing"
+     }
+    ]
+   ],
+   "refs": [
+    "teengoro",
+    "teenryuji",
+    "teensota"
+   ],
+   "pos": {
+    "teenryuji": "l",
+    "teengoro": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "teenage Mika (a 17-year-old Japanese girl with long wavy brown hair and a pink hair clip, wearing a navy Japanese sailor school uniform, holding a smartphone in a pink case) holding up her smartphone to record and giggling, in a Japanese high school classroom at lunchtime, desks and a blackboard, afternoon sunlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "teenmika",
+     "Ryuji, do it again! I wasn't recording!",
+     {
+      "tone": "giggling, cruel"
+     }
+    ]
+   ],
+   "refs": [
+    "teenmika"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a bento box falling upside down, rolled omelet, sausages and white rice scattering across a classroom floor, the star-shaped rice broken, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ryuji Takeda. Captain of the baseball team, and king of our class.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "He turned my lunch upside down. Almost every day, for three years.",
+     {
+      "tone": "hollow"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) on his knees picking rice off the classroom floor while blurred classmates laugh around him, teenage Ryuji (a tall broad-shouldered 17-year-old Japanese boy with short spiky black hair and a cocky grin, wearing a black Japanese school uniform with the collar open and a red baseball wristband) looking down at him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "teenryuji",
+     "Pick it up, Bento Boy. Wouldn't want to waste mommy's love.",
+     {
+      "tone": "sneering"
+     }
+    ]
+   ],
+   "refs": [
+    "teenryuji",
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) finding his desk covered in scribbles and crumpled trash, his indoor shoes sticking out of a trash bin, empty classroom in the morning, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Some days it was my lunch. Some days it was my desk. Some days my shoes ended up in the trash.",
+     {
+      "tone": "flat, tired"
+     }
+    ]
+   ],
+   "refs": [
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Nanami (a 17-year-old Japanese girl with black hair in a high ponytail and determined eyes, wearing a navy Japanese sailor school uniform) stepping in front of teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) with her arms spread, glaring up at teenage Ryuji (a tall broad-shouldered 17-year-old Japanese boy with short spiky black hair and a cocky grin, wearing a black Japanese school uniform with the collar open and a red baseball wristband), in a Japanese high school classroom at lunchtime, desks and a blackboard, afternoon sunlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "teennanami",
+     "Stop it, Ryuji! That's his lunch! What is wrong with you?",
+     {
+      "tone": "angry, brave"
+     }
+    ],
+    [
+     "teenryuji",
+     "Relax, Class Rep. It's just a joke.",
+     {
+      "tone": "dismissive"
+     }
+    ]
+   ],
+   "refs": [
+    "teennanami",
+    "teenryuji",
+    "teensota"
+   ],
+   "pos": {
+    "teennanami": "l",
+    "teenryuji": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Mr. Fujita (a thin 62-year-old Japanese man with thinning grey hair and glasses, wearing a brown tweed jacket) standing at the classroom door looking down at papers in his hands and pretending not to notice, students in the background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Our homeroom teacher, Mr. Fujita, saw everything.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "He always seemed to find something very interesting to read.",
+     {
+      "tone": "bitter, dry"
+     }
+    ]
+   ],
+   "refs": [
+    "fujita"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Nanami (a 17-year-old Japanese girl with black hair in a high ponytail and determined eyes, wearing a navy Japanese sailor school uniform) kneeling on the classroom floor beside teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform), offering him half of her rice ball with a small smile, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "teennanami",
+     "Here. Take half of mine. Don't let them win, okay?",
+     {
+      "tone": "soft, kind"
+     }
+    ],
+    [
+     "narrator",
+     "Nanami Yuki. The only person in that classroom who ever helped me.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": [
+    "teennanami",
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Nanami (a 17-year-old Japanese girl with black hair in a high ponytail and determined eyes, wearing a navy Japanese sailor school uniform) sitting alone at her desk while a group of girls whisper and turn their backs on her, in a Japanese high school classroom at lunchtime, desks and a blackboard, afternoon sunlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "After that, half the class stopped talking to Nanami too. She never once complained about it.",
+     {
+      "tone": "quiet, grateful"
+     }
+    ]
+   ],
+   "refs": [
+    "teennanami"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) sitting alone on a school rooftop at sunset eating what is left of his bento, city in the distance, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I ate whatever was left up on the roof, alone. It still tasted like home.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a lively school festival food stall, teenage Goro (a chubby 17-year-old Japanese boy with a buzz cut, wearing a black Japanese school uniform) proudly selling golden curry bread in a white apron, teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) helping fry bread beside him, smiling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Strangely, the happiest memory I have from high school involves Goro Saeki, Ryuji's shadow.",
+     {
+      "tone": "wry"
+     }
+    ],
+    [
+     "narrator",
+     "At the school festival, we were put on the same cooking team. His curry bread sold out in an hour.",
+     {
+      "tone": "fond"
+     }
+    ]
+   ],
+   "refs": [
+    "teengoro",
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Goro (a chubby 17-year-old Japanese boy with a buzz cut, wearing a black Japanese school uniform) untying his apron and walking away from the stall toward teenage Ryuji (a tall broad-shouldered 17-year-old Japanese boy with short spiky black hair and a cocky grin, wearing a black Japanese school uniform with the collar open and a red baseball wristband) who waves at him impatiently, teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) left alone at the stall, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "teenryuji",
+     "Goro! Stop playing chef with the loser and come on!",
+     {
+      "tone": "impatient"
+     }
+    ],
+    [
+     "narrator",
+     "Then Ryuji called him, and Goro went. He always went.",
+     {
+      "tone": "sad"
+     }
+    ]
+   ],
+   "refs": [
+    "teengoro",
+    "teenryuji",
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) hiding his stained shirt behind his back in a tiny bento shop at night, Mom (a gentle 55-year-old Japanese woman with short permed black hair streaked with grey, wearing a green apron over a beige sweater) looking at him with worry, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mom",
+     "Sota... is something wrong at school?",
+     {
+      "tone": "worried"
+     }
+    ],
+    [
+     "teensota",
+     "No. Everything's fine. Your omelet was really good today.",
+     {
+      "tone": "forced cheerful"
+     }
+    ],
+    [
+     "narrator",
+     "I never told her. I didn't want her to stop making them.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "mom",
+    "teensota"
+   ],
+   "pos": {
+    "mom": "l",
+    "teensota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) standing alone under cherry blossom trees holding a graduation diploma tube, classmates taking selfies far behind him, nobody looking at him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On graduation day, nobody asked for a photo with me. And I didn't look back.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mom (a gentle 55-year-old Japanese woman with short permed black hair streaked with grey, wearing a green apron over a beige sweater) handing teenage Sota (a thin 17-year-old Japanese boy with black hair and long bangs falling over his eyes, wearing a black high-collared Japanese school uniform) an old kitchen knife wrapped in a white cloth in the bento shop, both serious, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mom",
+     "This was your grandfather's knife. If you want to cook, then cook for real. Cooking is how we take care of people.",
+     {
+      "tone": "gentle, serious"
+     }
+    ],
+    [
+     "teensota",
+     "I'll make you proud, Mom. I promise.",
+     {
+      "tone": "determined"
+     }
+    ]
+   ],
+   "refs": [
+    "mom",
+    "teensota"
+   ],
+   "pos": {
+    "mom": "l",
+    "teensota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "young Sota (a thin 19-year-old Japanese man with black hair and long bangs, wearing a plain white cook's apron over a white t-shirt, a white bandana on his head) bowing deeply in front of Chef Kuroda (a stern 70-year-old Japanese man, bald with a short white goatee, wearing a traditional white Japanese chef's coat and a white headband) in a traditional Kyoto restaurant kitchen with wooden counters, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I went to Kyoto and begged the strictest chef in the city to take me in. Chef Kuroda.",
+     {
+      "tone": "determined"
+     }
+    ],
+    [
+     "kuroda",
+     "Hah. You want to cook? First you wash dishes. For one year. Then we'll talk.",
+     {
+      "tone": "gruff"
+     }
+    ]
+   ],
+   "refs": [
+    "kuroda",
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "young Sota (a thin 19-year-old Japanese man with black hair and long bangs, wearing a plain white cook's apron over a white t-shirt, a white bandana on his head) washing a huge mountain of dishes alone late at night in a traditional kitchen, his hands red and raw, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "So I washed dishes. Then I peeled vegetables. Then I scaled fish until I couldn't feel my fingers.",
+     {
+      "tone": "tired"
+     }
+    ]
+   ],
+   "refs": [
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Chef Kuroda (a stern 70-year-old Japanese man, bald with a short white goatee, wearing a traditional white Japanese chef's coat and a white headband) wrapping a bandage around young Sota (a thin 19-year-old Japanese man with black hair and long bangs, wearing a plain white cook's apron over a white t-shirt, a white bandana on his head)'s burned hand, stern but caring, traditional kitchen, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kuroda",
+     "Burns heal. Regret doesn't. Back to the stove.",
+     {
+      "tone": "gruff, caring"
+     }
+    ]
+   ],
+   "refs": [
+    "kuroda",
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "young Sota (a thin 19-year-old Japanese man with black hair and long bangs, wearing a plain white cook's apron over a white t-shirt, a white bandana on his head) talking on an old phone in a tiny dark dormitory room at night, smiling tiredly, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mom",
+     "Are you eating properly, Sota? You sound so tired.",
+     {
+      "tone": "worried, warm"
+     }
+    ],
+    [
+     "teensota",
+     "I'm fine, Mom. I'm cooking every day. I'm happy.",
+     {
+      "tone": "tired, sincere"
+     }
+    ]
+   ],
+   "refs": [
+    "teensota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Chef Kuroda (a stern 70-year-old Japanese man, bald with a short white goatee, wearing a traditional white Japanese chef's coat and a white headband) pouring a bowl of soup into the sink in front of Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron), traditional Kyoto kitchen, tense, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kuroda",
+     "Again. This soup has no heart. Tell me, who are you cooking for?",
+     {
+      "tone": "stern"
+     }
+    ],
+    [
+     "sota",
+     "...For the person eating it.",
+     {
+      "tone": "thinking"
+     }
+    ]
+   ],
+   "refs": [
+    "kuroda",
+    "sota"
+   ],
+   "pos": {
+    "kuroda": "l",
+    "sota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) alone in a kitchen at dawn practicing a Japanese rolled omelet in a square pan, dozens of omelets lined up on the counter, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Every night after closing, I practiced my mother's rolled omelet. A thousand times. Maybe more.",
+     {
+      "tone": "quiet, determined"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Chef Kuroda (a stern 70-year-old Japanese man, bald with a short white goatee, wearing a traditional white Japanese chef's coat and a white headband) tasting a slice of rolled omelet with chopsticks and giving a rare small smile, Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) waiting nervously, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kuroda",
+     "...Now that's food. Seven years, kid. Took you long enough.",
+     {
+      "tone": "gruff, proud"
+     }
+    ]
+   ],
+   "refs": [
+    "kuroda",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) standing in an empty bare new restaurant space with exposed walls, holding a set of keys, morning light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "At twenty-six, with every yen I'd saved and a loan that terrified me, I opened Hoshizora in Ginza.",
+     {
+      "tone": "hopeful"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron), Kenji (a 30-year-old Japanese sous chef with short spiky dark hair and an energetic grin, wearing a white chef's jacket) and Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt) celebrating in the restaurant kitchen, Kenji holding up a phone excitedly, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Two years later, we earned a star in the most famous restaurant guide in the country.",
+     {
+      "tone": "proud, quiet"
+     }
+    ],
+    [
+     "kenji",
+     "Chef! The reporters are calling again. They want a photo of you!",
+     {
+      "tone": "excited"
+     }
+    ],
+    [
+     "sota",
+     "No photos. The food is what matters. Not my face.",
+     {
+      "tone": "calm"
+     }
+    ]
+   ],
+   "refs": [
+    "arai",
+    "kenji",
+    "sota"
+   ],
+   "pos": {
+    "kenji": "l",
+    "sota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt) smiling knowingly while holding a tablet, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "arai",
+     "The mysterious faceless chef of Ginza. The magazines love it, you know.",
+     {
+      "tone": "amused"
+     }
+    ],
+    [
+     "narrator",
+     "I never showed my face. Partly because I'm shy... and partly because I never wanted people staring at me again.",
+     {
+      "tone": "honest"
+     }
+    ]
+   ],
+   "refs": [
+    "arai"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) sitting on a sofa in a simple apartment at night, his phone lighting up with many notifications, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Then one night, my phone buzzed. A group chat I'd forgotten even existed. Class 3-B.",
+     {
+      "tone": "curious"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a smartphone screen showing a group chat full of colorful message bubbles and party emojis, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "Ten-year reunion, guys! I booked Hoshizora in Ginza. The one with the star. Company card, so don't worry about money!",
+     {
+      "tone": "bragging, loud"
+     }
+    ],
+    [
+     "mika",
+     "Oh my god, Ryuji, you're amazing! I'll stream the whole thing for my followers!",
+     {
+      "tone": "gushing"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) staring at his phone in shock, the screen light on his face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ryuji had booked my restaurant. For our reunion.",
+     {
+      "tone": "stunned"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a smartphone screen showing a group chat with laughing emojis, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "goro",
+     "Should we invite Kanzaki too?",
+     {
+      "tone": "nervous"
+     }
+    ],
+    [
+     "ryuji",
+     "Sure, invite Bento Boy! He's probably stacking shelves at a convenience store. We could use a laugh.",
+     {
+      "tone": "mocking"
+     }
+    ],
+    [
+     "mika",
+     "Bento Boy! I bet he still eats his mommy's lunches!",
+     {
+      "tone": "mocking"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) gripping his phone tightly, then a calm cold smile spreading across his face, apartment at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ten years. And they hadn't changed at all.",
+     {
+      "tone": "cold"
+     }
+    ],
+    [
+     "narrator",
+     "I typed two words. I'll come.",
+     {
+      "tone": "calm, cold"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) talking to Kenji (a 30-year-old Japanese sous chef with short spiky dark hair and an energetic grin, wearing a white chef's jacket) and Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt) in a gleaming professional restaurant kitchen with steel counters and copper pans, Kenji looking shocked, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "The Takeda reservation next Saturday. Forty guests. It's my high school reunion.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "kenji",
+     "Wait, they don't know this is your restaurant?",
+     {
+      "tone": "surprised"
+     }
+    ],
+    [
+     "sota",
+     "No. And don't tell them. That night, I'm just a guest.",
+     {
+      "tone": "calm, firm"
+     }
+    ]
+   ],
+   "refs": [
+    "arai",
+    "kenji",
+    "sota"
+   ],
+   "pos": {
+    "kenji": "r",
+    "sota": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt) raising an eyebrow with a knowing smile, Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) beside her, in a gleaming professional restaurant kitchen with steel counters and copper pans, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "arai",
+     "Understood, Chef. And who's cooking?",
+     {
+      "tone": "amused"
+     }
+    ],
+    [
+     "sota",
+     "I'll prepare everything in the afternoon. Kenji will plate. And for the final course... I'll come back to my kitchen.",
+     {
+      "tone": "determined"
+     }
+    ]
+   ],
+   "refs": [
+    "arai",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Director Mori (a stern 60-year-old Japanese executive with slicked-back grey hair and a hard face, wearing a dark suit) sitting behind a large desk glaring at Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) who stands at attention, a flashy real estate company office, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mori",
+     "Takeda. The building on Namiki Street. Whoever controls Hoshizora controls that lease. Get their signature by the end of the month, or don't bother coming back.",
+     {
+      "tone": "cold, stern"
+     }
+    ],
+    [
+     "ryuji",
+     "Leave it to me, Director! I'm throwing a party there on Saturday. I'll charm the owner myself!",
+     {
+      "tone": "overconfident"
+     }
+    ]
+   ],
+   "refs": [
+    "mori",
+    "ryuji"
+   ],
+   "pos": {
+    "mori": "l",
+    "ryuji": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) grinning confidently to himself in an office corridor, adjusting his gold bracelet, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I found out later that Ryuji had his own plan for that night. And it depended entirely on me. He just didn't know it yet.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "well-dressed young adults arriving at the entrance of an elegant Ginza restaurant at night, Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) at the door greeting people like a host, Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case) filming with her phone, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Saturday night. Forty classmates in their best clothes, and Ryuji standing at the door like he owned the place.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "mika",
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) pointing and laughing at Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) who just walked in, restaurant entrance at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "No way! Bento Boy actually came! Look at that sweater! Did you get lost on your way to work?",
+     {
+      "tone": "mocking, loud"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji",
+    "sota"
+   ],
+   "pos": {
+    "ryuji": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case) holding her phone close to Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans)'s face to film him, fake smile, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mika",
+     "Hi everyone! This is Bento Boy, the class loser I told you about! Say hi to my two hundred thousand followers!",
+     {
+      "tone": "fake cheerful"
+     }
+    ],
+    [
+     "sota",
+     "...Hello.",
+     {
+      "tone": "calm"
+     }
+    ]
+   ],
+   "refs": [
+    "mika",
+    "sota"
+   ],
+   "pos": {
+    "mika": "l",
+    "sota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Goro (a chubby 28-year-old Japanese man with a buzz cut and a nervous face, wearing an ill-fitting grey suit) awkwardly patting Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) on the shoulder, sweating nervously, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "goro",
+     "H-hey, Kanzaki. Long time. Ryuji's paying, so, uh... just enjoy it, I guess.",
+     {
+      "tone": "awkward"
+     }
+    ],
+    [
+     "narrator",
+     "Goro Saeki. Ryuji's shadow in high school. Apparently, he still was. He worked under Ryuji at the same company.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "goro",
+    "sota"
+   ],
+   "pos": {
+    "goro": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) waving and smiling warmly at Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) across the room, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "nanami",
+     "Sota! You came! I'm so glad. You look really well.",
+     {
+      "tone": "warm, happy"
+     }
+    ],
+    [
+     "narrator",
+     "And then there was Nanami. Ten years later, she still had the kindest smile in the room.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "nanami",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) and Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) sitting side by side at the end of a long dinner table, talking quietly, other guests chatting, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "nanami",
+     "I'm a teacher now. Third grade. I keep thinking about our class... and I tell my kids never to look away.",
+     {
+      "tone": "thoughtful"
+     }
+    ],
+    [
+     "sota",
+     "You never did. Not once.",
+     {
+      "tone": "gentle"
+     }
+    ]
+   ],
+   "refs": [
+    "nanami",
+    "sota"
+   ],
+   "pos": {
+    "nanami": "l",
+    "sota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "a friendly classmate in a suit leaning across the table to talk to Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans), Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) listening nearby with a smirk, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "classmate",
+     "So, Kanzaki, what do you do these days?",
+     {
+      "tone": "friendly"
+     }
+    ],
+    [
+     "sota",
+     "I cook.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "ryuji",
+     "A cook! Like at a family restaurant? Flipping burgers? Ha! Fits you perfectly!",
+     {
+      "tone": "mocking, laughing"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mr. Fujita (a thin 62-year-old Japanese man with thinning grey hair and glasses, wearing a brown tweed jacket) sitting stiffly at the dinner table holding a menu in front of his face, avoiding eye contact, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Mr. Fujita had come too. He looked at me once... and then found his menu very interesting.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "fujita"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) showing off a gold watch to a group of impressed classmates at the table, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "This? Just a little reward from my company. Top salesman three years in a row. I'm about to close the biggest deal of my life.",
+     {
+      "tone": "boastful"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) standing and raising a wine glass to toast loudly, guests looking up at him, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "Everyone! Tonight's on me! Order whatever you want. When you're as successful as me, money is nothing!",
+     {
+      "tone": "boastful, loud"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) rudely snapping his fingers at a young waiter (a slim 20-year-old Japanese man with neat short hair, wearing a black vest and a bow tie) who rushes over with a menu, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "Hey, you! Bring us your most expensive wine. And hurry up, I'm paying your salary tonight!",
+     {
+      "tone": "rude"
+     }
+    ],
+    [
+     "waiter",
+     "Y-yes, sir. Right away.",
+     {
+      "tone": "nervous"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji",
+    "waiter"
+   ],
+   "pos": {
+    "ryuji": "l",
+    "waiter": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "a young waiter (a slim 20-year-old Japanese man with neat short hair, wearing a black vest and a bow tie) accidentally spilling a few drops of water near Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet)'s sleeve, Ryuji jumping up furious, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "Are you an idiot?! This suit costs more than you make in a month!",
+     {
+      "tone": "shouting, furious"
+     }
+    ],
+    [
+     "waiter",
+     "I'm so sorry, sir!",
+     {
+      "tone": "frightened"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji",
+    "waiter"
+   ],
+   "pos": {
+    "ryuji": "l",
+    "waiter": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans)'s calm face with cold angry eyes, his hand gripping the edge of the table, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My staff. In my restaurant.",
+     {
+      "tone": "cold anger"
+     }
+    ],
+    [
+     "sota",
+     "Ryuji. It was an accident. He apologized. That's enough.",
+     {
+      "tone": "calm, firm"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) leaning over Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) and sneering down at him, Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case) laughing and filming behind, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "Oh? Bento Boy's giving me orders now? You probably can't even afford the water here.",
+     {
+      "tone": "mocking"
+     }
+    ],
+    [
+     "mika",
+     "Oh, burn! Chat is loving this!",
+     {
+      "tone": "laughing"
+     }
+    ]
+   ],
+   "refs": [
+    "mika",
+    "ryuji",
+    "sota"
+   ],
+   "pos": {
+    "ryuji": "l",
+    "mika": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) quietly speaking to a young waiter (a slim 20-year-old Japanese man with neat short hair, wearing a black vest and a bow tie) near the wall, the waiter looking relieved, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "You did nothing wrong. Take a five-minute break. Tell Ms. Arai I said so.",
+     {
+      "tone": "quiet, kind"
+     }
+    ],
+    [
+     "waiter",
+     "...Thank you, sir.",
+     {
+      "tone": "relieved, confused"
+     }
+    ]
+   ],
+   "refs": [
+    "sota",
+    "waiter"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a smartphone livestream screen held in a hand with long nails, floating hearts and a stream of comments, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Mika's livestream had thousands of viewers. She was sure it made Ryuji look like a king.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "elegant dishes being served on a long table: sea bream sashimi with yuzu, grilled wagyu on charcoal, delicate soup in lacquer bowls, guests amazed, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The first courses came out. Sea bream with yuzu. Wagyu grilled over charcoal. A clear soup I'd simmered since morning.",
+     {
+      "tone": "proud"
+     }
+    ],
+    [
+     "narrator",
+     "The room went quiet, the way it always does when people taste something real.",
+     {
+      "tone": "satisfied"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) tasting soup with her eyes closed and a moved expression, Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) watching her, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "nanami",
+     "This is incredible. It tastes... warm. Like someone made it just for me.",
+     {
+      "tone": "moved"
+     }
+    ],
+    [
+     "sota",
+     "That's the best compliment a cook can get.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "nanami",
+    "sota"
+   ],
+   "pos": {
+    "nanami": "l",
+    "sota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) whispering to Goro (a chubby 28-year-old Japanese man with a buzz cut and a nervous face, wearing an ill-fitting grey suit) with a scheming grin, Goro looking nervous, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "Watch this, Goro. I'll call the owner out here, get that lease signed in front of everyone, and get promoted by Monday.",
+     {
+      "tone": "scheming"
+     }
+    ],
+    [
+     "goro",
+     "R-Ryuji, maybe not tonight...",
+     {
+      "tone": "nervous"
+     }
+    ]
+   ],
+   "refs": [
+    "goro",
+    "ryuji"
+   ],
+   "pos": {
+    "ryuji": "l",
+    "goro": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) arrogantly waving Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt) over to the table, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "You, manager! Tell the owner to come out here. Takeda Real Estate wants a word.",
+     {
+      "tone": "arrogant"
+     }
+    ],
+    [
+     "arai",
+     "Certainly, sir. The chef will greet everyone with the final course.",
+     {
+      "tone": "polite, faintly amused"
+     }
+    ]
+   ],
+   "refs": [
+    "arai",
+    "ryuji"
+   ],
+   "pos": {
+    "ryuji": "l",
+    "arai": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) quietly standing up from the table and placing his napkin down, Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) laughing at him, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "Excuse me for a moment.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "ryuji",
+     "Bathroom break, Bento Boy? Don't steal the towels!",
+     {
+      "tone": "mocking"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) buttoning a white chef's jacket in a gleaming professional restaurant kitchen with steel counters and copper pans, Kenji (a 30-year-old Japanese sous chef with short spiky dark hair and an energetic grin, wearing a white chef's jacket) grinning and holding out a black apron, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kenji",
+     "Ready, Chef?",
+     {
+      "tone": "excited"
+     }
+    ],
+    [
+     "sota",
+     "Ready. Let's serve the last course.",
+     {
+      "tone": "calm, determined"
+     }
+    ]
+   ],
+   "refs": [
+    "kenji",
+    "sota"
+   ],
+   "pos": {
+    "kenji": "l",
+    "sota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "the dining room lights dimming, a spotlight on the kitchen door, Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt) standing beside it formally, guests turning to look, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "arai",
+     "Ladies and gentlemen, the owner and head chef of Hoshizora... Chef Sota Kanzaki.",
+     {
+      "tone": "formal, proud"
+     }
+    ]
+   ],
+   "refs": [
+    "arai"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) walking out through the kitchen door in a spotlight carrying a black lacquered bento box, Kenji (a 30-year-old Japanese sous chef with short spiky dark hair and an energetic grin, wearing a white chef's jacket) and staff behind him carrying more, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I walked out of my own kitchen, in my own chef's jacket.",
+     {
+      "tone": "calm, powerful"
+     }
+    ]
+   ],
+   "refs": [
+    "kenji",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a long dinner table of shocked well-dressed classmates with jaws dropped and wide eyes, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "classmate",
+     "Wait... Kanzaki?! Bento Boy is the chef?!",
+     {
+      "tone": "shocked"
+     }
+    ],
+    [
+     "classmate2",
+     "The faceless chef from the magazines... is him?",
+     {
+      "tone": "stunned"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) frozen in shock with a wine glass slipping from his fingers, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "N-no way... that's impossible...",
+     {
+      "tone": "stammering"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case) pale and panicking while staring at her phone screen full of exploding comments, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mika",
+     "W-wait, chat, this is... um...",
+     {
+      "tone": "panicked"
+     }
+    ],
+    [
+     "narrator",
+     "Mika's live chat exploded. Thousands of people had just watched her call the chef a loser.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "mika"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) calmly placing black lacquered bento boxes in front of each guest at the long table, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "Tonight's final course. A bento.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "sota",
+     "Rolled omelet. Little octopus sausages. And rice shaped like a star.",
+     {
+      "tone": "calm, meaningful"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a luxurious lacquered bento box with golden rolled omelet, octopus-shaped sausages, seasonal vegetables and star-shaped rice, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My mother's bento. The one they threw on the floor almost every day for three years.",
+     {
+      "tone": "quiet, emotional"
+     }
+    ],
+    [
+     "narrator",
+     "Made with the finest ingredients I could find.",
+     {
+      "tone": "quiet, proud"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "classmates staring down at their bento boxes with guilty faces, one woman with tears in her eyes, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "classmate2",
+     "This is... the lunch from back then...",
+     {
+      "tone": "quiet, guilty"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mom (a gentle 55-year-old Japanese woman with short permed black hair streaked with grey, wearing a green apron over a beige sweater) wearing a nice dress, sitting at the restaurant's wooden chef's counter as guest of honor, smiling proudly with teary eyes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And at the counter sat my guest of honor. My mother.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "mom",
+     "It's even better than mine, Sota.",
+     {
+      "tone": "moved, proud"
+     }
+    ]
+   ],
+   "refs": [
+    "mom"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) rushing up to Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) with a huge fake smile and bowing repeatedly, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "Sota! Buddy! Ha ha, you got me good! We were always friends, right? Listen, about the building lease...",
+     {
+      "tone": "fake friendly, desperate"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji",
+    "sota"
+   ],
+   "pos": {
+    "ryuji": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) looking calmly down at Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) who is sweating and wringing his hands, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "The building on Namiki Street?",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "ryuji",
+     "Yes! If you sign with Takeda Real Estate, I'll make it worth your while! Anything you want!",
+     {
+      "tone": "desperate"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji",
+    "sota"
+   ],
+   "pos": {
+    "sota": "r",
+    "ryuji": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) speaking calmly with quiet strength, restaurant background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "I don't control the lease, Ryuji.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "sota",
+     "I bought the building. Last month.",
+     {
+      "tone": "calm, final"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) turning pale white and sweating heavily, mouth open in shock, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ryuji's face went the color of my rice.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) answering his ringing phone with a trembling hand, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mori",
+     "Takeda. I'm watching a livestream. You're screaming at a waiter in the restaurant we've been trying to win over for six months.",
+     {
+      "tone": "cold fury"
+     }
+    ],
+    [
+     "ryuji",
+     "D-Director, I can explain...",
+     {
+      "tone": "panicked"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Director Mori (a stern 60-year-old Japanese executive with slicked-back grey hair and a hard face, wearing a dark suit) on the phone in a dark office at night, furious, a laptop showing a livestream in front of him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mori",
+     "The owner of that building just declined all further talks with our company. You'll explain that on Monday. In my office. With your resignation letter.",
+     {
+      "tone": "icy"
+     }
+    ]
+   ],
+   "refs": [
+    "mori"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) slumped on his knees on the restaurant floor with his phone fallen beside him, guests staring, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ten years ago, Ryuji made me kneel on a classroom floor.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "Tonight, nobody made him do anything.",
+     {
+      "tone": "quiet, final"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) pointing at Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) and shouting in desperation, Ms. Arai (a composed 40-year-old Japanese woman restaurant manager with her hair in a neat bun, wearing a black vest over a white shirt) stepping forward calmly, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ryuji",
+     "This is fake! He's just a cook in a costume!",
+     {
+      "tone": "desperate, shouting"
+     }
+    ],
+    [
+     "arai",
+     "Sir, Chef Kanzaki owns this restaurant. And this building. Please lower your voice. There are other guests tonight.",
+     {
+      "tone": "cool, polite"
+     }
+    ]
+   ],
+   "refs": [
+    "arai",
+    "ryuji",
+    "sota"
+   ],
+   "pos": {
+    "ryuji": "l",
+    "arai": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case) rushing to Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) holding up her phone with a forced sweet smile, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mika",
+     "Sota! Let's do a collab! 'Famous chef reunites with his high school friends!' My followers would love it!",
+     {
+      "tone": "fake sweet"
+     }
+    ]
+   ],
+   "refs": [
+    "mika",
+    "sota"
+   ],
+   "pos": {
+    "mika": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) gently pushing down Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case)'s phone with one hand, calm and firm, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "Mika. You filmed me picking rice off the floor for three years.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "sota",
+     "My kitchen isn't a backdrop for your stream. Please put your phone away.",
+     {
+      "tone": "firm"
+     }
+    ]
+   ],
+   "refs": [
+    "mika",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case) staring at her phone in horror as angry comments flood in, mascara running, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "By the next morning, three of Mika's sponsors had quietly dropped her.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "mika"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Goro (a chubby 28-year-old Japanese man with a buzz cut and a nervous face, wearing an ill-fitting grey suit) bowing deeply in front of Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron), trembling, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "goro",
+     "Kanzaki... I'm sorry. I held your arms while Ryuji did it. I laughed because I was scared I'd be next.",
+     {
+      "tone": "ashamed, shaky"
+     }
+    ],
+    [
+     "goro",
+     "I've followed him my whole life. I'm so tired of it.",
+     {
+      "tone": "broken"
+     }
+    ]
+   ],
+   "refs": [
+    "goro",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) looking thoughtfully at Goro (a chubby 28-year-old Japanese man with a buzz cut and a nervous face, wearing an ill-fitting grey suit), inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "Goro. Do you remember the school festival? Your curry bread sold out in an hour.",
+     {
+      "tone": "thoughtful"
+     }
+    ],
+    [
+     "goro",
+     "...You remember that?",
+     {
+      "tone": "surprised"
+     }
+    ]
+   ],
+   "refs": [
+    "goro",
+    "sota"
+   ],
+   "pos": {
+    "sota": "r",
+    "goro": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) holding out his hand to Goro (a chubby 28-year-old Japanese man with a buzz cut and a nervous face, wearing an ill-fitting grey suit) who stares at it with teary eyes, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "If you're serious about changing, come to my kitchen on Monday. You'll start by washing dishes. Like I did.",
+     {
+      "tone": "calm, kind"
+     }
+    ],
+    [
+     "goro",
+     "...Yes, Chef!",
+     {
+      "tone": "tearful, determined"
+     }
+    ]
+   ],
+   "refs": [
+    "goro",
+    "sota"
+   ],
+   "pos": {
+    "sota": "r",
+    "goro": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Mr. Fujita (a thin 62-year-old Japanese man with thinning grey hair and glasses, wearing a brown tweed jacket) approaching Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) and bowing low, ashamed, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "fujita",
+     "Kanzaki... I saw what they did to you. Every day. And I pretended I didn't. I'm truly sorry.",
+     {
+      "tone": "ashamed, old"
+     }
+    ]
+   ],
+   "refs": [
+    "fujita",
+    "sota"
+   ],
+   "pos": {
+    "fujita": "l"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) answering Mr. Fujita (a thin 62-year-old Japanese man with thinning grey hair and glasses, wearing a brown tweed jacket) calmly, Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) watching in the background, inside an elegant modern Japanese fine-dining restaurant in Ginza at night, warm amber lighting, dark wood and glass, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "Thank you for saying it, Mr. Fujita.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "sota",
+     "Nanami teaches her students never to look away. Maybe you could learn that from her too.",
+     {
+      "tone": "gentle, firm"
+     }
+    ]
+   ],
+   "refs": [
+    "fujita",
+    "nanami",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) and Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) standing on a restaurant rooftop terrace at night with the Tokyo city lights behind them, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "nanami",
+     "You know, back then, I always wanted to taste your mom's bento. It looked so beautiful.",
+     {
+      "tone": "shy"
+     }
+    ],
+    [
+     "sota",
+     "Then this one was made for you.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": [
+    "nanami",
+    "sota"
+   ],
+   "pos": {
+    "nanami": "l",
+    "sota": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) tasting a piece of rolled omelet with chopsticks, tears in her eyes and a smile, rooftop at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "nanami",
+     "It's sweet... and a little salty. Like crying and laughing at the same time.",
+     {
+      "tone": "moved"
+     }
+    ]
+   ],
+   "refs": [
+    "nanami"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) smiling shyly and rubbing the back of his neck, rooftop at night with city lights, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "sota",
+     "Nanami. You shared your rice ball with me when nobody else would. I never forgot.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "sota",
+     "Would you come back next Sunday? The restaurant's closed. I'd like to cook just for you.",
+     {
+      "tone": "shy"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) blushing with a happy smile, city lights sparkling behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "nanami",
+     "...I'd love that.",
+     {
+      "tone": "happy, shy"
+     }
+    ]
+   ],
+   "refs": [
+    "nanami"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Goro (a chubby 28-year-old Japanese man with a buzz cut and a nervous face, wearing an ill-fitting grey suit) in a white apron and cap earnestly washing dishes in a gleaming professional restaurant kitchen with steel counters and copper pans, Kenji (a 30-year-old Japanese sous chef with short spiky dark hair and an energetic grin, wearing a white chef's jacket) watching with an approving grin, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "One month later. Goro shows up an hour early every day.",
+     {
+      "tone": "amused"
+     }
+    ],
+    [
+     "narrator",
+     "He's already better at curry bread than I am.",
+     {
+      "tone": "amused, fond"
+     }
+    ]
+   ],
+   "refs": [
+    "goro",
+    "kenji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ryuji (a tall broad-shouldered 28-year-old Japanese man with short bleached blond hair and a cocky grin, wearing a shiny dark blue suit with an open collar and a gold bracelet) in a worn blue work uniform carrying heavy cardboard boxes into a moving truck, tired and sweating, daytime street, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ryuji lost his job. I heard he's carrying boxes for a moving company now.",
+     {
+      "tone": "neutral"
+     }
+    ],
+    [
+     "narrator",
+     "Honest work. Maybe it'll be good for him.",
+     {
+      "tone": "neutral"
+     }
+    ]
+   ],
+   "refs": [
+    "ryuji"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mika (a 28-year-old Japanese woman with long wavy ash-blonde hair, heavy glamorous makeup and long nails, wearing a white off-shoulder dress, always holding a smartphone in a pink case) without makeup sitting in front of a phone on a tripod in her bedroom, recording a tearful apology video, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Mika posted an apology video. To be fair... it was the most honest thing she'd ever posted.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "mika"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a cozy renovated little bento shop with a long line of happy customers outside in the morning, Mom (a gentle 55-year-old Japanese woman with short permed black hair streaked with grey, wearing a green apron over a beige sweater) handing bentos over the counter, Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) helping beside her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And my mother's little bento shop? We rebuilt it. Now there's a line out the door every morning.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "mom",
+     "A hundred lunches... and one more, for you.",
+     {
+      "tone": "warm, teasing"
+     }
+    ]
+   ],
+   "refs": [
+    "mom",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a crisp white double-breasted chef's jacket and a black apron) cooking at the counter of an empty restaurant on a sunny afternoon while Nanami (a 28-year-old Japanese woman with black hair in a low ponytail, warm gentle eyes and a kind smile, wearing a light blue blouse and a navy cardigan) sits at the counter laughing, cozy warm light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Every Sunday, the restaurant is closed. And every Sunday, I cook for one very special guest.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": [
+    "nanami",
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Sota (a 28-year-old Japanese man with short slightly messy black hair, calm sharp eyes and a lean build, wearing a plain navy knit sweater and dark jeans) smiling warmly at the viewer, soft evening light, restaurant lanterns behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "They called me Bento Boy to make me feel small. I turned it into the thing I'm proudest of.",
+     {
+      "tone": "warm, proud"
+     }
+    ],
+    [
+     "narrator",
+     "If someone who bullied you showed up asking for a favor... what would you do? Tell me in the comments.",
+     {
+      "tone": "warm, inviting"
+     }
+    ]
+   ],
+   "refs": [
+    "sota"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood) waving happily at the viewer with both hands and a big smile, sparkles and little pink hearts floating around her, bright pastel pink and lavender background with soft bokeh lights, upper body, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "host",
+     "Thanks for watching~!",
+     {
+      "tone": "cheerful, cute, sing-song"
+     }
+    ],
+    [
+     "host",
+     "If Sota's story made you hungry, please like, subscribe, and tap the bell, so you never miss the next one!",
+     {
+      "tone": "bubbly, excited"
+     }
+    ]
+   ],
+   "refs": [
+    "host"
+   ],
+   "pos": {
+    "host": "t"
+   },
+   "buttons": [
+    {
+     "text": "LIKE",
+     "line": 1,
+     "delay": 1.4,
+     "x": 0.27,
+     "y": 0.84,
+     "fill": "#3EA6FF"
+    },
+    {
+     "text": "SUBSCRIBE",
+     "line": 1,
+     "delay": 1.9,
+     "x": 0.53,
+     "y": 0.84,
+     "press": 1.6,
+     "pressed": "SUBSCRIBED"
+    },
+    {
+     "icon": "bell",
+     "line": 1,
+     "delay": 2.9,
+     "x": 0.76,
+     "y": 0.84
+    }
+   ],
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1+1.4",
+     "volume": 0.5
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+1.9",
+     "volume": 0.5
+    },
+    {
+     "sound": "tap",
+     "at": "line:1+3.5",
+     "volume": 0.6
+    },
+    {
+     "sound": "ding",
+     "at": "line:1+2.9",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood) winking playfully and making a heart shape with both hands, floating hearts and sparkles, bright pastel pink background with soft bokeh lights, upper body, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "host",
+     "Oh! And if you want to see Sota and Nanami's Sunday dinner, comment HOSHIZORA down below!",
+     {
+      "tone": "playful, excited, winking"
+     }
+    ],
+    [
+     "host",
+     "See you in the next story! Bye-bye!",
+     {
+      "tone": "sweet, cheerful"
+     }
+    ]
+   ],
+   "refs": [
+    "host"
+   ],
+   "pos": {
+    "host": "t"
+   },
+   "buttons": [
+    {
+     "text": "COMMENT \"HOSHIZORA\" FOR PART 2!",
+     "line": 0,
+     "delay": 2.6,
+     "x": 0.5,
+     "y": 0.84,
+     "fill": "#FFD43B",
+     "ink": "#141414"
+    }
+   ],
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:0+2.6",
+     "volume": 0.5
+    },
+    {
+     "sound": "chime",
+     "at": "line:1",
+     "volume": 0.35
+    }
+   ]
+  }
+ ]
+}
