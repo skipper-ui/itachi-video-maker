@@ -429,7 +429,7 @@ spec = {
     "caption": {"mode": "boxes", "font": "Comic Neue", "fonts_dir": "assets/fonts"},
     "images": {"provider": "local", "upscale": True},
     "characters": {REFS[k]: PORTRAIT.format(who=C[k]) for k in C if "_" not in k},
-    "music": {"sound": "music_strategy", "volume": 0.07},
+    "music": {"sound": "music_strategy", "volume": 0.03},
     "sources": ["Original story and characters. Artwork drawn with AI (FLUX.2 klein, run locally)."],
     "scenes": [{"fx": [], **sc} for sc in scenes],
 }

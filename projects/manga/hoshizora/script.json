@@ -102,7 +102,7 @@
  },
  "music": {
   "sound": "music_strategy",
-  "volume": 0.07
+  "volume": 0.03
  },
  "sources": [
   "Original story and characters. Artwork drawn with AI (FLUX.2 klein, run locally)."
