@@ -420,7 +420,7 @@ scenes = [
 ]
 
 spec = {
-    "title": "They Called Me 'Bento Boy' for 3 Years... 10 Years Later, They Booked My Restaurant for Our Reunion [Manga Dub]",
+    "title": "My Bully Booked My Restaurant for Our Class Reunion... He Had No Idea I Was the Chef | Manga Dub",
     "character": "", "style": "",
     "width": 1920, "height": 1080, "title_card": False,
     "tts": "kokoro", "cast": KOKORO, "speed": 0.95, "scene_pad": 0.7,
