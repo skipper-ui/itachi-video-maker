@@ -16,13 +16,14 @@ ROOT = HERE.parents[2]
 OUT = ROOT / "output" / "manga" / "hoshizora"
 PROMO = OUT / "promo"
 FONT = "/usr/share/fonts/opentype/inter/Inter-BlackItalic.otf"
+FONTS = "/usr/share/fonts/opentype/inter"
 W, H = 1080, 1920
+OFFSET = 0.0  # scene audio starts at the scene start
 FG_Y = 656  # where the 16:9 picture sits (1080x608)
 
 # scenes from the video, in order: the hook, the bullying, the booking, the reunion, the reveal (no ending)
-SCENES = [0, 4, 7, 30, 32, 39, 44, 49, 60, 62, 63]
+SCENES = [0, 4, 7, 31, 39, 49, 60, 62, 63]
 TOP = [("MY BULLY BOOKED", "#FFFFFF", 92), ("MY RESTAURANT...", "#FFD43B", 92)]
-BOTTOM = [("HE HAD NO IDEA", "#FFFFFF", 84), ("I WAS THE CHEF", "#FFD43B", 96)]
 END_TOP = [("WANT TO SEE", "#FFFFFF", 92), ("WHAT HAPPENS NEXT?", "#FFD43B", 76)]
 END_BOTTOM = [("WATCH THE FULL VIDEO", "#FFFFFF", 80), ("ON THE CHANNEL!", "#FFD43B", 104)]
 
@@ -68,6 +69,37 @@ def overlay(top, bottom, path, button=False):
     img.save(path)
 
 
+def subtitles(scene, a, length, path):
+    """Big subtitles for one clip, under the picture: each spoken line while it is spoken (Shorts are often muted)."""
+    import textwrap
+    lines = json.loads((OUT / f"scene{scene:02d}.lines.json").read_text())
+    t = lambda x: "%d:%02d:%05.2f" % (x // 3600, x % 3600 // 60, x % 60)
+    ev = []
+    for j, (who, text, s0, _) in enumerate(lines):
+        s1 = lines[j + 1][2] if j + 1 < len(lines) else length + a
+        s0, s1 = max(0.0, s0 - (a - OFFSET)), min(length, s1 - (a - OFFSET))
+        if s1 <= s0:
+            continue
+        body = "\\N".join(textwrap.wrap(text.upper(), 22))
+        style = "Narr" if who == "narrator" else "Talk"
+        ev.append(f"Dialogue: 0,{t(s0)},{t(s1)},{style},,0,0,0,,{{\\fad(80,60)}}{body}")
+    path.write_text(f"""[Script Info]
+ScriptType: v4.00+
+PlayResX: {W}
+PlayResY: {H}
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Talk,Inter Black,68,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,7,4,8,40,40,{FG_Y + 608 + 70},1
+Style: Narr,Inter Black,68,&H003BD4FF,&H000000FF,&H00000000,&H80000000,-1,1,0,0,100,100,0,0,1,7,4,8,40,40,{FG_Y + 608 + 70},1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+""" + "\n".join(ev) + "\n")
+
+
 # the picture in the middle, a blurred and darkened copy of it filling the frame, then the words on top
 LAYOUT = ("[0:v]split[a][b];[a]scale=-2:{H},crop={W}:{H},boxblur=30:3,eq=brightness=-0.25[bg];"
           "[b]scale={W}:608[fg];[bg][fg]overlay=0:{FG_Y}[v0];[v0][1:v]overlay=0:0,fps=30,format=yuv420p[v]").format(W=W, H=H, FG_Y=FG_Y)
@@ -79,15 +111,18 @@ def main():
     pad = spec.get("scene_pad", 0.7)
     durs = [duration(OUT / f"scene{i:02d}.mp3") + pad for i in range(len(spec["scenes"]))]
     starts = [sum(durs[:i]) for i in range(len(durs))]
-    overlay(TOP, BOTTOM, PROMO / "words.png")
+    overlay(TOP, [], PROMO / "words.png")
     overlay(END_TOP, END_BOTTOM, PROMO / "words_end.png", button=True)
     parts = []
     for n, i in enumerate(SCENES):
         a, b = starts[i] + 0.3, starts[i] + durs[i] - 0.35  # stay clear of the crossfades into the next scene
         part = PROMO / f"part{n:02d}.mp4"
+        subs = PROMO / f"part{n:02d}.ass"
+        subtitles(i, a - starts[i], b - a, subs)
         run("ffmpeg", "-v", "error", "-y", "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", str(OUT / "hoshizora.mp4"),
             "-i", str(PROMO / "words.png"), "-filter_complex",
-            LAYOUT + f";[0:a]afade=t=in:d=0.06,afade=t=out:st={b - a - 0.08:.3f}:d=0.08,aresample=44100[a]",
+            LAYOUT.replace("format=yuv420p[v]", f"subtitles={subs}:fontsdir={FONTS},format=yuv420p[v]")
+            + f";[0:a]afade=t=in:d=0.06,afade=t=out:st={b - a - 0.08:.3f}:d=0.08,aresample=44100[a]",
             "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-c:a", "aac", "-b:a", "192k",
             "-ac", "2", str(part))
         parts.append(part)

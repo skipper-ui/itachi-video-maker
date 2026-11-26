@@ -844,7 +844,8 @@ def write_boxes(scenes, scene_lines, scene_starts, durations, width, height, pat
     """Manga-dub captions: each line in a white box with a black border, shown while it is spoken.
 
     Narration sits in a box at the top of the panel; dialogue in a box near the bottom, on the speaker's side if the
-    scene gives one ("pos": {"daichi": "l"}), else centred. scene_lines are each scene's [who, text, start, end].
+    scene gives one ("pos": {"daichi": "l"}), else centred. "pos": {"narrator": "b"} moves that panel's narration to the
+    bottom, for a panel whose face sits at the top. scene_lines are each scene's [who, text, start, end].
     """
     cap = {"font": "Comic Neue", "size": 0.04, **(style or {})}
     size = round(height * cap["size"])
@@ -882,7 +883,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             rows = wrap_text(text.upper(), 46 if narr else 34)
             h_box = len(rows) * size * 1.18 + 2 * pad
             side = scene.get("pos", {}).get(who, "c")
-            top = narr or side == "t"  # "t": a speaker's box at the top, like narration
+            top = (narr and side != "b") or side == "t"  # "t": a speaker's box at the top; "b": narration at the bottom
             x = width / 2 if top else width * xs.get(side, 0.5)
             y = (height * 0.035 + h_box / 2) if top else (height * 0.935 - h_box / 2)
             body = "\\N".join(rows)

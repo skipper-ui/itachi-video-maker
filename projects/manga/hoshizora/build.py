@@ -397,7 +397,7 @@ scenes = [
       (N, "Every Sunday, the restaurant is closed. And every Sunday, I cook for one very special guest.", "warm")),
     S("{SOTA} smiling warmly at the viewer, soft evening light, restaurant lanterns behind him",
       (N, "They called me Bento Boy to make me feel small. I turned it into the thing I'm proudest of.", "warm, proud"),
-      (N, "If someone who bullied you showed up asking for a favor... what would you do? Tell me in the comments.", "warm, inviting")),
+      (N, "If someone who bullied you showed up asking for a favor... what would you do? Tell me in the comments.", "warm, inviting"), pos="narrator:b"),
 
     # ---- Outro: the channel's host girl ----
     S("{HOST} waving happily at the viewer with both hands and a big smile, sparkles and little pink hearts floating around her, "
