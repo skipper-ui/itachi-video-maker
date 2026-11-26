@@ -30,17 +30,18 @@ ART = {
           "strawberry cake box; behind him on the right {DAICHI} smirks smugly with his arm around the waist of {ERIKA}, "
           "who leans on him with a cold smile; dramatic lighting, dark city apartment at night, close-up, emotional",
           ["haruto", "daichi", "erika"]),
-    "b": ("{HARUTO_HOME} standing in the centre-left, smiling confidently and holding up a modern clay-pot-style rice "
-          "cooker with a wooden lid, warm golden sunlight, mountain workshop behind him; on the far right, small in the "
-          "background, {DAICHI} and {ERIKA} stare at him in total shock with their jaws dropped",
+    "b": ("{HARUTO_HOME} on the right half of the picture, smiling confidently and holding up a modern clay-pot-style "
+          "rice cooker with a wooden lid in one hand, warm golden sunlight; in the lower left corner, smaller and further "
+          "back, {DAICHI} and {ERIKA} stare at him in total shock with jaws dropped and wide eyes; the upper left is open "
+          "sky above green mountains, outside a rustic wooden workshop",
           ["haruto", "daichi", "erika"]),
 }
 # (text, colour, size, y) lines per variant; x is set per variant so the words sit away from the faces
 TEXT = {
     "a": {"x": 0.97, "align": "right", "y": 0.05, "lines": [("MY BEST FRIEND", "#FFFFFF", 92), ("TOOK", "#FFD43B", 120),
                                                          ("EVERYTHING", "#FFD43B", 120)]},
-    "b": {"x": 0.03, "align": "left", "y": 0.05, "lines": [("THEY LAUGHED...", "#FFFFFF", 96), ("THEN I", "#FFD43B", 116),
-                                                        ("CAME BACK", "#FFD43B", 116)]},
+    "b": {"x": 0.03, "align": "left", "y": 0.03, "lines": [("THEY LAUGHED...", "#FFFFFF", 84),
+                                                        ("THEN I CAME BACK", "#FFD43B", 118, 0.76)], "bottom": True, "tag": (1280 - 28, 22), "shade": 230},
 }
 
 
@@ -71,11 +72,17 @@ def text():
         shade = Image.new("L", (1280, 720), 0)
         sd = ImageDraw.Draw(shade)
         cx = 1280 if t["align"] == "right" else 0
-        sd.ellipse((cx - 700, -330, cx + 700, 420), fill=170)
+        sd.ellipse((cx - 700, -330, cx + 700, t.get("shade", 420)), fill=170)
         img = Image.composite(Image.new("RGB", img.size, (0, 0, 0)), img, shade.filter(ImageFilter.GaussianBlur(90)))
         d = ImageDraw.Draw(img)
         y = t["y"] * 720
-        for words, colour, size in t["lines"]:
+        if t.get("bottom"):  # a dark band along the bottom for a line placed there
+            band = Image.new("L", (1280, 720), 0)
+            ImageDraw.Draw(band).rectangle((0, 520, 1280, 720), fill=150)
+            img = Image.composite(Image.new("RGB", img.size, (0, 0, 0)), img, band.filter(ImageFilter.GaussianBlur(60)))
+            d = ImageDraw.Draw(img)
+        for words, colour, size, *at in t["lines"]:
+            y = at[0] * 720 if at else y
             f = ImageFont.truetype(FONT, size)
             w = d.textlength(words, font=f)
             x = t["x"] * 1280 - (w if t["align"] == "right" else 0)
@@ -86,9 +93,11 @@ def text():
         f = ImageFont.truetype(FONT, 40)
         tag = "MANGA DUB"
         tw = d.textlength(tag, font=f)
-        bx = 28 if t["align"] == "right" else 1280 - tw - 60
-        d.rounded_rectangle((bx, 640, bx + tw + 32, 700), 10, fill="#E62117", outline="#000000", width=4)
-        d.text((bx + 16, 646), tag, font=f, fill="#FFFFFF")
+        bx, by = (28 if t["align"] == "right" else 1280 - tw - 60), 640
+        if "tag" in t:  # right edge and top of the tag
+            bx, by = t["tag"][0] - tw - 32, t["tag"][1]
+        d.rounded_rectangle((bx, by, bx + tw + 32, by + 60), 10, fill="#E62117", outline="#000000", width=4)
+        d.text((bx + 16, by + 6), tag, font=f, fill="#FFFFFF")
         out = OUT / f"thumbnail-{k}.png"
         img.save(out)
         print(out)
