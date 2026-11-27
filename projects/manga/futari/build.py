@@ -144,7 +144,7 @@ scenes = [
     S("{TWIN} laughing loudly at a cafe table with three empty cake plates in front of her, {REN} laughing with her",
       (N, "She was nothing like the shy girl from the bookstore. She was loud and funny, and she ate three slices of cake.", "amused"),
       (N, "I thought she'd just been nervous the first time. I never thought about it again.", "fond")),
-    S("{REN} and {TWIN} standing in front of a huge glowing blue aquarium tank full of fish, her face lit blue, quiet and amazed",
+    S("{REN} and {TWIN} standing in front of a huge glowing blue aquarium tank full of fish, seen from the side, both faces with normal warm skin tones, her eyes quiet and amazed",
       L("hikari", "Ren, look... it's like they're flying.", "soft, amazed")),
     S("{REN} lying sick in bed with a cold and a towel on his forehead while {TWIN} sits beside him gently feeding him rice porridge with a spoon",
       L("hikari", "Say ah. It's my grandmother's recipe. Ginger and a little egg.", "gentle, caring"),
