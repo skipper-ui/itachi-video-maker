@@ -90,25 +90,33 @@ def layout():
     cover(sq, 800, 800, 0.5, 0.42).save(OUT / "profile.png")
 
     # banner: 2560x1440. Desktops show the band y 510-933 across the full width; phones show only its middle,
-    # x 507-2053 (the "All devices" box). The 4:1 strip covers that band; TVs also see a soft blurred copy around it.
-    strip = Image.open(OUT / "art-strip.png").convert("RGB").resize((2560, 640), Image.LANCZOS)
-    b = cover(strip, 2560, 1440).filter(ImageFilter.GaussianBlur(40))
+    # x 507-2053 (the "All devices" box), so the whole strip, Hana and the name are scaled to fit inside that box.
+    # The band's sides get a bigger, softened copy of the strip; TVs also see a blurred copy above and below.
+    raw = Image.open(OUT / "art-strip.png").convert("RGB")
+    b = cover(raw, 2560, 1440).filter(ImageFilter.GaussianBlur(40))
     b = Image.blend(b, Image.new("RGB", b.size, (40, 10, 40)), 0.25)
-    fade = Image.new("L", strip.size, 255)
+    band = cover(raw, 2560, 423).filter(ImageFilter.GaussianBlur(3))
+    band = Image.blend(band, Image.new("RGB", band.size, (40, 10, 40)), 0.2)
+    b.paste(band, (0, 510))
+    h = 423
+    w = round(raw.width * h / raw.height)  # 1692: a little wider than the phone box
+    card = raw.resize((w, h), Image.LANCZOS)
+    fade = Image.new("L", card.size, 255)
     fd = ImageDraw.Draw(fade)
-    for i in range(70):  # feather the strip's top and bottom edges into the blurred background
-        fd.line((0, i, 2560, i), fill=round(255 * i / 70))
-        fd.line((0, 639 - i, 2560, 639 - i), fill=round(255 * i / 70))
-    b.paste(strip, (0, 400), fade)
+    for i in range(60):  # feather the card's left and right edges into the band
+        fd.line((i, 0, i, h), fill=round(255 * i / 60))
+        fd.line((w - 1 - i, 0, w - 1 - i, h), fill=round(255 * i / 60))
+    x0 = (2560 - w) // 2
+    b.paste(card, (x0, 510), fade)
     shade = Image.new("L", b.size, 0)
-    ImageDraw.Draw(shade).ellipse((1430, 470, 2140, 950), fill=150)
-    b = Image.composite(Image.new("RGB", b.size), b, shade.filter(ImageFilter.GaussianBlur(70)))
+    ImageDraw.Draw(shade).ellipse((1460, 520, 2080, 925), fill=150)
+    b = Image.composite(Image.new("RGB", b.size), b, shade.filter(ImageFilter.GaussianBlur(60)))
     d = ImageDraw.Draw(b)
-    cx = 1775  # Hana is in the middle of the phone box (x 507-2053); the words sit to her right
-    words(d, "MANGA", cx, 528, 128, "#FFD43B")
-    words(d, "FEVER", cx, 660, 128, "#FFD43B")
-    words(d, "MANGA & MANHWA DUBS", cx, 812, 33, "#FFFFFF")
-    words(d, "NEW STORIES EVERY WEEK", cx, 858, 33, "#FF9EC7")
+    cx = 1765  # right of Hana, inside the phone box (x 507-2053, y 510-933)
+    words(d, "MANGA", cx, 540, 112, "#FFD43B")
+    words(d, "FEVER", cx, 656, 112, "#FFD43B")
+    words(d, "MANGA & MANHWA DUBS", cx, 795, 36, "#FFFFFF")
+    words(d, "NEW STORIES EVERY WEEK", cx, 843, 36, "#FF9EC7")
     b.save(OUT / "banner.png")
 
     # welcome post: 1080x1080
