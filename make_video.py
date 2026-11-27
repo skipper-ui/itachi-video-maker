@@ -855,7 +855,8 @@ def oval_path(a, b):
 def oval_events(text, ink, t0, t1, side, width, height, size, edge, font_file):
     """One spoken line as a white oval speech bubble (black outline, no tail) with the words in `ink`, near the bottom
     of the panel on the speaker's side."""
-    rows = wrap_text(text.upper(), 18)
+    # short lines wrap narrow, like a comic bubble; long ones wrap wider so the oval stays low (at most ~3-4 rows)
+    rows = wrap_text(text.upper(), min(40, max(18, round(len(text) / 3.2))))
     try:  # measure the words when Pillow is installed; else Comic Neue Bold capitals average ~0.56 em
         from PIL import ImageFont
         f = ImageFont.truetype(str(font_file), size)
