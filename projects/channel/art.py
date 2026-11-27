@@ -101,13 +101,16 @@ def layout():
     h = 423
     w = round(raw.width * h / raw.height)  # 1692: a little wider than the phone box
     card = raw.resize((w, h), Image.LANCZOS)
-    fade = Image.new("L", card.size, 255)
-    fd = ImageDraw.Draw(fade)
-    for i in range(60):  # feather the card's left and right edges into the band
-        fd.line((i, 0, i, h), fill=round(255 * i / 60))
-        fd.line((w - 1 - i, 0, w - 1 - i, h), fill=round(255 * i / 60))
-    x0 = (2560 - w) // 2
-    b.paste(card, (x0, 510), fade)
+    # Hana is in the middle of the strip; shift it left so she sits at the left of the phone box and the middle
+    # stays clear for the profile picture. The gap on the right is filled with a mirrored copy of the city.
+    hana_x = 790  # where Hana's face ends up (the phone box starts at x 507)
+    x0 = hana_x - w // 2
+    city = card.crop((round(w * 0.66), 0, w, h))  # only the buildings right of Hana
+    b.paste(card, (x0, 510))
+    x, flip = x0 + w, True
+    while x < 2560:  # mirror, then original, ... so every seam joins up
+        b.paste(city.transpose(Image.FLIP_LEFT_RIGHT) if flip else city, (x, 510))
+        x, flip = x + city.width, not flip
     shade = Image.new("L", b.size, 0)
     ImageDraw.Draw(shade).ellipse((1460, 520, 2080, 925), fill=150)
     b = Image.composite(Image.new("RGB", b.size), b, shade.filter(ImageFilter.GaussianBlur(60)))
