@@ -855,13 +855,13 @@ def oval_path(a, b):
 def oval_events(text, ink, t0, t1, side, width, height, size, edge, font_file):
     """One spoken line as a white oval speech bubble (black outline, no tail) with the words in `ink`, near the bottom
     of the panel on the speaker's side."""
-    from PIL import ImageFont
     rows = wrap_text(text.upper(), 18)
-    try:
+    try:  # measure the words when Pillow is installed; else Comic Neue Bold capitals average ~0.56 em
+        from PIL import ImageFont
         f = ImageFont.truetype(str(font_file), size)
         w = max(f.getlength(row) for row in rows)
-    except OSError:
-        w = max(len(row) for row in rows) * size * 0.6
+    except (ImportError, OSError):
+        w = max(len(row) for row in rows) * size * 0.56
     h = len(rows) * size * 1.08
     a, b = w / 2 * 1.2 + size * 0.55, h / 2 * 1.22 + size * 0.5
     xs = {"l": 0.27, "c": 0.5, "r": 0.73}
