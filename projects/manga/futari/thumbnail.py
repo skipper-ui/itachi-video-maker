@@ -70,7 +70,7 @@ def draw():
             subprocess.run([str(PY), str(ROOT / "tools" / "upscale.py"), str(ESRGAN), str(art)], check=True, cwd=ROOT)
 
 
-PICK = {"tl": 0, "bl": 0, "r": 0}  # which of the three tries to use for each panel
+PICK = {"tl": 1, "bl": 0, "r": 0}  # which of the three tries to use for each panel
 
 
 def text():
@@ -79,11 +79,11 @@ def text():
          bubbles=[("tl", "I'M AT MY PARENTS' TODAY!", "f", (0.2, 0.62), 34, 10),
                   ("bl", "SHE LIED TO ME...", "m", (0.3, 0.3), 38, 9),
                   ("r", "THERE'S TWO OF HER?!", "m", (0.3, 0.09), 36, 12),
-                  ("r", "WE BOTH LOVE YOU!", "f", (0.76, 0.6), 38, 9),
-                  ("r", "NOW CHOOSE ONE!", "f", (0.27, 0.84), 38, 9)],
-         labels=[("tl", "SAME DAY...", (0.975, 0.05)), ("r", "TWINS", (0.975, 0.2))],
+                  ("r", "WE BOTH LOVE YOU!", "f", (0.79, 0.78), 34, 9),
+                  ("r", "NOW CHOOSE ONE!", "f", (0.22, 0.88), 34, 9)],
+         labels=[("tl", "SAME DAY...", (0.975, 0.78)), ("r", "TWINS", (0.975, 0.03))],
          host=ROOT / "output" / "channel" / "art-square.png", out=OUT / "thumbnail.png",
-         focus={"tl": (0.5, 0.3), "bl": (0.6, 0.4), "r": (0.5, 0.3)})
+         focus={"tl": (0.5, 0.3), "bl": (0.6, 0.4), "r": (0.5, 0.15)})
     print(OUT / "thumbnail.png")
 
 
