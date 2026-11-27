@@ -361,7 +361,7 @@ scenes = [
       L("akari", "So this time, we're going to make you fall in love again. Honestly. As ourselves.", "confident, bright")),
     S("close-up of {TWIN_HIKARI} in a summer yukata blushing but looking straight ahead bravely, moonlit beach",
       L("hikari", "And this time... you get to choose.", "shy, brave")),
-    S("close-up of {REN_FARM} in a summer yukata with a bright red flustered face, the first fireworks bursting in the sky behind him",
+    S("close-up of {REN_FARM} in a summer yukata flustered and wide-eyed with a light pink blush on his cheeks, sweating a little, the first fireworks bursting in the sky behind him",
       L("ren", "Choose?! Wait, wait. I never said I—", "flustered")),
     S("fireworks exploding over the sea, {TWIN_AKARI} and {TWIN_HIKARI} in yukata each hugging one of {REN_FARM}'s arms on the beach, "
       "all three seen from behind against the fireworks",
