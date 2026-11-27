@@ -49,7 +49,7 @@ He threw my lunch on the floor for 3 years... then booked MY restaurant for our 
 For 3 years, Ryuji threw my lunch on the floor and called me "Bento Boy."
 10 years later, he booked the most famous restaurant in Ginza for our class reunion... to show off in front of everyone.
 
-He had no idea who was cooking. 👀🔪
+He had no idea who was cooking. 👀👨‍🍳
 
 ▶ Watch the full story here: [paste video link]
 
