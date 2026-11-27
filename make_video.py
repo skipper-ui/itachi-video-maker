@@ -840,12 +840,53 @@ def button_events(scene, lines, start, dur, width, height):
     return out
 
 
+def oval_path(a, b):
+    """An ASS drawing of an ellipse with radii a, b, in the box (0, 0)-(2a, 2b)."""
+    k = 0.5523
+    r = lambda v: f"{v:.1f}"
+    pts = [(a, 0), (a + k * a, 0), (2 * a, b - k * b), (2 * a, b), (2 * a, b + k * b), (a + k * a, 2 * b), (a, 2 * b),
+           (a - k * a, 2 * b), (0, b + k * b), (0, b), (0, b - k * b), (a - k * a, 0), (a, 0)]
+    out = f"m {r(a)} 0 b"
+    for x, y in pts[1:]:
+        out += f" {r(x)} {r(y)}"
+    return out
+
+
+def oval_events(text, ink, t0, t1, side, width, height, size, edge, font_file):
+    """One spoken line as a white oval speech bubble (black outline, no tail) with the words in `ink`, near the bottom
+    of the panel on the speaker's side."""
+    from PIL import ImageFont
+    rows = wrap_text(text.upper(), 18)
+    try:
+        f = ImageFont.truetype(str(font_file), size)
+        w = max(f.getlength(row) for row in rows)
+    except OSError:
+        w = max(len(row) for row in rows) * size * 0.6
+    h = len(rows) * size * 1.08
+    a, b = w / 2 * 1.2 + size * 0.55, h / 2 * 1.22 + size * 0.5
+    xs = {"l": 0.27, "c": 0.5, "r": 0.73}
+    x = min(max(width * xs.get(side, 0.5), a + edge + 12), width - a - edge - 12)
+    y = height * 0.955 - b
+    fx = "\\fad(120,100)"
+    out = []
+    for layer, (rad_a, rad_b, colour) in enumerate(((a + edge, b + edge, "&H00141414&"), (a, b, "&H00FFFFFF&"))):
+        out.append(f"Dialogue: {layer},{ass_time(t0)},{ass_time(t1)},Oval,,0,0,0,,{{\\pos({x - rad_a:.0f},{y - rad_b:.0f})"
+                   f"\\1c{colour}{fx}\\p1}}{oval_path(rad_a, rad_b)}{{\\p0}}")
+    out.append(f"Dialogue: 2,{ass_time(t0)},{ass_time(t1)},Say,,0,0,0,,{{\\pos({x:.0f},{y:.0f})\\1c{ass_color(ink)}\\3c{ass_color(ink)}\\bord{max(1, size // 40)}{fx}}}"
+               + "\\N".join(rows))
+    return out
+
+
 def write_boxes(scenes, scene_lines, scene_starts, durations, width, height, path, style=None, narrators=("narrator",)):
     """Manga-dub captions: each line in a white box with a black border, shown while it is spoken.
 
     Narration sits in a box at the top of the panel; dialogue in a box near the bottom, on the speaker's side if the
     scene gives one ("pos": {"daichi": "l"}), else centred. "pos": {"narrator": "b"} moves that panel's narration to the
     bottom, for a panel whose face sits at the top. scene_lines are each scene's [who, text, start, end].
+
+    With "bubbles": {"male": ["ren", ...], "female": ["hikari", ...]} in the caption style, dialogue is drawn in a white
+    oval with a black outline and no tail instead of a box, its words blue for male speakers and pink for female ones
+    ("male_ink" / "female_ink" change the colours). Narration keeps its box.
     """
     cap = {"font": "Comic Neue", "size": 0.04, **(style or {})}
     size = round(height * cap["size"])
@@ -868,18 +909,29 @@ Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour,
 {box("Box", "&H00141414", "&H00FFFFFF")}
 Style: Btn,{cap['font']},{round(size * 1.25)},&H00FFFFFF,&H000000FF,&H001721E6,&H001721E6,-1,0,0,0,100,100,1,0,4,{round(pad * 0.9)},0,5,0,0,0,1
 Style: Icon,Arial,20,&H0033CCFF,&H000000FF,&H00141414,&H00000000,0,0,0,0,100,100,0,0,1,{edge + 2},0,5,0,0,0,1
+Style: Oval,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Say,{cap['font']},{round(size * 1.5)},&H00141414,&H000000FF,&H00000000,&H00000000,-1,-1,0,0,100,100,0,0,1,0,0,5,0,0,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
     events = []
     xs = {"l": 0.3, "c": 0.5, "r": 0.7}
+    bub = cap.get("bubbles") or {}
+    bubble_ink = {**{w: cap.get("male_ink", "#1238E0") for w in bub.get("male", [])},
+                  **{w: cap.get("female_ink", "#E8188F") for w in bub.get("female", [])}}
+    font_file = Path(cap.get("fonts_dir", "assets/fonts")) / cap.get("font_file", "ComicNeue-Bold.ttf")
     for scene, lines, start, dur in zip(scenes, scene_lines, scene_starts, durations):
         spoken = [l for l in lines if re.search(r"[A-Za-z0-9]", l[1])]
         for j, (who, text, a, _) in enumerate(spoken):
             # Each box stays up until the next line starts (the last one until the scene fades out).
             t0, t1 = start + a, start + (spoken[j + 1][2] if j + 1 < len(spoken) else dur - 0.15)
             narr = who in narrators
+            ink = None if narr else bubble_ink.get(who)
+            if ink:
+                events += oval_events(text, ink, t0, t1, scene.get("pos", {}).get(who, "c"), width, height, round(size * 1.5),
+                                      edge, font_file)
+                continue
             rows = wrap_text(text.upper(), 46 if narr else 34)
             h_box = len(rows) * size * 1.18 + 2 * pad
             side = scene.get("pos", {}).get(who, "c")
