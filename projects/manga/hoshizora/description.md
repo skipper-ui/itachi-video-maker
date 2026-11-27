@@ -41,3 +41,27 @@ manga dub, manga dub revenge, anime story, revenge story, bully revenge, class r
 # Promo (Shorts / Reels caption)
 
 He threw my lunch on the floor for 3 years... then booked MY restaurant for our reunion 🍱 Full video on the channel! #mangadub #revenge #shorts
+
+# Community post (image: output/manga/hoshizora/thumb/community_post.png)
+
+🍱 NEW MANGA DUB IS OUT! 🍱
+
+For 3 years, Ryuji threw my lunch on the floor and called me "Bento Boy."
+10 years later, he booked the most famous restaurant in Ginza for our class reunion... to show off in front of everyone.
+
+He had no idea who was cooking. 👀🔪
+
+▶ Watch the full story here: [paste video link]
+
+What would YOU do if your old bully walked into your restaurant? 👇
+
+# Community post (poll version)
+
+Your high school bully books YOUR restaurant for the class reunion... and doesn't know you're the chef. What do you do? 🍱
+
+1. Serve him the best meal of his life 😇
+2. Walk out in my chef's jacket 😎
+3. Charge him triple 💸
+4. Kick him out 🚪
+
+Find out what Sota did 👉 [paste video link]
