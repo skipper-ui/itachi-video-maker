@@ -87,20 +87,21 @@ def layout():
     # banner: 2560x1440; every device shows the middle 1546x423, so the name and Hana's face sit there
     b = cover(wide, 2560, 1440, 0.5, 0.42)
     shade = Image.new("L", b.size, 0)
-    ImageDraw.Draw(shade).ellipse((380, 420, 1700, 1020), fill=150)
+    ImageDraw.Draw(shade).ellipse((420, 440, 1700, 960), fill=150)
     b = Image.composite(Image.new("RGB", b.size), b, shade.filter(ImageFilter.GaussianBlur(90)))
     d = ImageDraw.Draw(b)
-    cx = 1110
-    words(d, NAME, cx, 548, 170, "#FFD43B")
-    words(d, "MANGA & MANHWA DUBS  •  NEW STORIES EVERY WEEK", cx, 748, 50, "#FFFFFF")
+    cx = 1060  # the safe area runs from x 507 to 2053; Hana's face is at its right edge
+    words(d, NAME, cx, 548, 136, "#FFD43B")
+    words(d, "MANGA & MANHWA DUBS", cx, 722, 52, "#FFFFFF")
+    words(d, "NEW STORIES EVERY WEEK", cx, 792, 52, "#FF9EC7")
     b.save(OUT / "banner.png")
 
     # welcome post: 1080x1080
     p = cover(sq, 1080, 1080, 0.5, 0.5)
     shade = Image.new("L", p.size, 0)
     sd = ImageDraw.Draw(shade)
-    sd.rectangle((0, 0, 1080, 230), fill=170)
-    sd.rectangle((0, 800, 1080, 1080), fill=190)
+    sd.rectangle((0, 0, 1080, 230), fill=130)
+    sd.rectangle((0, 830, 1080, 1080), fill=120)
     p = Image.composite(Image.new("RGB", p.size), p, shade.filter(ImageFilter.GaussianBlur(50)))
     d = ImageDraw.Draw(p)
     words(d, "WELCOME TO", 540, 40, 72, "#FFFFFF")
