@@ -27,11 +27,17 @@ STYLE = ("modern Japanese anime illustration, clean thin black line art, cel sha
          "no text, no letters, no speech bubbles, no watermark")
 # (prompt, size) for each piece of art
 ART = {
-    "square": (f"close-up of {HANA} smiling happily and waving at the viewer with one hand, winking, face in the centre "
-               "of the picture, background of soft pink and orange bokeh lights with little hearts and sparkles", "768x768"),
+    "square": (f"close-up of {HANA} smiling happily with both eyes wide open and looking straight at the viewer, "
+               "two identical big sparkling violet eyes, symmetrical face, waving with one hand, face in the centre of the picture, background of soft pink and orange bokeh lights with little hearts and sparkles", "768x768"),
     "wide": (f"{HANA} on the right side of the picture, waist-up, cheerfully holding an open manga book and giving a "
              "peace sign, the left two-thirds of the picture is an open background of a glowing pink and orange sunset "
              "sky over a cozy anime city with floating manga pages and little sparkles", "1024x576"),
+    # the banner's strip: a 4:1 picture for the band desktops show, with Hana's whole head inside the phone area
+    "strip": ("wide panoramic banner illustration: slightly right of centre, " + HANA + " shown from the chest up, "
+              "smiling happily with both eyes open, giving a peace sign next to her face, her whole head and cat ears "
+              "fully visible in the middle of the picture height with space above them; the left half is a glowing pink "
+              "and orange sunset sky over a cozy anime city with floating manga pages and little sparkles; on the far "
+              "right, more of the city at sunset", "1792x448"),
 }
 
 
@@ -79,21 +85,30 @@ def cover(img, w, h, fx=0.5, fy=0.5):
 def layout():
     from PIL import Image, ImageDraw, ImageFilter
     sq = Image.open(OUT / "art-square.png").convert("RGB")
-    wide = Image.open(OUT / "art-wide.png").convert("RGB")
 
     # profile picture: just Hana's face, it is shown as a small circle
     cover(sq, 800, 800, 0.5, 0.42).save(OUT / "profile.png")
 
-    # banner: 2560x1440; every device shows the middle 1546x423, so the name and Hana's face sit there
-    b = cover(wide, 2560, 1440, 0.5, 0.42)
+    # banner: 2560x1440. Desktops show the band y 510-933 across the full width; phones show only its middle,
+    # x 507-2053 (the "All devices" box). The 4:1 strip covers that band; TVs also see a soft blurred copy around it.
+    strip = Image.open(OUT / "art-strip.png").convert("RGB").resize((2560, 640), Image.LANCZOS)
+    b = cover(strip, 2560, 1440).filter(ImageFilter.GaussianBlur(40))
+    b = Image.blend(b, Image.new("RGB", b.size, (40, 10, 40)), 0.25)
+    fade = Image.new("L", strip.size, 255)
+    fd = ImageDraw.Draw(fade)
+    for i in range(70):  # feather the strip's top and bottom edges into the blurred background
+        fd.line((0, i, 2560, i), fill=round(255 * i / 70))
+        fd.line((0, 639 - i, 2560, 639 - i), fill=round(255 * i / 70))
+    b.paste(strip, (0, 400), fade)
     shade = Image.new("L", b.size, 0)
-    ImageDraw.Draw(shade).ellipse((420, 440, 1700, 960), fill=150)
-    b = Image.composite(Image.new("RGB", b.size), b, shade.filter(ImageFilter.GaussianBlur(90)))
+    ImageDraw.Draw(shade).ellipse((1430, 470, 2140, 950), fill=150)
+    b = Image.composite(Image.new("RGB", b.size), b, shade.filter(ImageFilter.GaussianBlur(70)))
     d = ImageDraw.Draw(b)
-    cx = 1060  # the safe area runs from x 507 to 2053; Hana's face is at its right edge
-    words(d, NAME, cx, 548, 136, "#FFD43B")
-    words(d, "MANGA & MANHWA DUBS", cx, 722, 52, "#FFFFFF")
-    words(d, "NEW STORIES EVERY WEEK", cx, 792, 52, "#FF9EC7")
+    cx = 1775  # Hana is in the middle of the phone box (x 507-2053); the words sit to her right
+    words(d, "MANGA", cx, 528, 128, "#FFD43B")
+    words(d, "FEVER", cx, 660, 128, "#FFD43B")
+    words(d, "MANGA & MANHWA DUBS", cx, 812, 33, "#FFFFFF")
+    words(d, "NEW STORIES EVERY WEEK", cx, 858, 33, "#FF9EC7")
     b.save(OUT / "banner.png")
 
     # welcome post: 1080x1080
