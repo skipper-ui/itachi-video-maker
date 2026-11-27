@@ -29,9 +29,10 @@ STYLE = ("modern Japanese anime illustration, clean thin black line art, cel sha
 ART = {
     # profile picture: shown as a small circle, so her face and waving hand are close together in the middle
     "square": (f"close-up of {HANA} smiling happily with both eyes wide open and looking straight at the viewer, "
-               "two identical big sparkling violet eyes, symmetrical face, waving hi with one open hand raised right "
-               "beside her cheek: a normal hand with all five fingers spread apart (thumb and four fingers), palm "
-               "facing the viewer; her face and hand fill the middle of the picture, background of soft pink and "
+               "two identical big sparkling violet eyes, symmetrical face, waving hi with one small open hand raised beside "
+               "her cheek: a small, cute, anatomically correct hand in proportion to her face, palm facing the viewer, "
+               "the thumb on the side nearest her face, four fingers of natural length slightly spread, five fingers "
+               "in total, simple clean drawing of the hand; her face and hand fill the middle of the picture, background of soft pink and "
                "orange bokeh lights with little hearts and sparkles", "768x768"),
     # welcome post
     "post": (f"{HANA} from the chest up, smiling happily with both eyes wide open and looking straight at the viewer, "
