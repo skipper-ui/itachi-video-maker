@@ -8,7 +8,7 @@ I'm Hana, and this is where we tell stories that hit you right in the feels:
 💕 Sweet romances you'll root for
 😂 And plenty of laughs along the way
 
-Every story is fully voiced, with brand-new episodes every week!
+Every story is fully voiced, with brand-new episodes every day!
 
 👉 Start here: "My Bully Booked My Restaurant for Our Class Reunion... He Had No Idea I Was the Chef" [paste video link]
 
@@ -18,7 +18,7 @@ Tell me in the comments: what kind of story should we do next? Revenge? Romance?
 
 # Channel description (About section)
 
-Welcome to Manga Fever! 📖✨ Fully voiced manga and manhwa dub stories: underdogs who rise, betrayals that get the perfect payback, sweet romances and big comebacks. New stories every week, hosted by Hana. 💖
+Welcome to Manga Fever! 📖✨ Fully voiced manga and manhwa dub stories: underdogs who rise, betrayals that get the perfect payback, sweet romances and big comebacks. New stories every day, hosted by Hana. 💖
 
 🔔 Subscribe and turn on notifications so you never miss a new story!
 

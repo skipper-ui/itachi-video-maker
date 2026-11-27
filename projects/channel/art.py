@@ -119,7 +119,7 @@ def layout():
     words(d, "MANGA", cx, 540, 112, "#FFD43B")
     words(d, "FEVER", cx, 656, 112, "#FFD43B")
     words(d, "MANGA & MANHWA DUBS", cx, 795, 36, "#FFFFFF")
-    words(d, "NEW STORIES EVERY WEEK", cx, 843, 36, "#FF9EC7")
+    words(d, "NEW STORIES EVERY DAY", cx, 843, 36, "#FF9EC7")
     b.save(OUT / "banner.png")
 
     # welcome post: 1080x1080
@@ -133,7 +133,7 @@ def layout():
     words(d, "WELCOME TO", 540, 40, 72, "#FFFFFF")
     words(d, NAME + "!", 540, 118, 104, "#FFD43B")
     words(d, "MANGA & MANHWA DUBS", 540, 850, 66, "#FFFFFF")
-    words(d, "NEW STORIES EVERY WEEK", 540, 940, 66, "#FF9EC7")
+    words(d, "NEW STORIES EVERY DAY", 540, 940, 66, "#FF9EC7")
     p.save(OUT / "welcome_post.png")
     for n in ("profile", "banner", "welcome_post"):
         print(OUT / f"{n}.png")

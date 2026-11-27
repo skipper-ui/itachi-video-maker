@@ -9,7 +9,7 @@ For three years, Ryuji threw Sota's lunch on the classroom floor and called him 
 If someone who bullied you showed up asking for a favor... what would YOU do? Tell me in the comments! 👇
 Want to see Sota and Nanami's Sunday dinner? Comment "HOSHIZORA"!
 
-👍 Like and 🔔 subscribe for more manga dub stories every week.
+👍 Like and 🔔 subscribe for more manga dub stories every day.
 
 CHAPTERS
 0:00 They called me Bento Boy
