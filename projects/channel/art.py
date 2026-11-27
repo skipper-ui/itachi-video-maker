@@ -27,8 +27,18 @@ STYLE = ("modern Japanese anime illustration, clean thin black line art, cel sha
          "no text, no letters, no speech bubbles, no watermark")
 # (prompt, size) for each piece of art
 ART = {
+    # profile picture: shown as a small circle, so her face and waving hand are close together in the middle
     "square": (f"close-up of {HANA} smiling happily with both eyes wide open and looking straight at the viewer, "
-               "two identical big sparkling violet eyes, symmetrical face, waving with one hand, face in the centre of the picture, background of soft pink and orange bokeh lights with little hearts and sparkles", "768x768"),
+               "two identical big sparkling violet eyes, symmetrical face, waving hi with one open hand raised right "
+               "beside her cheek: a normal hand with all five fingers spread apart (thumb and four fingers), palm "
+               "facing the viewer; her face and hand fill the middle of the picture, background of soft pink and "
+               "orange bokeh lights with little hearts and sparkles", "768x768"),
+    # welcome post
+    "post": (f"{HANA} from the chest up, smiling happily with both eyes wide open and looking straight at the viewer, "
+             "giving a cute peace sign next to her cheek with one hand: exactly two raised fingers (index and middle "
+             "finger in a V), the ring finger, little finger and thumb folded down, a normal five-fingered hand; her "
+             "face in the middle of the picture with space above and below, background of soft pink and orange "
+             "bokeh lights with little hearts and sparkles", "768x768"),
     "wide": (f"{HANA} on the right side of the picture, waist-up, cheerfully holding an open manga book and giving a "
              "peace sign, the left two-thirds of the picture is an open background of a glowing pink and orange sunset "
              "sky over a cozy anime city with floating manga pages and little sparkles", "1024x576"),
@@ -88,8 +98,8 @@ def layout():
     from PIL import Image, ImageDraw, ImageFilter
     sq = Image.open(OUT / "art-square.png").convert("RGB")
 
-    # profile picture: just Hana's face, it is shown as a small circle
-    cover(sq, 800, 800, 0.5, 0.42).save(OUT / "profile.png")
+    # profile picture: Hana's face and waving hand, it is shown as a small circle
+    cover(sq, 800, 800, 0.5, 0.5).save(OUT / "profile.png")
 
     # banner: 2560x1440. Desktops show the band y 510-933 across the full width; phones show only its middle,
     # x 507-2053 (the "All devices" box), so the whole strip, Hana and the name are scaled to fit inside that box.
@@ -122,7 +132,7 @@ def layout():
     b.save(OUT / "banner.png")
 
     # welcome post: 1080x1080
-    p = cover(sq, 1080, 1080, 0.5, 0.5)
+    p = cover(Image.open(OUT / "art-post.png").convert("RGB"), 1080, 1080, 0.5, 0.5)
     shade = Image.new("L", p.size, 0)
     sd = ImageDraw.Draw(shade)
     sd.rectangle((0, 0, 1080, 230), fill=130)
