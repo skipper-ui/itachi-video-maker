@@ -111,7 +111,7 @@ def layout():
     x0 = (2560 - w) // 2
     b.paste(card, (x0, 510), fade)
     shade = Image.new("L", b.size, 0)
-    ImageDraw.Draw(shade).ellipse((1460, 520, 2080, 925), fill=150)
+    ImageDraw.Draw(shade).ellipse((1530, 520, 2080, 925), fill=150)
     b = Image.composite(Image.new("RGB", b.size), b, shade.filter(ImageFilter.GaussianBlur(60)))
     d = ImageDraw.Draw(b)
     cx = 1765  # right of Hana, inside the phone box (x 507-2053, y 510-933)
