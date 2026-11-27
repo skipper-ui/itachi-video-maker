@@ -81,7 +81,7 @@ def S(image, *lines, pos=None, buttons=None, sfx=None):
 
 MALL = "inside a bright modern shopping mall atrium in Tokyo on a Saturday afternoon, crowds of shoppers"
 BOOKS = "inside a cozy cluttered secondhand bookstore with tall wooden shelves, rain on the windows, warm light"
-ORCHARD = "in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer"
+ORCHARD = "in a sunny mikan orchard (rows of green citrus trees with dark green leaves and small round orange fruits) on a hillside above a sparkling blue sea, Japanese island countryside, summer"
 HOUSE = "inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer"
 PORCH = "on the wooden porch of an old Japanese farmhouse overlooking an orange orchard and the sea, summer"
 TWINS = "identical twin sisters with exactly the same face"
@@ -172,11 +172,11 @@ scenes = [
     S("{REN} and {TWIN} sitting close together on a small apartment balcony at night sharing earphones, city lights below",
       (N, "She never let me meet her family. She said it was complicated, and I didn't push.", "thoughtful"),
       (N, "For three years, I was the happiest I'd ever been.", "fond, then sad")),
-    S("a small yellow sunflower hairpin lying alone on an empty table in a dark room, moonlight",
+    S("close-up of a tiny metal hair clip decorated with a small yellow sunflower ornament (a hair accessory, not a real flower) lying alone on an empty table in a dark room, moonlight",
       (N, "Which is why, when I thought I'd lost her... I couldn't stay in the same city.", "sad, quiet")),
 
     # ---- Present: the island ----
-    S("wide view of a mikan orange orchard on a hillside above a sparkling blue sea, a small old wooden farmhouse, "
+    S("wide view of a mikan orchard (rows of green citrus trees with dark green leaves and small round orange fruits) on a hillside above a sparkling blue sea, a small old wooden farmhouse, "
       "small islands on the horizon, bright summer day",
       (N, "Six months later. A little island in Ehime, on the Seto Inland Sea.", "calm"),
       (N, "My grandmother's orange orchard.", "calm")),
@@ -229,7 +229,7 @@ scenes = [
     S("close-up of {REN_FARM} with a stunned pale face, " + HOUSE,
       L("ren", "So you... took turns?", "stunned, slow"),
       L("akari", "...We took turns.", "small, guilty")),
-    S("close-up of {REN_FARM} looking from one twin to the other, troubled, " + HOUSE,
+    S("close-up of {REN_FARM} alone, the only person in the picture, glancing sideways at someone off-screen, troubled, " + HOUSE,
       L("ren", "The bridge. The day someone told me they liked me. Which one of you was that?", "quiet, shaky"),
       L("hikari", "Me. But Akari wrote half of what I said. We practiced it all night.", "soft, honest")),
     S("close-up of two hands that look exactly the same passing a small yellow sunflower hairpin from one to the other at a "
@@ -249,7 +249,7 @@ scenes = [
     S("close-up of a silver wristwatch lying face down on a tatami mat, a short engraving on its back",
       (N, "On the back, there was an engraving. To Ren. From both of us.", "quiet"),
       (N, "Back then, I would've thought it meant from her and me.", "quiet, bitter")),
-    S("{REN_FARM} sitting cross-legged on the tatami running a hand through his hair, the twins watching him anxiously, " + HOUSE,
+    S("{REN_FARM} sitting cross-legged on the tatami running a hand through his hair, with {TWIN_AKARI} and {TWIN_HIKARI} kneeling beside him watching him anxiously, " + HOUSE,
       L("ren", "How did you even find me? I didn't tell anyone.", "tired"),
       L("akari", "Daisuke. We bought him lunch every day for a month until he cracked.", "sheepish")),
     S("{DAISUKE} eating a huge bowl of ramen alone in a Tokyo ramen shop, looking guilty, sweating",
@@ -276,9 +276,9 @@ scenes = [
       L("grandma", "He followed me all the way to the port. Fifty-two years, and he never let me forget it.", "fond, laughing softly")),
     S("close-up of {GRANDMA} patting {REN_FARM}'s hand, moonlight",
       L("grandma", "Running away doesn't protect your heart, Ren. It just makes it lonely.", "wise, kind")),
-    S("{TWIN_HIKARI} and {TWIN_AKARI} standing behind {REN_FARM} on the moonlit porch, hesitant",
+    S("{TWIN_HIKARI} on the left and {TWIN_AKARI} on the right, standing side by side on a farmhouse porch at night under the moon, both looking at the viewer, hesitant",
       L("hikari", "Ren... can you ever forgive us?", "quiet, hopeful")),
-    S("{REN_FARM} looking back over his shoulder with a tired, serious face, moonlight",
+    S("{REN_FARM} looking back over his shoulder with a tired, serious face, on a farmhouse porch at night, a round full moon in a clear night sky",
       L("ren", "I don't know. I don't even know who I fell in love with.", "tired, honest"),
       L("ren", "Go home. Please. The first bus leaves at seven.", "firm, tired")),
     S("{TWIN_AKARI} and {TWIN_HIKARI} asleep sitting up on the farmhouse porch at dawn, leaning against each other under one blanket, their suitcases beside them",
