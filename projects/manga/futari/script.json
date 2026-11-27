@@ -1,0 +1,2330 @@
+{
+ "title": "My Girlfriend Lied to Me, So I Disappeared... Then TWO of Her Showed Up | Manga Dub",
+ "character": "",
+ "style": "",
+ "width": 1920,
+ "height": 1080,
+ "title_card": false,
+ "tts": "kokoro",
+ "cast": {
+  "narrator": "am_michael",
+  "ren": "am_michael",
+  "hikari": "af_sky",
+  "akari": "af_nicole",
+  "kaito": "am_puck",
+  "daisuke": "am_echo",
+  "grandma": "bf_emma",
+  "host": "af_sky"
+ },
+ "speed": 0.95,
+ "scene_pad": 0.7,
+ "emotive": {
+  "engine": "eleven_v3",
+  "cast": {
+   "narrator": "TX3LPaxmHKxFdv7VOQHJ",
+   "ren": "TX3LPaxmHKxFdv7VOQHJ",
+   "hikari": "EXAVITQu4vr4xnSDxMaL",
+   "akari": "cgSgspJ2msm6clMCkdW9",
+   "kaito": "bIHbv24MWmeRgasZH58o",
+   "daisuke": "IKne3meq5aSn9XLyUdCD",
+   "grandma": "vFLqXa8bgbofGarf6fZh",
+   "host": "vGQNBgLaiM3EdZtxIiuY"
+  },
+  "skip": [],
+  "fallback": true,
+  "priority": [
+   "narrator",
+   "ren",
+   "hikari",
+   "akari",
+   "grandma",
+   "daisuke",
+   "kaito"
+  ]
+ },
+ "caption": {
+  "mode": "boxes",
+  "font": "Comic Neue",
+  "fonts_dir": "assets/fonts"
+ },
+ "images": {
+  "provider": "local",
+  "upscale": true
+ },
+ "characters": {
+  "ren": "character reference portrait, waist-up front view of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "twin": "character reference portrait, waist-up front view of his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "kaito": "character reference portrait, waist-up front view of Kaito (a tall 27-year-old Japanese man with wavy black hair and a friendly grin, wearing a black leather jacket), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "daisuke": "character reference portrait, waist-up front view of Daisuke (a 26-year-old Japanese office worker with spiky orange-dyed hair and an expressive face, wearing a white shirt with a loosened tie), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "grandma": "character reference portrait, waist-up front view of Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "host": "character reference portrait, waist-up front view of Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark"
+ },
+ "music": {
+  "sound": "music_dream",
+  "volume": 0.03
+ },
+ "sources": [
+  "Original story and characters. Artwork drawn with AI (FLUX.2 klein, run locally)."
+ ],
+ "scenes": [
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) standing alone on a dark train platform at night with a suitcase, looking down sadly, city lights behind, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Three years. That's how long I loved her.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "And on the day I found out she was lying to me... I didn't ask her a single question. I just ran.",
+     {
+      "tone": "bitter, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) smiling hopefully with his phone to his ear in his small sunny Tokyo apartment, two movie tickets on the table, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "It started on a Saturday morning. Two movie tickets, and a girlfriend I wanted to surprise.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "ren",
+     "Hey, Hikari! Are you free this afternoon? There's a three o'clock showing of that movie you wanted to see!",
+     {
+      "tone": "cheerful, hopeful"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) talking on the phone in a cozy family living room, smiling apologetically, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Ah, sorry, Ren! I'm visiting my parents today. Let's go next week, okay?",
+     {
+      "tone": "apologetic, sweet"
+     }
+    ],
+    [
+     "ren",
+     "Oh. Sure. Say hi to them for me.",
+     {
+      "tone": "a little disappointed"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) walking alone through a bright shopping mall holding two movie tickets, a little lonely, inside a bright modern shopping mall atrium in Tokyo on a Saturday afternoon, crowds of shoppers, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "So I went to the mall alone. I thought I'd at least buy her birthday present early.",
+     {
+      "tone": "wry"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "view from far across a crowded mall atrium: his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) laughing happily and holding the arm of Kaito (a tall 27-year-old Japanese man with wavy black hair and a friendly grin, wearing a black leather jacket) as they walk into a jewelry shop together, inside a bright modern shopping mall atrium in Tokyo on a Saturday afternoon, crowds of shoppers, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And that's when I saw her.",
+     {
+      "tone": "stunned, quiet"
+     }
+    ],
+    [
+     "narrator",
+     "Same long hair. The same sunflower hairpin I gave her. Laughing... and holding another man's arm.",
+     {
+      "tone": "shocked, hollow"
+     }
+    ]
+   ],
+   "refs": [
+    "kaito",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) frozen in shock in the mall, two movie tickets slipping from his fingers, inside a bright modern shopping mall atrium in Tokyo on a Saturday afternoon, crowds of shoppers, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "She was supposed to be at her parents' house. Two hours away.",
+     {
+      "tone": "numb"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a smartphone screen in a man's hand showing a short chat with a smiling emoji and a photo of a strawberry cake, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I sent her one message. Where are you right now?",
+     {
+      "tone": "tense"
+     }
+    ],
+    [
+     "narrator",
+     "She replied a minute later. At my parents'! Mom made cake. Miss you!",
+     {
+      "tone": "hollow, bitter"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) sitting alone on a park bench at night with his head in his hands under a streetlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "She lied. Easily. With a smiley face.",
+     {
+      "tone": "hurt"
+     }
+    ],
+    [
+     "narrator",
+     "And suddenly, a hundred little things I'd ignored came back to me.",
+     {
+      "tone": "slow, realizing"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a small boy standing alone at the door of an empty apartment holding a teddy bear, watching a woman with a suitcase walk away, faded memory, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "When I was eight, my mom left with a suitcase and a smile. She said she'd be back on Sunday.",
+     {
+      "tone": "quiet, distant"
+     }
+    ],
+    [
+     "narrator",
+     "She never came back. I waited at the door every Sunday for a year.",
+     {
+      "tone": "quiet, hurt"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) sitting at a cafe table looking at two cups of coffee, one black and one with a pile of sugar cubes beside it, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Some days she drank her coffee black. Other days, with four sugars.",
+     {
+      "tone": "thoughtful"
+     }
+    ],
+    [
+     "narrator",
+     "Some days she remembered every word I'd ever said. Other days she forgot what we did last weekend, and just laughed it off.",
+     {
+      "tone": "uneasy"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Daisuke (a 26-year-old Japanese office worker with spiky orange-dyed hair and an expressive face, wearing a white shirt with a loosened tie) leaning over Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan)'s desk in a busy Tokyo office, worried, both in office clothes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daisuke",
+     "Dude, just ask her! Maybe there's an explanation!",
+     {
+      "tone": "worried, pushy"
+     }
+    ],
+    [
+     "ren",
+     "And if there isn't? If I ask her... and she says it's true?",
+     {
+      "tone": "quiet, scared"
+     }
+    ]
+   ],
+   "refs": [
+    "daisuke",
+    "ren"
+   ],
+   "pos": {
+    "daisuke": "l",
+    "ren": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) in a dark apartment at night lit only by his phone screen, a tear on his cheek, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I couldn't do it. Hearing it from her would make it real.",
+     {
+      "tone": "shaky"
+     }
+    ],
+    [
+     "narrator",
+     "So I did the most cowardly thing I've ever done. I sent one message. Let's end this. Thank you for everything.",
+     {
+      "tone": "ashamed, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) walking away from an apartment building with a suitcase in the grey early morning, not looking back, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Then I blocked her number, quit my job, and left Tokyo without telling anyone where I was going.",
+     {
+      "tone": "flat"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) sitting on the floor of a dark room staring at her phone in shock, tears streaming down her face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Ren...? Why? What did I do?",
+     {
+      "tone": "heartbroken, trembling"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a cozy secondhand bookstore on a narrow street in Shimokitazawa on a rainy afternoon, umbrellas outside, warm light in the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "We met three years ago, in a little secondhand bookstore, on a rainy afternoon.",
+     {
+      "tone": "soft, nostalgic"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) and his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) reaching for the same old photography book on a shelf at the same moment, their hands touching, both surprised, inside a cozy cluttered secondhand bookstore with tall wooden shelves, rain on the windows, warm light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Oh! S-sorry! You take it!",
+     {
+      "tone": "flustered, shy"
+     }
+    ],
+    [
+     "ren",
+     "No, no. You found it first.",
+     {
+      "tone": "gentle, smiling"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ],
+   "pos": {
+    "ren": "l",
+    "hikari": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) blushing and hugging an old photography book to her chest, smiling shyly, inside a cozy cluttered secondhand bookstore with tall wooden shelves, rain on the windows, warm light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Then... maybe we could share it? Over coffee? Next Sunday?",
+     {
+      "tone": "shy, hopeful"
+     }
+    ],
+    [
+     "narrator",
+     "Her name was Hikari. She talked about old photographs like they were treasure.",
+     {
+      "tone": "fond"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) sitting alone at a cafe table checking his watch, rain on the window, two untouched glasses of water, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That Sunday, I waited at the cafe for twenty minutes. I was sure she wasn't coming.",
+     {
+      "tone": "wry"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) bursting in through a cafe door out of breath and laughing, waving energetically, rain behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Sorry, sorry! I'm here! The train was a total disaster!",
+     {
+      "tone": "bubbly, breathless"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) laughing loudly at a cafe table with three empty cake plates in front of her, Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) laughing with her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "She was nothing like the shy girl from the bookstore. She was loud and funny, and she ate three slices of cake.",
+     {
+      "tone": "amused"
+     }
+    ],
+    [
+     "narrator",
+     "I thought she'd just been nervous the first time. I never thought about it again.",
+     {
+      "tone": "fond"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) and his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) standing in front of a huge glowing blue aquarium tank full of fish, her face lit blue, quiet and amazed, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Ren, look... it's like they're flying.",
+     {
+      "tone": "soft, amazed"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) lying sick in bed with a cold and a towel on his forehead while his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) sits beside him gently feeding him rice porridge with a spoon, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Say ah. It's my grandmother's recipe. Ginger and a little egg.",
+     {
+      "tone": "gentle, caring"
+     }
+    ],
+    [
+     "narrator",
+     "When I caught a cold, she nursed me all day without saying a word about it.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) bursting into a small bedroom the next morning holding a bag full of energy drinks, singing loudly, Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) in bed covering his ears, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Good morning, patient! I brought twelve energy drinks and my best singing voice!",
+     {
+      "tone": "loud, cheerful"
+     }
+    ],
+    [
+     "narrator",
+     "The next morning, she came back and sang to me until my fever gave up out of fear.",
+     {
+      "tone": "amused"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) and his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) sharing one small umbrella in the rain on a quiet street, her shoulder getting wet, both smiling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "I only brought one umbrella. On purpose.",
+     {
+      "tone": "shy, teasing"
+     }
+    ],
+    [
+     "narrator",
+     "She always forgot her umbrella. Or... half the time she did.",
+     {
+      "tone": "fond"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) and his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) in summer yukata at a fireworks festival, she points at the sky and cheers with her mouth wide open, fireworks bursting overhead, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Tamaya! Come on, Ren, shout with me! Tamayaaa!",
+     {
+      "tone": "excited, loud"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) proudly holding out a plate with a burnt lumpy omelet in a small apartment kitchen, Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) smiling bravely, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Ta-da! My famous omelet! ...It's a little crispy.",
+     {
+      "tone": "proud, sheepish"
+     }
+    ],
+    [
+     "narrator",
+     "One week she made me a burnt omelet. The next week, a perfect one. Soft and golden. She said she'd been practicing.",
+     {
+      "tone": "fond, amused"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) and his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) on a bridge over a river at sunset, she holds his sleeve and looks up at him seriously with red cheeks, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Three months later, on a bridge at sunset...",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "hikari",
+     "Ren... I like you. I really, really like you. Will you go out with me?",
+     {
+      "tone": "shy, trembling, sincere"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) blushing with a stunned happy smile, sunset behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "...I was going to say that. Yes. Of course, yes.",
+     {
+      "tone": "overjoyed, shy"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) gently clipping a small yellow sunflower hairpin into his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt)'s hair under cherry blossoms in a park, she smiles with teary eyes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On our first anniversary, I gave her a sunflower hairpin. Because she was like sunshine.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "narrator",
+     "Some days bright and loud. Some days soft and warm. She wore it every single day.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, wearing a white shirt under a navy cardigan) and his girlfriend (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, wearing a cream knit sweater and a long beige pleated skirt) sitting close together on a small apartment balcony at night sharing earphones, city lights below, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "She never let me meet her family. She said it was complicated, and I didn't push.",
+     {
+      "tone": "thoughtful"
+     }
+    ],
+    [
+     "narrator",
+     "For three years, I was the happiest I'd ever been.",
+     {
+      "tone": "fond, then sad"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a small yellow sunflower hairpin lying alone on an empty table in a dark room, moonlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Which is why, when I thought I'd lost her... I couldn't stay in the same city.",
+     {
+      "tone": "sad, quiet"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "wide view of a mikan orange orchard on a hillside above a sparkling blue sea, a small old wooden farmhouse, small islands on the horizon, bright summer day, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Six months later. A little island in Ehime, on the Seto Inland Sea.",
+     {
+      "tone": "calm"
+     }
+    ],
+    [
+     "narrator",
+     "My grandmother's orange orchard.",
+     {
+      "tone": "calm"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) carrying a basket full of oranges between the trees, sweating, calm face, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I picked oranges, fixed fences, and went to bed at nine. Nobody here knew me. It was quiet.",
+     {
+      "tone": "calm, tired"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) cheerfully waving a towel from the porch at Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) in the orchard below, on the wooden porch of an old Japanese farmhouse overlooking an orange orchard and the sea, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "Ren! Lunch! And smile a little, will you? You'll scare the oranges!",
+     {
+      "tone": "cheerful, teasing"
+     }
+    ],
+    [
+     "ren",
+     "The oranges are fine, Grandma.",
+     {
+      "tone": "dry, amused"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma",
+    "ren"
+   ],
+   "pos": {
+    "grandma": "l",
+    "ren": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) and Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) eating rice balls and drinking tea side by side, on the wooden porch of an old Japanese farmhouse overlooking an orange orchard and the sea, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "Six months, and you still haven't told me why you ran away from Tokyo.",
+     {
+      "tone": "gentle, prying"
+     }
+    ],
+    [
+     "ren",
+     "I didn't run away. I just... left.",
+     {
+      "tone": "defensive, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma",
+    "ren"
+   ],
+   "pos": {
+    "grandma": "l",
+    "ren": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) looking sideways with a knowing little smile, holding a teacup, on the wooden porch of an old Japanese farmhouse overlooking an orange orchard and the sea, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "Mm-hm. Only two things make a young man leave the city like that. Debt, or a girl.",
+     {
+      "tone": "knowing"
+     }
+    ],
+    [
+     "grandma",
+     "And you've got no debt.",
+     {
+      "tone": "playful, sly"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a narrow coastal road along the sea with a small country bus driving away in the summer heat haze, a lone figure with a big suitcase standing at the bus stop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Then one afternoon in August, the bus from the port stopped at the bottom of our hill.",
+     {
+      "tone": "calm, ominous"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) standing at the wooden orchard gate with a big suitcase, sweaty and out of breath, tears in her eyes, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "I found you... I finally found you!",
+     {
+      "tone": "breathless, emotional"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) frozen in shock, a basket tipping over and oranges rolling on the ground, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "Hikari...? How did you...",
+     {
+      "tone": "shocked, whispering"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) wiping her tears with a serious, guilty and determined face, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "I'm not Hikari.",
+     {
+      "tone": "serious, emotional"
+     }
+    ],
+    [
+     "akari",
+     "My name is Akari.",
+     {
+      "tone": "firm"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) confused with furrowed eyebrows, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "What...? What kind of joke is this—",
+     {
+      "tone": "confused, getting angry"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) running up a dusty country road holding a sun hat, out of breath, calling out, the sea behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Akari! You can't just run ahead like that!",
+     {
+      "tone": "breathless, worried"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) standing side by side at the wooden orchard gate, identical twin sisters with exactly the same face, one with a ponytail and one with her hair down, both looking nervously at the viewer, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "There were two of them.",
+     {
+      "tone": "stunned"
+     }
+    ],
+    [
+     "narrator",
+     "Same face. Same eyes. Same voice... almost.",
+     {
+      "tone": "stunned, slow"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) sitting down hard on the ground among spilled oranges with his mouth hanging open, comedic shock, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "There's... two of you.",
+     {
+      "tone": "dazed"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) peeking out from behind a sliding door of the farmhouse with wide delighted eyes and a hand over her mouth, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "Oh my. Ren... you never told me there were two of them!",
+     {
+      "tone": "delighted, scandalized"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) kneeling formally side by side on the tatami with their heads bowed, Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) sitting across from them with his arms crossed, glasses of barley tea untouched between them, tense, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Ten minutes later, the three of us sat in Grandma's living room. Nobody touched the tea.",
+     {
+      "tone": "tense"
+     }
+    ],
+    [
+     "hikari",
+     "We're identical twins. Hikari and Akari Shirakawa.",
+     {
+      "tone": "quiet, nervous"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) looking down shyly with her hands on her knees, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "The girl you met at the bookstore was me. But on the day of our coffee date, I had a high fever.",
+     {
+      "tone": "shy, guilty"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) scratching her cheek with a guilty grin, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "She was crying so much about standing you up... so I went instead. As Hikari. Just to explain.",
+     {
+      "tone": "guilty, sheepish"
+     }
+    ],
+    [
+     "akari",
+     "But you were so easy to talk to. I forgot to explain. And then I... kind of fell for you too.",
+     {
+      "tone": "embarrassed, honest"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) gripping her cardigan with teary eyes, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "And I'd already fallen for you at the bookstore. Neither of us could give you up. And neither of us wanted to hurt the other.",
+     {
+      "tone": "teary, sincere"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) with a stunned pale face, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "So you... took turns?",
+     {
+      "tone": "stunned, slow"
+     }
+    ],
+    [
+     "akari",
+     "...We took turns.",
+     {
+      "tone": "small, guilty"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) looking from one twin to the other, troubled, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "The bridge. The day someone told me they liked me. Which one of you was that?",
+     {
+      "tone": "quiet, shaky"
+     }
+    ],
+    [
+     "hikari",
+     "Me. But Akari wrote half of what I said. We practiced it all night.",
+     {
+      "tone": "soft, honest"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of two hands that look exactly the same passing a small yellow sunflower hairpin from one to the other at a train station ticket gate, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "We traded your hairpin at the station every time we switched.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "akari",
+     "Every time we tried to tell you, we got scared you'd leave.",
+     {
+      "tone": "sad"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) with a bitter, hurt smile, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "And then I left anyway.",
+     {
+      "tone": "bitter"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) standing up angrily with clenched fists, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "Then who was at the mall? Holding that man's arm? On the day you said you were at your parents'?",
+     {
+      "tone": "angry, hurt"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) waving both hands in panic with wide eyes, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "That was me! And that was our cousin Kaito! From Osaka!",
+     {
+      "tone": "panicked"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a smartphone held out showing a photo of Kaito (a tall 27-year-old Japanese man with wavy black hair and a friendly grin, wearing a black leather jacket) grinning and giving a thumbs up inside a jewelry shop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Hikari really was at our parents'. I was buying your birthday present with Kaito. He's the only one in the family with good taste.",
+     {
+      "tone": "flustered, rushing"
+     }
+    ]
+   ],
+   "refs": [
+    "kaito"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) holding out a small open gift box with a silver wristwatch inside, eyes teary, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "This was for your birthday. We've carried it around for six months.",
+     {
+      "tone": "teary"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a silver wristwatch lying face down on a tatami mat, a short engraving on its back, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On the back, there was an engraving. To Ren. From both of us.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "Back then, I would've thought it meant from her and me.",
+     {
+      "tone": "quiet, bitter"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) sitting cross-legged on the tatami running a hand through his hair, the twins watching him anxiously, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "How did you even find me? I didn't tell anyone.",
+     {
+      "tone": "tired"
+     }
+    ],
+    [
+     "akari",
+     "Daisuke. We bought him lunch every day for a month until he cracked.",
+     {
+      "tone": "sheepish"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Daisuke (a 26-year-old Japanese office worker with spiky orange-dyed hair and an expressive face, wearing a white shirt with a loosened tie) eating a huge bowl of ramen alone in a Tokyo ramen shop, looking guilty, sweating, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Daisuke. Of course.",
+     {
+      "tone": "dry"
+     }
+    ]
+   ],
+   "refs": [
+    "daisuke"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) running through a crowded Tokyo street at night holding up a phone with a photo of a man, asking strangers, exhausted, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "I went to every place you ever took us. Every station. Every cafe. For months.",
+     {
+      "tone": "tired, emotional"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) sitting at a desk at night writing a letter by lamplight, a pile of sealed letters beside her, a tear falling on the paper, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "And I wrote you a letter every night. One hundred and eighty-two letters. I didn't know where to send them.",
+     {
+      "tone": "soft, trembling"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) looking away with a pained face, his jaw tight, inside an old wooden Japanese farmhouse with tatami mats and open sliding doors, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't know what to say. So I said nothing.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) sitting alone on the porch at night looking out at the dark sea, his back to the viewer, moonlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "So she never cheated on me. She never even lied about her parents.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "The misunderstanding was gone. But the pain wasn't.",
+     {
+      "tone": "heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) gazing at the moonlit sea with sad, tired eyes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "For six months, I woke up every morning believing the person I loved most had thrown me away.",
+     {
+      "tone": "raw"
+     }
+    ],
+    [
+     "narrator",
+     "You can't switch that off just because someone tells you it was a mistake.",
+     {
+      "tone": "quiet, firm"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) sitting down beside Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) on the moonlit porch with two cups of tea, gentle smile, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "You know, I almost didn't marry your grandfather.",
+     {
+      "tone": "gentle"
+     }
+    ],
+    [
+     "ren",
+     "...Why not?",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma",
+    "ren"
+   ],
+   "pos": {
+    "grandma": "l",
+    "ren": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "an old faded photograph of a young Japanese couple standing in front of an orange orchard in the 1960s, sepia tones, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "Because I was scared. Scared that if I loved him, one day he'd leave. So I tried to leave first.",
+     {
+      "tone": "soft, nostalgic"
+     }
+    ],
+    [
+     "grandma",
+     "He followed me all the way to the port. Fifty-two years, and he never let me forget it.",
+     {
+      "tone": "fond, laughing softly"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) patting Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck)'s hand, moonlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "Running away doesn't protect your heart, Ren. It just makes it lonely.",
+     {
+      "tone": "wise, kind"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma",
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) and Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) standing behind Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) on the moonlit porch, hesitant, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Ren... can you ever forgive us?",
+     {
+      "tone": "quiet, hopeful"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) looking back over his shoulder with a tired, serious face, moonlight, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "I don't know. I don't even know who I fell in love with.",
+     {
+      "tone": "tired, honest"
+     }
+    ],
+    [
+     "ren",
+     "Go home. Please. The first bus leaves at seven.",
+     {
+      "tone": "firm, tired"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) asleep sitting up on the farmhouse porch at dawn, leaning against each other under one blanket, their suitcases beside them, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't sleep that night. At dawn, I found them on the porch. They'd waited outside all night.",
+     {
+      "tone": "soft, surprised"
+     }
+    ],
+    [
+     "narrator",
+     "Leaning on each other. Just like they must have done for the last six months.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) stepping out of the farmhouse at sunrise mid-yawn, freezing at the sight of Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) in a straw hat holding a basket full of oranges and grinning, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Morning, Ren! Your grandma hired me! Room and board, and all the oranges I can eat!",
+     {
+      "tone": "bright, cheeky"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) with a twitching eye in total disbelief, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "Grandma!",
+     {
+      "tone": "exasperated, shouting"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) sipping tea innocently and looking away, on the wooden porch of an old Japanese farmhouse overlooking an orange orchard and the sea, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "What? We need help with the harvest. She works hard. And she's cute.",
+     {
+      "tone": "innocent, sly"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) standing in front of a tiny old wooden village library next to a bus stop, holding a stack of books, smiling shyly, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And Hikari? She got a job at the tiny village library.",
+     {
+      "tone": "dry"
+     }
+    ],
+    [
+     "narrator",
+     "Open three days a week. Right next to the bus stop I used every day.",
+     {
+      "tone": "dry, amused"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) smiling and waving shyly at Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) through a library window, morning sun, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Good morning, Ren. I saved you the newspaper.",
+     {
+      "tone": "shy, sweet"
+     }
+    ],
+    [
+     "ren",
+     "...Morning.",
+     {
+      "tone": "awkward"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ],
+   "pos": {
+    "hikari": "l",
+    "ren": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) proudly holding out an open bento box with a slightly burnt omelet in it to Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) under the trees at noon, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Lunch! I made it myself! The omelet's only a little crispy this time!",
+     {
+      "tone": "proud"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) holding up a piece of slightly burnt omelet with chopsticks, a strange nostalgic expression, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I took a bite. It was the same omelet from three years ago.",
+     {
+      "tone": "quiet, nostalgic"
+     }
+    ],
+    [
+     "ren",
+     "...So the burnt omelet was you.",
+     {
+      "tone": "realizing"
+     }
+    ],
+    [
+     "akari",
+     "It's crispy! There's a difference!",
+     {
+      "tone": "pouting"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) pouting with puffed cheeks while Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) tries hard not to smile, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "And the perfect one?",
+     {
+      "tone": "curious"
+     }
+    ],
+    [
+     "akari",
+     "Hikari's. She's better at everything. It's so annoying.",
+     {
+      "tone": "grumbling, fond"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ],
+   "pos": {
+    "ren": "l",
+    "akari": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) and Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) sitting on a seawall at sunset with a small gap between them, an old photography book open on her lap, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "In the evenings, Hikari sat on the seawall with the same photography book from the bookstore.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "hikari",
+     "Page forty-two. You said this photo looked lonely. I always thought it looked like someone waiting.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) looking at Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) in surprise, warm sunset light on the sea, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I'd said that three years ago. Once. I'd forgotten it myself.",
+     {
+      "tone": "surprised, soft"
+     }
+    ],
+    [
+     "narrator",
+     "So the one who remembered everything... was her.",
+     {
+      "tone": "realizing"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) tugging a basket of oranges back and forth between them, Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) sighing between them, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "I'm carrying it! I'm stronger!",
+     {
+      "tone": "competitive"
+     }
+    ],
+    [
+     "hikari",
+     "You dropped twelve oranges yesterday.",
+     {
+      "tone": "calm, deadpan"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ],
+   "pos": {
+    "akari": "l",
+    "hikari": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) laughing on the porch and fanning herself while watching the orchard, on the wooden porch of an old Japanese farmhouse overlooking an orange orchard and the sea, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "Hohoho! This orchard hasn't been this lively in forty years!",
+     {
+      "tone": "delighted"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Grandma Fumi (a tiny 78-year-old Japanese grandmother with white hair in a bun and a big toothy smile, wearing a purple apron over a flowered blouse) leaning close to Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) on the porch with a sly grin, whispering behind her hand, evening, on the wooden porch of an old Japanese farmhouse overlooking an orange orchard and the sea, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "grandma",
+     "So? Which one do you like better?",
+     {
+      "tone": "sly, whispering"
+     }
+    ],
+    [
+     "ren",
+     "Grandma! It's not like that!",
+     {
+      "tone": "flustered"
+     }
+    ]
+   ],
+   "refs": [
+    "grandma",
+    "ren"
+   ],
+   "pos": {
+    "grandma": "l",
+    "ren": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) slipping and falling backwards off a wooden ladder in the orchard, Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) rushing to catch her, oranges flying, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Whoa, whoa, whoa!",
+     {
+      "tone": "panicked"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) holding Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) in his arms after catching her, both frozen and blushing, faces close, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "...Hi.",
+     {
+      "tone": "breathless, embarrassed"
+     }
+    ],
+    [
+     "ren",
+     "You're heavier than you look.",
+     {
+      "tone": "deadpan, flustered"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ],
+   "pos": {
+    "akari": "l",
+    "ren": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) hitting Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck)'s chest with both fists, red-faced and furious, while he laughs for the first time, in a sunny mikan orange orchard on a hillside above a sparkling blue sea, Japanese island countryside, summer, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Ren! You can't say that to a girl!",
+     {
+      "tone": "outraged, embarrassed"
+     }
+    ],
+    [
+     "narrator",
+     "I laughed. For the first time in six months, I really laughed.",
+     {
+      "tone": "surprised, warm"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) standing under the roof of a small country bus stop in sudden heavy rain, no umbrella, looking up at the sky, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "A few days later, it rained. And there she was at the bus stop, without an umbrella.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) holding a small umbrella over Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) at the rainy bus stop, she looks up at him in surprise, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "You forgot your umbrella again.",
+     {
+      "tone": "gentle"
+     }
+    ],
+    [
+     "hikari",
+     "...I didn't forget it.",
+     {
+      "tone": "shy, soft"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ],
+   "pos": {
+    "ren": "l",
+    "hikari": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) lying awake on a futon under a mosquito net at night, staring at the ceiling, moonlight through the sliding door, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Every day, I learned something new. The girl I'd loved for three years wasn't a lie.",
+     {
+      "tone": "thoughtful"
+     }
+    ],
+    [
+     "narrator",
+     "She was two people. And somehow, that made it harder to stay angry.",
+     {
+      "tone": "wry, soft"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Daisuke (a 26-year-old Japanese office worker with spiky orange-dyed hair and an expressive face, wearing a white shirt with a loosened tie) talking on the phone in a messy Tokyo apartment at night, rubbing the back of his head guiltily, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "daisuke",
+     "Ren, I'm sorry I told them. But man... they cried in that ramen shop every single day.",
+     {
+      "tone": "guilty, sincere"
+     }
+    ],
+    [
+     "daisuke",
+     "Whatever they did, those two really love you. Both of them. That's the weird part.",
+     {
+      "tone": "honest, awkward"
+     }
+    ]
+   ],
+   "refs": [
+    "daisuke"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) on the porch at night holding two old crumpled movie tickets from his wallet, thoughtful, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "In my wallet, I still had those two movie tickets. I'd never thrown them away.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "narrator",
+     "Maybe a part of me had never stopped waiting either.",
+     {
+      "tone": "soft, realizing"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a small seaside village summer festival at night, paper lanterns and food stalls along the harbor, warm glowing light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On the night of the island's summer festival, they found me by the sea.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) in a summer yukata triumphantly holding up a bag with a goldfish at a goldfish scooping stall, festival lanterns, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Ha! Five goldfish! Ren, I'm naming them all after you!",
+     {
+      "tone": "triumphant, loud"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) in a summer yukata shyly holding out a red candy apple to Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) in a yukata at a festival stall, lanterns glowing, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "You always bought the candy apple. Every festival. I remember.",
+     {
+      "tone": "shy, warm"
+     }
+    ],
+    [
+     "narrator",
+     "Loud and bright. Quiet and warm. The two halves of the person I'd loved.",
+     {
+      "tone": "warm, thoughtful"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) in summer yukata standing side by side on a moonlit beach, identical twin sisters with exactly the same face, festival lanterns glowing behind them, serious determined faces, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "Ren. We're not asking you to forgive us tonight.",
+     {
+      "tone": "calm, determined"
+     }
+    ],
+    [
+     "akari",
+     "And we're done lying. No more switching. No more hiding.",
+     {
+      "tone": "firm"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ],
+   "pos": {
+    "akari": "l",
+    "hikari": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) in a summer yukata grinning confidently with one fist raised, moonlit beach, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "So this time, we're going to make you fall in love again. Honestly. As ourselves.",
+     {
+      "tone": "confident, bright"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) in a summer yukata blushing but looking straight ahead bravely, moonlit beach, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "hikari",
+     "And this time... you get to choose.",
+     {
+      "tone": "shy, brave"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) in a summer yukata with a bright red flustered face, the first fireworks bursting in the sky behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "ren",
+     "Choose?! Wait, wait. I never said I—",
+     {
+      "tone": "flustered"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "fireworks exploding over the sea, Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) in yukata each hugging one of Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck)'s arms on the beach, all three seen from behind against the fireworks, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "Ready or not!",
+     {
+      "tone": "playful, loud"
+     }
+    ],
+    [
+     "hikari",
+     "Here we come.",
+     {
+      "tone": "soft, playful"
+     }
+    ]
+   ],
+   "refs": [
+    "ren",
+    "twin"
+   ],
+   "pos": {
+    "akari": "l",
+    "hikari": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) in yukata shaking hands firmly and grinning at each other like rivals before a match, sparks between their eyes, beach at night, comedic, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "akari",
+     "And Hikari? I'm not losing to you this time.",
+     {
+      "tone": "competitive, playful"
+     }
+    ],
+    [
+     "hikari",
+     "Neither am I.",
+     {
+      "tone": "calm, competitive"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ],
+   "pos": {
+    "akari": "l",
+    "hikari": "r"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Ren (a 26-year-old Japanese man with short neat dark brown hair, gentle tired eyes and a slim build, lightly tanned, wearing a plain white t-shirt, khaki work trousers and a towel around his neck) in a summer yukata smiling helplessly with a red face, fireworks behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I came to this island for a quiet life. To forget.",
+     {
+      "tone": "wry"
+     }
+    ],
+    [
+     "narrator",
+     "Looks like that's over.",
+     {
+      "tone": "amused, warm"
+     }
+    ]
+   ],
+   "refs": [
+    "ren"
+   ],
+   "pos": {
+    "narrator": "b"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Akari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair tied up in a high ponytail, a bright confident grin, wearing a yellow t-shirt and denim overalls) and Hikari (a 25-year-old Japanese woman with long straight chestnut-brown hair, big warm amber eyes and a soft round face, her hair worn down with a small yellow sunflower hairpin, a shy gentle smile, wearing a white blouse and a light blue cardigan) in yukata smiling at the viewer side by side, identical twin sisters with exactly the same face, fireworks and lanterns behind them, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Hikari, or Akari? Who do you think I'll fall for? Tell me in the comments.",
+     {
+      "tone": "warm, inviting"
+     }
+    ]
+   ],
+   "refs": [
+    "twin"
+   ],
+   "pos": {
+    "narrator": "b"
+   }
+  },
+  {
+   "fx": [],
+   "image": "Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood) waving happily at the viewer with both hands and a big smile, sparkles and little pink hearts floating around her, bright pastel pink and lavender background with soft bokeh lights, upper body, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "host",
+     "Thanks for watching~!",
+     {
+      "tone": "cheerful, cute, sing-song"
+     }
+    ],
+    [
+     "host",
+     "If Ren's story made your heart race, please like, subscribe, and tap the bell, so you never miss the next one!",
+     {
+      "tone": "bubbly, excited"
+     }
+    ]
+   ],
+   "refs": [
+    "host"
+   ],
+   "pos": {
+    "host": "t"
+   },
+   "buttons": [
+    {
+     "text": "LIKE",
+     "line": 1,
+     "delay": 1.4,
+     "x": 0.27,
+     "y": 0.84,
+     "fill": "#3EA6FF"
+    },
+    {
+     "text": "SUBSCRIBE",
+     "line": 1,
+     "delay": 1.9,
+     "x": 0.53,
+     "y": 0.84,
+     "press": 1.6,
+     "pressed": "SUBSCRIBED"
+    },
+    {
+     "icon": "bell",
+     "line": 1,
+     "delay": 2.9,
+     "x": 0.76,
+     "y": 0.84
+    }
+   ],
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:1+1.4",
+     "volume": 0.5
+    },
+    {
+     "sound": "pop",
+     "at": "line:1+1.9",
+     "volume": 0.5
+    },
+    {
+     "sound": "tap",
+     "at": "line:1+3.5",
+     "volume": 0.6
+    },
+    {
+     "sound": "ding",
+     "at": "line:1+2.9",
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood) winking playfully and making a heart shape with both hands, floating hearts and sparkles, bright pastel pink background with soft bokeh lights, upper body, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "host",
+     "Oh! And if you want Part 2, where the twins make their move, comment FUTARI down below!",
+     {
+      "tone": "playful, excited, winking"
+     }
+    ],
+    [
+     "host",
+     "See you in the next story! Bye-bye!",
+     {
+      "tone": "sweet, cheerful"
+     }
+    ]
+   ],
+   "refs": [
+    "host"
+   ],
+   "pos": {
+    "host": "t"
+   },
+   "buttons": [
+    {
+     "text": "COMMENT \"FUTARI\" FOR PART 2!",
+     "line": 0,
+     "delay": 2.6,
+     "x": 0.5,
+     "y": 0.84,
+     "fill": "#FFD43B",
+     "ink": "#141414"
+    }
+   ],
+   "sfx": [
+    {
+     "sound": "pop",
+     "at": "line:0+2.6",
+     "volume": 0.5
+    },
+    {
+     "sound": "chime",
+     "at": "line:1",
+     "volume": 0.35
+    }
+   ]
+  }
+ ]
+}
