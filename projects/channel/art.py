@@ -99,8 +99,20 @@ def layout():
     from PIL import Image, ImageDraw, ImageFilter
     sq = Image.open(OUT / "art-square.png").convert("RGB")
 
-    # profile picture: Hana's face and waving hand, it is shown as a small circle
-    cover(sq, 800, 800, 0.5, 0.5).save(OUT / "profile.png")
+    # profile picture: Hana's face and waving hand, it is shown as a small circle. The art is shrunk and set at the
+    # bottom of a blurred copy of itself, so her cat ears and hand sit well inside the circle.
+    prof = cover(sq, 800, 800).filter(ImageFilter.GaussianBlur(30))
+    k = 660
+    small = sq.resize((k, k), Image.LANCZOS)
+    edge = Image.new("L", small.size, 255)
+    ed = ImageDraw.Draw(edge)
+    for i in range(50):  # feather the top, left and right edges into the blurred copy
+        a = round(255 * i / 50)
+        ed.line((i, i, k - 1 - i, i), fill=a)
+        ed.line((i, i, i, k - 1), fill=a)
+        ed.line((k - 1 - i, i, k - 1 - i, k - 1), fill=a)
+    prof.paste(small, ((800 - k) // 2, 800 - k), edge)
+    prof.save(OUT / "profile.png")
 
     # banner: 2560x1440. Desktops show the band y 510-933 across the full width; phones show only its middle,
     # x 507-2053 (the "All devices" box), so the whole strip, Hana and the name are scaled to fit inside that box.
