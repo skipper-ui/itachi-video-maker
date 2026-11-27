@@ -34,8 +34,9 @@ ART = {
              "sky over a cozy anime city with floating manga pages and little sparkles", "1024x576"),
     # the banner's strip: a 4:1 picture for the band desktops show, with Hana's whole head inside the phone area
     "strip": ("wide panoramic banner illustration: slightly right of centre, " + HANA + " shown from the chest up, "
-              "smiling happily with both eyes open, her arms down and both hands hidden below the bottom edge of the picture "
-              "(no hands or fingers visible anywhere), her whole head and cat ears "
+              "smiling happily with both eyes open, giving a cute peace sign next to her cheek with one hand: exactly two "
+              "raised fingers (index and middle finger in a V), the ring finger, little finger and thumb folded down, "
+              "a normal five-fingered hand; her other hand below the picture; her whole head and cat ears "
               "fully visible in the middle of the picture height with space above them; the left half is a glowing pink "
               "and orange sunset sky over a cozy anime city with floating manga pages and little sparkles; on the far "
               "right, more of the city at sunset", "1792x448"),
