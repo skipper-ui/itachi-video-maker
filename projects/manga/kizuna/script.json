@@ -1,0 +1,4172 @@
+{
+ "title": "My Brother Gave Up Everything to Raise Me... For 5 Years, Not One Yen I Sent Reached Him | Manga Dub",
+ "character": "",
+ "style": "",
+ "width": 1920,
+ "height": 1080,
+ "title_card": false,
+ "tts": "kokoro",
+ "cast": {
+  "narrator": "af_sarah",
+  "mio": "af_sarah",
+  "miochild": "af_sky",
+  "haruto": "am_michael",
+  "saijo": "bm_george",
+  "kirishima": "bf_emma",
+  "tanaka": "bf_emma",
+  "gondo": "am_echo",
+  "mori": "bm_lewis",
+  "aunt": "af_nicole",
+  "kid": "af_sky",
+  "host": "af_sky"
+ },
+ "speed": 0.95,
+ "scene_pad": 0.7,
+ "emotive": {
+  "engine": "eleven_v3",
+  "cast": {
+   "narrator": "XrExE9yKIg1WjnnlVkGX",
+   "mio": "XrExE9yKIg1WjnnlVkGX",
+   "miochild": "cgSgspJ2msm6clMCkdW9",
+   "haruto": "iP95p4xoKVk53GoZ742B",
+   "saijo": "N2lVS1w4EtoT3dr4eOWO",
+   "kirishima": "Xb7hH8MSUJpSbSDYk0k2",
+   "tanaka": "vFLqXa8bgbofGarf6fZh",
+   "gondo": "pqHfZKP75CvOlQylNhV4",
+   "mori": "JBFqnCBsd6RMkjVDRZzb",
+   "aunt": "FGY2WhTYpPnrIDTdsKH5",
+   "kid": "cgSgspJ2msm6clMCkdW9",
+   "host": "vGQNBgLaiM3EdZtxIiuY"
+  },
+  "skip": [],
+  "fallback": true,
+  "priority": [
+   "narrator",
+   "mio",
+   "haruto",
+   "miochild",
+   "saijo",
+   "kirishima",
+   "gondo",
+   "tanaka",
+   "mori",
+   "aunt",
+   "kid"
+  ]
+ },
+ "caption": {
+  "mode": "boxes",
+  "font": "Comic Neue",
+  "fonts_dir": "assets/fonts",
+  "bubbles": {
+   "male": [
+    "haruto",
+    "saijo",
+    "gondo",
+    "mori",
+    "kid"
+   ],
+   "female": [
+    "mio",
+    "miochild",
+    "kirishima",
+    "tanaka",
+    "aunt",
+    "host"
+   ]
+  }
+ },
+ "images": {
+  "provider": "local",
+  "upscale": true
+ },
+ "characters": {
+  "haruto": "character reference portrait, waist-up front view of Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "miochild": "character reference portrait, waist-up front view of little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mioteen": "character reference portrait, waist-up front view of Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mio": "character reference portrait, waist-up front view of Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "saijo": "character reference portrait, waist-up front view of Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "kirishima": "character reference portrait, waist-up front view of Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "tanaka": "character reference portrait, waist-up front view of Mrs. Tanaka (a small kind 75-year-old Japanese landlady with gray curly hair and round glasses, wearing a green cardigan), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "gondo": "character reference portrait, waist-up front view of Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "mori": "character reference portrait, waist-up front view of Mr. Mori (a 50-year-old Japanese high school teacher with neat gray hair and glasses, wearing a brown suit), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "aunt": "character reference portrait, waist-up front view of Aunt Yoko (a 50-year-old Japanese woman with permed brown hair and a stern face, wearing a black mourning dress), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+  "host": "character reference portrait, waist-up front view of Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood), neutral expression, plain white background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark"
+ },
+ "music": {
+  "sound": "music_dream",
+  "volume": 0.03
+ },
+ "sources": [
+  "Original story and characters. Artwork drawn with AI (FLUX.2 klein, run locally)."
+ ],
+ "scenes": [
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) standing frozen in the rain on a narrow old Tokyo street at night, holding a thick brown envelope, shocked and pale, her umbrella fallen at her feet, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "For five years, I sent my brother money. Every single month.",
+     {
+      "tone": "quiet, shaken"
+     }
+    ],
+    [
+     "narrator",
+     "And tonight I found out that not one yen of it ever reached him.",
+     {
+      "tone": "breaking"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) in the rain at night, tears mixing with the rain on her face, eyes wide, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "While I was building a life on the other side of the world... he was alone. In pain. Waiting for a sister who never came.",
+     {
+      "tone": "heavy, trembling"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "an old faded family photo on a wooden shelf: a smiling Japanese couple in their 40s, an 18-year-old boy with messy black hair, and a little 6-year-old girl with pigtails on his shoulders, warm nostalgic light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My name is Mio Aoyama. And this is the story of my brother, Haruto.",
+     {
+      "tone": "soft, steady"
+     }
+    ],
+    [
+     "narrator",
+     "The person who gave up everything... for me.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) sitting on a tatami floor drawing with crayons while Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) does homework at a low table, both smiling, a cozy family living room in the evening, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I was six years old. My brother was eighteen. Twelve years apart.",
+     {
+      "tone": "warm, nostalgic"
+     }
+    ],
+    [
+     "narrator",
+     "Our parents used to joke that I was the surprise of their lives.",
+     {
+      "tone": "warm, a little laugh"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a cozy family living room in the evening, rain on the window, a landline telephone ringing on a side table, a family photo next to it, ominous mood, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That night, it was raining. Mom and Dad had gone to pick up a cake for my birthday.",
+     {
+      "tone": "slowing down, quiet"
+     }
+    ],
+    [
+     "narrator",
+     "Then the phone rang.",
+     {
+      "tone": "hushed"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) holding a landline phone to his ear, his face draining of color, eyes wide in shock, rain on the window behind him, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "...Yes. This is their son. ...What? Which hospital?",
+     {
+      "tone": "confused, then horrified"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) looking up from her drawing at her brother with a worried innocent face, a crayon in her hand, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "Onii-chan? Who was that? Are Mom and Dad coming home soon?",
+     {
+      "tone": "small, innocent, childlike voice"
+     }
+    ]
+   ],
+   "refs": [
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) kneeling down and hugging little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) tightly, his face hidden in her shoulder, shaking, rain outside, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Mio... let's put on your coat, okay? We have to go somewhere.",
+     {
+      "tone": "trying to keep his voice steady, failing"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a long empty hospital corridor at night with cold fluorescent lights and a row of plastic chairs, a small girl asleep across two chairs under a boy's school jacket, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "A truck had slid on the wet road. They were gone before the ambulance arrived.",
+     {
+      "tone": "heavy, quiet"
+     }
+    ],
+    [
+     "narrator",
+     "I didn't understand. I fell asleep in that hallway, waiting for them to come out.",
+     {
+      "tone": "small, sad"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) sitting alone on a hospital bench at night, elbows on his knees, staring at the floor with empty red eyes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My brother sat there all night. He didn't cry. Not in front of me.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "narrator",
+     "Years later, I learned he cried every night for a month. In the bathroom, with the water running, so I wouldn't hear.",
+     {
+      "tone": "aching"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a quiet Japanese funeral hall with white chrysanthemums and two framed photos of a smiling couple, relatives in black clothes, incense smoke, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "At the funeral, relatives I'd never met filled the room.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Aunt Yoko (a 50-year-old Japanese woman with permed brown hair and a stern face, wearing a black mourning dress) and two other relatives in black clothes whispering in a corner of a funeral hall, cold faces, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "aunt",
+     "We can't take her. We have our own children. And the boy is barely an adult.",
+     {
+      "tone": "cold, low"
+     }
+    ],
+    [
+     "aunt",
+     "There are facilities for children like her. It's the sensible thing.",
+     {
+      "tone": "cold, matter-of-fact"
+     }
+    ]
+   ],
+   "refs": [
+    "aunt"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) hiding behind a pillar at a funeral hall, clutching a stuffed rabbit, tears in her eyes, overhearing, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't know what a facility was. But I knew it meant I'd be sent away.",
+     {
+      "tone": "small, scared"
+     }
+    ]
+   ],
+   "refs": [
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) stepping between the relatives and a frightened little girl, his face firm and angry, funeral hall, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "She's not going anywhere.",
+     {
+      "tone": "firm, low"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) with fierce determined eyes, facing the relatives, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "aunt",
+     "Haruto, be realistic. You're eighteen. You're still in school. How will you feed her?",
+     {
+      "tone": "sharp"
+     }
+    ],
+    [
+     "haruto",
+     "I'll figure it out. She stays with me. She's my sister.",
+     {
+      "tone": "steady, absolute"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) kneeling and hugging little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress), who clings to his neck crying, white funeral flowers behind them, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "Onii-chan, don't leave me... please don't leave me too...",
+     {
+      "tone": "sobbing, childlike"
+     }
+    ],
+    [
+     "haruto",
+     "Never. I'm right here, Mio. I'm not going anywhere. I promise.",
+     {
+      "tone": "gentle, choked"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mr. Mori (a 50-year-old Japanese high school teacher with neat gray hair and glasses, wearing a brown suit) sitting across a desk from Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) in an empty school staff room, an envelope of withdrawal papers on the desk, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mori",
+     "Haruto, you're top of your class. You have a university scholarship waiting for you.",
+     {
+      "tone": "pleading, serious"
+     }
+    ],
+    [
+     "mori",
+     "If you quit now, you're throwing your whole future away.",
+     {
+      "tone": "earnest"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mori"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) smiling sadly at his teacher, sunlight from a window, staff room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "My future can wait, sensei. My sister's dinner can't.",
+     {
+      "tone": "calm, sad smile"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) bowing deeply to Mr. Mori (a 50-year-old Japanese high school teacher with neat gray hair and glasses, wearing a brown suit) in a school hallway, the teacher looking heartbroken, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Thank you for everything.",
+     {
+      "tone": "respectful, quiet"
+     }
+    ],
+    [
+     "narrator",
+     "He left school two months before graduation. He never got to wear his diploma.",
+     {
+      "tone": "quiet, aching"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mori"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) riding an old bicycle loaded with newspapers through a dark empty street at 4 a.m., his breath white in the cold, streetlights, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "From that day, my brother worked three jobs.",
+     {
+      "tone": "steady"
+     }
+    ],
+    [
+     "narrator",
+     "Newspaper delivery at four in the morning.",
+     {
+      "tone": "steady"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) carrying heavy cardboard boxes in a busy warehouse, sweating, wearing work gloves, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "A warehouse during the day.",
+     {
+      "tone": "steady"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) washing a tall stack of bowls at the sink of a small ramen shop, steam rising, late at night, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And dishes at a ramen shop until midnight.",
+     {
+      "tone": "steady"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket) glaring at Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) across the counter of a ramen shop with his arms crossed, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "gondo",
+     "You're the kid who keeps showing up at four a.m. with newspapers, aren't you? When do you sleep?",
+     {
+      "tone": "gruff"
+     }
+    ],
+    [
+     "haruto",
+     "On the train, sir. Fifteen minutes. It's enough.",
+     {
+      "tone": "polite, tired smile"
+     }
+    ]
+   ],
+   "refs": [
+    "gondo",
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket) sliding a big bowl of ramen across the counter to Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) with a gruff expression, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "gondo",
+     "Eat. Then take this home for your sister. Don't argue with me.",
+     {
+      "tone": "gruff, kind underneath"
+     }
+    ],
+    [
+     "haruto",
+     "...Thank you, sir.",
+     {
+      "tone": "moved, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "gondo",
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a tiny old one-room apartment with a tatami floor, two futons, a small low table and a children's drawing taped to the wall, warm evening light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "We moved into a tiny apartment by the train tracks. One room. Two futons.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "narrator",
+     "To me, it was a palace.",
+     {
+      "tone": "warm, smiling"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) clumsily trying to tie little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress)'s hair into pigtails in the morning, both laughing, one pigtail much higher than the other, inside a tiny old one-room Japanese apartment with a tatami floor, a low wooden table and a small kitchen corner, warm lamp light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "Onii-chan, they're crooked again!",
+     {
+      "tone": "giggling, childlike"
+     }
+    ],
+    [
+     "haruto",
+     "Crooked is the style now. All the cool girls have crooked pigtails.",
+     {
+      "tone": "playful"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of an open lunchbox with little octopus-shaped sausages, a rolled omelet and a smiling face made of seaweed on rice, on a small wooden table, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He learned to cook from library books. Every day, my lunch had octopus sausages.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "narrator",
+     "His own lunch was usually rice and nothing else.",
+     {
+      "tone": "softer"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) proudly showing her lunchbox to classmates at a little elementary school desk, other kids leaning in amazed, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "My onii-chan made it! He's the best cook in the whole world!",
+     {
+      "tone": "proud, childlike"
+     }
+    ]
+   ],
+   "refs": [
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) running across an elementary school sports field in his dirty work clothes, waving, out of breath, parents and children watching, sunny sports day with flags, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On sports day, every other kid had two parents cheering. I had my brother.",
+     {
+      "tone": "warm"
+     }
+    ],
+    [
+     "narrator",
+     "He ran there straight from the warehouse. He was late, and covered in dust, and the loudest one there.",
+     {
+      "tone": "laughing softly"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) running in a children's race with a huge smile while Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) cheers wildly behind the rope, sunny sports day, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Go, Mio! Go! That's my sister! That's my sister!",
+     {
+      "tone": "shouting, overjoyed"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) asleep at a low table with her head on a picture book, while Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) gently covers her with a blanket, late at night, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Some nights he came home so tired that he fell asleep sitting up.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "narrator",
+     "But every night, before he slept, he checked on me.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron)'s rough cracked hands holding a small cup of tea under a dim lamp, bandages on two fingers, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "His hands were always cracked. In winter they bled.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "When I asked, he'd say, it's nothing. Just dry skin.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) running into the apartment and hugging Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) around the waist as he comes home exhausted at night, he smiles down at her, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "Welcome home, onii-chan!",
+     {
+      "tone": "bright, childlike"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) looking down with a tired but completely happy smile, warm lamp light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He told me once that no matter how bad the day was... when I smiled and said welcome home, it all washed away.",
+     {
+      "tone": "tender"
+     }
+    ],
+    [
+     "haruto",
+     "I'm home, Mio. ...Yeah. I'm home.",
+     {
+      "tone": "warm, tired, happy"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) counting coins on the counter of a small bakery, a tiny strawberry shortcake in a box, the baker watching kindly, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On my seventh birthday, he counted coins at the bakery for ten minutes.",
+     {
+      "tone": "warm, sad"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) gasping with joy at a tiny strawberry shortcake with one candle on a low table, Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) grinning beside her, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Happy birthday, Mio! Make a wish!",
+     {
+      "tone": "warm, excited"
+     }
+    ],
+    [
+     "miochild",
+     "Onii-chan, you eat the strawberry! You never eat cake!",
+     {
+      "tone": "insistent, childlike"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) gently clipping a small yellow star hair clip into little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress)'s hair, she beams, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "And this is from me. A star. Because you're my lucky star.",
+     {
+      "tone": "gentle, a little shy"
+     }
+    ],
+    [
+     "narrator",
+     "It cost a hundred yen. I've worn it every day of my life.",
+     {
+      "tone": "soft, emotional"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) handing her brother a crayon drawing of a boy in a red cape holding a little girl's hand, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "I made you a present too! It's you! You're a superhero!",
+     {
+      "tone": "proud, childlike"
+     }
+    ]
+   ],
+   "refs": [
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) holding a child's crayon drawing, tears running down his face, smiling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "...This is the best present I've ever gotten.",
+     {
+      "tone": "crying, laughing"
+     }
+    ],
+    [
+     "narrator",
+     "That was the first time I saw my brother cry. He said it was the onions. There were no onions.",
+     {
+      "tone": "fond, teary"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a child's crayon drawing taped to an old apartment wall: a boy in a red cape holding a little girl's hand, with a sun and hearts around them, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He taped it to the wall. It stayed there for sixteen years.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) walking little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) to the gate of an elementary school in spring, she wears a big red school backpack, cherry blossoms, other children with their parents, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "On my first day of school, every other child came with a mother or a father.",
+     {
+      "tone": "soft"
+     }
+    ],
+    [
+     "miochild",
+     "Onii-chan... the other kids all have moms.",
+     {
+      "tone": "small, uncertain"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) crouching down to little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress)'s eye level at a school gate, straightening her backpack straps with a big grin, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "And you have me. That's way cooler. I can carry you on my back and I can make octopus sausages.",
+     {
+      "tone": "playful, warm"
+     }
+    ],
+    [
+     "miochild",
+     "...Yeah! That's way cooler!",
+     {
+      "tone": "giggling, childlike"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) running through a dark rainy street at night carrying little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) wrapped in a blanket, her face flushed with fever, desperate, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "When I was eight, I got a terrible fever in the middle of the night.",
+     {
+      "tone": "tense"
+     }
+    ],
+    [
+     "narrator",
+     "We had no car. No money for a taxi. So he ran. Two kilometers, in the rain, with me on his back.",
+     {
+      "tone": "intense"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) soaking wet, sitting on a hospital chair beside a small bed where little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) sleeps, holding her small hand in both of his, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Please... she's all I have. Please let her be okay.",
+     {
+      "tone": "whispering, praying"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) wobbling on a small old bicycle on a riverside path at sunset while Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) runs behind holding the seat, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Keep pedaling! I've got you! I won't let go!",
+     {
+      "tone": "encouraging"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) riding a bicycle alone along a riverside path at sunset, laughing, while Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) stands far behind with his hands empty, smiling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "Onii-chan, I'm doing it! Don't let go!",
+     {
+      "tone": "excited, childlike"
+     }
+    ],
+    [
+     "haruto",
+     "I let go ages ago, Mio! That's all you!",
+     {
+      "tone": "proud, laughing"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a tiny tabletop Christmas tree made of a branch with paper decorations on a low table in a small apartment, little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) opening a small wrapped present with joy, Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) watching, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Our Christmas tree was a branch from the park, decorated with origami.",
+     {
+      "tone": "warm, fond"
+     }
+    ],
+    [
+     "narrator",
+     "Every year he gave me a present. Every year he said Santa had dropped it off at the ramen shop.",
+     {
+      "tone": "fond laugh"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) and little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) with their hands pressed together, praying in front of a family grave stone with flowers and incense, autumn, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Mom. Dad. Mio learned her times tables this year. She's smarter than me already.",
+     {
+      "tone": "gentle, proud"
+     }
+    ],
+    [
+     "miochild",
+     "And onii-chan burned the rice three times!",
+     {
+      "tone": "teasing, childlike"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) sitting at the low table at night with a pile of bills and a calculator, his head in his hand, a single dim lamp, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Of course, it wasn't always warm.",
+     {
+      "tone": "quiet"
+     }
+    ],
+    [
+     "narrator",
+     "Some months, the bills piled up faster than he could pay them.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) eating a bowl of rice and miso soup at the low table while Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) sits across from her with nothing, smiling, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "Onii-chan, aren't you eating?",
+     {
+      "tone": "curious, childlike"
+     }
+    ],
+    [
+     "haruto",
+     "I already ate at work. I'm so full. Eat up.",
+     {
+      "tone": "light, casual lie"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) alone at night drinking a glass of tap water at the sink, his stomach empty, a tired face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He hadn't eaten. He never ate on those nights. I only figured it out years later.",
+     {
+      "tone": "aching"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) kneeling in the doorway of a cramped apartment, bowing his head low to an angry man in a suit holding a paper, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "When the landlord came for late rent, he bowed until his forehead touched the floor.",
+     {
+      "tone": "quiet, pained"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) kneeling with a fever, flushed and sweating, pulling on his work shoes at dawn while little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) tugs his sleeve with a worried face, inside a tiny old one-room Japanese apartment with a tatami floor, a low wooden table and a small kitchen corner, warm lamp light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "miochild",
+     "You're hot, onii-chan! You have a fever! Stay home!",
+     {
+      "tone": "worried, childlike"
+     }
+    ],
+    [
+     "haruto",
+     "If I stay home, we don't eat. Don't worry. Big brothers don't get sick.",
+     {
+      "tone": "weak smile"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) collapsed asleep on the floor just inside the apartment door still wearing his shoes, little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) covering him with her small blanket, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That night he came home and collapsed in the doorway. I covered him with my blanket and sat with him until morning.",
+     {
+      "tone": "soft, sad"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) studying hard at the low table late at night with textbooks and notes, a small yellow star hair clip, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Years passed. I grew up.",
+     {
+      "tone": "steady"
+     }
+    ],
+    [
+     "narrator",
+     "And the older I got, the more I understood what he'd given up.",
+     {
+      "tone": "thoughtful"
+     }
+    ]
+   ],
+   "refs": [
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "two snobby teenage girls in school uniforms laughing and pointing in a school hallway, Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) turning around angrily, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "In middle school, some girls found out my brother washed dishes for a living.",
+     {
+      "tone": "cool"
+     }
+    ]
+   ],
+   "refs": [
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) facing two teenage girls in a school hallway with her fists clenched and a fierce proud face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Yes, my brother washes dishes. And delivers newspapers. And works in a warehouse.",
+     {
+      "tone": "fierce"
+     }
+    ],
+    [
+     "mio",
+     "He's done three jobs a day since he was eighteen so I could stand here. What have you ever done?",
+     {
+      "tone": "fierce, proud"
+     }
+    ]
+   ],
+   "refs": [
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) standing outside a school gate at sunset, waving shyly at Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) who runs to him smiling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That evening I took his arm and walked home with him the long way. I wanted everyone to see.",
+     {
+      "tone": "warm, proud"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) standing in the apartment holding a part-time job flyer, facing Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) with determination, inside a tiny old one-room Japanese apartment with a tatami floor, a low wooden table and a small kitchen corner, warm lamp light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan, I'm fifteen now. I can work part-time too. Let me help.",
+     {
+      "tone": "determined, teenage"
+     }
+    ],
+    [
+     "haruto",
+     "Absolutely not.",
+     {
+      "tone": "firm"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) gently tapping Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform)'s forehead with one finger, smiling, inside a tiny old one-room Japanese apartment with a tatami floor, a low wooden table and a small kitchen corner, warm lamp light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Your job is to study. Mine is to worry about money. Don't steal my job.",
+     {
+      "tone": "gentle, teasing"
+     }
+    ],
+    [
+     "mio",
+     "...You're so stubborn.",
+     {
+      "tone": "pouting, fond"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) at a desk in a library late in the evening, surrounded by books, studying with fierce focus, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "So I studied. Harder than anyone. If he wouldn't let me pay him back with money... I'd pay him back with my future.",
+     {
+      "tone": "determined"
+     }
+    ]
+   ],
+   "refs": [
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) looking at an expensive cram school brochure with a sad face, then hiding it in a drawer, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I wanted to go to cram school for the entrance exams. I knew we couldn't afford it, so I never asked.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) handing Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) an envelope with a big grin, she looks shocked, inside a tiny old one-room Japanese apartment with a tatami floor, a low wooden table and a small kitchen corner, warm lamp light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Cram school fees. For the whole year. Don't ask where I got it. I won the lottery.",
+     {
+      "tone": "proud, casual"
+     }
+    ],
+    [
+     "mio",
+     "Onii-chan... we can't...",
+     {
+      "tone": "shocked, emotional"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of an old gold wristwatch in a pawn shop display case with a price tag, dim light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Years later, I found the pawn shop receipt. He'd sold Dad's watch. The only thing he had left of our father.",
+     {
+      "tone": "aching"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) holding an acceptance letter in front of a mailbox, gasping with tears of joy, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "At eighteen, I got a full scholarship to the best university in Tokyo.",
+     {
+      "tone": "excited"
+     }
+    ]
+   ],
+   "refs": [
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) running into a ramen shop waving a letter while Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) drops a bowl in shock, Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket) grinning behind the counter, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan! I got in! Full scholarship!",
+     {
+      "tone": "overjoyed, breathless"
+     }
+    ],
+    [
+     "haruto",
+     "You... you did it? You really did it?!",
+     {
+      "tone": "stunned, overjoyed"
+     }
+    ]
+   ],
+   "refs": [
+    "gondo",
+    "haruto",
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket) laughing and banging the counter while Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) lifts Mio (a 15-year-old Japanese girl with shoulder-length straight black hair, a small yellow star hair clip, big dark eyes, wearing a navy sailor school uniform) off the ground in a hug, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "gondo",
+     "Free ramen for everyone tonight! The kid's sister is a genius!",
+     {
+      "tone": "booming, delighted"
+     }
+    ]
+   ],
+   "refs": [
+    "gondo",
+    "haruto",
+    "mioteen"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a Japanese university graduation ceremony outdoors under cherry blossoms, graduates in suits and hakama, families taking photos, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Four years later, I graduated top of my class.",
+     {
+      "tone": "proud"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) standing among the parents at a graduation ceremony under cherry blossoms, beaming with pride, his old suit a little too big, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My brother came in the same black suit he wore to our parents' funeral. It was the only one he owned.",
+     {
+      "tone": "tender"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) in a graduation hakama hugging Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) under cherry blossoms, both laughing with tears, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "This is yours too, onii-chan. Every bit of it.",
+     {
+      "tone": "emotional"
+     }
+    ],
+    [
+     "haruto",
+     "No. It's all you. I just made the lunches.",
+     {
+      "tone": "proud, teary laugh"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) and Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) posing for a photo together under cherry blossoms, she holds up her diploma, he gives an awkward peace sign, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He'd never gotten his own diploma. That day, he held mine like it was the most precious thing in the world.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) at a laptop in a bright modern startup office, colleagues around her, focused and energetic, inside a bright modern Tokyo startup office with glass walls and laptops, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I joined a small tech company called Stellaris. Fifty employees, and a big dream.",
+     {
+      "tone": "bright"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) presenting confidently in front of a glass whiteboard covered in charts to a small team, inside a bright modern Tokyo startup office with glass walls and laptops, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Within a year, my project became the company's biggest success.",
+     {
+      "tone": "proud"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) leaning on the glass doorway of a meeting room, watching with a charming smile and narrow calculating eyes, inside a bright modern Tokyo startup office with glass walls and laptops, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That's when Kaname Saijo noticed me.",
+     {
+      "tone": "neutral, a hint of ominous"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) shaking hands with Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) with a dazzling smile, she looks surprised and flattered, inside a bright modern Tokyo startup office with glass walls and laptops, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "Ms. Aoyama. Kaname Saijo, head of overseas expansion. Your project was brilliant.",
+     {
+      "tone": "smooth, charming"
+     }
+    ]
+   ],
+   "refs": [
+    "mio",
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) sitting across from Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) in a glass meeting room, sliding a folder toward her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "We're opening our new headquarters in New York. I want you to lead the launch team.",
+     {
+      "tone": "smooth, confident"
+     }
+    ]
+   ],
+   "refs": [
+    "mio",
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) staring at a folder with a photo of the New York skyline, stunned, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "New York...? Me?",
+     {
+      "tone": "stunned, breathless"
+     }
+    ],
+    [
+     "narrator",
+     "It was everything I'd ever dreamed of. And I couldn't say yes.",
+     {
+      "tone": "conflicted"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) looking down at her hands, hesitant and torn, in a glass meeting room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "I'm honored. But... I have a brother. He raised me alone. I can't just leave him.",
+     {
+      "tone": "hesitant, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) leaning forward with a warm understanding smile, his eyes cold behind silver glasses, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "Ms. Aoyama. Think about it. What does your brother want more than anything?",
+     {
+      "tone": "gentle, persuasive"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) smiling gently, his glasses glinting, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "For you to succeed. And with a New York salary, you could finally give him the life he gave you.",
+     {
+      "tone": "smooth"
+     }
+    ],
+    [
+     "saijo",
+     "He could quit those jobs. He could rest. Isn't that the best way to thank him?",
+     {
+      "tone": "silky, persuasive"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) biting her lip, thinking hard, sunlight through the glass walls of a meeting room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He knew exactly which words would work on me.",
+     {
+      "tone": "bitter, knowing"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) looking up at Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) with serious determined eyes across a meeting table, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Then I have one condition.",
+     {
+      "tone": "firm"
+     }
+    ]
+   ],
+   "refs": [
+    "mio",
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) with a determined face, a small yellow star hair clip in her hair, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Promise me my brother will be taken care of. That every month, my money reaches him. That he's okay.",
+     {
+      "tone": "serious, firm"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) smiling warmly and placing a hand on his chest like a promise, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "You have my word. The company has a family support program. I'll handle the transfers myself.",
+     {
+      "tone": "warm, sincere-sounding"
+     }
+    ],
+    [
+     "saijo",
+     "And I'll check on him personally. You just focus on your work.",
+     {
+      "tone": "smooth"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) and Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) shaking hands over a signed contract on a glass table, he smiles, she looks hopeful, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I believed him. I had no reason not to.",
+     {
+      "tone": "quiet, regretful"
+     }
+    ]
+   ],
+   "refs": [
+    "mio",
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) cheerfully serving two plates of curry rice at the low table, Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) sitting nervously, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Curry tonight! Extra potatoes, the way you like it.",
+     {
+      "tone": "cheerful"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) holding a spoon without eating, looking down nervously at the table, her brother noticing, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "...Mio? What's wrong? You haven't touched it.",
+     {
+      "tone": "concerned, gentle"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) looking up at her brother with nervous eyes, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan... the company wants to send me to New York. To lead the new headquarters.",
+     {
+      "tone": "nervous, quiet"
+     }
+    ],
+    [
+     "mio",
+     "It would be for a long time. Years, maybe.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) freezing with his spoon halfway to his mouth, his eyes widening, a flicker of fear, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "For one second, I saw it on his face. The fear of being alone.",
+     {
+      "tone": "aching"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) putting his spoon down and smiling the widest smile, eyes shining, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "New York? Mio, that's incredible! That's your dream!",
+     {
+      "tone": "overjoyed, slightly too bright"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) reaching across the table for her brother's hand, worried, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "But you'll be alone. Who'll make sure you eat? Who'll say welcome home?",
+     {
+      "tone": "worried, emotional"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) laughing softly and ruffling Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan)'s hair across the low table, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Hey. I'm the big brother here. I'll be fine.",
+     {
+      "tone": "warm, reassuring"
+     }
+    ],
+    [
+     "haruto",
+     "Go. Go and shine, Mio. That's all I ever wanted.",
+     {
+      "tone": "tender"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) standing alone at the small sink at night washing two plates, his back to the room, shoulders trembling slightly, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That night, I heard the water running in the kitchen for a very long time.",
+     {
+      "tone": "soft, aching"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) kneeling beside an open suitcase at night carefully packing snacks, socks and a sealed letter, Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) asleep on a futon nearby, inside a tiny old one-room Japanese apartment at night, tatami floor, a low wooden table, one dim lamp, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The night before I left, he stayed up packing my suitcase. Snacks. Warm socks. And a letter.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a busy international airport departure hall in Tokyo, big windows and planes outside, travelers with suitcases, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Three weeks later, he took me to the airport.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) holding out a small red omamori good-luck charm to Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan), who has a suitcase, airport departure gate, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Here. A charm for safe travels. I got it at the shrine by our old house.",
+     {
+      "tone": "gentle"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) clutching a small red omamori charm to her chest, tears in her eyes, airport, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "I'll send you money every month. Quit at least one job, okay? Promise me. Sleep more. Eat real food.",
+     {
+      "tone": "tearful, insistent"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) smiling and nodding at the airport, his eyes glistening, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Yeah, yeah. Don't worry about me. Worry about New York pizza.",
+     {
+      "tone": "teasing, holding back tears"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) hugging Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) tightly at the airport departure gate, crying, other travelers passing by, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Thank you, onii-chan. For everything. For my whole life.",
+     {
+      "tone": "sobbing"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) waving at the airport gate with a big smile as she walks away, seen from behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Mio! Make lots of friends! Call me when you land!",
+     {
+      "tone": "calling out, cheerful"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a slightly too-big old black suit and a white shirt) alone at the airport after she has gone, his smile slowly falling, his hand still half-raised, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't look back. If I had, I would have seen his face.",
+     {
+      "tone": "regretful, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) in an airplane window seat at night reading a handwritten letter, tears running down her face, clouds outside, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Mio. You were never a burden. Not for one day. You were the reason I got up every morning.",
+     {
+      "tone": "gentle, letter being read"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a handwritten letter held in shaking hands on an airplane tray table, a small red omamori beside it, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "So go and be happy. Don't look back. That's the only thing I'll ever ask of you. Your big brother, Haruto.",
+     {
+      "tone": "gentle, smiling through tears"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 22-year-old Japanese woman with long straight black hair, a small yellow star hair clip, big dark eyes and a bright smile, wearing a white blouse and a beige cardigan) pressing a letter to her chest on an airplane at night, crying, the window dark, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I cried across the whole Pacific Ocean.",
+     {
+      "tone": "tearful, small laugh"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "wide view of the New York City skyline on a bright morning, yellow taxis, busy streets, skyscrapers, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "New York was everything I'd imagined. Loud, fast, and impossible.",
+     {
+      "tone": "energetic"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) walking confidently into a huge glass office lobby in New York with a coffee and a laptop bag, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I worked like my brother had taught me. Earlier than everyone. Later than everyone.",
+     {
+      "tone": "determined"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) leading a meeting of international colleagues around a long table, pointing at a big screen, inside a sleek glass corner office high above New York City, the Manhattan skyline through floor-to-ceiling windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My team grew from five people to five hundred.",
+     {
+      "tone": "proud"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) at a laptop late at night alone in a glass office, setting up a bank transfer, a small red charm on her desk, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And every month, on payday, I sent half my salary home. Through Mr. Saijo's family support program, just as he'd promised.",
+     {
+      "tone": "warm, trusting"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) on a video call on a laptop screen, smiling reassuringly, Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) listening, inside a sleek glass corner office high above New York City, the Manhattan skyline through floor-to-ceiling windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "Your brother's doing wonderfully. He quit two of his jobs. He even moved to a bigger place.",
+     {
+      "tone": "smooth, warm"
+     }
+    ]
+   ],
+   "refs": [
+    "mio",
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) smiling with relief at a laptop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Really? Oh, thank goodness. Thank you, Mr. Saijo.",
+     {
+      "tone": "relieved, grateful"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a laptop screen in a glass office showing a blurry photo of a man seen from behind standing outside a nice new apartment building, a coffee cup beside the laptop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "Here's a photo I took last week. Nice place, isn't it? He didn't want his picture taken, of course. Shy as ever.",
+     {
+      "tone": "smooth, chuckling"
+     }
+    ],
+    [
+     "narrator",
+     "It was blurry, and from behind. I was too happy to notice.",
+     {
+      "tone": "quiet, regretful"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of a smartphone screen showing a short chat message with a smiling emoji, a desk in a glass office behind it, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "At first, my brother and I talked every week.",
+     {
+      "tone": "warm"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) laughing on the phone in a glass office at night, kicking off her heels, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan, guess what? They gave me my own team! Five people!",
+     {
+      "tone": "excited"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) on an old phone at the low table of the small apartment, smiling with tears in his eyes, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Five people? My sister's a boss! Are you eating? Are you sleeping?",
+     {
+      "tone": "proud, warm"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on the phone in a busy office, distracted by colleagues waving papers at her, inside a sleek glass corner office high above New York City, the Manhattan skyline through floor-to-ceiling windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Sorry, onii-chan, I have a meeting. I'll call you this weekend, okay?",
+     {
+      "tone": "rushed, apologetic"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on the phone at her desk in New York, frowning slightly while typing on her laptop at the same time, inside a sleek glass corner office high above New York City, the Manhattan skyline through floor-to-ceiling windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "About a year after I left, I called him one night. His voice sounded strange. Thin.",
+     {
+      "tone": "uneasy"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) lying on a futon in a dark small apartment with a cast on his leg, holding an old phone to his ear, smiling painfully, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan? You sound tired. Are you okay?",
+     {
+      "tone": "slightly worried, distracted"
+     }
+    ],
+    [
+     "haruto",
+     "Me? I'm fine. Just a little cold. Don't worry about me. How's work?",
+     {
+      "tone": "forcing cheer"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on the phone while reading an email on her laptop, distracted, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Busy! Super busy. Okay, rest up. Love you. Bye!",
+     {
+      "tone": "rushed, cheerful"
+     }
+    ],
+    [
+     "narrator",
+     "I hung up in under a minute. I didn't hear what he wasn't saying.",
+     {
+      "tone": "regretful"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) asleep at her desk at night, surrounded by documents, the phone face down beside her, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Then every two weeks. Then every month. Then...",
+     {
+      "tone": "slowing, regretful"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a smartphone on a desk with an unread message notification, unanswered, in a dark glass office, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I always meant to call back. I always thought there would be time.",
+     {
+      "tone": "heavy, regretful"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on a big stage giving a presentation to a huge audience, a giant screen behind her, spotlights, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Stellaris exploded. Our product changed the industry.",
+     {
+      "tone": "proud, intense"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a tall skyscraper in New York with a glowing star-shaped company logo shape on top, at dusk, no letters, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Within three years, we were one of the leading companies in the world.",
+     {
+      "tone": "proud"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) in a corner office looking out over New York at sunset, holding a small red omamori charm, inside a sleek glass corner office high above New York City, the Manhattan skyline through floor-to-ceiling windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I was promoted to director. My name was in business magazines.",
+     {
+      "tone": "proud, hollow"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) raising a glass of champagne at a glamorous party in a penthouse, smiling coldly at the crowd, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Mr. Saijo was promoted too. Vice president. He was always smiling.",
+     {
+      "tone": "neutral, uneasy"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) alone in a dark office at night, looking at a family photo on her phone, the city lights behind her, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "One evening, four years after I left Japan, I realized I hadn't heard my brother's voice in over a year.",
+     {
+      "tone": "quiet, guilty"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) smiling softly with a phone to her ear, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I wanted to surprise him.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a smartphone screen showing a call failing, a red icon, dark background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "...'The number you have dialed is not in service'?",
+     {
+      "tone": "confused"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) calling again and again, frowning at her phone, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I tried again. And again. Ten times. Twenty.",
+     {
+      "tone": "growing worry"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on the phone with a worried face, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Mr. Saijo, I can't reach my brother. His number's been disconnected. Has something happened?",
+     {
+      "tone": "worried, tense"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) on the phone in a dark luxury apartment, his face calm but his eyes cold, a glass of wine in his hand, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "Ah, he probably just changed carriers. There's nothing to worry about.",
+     {
+      "tone": "smooth, light"
+     }
+    ],
+    [
+     "saijo",
+     "I'll look into it. You've got the board meeting tomorrow. Focus on that.",
+     {
+      "tone": "smooth"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) lowering his phone with a cold expression, his smile completely gone, dark room, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He said there was nothing to worry about.",
+     {
+      "tone": "uneasy"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) lying awake in bed in a dark New York apartment, staring at the ceiling, city light through the curtains, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "But I couldn't sleep. Something was wrong. I could feel it.",
+     {
+      "tone": "uneasy"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) rushing through an airport terminal at night with a small suitcase, determined and anxious, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Two days later, I was on a plane to Tokyo.",
+     {
+      "tone": "urgent"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "an old two-story wooden apartment building by train tracks in Tokyo at dusk, a small for-rent sign on one door, a train passing, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The building by the tracks looked exactly the same.",
+     {
+      "tone": "quiet, nervous"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) knocking on the door of an old apartment with a nervous hopeful smile, a gift bag in her hand, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan? It's me! Surprise!",
+     {
+      "tone": "nervous, hopeful"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) looking through a dusty window into an empty one-room apartment with bare tatami and no furniture, shocked, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The room was empty. No futons. No table. No drawing on the wall.",
+     {
+      "tone": "hollow, stunned"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mrs. Tanaka (a small kind 75-year-old Japanese landlady with gray curly hair and round glasses, wearing a green cardigan) coming out of a neighboring door with a watering can, peering at the visitor through round glasses, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "tanaka",
+     "Oh my... is that little Mio? Haruto's Mio? Look how grown up you are!",
+     {
+      "tone": "surprised, warm"
+     }
+    ]
+   ],
+   "refs": [
+    "tanaka"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) hurrying toward Mrs. Tanaka (a small kind 75-year-old Japanese landlady with gray curly hair and round glasses, wearing a green cardigan) on the outdoor walkway of an old apartment building, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Mrs. Tanaka! Where's my brother? Did he move?",
+     {
+      "tone": "anxious"
+     }
+    ]
+   ],
+   "refs": [
+    "mio",
+    "tanaka"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mrs. Tanaka (a small kind 75-year-old Japanese landlady with gray curly hair and round glasses, wearing a green cardigan) looking sad and uncomfortable, holding a watering can, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "tanaka",
+     "He left about a year ago, dear. He couldn't afford the rent anymore.",
+     {
+      "tone": "gentle, sad"
+     }
+    ],
+    [
+     "tanaka",
+     "I told him he could pay late, but he wouldn't hear of it. Said he didn't want to be a burden.",
+     {
+      "tone": "sad"
+     }
+    ]
+   ],
+   "refs": [
+    "tanaka"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) frozen in shock on the walkway, her gift bag slipping from her fingers, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Couldn't... afford the rent? That's impossible.",
+     {
+      "tone": "stunned, whispering"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) gripping the walkway railing, shaking, the train tracks behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I'd sent him half my salary every month for four years. He should have had more money than he could spend.",
+     {
+      "tone": "confused, rising panic"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on her phone on the old apartment walkway at dusk, her face tense, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Mr. Saijo. I'm in Tokyo. My brother lost his apartment a year ago. Where has my money been going?",
+     {
+      "tone": "sharp, shaking"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) on the phone in a dark office with a regretful expression that does not reach his cold eyes, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "...Ms. Aoyama. I was hoping you'd never have to find out.",
+     {
+      "tone": "sighing, regretful"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) on the phone, speaking slowly with fake sympathy, glasses glinting, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "Your brother started gambling. Pachinko. Horse racing. It got worse every month.",
+     {
+      "tone": "slow, grave"
+     }
+    ],
+    [
+     "saijo",
+     "He spent everything you sent. Then he borrowed more. He begged me not to tell you.",
+     {
+      "tone": "fake sympathy"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) with her eyes wide and her face pale, the phone against her ear, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "No... no. Onii-chan would never...",
+     {
+      "tone": "disbelief, breaking"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Kaname Saijo (a handsome 36-year-old Japanese businessman with slicked-back black hair, thin silver-rimmed glasses, a charming smile and cold narrow eyes, wearing an expensive navy three-piece suit) on the phone, looking at a sheet of paper with a faint smile, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "saijo",
+     "I have the loan documents, if you want to see them. I'm so sorry. I tried to help him.",
+     {
+      "tone": "smooth"
+     }
+    ]
+   ],
+   "refs": [
+    "saijo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) sitting on the outdoor stairs of the old apartment at night, staring at nothing, the phone in her lap, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The brother who wouldn't let me work part-time. Who skipped dinner so I could eat.",
+     {
+      "tone": "hollow"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) with angry tears in her eyes, jaw clenched, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He'd thrown it all away? Everything I worked for? On gambling?",
+     {
+      "tone": "rising anger"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) standing up from the stairs, wiping her eyes hard, her face turning cold, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Fine. If that's what he wanted... then he can have it.",
+     {
+      "tone": "cold, hurt"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) walking away down a dark old street without looking back, her heels clicking, a train passing behind, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't look for him. I didn't want to see him. I went back to New York that same week.",
+     {
+      "tone": "cold, regretful"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) at her desk in New York putting a small red omamori charm into a drawer and closing it, cold face, inside a sleek glass corner office high above New York City, the Manhattan skyline through floor-to-ceiling windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And I put his charm in a drawer.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on a huge stage receiving an award under bright spotlights, applause, a giant screen behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "One more year passed. Stellaris became the number one company in the world.",
+     {
+      "tone": "flat, empty"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) alone in a vast empty penthouse at night, looking out over the city, a glass of water in her hand, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I had everything. Money. A title. A view of the whole city.",
+     {
+      "tone": "hollow"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit)'s reflection in a dark window, her face tired and lonely, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And no one to say welcome home to.",
+     {
+      "tone": "aching, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a sunny afternoon in Central Park in New York, autumn trees, families walking on the paths, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "One Sunday, I was walking in Central Park.",
+     {
+      "tone": "calm"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "a little girl of about five falling down on a park path and crying, holding her scraped knee, autumn park, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "A little girl tripped on the path and started crying.",
+     {
+      "tone": "calm"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "a boy of about nine kneeling next to a crying little girl in a park, wiping her tears with his sleeve, autumn park, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kid",
+     "Hey, hey. Don't cry. Big brother's here. Come on, get on my back.",
+     {
+      "tone": "young boy, gentle"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "a boy of about nine carrying his little sister piggyback down a park path, she is smiling through tears, golden autumn light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He was small. She was almost too heavy for him. But he carried her anyway, all the way down the path.",
+     {
+      "tone": "softening"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) standing frozen on a park path watching two children walk away, her hand over her mouth, autumn trees, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And suddenly, I was six years old again.",
+     {
+      "tone": "trembling"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (18 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a black high school gakuran uniform) carrying little Mio (a 6-year-old Japanese girl with short black hair in two small pigtails, a small yellow star hair clip, big round dark eyes, wearing a yellow dress) piggyback down a sunset street, she is asleep on his back, warm nostalgic orange light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My brother carried me home like that every time I fell asleep somewhere. Every single time.",
+     {
+      "tone": "tearful, warm"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto",
+    "miochild"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a plain gray t-shirt and a faded blue apron) smiling and saying something gently, warm nostalgic flashback light, soft focus, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Don't cry, Mio. Big brother's here. I'm always here.",
+     {
+      "tone": "gentle, echoing memory"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) sitting on a park bench crying into her hands, autumn leaves falling around her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I sat on a bench and cried for the first time in years.",
+     {
+      "tone": "breaking"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) lifting her tearful face from her hands, her eyes slowly hardening with doubt, park, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And for the first time, a question I'd been too angry to ask came up.",
+     {
+      "tone": "slowly"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) thinking hard, a park bench, tears drying, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan skipped dinner for twelve years so I could eat... and he'd gamble away my money?",
+     {
+      "tone": "slow, doubting"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) standing up from the park bench with determination, pulling out her phone, autumn park, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "...No. That's not my brother.",
+     {
+      "tone": "firm, quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) on a phone call in a dark office, speaking in a low secretive voice, door closed, inside a sleek glass corner office high above New York City at night, the city lights through the windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't tell Mr. Saijo. I don't know why. Something told me not to.",
+     {
+      "tone": "cautious"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) listening on the phone in a small cluttered detective office with file cabinets, a cup of coffee, Tokyo at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Kirishima Investigations.",
+     {
+      "tone": "calm, professional"
+     }
+    ],
+    [
+     "mio",
+     "I need you to find someone. My brother. Haruto Aoyama. I want to know everything.",
+     {
+      "tone": "low, urgent"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) writing a name in a notebook with a pen, a serious face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Everything can be hard to hear, Ms. Aoyama.",
+     {
+      "tone": "calm, careful"
+     }
+    ],
+    [
+     "mio",
+     "I know. Find him anyway.",
+     {
+      "tone": "firm"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) sitting in a glass office staring at her phone, waiting, days passing, papers piling up, inside a sleek glass corner office high above New York City, the Manhattan skyline through floor-to-ceiling windows, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Three weeks passed. They were the longest three weeks of my life.",
+     {
+      "tone": "tense"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) hurrying into a quiet old coffee shop in Tokyo on a rainy evening, shaking water from her coat, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Then she called. She wouldn't tell me over the phone. So I flew to Tokyo again.",
+     {
+      "tone": "tense"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) sitting in a wooden booth in a dim coffee shop with a thick brown envelope on the table, a serious face, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Sit down, Ms. Aoyama.",
+     {
+      "tone": "calm, grave"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) opening the brown envelope and taking out bank statements, across the table from Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit), inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "I'll start with the money. Every month, you sent money to an account in your brother's name.",
+     {
+      "tone": "measured"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) looking straight across the table, serious, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Your brother never opened that account. He never knew it existed.",
+     {
+      "tone": "flat, grave"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) going pale in a coffee shop booth, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "...What?",
+     {
+      "tone": "barely a whisper"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of bank statements on a wooden table with columns of numbers and a pen circling them, coffee cup beside them, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Every transfer left that account within a day. Not one yen of it ever reached him.",
+     {
+      "tone": "grave"
+     }
+    ],
+    [
+     "kirishima",
+     "Where it went, I'm still tracing. Someone was very careful.",
+     {
+      "tone": "grim"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) gripping the edge of the table with both hands, shaking, in a dim coffee shop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Then the gambling... the loans...",
+     {
+      "tone": "shaking"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) shaking her head slowly in a coffee shop booth, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "I asked everyone. Every pachinko parlor near every place he lived.",
+     {
+      "tone": "firm"
+     }
+    ],
+    [
+     "kirishima",
+     "Nobody had ever seen him. Your brother never gambled a single yen in his life.",
+     {
+      "tone": "firm, certain"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) with her hand over her mouth, eyes filling with tears, coffee shop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Mr. Saijo had told me... he'd shown me papers...",
+     {
+      "tone": "confused, breaking"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) sliding a photo across the table, her expression heavy, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "After you left, your brother kept working. The same three jobs. He lived only on what he earned.",
+     {
+      "tone": "measured, heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) riding an old bicycle loaded with newspapers in the dark before dawn, rain falling, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He never quit. He never even knew there was money to quit with.",
+     {
+      "tone": "aching"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a dark wet street at night, headlights glaring, a bicycle swerving to avoid a small child who ran into the road, dramatic flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "One year after you left, he was delivering on his bicycle at night. A child ran into the street.",
+     {
+      "tone": "grave"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "a fallen bicycle and scattered newspapers on a wet road at night, a truck stopped with its headlights on, a frightened child safe on the sidewalk, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "He swerved to miss her. The truck didn't miss him.",
+     {
+      "tone": "heavy"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) gasping with both hands over her mouth in a coffee shop booth, tears falling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "No...",
+     {
+      "tone": "broken whisper"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) lying in a hospital bed with his leg in a cast, a doctor showing him papers, his face worried, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "His leg was badly broken. The doctors recommended surgery to fix it properly.",
+     {
+      "tone": "grave"
+     }
+    ],
+    [
+     "kirishima",
+     "He couldn't afford it. Or the weeks off work. So he chose the cheaper treatment.",
+     {
+      "tone": "heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, wearing a worn navy work jacket over a gray hoodie) in a hospital bed forcing a smile at a doctor, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "It's fine, doctor. Just set it. I need to get back to work.",
+     {
+      "tone": "forced cheer, flashback"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) walking slowly down an old street with a wooden cane, limping, carrying a plastic shopping bag, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "The bone healed wrong. He's walked with a limp ever since. He can't stand for long. He can't run.",
+     {
+      "tone": "heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) being handed an envelope by a foreman at a warehouse, apologetic faces, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "He lost the warehouse job. Then the newspaper route.",
+     {
+      "tone": "measured"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket) sitting on a stool in his ramen shop, older, his arms crossed, speaking sadly, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "I spoke to a Mr. Gondo, the owner of a ramen shop. He kept your brother on as long as he could.",
+     {
+      "tone": "measured"
+     }
+    ]
+   ],
+   "refs": [
+    "gondo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket) with his eyes wet, looking down, his towel in his hands, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "gondo",
+     "That kid washed dishes sitting on a stool because his leg couldn't hold him up. Never complained once. Not once.",
+     {
+      "tone": "gruff, emotional"
+     }
+    ]
+   ],
+   "refs": [
+    "gondo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) sitting on a stool washing dishes in a ramen shop kitchen, smiling at Gondo, flashback, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "gondo",
+     "Every day he'd tell me, my sister's doing amazing things in America. She's going to change the world.",
+     {
+      "tone": "gruff, choked"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "an old shop wall covered in neatly cut newspaper and magazine clippings about a tech company and a young businesswoman, pinned carefully, warm light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "gondo",
+     "He cut out every article about you. Every one. Pinned them up in the back of my shop.",
+     {
+      "tone": "emotional"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) sobbing in a coffee shop booth, both hands pressed to her face, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "He was proud of me. The whole time I was angry at him... he was proud of me.",
+     {
+      "tone": "sobbing"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) looking down at her notes with a grim face, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "There's more. After the accident, his phone was cut off. He couldn't pay the bill.",
+     {
+      "tone": "careful"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) turning a page in her notebook, her voice careful, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Do you remember a phone call, about a year after you left? You said he sounded tired.",
+     {
+      "tone": "careful"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) going still in a coffee shop booth, remembering, horror dawning, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "...He said it was a cold.",
+     {
+      "tone": "whispering"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) nodding slowly, grave, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "That was four days after the accident. He called you from the hospital hallway, on crutches.",
+     {
+      "tone": "grave"
+     }
+    ],
+    [
+     "kirishima",
+     "He asked the nurses to keep quiet so you wouldn't hear the announcements.",
+     {
+      "tone": "heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) bent over the coffee shop table, her forehead on her hands, shoulders shaking, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Under a minute. I'd hung up in under a minute.",
+     {
+      "tone": "devastated"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) at an old green public pay phone in the rain, holding the receiver with hope, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Mr. Gondo says your brother called your company in New York once. From a pay phone.",
+     {
+      "tone": "careful"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) at a pay phone in the rain, his hopeful face slowly falling, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Someone told him you were too busy. That you'd asked not to be contacted by family.",
+     {
+      "tone": "heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) with her eyes wide in horror, coffee shop, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "I never said that! Nobody ever told me he called! Who... who told him that?!",
+     {
+      "tone": "horrified, shouting"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) meeting Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit)'s eyes steadily across the table, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "That's what I'd like to know too.",
+     {
+      "tone": "quiet, pointed"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima",
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) sitting alone on the floor of a tiny bare room at night, looking at an old crayon drawing in his hands, a single bare bulb, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "gondo",
+     "After that call, he never talked about you again. But he never stopped buying the newspapers.",
+     {
+      "tone": "sad, gruff"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mr. Gondo (a gruff 65-year-old Japanese ramen shop owner with a shaved head, thick gray eyebrows and a white towel tied around his head, wearing a white cook's jacket) wiping down an empty ramen counter, older, with a sad tired face, a for-sale sign on the shop door, inside a small old ramen shop with a wooden counter, steam and red paper lanterns, at night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "Last year, Mr. Gondo closed the shop. His health. After that, your brother had almost nothing.",
+     {
+      "tone": "measured"
+     }
+    ]
+   ],
+   "refs": [
+    "gondo"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) sitting on the floor of a tiny bare room folding stacks of advertising flyers into envelopes by lamplight, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "He folded flyers at home for a few yen a stack. Sometimes he sorted bottles at a recycling center.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) sitting on the step of a run-down boarding house sharing a piece of bread with a skinny stray cat, evening, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "The other tenants said he was quiet. Polite. He shared his bread with a stray cat.",
+     {
+      "tone": "soft"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) alone at a tiny table in a bare room with a very small strawberry shortcake and one candle, smiling sadly, flashback, night, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "And once a year, he bought a small strawberry cake. Just one. Always on the same day.",
+     {
+      "tone": "soft, heavy"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) in a coffee shop booth, her lips trembling, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "...March fourteenth.",
+     {
+      "tone": "barely a whisper"
+     }
+    ],
+    [
+     "kirishima",
+     "Your birthday.",
+     {
+      "tone": "quiet"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) alone in a dark bare room singing softly to a tiny cake with one candle, his eyes wet, flashback, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Happy birthday, dear Mio... happy birthday to you.",
+     {
+      "tone": "soft, singing alone, breaking"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Ms. Kirishima (a sharp 45-year-old Japanese woman private investigator with a short black bob haircut and calm serious eyes, wearing a beige trench coat over a black turtleneck) writing an address on a piece of paper and sliding it across the table, inside a quiet dim old coffee shop with wooden booths, rain on the window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "kirishima",
+     "This is his most recent address. A boarding house by the river. I found it four days ago.",
+     {
+      "tone": "urgent"
+     }
+    ]
+   ],
+   "refs": [
+    "kirishima"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) grabbing the paper and running out of the coffee shop into the rainy night, coat flying, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I didn't even say goodbye. I just ran.",
+     {
+      "tone": "breathless"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) running through rainy Tokyo streets at night, soaked, neon reflections on the wet pavement, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "I kept thinking about what I'd say. I'm sorry. I'm so sorry. I was wrong. I'm home.",
+     {
+      "tone": "breathless, crying"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "a small run-down two-story boarding house beside a dark river at night, rain, one dim light in a window, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The boarding house by the river was old and small. One light was on.",
+     {
+      "tone": "breathless, hopeful"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) pounding on a thin wooden door in a dim boarding house hallway, soaked from the rain, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan! Onii-chan, it's me! It's Mio! Please open the door!",
+     {
+      "tone": "desperate, crying"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "an old man in a cardigan opening the door of the next room in a dim boarding house hallway, surprised and sad, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "tanaka",
+     "...You're looking for the young man with the cane? Oh, dear...",
+     {
+      "tone": "sad, gentle"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "an elderly woman landlady with gray curly hair and round glasses, holding a key in a dim boarding house hallway, looking sorry, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "tanaka",
+     "He left three days ago. Paid his last rent in coins, cleaned the room spotless... and just left.",
+     {
+      "tone": "sad"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) soaked and frozen in a dim hallway, her face blank with shock, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Left...? Where? Where did he go?",
+     {
+      "tone": "barely breathing"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "an elderly landlady shaking her head sadly in a dim boarding house hallway, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "tanaka",
+     "He didn't say. He didn't take much. Just a small bag... and an old picture, rolled up.",
+     {
+      "tone": "sad"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "a tiny empty boarding house room with bare tatami at night, cleaned spotless, a single folded note left on the floor under a bare bulb, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "The room was empty. Except for one note, left for the landlady.",
+     {
+      "tone": "hushed"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of a folded handwritten note held in a woman's shaking hands, dim light, rain sounds, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "haruto",
+     "Thank you for everything. If anyone ever comes looking for me... please don't tell my sister.",
+     {
+      "tone": "quiet, gentle, a letter being read"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) collapsing to her knees on the tatami of an empty room, clutching a small note to her chest, sobbing, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Why...? Why, onii-chan...?",
+     {
+      "tone": "sobbing, broken"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) crying on the floor of an empty room, her yellow star hair clip catching the light, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Even then. Even after everything. He was still trying to protect me.",
+     {
+      "tone": "sobbing, aching"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) standing alone at the edge of a dark river at night in the rain, the city lights far away, small and lost, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "That's how I found out the truth.",
+     {
+      "tone": "quiet, shaken"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of a small yellow star hair clip in a woman's palm, rain drops on it, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "My brother had been alone, and hurt, and hungry... while I was angry at him from the top of a skyscraper.",
+     {
+      "tone": "bitter, breaking"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "a dark luxurious New York penthouse office at night, a man in a navy three-piece suit seen from behind, standing at the window with a glass of wine, his face hidden in shadow, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "And somewhere on the other side of the world, someone had been very, very careful.",
+     {
+      "tone": "cold, ominous"
+     }
+    ]
+   ],
+   "refs": []
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) in the rain at night lifting her head, her tearful eyes turning fierce and determined, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "mio",
+     "Onii-chan. Wait for me. This time... I'll find you.",
+     {
+      "tone": "fierce, tearful vow"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Haruto (36 years old, a Japanese man with short messy black hair, kind gentle dark eyes and a lean build, thinner, with light stubble and tired eyes, wearing a faded gray hoodie and old work trousers, leaning on a wooden cane) seen from behind, limping alone with a cane down a long empty country road at dawn, a small bag over his shoulder, mist, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "Where is my brother now? Is he even alive?",
+     {
+      "tone": "haunted"
+     }
+    ],
+    [
+     "narrator",
+     "And where did five years of money go?",
+     {
+      "tone": "cold"
+     }
+    ]
+   ],
+   "refs": [
+    "haruto"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "close-up of Mio (a 27-year-old Japanese woman with long black hair in a low ponytail, a small yellow star hair clip, sharp confident dark eyes, wearing a tailored charcoal-gray business suit) at dawn with determined eyes, holding a small red omamori charm, a small yellow star hair clip in her hair, a city skyline behind her, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "narrator",
+     "What would you do if you were me? Tell me in the comments.",
+     {
+      "tone": "intimate, direct"
+     }
+    ],
+    [
+     "narrator",
+     "Because I'm going to find him. Whatever it takes.",
+     {
+      "tone": "determined"
+     }
+    ]
+   ],
+   "refs": [
+    "mio"
+   ],
+   "pos": {
+    "narrator": "b"
+   }
+  },
+  {
+   "fx": [],
+   "image": "close-up of Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood) with teary sparkling eyes, smiling softly, holding a tissue, soft pink sparkly background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "host",
+     "Waaah... thanks for watching~! Haruto, you deserve the whole world!",
+     {
+      "tone": "teary, sweet"
+     }
+    ]
+   ],
+   "refs": [
+    "host"
+   ]
+  },
+  {
+   "fx": [],
+   "image": "Hana (a cute cheerful anime girl, a young woman with long pastel pink hair in twin tails tied with red ribbons, big sparkling violet eyes and rosy cheeks, wearing a pastel pink hoodie with little cat ears on the hood) pointing at the viewer with a determined wink, soft pink sparkly background, modern Japanese anime illustration, manga dub video style, clean thin black line art, flat cel shading, soft muted colors, detailed simple background, 2D anime, 16:9 widescreen composition, no text, no letters, no speech bubbles, no watermark",
+   "lines": [
+    [
+     "host",
+     "Want to see Mio find her brother... and find out who took the money? Comment ONII-CHAN for episode two!",
+     {
+      "tone": "energetic, playful"
+     }
+    ]
+   ],
+   "refs": [
+    "host"
+   ]
+  }
+ ]
+}
